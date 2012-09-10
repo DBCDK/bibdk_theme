@@ -1,0 +1,324 @@
+/* Colors */
+
+@import "elements";
+
+
+
+// Page regions
+#region-topbar {
+	background:$grey1;
+}
+#region-header {
+	background: $grey2;
+	height:80px;	
+}
+#region-search-panel {
+	padding:20px 0;
+	background:$grey3;
+}
+#region-subjects {
+	background: $grey4;
+	padding:30px 0 10px;
+}
+#region-content {
+	padding:40px 0 30px;
+}
+#region-footer {
+	padding:40px 0 100px;
+	background: $grey3;
+}
+
+
+
+// Top bar service navigation
+#service-nav {
+
+	a {
+		padding:8px 5px;
+		border-right:solid 1px #25292c;
+		color:#999;
+		font-size:12px;	
+
+		&:first-child {
+			padding-left:0;
+		}
+		&:last-child {
+			border-right:none;
+		}	
+	}
+}
+
+// Top bar user navigation
+// We need a wrapper to switch between fixed and absolute
+#user-nav {
+	position:absolute;
+	top:0;
+	width:950px;
+
+	&.with-mats {
+		position:fixed;
+	}
+}
+#user-nav-inner {
+	position:absolute;
+	right:0;
+	z-index: 5;
+
+	background: $grey3;
+	border-radius: 0 0 5px 5px;
+
+	a {
+		line-height:35px;
+		padding:0px 15px;
+		border-right:solid 1px #494e51;
+		color: $button_blue;
+		text-shadow:0 -1px rgba(0,0,0,.3);
+		font-size:12px;
+	}
+		
+	.materials-button {
+		span {
+			font-size:18px;
+			font-weight:bold;
+			float:left;
+			margin-right:10px;
+		}
+	}
+
+	.login-button {
+		font-weight:bold;
+		border-right:none;
+	}
+}
+
+
+
+
+
+// Identity
+#header-logo {
+	position: absolute;
+	top:15px;
+}
+#footer-logo {
+	text-align: center;	
+}
+
+
+
+#page-actions {
+	position:absolute;
+	right:0px;
+	top:30px;
+
+	a {
+		background: $grey3;
+		border-radius: 3px;
+		margin-left:5px;
+		color:#fff;
+		font-size:12px;
+		line-height: 30px;
+
+		&.sporg-vagt {
+			padding:0 10px 0 0;
+			font-weight:bold;		
+		}
+		&.find-bib {
+			background:$grey3 url(../img/grey_down.png) no-repeat 90% center;
+			padding:0 35px 0 10px;
+		}
+	}
+
+	img {
+		float:left;
+		margin-right:10px;
+		position:relative;
+		top:2px;
+		left:2px;
+		border-radius:3px;
+	}
+} 
+
+
+
+
+
+
+
+// Search form
+#search-form input {
+	float:left;
+	height:38px;
+}
+#search-form input[type=text] {
+	width:830px;
+	margin-right: 10px;
+	font-size:14px;
+	padding:0px 15px;
+}
+#search-form input[type=submit] {
+	width:110px;
+	font-weight:bold;
+	@include blue-button;
+}
+#search-advanced a {
+	color:#fff;
+	font-size:12px;
+}
+
+
+
+
+
+// Subjects navigation
+#subjects-nav a {
+	float:left;
+	width:33%;
+	margin-bottom:20px;
+	font-size:14px;
+	color:$grey3;
+}
+
+
+
+
+
+
+
+
+
+
+.block {
+	margin-bottom:30px;
+
+	.block-title h2 {
+		padding-left:46px; // icon width + 10px
+		margin-bottom:20px;
+
+		font-family: 'Lato';
+		font-weight:300;
+		font-size:22px;
+		text-transform:uppercase;
+		color:$button_blue;
+		line-height:36px; // icon height
+	}
+}
+
+#block-news .block-title h2 {
+	background:url(../img/mediatype_icons/news.png) no-repeat;
+}
+#block-books .block-title h2 {
+	background:url(../img/mediatype_icons/books.png) no-repeat;
+}
+#block-movies .block-title h2 {
+	background:url(../img/mediatype_icons/movies.png) no-repeat;
+}
+#block-music .block-title h2 {
+	background:url(../img/mediatype_icons/music.png) no-repeat;
+}
+#block-games .block-title h2 {
+	background:url(../img/mediatype_icons/games.png) no-repeat;
+}
+
+
+
+
+
+
+
+// Frontpage mediaboxes
+.mediabox {
+	position: relative;	
+	margin-bottom:10px;
+
+	.inner {
+		padding:14px;
+	}
+
+	footer {
+		position:absolute;
+		bottom:15px;
+	}
+}
+
+.mediabox-small-darkgrey {
+	background:$grey3;
+	height:100px;
+	
+	h3 {
+		font-size: 14px;
+		line-height: 14px;
+		margin-bottom: 5px;
+
+		a {
+			color:#fff;		
+		}
+	}
+
+	.field-artist {
+		font-size: 11px;
+		color: #a4a7a9;		
+	}
+
+	.field-taxonomy {
+		color: #a4a7a9;
+		
+		a {
+			font-size: 11px;
+			color: #a4a7a9;	
+			font-family:Georgia;
+			font-style:italic;
+			text-decoration:underline;
+		}	
+	}
+
+	.field-read-more {
+
+		a {
+			font-size:11px;
+			color:#fff;
+		}
+	}
+}
+
+
+.mediabox-large-lightgrey {
+
+	.mediabox-content {
+		background:$grey4;	
+	}
+
+	h3 {
+		font-family: 'Lato';
+		font-weight:300;
+		font-size:24px;
+
+		a {
+			color:$grey2;
+		}
+	}
+
+	.field-image {
+		float:left;
+		position:relative;
+		z-index:3;
+	}
+
+	.field-body {
+		font-size:12px;
+		line-height:130%;
+		color:$grey3;
+	}
+
+	.field-read-more {
+
+		a {
+			font-size:12px;
+			color:$button_blue;
+		}
+	}
+}
+
+
+
+

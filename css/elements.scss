@@ -1,0 +1,167 @@
+
+// Colors
+$button_blue: #2590b0;
+$grey1: #161616;
+$grey2: #25292c;
+$grey3: #3c4043;
+$grey4: #ebedec;
+$grey5: #51565a;
+
+
+// Mixins
+@mixin box {
+	-webkit-box-sizing: border-box; // Safari/Chrome, other WebKit
+	-moz-box-sizing: border-box;    // Firefox, other Gecko
+	box-sizing: border-box;         // Opera/IE 8+
+}
+@mixin normal-appearance {
+	appearance:normal;
+	-moz-appearance:normal; 				// Firefox
+	-webkit-appearance:normal; 			// Safari and Chrome
+}
+@mixin blue-button {
+	border-radius:3px;
+	background: $button_blue;
+	color:#fff;
+	text-shadow:0px -1px rgba(0,0,0,.2);
+	-webkit-transition: background-color .5s;
+
+	&:hover {
+		background:lighten($button_blue, 10%);
+	}
+}
+
+
+
+// Pure elements
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+	font-family: 'Arial';
+}
+a {
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+form {
+	margin-bottom:10px;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+input[type=text] {
+	border-radius:4px;
+	box-shadow:inset 0px 1px 2px rgba(0,0,0,.3);
+}
+img {
+  vertical-align: middle;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+
+.reset-input {
+	@include box;
+	@include normal-appearance;
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+
+.horizontal-nav a {
+	float:left;
+	display:block;
+}
+
+.tabs {
+	margin-bottom:15px;
+	
+	a {
+		background: $grey5;
+		-webkit-transition: background-color .5s;
+		margin-right:1px;
+		padding:10px 20px;
+		border-top:solid 1px #34393c;
+
+		color:#fff;
+		font-size:13px;
+
+		&:hover {
+			background: lighten($grey5, 10%);
+		}
+		&:first-child {
+			border-radius: 5px 0 0 5px;	
+		}
+		&:last-child {
+			border-radius: 0 5px 5px 0;
+		}
+		&.active {
+			@include blue-button;
+			border:none;
+			padding:12px 21px;
+			position: relative;
+			top:-1px;
+			left:-1px;
+			margin-right:-1px;
+		}
+	}
+}
+
+
+// Settings box heights
+.box-height-1 {
+	height:100px;
+}
+.box-height-2 {
+	height:210px;
+}
+.box-height-3 {
+	height:320px;
+}
+
+
+
+
+// Links with icons
+.icon-link {
+	background:transparent no-repeat 0% 50%;
+	padding-left:1.8em;
+	display:block;
+	line-height:15px;
+	@include box;	
+}
+.link-grey-plus {
+	background-image:url(../img/grey_plus.png);
+	@extend .icon-link;
+}
+.link-blue-rightarrow {
+	background-image:url(../img/blue_right.png);
+	@extend .icon-link;
+}
+
+
+
