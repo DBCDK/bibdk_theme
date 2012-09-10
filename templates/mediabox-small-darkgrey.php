@@ -13,7 +13,7 @@
 			</div>
 		<?php endif; ?>
 
-		<footer>
+		<footer class="footer">
 			<?php if ($vars['tags']): ?>
 				<div class="field-taxonomy">
 					<?php print format_tags($vars['tags']); ?>

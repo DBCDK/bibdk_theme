@@ -10,15 +10,26 @@
 	      </a>
 	    </div>
 
-	    <div id="page-actions" class="horizontal-nav"> 
+	    <div id="page-actions" class="horizontal-nav">
 
-	      <a class="page-action sporg-vagt" href="#">
-	        <img src="img/vagt.png" width="26" height="26" />
-	        Spørg biblioteksvagten
-	      </a>
-	      <a class="page-action find-bib" href="#">
-	      	Find bibliotek
-	      </a> 
+	    	<div class="page-action page-action-sporg-vagt">
+	    		
+		      <a href="#">
+		        <img src="img/vagt.png" width="26" height="26" />
+		        Spørg biblioteksvagten
+		      </a>
+
+	    	</div>
+
+	    	<div class="page-action page-action-find-bib">
+		      <a href="#">Find bibliotek</a>
+		      <form>
+		      	<input placeholder="Skriv biblioteksnavn, postnr, by ..." class="reset-input" type="text" />
+          	<input class="reset-input" type="submit" value="Søg" />
+          </form>
+	    	</div>
+
+
 
 	    </div>
 

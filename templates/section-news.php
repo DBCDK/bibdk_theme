@@ -68,7 +68,23 @@
 
   <div class="grid_5">
 
-    <img src="img/stor_vagt.png" /> 
+    <div class="mediabox mediabox-biblioteksvagt box-height-2">
+
+      <div class="inner">
+      
+      <h3><a href="#">Spørg<br /> biblioteksvagten</a></h3>
+      
+      <div class="field-body">
+        Du kan kontakte en bibliotekar, hvis du har brug for personlig service
+      </div>
+
+    </div>
+
+      <footer>
+        <a class="link-white-rightarrow" href="#">Spørg biblioteksvagten</a>
+      <footer>
+
+    </div> 
 
   </div>  
   <!-- .grid -->

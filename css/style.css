@@ -1,4 +1,10 @@
 /* Colors */
+::-webkit-input-placeholder {
+  color: #51565a; }
+
+:-moz-placeholder {
+  color: #51565a; }
+
 html,
 button,
 input,
@@ -16,9 +22,6 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
-
-form {
-  margin-bottom: 10px; }
 
 fieldset {
   border: 0;
@@ -98,7 +101,7 @@ img {
 .box-height-3 {
   height: 320px; }
 
-.icon-link, .link-grey-plus, .link-blue-rightarrow {
+.icon-link, .link-grey-plus, .link-blue-rightarrow, .link-white-rightarrow {
   background: transparent no-repeat 0% 50%;
   padding-left: 1.8em;
   display: block;
@@ -112,6 +115,9 @@ img {
 
 .link-blue-rightarrow {
   background-image: url(../img/blue_right.png); }
+
+.link-white-rightarrow {
+  background-image: url(../img/white_right.png); }
 
 #region-topbar {
   background: #161616; }
@@ -185,51 +191,70 @@ img {
   position: absolute;
   right: 0px;
   top: 30px; }
-  #page-actions a {
-    background: #3c4043;
-    border-radius: 3px;
-    margin-left: 5px;
+
+.page-action {
+  float: left;
+  background: #3c4043;
+  border-radius: 3px;
+  margin-right: 5px; }
+  .page-action a {
     color: #fff;
     font-size: 12px;
     line-height: 30px; }
-    #page-actions a.sporg-vagt {
-      padding: 0 10px 0 0;
-      font-weight: bold; }
-    #page-actions a.find-bib {
-      background: #3c4043 url(../img/grey_down.png) no-repeat 90% center;
-      padding: 0 35px 0 10px; }
-  #page-actions img {
-    float: left;
-    margin-right: 10px;
-    position: relative;
-    top: 2px;
-    left: 2px;
-    border-radius: 3px; }
 
-#search-form input {
+.page-action-sporg-vagt a {
+  padding: 0 10px 0 0;
+  font-weight: bold; }
+.page-action-sporg-vagt img {
   float: left;
-  height: 38px; }
-
-#search-form input[type=text] {
-  width: 830px;
   margin-right: 10px;
-  font-size: 14px;
-  padding: 0px 15px; }
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 3px; }
 
-#search-form input[type=submit] {
-  width: 110px;
-  font-weight: bold;
-  border-radius: 3px;
-  background: #2590b0;
-  color: #fff;
-  text-shadow: 0px -1px rgba(0, 0, 0, 0.2);
-  -webkit-transition: background-color .5s; }
-  #search-form input[type=submit]:hover {
-    background: #34afd4; }
+.page-action-find-bib a {
+  padding: 0 35px 0 10px;
+  background: url(../img/grey_down.png) no-repeat 90% center; }
+.page-action-find-bib input {
+  line-height: 30px;
+  float: left;
+  font-size: 12px;
+  padding: 0 10px; }
+.page-action-find-bib input[type=text] {
+  width: 85%; }
+.page-action-find-bib input[type=submit] {
+  width: 15%; }
+
+#search-form {
+  margin-bottom: 10px; }
+  #search-form input {
+    float: left;
+    height: 38px; }
+  #search-form input[type=text] {
+    width: 830px;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 0px 15px; }
+  #search-form input[type=submit] {
+    width: 110px;
+    font-weight: bold;
+    border-radius: 3px;
+    background: #2590b0;
+    color: #fff;
+    text-shadow: 0px -1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color .5s; }
+    #search-form input[type=submit]:hover {
+      background: #34afd4; }
 
 #search-advanced a {
   color: #fff;
   font-size: 12px; }
+
+#search-advanced-panel {
+  height: 500px;
+  margin-top: 30px;
+  background: #999; }
 
 #subjects-nav a {
   float: left;
@@ -266,6 +291,7 @@ img {
   background: url(../img/mediatype_icons/games.png) no-repeat; }
 
 .mediabox {
+  cursor: pointer;
   position: relative;
   margin-bottom: 10px; }
   .mediabox .inner {
@@ -273,10 +299,17 @@ img {
   .mediabox footer {
     position: absolute;
     bottom: 15px; }
+  .mediabox:hover .field-read-more a {
+    text-decoration: underline; }
 
 .mediabox-small-darkgrey {
   background: #3c4043;
-  height: 100px; }
+  height: 100px;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s; }
+  .mediabox-small-darkgrey:hover {
+    background: #484d50; }
   .mediabox-small-darkgrey h3 {
     font-size: 14px;
     line-height: 14px;
@@ -298,8 +331,13 @@ img {
     font-size: 11px;
     color: #fff; }
 
+.mediabox-large-lightgrey:hover .mediabox-content {
+  background: #f0f2f1; }
 .mediabox-large-lightgrey .mediabox-content {
-  background: #ebedec; }
+  background: #ebedec;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s; }
 .mediabox-large-lightgrey h3 {
   font-family: 'Lato';
   font-weight: 300;
@@ -308,8 +346,7 @@ img {
     color: #25292c; }
 .mediabox-large-lightgrey .field-image {
   float: left;
-  position: relative;
-  z-index: 3; }
+  position: relative; }
 .mediabox-large-lightgrey .field-body {
   font-size: 12px;
   line-height: 130%;
@@ -317,3 +354,27 @@ img {
 .mediabox-large-lightgrey .field-read-more a {
   font-size: 12px;
   color: #2590b0; }
+
+.mediabox-biblioteksvagt {
+  background: #2590b0; }
+  .mediabox-biblioteksvagt h3 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 5px; }
+    .mediabox-biblioteksvagt h3 a {
+      color: #fff; }
+  .mediabox-biblioteksvagt .field-body {
+    font-size: 11px;
+    line-height: 130%;
+    color: #fff; }
+  .mediabox-biblioteksvagt footer {
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #2084a4;
+    padding: 15px; }
+    .mediabox-biblioteksvagt footer a {
+      position: relative;
+      z-index: 10;
+      font-size: 11px;
+      color: #fff; }

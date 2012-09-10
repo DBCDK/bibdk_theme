@@ -14,7 +14,7 @@ function format_tags($tags) {
 	$elements = array();
 
 	foreach ($tags as $tag) {
-		$elements[] = '<a href="#">' . $tag . '</a>';
+		$elements[] = '<a href="#lol">' . $tag . '</a>';
 	}
 
 	$output = implode(', ', $elements);

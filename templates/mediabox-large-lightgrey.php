@@ -12,7 +12,7 @@
 	  <div class="inner">
 
 			<?php if ($vars['title']): ?>
-				<h3><a href="#"><?php print $vars['title']; ?></a></h3>
+				<h3><a href="http://google.com"><?php print $vars['title']; ?></a></h3>
 			<?php endif; ?>
 
 			<?php if ($vars['body']): ?>
@@ -21,10 +21,10 @@
 				</div>
 			<?php endif; ?>
 
-			<footer>
+			<footer class="footer">
 				<?php if ($vars['more']): ?>
 					<div class="field-read-more">
-						<a class="link-blue-rightarrow" href="#"><?php print $vars['more']; ?></a>
+						<a class="link-blue-rightarrow" href="http://ibm.com"><?php print $vars['more']; ?></a>
 					</div>	
 				<?php endif; ?>
 			</footer>

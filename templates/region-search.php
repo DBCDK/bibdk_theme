@@ -24,6 +24,12 @@
 
       <div id="search-advanced">
         <a class="link-grey-plus" href="#">Flere søgemuligheder</a>
+
+        <div id="search-advanced-panel">
+
+        </div>
+
+
       </div>
 
 
