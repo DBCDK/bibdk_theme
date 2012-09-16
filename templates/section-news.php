@@ -23,7 +23,7 @@
                   </p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -40,7 +40,7 @@
                   </p>",
         'more' => "Hent den her",
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -53,38 +53,23 @@
         'title' => "Brug Netbibliotekerne",
         'more' => TRUE,
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
     <?php 
       $element = array(
         'title' => "Kom med i bibliotek.dk brugerpanelet",
         'more' => TRUE,
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
   </div>
   <!-- .grid -->
 
   <div class="grid_5">
+    <?php print render('widget-biblioteksvagt'); ?>
 
-    <div class="mediabox mediabox-biblioteksvagt box-height-2">
 
-      <div class="inner">
-      
-      <h3><a href="#">Spørg<br /> biblioteksvagten</a></h3>
-      
-      <div class="field-body">
-        Du kan kontakte en bibliotekar, hvis du har brug for personlig service
-      </div>
-
-    </div>
-
-      <footer>
-        <a class="link-white-rightarrow" href="#">Spørg biblioteksvagten</a>
-      <footer>
-
-    </div> 
 
   </div>  
   <!-- .grid -->

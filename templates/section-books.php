@@ -16,7 +16,7 @@
         'box_height' => '2',
         'title' => "Luft under vingerne",
         'image' => array(
-          '#src' => 'img/content/erica_jung.png',
+          '#src' => '../img/content/erica_jung.png',
           '#width' => '270',
           '#height' => '320',
         ),
@@ -25,7 +25,7 @@
                   </p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -39,7 +39,7 @@
         'artist' => "Emmanuel Roudier",
         'tags' => array('krig', 'død', 'ødelæggelse'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
 
     <?php 
@@ -48,7 +48,7 @@
         'artist' => "Don Delillo",
         'tags' => array('tiden', 'USA', '1897-1901'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -57,7 +57,7 @@
         'artist' => "Don Delillo",
         'tags' => array('tiden', 'USA', '1897-1901'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
   </div>
@@ -71,7 +71,7 @@
         'artist' => "Emmanuel Roudier",
         'tags' => array('krig', 'kærlighed', 'romantik'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -80,7 +80,7 @@
         'artist' => "Mie Schlechthoff",
         'tags' => array('madlavning'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
   </div>

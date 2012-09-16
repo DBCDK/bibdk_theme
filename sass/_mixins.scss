@@ -1,0 +1,28 @@
+//
+// Import: Mixins 
+//
+
+
+@mixin box {
+  @include box-sizing(border-box);
+}
+@mixin normal-appearance {
+  @include appearance(normal);
+}
+
+
+
+
+
+@mixin reset-input {
+  @include box-sizing(border-box);
+  @include appearance(normal);
+  border:none;
+  margin:0;
+  padding:0;  
+}
+
+
+
+
+

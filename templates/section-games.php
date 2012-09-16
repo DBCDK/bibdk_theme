@@ -17,7 +17,7 @@
         'artist' => "Slightly Mad Studios",
         'tags' => array('computerspil', 'racerspil'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
 
     <?php 
@@ -26,7 +26,7 @@
         'artist' => "Deep Silver",
         'tags' => array('computerspil', 'hovedbrudsspil'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -35,7 +35,7 @@
         'artist' => "Warner Bros. Interactive Ent.",
         'tags' => array('computerspil', 'adventure'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
 
   </div>
@@ -48,14 +48,14 @@
         'box_height' => '3',
         'title' => "Spec ops - the line",
         'image' => array(
-          '#src' => 'img/content/spec_ops.png',
+          '#src' => '../img/content/spec_ops.png',
           '#width' => '160',
           '#height' => '210',
         ),
         'body' => "<p>Shooter. Dubai er blevet ramt af en voldsom sandstorm - en uforklarlig naturkatastrofe, som har lagt det tidligere stenrige ørkenland øde. Obert John Konrad fik evakueringsopgaven med landets civile - men noget gik galt ...</p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -68,14 +68,14 @@
         'box_height' => '3',
         'title' => "Olympic Games - London 2012",
         'image' => array(
-          '#src' => 'img/content/ol.png',
+          '#src' => '../img/content/ol.png',
           '#width' => '190',
           '#height' => '250',
         ),
         'body' => "<p>Sportsspil. De Olympiske Lege 2012. Du kan kæmpe for de danske farver i hele 45 forskellige discipliner fordelt på 12 kategorier. Atletik, svømning, cykling, skydning ...</p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?>  
 
   </div>

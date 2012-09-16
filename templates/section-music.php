@@ -16,14 +16,14 @@
         'box_height' => '2',
         'title' => "Violator",
         'image' => array(
-          '#src' => 'img/content/violator.png',
+          '#src' => '../img/content/violator.png',
           '#width' => '350',
           '#height' => '320',
         ),
         'body' => "<p>Depeche Mode</p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -36,7 +36,7 @@
         'artist' => "Lukas Graham",
         'tags' => array('folk'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
     <?php 
       $element = array(
@@ -44,7 +44,7 @@
         'artist' => "Outlandish",
         'tags' => array('hip hop'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
   </div>
   <!-- .grid -->
@@ -56,7 +56,7 @@
         'artist' => "Adele",
         'tags' => array('pop'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
     <?php 
       $element = array(
@@ -64,7 +64,7 @@
         'artist' => "Leonard Cohen",
         'tags' => array('jazz'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
     <?php 
       $element = array(
@@ -72,7 +72,7 @@
         'artist' => "Adele",
         'tags' => array('pop'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
   </div> 
   <!-- .grid -->

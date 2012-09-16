@@ -7,21 +7,51 @@
       <div id="subjects-nav">
 
         <nav>
-          <a class="link-blue-rightarrow" href="#">Menneske og samfund</a>
-          <a class="link-blue-rightarrow" href="#">Sundhed og sygdom</a>
-          <a class="link-blue-rightarrow" href="#">Hjem og fritid</a>
-          <a class="link-blue-rightarrow" href="#">Pædagogik, psykologi og uddannelse</a>
-          <a class="link-blue-rightarrow" href="#">Samfundet, økonomi og politik</a>
-          <a class="link-blue-rightarrow" href="#">Lande: Historie, rejser og sprog</a>
-          <a class="link-blue-rightarrow" href="#">IT, medier og kommunikation</a>
-          <a class="link-blue-rightarrow" href="#">Erhvervsliv og brancher</a>
-          <a class="link-blue-rightarrow" href="#">Natur og teknik</a>
-          <a class="link-blue-rightarrow" href="#">Filosofi og religion</a>
-          <a class="link-blue-rightarrow" href="#">Litteratur, kunst og underholdning</a>
-          <a class="link-blue-rightarrow" href="#">Skønlitteratur og erindringer</a>
+
+          <ul>
+            <li>
+              <a class="link-blue-right" href="#">Menneske og samfund</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Sundhed og sygdom</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Hjem og fritid</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Pædagogik, psykologi og uddannelse</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Samfundet, økonomi og politik</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Lande: Historie, rejser og sprog</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">IT, medier og kommunikation</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Erhvervsliv og brancher</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Natur og teknik</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Filosofi og religion</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Litteratur, kunst og underholdning</a>
+            </li>
+            <li>
+              <a class="link-blue-right" href="#">Skønlitteratur og erindringer</a>
+            </li>
+          </ul>
+
         </nav>
 
       </div>
+
+      
 
     </div>
 

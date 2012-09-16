@@ -1,7 +1,7 @@
 <?php
 	
 // Render a template with a set of variables
-function render($template, $vars){
+function render($template, $vars = array()){
  	ob_start();
  	extract($vars);
  	include('templates/' . $template . '.php');
@@ -14,10 +14,10 @@ function format_tags($tags) {
 	$elements = array();
 
 	foreach ($tags as $tag) {
-		$elements[] = '<a href="#lol">' . $tag . '</a>';
+		$elements[] = '<a href="#">' . $tag . '</a>';
 	}
 
-	$output = implode(', ', $elements);
+	$output = implode('&nbsp;/&nbsp;', $elements);
 
 	return $output;
 }

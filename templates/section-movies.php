@@ -16,7 +16,7 @@
         'box_height' => '3',
         'title' => "School of Rock",
         'image' => array(
-          '#src' => 'img/content/school_of_rock.png',
+          '#src' => '../img/content/school_of_rock.png',
           '#width' => '160',
           '#height' => '210',
         ),
@@ -25,7 +25,7 @@
                    </p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
   </div>
   <!-- .grid -->
@@ -38,7 +38,7 @@
         'artist' => "Ben Stiller",
         'tags' => array('farcer', 'mode', 'modeller'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>   
 
     <?php 
@@ -47,7 +47,7 @@
         'artist' => "Blanche Hanalis",
         'tags' => array('familien', 'nybyggere', 'Minnesota'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -56,7 +56,7 @@
         'artist' => "David Jankowsko",
         'tags' => array('krig', 'overlevelse', 'Frankrig'),
       );
-      print render('mediabox-small-darkgrey' , $element);
+      print render('widget-darkgrey' , $element);
     ?>
 
   </div>
@@ -69,7 +69,7 @@
         'box_height' => '3',
         'title' => "The man who shot Liberty Valance",
         'image' => array(
-          '#src' => 'img/content/liberty_valance.png',
+          '#src' => '../img/content/liberty_valance.png',
           '#width' => '190',
           '#height' => '250',
         ),
@@ -78,7 +78,7 @@
                    </p>",
         'more' => 'Læs mere',
       );
-      print render('mediabox-large-lightgrey' , $element);
+      print render('widget-lightgrey' , $element);
     ?> 
   </div>
   <!-- .grid -->

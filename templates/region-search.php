@@ -1,35 +1,34 @@
-<div id="region-search-panel">
+<div id="region-search">
 
   <div class="container_24">
 
     <div class="grid_24">
 
       <nav id="search-form" >
-        <form class="clearfix">
-            <input class="reset-input" placeholder="Skriv søgeord" type="text" size="40" maxlength="255" />
-            <input class="reset-input" type="submit" value="Søg" />
+        <form action="search-result.php" class="clearfix">
+            <input type="text" name="search_string" value="<?php print $_GET['search_string']; ?>" placeholder="Skriv søgeord"  />
+            <input type="submit" value="Søg" class="btn btn-blue"/>
         </form>
       </nav>
 
-      <nav id="search-type" class="clearfix tabs horizontal-nav">
-        <a class="link-blue-rightarrow active" href="#">Alt</a>
-        <a class="link-blue-rightarrow" href="#">Bøger</a>
-        <a class="link-blue-rightarrow" href="#">Film</a>
-        <a class="link-blue-rightarrow" href="#">Musik</a>
-        <a class="link-blue-rightarrow" href="#">Spil</a>
-        <a class="link-blue-rightarrow" href="#">Artikler</a>
-        <a class="link-blue-rightarrow" href="#">Noder</a>
-        <a class="link-blue-rightarrow" href="#">Net</a>
+      <nav id="search-tabs" class="horizontal-nav clearfix">
+        <a class="active" href="#">Alt</a>
+        <a href="#">Bøger</a>
+        <a href="#">Film</a>
+        <a href="#">Musik</a>
+        <a href="#">Spil</a>
+        <a href="#">Artikler</a>
+        <a href="#">Noder</a>
+        <a href="#">Net</a>
       </nav>
 
       <div id="search-advanced">
-        <a class="link-grey-plus" href="#">Flere søgemuligheder</a>
-
-        <div id="search-advanced-panel">
-
+        <div id="search-advanced-toggle">
+          <a class="link-grey-plus" href="#">Flere søgemuligheder</a>
         </div>
-
-
+        <div id="search-advanced-panel">
+          <!-- ADVANCED SEARCH HERE -->
+        </div>
       </div>
 
 
@@ -39,5 +38,6 @@
   </div>
   <!-- .container_24 -->
 
+
 </div>
-<!-- #search-panel -->
+<!-- #region-search -->

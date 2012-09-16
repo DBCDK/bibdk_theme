@@ -1,0 +1,117 @@
+//
+// Import: Marked links  
+//
+
+
+// Common marked links styling
+.icon-link {
+	background:transparent no-repeat 0% 50%;
+	padding-left:1.8em;
+	display:block; // IE
+	display:inline-block;
+	line-height:20px;
+}
+
+
+
+
+
+// Grey links
+.link-grey-plus {
+	@extend .icon-link;
+	background-image:url(../img/link_types/grey_plus.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/grey_minus.png);
+	}
+}
+.link-grey-right {
+	@extend .icon-link;
+	background-image:url(../img/link_types/grey_right.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/grey_left.png);
+	}
+}
+.link-grey-down {
+	@extend .icon-link;
+	background-image:url(../img/link_types/grey_down.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/grey_up.png);
+	}
+}
+
+// White links
+.link-white-plus {
+	@extend .icon-link;
+	background-image:url(../img/link_types/white_plus.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/white_minus.png);
+	}
+}
+.link-white-right {
+	@extend .icon-link;
+	background-image:url(../img/link_types/white_right.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/white_left.png);
+	}
+}
+.link-white-down {
+	@extend .icon-link;
+	background-image:url(../img/link_types/white_down.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/white_up.png);
+	}
+}
+
+// Blue links
+.link-blue-plus {
+	@extend .icon-link;
+	background-image:url(../img/link_types/blue_plus.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/blue_minus.png);
+	}
+}
+.link-blue-right {
+	@extend .icon-link;
+	background-image:url(../img/link_types/blue_right.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/blue_left.png);
+	}
+}
+.link-blue-down {
+	@extend .icon-link;
+	background-image:url(../img/link_types/blue_down.png);
+
+	&.opposite {
+		background-image:url(../img/link_types/blue_up.png);
+	}
+}
+
+
+
+
+
+
+.link-small-grey {
+	@extend .icon-link;
+	font-size:0.91666; // 11px 
+	color:$light_grey5;
+}
+.link-small-grey.rightarrow-icon {
+	background-image:url(../img/link_types/small_grey_rightarrow.png);
+}
+.link-small-grey.list-icon {
+	background-image:url(../img/link_types/small_grey_list.png);
+
+}
+.link-small-grey.link-icon {
+	background-image:url(../img/link_types/small_grey_link.png);
+
+}
