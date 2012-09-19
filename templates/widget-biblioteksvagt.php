@@ -15,7 +15,7 @@
   <footer>
 
     <div class="field-read-more">
-      <a class="link-white-right" href="#">Spørg biblioteksvagten</a>
+      <a class="icon-link icon-link-small icon-link-whiteicon icon-link-whitetext icon-link-right" href="#">Spørg biblioteksvagten</a>
     </div>
     
   </footer>

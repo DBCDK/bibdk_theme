@@ -1,3 +1,5 @@
+<body class="search-result">
+
 <?php include '../template.php' ?>
 <?php render('_head'); ?>
 

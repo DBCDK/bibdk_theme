@@ -3,6 +3,7 @@
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
 @import "compass/css3/appearance";
+@import "compass/css3/background-clip";
 @import "normalize";
 @import "960_24_col";
 @import "colors";
@@ -39,6 +40,9 @@
 }
 #region-content {
 	padding:40px 0 30px;
+}
+.search-result #region-content {
+	margin-top:-112px;
 }
 #region-footer {
 	padding:40px 0 100px;
@@ -146,7 +150,7 @@
 	margin-left:5px;
 
 	a {
-		color:#fff;
+		color:$white;
 		line-height: 30px;
 	}
 }
@@ -172,7 +176,7 @@
 
 	a {
 		padding:0 35px 0 10px;
-		background:url(../img/link_types/grey_down.png) no-repeat 90% center;
+		background:url(../img/icon-links/large/darkgrey-down-large.png) no-repeat 90% center;
 	}
 
 	input {
@@ -209,9 +213,7 @@
 	}
 	input[type=submit] {
 		font-size:1.333em; // 16px
-
 		width:110px;
-		font-weight:bold;
 	}
 }
 #search-tabs {
@@ -224,7 +226,7 @@
 		padding:10px 20px;
 		border-top:solid 1px darken($dark_grey3, 5%);
 
-		color:#fff;
+		color:$white;
 
 		&:hover {
 			background: lighten($dark_grey4, 10%);
@@ -248,9 +250,6 @@
 			margin-right:-1px;
 		}
 	}
-}
-#search-advanced a {
-	color:#fff;
 }
 #search-advanced-panel {
 	height:500px;
@@ -328,14 +327,9 @@
 //
 // Work
 //
-.work {
-	background:$light_grey2;
-	padding:10px;
-	margin-bottom:10px;	
-}
 .work-header,
 .work-body {
-	background:#fff;
+	background:$white;
 	padding:20px;
 	border:solid 1px $light_grey3;	
 }
@@ -425,51 +419,168 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .facets {
-	background:$light_grey5;
-
-	a {
-		padding:10px 20px;
-		display:block;
-	}
+	//background:$light_grey5;
 }
 .facets-type {
-	color:#fff;
+	color:$white;
 	font-weight:bold;
 	background:$dark_grey3;
+	display:block;
+	padding:7px 15px;
 }
 .facet {
+	padding:7px 15px;
+	display:block;
 	background:$dark_grey4;
 	color:$light_grey4;
 	span {
-		color:#fff;
+		color:$white;
+	}
+}
+
+.facets-header {
+	background:#3a3d3f;
+	height:72px;
+	text-align:center;
+	padding:0 10px;
+}
+
+.number-of-results {
+	color:$white;
+	padding-top:15px;
+	font-size:16px;
+	line-height:120%;
+}
+.search-string {
+	color:$light_grey5;
+	line-height:120%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// Works controls (above the list of works)
+//
+.works-controls {
+	background:#fbfbfb;
+	margin-bottom:20px;
+	border:solid 1px $light_grey3;
+	font-size:14px;
+}
+.works-control:active,
+.works-control.toggled {
+	@include box-shadow(inset 0 0px 1px rgba(black,.8));
+	background-color:darken(#fbfbfb, 2%);
+}
+
+// Toggle collapsed/expanded
+.works-toggle-wrapper {
+	float:left;
+}	
+.works-toggle {
+	display:block;
+	padding:0 20px;
+	height:60px;
+	line-height:60px;
+	border-right:solid 1px $light_grey3;	
+}
+.works-toggle-collapse,
+.works-toggle-expand {
+	display:inline-block;
+	width:17px;
+	height:60px;
+}
+.works-toggle-collapse {
+	background:url(../img/works-collapse.png) no-repeat 50% 50%;
+}
+.works-toggle-expand {
+	background:url(../img/works-expand.png) no-repeat 50% 50%;
+}
+
+// Sorting
+.works-sort-wrapper {
+	float:left;
+}
+.works-sort {
+	display:block;
+	padding:0 20px;
+	line-height:60px;		
+	border-right:solid 1px $light_grey3;
+
+	.caret {
+		background:url(../img/icon-links/large/blue-down-large.png) no-repeat 100% 50%;
+		display: inline-block;
+		width: 15px;
+		height: 60px;
+		margin-left:10px;
+		vertical-align: top;
+	}
+	&.toggled .caret {
+		background-image:url(../img/icon-links/large/blue-up-large.png);
+	}	
+
+}
+
+// Paging
+.works-pager-wrapper {
+	float:right;
+}
+.works-pager-back,
+.works-pager-forward,
+.works-pager-select {
+	float:left;
+	border-left:solid 1px $light_grey3;
+	display:block;
+}
+.works-pager-back {
+	width:35px;
+	height:60px;
+	background:url(../img/icon-links/large/blue-left-large.png) no-repeat 50% 50%;
+}
+.works-pager-forward {
+	width:35px;
+	height:60px;
+	background:url(../img/icon-links/large/blue-right-large.png) no-repeat 50% 50%;
+}
+.works-pager-select {
+	padding:0 20px;
+	line-height:60px;
+
+	.caret {
+		background:url(../img/icon-links/large/blue-down-large.png) no-repeat 100% 50%;
+		display: inline-block;
+		width: 15px;
+		height: 60px;
+		margin-left:10px;
+		vertical-align: top;
+	}
+
+	&.toggled .caret {
+		background-image:url(../img/icon-links/large/blue-up-large.png);
 	}
 }
 
@@ -487,6 +598,194 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-wrapper {
+	position:relative;
+	float:left;
+}
+.dropdown-leftalign {
+	left: 0;
+}
+.dropdown-rightalign {
+	right: 0;
+}
+.dropdown-menu {
+	@include border-radius(6px);
+	@include box-shadow(0 5px 10px rgba(black,0.2));
+
+	position: absolute;
+  top: 100%;
+  z-index: 5;
+  min-width:100%;
+  padding:5px 0;
+  margin: 2px 0 0;
+
+	border: 1px solid rgba(black, 0.2);
+	background-color: $white;
+	font-size:12px;
+	
+	.divider {
+		border-bottom:solid 1px $light_grey3;
+	}
+
+	a {
+		display:block;
+		margin:0;
+		padding:5px 20px;
+
+		&:hover {
+			background:$light_grey1;
+		}
+
+		&.current {
+			background:$light_grey2;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-element-wrapper {
+	background:$light_grey2;
+	padding:10px;
+	margin-bottom:10px;	
+}
+.content-element {
+	background:$white;
+	padding:20px;
+	border:solid 1px $light_grey3;	
+}
+
+.content-element-title {
+	
+	hgroup {
+		margin-bottom:10px;
+	}
+	h2 {
+		font-size:1.666em; // 20px
+		line-height:100%;
+		color:$dark_grey4;
+
+		span {
+			font-size:14px;
+			font-weight:normal;
+			color:$dark_grey5;
+		}
+	}
+	h3 {
+		font-size:1.1666em; // 14px	
+		font-weight:normal;
+		color:$light_grey5;
+	}
+
+}
+
+
+
+.wrap {
+
+	border-left:solid 1px $light_grey3;
+	border-right:solid 1px $light_grey3;
+	border-bottom:solid 1px $light_grey3;
+	background:$white;
+
+	table {
+		background:#fff;
+		width:100%;
+		font-size:12px;
+	}
+
+	tr {
+		border-bottom:solid 1px $light_grey3;
+	}
+
+	th,
+	td {
+		text-align:left;
+		padding:12px 10px;
+	}
+	th:first-child,
+	td:first-child {
+		text-align:left;
+		padding-left:20px;
+	}
+	th:last-child,
+	td:last-child {
+		text-align:left;
+		padding-right:20px;
+	}
+
+	th {
+		font-weight:bold;
+		color:$light-grey5;
+		
+	}
+
+
+
+	.table-toggle {
+		padding:10px 20px;
+	}
+
+}
 
 
 

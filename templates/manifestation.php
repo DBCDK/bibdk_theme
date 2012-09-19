@@ -3,21 +3,26 @@
 	<div class="actions">
 
 		<div class="primary-actions">
-			<a class="btn btn-blue btn-block" href="#">Bestil <strong>bog</strong> i denne udgave</a>
-			<a class="btn-add-basket" href="#">Tilføj indkøbskurv</a>
+
+			<div class="btn-wrapper">
+				<a class="btn btn-grey" href="#">Bestil <strong>bog</strong> i denne udgave</a>
+			</div>
+
+			<a class="icon-link icon-link-small icon-link-darkgreytext icon-link-darkgreyicon icon-link-add-basket" href="#">Tilføj indkøbskurv</a>
+		
 		</div>
 
 		<div class="secondary-actions">
 
 			<ul>
 				<li>
-					<a class="link-small-grey list-icon" href="#">Hvilke biblioteker har materialet?</a>
+					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-list" href="#">Hvilke biblioteker har materialet?</a>
 				</li>
 				<li>
-					<a class="link-small-grey link-icon" href="#">Link til denne post</a>
+					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-link" href="#">Link til denne post</a>
 				</li>
 				<li>
-					<a class="link-small-grey rightarrow-icon" href="#">Eksporter til RefWorks</a>
+					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-rightarrow" href="#">Eksporter til RefWorks</a>
 				</li>
 			<ul>
 				
@@ -27,7 +32,7 @@
 	<!-- .actions -->
 
 
-	<div class="manifestation-data">
+	<div class="manifestation-data text">
 
 		<table class="tbl">
 			<tr>

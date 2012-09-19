@@ -24,8 +24,8 @@
 			}
 
 			&.active {
-				background-color:#fff;
-				border-bottom:solid 1px #fff;
+				background-color:$white;
+				border-bottom:solid 1px $white;
 				margin-bottom:-1px;
 				font-weight:bold;
 			}	
@@ -80,13 +80,17 @@
 	
 	&:nth-child(even) {
 		border-left:solid 10px $zebraEven;
-		background-color:#fff;
+		background-color:$white;
 	}
 	
 	&:last-child {
 		border-bottom:none;
 	}
 }
+
+
+
+
 
 
 
@@ -101,7 +105,9 @@
 .primary-actions {
 }
 .secondary-actions {
-	margin-top:30px;
+	padding:10px 0 0 0;
+	margin:10px 0 0 0;
+	border-top:dotted 1px $light_grey3;
 }
 
 

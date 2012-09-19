@@ -1,7 +1,7 @@
 <div class="manifestations zebra-wrapper">
 
 	<div class="zebra-toggle">
-		<a class="link-blue-down" href="#">Skjul alle <strong>4 bøger</strong></a>
+		<a class="icon-link icon-link-down" href="#">Skjul alle <strong>4 bøger</strong></a>
 	</div>
 
 	<div class="zebra-content">
@@ -13,7 +13,7 @@
 
 
 	<div class="zebra-toggle">
-		<a class="link-blue-down opposite" href="#">Skjul alle <strong>4 bøger</strong></a>
+		<a class="icon-link icon-link-down opposite" href="#">Skjul alle <strong>4 bøger</strong></a>
 	</div>
 
 </div>

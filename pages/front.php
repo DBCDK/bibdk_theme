@@ -1,3 +1,5 @@
+<body class="frontpage">
+
 <?php include '../template.php' ?>
 <?php render('_head'); ?>
 

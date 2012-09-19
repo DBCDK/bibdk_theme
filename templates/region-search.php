@@ -7,7 +7,7 @@
       <nav id="search-form" >
         <form action="search-result.php" class="clearfix">
             <input type="text" name="search_string" value="<?php print $_GET['search_string']; ?>" placeholder="Skriv søgeord"  />
-            <input type="submit" value="Søg" class="btn btn-blue"/>
+            <input type="submit" value="Søg" class="btn btn-blue btn-fixed-size" />
         </form>
       </nav>
 
@@ -24,7 +24,7 @@
 
       <div id="search-advanced">
         <div id="search-advanced-toggle">
-          <a class="link-grey-plus" href="#">Flere søgemuligheder</a>
+          <a class="icon-link icon-link-whitetext icon-link-darkgreyicon icon-link-plus" href="#">Flere søgemuligheder</a>
         </div>
         <div id="search-advanced-panel">
           <!-- ADVANCED SEARCH HERE -->

@@ -11,6 +11,81 @@ $(document).ready(function() {
 });*/
 
 
+
+
+$('.table-toggle a').click(function(e) {
+	e.preventDefault();
+
+
+	$(this).closest('.wrap').find('.hideable').toggleClass('visuallyhidden');
+
+
+	$(this).toggleClass('opposite');
+	$(this).html($(this).html().replace('Flere', 'Færre'));
+
+
+});
+
+
+
+
+// Dropdown menus
+$('.dropdown-toggle').click(function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+
+	$('.dropdown-toggle').not($(this)).removeClass('toggled');
+	$('.dropdown-toggle').not($(this)).next().addClass('visuallyhidden');
+
+	$(this).toggleClass('toggled');
+	$(this).next().toggleClass('visuallyhidden');
+});
+
+$('.dropdown-menu').click(function(e){
+    //e.stopPropagation();
+});
+
+$('html').click(function() {
+  $('.dropdown-menu').addClass('visuallyhidden');
+  $('.dropdown-toggle').removeClass('toggled');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('.icon-link-add-basket').toggle(function() {
+
+	$(this).text('Fjern fra indkøbskurv');
+	$(this).toggleClass('toggled');
+
+}, function () {
+
+	$(this).text('Tilføj til indkøbskurv');
+	$(this).toggleClass('toggled');
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 $('.work-cover-selector a').click(function(e) {
 
 	e.preventDefault();

@@ -1,4 +1,4 @@
-<div class="work">
+<div class="work content-element-wrapper">
 
 
 	<header class="work-header">
@@ -7,11 +7,11 @@
 
 			<div class="primary-actions">
 
-				<div class="btn-group">
-					<a class="btn btn-toggle-dropdown btn-blue btn-block" href="#">
+				<div class="dropdown-wrapper">
+					<a class="btn btn-blue dropdown-toggle" href="#">
 						Bestil uanset udgave <span class="caret"></span>
 					</a>
-					<ul class="btn-dropdown visuallyhidden">
+					<ul class="dropdown-menu visuallyhidden">
 						<li><a href="#">Option 1</a></li>
 						<li><a href="#">Option 2</a></li>
 						<li><a href="#">Option 3</a></li>
@@ -31,7 +31,7 @@
 		</hgroup>
 
 		<div class="toggle-work">
-			<a class="link-blue-plus" href="#"><strong>Mere</strong> information</a>
+			<a class="icon-link icon-link-plus" href="#"><strong>Mere</strong> information</a>
 		</div>
 
 	</header>
@@ -39,7 +39,7 @@
 
 
 
-	<div class="work-body work-body-has-cover clearfix visuallyhidden">
+	<div class="work-body work-body-has-cover visuallyhidden clearfix">
 
 		<div class="work-shared-data clearfix">
 

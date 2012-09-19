@@ -3,7 +3,22 @@
 
 	<nav class="facets">
 
-		<?php print $_GET['search_string']; ?>
+		<div class="facets-header">
+
+			<div class="number-of-results">
+				232 resultater
+			</div>
+
+			<?php if (!empty($_GET['search_string'])): ?>
+				<div class="search-string">
+					"<?php print $_GET['search_string']; ?>"
+				</div>
+			<?php endif;?>
+			
+		</div>
+
+	
+
 		<ul>
 
 			<li>

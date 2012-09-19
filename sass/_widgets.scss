@@ -15,7 +15,6 @@
 .widget {
 	position: relative;	
 	margin-bottom:10px;
-	background:$light_grey2;
 	@include transition(background-color 0.3s);
 
 	.inner {
@@ -51,7 +50,7 @@
 			line-height: 120%;
 
 			a {
-				color:#fff;		
+				color:$white;		
 			}
 		}
 	}
@@ -61,12 +60,6 @@
 		a {
 			color: $light_grey4;	
 		}	
-	}
-
-	.field-read-more {
-		a {
-			color:#fff;
-		}
 	}
 }
 
@@ -105,9 +98,7 @@
 // Custom Biblioteksvagt widget
 .widget-biblioteksvagt {
 	background: $btn_blue;
-
-	color:#fff;
-
+	color:$white;
 
 	.field-title {
 		margin-bottom:10px;
@@ -118,7 +109,7 @@
 			line-height: 120%;
 
 			a {
-				color:#fff;		
+				color:$white;		
 			}
 		}	
 	}
@@ -133,10 +124,5 @@
 		right:0px;
 		background:darken($btn_blue, 5%);
 		padding:15px;
-
-		a {
-			font-size:0.91666em; // 11px
-			color:#fff;
-		}
 	}
 }
