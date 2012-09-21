@@ -26,7 +26,7 @@
         <div id="search-advanced-toggle">
           <a class="icon-link icon-link-whitetext icon-link-darkgreyicon icon-link-plus" href="#">Flere søgemuligheder</a>
         </div>
-        <div id="search-advanced-panel">
+        <div id="search-advanced-panel" class="visuallyhidden">
           <!-- ADVANCED SEARCH HERE -->
         </div>
       </div>

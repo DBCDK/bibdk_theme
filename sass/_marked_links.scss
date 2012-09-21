@@ -68,7 +68,7 @@
 .icon-link.icon-link-right.icon-link-darkgreyicon {
 	background-image:url(../img/icon-links/large/darkgrey-right-large.png);
 
-	&.opposite {
+	&.toggled {
 		background-image:url(../img/icon-links/large/darkgrey-left-large.png);
 	}
 }
@@ -77,7 +77,7 @@
 .icon-link.icon-link-down.icon-link-darkgreyicon {
 	background-image:url(../img/icon-links/large/darkgrey-down-large.png);
 
-	&.opposite {
+	&.toggled {
 		background-image:url(../img/icon-links/large/darkgrey-up-large.png);
 	}
 }
@@ -86,7 +86,7 @@
 .icon-link.icon-link-plus.icon-link-darkgreyicon {
 	background-image:url(../img/icon-links/large/darkgrey-plus-large.png);
 
-	&.opposite {
+	&.toggled {
 		background-image:url(../img/icon-links/large/darkgrey-minus-large.png);
 	}
 }

@@ -1,6 +1,6 @@
 <div class="tabs-section">
 
-	<div class="tabs-content text clearfix">
+	<div class="padded text clearfix">
 
 		<div class="actions">
 

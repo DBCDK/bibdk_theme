@@ -12,24 +12,21 @@ $(document).ready(function() {
 
 
 
-
+// Toggle tables
 $('.table-toggle a').click(function(e) {
 	e.preventDefault();
 
-
-	$(this).closest('.wrap').find('.hideable').toggleClass('visuallyhidden');
-
-
+	$(this).closest('.table').find('.hideable').toggleClass('visuallyhidden');
 	$(this).toggleClass('opposite');
-	$(this).html($(this).html().replace('Flere', 'Færre'));
-
-
+	//$(this).html($(this).html().replace('Flere', 'Færre'));
 });
 
 
 
 
-// Dropdown menus
+
+
+// Toggle dropdown menus
 $('.dropdown-toggle').click(function(e) {
 	e.preventDefault();
 	e.stopPropagation();
@@ -37,17 +34,26 @@ $('.dropdown-toggle').click(function(e) {
 	$('.dropdown-toggle').not($(this)).removeClass('toggled');
 	$('.dropdown-toggle').not($(this)).next().addClass('visuallyhidden');
 
-	$(this).toggleClass('toggled');
-	$(this).next().toggleClass('visuallyhidden');
+
+	if (!$(this).hasClass('disabled')) {
+		$(this).toggleClass('toggled');
+		$(this).next().toggleClass('visuallyhidden');
+	}
 });
 
 $('.dropdown-menu').click(function(e){
-    //e.stopPropagation();
+    //e.stopPropagation(); This might not be necessary ##fix##
 });
 
+
+
+
+
+// Random click
 $('html').click(function() {
   $('.dropdown-menu').addClass('visuallyhidden');
   $('.dropdown-toggle').removeClass('toggled');
+
 });
 
 
@@ -60,16 +66,15 @@ $('html').click(function() {
 
 
 
-
-
+// Add to basket
 $('.icon-link-add-basket').toggle(function() {
 
-	$(this).text('Fjern fra indkøbskurv');
+	//$(this).text('Fjern fra indkøbskurv');
 	$(this).toggleClass('toggled');
 
 }, function () {
 
-	$(this).text('Tilføj til indkøbskurv');
+	//$(this).text('Tilføj til indkøbskurv');
 	$(this).toggleClass('toggled');
 	
 });
@@ -85,7 +90,7 @@ $('.icon-link-add-basket').toggle(function() {
 
 
 
-
+// Select side of work cover
 $('.work-cover-selector a').click(function(e) {
 
 	e.preventDefault();
@@ -95,8 +100,6 @@ $('.work-cover-selector a').click(function(e) {
 
 	$image.siblings().addClass('visuallyhidden');
 	$image.removeClass('visuallyhidden');
-
-
 });
 
 
@@ -106,33 +109,6 @@ $('.work-cover-selector a').click(function(e) {
 
   
 
-$('.btn').click(function(e) {
-	//e.preventDefault();
-	e.stopPropagation();
-});
-
-
-
-$('.btn-group .btn').click(function(e) {
-	e.preventDefault();
-	e.stopPropagation();
-
-	if (!$(this).hasClass('btn-disabled')) {
-		$(this).toggleClass('btn-toggled');
-		$(this).next().toggleClass('visuallyhidden');
-	}
-
-});
-
-
-$('.btn-dropdown').click(function(e){
-    e.stopPropagation();
-});
-
-$('html').click(function() {
-  $('.btn-dropdown').addClass('visuallyhidden');
-  $('.btn-group .btn').removeClass('btn-toggled');
-});
 
 
 
@@ -142,14 +118,12 @@ $('html').click(function() {
 
 
 
+// Disable button and dropdown when toggling details of a work
 $('.toggle-work a').toggle(function() {
 
-	$(this).addClass('opposite');
-	$(this).html($(this).html().replace('Mere', 'Mindre'));
-	$(this).closest('.work').children('.work-body').removeClass('visuallyhidden');
-	$(this).closest('header').find('.btn-block').addClass('btn-disabled');
-	$(this).closest('header').find('.btn-block').removeClass('btn-toggled');
-	$(this).closest('header').find('.btn-dropdown').addClass('visuallyhidden');
+	$(this).closest('.work-header').find('.btn').addClass('disabled');
+	$(this).closest('.work-header').find('.btn').removeClass('toggled');
+	$(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
 	$('html, body').animate({
 		scrollTop: $(this).closest('.work').offset().top
@@ -157,12 +131,35 @@ $('.toggle-work a').toggle(function() {
 
 }, function () {
 
-	$(this).removeClass('opposite');
-	$(this).html($(this).html().replace('Mindre', 'Mere'));
-	$(this).closest('.work').children('.work-body').addClass('visuallyhidden');
-	$(this).closest('header').find('.btn-block').removeClass('btn-disabled');
+	$(this).closest('.work-header').find('.btn').removeClass('disabled');
 
 });
+
+
+
+
+
+
+
+// Toggle visibility of "next section of an element"
+$('.toggle-next-section a').toggle(function(e) {
+	e.preventDefault();
+
+	$(this).addClass('opposite');
+	$(this).html($(this).html().replace('Mere', 'Mindre'));
+
+	$(this).closest('.element-section').next().removeClass('visuallyhidden');
+
+}, function(e) {
+	e.preventDefault();
+
+	$(this).removeClass('opposite');
+	$(this).html($(this).html().replace('Mindre', 'Mere'));
+
+	$(this).closest('.element-section').next().addClass('visuallyhidden');
+
+});
+
 
 
 
@@ -175,6 +172,8 @@ $('.widget').click(function () {
 	window.location = $(this).find(".field-title a").attr("href");
 });
 
+
+// Adjust margin-left on widgets with image
 $('.widget-wrapper').each(function () {
 	var $image = $(this).find('.field-image').find('img');
 	if ($image.length > 0) {
@@ -188,10 +187,9 @@ $('.widget-wrapper').each(function () {
 
 
 
-
+// Control .active class on tabs
 $('.tabs a').click(function(e){
 	e.preventDefault();
-
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
 });
@@ -205,23 +203,11 @@ $('#search-tabs a').click(function(){
 
 
 
-
-
-
-
-
-
-$('#search-advanced-panel').hide();
-$('#search-advanced a').click(function() {
-	$(this).toggleClass('expanded');
-	if ($(this).hasClass('expanded')){
-
-		$(this).text('Færre søgemuligheder');
-	}
-	else {
-		$(this).text('Flere søgemuligheder');
-	}	
-	$(this).parent().next().fadeToggle();
+// Toggle advanced search options
+$('#search-advanced a').click(function(e) {
+	$(this).toggleClass('toggled');
+	//$(this).html($(this).html().replace('Flere', 'Færre'));
+	$(this).parent().next().toggleClass('visuallyhidden');
 });
 
 
@@ -231,9 +217,7 @@ $('#search-advanced a').click(function() {
 
 
 
-
-
-
+// Find bib stuff ##fix##
 $('.page-action-find-bib form').hide();
 
 $('.page-action-find-bib a').click(function () {
@@ -244,12 +228,10 @@ $('.page-action-find-bib a').click(function () {
 		width: '300',
 	}, 300, function() {
 					
-
 			$clicked.hide();
 			$clicked.siblings().fadeIn(function(){
 				$clicked.next().find('input[type=text]').focus();
 			});
-
 	});
 });
 
@@ -259,8 +241,6 @@ $('.subwork-type-navigation a').click(function(e) {
 
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
-
-
 });
 
 

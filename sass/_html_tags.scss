@@ -9,25 +9,15 @@ select,
 textarea {
   color: $dark_grey2;
 }
-
-
 body {
   font-size: 0.75em; // 16px
   line-height: 1.5;
 	font-family: 'Arial';
 }
-
-
 a {
 	text-decoration: none;
   color:$btn_blue;
 }
-li a {
-  //color:$dark_grey4;
-}
-
-
-
 h1,
 h2,
 h3,
@@ -36,34 +26,26 @@ h5,
 h6 {
 	margin:0;
 }
-
-
 dl, dt, dd {
 	margin:0;
 }
-
 fieldset {
 }
-
 textarea {
   resize: vertical;
 }
-
 input,
 button,
 textarea {
-   @include reset-input; 
+  @include reset-input; 
 }
-
 input[type=text] {
 	@include border-radius(4px);
 	@include box-shadow(inset 0px 1px 2px rgba(black,.3));
 }
-
 img {
   vertical-align: middle;
 }
-
 ul {
   margin:0;
   padding:0;
@@ -72,9 +54,6 @@ ul {
 
 
 
-
-
-// Weird stuff
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;

@@ -1,24 +1,25 @@
 <section class="works">
 
 
+
 	<div class="works-controls clearfix">
 
-		<div class="works-toggle-wrapper">
+		<div class="works-control-wrapper-left">
 
 			<a class="works-control works-toggle" href="#">
-				<span class="works-toggle-collapse"></span>
-				<span class="works-toggle-expand"></span>
+				<span class="works-toggle-collapse hide-text">&or;</span>
+				<span class="works-toggle-expand hide-text">&or;</span>
 			</a>
 
 		</div>
-		<!-- works-toggle -->
+		<!-- works toggle all -->
 
 
-		<div class="works-sort-wrapper">
+		<div class="works-control-wrapper-left">
 
 			<div class="dropdown-wrapper">
 
-				<a href="#" class="works-control works-sort dropdown-toggle">Sortér efter år<span class="caret"></span></a>
+				<a href="#" class="works-control works-sort dropdown-toggle">Sortér efter år<span class="caret hide-text">&or;</span></a>
 
 				<ul class="dropdown-menu dropdown-leftalign visuallyhidden">
 					<li><a href="#" class="current">Sortér efter år</a></li>
@@ -29,15 +30,16 @@
 			</div>
 
 		</div>
-		<!-- works-sort -->
+		<!-- works sort -->
 
 
-		<div class="works-pager-wrapper">
-			<a href="#" class="works-control works-pager-back"></a>
+		<div class="works-control-wrapper-right">
+
+			<a href="#" class="works-control works-pager-back hide-text">&or;</a>
 
 			<div class="dropdown-wrapper">
 
-				<a href="#" class="works-control works-pager-select dropdown-toggle">Side 1 <span class="caret"></span></a>
+				<a href="#" class="works-control works-pager-select dropdown-toggle">Side 1 <span class="caret hide-text">&or;</span></a>
 				
 				<ul class="dropdown-menu dropdown-leftalign visuallyhidden">
 					<li><a href="#" class="current">Side 1</a></li>
@@ -51,8 +53,10 @@
 
 			</div>
 
-			<a href="#" class="works-control works-pager-forward"></a>
+			<a href="#" class="works-control works-pager-forward hide-text">&or;</a>
+
 		</div>
+		<!-- works pager -->
 
 	</div>
 	<!-- works-controls -->
@@ -60,9 +64,7 @@
 
 
 	<?php print render('work'); ?>
-	<?php print render('work'); ?>
-	<?php print render('work'); ?>
-	<?php print render('work'); ?>
+
 	
 
 

@@ -11,7 +11,7 @@
   &:active {
     background-color:darken($color, 2%);
   } 
-  &.btn-disabled:hover {
+  &.disabled:hover {
     background-color:$color;
   }
 }

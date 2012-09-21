@@ -3,22 +3,20 @@
 //
 
 
-// Settings box heights
-.widget-height-1 {
-	height:100px;
-}
-.widget-height-2 {
-	height:210px;
-}
-.widget-height-3 {
-	height:320px;
-}
-
-
 .horizontal-nav a {
 	float:left;
 	display:block;
 }
+
+
+// An easy way to add padding to elements!
+.padded {
+	//@include rem('padding', 20px);	
+	padding:20px;
+}
+
+
+
 
 
 
