@@ -1,0 +1,239 @@
+//
+// Page regions
+//
+#region-topbar {
+	background:$dark_grey1;
+}
+#region-header {
+	background: $dark_grey2;
+	height:80px;	
+}
+#region-search {
+	padding:20px 0;
+	background:$dark_grey3;
+	min-height:90px;
+}
+#region-subjects {
+	background: $light_grey2;
+	padding:30px 0 10px;
+	min-height:60px;
+}
+#region-content {
+	padding:40px 0 30px;
+}
+.search-result #region-content {
+	margin-top:-112px;
+}
+#region-footer {
+	padding:40px 0 100px;
+	background: $dark_grey3;
+}
+
+
+
+//
+// Unique element: Identity
+//
+#header-logo {
+	position: absolute;
+	top:15px;
+}
+#footer-logo {
+	text-align: center;	
+}
+
+
+
+//
+// Unique element: Top bar 
+//
+
+// Service navigation
+#service-nav {
+
+	a {
+		padding:0.5em 1em;
+		border-right:solid 1px $dark_grey2;
+		color:$light_grey5;
+
+		&:first-child {
+			padding-left:0;
+		}
+		&:last-child {
+			border-right:none;
+		}	
+	}
+}
+
+// User navigation
+#user-nav {
+	position:absolute;
+	top:0;
+	width:950px;
+
+	&.with-mats {
+		position:fixed;
+	}
+}
+#user-nav-inner {
+	position:absolute;
+	right:0;
+	z-index: 10;
+
+	background: $dark_grey3;
+	@include border-radius(0 0 5px 5px);
+
+	a {
+		line-height:300%;
+		padding:0 1em;
+		border-right:solid 1px lighten($dark_grey3, 5%);
+		color: lighten($btn_blue, 10%);
+		text-shadow:0 -1px rgba(black,.3);
+	}
+		
+	.materials-button {
+		span {
+			font-size:1.5em; // 18px
+			font-weight:bold;
+			float:left;
+			margin-right:0.5em;
+		}
+	}
+
+	.login-button {
+		font-weight:bold;
+		border-right:none;
+	}
+}
+
+
+
+
+
+
+
+
+
+//
+// Unique element: Page actions
+//
+#page-actions {
+	position:absolute;
+	right:0px;
+	top:30px;
+}
+
+.page-action {
+	float:left;
+	background: $dark_grey3;
+	@include border-radius(3px);
+	margin-left:5px;
+
+	a {
+		color:$white;
+		line-height: 30px;
+	}
+}
+// Spørg biblioteksvagt
+.page-action-sporg-vagt {
+
+	a {
+		padding:0 10px 0 0;	
+		font-weight:bold;		
+	}
+
+	img {
+		float:left;
+		margin-right:10px;
+		position:relative;
+		top:2px;
+		left:2px;
+		@include border-radius(3px);
+	}
+}
+// Find bibliotek
+.page-action-find-bib {
+
+	a {
+		padding:0 35px 0 10px;
+		background:url(../img/icon-links/large/darkgrey-down-large.png) no-repeat 90% center;
+	}
+
+	input {
+		line-height:30px;
+		float:left;
+		padding:0 10px;
+	}
+	input[type=text] {
+		width:85%;
+	}
+	input[type=submit] {
+		width:15%;
+	}
+}
+
+
+
+//
+// Unique element: Search form
+//
+#search-form {
+	margin-bottom:10px;
+
+	input {
+		float:left;
+		height:40px;
+		line-height:40px;
+	}
+	input[type=text] {
+		width:830px;
+		margin-right: 10px;
+		font-size:1.1666em; // 14px
+		padding:0 1em;
+	}
+	input[type=submit] {
+		font-size:1.333em; // 16px
+		width:110px;
+	}
+}
+#search-tabs {
+	margin-bottom:15px;
+
+	a {
+		background: $dark_grey4;
+		@include transition(background-color .5s);
+		margin-right:1px;
+		padding:10px 20px;
+		border-top:solid 1px darken($dark_grey3, 5%);
+
+		color:$white;
+
+		&:hover {
+			background: lighten($dark_grey4, 10%);
+		}
+		&:first-child {
+			@include border-radius(5px 0 0 5px);	
+		}
+		&:last-child {
+			@include border-radius(0 5px 5px 0);
+		}
+		&.active {
+			background-color:$btn_blue;
+			@include border-radius(3px);
+			text-shadow:0px -1px rgba(black,.2);
+			
+			border:none;
+			padding:12px 21px;
+			position: relative;
+			top:-1px;
+			left:-1px;
+			margin-right:-1px;
+		}
+	}
+}
+#search-advanced-panel {
+	height:500px;
+	margin-top:30px;
+	background:$light_grey5;
+}
+
