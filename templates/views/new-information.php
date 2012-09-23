@@ -1,4 +1,4 @@
-<div id="block-news" class="block clearfix">
+<section id="block-news" class="block clearfix">
 
   <div class="grid_24">
 
@@ -23,7 +23,7 @@
                   </p>",
         'more' => 'Læs mere',
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -40,7 +40,7 @@
                   </p>",
         'more' => "Hent den her",
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -60,19 +60,18 @@
         'title' => "Kom med i bibliotek.dk brugerpanelet",
         'more' => TRUE,
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
   </div>
   <!-- .grid -->
 
   <div class="grid_5">
-    <?php print render('widget-biblioteksvagt'); ?>
+    <?php print render('elements', 'widget-biblioteksvagt'); ?>
 
 
 
   </div>  
   <!-- .grid -->
 
-</div>
-<!-- #block-news -->
+</section>

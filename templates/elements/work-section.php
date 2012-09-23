@@ -28,7 +28,7 @@
 	</div>
 	<!-- tabs-content -->
 
-	<?php print render('manifestations'); ?>
+	<?php print render('views', 'manifestations'); ?>
 
 </div>
 <!-- tabs-section -->

@@ -1,6 +1,14 @@
 //
+// Import: Global elements
+//
+
+
+
+
+//
 // Page regions
 //
+
 #region-topbar {
 	background:$dark_grey1;
 }
@@ -17,11 +25,11 @@
 	padding:30px 0 10px;
 	min-height:60px;
 }
-#region-content {
+#page-columns {
 	padding:40px 0 30px;
 	margin-top:-112px;
 }
-.page-frontpage #region-content {
+.page-frontpage #page-columns {
 	margin-top:0;
 }
 #region-footer {
@@ -31,9 +39,11 @@
 
 
 
+
 //
 // Identity
 //
+
 #header-logo {
 	position: absolute;
 	top:15px;
@@ -44,11 +54,11 @@
 
 
 
+
 //
-// Top bar 
+// Service navigation 
 //
 
-// Service navigation
 #service-nav {
 
 	li {
@@ -74,9 +84,10 @@
 
 
 
+//
+// User navigation 
+//
 
-
-// User navigation
 #user-nav {
 	position:absolute;
 	top:0;
@@ -126,14 +137,10 @@
 
 
 
-
-
-
-
-
 //
-// Unique element: Page actions
+// Page actions
 //
+
 #page-actions {
 	position:absolute;
 	right:0;
@@ -195,9 +202,11 @@
 
 
 
+
 //
-// Unique element: Search form
+// Search form
 //
+
 #search-form {
 	margin-bottom:10px;
 
@@ -261,3 +270,92 @@
 	background:$light_grey5;
 }
 
+
+
+
+//
+// Subjects navigation
+//
+
+#subjects-nav {
+
+	li {
+		float:left;
+		width:33%;	
+	}
+
+	a {
+		display:block;
+		margin-bottom:20px;
+		font-size:1.1666em; // 14px
+		color:$dark_grey3;
+	}
+}
+
+
+
+
+//
+// Sidebar
+//
+
+.sidebar-header {
+	height:71px;
+	line-height:71px;
+	background-color:$dark_grey3;
+	border-bottom:solid 1px darken($dark_grey3, 5%);
+
+	font-size:1.333em; // 16px
+	font-weight:bold;
+	text-align:center;
+	color:$white;
+}
+
+// ##fix##
+.page-laanerstatus .sidebar-header,
+.page-favoritbiblioteker .sidebar-header {
+	background-image:url(../img/min-side-smiley.png);
+	background-repeat:no-repeat;
+	background-position:10%;
+}
+
+.sidebar-nav {
+
+	a {
+		background:$dark_grey4;
+		display:block;
+		padding:8px 15px;
+		color:$white;
+
+		border-top:solid 1px lighten($dark_grey4, 2%);
+		border-bottom:solid 1px darken($dark_grey4, 5%);
+
+		@include transition(background-color .5s);
+
+		&:hover {
+			background:lighten($dark_grey4, 2%);
+		}
+
+		&.active {
+			border:none;
+			@include border-radius(3px);
+			background:$btn_blue;
+			padding:8px 18px;
+			margin-left:-3px;
+			margin-right:-3px;
+			font-weight:bold;
+			text-shadow:0 -1px 1px rgba(black, 0.3);
+			
+			&:hover {
+				background:lighten($btn_blue, 2%);
+			}
+		}
+	}
+
+	.facet-type {
+		background:darken($dark_grey3, 2%);
+		padding:8px 15px;
+		color:$white;
+		font-weight:bold;
+	}
+}

@@ -70,7 +70,7 @@
 	<!-- works-controls -->
 
 
-	<?php print render('work'); ?>
+	<?php print render('elements', 'work'); ?>
 
 
 </section>

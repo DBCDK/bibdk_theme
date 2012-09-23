@@ -1,37 +1,42 @@
 <?php include '../template.php' ?>
-<?php render('_head'); ?>
+
+<!doctype html>
+<?php include '_head.php'; ?>
 
 <body class="page-laanerstatus">
 
-	<?php render('region-topbar'); ?>
-	<?php render('region-header'); ?>
-	<?php render('region-search'); ?>
+	<?php render('global','topbar'); ?>
+	<?php render('global','header'); ?>
+	<?php render('global','search'); ?>
 
 	<div id="region-subjects">
 	  
 	</div>
 
-	<div id="region-content">
+
+	<div id="page-columns">
 	  
 	  <div class="container_24">
 
 	    <div class="grid_5">
-	      
-	      <?php print render('sidebar-navigation'); ?>
-
+	    	<div id="region-sidebar">
+	    		<?php print render('elements', 'sidebar-navigation'); ?>
+	    	</div> 
 	    </div>
-	    
+	    <!-- grid -->
+
 
 	    <div class="grid_19">
+	    	<div id="region-content">
+	    		
+		    	<div class="works-controls clearfix">
+		    		<h1>Lånerstatus</h1>
+		    	</div>
+		    	<?php print render('views', 'status-reserveringer'); ?>
+		    	<?php print render('views', 'status-bestillinger'); ?>
 
-	    	<div class="works-controls clearfix">
-	    		<h1>Lånerstatus</h1>
 	    	</div>
-	      
-
-	    	<?php print render('reserveringer'); ?>
-	    	<?php print render('bestillinger'); ?>
-
+	    	<!-- region content -->
 	    </div>
 	    <!-- grid -->
 
@@ -39,6 +44,10 @@
 	  <!-- container -->
 
 	</div>
-	<!-- #region-content -->
+	<!-- page-columns-->
 
-	<?php render('_footer'); ?>
+
+	<?php render('global','footer'); ?>
+
+</body>
+</html>

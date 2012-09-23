@@ -1,4 +1,4 @@
-<div id="block-books" class="block clearfix">
+<section id="block-books" class="block clearfix">
 
   <div class="grid_24">
 
@@ -25,7 +25,7 @@
                   </p>",
         'more' => 'Læs mere',
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -39,7 +39,7 @@
         'artist' => "Emmanuel Roudier",
         'tags' => array('krig', 'død', 'ødelæggelse'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>   
 
     <?php 
@@ -48,7 +48,7 @@
         'artist' => "Don Delillo",
         'tags' => array('tiden', 'USA', '1897-1901'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -57,7 +57,7 @@
         'artist' => "Don Delillo",
         'tags' => array('tiden', 'USA', '1897-1901'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
   </div>
@@ -71,7 +71,7 @@
         'artist' => "Emmanuel Roudier",
         'tags' => array('krig', 'kærlighed', 'romantik'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -80,10 +80,10 @@
         'artist' => "Mie Schlechthoff",
         'tags' => array('madlavning'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
   </div>
   <!-- .grid -->
 
-</div>
+</section>

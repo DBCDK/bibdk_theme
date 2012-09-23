@@ -1,12 +1,35 @@
 //
+// Import: Colors 
+//
+
+$white: #ffffff;
+$btn_blue:   #2590b0;
+
+// Zeeeebra stripes!
+$zebraOdd: #c7e1e8;
+$zebraEven: lighten($zebraOdd, 10%);
+
+
+// Greys
+$dark_grey1: #161616; // Darkest
+$dark_grey2: #25292c;
+$dark_grey3: #3c4043;
+$dark_grey4: #51565a;
+$dark_grey5: #6c7379;
+
+$light_grey1: #f7f7f7; // Lightest
+$light_grey2: #ebebeb;
+$light_grey3: #dcdcdc;
+$light_grey4: #a5a5a5;
+$light_grey5: #999999;
+
+
+
+
+//
 // Import: Mixins 
 //
 
-
-// Baseline, measured in pixels
-// The value should be the same as the font-size value for the html element
-// If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
-// then the variable below would be 10px.
 $baseline-px: 10px;
 
 @mixin rem($property, $px-values) {
@@ -42,28 +65,6 @@ $baseline-px: 10px;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-@mixin box {
-  @include box-sizing(border-box);
-}
-@mixin normal-appearance {
-  @include appearance(normal);
-}
-
-
-
-
-
 @mixin reset-input {
   @include box-sizing(border-box);
   @include appearance(normal);
@@ -71,6 +72,17 @@ $baseline-px: 10px;
   margin:0;
   padding:0;  
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

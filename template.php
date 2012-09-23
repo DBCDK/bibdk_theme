@@ -1,11 +1,14 @@
 <?php
 	
 // Render a template with a set of variables
-function render($template, $vars = array()){
+function render($type, $template, $vars = array()){
  	ob_start();
  	extract($vars);
- 	include('templates/' . $template . '.php');
+ 	include('templates/' . $type . '/' . $template . '.php');
 }
+
+
+
 
 
 // Format array of tags as links

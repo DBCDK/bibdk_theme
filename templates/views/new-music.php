@@ -1,4 +1,4 @@
-<div id="block-music" class="block clearfix">
+<section id="block-music" class="block clearfix">
 
   <div class="grid_24">
 
@@ -23,7 +23,7 @@
         'body' => "<p>Depeche Mode</p>",
         'more' => 'Læs mere',
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
 
   </div>
@@ -36,7 +36,7 @@
         'artist' => "Lukas Graham",
         'tags' => array('folk'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>   
     <?php 
       $element = array(
@@ -44,7 +44,7 @@
         'artist' => "Outlandish",
         'tags' => array('hip hop'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
   </div>
   <!-- .grid -->
@@ -56,7 +56,7 @@
         'artist' => "Adele",
         'tags' => array('pop'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>   
     <?php 
       $element = array(
@@ -64,7 +64,7 @@
         'artist' => "Leonard Cohen",
         'tags' => array('jazz'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
     <?php 
       $element = array(
@@ -72,9 +72,9 @@
         'artist' => "Adele",
         'tags' => array('pop'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>   
   </div> 
   <!-- .grid -->
 
-</div>
+</section>

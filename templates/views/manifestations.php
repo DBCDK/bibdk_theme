@@ -7,10 +7,10 @@
 	</div>
 
 	<div class="zebra-content">
-		<?php print render('manifestation'); ?>
-		<?php print render('manifestation'); ?>
-		<?php print render('manifestation'); ?>
-		<?php print render('manifestation'); ?>
+		<?php print render('elements', 'manifestation'); ?>
+		<?php print render('elements', 'manifestation'); ?>
+		<?php print render('elements', 'manifestation'); ?>
+		<?php print render('elements', 'manifestation'); ?>
 	</div>
 
 

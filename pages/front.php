@@ -1,26 +1,31 @@
-<?php include '../template.php' ?>
-<?php render('_head'); ?>
+<?php include '../template.php'; ?>
+
+<!doctype html>
+<?php include '_head.php'; ?>
 
 <body class="page-frontpage">
 
-	<?php render('region-topbar'); ?>
-	<?php render('region-header'); ?>
-	<?php render('region-search'); ?>
-	<?php render('region-subjects'); ?>
+	<?php render('global','topbar'); ?>
+	<?php render('global','header'); ?>
+	<?php render('global','search'); ?>
+	<?php render('elements','subjects'); ?>
 
-
-	<div id="region-content">
+	<div id="page-columns">
 	  
 	  <div class="container_24">
-	    <?php render('section-news'); ?>
-	    <?php render('section-books'); ?>
-	    <?php render('section-movies'); ?>
-	    <?php render('section-music'); ?>
-	    <?php render('section-games'); ?>
+	  	<div id="region-content">
+		    <?php render('views', 'news-information'); ?>
+		    <?php render('views', 'new-books'); ?>
+		    <?php render('views', 'new-movies'); ?>
+		    <?php render('views', 'new-music'); ?>
+		    <?php render('views', 'new-games'); ?>
+	  	</div>
 	  </div>
 
 	</div>
-	<!-- #region-content -->
+	<!-- page columns -->
 
-	<?php render('_footer'); ?>
+	<?php render('global','footer'); ?>
 
+</body>
+</html>

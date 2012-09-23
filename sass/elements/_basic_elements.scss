@@ -1,62 +1,14 @@
 //
-// Import: Elements
+// Import: Basic elements
 //
 
-
-
-//
-// Dropdown menu
-//
-.dropdown-wrapper {
-	position:relative;
-	float:left;
-}
-.dropdown-leftalign {
-	left: 0;
-}
-.dropdown-rightalign {
-	right: 0;
-}
-.dropdown-menu {
-	@include border-radius(6px);
-	@include box-shadow(0 5px 10px rgba(black,0.2));
-
-	position: absolute;
-  top: 100%;
-  z-index: 5;
-  min-width:100%;
-  padding:6px 0;
-  margin: 2px 0 0;
-
-	border: 1px solid rgba(black, 0.2);
-	background-color: $white;
-	font-size:12px;
-	
-	.divider {
-		border-bottom:solid 1px $light_grey3;
-	}
-
-	a {
-		display:block;
-		margin:0;
-		padding:5px 20px;
-		line-height:20px;
-
-		&:hover {
-			background:$light_grey1;
-		}
-
-		&.current {
-			background:$light_grey2;
-		}
-	}
-}
 
 
 
 //
 // An element!
 //
+
 .element-wrapper {
 	background:$light_grey2;
 	padding:10px;
@@ -80,8 +32,6 @@
 	height:60px;
 	line-height:60px;
 }
-
-
 
 .element-title {
 	
@@ -108,9 +58,11 @@
 
 
 
+
 //
 // Table (with toggle) 
 //
+
 .table {
 
 	table {
@@ -162,6 +114,7 @@
 //
 // Tabs
 //
+
 .tabs {
 	border:solid 1px $light_grey3;
 	
@@ -213,9 +166,11 @@
 
 
 
+
 //
 // Zebra striped content
 //
+
 .zebra-toggle {
 	background:$zebraOdd;
 	padding:10px 20px;
@@ -242,9 +197,11 @@
 
 
 
+
 //
 // Actions
 //
+
 .actions {
 	float:right;
 	padding-left:15px;
@@ -257,6 +214,152 @@
 	margin:10px 0 0 0;
 	border-top:dotted 1px $light_grey3;
 }
+
+
+
+
+//
+// Dropdown menu
+//
+
+.dropdown-wrapper {
+	position:relative;
+	float:left;
+}
+.dropdown-leftalign {
+	left: 0;
+}
+.dropdown-rightalign {
+	right: 0;
+}
+.dropdown-menu {
+	@include border-radius(6px);
+	@include box-shadow(0 5px 10px rgba(black,0.2));
+
+	position: absolute;
+  top: 100%;
+  z-index: 5;
+  min-width:100%;
+  padding:6px 0;
+  margin: 2px 0 0;
+
+	border: 1px solid rgba(black, 0.2);
+	background-color: $white;
+	font-size:12px;
+	
+	.divider {
+		border-bottom:solid 1px $light_grey3;
+	}
+
+	a {
+		display:block;
+		margin:0;
+		padding:5px 20px;
+		line-height:20px;
+
+		&:hover {
+			background:$light_grey1;
+		}
+
+		&.current {
+			background:$light_grey2;
+		}
+	}
+}
+
+
+
+
+//
+// Works controls (above the list of works)
+//
+
+.works-controls {
+	display:block;
+	background:#fbfbfb;
+	margin-bottom:20px;
+	border:solid 1px $light_grey3;
+
+	line-height:60px;
+	height:60px;
+
+	h1 {
+		margin-left:20px;
+		font-size:18px;
+		color:$btn_blue;
+	}
+}
+.works-control-wrapper-left {
+	float:left;
+	border-right:solid 1px $light_grey3;
+}	
+.works-control-wrapper-right {
+	float:right;
+	border-left:solid 1px $light_grey3;
+}
+.works-control {
+	font-size:14px;
+
+	&:active,
+	&.toggled {
+		@include box-shadow(inset 0 0px 1px rgba(black,.8));
+		background-color:darken(#fbfbfb, 2%);
+	}	
+}
+
+// Toggle collapsed/expanded
+.works-toggle {
+	padding:0 20px;
+	float:left;	
+}
+.works-toggle-collapse,
+.works-toggle-expand {
+	display:inline-block;
+	width:17px;
+}
+.works-toggle-collapse {
+	background:url(../img/works-collapse.png) no-repeat 50% 50%;
+}
+.works-toggle-expand {
+	background:url(../img/works-expand.png) no-repeat 50% 50%;
+}
+
+// Sorting
+.works-sort {
+	padding:0 20px;	
+	float:left;
+}
+
+// Paging
+.works-pager-back,
+.works-pager-forward,
+.works-pager-select {
+	float:left;
+}
+.works-pager-back,
+.works-pager-forward {
+	padding:0 10px;
+}
+.works-pager-select {
+	padding:0 20px;
+	border-left:solid 1px $light_grey3;
+	border-right:solid 1px $light_grey3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

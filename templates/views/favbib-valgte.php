@@ -5,7 +5,6 @@
 
 		<div class="element">
 
-
 			<div class="element-section element-section-with-controls">
 
 				<div class="works-control-wrapper-right">
@@ -46,9 +45,9 @@
 			</div>
 			<!-- element-section -->
 
-			<?php print render('library'); ?>
-			<?php print render('library'); ?>
-			<?php print render('library'); ?>
+			<?php print render('elements', 'library'); ?>
+			<?php print render('elements', 'library'); ?>
+			<?php print render('elements', 'library'); ?>
 		
 
 		</div>

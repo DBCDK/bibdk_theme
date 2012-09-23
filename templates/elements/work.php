@@ -143,7 +143,7 @@
 
 				<div class="tabs-sections">
 
-					<?php render('work-section'); ?>
+					<?php render('elements', 'work-section'); ?>
 
 				</div>
 				<!-- tabs-sections -->

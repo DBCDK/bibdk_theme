@@ -1,4 +1,4 @@
-<div id="block-movies" class="block clearfix">
+<section id="block-movies" class="block clearfix">
 
   <div class="grid_24">
 
@@ -25,7 +25,7 @@
                    </p>",
         'more' => 'Læs mere',
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
   </div>
   <!-- .grid -->
@@ -38,7 +38,7 @@
         'artist' => "Ben Stiller",
         'tags' => array('farcer', 'mode', 'modeller'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>   
 
     <?php 
@@ -47,7 +47,7 @@
         'artist' => "Blanche Hanalis",
         'tags' => array('familien', 'nybyggere', 'Minnesota'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
     <?php 
@@ -56,7 +56,7 @@
         'artist' => "David Jankowsko",
         'tags' => array('krig', 'overlevelse', 'Frankrig'),
       );
-      print render('widget-darkgrey' , $element);
+      print render('elements', 'widget-darkgrey' , $element);
     ?>
 
   </div>
@@ -78,9 +78,9 @@
                    </p>",
         'more' => 'Læs mere',
       );
-      print render('widget-lightgrey' , $element);
+      print render('elements', 'widget-lightgrey' , $element);
     ?> 
   </div>
   <!-- .grid -->
   
-</div>
+</section>

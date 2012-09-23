@@ -15,9 +15,8 @@
 		<li><a href="pages/front.php">Forside</a></li>
 		<li><a href="pages/search-result.php">Søgeresultat (værkvisning)</a></li>
 		<li><a href="pages/laanerstatus.php">Lånerstatus</a></li>
-		<li><a href="pages/favoritbiblioteker.php">favoritbiblioteker</a></li>
+		<li><a href="pages/favoritbiblioteker.php">Favoritbiblioteker</a></li>
 	</ul>
-
 
 </body>
 
