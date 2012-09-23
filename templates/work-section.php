@@ -10,7 +10,9 @@
 					<a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>
 				</div>
 
-				<a class="icon-link icon-link-small icon-link-add-basket" href="#">Tilføj indkøbskurv</a>
+				<a class="text-small link-add-basket" href="#">
+					<span class="icon icon-left icon-blue-addbasket">&#9660;</span>Tilføj indkøbskurv
+				</a>
 
 			</div>
 
@@ -18,7 +20,9 @@
 
 
 		
-		<a href="#" class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-list ">Hvilke biblioteker har materialet?</a>
+		<a href="#" class="text-small text-lightgrey">
+			<span class="icon icon-left icon-lightgrey-list">&#9660;</span>Hvilke biblioteker har materialet?
+		</a>
 	
 
 	</div>

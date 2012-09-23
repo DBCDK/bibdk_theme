@@ -28,7 +28,9 @@
 			<footer class="footer">
 				<?php if (!empty($vars['more'])): ?>
 					<div class="field-read-more">
-						<a class="icon-link icon-link-right" href="http://ibm.com"><?php print $vars['more']; ?></a>
+						<a href="http://ibm.com">
+							<span class="icon icon-left icon-blue-right">&#9660;</span><?php print $vars['more']; ?>
+						</a>
 					</div>	
 				<?php endif; ?>
 			</footer>

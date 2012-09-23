@@ -7,7 +7,7 @@
 // The value should be the same as the font-size value for the html element
 // If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
 // then the variable below would be 10px.
-$baseline-px: 12px;
+$baseline-px: 10px;
 
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems
@@ -29,6 +29,26 @@ $baseline-px: 12px;
     // Return the property and its list of converted values
     #{$property}: $rem-values; } 
 }
+
+
+@mixin gradient($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%);
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+}
+
+
+
+
+
+
+
+
 
 
 

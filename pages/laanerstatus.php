@@ -1,40 +1,44 @@
-<body class="">
-
 <?php include '../template.php' ?>
 <?php render('_head'); ?>
 
+<body class="page-laanerstatus">
 
-<?php render('region-topbar'); ?>
-<?php render('region-header'); ?>
-<?php render('region-search'); ?>
+	<?php render('region-topbar'); ?>
+	<?php render('region-header'); ?>
+	<?php render('region-search'); ?>
 
-<div id="region-subjects">
-  
-</div>
+	<div id="region-subjects">
+	  
+	</div>
 
-<div id="region-content">
-  
-  <div class="container_24">
+	<div id="region-content">
+	  
+	  <div class="container_24">
 
-    <div class="grid_5">
-      sidebar
+	    <div class="grid_5">
+	      
+	      <?php print render('sidebar-navigation'); ?>
 
-    </div>
-    
+	    </div>
+	    
 
-    <div class="grid_19">
-      
+	    <div class="grid_19">
 
-    	<?php print render('reserveringer'); ?>
-    	<?php print render('bestillinger'); ?>
+	    	<div class="works-controls clearfix">
+	    		<h1>Lånerstatus</h1>
+	    	</div>
+	      
 
-    </div>
-    <!-- grid -->
+	    	<?php print render('reserveringer'); ?>
+	    	<?php print render('bestillinger'); ?>
 
-  </div>
-  <!-- container -->
+	    </div>
+	    <!-- grid -->
 
-</div>
-<!-- #region-content -->
+	  </div>
+	  <!-- container -->
 
-<?php render('_footer'); ?>
+	</div>
+	<!-- #region-content -->
+
+	<?php render('_footer'); ?>

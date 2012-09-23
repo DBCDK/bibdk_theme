@@ -92,7 +92,7 @@
       		</table>
 
       		<div class="table-toggle">
-  					<a href="#" class="icon-link icon-link-plus"><strong>Flere</strong> reserveringer</a>
+  					<a href="#"><span class="icon icon-left icon-blue-plus">&#9660;</span><strong>Flere</strong> reserveringer</a>
   				</div>
 
   			</div>

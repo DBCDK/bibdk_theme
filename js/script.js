@@ -12,12 +12,23 @@ $(document).ready(function() {
 
 
 
+
+// $('input:radio').uniform();
+// $('input:checkbox').screwDefaultButtons({ 
+//    checked: "url(../img/radio-checked.png)",
+//    unchecked:	"url(../img/radio.png)",
+//    width: 15,
+//    height: 15
+// });
+
+
+
 // Toggle tables
 $('.table-toggle a').click(function(e) {
 	e.preventDefault();
 
 	$(this).closest('.table').find('.hideable').toggleClass('visuallyhidden');
-	$(this).toggleClass('opposite');
+	$(this).toggleClass('toggled');
 	//$(this).html($(this).html().replace('Flere', 'Færre'));
 });
 
@@ -67,14 +78,16 @@ $('html').click(function() {
 
 
 // Add to basket
-$('.icon-link-add-basket').toggle(function() {
+$('.link-add-basket').toggle(function(e) {
+	e.preventDefault();
 
-	//$(this).text('Fjern fra indkøbskurv');
+	$(this).html($(this).html().replace('Tilføj', 'Fjern'));
 	$(this).toggleClass('toggled');
 
-}, function () {
+}, function (e) {
+	e.preventDefault();
 
-	//$(this).text('Tilføj til indkøbskurv');
+	$(this).html($(this).html().replace('Fjern', 'Tilføj'));
 	$(this).toggleClass('toggled');
 	
 });
@@ -145,7 +158,7 @@ $('.toggle-work a').toggle(function() {
 $('.toggle-next-section a').toggle(function(e) {
 	e.preventDefault();
 
-	$(this).addClass('opposite');
+	$(this).addClass('toggled');
 	$(this).html($(this).html().replace('Mere', 'Mindre'));
 
 	$(this).closest('.element-section').next().removeClass('visuallyhidden');
@@ -153,7 +166,7 @@ $('.toggle-next-section a').toggle(function(e) {
 }, function(e) {
 	e.preventDefault();
 
-	$(this).removeClass('opposite');
+	$(this).removeClass('toggled');
 	$(this).html($(this).html().replace('Mindre', 'Mere'));
 
 	$(this).closest('.element-section').next().addClass('visuallyhidden');
@@ -195,8 +208,8 @@ $('.tabs a').click(function(e){
 });
 
 $('#search-tabs a').click(function(){
-	$(this).siblings().removeClass('active');
-	$(this).addClass('active');
+	$(this).parent().siblings().removeClass('active');
+	$(this).parent().addClass('active');
 });
 
 
@@ -217,23 +230,80 @@ $('#search-advanced a').click(function(e) {
 
 
 
+// Toggle visibility of "next section of an element"
+// $('.markall-button input[type=checkbox]').toggle(function(e) {
+	
+// 	// e.stopPropagation();
+// 	// $(this).attr('checked', true);
+// 	// $(this).closest('.element').find('table input[type=checkbox]').attr('checked', true);
+
+// }, function(e) {
+
+// 	// e.stopPropagation();
+// 	// $(this).closest('.element').find('table input[type=checkbox]').attr('checked', false);		
+
+
+// });
+
+
+$('.markall-button input[type=checkbox]').click(function(e) {
+
+	e.stopPropagation();
+
+	$(this).toggleClass('checked');
+
+
+	if ($(this).hasClass('checked')) {
+		$(this).closest('.element').find('table input[type=checkbox]').attr('checked', true);
+	}
+	else {
+		$(this).closest('.element').find('table input[type=checkbox]').attr('checked', false);
+	}
+	
+
+});
+
+
+$('.markall-button').click(function(e) {
+	$(this).children('input[type=checkbox]').click();
+
+});
+
+
+
+
+
+
+
+
+
 // Find bib stuff ##fix##
-$('.page-action-find-bib form').hide();
 
-$('.page-action-find-bib a').click(function () {
+$('.page-action-find-bib').click(function (e) {
 
+	e.stopPropagation();
 	$clicked = $(this);
 
-	$clicked.parent().animate({
-		width: '300',
-	}, 300, function() {
-					
-			$clicked.hide();
-			$clicked.siblings().fadeIn(function(){
-				$clicked.next().find('input[type=text]').focus();
-			});
+	$clicked.animate({
+		width: 300,
+	}, 300, function() {			
+			$clicked.find('form').removeClass('visuallyhidden');
+			$clicked.next().find('input[type=text]').focus();
 	});
 });
+
+$('html').click(function() {
+
+	$('.page-action-find-bib').find('form').addClass('visuallyhidden');
+	$('.page-action-find-bib').css({
+		width: "",
+	});
+});
+
+
+
+
+
 
 
 $('.subwork-type-navigation a').click(function(e) {

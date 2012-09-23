@@ -8,7 +8,9 @@
 				<a class="btn btn-grey" href="#">Bestil <strong>bog</strong> i denne udgave</a>
 			</div>
 
-			<a class="icon-link icon-link-small icon-link-darkgreytext icon-link-darkgreyicon icon-link-add-basket" href="#">Tilføj indkøbskurv</a>
+			<a class="link-add-basket text-darkgrey text-small" href="#">
+				<span class="icon icon-left icon-darkgrey-addbasket">&#9660;</span>Tilføj indkøbskurv
+			</a>
 		
 		</div>
 
@@ -16,13 +18,18 @@
 
 			<ul>
 				<li>
-					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-list" href="#">Hvilke biblioteker har materialet?</a>
+					<a class="text-small text-lightgrey" href="#">
+						<span class="icon icon-left icon-lightgrey-list">&#9660;</span>Hvilke biblioteker har materialet?</a>
 				</li>
 				<li>
-					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-link" href="#">Link til denne post</a>
+					<a class="text-small text-lightgrey" href="#">
+						<span class="icon icon-left icon-lightgrey-link">&#9660;</span>Link til denne post
+					</a>
 				</li>
 				<li>
-					<a class="icon-link icon-link-small icon-link-lightgreytext icon-link-lightgreyicon icon-link-rightarrow" href="#">Eksporter til RefWorks</a>
+					<a class="text-small text-lightgrey" href="#">
+						<span class="icon icon-left icon-lightgrey-rightarrow">&#9660;</span>Eksporter til RefWorks
+					</a>
 				</li>
 			<ul>
 				
@@ -34,7 +41,7 @@
 
 	<div class="manifestation-data text">
 
-		<table class="tbl">
+		<table>
 			<tr>
 				<th>Originaltitel:</th>
 				<td><strong>Sorgenfri (norsk)</strong></td>

@@ -1,3 +1,7 @@
+//
+// Import: Typography 
+//
+
 .text {
 
 	p {
@@ -11,16 +15,33 @@
 		line-height:180%;
 
 		a {
-			color:$dark_grey4;
+			//color:$dark_grey4;
 		}
 	}
 }
 
 
-.tbl {
-	line-height:180%;
-	font-size:12px;
-	
+.text-white {
+	color:$white;
+}
+.text-darkgrey {
+	color:$dark_grey5;
+}
+.text-lightgrey {
+	color:$light_grey5;
+}
+.text-small {
+	font-size:11px; // 11px;
+}
+
+
+
+.manifestation-data {
+
+	table {
+		line-height:180%;
+		font-size:12px;
+	}
 	th {
 		padding-right:40px;
 		text-align:left;

@@ -2,11 +2,11 @@
 @import "normalize";
 @import "960_24_col";
 @import "colors";
-@import "constants";
 @import "mixins";
+@import "constants";
 @import "html_tags";
 @import "typography";
-@import "marked_links";
+@import "icons";
 @import "buttons";
 @import "elements/elements";
 @import "widgets";
@@ -18,43 +18,9 @@
 
 
 
-
-
-
-
-.table-actions {
-	float:right;
+.select-default-library {
+	margin-bottom:5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @import "extra";

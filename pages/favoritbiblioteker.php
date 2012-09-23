@@ -1,7 +1,7 @@
 <?php include '../template.php' ?>
 <?php render('_head'); ?>
 
-<body class="page-search-result">
+<body class="page-favoritbiblioteker">
 
 	<?php render('region-topbar'); ?>
 	<?php render('region-header'); ?>
@@ -16,17 +16,27 @@
 	  <div class="container_24">
 
 	    <div class="grid_5">
-	      <?php print render('search-facets'); ?>
+	      
+	      <?php print render('sidebar-navigation'); ?>
 
 	    </div>
 	    
 
 	    <div class="grid_19">
-	      <?php print render('works'); ?>
-	    </div>
 
+	    	<div class="works-controls clearfix">
+	    		<h1>Favoritbiblioteker</h1>
+	    	</div>
+	      
+
+	    	<?php print render('valgte-favoritbiblioteker'); ?>
+	    	<?php print render('valgte-favoritbiblioteker'); ?>
+
+	    </div>
+	    <!-- grid -->
 
 	  </div>
+	  <!-- container -->
 
 	</div>
 	<!-- #region-content -->

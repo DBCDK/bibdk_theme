@@ -11,20 +11,22 @@
         </form>
       </nav>
 
-      <nav id="search-tabs" class="horizontal-nav clearfix">
-        <a class="active" href="#">Alt</a>
-        <a href="#">Bøger</a>
-        <a href="#">Film</a>
-        <a href="#">Musik</a>
-        <a href="#">Spil</a>
-        <a href="#">Artikler</a>
-        <a href="#">Noder</a>
-        <a href="#">Net</a>
+      <nav id="search-tabs">
+      	<ul class="horizontal-nav clearfix">
+	        <li class="active"><a href="#">Alt</a></li>
+	        <li><a href="#">Bøger</a></li>
+	        <li><a href="#">Film</a></li>
+	        <li><a href="#">Musik</a></li>
+	        <li><a href="#">Spil</a></li>
+	        <li><a href="#">Artikler</a></li>
+	        <li><a href="#">Noder</a></li>
+	        <li><a href="#">Net</a></li>
+      	</ul>
       </nav>
 
       <div id="search-advanced">
         <div id="search-advanced-toggle">
-          <a class="icon-link icon-link-whitetext icon-link-darkgreyicon icon-link-plus" href="#">Flere søgemuligheder</a>
+          <a class="text-white" href="#"><span class="icon icon-left icon-darkgrey-plus">&#9660;</span>Flere søgemuligheder</a>
         </div>
         <div id="search-advanced-panel" class="visuallyhidden">
           <!-- ADVANCED SEARCH HERE -->

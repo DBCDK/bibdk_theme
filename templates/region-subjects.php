@@ -10,40 +10,64 @@
 
           <ul>
             <li>
-              <a class="icon-link icon-link-right" href="#">Menneske og samfund</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Menneske og samfund
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Sundhed og sygdom</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Sundhed og sygdom
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Hjem og fritid</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Hjem og fritid
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Pædagogik, psykologi og uddannelse</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Pædagogik, psykologi og uddannelse
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Samfundet, økonomi og politik</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Samfundet, økonomi og politik
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Lande: Historie, rejser og sprog</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Lande: Historie, rejser og sprog
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">IT, medier og kommunikation</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>IT, medier og kommunikation
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Erhvervsliv og brancher</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Erhvervsliv og brancher
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Natur og teknik</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Natur og teknik
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Filosofi og religion</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Filosofi og religion
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Litteratur, kunst og underholdning</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Litteratur, kunst og underholdning
+              </a>
             </li>
             <li>
-              <a class="icon-link icon-link-right" href="#">Skønlitteratur og erindringer</a>
+              <a href="#">
+                <span class="icon icon-left icon-blue-right">&#9660;</span>Skønlitteratur og erindringer
+              </a>
             </li>
           </ul>
 

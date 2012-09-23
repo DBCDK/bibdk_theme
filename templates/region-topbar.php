@@ -4,25 +4,35 @@
 
 		<div class="grid_24">
 
-			<nav id="service-nav" class="clearfix horizontal-nav">
-				<a href="#">English</a>
-				<a href="#">Om bibliotek.dk</a>
-				<a href="#">Presserum</a>
-				<a href="#">Blog</a>
-				<a href="#">Sitemap</a>
-				<a href="#">Kontakt</a>
-				<a href="#">Hjælp</a>
+			<nav id="service-nav">
+				<ul class="horizontal-nav clearfix">
+					<li><a href="#">English</a></li>
+					<li><a href="#">Om bibliotek.dk</a></li>
+					<li><a href="#">Presserum</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Sitemap</a></li>
+					<li><a href="#">Kontakt</a></li>
+					<li><a href="#">Hjælp</a></li>
+				</ul>
 			</nav>
 			<!-- #service-nav -->
 
 
-			<nav id="user-nav" class="clearfix horizontal-nav with-mats">
+			<nav id="user-nav" class="with-mats">
+				
 				<div id="user-nav-inner">
-					<a class="materials-button" href="#">
-						<span class="mats">7</span>materialer gemt
-					</a>
-					<a class="login-button" href="#">Log ind</a>
+					<ul class="horizontal-nav clearfix">
+						<li>
+							<a class="materials-button" href="#">
+								<span class="mats">7</span>materialer gemt
+							</a>
+						</li>
+						<li>
+							<a class="login-button" href="#">Log ind</a>
+						</li>
+					</ul>
 				</div>
+				
 			</nav>
 			<!-- #user-nav -->
 

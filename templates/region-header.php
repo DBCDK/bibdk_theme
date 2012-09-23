@@ -5,30 +5,31 @@
   	<div class="grid_24">
 
 	    <div id="header-logo">
-	    	<a href="front.php">
+	    	<a href="../index.php">
 	    		<img src="../img/logo.png" alt="Bibliotek.dk logo"/>
 	      </a>
 	    </div>
 
-	    <div id="page-actions" class="horizontal-nav">
+	    <div id="page-actions">
 
-	    	<div class="page-action page-action-sporg-vagt">
-	    		
-		      <a href="#">
-		        <img src="../img/vagt.png" width="26" height="26" />
-		        Spørg biblioteksvagten
-		      </a>
+	    	<ul class="horizontal-nav clearfix">
 
-	    	</div>
+	    		<li>
+	    			<a href="#" class="page-action-sporg-vagt">
+		        	<img src="../img/vagt.png" width="26" height="26" />
+		        	Spørg biblioteksvagten
+		      	</a>
+	    		</li>
+	    		<li>
+	    			<a href="#" class="page-action-find-bib">Find bibliotek<!-- ##fix## <span class="icon icon-right icon-darkgrey-down">&#9660;</span> -->
+		      	<form class="visuallyhidden">
+		      		<input placeholder="Skriv biblioteksnavn, postnr, by ..." type="text" />
+          		<input type="submit" value="Søg" />
+          	</form>
+          	</a>
+	    		</li>
 
-	    	<div class="page-action page-action-find-bib">
-		      <a href="#">Find bibliotek</a>
-		      <form>
-		      	<input placeholder="Skriv biblioteksnavn, postnr, by ..." type="text" />
-          	<input type="submit" value="Søg" />
-          </form>
-	    	</div>
-
+	    	</ul>
 
 	    </div>
 	    <!-- page-actions -->

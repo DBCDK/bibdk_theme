@@ -15,6 +15,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <script src="../js/modernizr-2.6.2.min.js"></script>
   <script src="../js/selectivizr-min.js"></script>
+  <script src="../js/jquery.uniform.min.js"></script>
+  <script src="../js/jquery.screwdefaultbuttons.min.js"></script>
   <script src="../js/jquery.noisy.min.js"></script>
   <script src="../js/jquery.makeopposite.js"></script>
   <script src="../js/plugins.js"></script>

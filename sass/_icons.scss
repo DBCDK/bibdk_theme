@@ -1,0 +1,185 @@
+//
+// Import: Icons for links/buttons 
+//
+
+.icon {
+	display:inline-block;
+	width:15px;
+	background-position:center;
+	background-repeat:no-repeat;
+
+
+	//hide text
+	text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.icon-left {
+	margin-right:7px;
+}
+.icon-right {
+	margin-left:7px;
+}
+
+
+
+//
+// White icons
+//
+
+// White grey right/left
+.icon-white-right {
+	background-image:url(../img/icons/white-right.png);
+}
+.toggled .icon-white-right {
+	background-image:url(../img/icons/white-left.png);
+}
+// White grey down/up
+.icon-white-down {
+	background-image:url(../img/icons/white-down.png);
+}
+.toggled .icon-white-down {
+	background-image:url(../img/icons/white-up.png);
+}
+// White grey plus/minus
+.icon-white-plus {
+	background-image:url(../img/icons/white-plus.png);
+}
+.toggled .icon-white-plus {
+	background-image:url(../img/icons/white-minus.png);
+}
+
+
+
+//
+// Dark grey icons
+//
+
+// Dark grey down/up
+.icon-darkgrey-down {
+	background-image:url(../img/icons/darkgrey-down.png);
+}
+.toggled .icon-darkgrey-down {
+	background-image:url(../img/icons/darkgrey-up.png);
+}
+// Dark grey right/left
+.icon-darkgrey-right {
+	background-image:url(../img/icons/darkgrey-right.png);
+}
+.toggled .icon-darkgrey-right {
+	background-image:url(../img/icons/darkgrey-left.png);
+}
+// Dark grey plus/minus
+.icon-darkgrey-plus {
+	background-image:url(../img/icons/darkgrey-plus.png);
+}
+.toggled .icon-darkgrey-plus {
+	background-image:url(../img/icons/darkgrey-minus.png);
+}
+// Dark grey add basket/red delete
+.icon-darkgrey-addbasket {
+	background-image:url(../img/icons/darkgrey-addbasket.png);
+}
+.toggled .icon-darkgrey-addbasket {
+	background-image:url(../img/icons/red-x.png);
+}
+
+
+//
+// Blue icons
+//
+
+// Blue plus/minus
+.icon-blue-plus {
+	background-image:url(../img/icons/blue-plus.png);
+}
+.toggled .icon-blue-plus {
+	background-image:url(../img/icons/blue-minus.png);
+}
+// Blue right/left
+.icon-blue-right {
+	background-image:url(../img/icons/blue-right.png);
+}
+.toggled .icon-blue-right {
+	background-image:url(../img/icons/blue-left.png);
+}
+// Blue left/right
+.icon-blue-left {
+	background-image:url(../img/icons/blue-left.png);
+}
+.toggled .icon-blue-left {
+	background-image:url(../img/icons/blue-right.png);
+}
+// Blue down/up
+.icon-blue-down {
+	background-image:url(../img/icons/blue-down.png);
+}
+.toggled .icon-blue-down {
+	background-image:url(../img/icons/blue-up.png);
+}
+// Blue add basket/red delete
+.icon-blue-addbasket {
+	background-image:url(../img/icons/blue-addbasket.png);
+}
+.toggled .icon-blue-addbasket {
+	background-image:url(../img/icons/red-x.png);
+}
+
+
+
+
+
+//
+// Light grey icons
+//
+
+// Light grey plus/minus
+.icon-lightgrey-plus {
+	background-image:url(../img/icons/lightgrey-plus.png);
+}
+.toggled .icon-lightgrey-plus {
+	background-image:url(../img/icons/lightgrey-minus.png);
+}
+// Blue right/left
+.icon-lightgrey-right {
+	background-image:url(../img/icons/lightgrey-right.png);
+}
+.toggled .icon-lightgrey-right {
+	background-image:url(../img/icons/lightgrey-left.png);
+}
+// Blue down/up
+.icon-lightgrey-down {
+	background-image:url(../img/icons/lightgrey-down.png);
+}
+.toggled .icon-lightgrey-down {
+	background-image:url(../img/icons/lightgrey-up.png);
+}
+// Blue add basket/red delete
+.icon-lightgrey-addbasket {
+	background-image:url(../img/icons/lightgrey-addbasket.png);
+}
+.toggled .icon-lightgrey-addbasket {
+	background-image:url(../img/icons/red-x.png);
+}
+.icon-lightgrey-edit {
+	background-image:url(../img/icons/lightgrey-edit.png);
+}
+.icon-lightgrey-list {
+	background-image:url(../img/icons/lightgrey-list.png);
+}
+.icon-lightgrey-link {
+	background-image:url(../img/icons/lightgrey-link.png);
+}
+.icon-lightgrey-rightarrow {
+	background-image:url(../img/icons/lightgrey-rightarrow.png);
+}
+
+
+
+//
+// Red icons
+//
+
+.icon-red-x {
+	background-image:url(../img/icons/red-x.png);
+}

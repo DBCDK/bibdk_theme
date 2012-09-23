@@ -23,7 +23,9 @@
 
 			<?php if (!empty($vars['more'])): ?>
 				<div class="field-read-more">
-					<a class="icon-link icon-link-whitetext icon-link-small icon-link-right" href="#">Læs mere</a>
+					<a class="text-white" href="#">
+						<span class="icon icon-left icon-blue-right">&#9660;</span>Læs mere
+					</a>
 				</div>	
 			<?php endif; ?>
 		</footer>

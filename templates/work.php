@@ -14,7 +14,7 @@
 
 					<div class="dropdown-wrapper">
 						<a class="btn btn-blue dropdown-toggle" href="#">
-							Bestil uanset udgave <span class="caret"></span>
+							Bestil uanset udgave <span class="icon icon-right icon-white-down">&#9660;</span>
 						</a>
 						<ul class="dropdown-menu visuallyhidden">
 							<li><a href="#">Option 1</a></li>
@@ -42,7 +42,9 @@
 
 
 			<div class="toggle-next-section toggle-work">
-				<a class="icon-link icon-link-plus" href="#"><strong>Mere</strong> information</a>
+				<a href="#">
+					<span class="icon icon-left icon-blue-plus">&#9660;</span><strong>Mere</strong> information
+				</a>
 			</div>
 
 

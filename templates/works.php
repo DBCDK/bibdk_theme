@@ -19,7 +19,9 @@
 
 			<div class="dropdown-wrapper">
 
-				<a href="#" class="works-control works-sort dropdown-toggle">Sortér efter år<span class="caret hide-text">&or;</span></a>
+				<a href="#" class="works-control works-sort dropdown-toggle">
+					Sortér efter år<span class="icon icon-right icon-blue-down">&or;</span>
+				</a>
 
 				<ul class="dropdown-menu dropdown-leftalign visuallyhidden">
 					<li><a href="#" class="current">Sortér efter år</a></li>
@@ -35,11 +37,15 @@
 
 		<div class="works-control-wrapper-right">
 
-			<a href="#" class="works-control works-pager-back hide-text">&or;</a>
+			<a href="#" class="works-control works-pager-back">
+				<span class="icon icon-blue-left">&or;</span>
+			</a>
 
 			<div class="dropdown-wrapper">
 
-				<a href="#" class="works-control works-pager-select dropdown-toggle">Side 1 <span class="caret hide-text">&or;</span></a>
+				<a href="#" class="works-control works-pager-select dropdown-toggle">
+					Side 1<span class="icon icon-right icon-blue-down">&or;</span>
+				</a>
 				
 				<ul class="dropdown-menu dropdown-leftalign visuallyhidden">
 					<li><a href="#" class="current">Side 1</a></li>
@@ -53,7 +59,9 @@
 
 			</div>
 
-			<a href="#" class="works-control works-pager-forward hide-text">&or;</a>
+			<a href="#" class="works-control works-pager-forward">
+				<span class="icon icon-blue-right">&or;</span>
+			</a>
 
 		</div>
 		<!-- works pager -->
@@ -62,10 +70,7 @@
 	<!-- works-controls -->
 
 
-
 	<?php print render('work'); ?>
-
-	
 
 
 </section>
