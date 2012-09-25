@@ -9,30 +9,30 @@
 // Page regions
 //
 
-#region-topbar {
+.region-topbar {
 	background:$dark_grey1;
 }
-#region-header {
+.region-header {
 	background: $dark_grey2;
 	height:80px;	
 }
-#region-search {
+.region-search {
 	background:$dark_grey3;
 	padding:20px 0;
 }
-#region-subjects {
+.region-subjects {
 	background: $light_grey2;
 	padding:30px 0 10px;
 	min-height:60px;
 }
-#page-columns {
+.page-columns {
 	padding:40px 0 30px;
 	margin-top:-112px;
 }
-.page-frontpage #page-columns {
+.page-frontpage .page-columns {
 	margin-top:0;
 }
-#region-footer {
+.region-footer {
 	background: $dark_grey3;
 	padding:40px 0 100px;
 }
@@ -59,7 +59,7 @@
 // Service navigation 
 //
 
-#service-nav {
+#service-nav, #block-menu-user-help-menu {
 
 	li {
 

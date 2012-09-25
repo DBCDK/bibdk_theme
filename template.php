@@ -1,11 +1,11 @@
 <?php
 	
 // Render a template with a set of variables
-function render($type, $template, $vars = array()){
+/*function render($type, $template, $vars = array()){
  	ob_start();
  	extract($vars);
  	include('templates/' . $type . '/' . $template . '.php');
-}
+}*/
 
 
 
@@ -27,4 +27,7 @@ function format_tags($tags) {
 
 
 
-?>
+function bibdk_theme_menu_tree__user_help_about_menu (&$variables) {
+  return "<ul class='menu horizontal-nav clearfix'>". $variables['tree'] ."</ul>";
+}
+
