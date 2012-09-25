@@ -14,7 +14,7 @@
 	  
 	  <div class="container_24">
 	  	<div id="region-content">
-		    <?php render('views', 'news-information'); ?>
+		    <?php render('views', 'new-information'); ?>
 		    <?php render('views', 'new-books'); ?>
 		    <?php render('views', 'new-movies'); ?>
 		    <?php render('views', 'new-music'); ?>

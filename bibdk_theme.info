@@ -1,0 +1,14 @@
+name = Bibliotek.dk theme
+description = Custom theme for bibliotek.dk
+core = 7.x
+
+stylesheets[all][] = css/screen.css
+scripts[] = js/script.js
+
+regions[topbar] = Top bar
+regions[header] = Header
+regions[search_panel] = Search panel
+
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[footer] = Footer

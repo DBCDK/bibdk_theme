@@ -32,8 +32,10 @@
 		    	<div class="works-controls clearfix">
 		    		<h1>Lånerstatus</h1>
 		    	</div>
+		    	<?php print render('views', 'status-laan'); ?>
 		    	<?php print render('views', 'status-reserveringer'); ?>
 		    	<?php print render('views', 'status-bestillinger'); ?>
+
 
 	    	</div>
 	    	<!-- region content -->
