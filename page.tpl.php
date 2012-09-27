@@ -10,7 +10,6 @@
 <!-- #topbar-wrapper -->
 
 
-<?php if (!empty($page['header'])): ?>
   <div id="header-wrapper">
     <div class="container_24">
       <div class="grid_24">
@@ -19,11 +18,12 @@
             <img src="<?php print $logo; ?>" alt="Bibliotek.dk logo"/>
           </a>
         </div>
-        <?php print render($page['header']); ?>
+        <?php if (!empty($page['header'])): ?>
+          <?php print render($page['header']); ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>
-<?php endif; ?>
 <!-- #header-wrapper -->
 
 
