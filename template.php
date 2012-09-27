@@ -31,3 +31,7 @@ function bibdk_theme_menu_tree__user_help_about_menu (&$variables) {
   return "<ul class='menu horizontal-nav clearfix'>". $variables['tree'] ."</ul>";
 }
 
+function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
+  $form['#attributes'] = array('class' => array('visuallyhidden'));
+}
+

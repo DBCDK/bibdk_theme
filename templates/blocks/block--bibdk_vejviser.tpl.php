@@ -1,5 +1,5 @@
 <div id="page-actions">
-  <a href="#" class="page-action-find-bib">Find bibliotek
+  <a href="#" class="page-action-find-bib"><?php print t($block->subject); ?>
     <?php print $content ?>
   </a>
 </div>
