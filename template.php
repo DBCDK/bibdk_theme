@@ -7,10 +7,6 @@
   include('templates/' . $type . '/' . $template . '.php');
   } */
 
-
-
-
-
 // Format array of tags as links
 function format_tags($tags) {
 
