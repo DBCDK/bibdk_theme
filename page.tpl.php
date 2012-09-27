@@ -1,4 +1,4 @@
-<?php if (!empty(render($page['topbar']))): ?>
+<?php if (!empty($page['topbar'])): ?>
 	<div id="topbar-wrapper">
 		<div class="container_24">
 			<div class="grid_24">
@@ -10,7 +10,7 @@
 <!-- #topbar-wrapper -->
 
 
-<?php if (!empty(render($page['header']))): ?>
+<?php if (!empty($page['header'])): ?>
 	<div id="header-wrapper">
 		<div class="container_24">
 			<div class="grid_24">
@@ -22,7 +22,7 @@
 <!-- #header-wrapper -->
 
 
-<?php if (!empty(render($page['search_panel']))): ?>
+<?php if (!empty($page['search_panel'])): ?>
 	<div id="search-panel-wrapper">
 		<div class="container_24">
 			<div class="grid_24">
@@ -51,7 +51,7 @@
 <!-- #page-columns -->
 
 
-<?php if (!empty(render($page['footer']))): ?>
+<?php if (!empty($page['footer'])): ?>
 	<div id="footer-wrapper">
 		<div class="container_24">
 			<div class="grid_24">
