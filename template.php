@@ -33,11 +33,6 @@ function bibdk_form_search_block_form_alter(&$form, &$form_alter) {
   $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
 }
 
-
-
-
-function bibdk_theme_preprocess_page(&$vars) {
-	dpm($vars);
+function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
+  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
-
-
