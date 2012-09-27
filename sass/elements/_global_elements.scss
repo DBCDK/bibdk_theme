@@ -6,33 +6,39 @@
 
 
 //
-// Page regions
+// Page region wrappers
 //
 
-.region-topbar {
-	background:$dark_grey1;
+#topbar-wrapper {
+	background:$dark_grey1;	
 }
-.region-header {
+
+#header-wrapper {
 	background: $dark_grey2;
 	height:80px;	
 }
-.region-search {
+
+#search-panel-wrapper {
 	background:$dark_grey3;
 	padding:20px 0;
 }
-.region-subjects {
+
+#subjects-wrapper {
 	background: $light_grey2;
 	padding:30px 0 10px;
 	min-height:60px;
 }
-.page-columns {
+
+#page-columns {
 	padding:40px 0 30px;
 	margin-top:-112px;
 }
-.page-frontpage .page-columns {
+
+.page-frontpage #page-columns {
 	margin-top:0;
 }
-.region-footer {
+
+#footer-wrapper {
 	background: $dark_grey3;
 	padding:40px 0 100px;
 }
