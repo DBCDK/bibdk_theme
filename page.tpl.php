@@ -43,6 +43,13 @@
 </div>
 
 
+<?php if (!empty($messages)): ?>
+<div id="messages">
+	<?php print $messages; ?>
+</div>
+<?php endif; ?>
+
+
 
 <div id="page-columns">
 
