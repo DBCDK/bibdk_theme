@@ -1,5 +1,6 @@
 name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
+screenshot = 'screenshot.png'
 core = 7.x
 
 stylesheets[all][] = css/screen.css
