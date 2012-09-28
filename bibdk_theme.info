@@ -15,3 +15,5 @@ regions[search_panel] = Search panel
 regions[content] = Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
+
+settings[bibdk_theme_footer_logo] = img/logo_small.png

@@ -15,7 +15,7 @@
       <div class="grid_24">
         <div id="header-logo">
           <a href="<?php print $base_path; ?>">
-            <img src="<?php print $logo; ?>" alt="Bibliotek.dk logo"/>
+            <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
           </a>
         </div>
         <?php if (!empty($page['header'])): ?>
@@ -62,14 +62,19 @@
 </div>
 <!-- #page-columns -->
 
-
-<?php if (!empty($page['footer'])): ?>
-  <div id="footer-wrapper">
-    <div class="container_24">
-      <div class="grid_24">
-        <?php print render($page['footer']); ?>
+<?php
+$footer_logo = theme_get_setting('bibdk_theme_footer_logo');
+if (!empty($footer_logo)) :
+  $footer_logo = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
+?>
+<div id="footer-wrapper">
+  <div class="container_24">
+    <div class="grid_24">
+      <div id="footer-logo">
+        <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
       </div>
     </div>
   </div>
+</div>
 <?php endif; ?>
 <!-- #footer-wrapper -->
