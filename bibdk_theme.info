@@ -6,6 +6,7 @@ core = 7.x
 stylesheets[all][] = css/screen.css
 stylesheets[all][] = system.menus.css
 scripts[] = js/script.js
+scripts[] = js/jquery.popupwindow.js
 
 regions[topbar] = Top bar
 regions[header] = Header
