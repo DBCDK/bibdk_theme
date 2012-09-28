@@ -30,7 +30,10 @@ function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
 }
 
 function bibdk_form_search_block_form_alter(&$form, &$form_alter) {
+  $form['search_block_form']['#attributes']['class'] = array('clearfix');
   $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
+  $form['actions']['#weight'] = -10;
+  $form['search_block_form']['#weight'] = - 12;
 }
 
 function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
