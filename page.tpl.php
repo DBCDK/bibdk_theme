@@ -38,17 +38,21 @@
 <?php endif; ?>
 <!-- #search-panel-wrapper -->
 
+
+<?php if (!empty($messages)): ?>
+  <div id="messages">
+    <div class="container_24">
+      <div class="grid_24">
+        <?php print $messages; ?>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+
+
 <div id="subjects-wrapper">
 
 </div>
-
-
-<?php if (!empty($messages)): ?>
-<div id="messages">
-	<?php print $messages; ?>
-</div>
-<?php endif; ?>
-
 
 
 <div id="page-columns">
