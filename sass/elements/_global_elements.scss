@@ -78,15 +78,19 @@
         float:left;
         display:block;
     }
+    
     li:last-child a {
         border-right:none;
-        }
+    }
 }
 
 #service-nav {
     li:first-child a {
         padding-left:0;
-        }
+    }
+    a {
+        border-right:solid 1px $dark_grey2;
+    }
 }
 
 
@@ -101,7 +105,6 @@
         
         a {
             padding:0.5em 1em;
-            border-right:solid 1px $dark_grey2;
             color:$light_grey5;
             
             &:hover {
