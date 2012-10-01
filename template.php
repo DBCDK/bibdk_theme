@@ -21,10 +21,6 @@ function format_tags($tags) {
   return $output;
 }
 
-function bibdk_theme_menu_tree__user_help_about_menu(&$variables) {
-  return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-}
-
 function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
   $form['#attributes'] = array('class' => array('visuallyhidden'));
 }
@@ -38,4 +34,14 @@ function bibdk_form_search_block_form_alter(&$form, &$form_alter) {
 
 function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+}
+
+function bibdk_theme_menu_tree__menu_topbar_menu(&$variables) {
+  return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+}
+
+function bibdk_theme_preprocess_block(&$variables){
+  if($variables['block_html_id'] == 'block-locale-language'){
+    #kpr($variables);
+  }
 }
