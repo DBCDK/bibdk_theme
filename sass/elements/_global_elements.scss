@@ -247,6 +247,7 @@
         float:left;
         height:40px;
         line-height:40px;
+        margin-bottom:10px;
     }
     input[type=text] {
         width:830px;
@@ -259,6 +260,7 @@
         @include rem('font-size', 16px);
     }
 }
+
 #search-tabs {
     margin-bottom:15px;
     
