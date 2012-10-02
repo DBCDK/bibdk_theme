@@ -54,16 +54,24 @@
 
 </div>
 
+<?php if (!empty($page['information'])): ?>
+  <div id="information-wrapper">
+    <div class="container_24">
+        <?php print render($page['information']); ?>
+    </div>
+  </div>
+    <!-- #information-wrapper -->
+<?php endif; ?>
 
+<?php if (!empty($page['content'])): ?>
 <div id="page-columns">
-
   <div class="container_24">
     <div class="grid_24">
       <?php print render($page['content']); ?>
     </div>
   </div>
-
 </div>
+<?php endif; ?>
 <!-- #page-columns -->
 
 <?php
