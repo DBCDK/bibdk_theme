@@ -67,6 +67,7 @@
 <div id="page-columns">
   <div class="container_24">
     <div class="grid_24">
+<?php print render( $tabs); ?>
       <?php print render($page['content']); ?>
     </div>
   </div>
