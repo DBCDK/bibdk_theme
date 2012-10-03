@@ -151,7 +151,7 @@
             $('.markall-button').click(function(e) {
                 $(this).children('input[type=checkbox]').click();
             });
-    
+
             // Find bib stuff ##fix##
             $('.page-action-find-bib').click(function (e) {
 
@@ -160,7 +160,7 @@
 
                 $clicked.animate({
                     width: 300,
-                }, 300, function() {			
+                }, 300, function() {
                     $clicked.find('form').removeClass('visuallyhidden');
                     $clicked.next().find('input[type=text]').focus();
                 });
@@ -185,6 +185,15 @@
 
             //window popup function
             var profiles = {
+                userhelp: {
+                  height:500,
+                  width:780,
+                  center:0,
+                  createnew:0,
+                  scrollbars:1,
+                  status:1
+                }
+                ,
                 windowNew: {
                     height:500,
                     width:780,
@@ -219,10 +228,10 @@
          $('#lang-nav a').each(function(){
             if($(this).hasClass('active')){
                 $(this).addClass('visuallyhidden');
-            } 
+            }
          });
-         
+
         // NO CODE AFTER THIS!
         }
     };
-})(jQuery); 
+})(jQuery);
