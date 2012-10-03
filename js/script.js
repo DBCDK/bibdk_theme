@@ -218,12 +218,6 @@
             $(".bibdk-popup-link").popupwindow(profiles);
 
 
-
-
-
-
-
-
          //Top menu language menu fix
          $('#lang-nav a').each(function(){
             if($(this).hasClass('active')){

@@ -1,4 +1,14 @@
-<?php if (!empty($page['topbar']) && !$variables['node']->type == 'userhelp'): ?>
+<?php
+/**
+ * @file
+ * Bibliotek.dk theme implementation to display a pop-up help page.
+ * This is the page template for the help popup 'frontpage' at the path /help
+ */
+?>
+
+<?php
+/*
+if (!empty($page['topbar'])): ?>
   <div id="topbar-wrapper">
     <div class="container_24">
       <div class="grid_24">
@@ -6,7 +16,9 @@
       </div>
     </div>
   </div>
-<?php endif; ?>
+<?php endif;
+*/
+?>
 <!-- #topbar-wrapper -->
 
 
@@ -27,7 +39,9 @@
 <!-- #header-wrapper -->
 
 
-<?php if (!empty($page['search_panel']) && !$variables['node']->type == 'userhelp'): ?>
+<?php
+/*
+if (!empty($page['search_panel'])): ?>
   <div id="search-panel-wrapper">
     <div class="container_24">
       <div class="grid_24">
@@ -35,7 +49,9 @@
       </div>
     </div>
   </div>
-<?php endif; ?>
+<?php endif;
+*/
+?>
 <!-- #search-panel-wrapper -->
 
 
@@ -67,7 +83,6 @@
 <div id="page-columns">
   <div class="container_24">
     <div class="grid_24">
-<?php print render( $tabs); ?>
       <?php print render($page['content']); ?>
     </div>
   </div>

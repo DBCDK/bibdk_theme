@@ -36,9 +36,9 @@ function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
-function bibdk_theme_menu_tree__menu_topbar_menu(&$variables) {
-  return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-}
+// function bibdk_theme_menu_tree__user_help_topbar_menu(&$variables) {
+//   return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+// }
 
 function bibdk_theme_preprocess_block(&$variables){
   if($variables['block_html_id'] == 'block-locale-language'){
