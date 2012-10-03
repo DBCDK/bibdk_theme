@@ -116,7 +116,7 @@
 
 
             // Control .active class on tabs
-            $('.tabs a').click(function(e){
+            $('.bib-tabs a').click(function(e){
                 e.preventDefault();
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
