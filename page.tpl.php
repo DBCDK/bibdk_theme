@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="span24">
-          <?php print render($page['topbar']); ?>
+          <nav id="service-nav">
+            <?php print render($page['topbar']); ?>
+          </nav>
         </div>
       </div>
     </div>

@@ -1,18 +1,14 @@
 <?php
-/**
- * @file
- * Bibliotek.dk theme implementation to display a pop-up help page.
- * This is the page template for the help popup 'frontpage' at the path /help
- */
-?>
-
-<?php
 /*
-if (!empty($page['topbar'])): ?>
+if (!empty($page['topbar']) ?>
   <div id="topbar-wrapper">
-    <div class="container_24">
-      <div class="grid_24">
-        <?php print render($page['topbar']); ?>
+    <div class="container">
+      <div class="row">
+        <div class="span24">
+          <nav id="service-nav">
+            <?php print render($page['topbar']); ?>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -23,16 +19,18 @@ if (!empty($page['topbar'])): ?>
 
 
   <div id="header-wrapper">
-    <div class="container_24">
-      <div class="grid_24">
-        <div id="header-logo">
-          <a href="<?php print $base_path; ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
-          </a>
+    <div class="container">
+      <div class="row">
+        <div class="span24">
+          <div id="header-logo">
+            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+            </a>
+          </div>
+          <?php if (!empty($page['header'])): ?>
+            <?php print render($page['header']); ?>
+          <?php endif; ?>
         </div>
-        <?php if (!empty($page['header'])): ?>
-          <?php print render($page['header']); ?>
-        <?php endif; ?>
       </div>
     </div>
   </div>
@@ -41,11 +39,13 @@ if (!empty($page['topbar'])): ?>
 
 <?php
 /*
-if (!empty($page['search_panel'])): ?>
+if (!empty($page['search_panel']) ?>
   <div id="search-panel-wrapper">
-    <div class="container_24">
-      <div class="grid_24">
-        <?php print render($page['search_panel']); ?>
+    <div class="container">
+      <div class="row">
+        <div class="span24">
+          <?php print render($page['search_panel']); ?>
+        </div>
       </div>
     </div>
   </div>
@@ -57,9 +57,11 @@ if (!empty($page['search_panel'])): ?>
 
 <?php if (!empty($messages)): ?>
   <div id="messages">
-    <div class="container_24">
-      <div class="grid_24">
-        <?php print $messages; ?>
+    <div class="container">
+      <div class="row">
+        <div class="span24">
+          <?php print $messages; ?>
+        </div>
       </div>
     </div>
   </div>
@@ -70,6 +72,10 @@ if (!empty($page['search_panel'])): ?>
 
 </div>
 
+
+<!-- PANELS BELOW THIS -->
+
+
 <?php if (!empty($page['information'])): ?>
   <div id="information-wrapper">
     <div class="container_24">
@@ -79,30 +85,36 @@ if (!empty($page['search_panel'])): ?>
     <!-- #information-wrapper -->
 <?php endif; ?>
 
+
 <?php if (!empty($page['content'])): ?>
 <div id="page-columns">
-  <div class="container_24">
-    <div class="grid_24">
-      <?php print render($page['content']); ?>
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+        <?php print render( $tabs); ?><!-- ##FIX"" -->
+        <?php print render($page['content']); ?>
+      </div>
     </div>
   </div>
 </div>
 <?php endif; ?>
 <!-- #page-columns -->
 
-<?php
-$footer_logo = theme_get_setting('bibdk_theme_footer_logo');
-if (!empty($footer_logo)) :
-  $footer_logo = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
-?>
+
+<!-- PANELS ABOVE THIS -->
+
+
+
+
 <div id="footer-wrapper">
-  <div class="container_24">
-    <div class="grid_24">
-      <div id="footer-logo">
-        <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+        <div id="footer-logo">
+          <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+        </div>
       </div>
     </div>
   </div>
 </div>
-<?php endif; ?>
 <!-- #footer-wrapper -->
