@@ -1,11 +1,11 @@
-<?php if (!empty($page['topbar']) && !$variables['node']->type == 'userhelp'): ?>
+<?php if (!empty($page['topbar']) && !(isset($variables['node']->type) && $variables['node']->type == 'userhelp')): ?>
   <div id="topbar-wrapper">
     <div class="container">
-    	<div class="row">
-	      <div class="span24">
-	        <?php print render($page['topbar']); ?>
-	      </div>
-   		</div>
+      <div class="row">
+        <div class="span24">
+          <?php print render($page['topbar']); ?>
+        </div>
+      </div>
     </div>
   </div>
 <?php endif; ?>
@@ -14,31 +14,31 @@
 
   <div id="header-wrapper">
     <div class="container">
-    	<div class="row">
-	      <div class="span24">
-	        <div id="header-logo">
-	          <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-	            <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
-	          </a>
-	        </div>
-	        <?php if (!empty($page['header'])): ?>
-	          <?php print render($page['header']); ?>
-	        <?php endif; ?>
-	      </div>
-    	</div>
+      <div class="row">
+        <div class="span24">
+          <div id="header-logo">
+            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+            </a>
+          </div>
+          <?php if (!empty($page['header'])): ?>
+            <?php print render($page['header']); ?>
+          <?php endif; ?>
+        </div>
+      </div>
     </div>
   </div>
 <!-- #header-wrapper -->
 
 
-<?php if (!empty($page['search_panel']) && !$variables['node']->type == 'userhelp'): ?>
+<?php if (!empty($page['search_panel']) && !(isset($variables['node']->type) && $variables['node']->type == 'userhelp')): ?>
   <div id="search-panel-wrapper">
     <div class="container">
-    	<div class="row">
-	      <div class="span24">
-	        <?php print render($page['search_panel']); ?>
-	      </div>
-	    </div>
+      <div class="row">
+        <div class="span24">
+          <?php print render($page['search_panel']); ?>
+        </div>
+      </div>
     </div>
   </div>
 <?php endif; ?>
@@ -48,11 +48,11 @@
 <?php if (!empty($messages)): ?>
   <div id="messages">
     <div class="container">
-    	<div class="row">
-	      <div class="span24">
-	        <?php print $messages; ?>
-	      </div>
-	    </div>
+      <div class="row">
+        <div class="span24">
+          <?php print $messages; ?>
+        </div>
+      </div>
     </div>
   </div>
 <?php endif; ?>
@@ -79,12 +79,12 @@
 <?php if (!empty($page['content'])): ?>
 <div id="page-columns">
   <div class="container">
-  	<div class="row">
-	    <div class="span24">
-				<?php print render( $tabs); ?><!-- ##FIX"" -->
-	      <?php print render($page['content']); ?>
-	    </div>
-  	</div>
+    <div class="row">
+      <div class="span24">
+        <?php print render( $tabs); ?><!-- ##FIX"" -->
+        <?php print render($page['content']); ?>
+      </div>
+    </div>
   </div>
 </div>
 <?php endif; ?>
@@ -98,12 +98,12 @@
 
 <div id="footer-wrapper">
   <div class="container">
-  	<div class="row">
-	    <div class="span24">
-	      <div id="footer-logo">
-	        <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
-      	</div>
-    	</div>
+    <div class="row">
+      <div class="span24">
+        <div id="footer-logo">
+          <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+        </div>
+      </div>
     </div>
   </div>
 </div>
