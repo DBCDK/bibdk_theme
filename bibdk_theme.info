@@ -3,6 +3,8 @@ description = Custom theme for bibliotek.dk
 screenshot = 'screenshot.png'
 core = 7.x
 
+plugins[panels][layouts] = layouts
+
 stylesheets[all][] = css/screen.css
 stylesheets[all][] = system.menus.css
 scripts[] = js/script.js
