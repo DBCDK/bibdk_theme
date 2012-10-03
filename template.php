@@ -45,3 +45,14 @@ function bibdk_theme_preprocess_block(&$variables){
     #kpr($variables);
   }
 }
+
+function bibdk_theme_preprocess_page(&$variables) {
+
+	$footer_logo = theme_get_setting('bibdk_theme_footer_logo');
+	if (!empty($footer_logo)) {
+	  $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
+	}
+
+}
+
+
