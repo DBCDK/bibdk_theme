@@ -25,7 +25,7 @@ function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
   $form['#attributes'] = array('class' => array('visuallyhidden'));
 }
 
-function bibdk_form_search_block_form_alter(&$form, &$form_alter) {
+function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
   $form['search_block_form']['#attributes']['class'] = array('clearfix');
   $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
   $form['actions']['#weight'] = -10;
