@@ -32,7 +32,7 @@ function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
   $form['search_block_form']['#weight'] = - 12;
 }
 
-function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
+function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
@@ -40,19 +40,15 @@ function bibdk_theme_menu_tree__menu_global_user_menu(&$variables) {
 //   return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 // }
 
-function bibdk_theme_preprocess_block(&$variables){
-  if($variables['block_html_id'] == 'block-locale-language'){
-    #kpr($variables);
+function bibdk_theme_preprocess_block(&$variables) {
+  if ($variables['block_html_id'] == 'block-locale-language') {
   }
 }
 
 function bibdk_theme_preprocess_page(&$variables) {
 
-	$footer_logo = theme_get_setting('bibdk_theme_footer_logo');
-	if (!empty($footer_logo)) {
-	  $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
-	}
-
+  $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
+  if (!empty($footer_logo)) {
+    $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
+  }
 }
-
-
