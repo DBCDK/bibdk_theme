@@ -10,12 +10,12 @@
 //
 
 #topbar-wrapper {
-    background:$dark_grey1;	
+    background:$dark_grey1;
 }
 
 #header-wrapper {
     background: $dark_grey2;
-    height:80px;	
+    height:80px;
 }
 
 #search-panel-wrapper {
@@ -55,13 +55,13 @@
     top:15px;
 }
 #footer-logo {
-    text-align: center;	
+    text-align: center;
 }
 
 
 
 //
-// Language navigation 
+// Language navigation
 //
 
 #lang-nav,
@@ -78,7 +78,7 @@
         float:left;
         display:block;
     }
-    
+
     li:last-child a {
         border-right:none;
     }
@@ -95,18 +95,18 @@
 
 
 //
-// Service navigation 
+// Service navigation
 //
 
 #service-nav,
 #lang-nav {
-    
+
     li {
-        
+
         a {
             padding:0.5em 1em;
             color:$light_grey5;
-            
+
             &:hover {
                 color:$light_grey3;
             }
@@ -118,14 +118,14 @@
 
 
 //
-// User navigation 
+// User navigation
 //
 
 #user-nav {
     position:absolute;
     top:0;
     width:950px;
-    
+
     &.with-mats {
         position:fixed;
     }
@@ -134,7 +134,7 @@
     position:absolute;
     right:0;
     z-index: 10;
-    
+
     a {
         line-height:300%;
         padding:0 1em;
@@ -143,7 +143,7 @@
         text-shadow:0 -1px rgba(black,.3);
         background: $dark_grey3;
     }
-    
+
     li:first-child a {
         @include border-bottom-left-radius(5px);
     }
@@ -151,9 +151,9 @@
         @include border-bottom-right-radius(5px);
         border-right:none;
     }
-    
+
     .materials-button {
-        
+
         .mats {
             float:left;
             margin-right:0.5em;
@@ -161,7 +161,7 @@
             font-weight:bold;
         }
     }
-    
+
     .login-button {
         font-weight:bold;
     }
@@ -178,11 +178,11 @@
     position:absolute;
     right:0;
     top:30px;
-    
+
     li {
         margin-left:5px;
     }
-    
+
     a {
         @include border-radius(3px);
         line-height:30px;
@@ -193,9 +193,9 @@
 
 // Spørg biblioteksvagt
 .page-action-sporg-vagt {
-    padding:0 10px 0 0;	
-    font-weight:bold;	
-    
+    padding:0 10px 0 0;
+    font-weight:bold;
+
     img {
         float:left;
         margin-right:10px;
@@ -207,19 +207,19 @@
 }
 // Find bibliotek
 .page-action-find-bib {
-    
+
     @include box-sizing(border-box);
-    
+
     padding:0 10px;
     position:relative;
-    
+
     form {
         position:absolute;
         top:0;
         left:0;
         width:300px;
     }
-    
+
     input {
         line-height:30px;
         float:left;
@@ -242,7 +242,7 @@
 
 #search-form {
     margin-bottom:10px;
-    
+
     input {
         float:left;
         height:40px;
@@ -263,33 +263,33 @@
 
 #search-tabs {
     margin-bottom:15px;
-    
+
     a {
         background: $dark_grey4;
         @include transition(background-color .5s);
         margin-right:1px;
         padding:10px 20px;
         border-top:solid 1px darken($dark_grey3, 5%);
-        
+
         color:$white;
-        
+
         &:hover {
             background: lighten($dark_grey4, 10%);
         }
     }
-    
+
     li:first-child a {
-        @include border-radius(5px 0 0 5px);	
+        @include border-radius(5px 0 0 5px);
     }
     li:last-child a {
         @include border-radius(0 5px 5px 0);
     }
-    
+
     li.active a {
         background-color:$btn_blue;
         @include border-radius(3px);
         text-shadow:0px -1px rgba(black,.2);
-        
+
         border:none;
         padding:12px 21px;
         position: relative;
@@ -313,12 +313,12 @@
 //
 
 #subjects-nav {
-    
+
     li {
         float:left;
-        width:33%;	
+        width:33%;
     }
-    
+
     a {
         display:block;
         margin-bottom:20px;
@@ -339,7 +339,7 @@
     line-height:71px;
     background-color:$dark_grey3;
     border-bottom:solid 1px darken($dark_grey3, 5%);
-    
+
     font-size:1.333em; // 16px
     font-weight:bold;
     text-align:center;
@@ -355,22 +355,22 @@
 }
 
 .sidebar-nav {
-    
-    a {
+
+    a, fieldset .expand {
         background:$dark_grey4;
         display:block;
         padding:8px 15px;
         color:$white;
-        
+
         border-top:solid 1px lighten($dark_grey4, 2%);
         border-bottom:solid 1px darken($dark_grey4, 5%);
-        
+
         @include transition(background-color .5s);
-        
+
         &:hover {
             background:lighten($dark_grey4, 2%);
         }
-        
+
         &.active {
             border:none;
             @include border-radius(3px);
@@ -380,17 +380,36 @@
             margin-right:-3px;
             font-weight:bold;
             text-shadow:0 -1px 1px rgba(black, 0.3);
-            
+
             &:hover {
                 background:lighten($btn_blue, 2%);
             }
         }
     }
-    
-    .facet-type {
+
+    legend { /* , .facet-type */
         background:darken($dark_grey3, 2%);
         padding:8px 15px;
         color:$white;
         font-weight:bold;
+        width: 85%;
     }
+
+    fieldset {
+        border-width: 0px;
+        margin: 0px;
+        padding: 0px;
+
+        .form-checkboxes .form-item {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+    }
+
+    .form-type-checkbox input {
+        display: none;
+    }
+
+
 }
