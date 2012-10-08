@@ -1,4 +1,4 @@
-<div class="grid_5">
+<div class="span5">
  <div class="widget widget-biblioteksvagt widget-height-2">
   <div class="inner">
 <div class="field-title">
