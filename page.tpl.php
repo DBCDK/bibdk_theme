@@ -81,6 +81,9 @@
           <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
         </div>
     </div>
+    <div class="text-white">
+      <?php print render($page['footer']);?>
+    </div>
   </div>
 </div>
 <!-- #footer-wrapper -->
