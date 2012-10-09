@@ -1,4 +1,3 @@
-<?php $object = $variables['fields']['ting_openformat_work_title']['#object']; ?>
 <div class="work element-wrapper">
   <div class="element">
     <div class="work-header element-section padded">
@@ -21,8 +20,8 @@
       <!-- actions -->
       <div class="element-title">
         <hgroup>
-          <h2><?php print $object->work->title->titleFull->{'$'}; ?></h2>
-          <h3><?php print $object->work->creators->creator->display->{'$'}; ?></h3>
+          <h2><?php print $title; ?></h2>
+          <h3><?php print $author; ?></h3>
         </hgroup>
       </div>
 

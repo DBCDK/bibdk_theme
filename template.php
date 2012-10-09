@@ -32,6 +32,18 @@ function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
   $form['search_block_form']['#weight'] = - 12;
 }
 
+function bibdk_theme_page_alter(&$page){
+  //removing search form rendered in content region by search module
+  // Logged in
+  if (!empty($page['content']['system_main']['content']['search_form'])) {
+    unset($page['content']['system_main']['content']['search_form']);
+  }
+  // Not logged in
+  if (!empty($page['content']['system_main']['search_form'])) {
+    unset($page['content']['system_main']['search_form']);
+  }
+}
+
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
