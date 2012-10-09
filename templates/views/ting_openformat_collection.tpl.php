@@ -26,9 +26,7 @@
       </div>
 
       <div class="toggle-next-section toggle-work">
-        <a href="#" class="">
-          <span class="icon icon-left icon-blue-plus">▼</span><strong>Mere</strong> information
-        </a>
+        <?php print $showinfo; ?>
       </div>
     </div>
     <!-- element-section (work-header) -->
@@ -125,21 +123,15 @@
               <div class="zebra-content">
                 <article class="manifestation zebra clearfix">
                   <div class="actions">
-
                     <div class="primary-actions">
-
                       <div class="btn-wrapper">
                         <a class="btn btn-grey" href="#">Bestil <strong>bog</strong> i denne udgave</a>
                       </div>
-
                       <a class="link-add-basket text-darkgrey text-small" href="#">
                         <span class="icon icon-left icon-darkgrey-addbasket">▼</span>Tilføj indkøbskurv
                       </a>
-
                     </div>
-
                     <div class="secondary-actions">
-
                       <ul>
                         <li>
                           <a class="text-small text-lightgrey" href="#">
@@ -156,15 +148,10 @@
                           </a>
                         </li>
                         <ul>
-
                         </ul></ul></div>
-
                   </div>
                   <!-- .actions -->
-
-
                   <div class="manifestation-data text">
-
                     <table>
                       <tbody><tr>
                           <th>Originaltitel:</th>
@@ -198,29 +185,19 @@
                           <th>Placering:</th>
                           <td>Skønlitteratur</td>
                         </tr>
-
                       </tbody></table>
-
                   </div>
-
                 </article>		<article class="manifestation zebra clearfix">
-
                   <div class="actions">
-
                     <div class="primary-actions">
-
                       <div class="btn-wrapper">
                         <a class="btn btn-grey" href="#">Bestil <strong>bog</strong> i denne udgave</a>
                       </div>
-
                       <a class="link-add-basket text-darkgrey text-small" href="#">
                         <span class="icon icon-left icon-darkgrey-addbasket">▼</span>Tilføj indkøbskurv
                       </a>
-
                     </div>
-
                     <div class="secondary-actions">
-
                       <ul>
                         <li>
                           <a class="text-small text-lightgrey" href="#">
