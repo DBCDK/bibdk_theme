@@ -9,11 +9,9 @@
 <div<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>>
-      <a href="<?php print $content['help_url']; ?>"><?php print $title; ?></a>
+      <a href="<?php print ( isset($content['help_url']) ) ? $content['help_url'] : $node_url; ?>"><?php print $title; ?></a>
     </h2>
-  <?php endif; ?>
   <?php print render($title_suffix); ?>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>

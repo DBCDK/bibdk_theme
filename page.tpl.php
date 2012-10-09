@@ -13,8 +13,8 @@
 
 
   <div id="header-wrapper">
-    <div class="container">
-      <div class="row">
+    <div class="container container_24">
+      <div class="row grid_24">
           <div id="header-logo">
             <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
               <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
