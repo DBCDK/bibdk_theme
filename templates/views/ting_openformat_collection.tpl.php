@@ -27,20 +27,16 @@
 
       <div class="toggle-next-section toggle-work">
         <a href="#" class="works-control works-pager-back">
-				<span class="icon icon-blue-left">&or;</span>
-			</a>
+          <span class="icon icon-blue-left">&or;</span>
+        </a>
         <?php print $showinfo; ?>
       </div>
     </div>
     <!-- element-section (work-header) -->
-
     <div class="work-body work-body-has-cover element-section padded visuallyhidden">
-
-      <?php print $view; ?>
-
+      <div id="ajax-placeholder"></div>
     </div>
     <!-- element-section -->
-
   </div>
   <!-- element -->
 
