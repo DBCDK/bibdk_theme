@@ -371,6 +371,10 @@
             background:lighten($dark_grey4, 2%);
         }
 
+        &:visited {
+            color:$white;
+        }
+
         &.active {
             border:none;
             @include border-radius(3px);
