@@ -64,3 +64,8 @@ function bibdk_theme_preprocess_page(&$variables) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
 }
+
+
+function bibdk_theme_preprocess_field(&$variables){
+  //kpr($variables);
+}

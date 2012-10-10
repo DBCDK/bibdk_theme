@@ -5,7 +5,7 @@
                     <div class="primary-actions">
 
                       <div class="btn-wrapper">
-                        <a class="btn btn-grey" href="#">Bestil <strong>bog</strong> i denne udgave</a>
+                        <?php print drupal_render($variables['fields']['bibdk_reservation_button_default']); ?>
                       </div>
 
                       <a class="link-add-basket text-darkgrey text-small" href="#">
@@ -40,7 +40,10 @@
 
 
                   <div class="manifestation-data text">
-                    <?php print drupal_render($variables['fields']); ?>
+                    <table>
+                      <tbody>
+                        <?php print drupal_render($variables['fields']['ting_openformat_default_formatter']); ?>
+                      </tbody></table>
                     <!--<table>
                       <tbody><tr>
                           <th>Originaltitel:</th>
