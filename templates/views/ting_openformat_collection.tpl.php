@@ -34,7 +34,7 @@
     </div>
     <!-- element-section (work-header) -->
     <div class="work-body work-body-has-cover element-section padded visuallyhidden">
-      <div id="ajax-placeholder"></div>
+      <div id="ajax_placeholder_<?php print $uid; ?>"></div>
     </div>
     <!-- element-section -->
   </div>
