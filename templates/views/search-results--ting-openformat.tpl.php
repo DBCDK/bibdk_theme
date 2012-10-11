@@ -5,6 +5,7 @@
  */
 ?>
 <?php if ($search_results): ?>
+<?php kpr($variables); ?>
   <section class="works" >
     <div class="works-controls clearfix">
       <div class="works-control-wrapper-left">
