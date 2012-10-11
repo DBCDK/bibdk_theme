@@ -18,7 +18,6 @@
   <div class="wrapper">
     
     <?php print drupal_render($fields); ?>
-    <?php kpr($variables); ?>
     <div class="tabs tabs-light">
       <div class="tabs-nav clearfix">
         <a href="#" class="active">Find mere om</a>
