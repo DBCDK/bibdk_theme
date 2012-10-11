@@ -18,7 +18,7 @@
   <div class="wrapper">
     <div class="field-summary text">
       <p>
-        <?php print drupal_render($fields['ting_openformat_work_abstract']); ?>
+        <?php print drupal_render($fields['ting_openformat_default_formatter']['ting_openformat_work_abstract']); ?>
       </p>
     </div>
     <div class="field-tags">
