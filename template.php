@@ -66,6 +66,6 @@ function bibdk_theme_preprocess_page(&$variables) {
 }
 
 
-function bibdk_theme_preprocess_field(&$variables){
-  //kpr($variables);
+function bibdk_theme_preprocess_bibdk_reservation_button(&$variables){
+  $variables['link_attributes']['class'] += array('btn');
 }

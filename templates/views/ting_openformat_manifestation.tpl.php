@@ -5,6 +5,7 @@
                     <div class="primary-actions">
 
                       <div class="btn-wrapper">
+                        
                         <?php print drupal_render($variables['fields']['bibdk_reservation_button_default']); ?>
                       </div>
 
