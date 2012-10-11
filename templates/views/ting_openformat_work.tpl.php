@@ -16,13 +16,8 @@
 
 
   <div class="wrapper">
-    <div class="field-summary text">
-      <p>
-        <?php print drupal_render($fields['ting_openformat_work_abstract']); ?>
-      </p>
-    </div>
-    <div class="field-tags">
-      <a href="#">Krimi</a>&nbsp;/&nbsp;<a href="#">romaner</a>&nbsp;/&nbsp;<a href="#">hævn</a>&nbsp;/&nbsp;<a href="#">Oslo</a>&nbsp;/&nbsp;<a href="#">Norge</a>&nbsp;/&nbsp;<a href="#">2000-2009</a></div>
+    
+    <?php print drupal_render($fields); ?>
     <div class="tabs tabs-light">
       <div class="tabs-nav clearfix">
         <a href="#" class="active">Find mere om</a>
