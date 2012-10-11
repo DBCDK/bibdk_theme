@@ -3,8 +3,9 @@
 <div class="work-shared-data clearfix">
   <div class="work-cover">
     <div class="work-cover-image">
-      <a href="#"><img src="../img/cover-front-large.gif"></a>
-      <a href="#" class="visuallyhidden"><img src="../img/cover-back-large.gif"></a>
+      <?php print drupal_render($fields['ting_cover_work']); ?>
+      <!-- <a href="#"><img src="../img/cover-front-large.gif"></a>
+      <a href="#" class="visuallyhidden"><img src="../img/cover-back-large.gif"></a> -->
     </div>
     <div class="work-cover-selector clearfix">
       <a href="#" class="work-cover-front active"></a>
