@@ -1,5 +1,4 @@
 <article class="manifestation zebra clearfix">
-
                   <div class="actions">
 
                     <div class="primary-actions">
@@ -9,16 +8,17 @@
                         <?php print drupal_render($variables['fields']['bibdk_reservation_button_default']); ?>
                       </div>
 
-                      <a class="link-add-basket text-darkgrey text-small" href="#">
+                      <!--<a class="link-add-basket text-darkgrey text-small" href="#">
                         <span class="icon icon-left icon-darkgrey-addbasket">▼</span>Tilføj indkøbskurv
-                      </a>
+                      </a>-->
 
                     </div>
 
                     <div class="secondary-actions">
 
                       <ul>
-                        <li>
+                        <?php print drupal_render($variables['fields']['bibdk_linkme_permalink_default']); ?>
+                        <!--<li>
                           <a class="text-small text-lightgrey" href="#">
                             <span class="icon icon-left icon-lightgrey-list">▼</span>Hvilke biblioteker har materialet?</a>
                         </li>
@@ -31,7 +31,7 @@
                           <a class="text-small text-lightgrey" href="#">
                             <span class="icon icon-left icon-lightgrey-rightarrow">▼</span>Eksporter til RefWorks
                           </a>
-                        </li>
+                        </li>-->
                         <ul>
 
                         </ul></ul></div>
