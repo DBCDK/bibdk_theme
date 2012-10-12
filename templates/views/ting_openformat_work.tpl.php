@@ -1,47 +1,33 @@
-<?php #print drupal_render($variables['fields']); ?>
 <!-- cover -->
-<div class="work-shared-data clearfix">
-  <div class="work-cover">
-    <div class="work-cover-image">
-      <?php print drupal_render($fields['ting_cover_work']); ?>
-      <!-- <a href="#"><img src="../img/cover-front-large.gif"></a>
-      <a href="#" class="visuallyhidden"><img src="../img/cover-back-large.gif"></a> -->
+  <?php print drupal_render($fields['ting_cover_work']); ?>
+<!-- cover -->
+
+
+<div class="wrapper">
+  <?php print drupal_render($fields); ?>
+  <div class="tabs tabs-light">
+    <div class="tabs-nav clearfix">
+      <a href="#" class="active">Find mere om</a>
+      <a href="#">Anmeldelser</a>
     </div>
-    <div class="work-cover-selector clearfix">
-      <a href="#" class="work-cover-front active"></a>
-      <a href="#" class="work-cover-back"></a>
-    </div>
-
-  </div>
-  <!-- cover -->
-
-
-  <div class="wrapper">
-    
-    <?php print drupal_render($fields); ?>
-    <div class="tabs tabs-light">
-      <div class="tabs-nav clearfix">
-        <a href="#" class="active">Find mere om</a>
-        <a href="#">Anmeldelser</a>
-      </div>
-      <!-- tabs-nav -->
-      <div class="tabs-sections">
-        <div class="tabs-section">
-          <div class="padded text clearfix">
-            <ul>
-              <li><a href="#">Se anmeldelse hos Infomedia</a></li>
-              <li><a href="#">Se materialevurdering</a></li>
-              <li><a href="#">Læs brugeranmeldelser og ratings</a></li>
-            </ul>
-          </div>
+    <!-- tabs-nav -->
+    <div class="tabs-sections">
+      <div class="tabs-section">
+        <div class="padded text clearfix">
+          <ul>
+            <li><a href="#">Se anmeldelse hos Infomedia</a></li>
+            <li><a href="#">Se materialevurdering</a></li>
+            <li><a href="#">Læs brugeranmeldelser og ratings</a></li>
+          </ul>
         </div>
-        <!-- tabs-section -->
       </div>
-      <!-- tabs-sections -->
+      <!-- tabs-section -->
     </div>
-    <!-- tabs -->
+    <!-- tabs-sections -->
   </div>
-  <!-- wrapper -->
+  <!-- tabs -->
+</div>
+<!-- wrapper -->
 </div>
 <!-- work-share-data -->
 
