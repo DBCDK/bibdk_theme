@@ -265,6 +265,12 @@
 			background:$light_grey2;
 		}
 	}
+       li.pager-current a {
+              background:$light_grey2;
+       }
+       li a span {
+              display: none;
+       }
 }
 
 
@@ -304,7 +310,7 @@
 	&.toggled {
 		@include box-shadow(inset 0 0px 1px rgba(black,.8));
 		background-color:darken(#fbfbfb, 2%);
-	}	
+	}
 }
 
 // Toggle collapsed/expanded

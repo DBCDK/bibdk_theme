@@ -9,15 +9,15 @@
     <div class="works-controls clearfix">
       <div class="works-control-wrapper-left">
         <a class="works-control works-toggle" href="#">
-          <span class="works-toggle-collapse hide-text">∨</span>
-          <span class="works-toggle-expand hide-text">∨</span>
+          <span class="works-toggle-collapse hide-text">?</span>
+          <span class="works-toggle-expand hide-text">?</span>
         </a>
       </div>
       <!-- works toggle all -->
       <div class="works-control-wrapper-left">
         <div class="dropdown-wrapper">
           <a href="#" class="works-control works-sort dropdown-toggle">
-            Sortér efter år<span class="icon icon-right icon-blue-down">∨</span>
+            Sortér efter år<span class="icon icon-right icon-blue-down">?</span>
           </a>
           <ul class="dropdown-menu dropdown-leftalign visuallyhidden">
             <li><a href="#" class="current">Sortér efter år</a></li>
@@ -29,11 +29,11 @@
       <!-- works sort -->
       <div class="works-control-wrapper-right">
         <a href="#" class="works-control works-pager-back">
-          <span class="icon icon-blue-left">∨</span>
+          <span class="icon icon-blue-left">?</span>
         </a>
         <div class="dropdown-wrapper">
           <a href="#" class="works-control works-pager-select dropdown-toggle">
-            Side 1<span class="icon icon-right icon-blue-down">∨</span>
+            Side 1<span class="icon icon-right icon-blue-down">?</span>
           </a>
           <ul class="dropdown-menu dropdown-leftalign visuallyhidden">
             <li><a href="#" class="current">Side 1</a></li>
@@ -46,7 +46,7 @@
           </ul>
         </div>
         <a href="#" class="works-control works-pager-forward">
-          <span class="icon icon-blue-right">∨</span>
+          <span class="icon icon-blue-right">?</span>
         </a>
       </div>
       <!-- works pager -->
