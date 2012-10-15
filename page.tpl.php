@@ -2,9 +2,9 @@
   <div id="topbar-wrapper">
     <div class="container">
       <div class="row">
-          <nav id="service-nav">
-            <?php print render($page['topbar']); ?>
-          </nav>
+        <nav id="service-nav">
+          <?php print render($page['topbar']); ?>
+        </nav>
       </div>
     </div>
   </div>
@@ -12,20 +12,22 @@
 <!-- #topbar-wrapper -->
 
 
-  <div id="header-wrapper">
-    <div class="container container_24">
-      <div class="row grid_24">
-          <div id="header-logo">
-            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
-            </a>
-          </div>
-          <?php if (!empty($page['header'])): ?>
-            <?php print render($page['header']); ?>
-          <?php endif; ?>
+<div id="header-wrapper">
+  <div class="container container_24">
+    <div class="row grid_24">
+      <div id="header-logo">
+        <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+        </a>
       </div>
+      <?php if (!empty($page['header_actions'])): ?>
+        <div id="header-actions">
+          <?php print render($page['header_actions']); ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
+</div>
 <!-- #header-wrapper -->
 
 
@@ -33,7 +35,7 @@
   <div id="search-panel-wrapper">
     <div class="container">
       <div class="row">
-          <?php print render($page['search_panel']); ?>
+        <?php print render($page['search_panel']); ?>
       </div>
     </div>
   </div>
@@ -45,7 +47,7 @@
   <div id="messages">
     <div class="container">
       <div class="row">
-          <?php print $messages; ?>
+        <?php print $messages; ?>
       </div>
     </div>
   </div>
@@ -60,14 +62,14 @@
 <!-- PANELS BELOW THIS -->
 
 <?php if (!empty($page['content'])): ?>
-<div id="page-columns">
-  <div class="container">
-    <div class="row">
-        <?php print render( $tabs); ?><!-- ##FIX"" -->
+  <div id="page-columns">
+    <div class="container">
+      <div class="row">
+        <?php print render($tabs); ?><!-- ##FIX"" -->
         <?php print render($page['content']); ?>
+      </div>
     </div>
   </div>
-</div>
 <?php endif; ?>
 <!-- #page-columns -->
 
@@ -77,12 +79,12 @@
 <div id="footer-wrapper">
   <div class="container">
     <div class="row">
-        <div id="footer-logo">
-          <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
-        </div>
+      <div id="footer-logo">
+        <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+      </div>
     </div>
     <div class="text-white">
-      <?php print render($page['footer']);?>
+      <?php print render($page['footer']); ?>
     </div>
   </div>
 </div>
