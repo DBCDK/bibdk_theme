@@ -176,68 +176,83 @@
 
 
 
+
+
+
+
 //
 // Page actions
 //
 
-#page-actions {
+#header-actions {
     position:absolute;
     right:0;
     top:30px;
 
-    li {
-        margin-left:5px;
-    }
+    // li {
+    //     margin-left:5px;
+    // }
 
-    a {
-        @include border-radius(3px);
-        line-height:30px;
-        background: $dark_grey3;
-        color:$white;
-    }
+    // a {
+    //     @include border-radius(3px);
+    //     line-height:30px;
+    //     background: $dark_grey3;
+    //     color:$white;
+    // }
 }
 
 // Spørg biblioteksvagt
 .page-action-sporg-vagt {
-    padding:0 10px 0 0;
-    font-weight:bold;
+    // padding:0 10px 0 0;
+    // font-weight:bold;
 
-    img {
-        float:left;
-        margin-right:10px;
-        position:relative;
-        top:2px;
-        left:2px;
-        @include border-radius(3px);
-    }
+    // img {
+    //     float:left;
+    //     margin-right:10px;
+    //     position:relative;
+    //     top:2px;
+    //     left:2px;
+    //     @include border-radius(3px);
+    // }
 }
 // Find bibliotek
 .page-action-find-bib {
 
-    @include box-sizing(border-box);
+    // @include box-sizing(border-box);
 
-    padding:0 10px;
-    position:relative;
+    // padding:0 10px;
+    // position:relative;
 
-    form {
-        position:absolute;
-        top:0;
-        left:0;
-        width:300px;
-    }
+    // form {
+    //     position:absolute;
+    //     top:0;
+    //     left:0;
+    //     width:300px;
+    // }
 
-    input {
-        line-height:30px;
-        float:left;
-        padding:0 10px;
-    }
-    input[type=text] {
-        width:85%;
-    }
-    input[type=submit] {
-        width:15%;
-    }
+    // input {
+    //     line-height:30px;
+    //     float:left;
+    //     padding:0 10px;
+    // }
+    // input[type=text] {
+    //     width:85%;
+    // }
+    // input[type=submit] {
+    //     width:15%;
+    // }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

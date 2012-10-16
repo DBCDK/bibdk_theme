@@ -22,7 +22,7 @@ function format_tags($tags) {
 }
 
 function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
-  $form['#attributes'] = array('class' => array('visuallyhidden'));
+  // $form['#attributes'] = array('class' => array('visuallyhidden'));
 }
 
 function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
@@ -53,8 +53,10 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 // }
 
 function bibdk_theme_preprocess_block(&$variables) {
-  if ($variables['block_html_id'] == 'block-locale-language') {
-  }
+  // if ($variables['block_html_id'] == 'block-locale-language') {
+  // }
+
+  // kpr($variables);
 }
 
 function bibdk_theme_preprocess_page(&$variables) {

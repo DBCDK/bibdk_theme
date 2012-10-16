@@ -152,26 +152,26 @@
                 $(this).children('input[type=checkbox]').click();
             });
 
-            // Find bib stuff ##fix##
-            $('.page-action-find-bib').click(function (e) {
+            // // Find bib stuff ##fix##
+            // $('.page-action-find-bib').click(function (e) {
 
-                e.stopPropagation();
-                $clicked = $(this);
+            //     e.stopPropagation();
+            //     $clicked = $(this);
 
-                $clicked.animate({
-                    width: 300,
-                }, 300, function() {
-                    $clicked.find('form').removeClass('visuallyhidden');
-                    $clicked.next().find('input[type=text]').focus();
-                });
-            });
+            //     $clicked.animate({
+            //         width: 300,
+            //     }, 300, function() {
+            //         $clicked.find('form').removeClass('visuallyhidden');
+            //         $clicked.next().find('input[type=text]').focus();
+            //     });
+            // });
 
             $('html').click(function() {
 
-                $('.page-action-find-bib').find('form').addClass('visuallyhidden');
-                $('.page-action-find-bib').css({
-                    width: "",
-                });
+                // $('.page-action-find-bib').find('form').addClass('visuallyhidden');
+                // $('.page-action-find-bib').css({
+                //     width: "",
+                // });
             });
 
             $('.subwork-type-navigation a').click(function(e) {
