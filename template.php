@@ -97,10 +97,10 @@ function bibdk_theme_pager_link($variables) {
     static $titles = NULL;
     if (!isset($titles)) {
       $titles = array(
-        t('« first') => t('Go to first page'), 
-        t('‹ previous') => t('Go to previous page'), 
-        t('next ›') => t('Go to next page'), 
-        t('last »') => t('Go to last page'),
+        t('<< first') => t('Go to first page'), 
+        t('< previous') => t('Go to previous page'), 
+        t('next >') => t('Go to next page'), 
+        t('last >>') => t('Go to last page'),
       );
     }
     if (isset($titles[$text])) {
