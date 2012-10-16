@@ -2,10 +2,9 @@
   <?php print drupal_render($fields['ting_cover_work']); ?>
 <!-- cover -->
 
-
 <div class="wrapper">
   <?php print drupal_render($fields); ?>
-  <div class="tabs tabs-light">
+  <div class="bibdk-tabs bibdk-tabs-light">
     <div class="tabs-nav clearfix">
       <a href="#" class="active">Find mere om</a>
       <a href="#">Anmeldelser</a>
@@ -31,16 +30,19 @@
 </div>
 <!-- work-share-data -->
 
-<div class="tabs tabs-heavy">
-  <?php print $variables['tabs']; ?>
+<div class="bibdk-tabs bibdk-tabs-heavy">
+  <?php print $tabs; ?>
   <!-- tabs-nav -->
   <div class="tabs-sections">
-    <div class="tabs-section">
+    <?php foreach ($subWorks as $type => $subwork) : $count++; ?> 
+    
+    <div id="<?php print $type; ?>" class="tabs-section <?php print ($count != 1) ? "visuallyhidden" : "" ?>">
       <div class="padded text clearfix">
         <div class="actions">
           <div class="primary-actions">
             <div class="btn-wrapper">
-              <a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>
+              <?php echo drupal_render($subwork['fields']); ?>
+              <!--<a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>-->
             </div>
             <a class="text-small link-add-basket" href="#">
               <span class="icon icon-left icon-blue-addbasket">▼</span>Tilføj indkøbskurv
@@ -53,29 +55,29 @@
       </div>
       <!-- tabs-content -->
       <div class="manifestations zebra-wrapper">
-        <div class="zebra-toggle">
-          <a href="#">
-            <span class="icon icon-left icon-blue-down">▼</span>Skjul alle <strong>4 bøger</strong>
-          </a>
-        </div>
         <div class="zebra-content">
-          <?php $subwork = current($variables['subWorks']); ?>
-          <?php foreach ($subwork['manifestations'] as $manifestation) : ?> 
+          <?php $count_manifestation = 0; ?>
+          <?php foreach ($subwork['manifestations'] as $manifestation) : $count_manifestation++; ?> 
+            <div class="manifestation zebra <?php print ($count_manifestation > 2) ? "visuallyhidden toggle" : "" ?>">
             <?php print $manifestation; ?>
+            </div>  
           <?php endforeach; ?>
 
         </div>
         <!-- end zebra-content -->  
-
+        <?php if(count($subwork['manifestations']) > 2) : ?>
         <div class="zebra-toggle">
-          <a href="#">
-            <span class="icon icon-left icon-blue-down">▼</span>Skjul alle <strong>4 bøger</strong>
+          <a href="#<?php print $type; ?>">
+            <span class="icon icon-left icon-blue-down">▼</span>
+              <span class="toggle-text"><?php print t("show all (@count)", array('@count' => count($subwork['manifestations']))); ?></span>
+              <span class="toggle-text hidden"><?php print t("hide"); ?></span>
           </a>
         </div>
-
+        <?php endif; ?>
       </div>
       <!-- manifestations -->
     </div>
+    <?php endforeach; ?>
     <!-- tabs-section -->
   </div>
   <!-- tabs-sections -->

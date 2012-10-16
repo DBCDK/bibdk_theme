@@ -67,10 +67,14 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
 }
 
+/*function bibdk_theme_form_ting_openformat_show_info_get_form_alter(&$form){
+  $form['info']['#prefix'] = $form['info']['#prefix'].'<span class="icon icon-left icon-blue-down">▼</span><span class="toggle-text">';
+  $form['info']['#suffix'] = $form['info']['#suffix'].'</span><span class="toggle-text hidden">'.t('Less info').'</span>';
+}*/
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables){
   $variables['link_attributes']['class'][] = 'btn';
-  $variables['link_attributes']['class'][] = 'btn-grey';
+  $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
   return $variables;
 }
 

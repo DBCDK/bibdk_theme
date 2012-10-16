@@ -26,8 +26,8 @@
       </div>
 
       <div class="toggle-next-section toggle-work">
-        <a href="#" class="works-control works-pager-back">
-          <span class="icon icon-blue-left">&or;</span>
+        <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
+          <span class="icon icon-left icon-blue-down">▼</span><span class="toggle-text"><?php echo t('More info'); ?></span></span><span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
         </a>
         <?php print $showinfo; ?>
       </div>

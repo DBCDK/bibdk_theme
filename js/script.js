@@ -1,8 +1,6 @@
 (function ($) {
     Drupal.behaviors.bibdk_theme = {
         attach: function(context, settings) {
-
-
             // Toggle tables
             $('.table-toggle a').click(function(e) {
                 e.preventDefault();
@@ -14,7 +12,7 @@
 
 
             // Toggle dropdown menus
-            $('.dropdown-toggle').click(function(e) {
+            $('.dropdown-toggle').once().click(function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
@@ -51,8 +49,7 @@
 
 
             // Select side of work cover
-            $('.work-cover-selector a').click(function(e) {
-
+            $('.work-cover-selector a').once().click(function(e) {
                 e.preventDefault();
 
                 var index = $(this).index() + 1;
@@ -64,38 +61,39 @@
 
 
             // Disable button and dropdown when toggling details of a work
-            $('.toggle-work a').toggle(function() {
+            $('.work-toggle-element', context).click(function() {
+                
+                if (!$(this).hasClass('toggled')){
+                    $(this).closest('.work-header').find('.btn').addClass('disabled');
+                    $(this).closest('.work-header').find('.btn').removeClass('toggled');
+                    $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
-                $(this).closest('.work-header').find('.btn').addClass('disabled');
-                $(this).closest('.work-header').find('.btn').removeClass('toggled');
-                $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
-
-                $('html, body').animate({
-                    scrollTop: $(this).closest('.work').offset().top
-                }, 500);
-
-            }, function () {
-                $(this).closest('.work-header').find('.btn').removeClass('disabled');
+                    $('html, body').animate({
+                        scrollTop: $(this).closest('.work').offset().top
+                    }, 500);
+                }else
+                {
+                    $(this).closest('.work-header').find('.btn').removeClass('disabled');
+                }   
             });
 
 
             // Toggle visibility of "next section of an element"
-            $('.toggle-next-section a').toggle(function(e) {
+            
+            $('.work-toggle-element', context).click(function(e) {
                 e.preventDefault();
+                var id  = $(this).attr('href');
+                $(id).trigger('click');
+                $(this).children('.toggle-text').toggleClass('hidden');
+                if (!$(this).hasClass('toggled')){
+                    $(this).addClass('toggled');
+                    $(this).closest('.element-section').next().removeClass('visuallyhidden');
 
-                $(this).addClass('toggled');
-                $(this).html($(this).html().replace('Mere', 'Mindre'));
-
-                $(this).closest('.element-section').next().removeClass('visuallyhidden');
-
-            }, function(e) {
-                e.preventDefault();
-
-                $(this).removeClass('toggled');
-                $(this).html($(this).html().replace('Mindre', 'Mere'));
-
-                $(this).closest('.element-section').next().addClass('visuallyhidden');
-
+                }else{
+                    $(this).removeClass('toggled');
+                    $(this).closest('.element-section').next().addClass('visuallyhidden');
+                }
+                
             });
 
 
@@ -116,10 +114,13 @@
 
 
             // Control .active class on tabs
-            $('.bib-tabs a').click(function(e){
+            $('.tabs-nav a').click(function(e){
                 e.preventDefault();
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
+                var id = $(this).attr('href');
+                $(id).siblings().addClass('visuallyhidden');
+                $(id).removeClass('visuallyhidden')
             });
 
             $('#search-tabs a').click(function(){
@@ -134,8 +135,14 @@
                 $(this).parent().next().toggleClass('visuallyhidden');
             });
 
-
-
+            //Control zebra-toggle
+            $('.zebra-toggle a').once().click(function (e){
+                e.preventDefault();
+                var id = $(this).attr('href');
+                $(this).toggleClass('toggled');
+                $(this).children('.toggle-text').toggleClass('hidden');
+                $(this).parents(id).find(".toggle").toggleClass('visuallyhidden');
+            });
             $('.markall-button input[type=checkbox]').click(function(e) {
                 e.stopPropagation();
                 $(this).toggleClass('checked');
@@ -186,12 +193,12 @@
             //window popup function
             var profiles = {
                 userhelp: {
-                  height:500,
-                  width:780,
-                  center:0,
-                  createnew:0,
-                  scrollbars:1,
-                  status:1
+                    height:500,
+                    width:780,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:1
                 }
                 ,
                 windowNew: {
@@ -218,12 +225,12 @@
             $(".bibdk-popup-link").popupwindow(profiles);
 
 
-         //Top menu language menu fix
-         $('#lang-nav a').each(function(){
-            if($(this).hasClass('active')){
-                $(this).addClass('visuallyhidden');
-            }
-         });
+            //Top menu language menu fix
+            $('#lang-nav a').each(function(){
+                if($(this).hasClass('active')){
+                    $(this).addClass('visuallyhidden');
+                }
+            });
 
         // NO CODE AFTER THIS!
         }
