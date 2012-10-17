@@ -37,7 +37,7 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
-//Below function should be placed in the correct module - but where?
+//Below function should be placed in the correct module - but where? Ding_user.pages.inc?
 function bibdk_theme_form_user_login_alter(&$form) {
   $form['name']['#description'] = '';
   $form['pass']['#description'] = '';
