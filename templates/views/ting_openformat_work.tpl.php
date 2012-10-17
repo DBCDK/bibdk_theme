@@ -36,7 +36,7 @@
   <div class="tabs-sections">
     <?php foreach ($subWorks as $type => $subwork) : $count++; ?> 
     
-    <div id="<?php print $type; ?>" class="tabs-section <?php print ($count != 1) ? "visuallyhidden" : "" ?>">
+    <div id="<?php print $type; ?>" class="subwork tabs-section <?php print ($count != 1) ? "visuallyhidden" : "" ?>">
       <div class="padded text clearfix">
         <div class="actions">
           <div class="primary-actions">
