@@ -1,12 +1,5 @@
 <?php
 
-// Render a template with a set of variables
-/* function render($type, $template, $vars = array()){
-  ob_start();
-  extract($vars);
-  include('templates/' . $type . '/' . $template . '.php');
-  } */
-
 // Format array of tags as links
 function format_tags($tags) {
 
@@ -19,10 +12,6 @@ function format_tags($tags) {
   $output = implode('&nbsp;/&nbsp;', $elements);
 
   return $output;
-}
-
-function bibdk_theme_form_bibdk_vejviser_form_alter(&$form) {
-  // $form['#attributes'] = array('class' => array('visuallyhidden'));
 }
 
 function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
@@ -48,29 +37,17 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
-// function bibdk_theme_menu_tree__user_help_topbar_menu(&$variables) {
-//   return "<ul class='menu horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-// }
-
-function bibdk_theme_preprocess_block(&$variables) {
-  // if ($variables['block_html_id'] == 'block-locale-language') {
-  // }
-
-  // kpr($variables);
+function bibdk_theme_form_user_login_alter(&$form) {
+  $form['name']['#description'] = '';
+  $form['pass']['#description'] = '';
 }
 
 function bibdk_theme_preprocess_page(&$variables) {
-
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
 }
-
-/*function bibdk_theme_form_ting_openformat_show_info_get_form_alter(&$form){
-  $form['info']['#prefix'] = $form['info']['#prefix'].'<span class="icon icon-left icon-blue-down">▼</span><span class="toggle-text">';
-  $form['info']['#suffix'] = $form['info']['#suffix'].'</span><span class="toggle-text hidden">'.t('Less info').'</span>';
-}*/
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables){
   $variables['link_attributes']['class'][] = 'btn';
