@@ -13,18 +13,19 @@
 
 
 <div id="header-wrapper">
-  <div class="container container_24">
-    <div class="row grid_24">
-      <div id="header-logo">
-        <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
-        </a>
-      </div>
-      <?php if (!empty($page['header_actions'])): ?>
-        <div id="header-actions">
-          <?php print render($page['header_actions']); ?>
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="header-logo">
+          <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+          </a>
         </div>
-      <?php endif; ?>
+
+        <?php print render($page['header_actions']); ?>
+
+      </div>
     </div>
   </div>
 </div>

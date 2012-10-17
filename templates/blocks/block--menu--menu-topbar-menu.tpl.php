@@ -1,3 +1,3 @@
 <nav id="service-nav" >
-    <?php print $content; ?>
-</nav>				
+  <?php print $content; ?>
+</nav>

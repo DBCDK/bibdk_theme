@@ -10,37 +10,37 @@
 //
 
 #topbar-wrapper {
-    background:$dark_grey1;
+  background:$dark_grey1;
 }
 
 #header-wrapper {
-    background: $dark_grey2;
-    height:80px;
+  background: $dark_grey2;
+  height:80px;
 }
 
 #search-panel-wrapper {
-    background:$dark_grey3;
-    padding:20px 0;
+  background:$dark_grey3;
+  padding:20px 0;
 }
 
 #subjects-wrapper {
-    background: $light_grey2;
-    padding:30px 0 10px;
-    min-height:60px;
+  background: $light_grey2;
+  padding:30px 0 10px;
+  min-height:60px;
 }
 
 #page-columns {
-    padding:40px 0 30px;
-    margin-top:-112px;
+  padding:40px 0 30px;
+  margin-top:-112px;
 }
 
 .page-frontpage #page-columns {
-    margin-top:0;
+  margin-top:0;
 }
 
 #footer-wrapper {
-    background: $dark_grey3;
-    padding:40px 0 100px;
+  background: $dark_grey3;
+  padding:40px 0 100px;
 }
 
 
@@ -48,7 +48,7 @@
 // Panel content wrappers
 //
 #search-result-wrapper {
-    clear: both;
+  clear: both;
 }
 
 
@@ -57,11 +57,11 @@
 //
 
 #header-logo {
-    position: absolute;
-    top:15px;
+  position: absolute;
+  top:15px;
 }
 #footer-logo {
-    text-align: center;
+  text-align: center;
 }
 
 
@@ -72,52 +72,51 @@
 
 #lang-nav,
 #service-nav {
-    float: left;
+  float: left;
 }
 
 #lang-nav {
-    li {
-        float:left;
-        display:block;
-    }
-    a {
-        float:left;
-        display:block;
-    }
+  li {
+    float:left;
+    display:block;
+  }
+  a {
+    float:left;
+    display:block;
+  }
 
-    li:last-child a {
-        border-right:none;
-    }
+  li:last-child a {
+    border-right:none;
+  }
 }
 
 #service-nav {
-    li:first-child a {
-        padding-left:0;
-    }
-    a {
-        border-right:solid 1px $dark_grey2;
-    }
+  li:first-child a {
+    padding-left:0;
+  }
+  a {
+    border-right:solid 1px $dark_grey2;
+  }
 }
 
 
 //
 // Service navigation
 //
-
 #service-nav,
 #lang-nav {
 
-    li {
+  li {
 
-        a {
-            padding:0.5em 1em;
-            color:$light_grey5;
+    a {
+      padding:0.5em 1em;
+      color:$light_grey5;
 
-            &:hover {
-                color:$light_grey3;
-            }
-        }
+      &:hover {
+        color:$light_grey3;
+      }
     }
+  }
 }
 
 
@@ -126,51 +125,50 @@
 //
 // User navigation
 //
-
 #user-nav {
-    position:absolute;
-    top:0;
-    width:950px;
+  position:absolute;
+  top:0;
+  width:950px;
 
-    &.with-mats {
-        position:fixed;
-    }
+  &.with-mats {
+      position:fixed;
+  }
 }
 #user-nav-inner {
-    position:absolute;
-    right:0;
-    z-index: 10;
+  position:absolute;
+  right:0;
+  z-index: 10;
 
-    a {
-        line-height:300%;
-        padding:0 1em;
-        border-right:solid 1px lighten($dark_grey3, 5%);
-        color: lighten($btn_blue, 10%);
-        text-shadow:0 -1px rgba(black,.3);
-        background: $dark_grey3;
-    }
+  a {
+    line-height:300%;
+    padding:0 1em;
+    border-right:solid 1px lighten($dark_grey3, 5%);
+    color: lighten($btn_blue, 10%);
+    text-shadow:0 -1px rgba(black,.3);
+    background: $dark_grey3;
+  }
 
-    li:first-child a {
-        @include border-bottom-left-radius(5px);
-    }
-    li:last-child a {
-        @include border-bottom-right-radius(5px);
-        border-right:none;
-    }
+  li:first-child a {
+    @include border-bottom-left-radius(5px);
+  }
+  li:last-child a {
+    @include border-bottom-right-radius(5px);
+    border-right:none;
+  }
 
-    .materials-button {
+  .materials-button {
 
-        .mats {
-            float:left;
-            margin-right:0.5em;
-            font-size:1.5em; // 18px
-            font-weight:bold;
-        }
+    .mats {
+      float:left;
+      margin-right:0.5em;
+      font-size:1.5em; // 18px
+      font-weight:bold;
     }
+  }
 
-    .login-button {
-        font-weight:bold;
-    }
+  .login-button {
+    font-weight:bold;
+  }
 }
 
 
@@ -181,66 +179,54 @@
 
 
 //
-// Page actions
+// Header actions
 //
-
-#header-actions {
-    position:absolute;
-    right:0;
-    top:30px;
-
-    // li {
-    //     margin-left:5px;
-    // }
-
-    // a {
-    //     @include border-radius(3px);
-    //     line-height:30px;
-    //     background: $dark_grey3;
-    //     color:$white;
-    // }
+.region-header-actions {
+  position:absolute;
+  right:0;
+  top:30px;
 }
+.header-action {
+  float:left;
+  white-space:nowrap;
+  background:$dark_grey3;
+  line-height:30px;
+  padding:0 10px;
+  margin-left:5px;
+  @include border-radius(3px);
 
-// Spørg biblioteksvagt
-.page-action-sporg-vagt {
-    // padding:0 10px 0 0;
-    // font-weight:bold;
-
-    // img {
-    //     float:left;
-    //     margin-right:10px;
-    //     position:relative;
-    //     top:2px;
-    //     left:2px;
-    //     @include border-radius(3px);
-    // }
+  a {
+    color:$white;
+  }
 }
-// Find bibliotek
-.page-action-find-bib {
+.header-action-helpdesk {
+  padding-left:2px;
 
-    // @include box-sizing(border-box);
+  img {
+    float:left;
+    position:relative;
+    top:2px;
+    width:26px;
+    height:26px;
+    margin-right:10px;
+    @include border-radius(3px);
+  }
+}
+.header-action-vejviser {
 
-    // padding:0 10px;
-    // position:relative;
+  form {
+    width:300px;
 
-    // form {
-    //     position:absolute;
-    //     top:0;
-    //     left:0;
-    //     width:300px;
-    // }
-
-    // input {
-    //     line-height:30px;
-    //     float:left;
-    //     padding:0 10px;
-    // }
-    // input[type=text] {
-    //     width:85%;
-    // }
-    // input[type=submit] {
-    //     width:15%;
-    // }
+    input {
+      float:left;
+    }
+    input[type=text] {
+        width:75%;
+    }
+    input[type=submit] {
+        width:25%;
+    }
+  }
 }
 
 
@@ -262,68 +248,68 @@
 //
 
 #search-form {
-    margin-bottom:10px;
+  margin-bottom:10px;
 
-    input {
-        float:left;
-        height:40px;
-        line-height:40px;
-        margin-bottom:10px;
-    }
-    input[type=text] {
-        width:830px;
-        margin-right: 10px;
-        padding:0 1em;
-        @include rem('font-size', 14px);
-    }
-    input[type=submit] {
-        width:110px;
-        @include rem('font-size', 16px);
-    }
+  input {
+    float:left;
+    height:40px;
+    line-height:40px;
+    margin-bottom:10px;
+  }
+  input[type=text] {
+    width:830px;
+    margin-right: 10px;
+    padding:0 1em;
+    @include rem('font-size', 14px);
+  }
+  input[type=submit] {
+    width:110px;
+    @include rem('font-size', 16px);
+  }
 }
 
 #search-tabs {
-    margin-bottom:15px;
+  margin-bottom:15px;
 
-    a {
-        background: $dark_grey4;
-        @include transition(background-color .5s);
-        margin-right:1px;
-        padding:10px 20px;
-        border-top:solid 1px darken($dark_grey3, 5%);
+  a {
+    background: $dark_grey4;
+    @include transition(background-color .5s);
+    margin-right:1px;
+    padding:10px 20px;
+    border-top:solid 1px darken($dark_grey3, 5%);
 
-        color:$white;
+    color:$white;
 
-        &:hover {
-            background: lighten($dark_grey4, 10%);
-        }
+    &:hover {
+      background: lighten($dark_grey4, 10%);
     }
+  }
 
-    li:first-child a {
-        @include border-radius(5px 0 0 5px);
-    }
-    li:last-child a {
-        @include border-radius(0 5px 5px 0);
-    }
+  li:first-child a {
+    @include border-radius(5px 0 0 5px);
+  }
+  li:last-child a {
+    @include border-radius(0 5px 5px 0);
+  }
 
-    li.active a {
-        background-color:$btn_blue;
-        @include border-radius(3px);
-        text-shadow:0px -1px rgba(black,.2);
+  li.active a {
+    background-color:$btn_blue;
+    @include border-radius(3px);
+    text-shadow:0px -1px rgba(black,.2);
 
-        border:none;
-        padding:12px 21px;
-        position: relative;
-        top:-1px;
-        left:-1px;
-        margin-right:-1px;
-    }
+    border:none;
+    padding:12px 21px;
+    position: relative;
+    top:-1px;
+    left:-1px;
+    margin-right:-1px;
+  }
 }
 
 #search-advanced-panel {
-    height:500px;
-    margin-top:30px;
-    background:$light_grey5;
+  height:500px;
+  margin-top:30px;
+  background:$light_grey5;
 }
 
 
