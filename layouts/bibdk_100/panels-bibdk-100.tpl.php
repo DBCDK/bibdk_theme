@@ -7,10 +7,8 @@
 </div>
 
 <div class="row">
-  <div class="span24">
     <div class="panel panel-middle">
       <?php print $content['middle']; ?>
-    </div>
   </div>
 </div>
 
