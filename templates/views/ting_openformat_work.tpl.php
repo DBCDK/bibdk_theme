@@ -1,29 +1,10 @@
 <!-- cover -->
-  <?php print drupal_render($fields['ting_cover_work']); ?>
+  <?php print $cover ?>
 <!-- cover -->
 
 <div class="wrapper">
   <?php print drupal_render($fields); ?>
-  <div class="bibdk-tabs bibdk-tabs-light">
-    <div class="tabs-nav clearfix">
-      <a href="#" class="active">Find mere om</a>
-      <a href="#">Anmeldelser</a>
-    </div>
-    <!-- tabs-nav -->
-    <div class="tabs-sections">
-      <div class="tabs-section">
-        <div class="padded text clearfix">
-          <ul>
-            <li><a href="#">Se anmeldelse hos Infomedia</a></li>
-            <li><a href="#">Se materialevurdering</a></li>
-            <li><a href="#">Læs brugeranmeldelser og ratings</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- tabs-section -->
-    </div>
-    <!-- tabs-sections -->
-  </div>
+  <?php print $work_tabs ?>
   <!-- tabs -->
 </div>
 <!-- wrapper -->

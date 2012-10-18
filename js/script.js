@@ -1,15 +1,14 @@
 (function ($) {
   Drupal.behaviors.bibdk_theme = {
     attach: function(context, settings) {
-
       // Toggle tables
       $('.table-toggle a').click(function(e) {
         e.preventDefault();
 
         $(this).closest('.table').find('.hideable').toggleClass('visuallyhidden');
         $(this).toggleClass('toggled');
-      });
 
+      });
 
 
       // Toggle dropdown menus
@@ -26,15 +25,11 @@
         }
       });
 
-
-
       // Handle random html clicks
       $('html').click(function() {
         $('.dropdown-menu').addClass('visuallyhidden');
         $('.dropdown-toggle').removeClass('toggled');
       });
-
-
 
       // Add to basket
       $('.link-add-basket').toggle(function(e) {
@@ -50,8 +45,6 @@
         $(this).toggleClass('toggled');
       });
 
-
-
       // Select side of work cover
       $('.work-cover-selector a').once().click(function(e) {
         e.preventDefault();
@@ -63,11 +56,9 @@
         $image.removeClass('visuallyhidden');
       });
 
-
-
       // Disable button and dropdown when toggling details of a work
       $('.work-toggle-element', context).click(function() {
-
+                
         if (!$(this).hasClass('toggled')){
           $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
@@ -76,13 +67,11 @@
           $('html, body').animate({
             scrollTop: $(this).closest('.work').offset().top
           }, 500);
-        }
-        else {
+        }else
+        {
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
-        }
+        }   
       });
-
-
 
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).click(function(e) {
@@ -94,14 +83,12 @@
           $(this).addClass('toggled');
           $(this).closest('.element-section').next().removeClass('visuallyhidden');
 
-        }
-        else {
+        }else{
           $(this).removeClass('toggled');
           $(this).closest('.element-section').next().addClass('visuallyhidden');
         }
+                
       });
-
-
 
       // Make entire widget clickable
       $('.widget').css('cursor', 'pointer');
@@ -118,16 +105,16 @@
         }
       });
 
-
-
       // Control .active class on tabs
       $('.tabs-nav a').click(function(e){
         e.preventDefault();
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        var id = $(this).attr('href');
-        $(id).siblings().addClass('visuallyhidden');
-        $(id).removeClass('visuallyhidden')
+        if(!$(this).hasClass('inactive')){
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+          var id = $(this).attr('href');
+          $(id).siblings().addClass('visuallyhidden');
+          $(id).removeClass('visuallyhidden')
+        }                
       });
 
       $('#search-tabs a').click(function(){
@@ -135,15 +122,11 @@
         $(this).parent().addClass('active');
       });
 
-
-
       // Toggle advanced search options
       $('#search-advanced a').click(function(e) {
         $(this).toggleClass('toggled');
         $(this).parent().next().toggleClass('visuallyhidden');
       });
-
-
 
       //Control zebra-toggle
       $('.zebra-toggle a').once().click(function (e){
@@ -165,39 +148,32 @@
         }
       });
 
-
-
-      // Mark all checkboxes
       $('.markall-button').click(function(e) {
         $(this).children('input[type=checkbox]').click();
       });
 
+      // // Find bib stuff ##fix##
+      // $('.page-action-find-bib').click(function (e) {
 
+      //     e.stopPropagation();
+      //     $clicked = $(this);
 
-      // Find library header action
-      $('.header-action-vejviser a').click(function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-
-        $(this).addClass('visuallyhidden');
-        $(this).closest('.header-action').addClass('toggled');
-        $(this).closest('.header-action').find('form').removeClass('visuallyhidden');
-        $(this).closest('.header-action').find('input[type=text]').focus();
-
-      });
-
-      // $('html').click(function() {
-
-      //   $('.header-action-vejviser').find('a').show();
-      //   $('.header-action-vejviser').find('form').addClass('visuallyhidden');
-      //   $('.header-action-vejviser').css({
-      //     width: "",
-      //   });
+      //     $clicked.animate({
+      //         width: 300,
+      //     }, 300, function() {
+      //         $clicked.find('form').removeClass('visuallyhidden');
+      //         $clicked.next().find('input[type=text]').focus();
+      //     });
       // });
 
+      $('html').click(function() {
 
+        // $('.page-action-find-bib').find('form').addClass('visuallyhidden');
+        // $('.page-action-find-bib').css({
+        //     width: "",
+        // });
+        });
 
-      // Insert comment here!
       $('.subwork-type-navigation a').click(function(e) {
         e.preventDefault();
 
@@ -238,9 +214,8 @@
           top:10
         }
       };
+
       $(".bibdk-popup-link").popupwindow(profiles);
-
-
 
       //Top menu language menu fix
       $('#lang-nav a').each(function(){
@@ -249,9 +224,7 @@
         }
       });
 
-
-
-      // NO CODE AFTER THIS!
+    // NO CODE AFTER THIS!
     }
   };
 })(jQuery);
