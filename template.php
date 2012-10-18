@@ -14,12 +14,15 @@ function format_tags($tags) {
   return $output;
 }
 
-function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter) {
+/*
+function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter, $form_id) {
+  dpm($form_id);
   $form['search_block_form']['#attributes']['class'] = array('clearfix');
   $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
   $form['actions']['#weight'] = -10;
   $form['search_block_form']['#weight'] = - 12;
 }
+ * */
 
 function bibdk_theme_page_alter(&$page){
   //removing search form rendered in content region by search module
@@ -38,6 +41,24 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 }
 
 //Below function should be placed in the correct module - but where? Ding_user.pages.inc?
+
+function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'search_block_form':
+      _alter_search_block_form(&$form, &$form_state, $form_id);
+      break;
+    case "user_login":
+      break;
+  }
+}
+
+function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#attributes']['class'] = array('clearfix');
+  $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
+  $form['actions']['#weight'] = -10;
+  $form['search_block_form']['#weight'] = - 12;
+}
+/*
 function bibdk_theme_form_user_login_alter(&$form) {
   $form['name']['#description'] = '';
   $form['pass']['#description'] = '';
@@ -54,6 +75,8 @@ function bibdk_theme_form_user_login_alter(&$form) {
     '#href' => 'user/new_user',
   );
 }
+ *
+ */
 
 function bibdk_theme_preprocess_page(&$variables) {
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
