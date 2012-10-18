@@ -15,16 +15,14 @@ function format_tags($tags) {
 }
 
 /*
-function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter, $form_id) {
-  dpm($form_id);
-  $form['search_block_form']['#attributes']['class'] = array('clearfix');
-  $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
-  $form['actions']['#weight'] = -10;
-  $form['search_block_form']['#weight'] = - 12;
-}
- * */
+  function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter, $form_id) {
+  dsm($form_id);
 
-function bibdk_theme_page_alter(&$page){
+  }
+ * 
+ */
+
+function bibdk_theme_page_alter(&$page) {
   //removing search form rendered in content region by search module
   // Logged in
   if (!empty($page['content']['system_main']['content']['search_form'])) {
@@ -40,14 +38,13 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
-//Below function should be placed in the correct module - but where? Ding_user.pages.inc?
-
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'search_block_form':
       _alter_search_block_form(&$form, &$form_state, $form_id);
       break;
-    case "user_login":
+    case 'user_login':
+      _alter_user_login_form(&$form, &$form_state, $form_id);
       break;
   }
 }
@@ -58,25 +55,11 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['actions']['#weight'] = -10;
   $form['search_block_form']['#weight'] = - 12;
 }
-/*
-function bibdk_theme_form_user_login_alter(&$form) {
-  $form['name']['#description'] = '';
-  $form['pass']['#description'] = '';
-  
-  $form['password_link'] = array(
-    '#type' => 'link',
-    '#title' => t('request_new_password'),
-    '#href' => 'user/password',
-  );
-  
-  $form['new_user_link'] = array(
-    '#type' => 'link',
-    '#title' => t('create_new_user'),
-    '#href' => 'user/new_user',
-  );
+
+function _alter_user_login_form(&$form, &$form_state, $form_id) {
+  unset($form['inputs']['name']['#description']);
+  unset($form['inputs']['pass']['#description']);
 }
- *
- */
 
 function bibdk_theme_preprocess_page(&$variables) {
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
@@ -85,7 +68,7 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
 }
 
-function bibdk_theme_preprocess_bibdk_reservation_button(&$variables){
+function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   $variables['link_attributes']['class'][] = 'btn';
   $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
   return $variables;
@@ -116,9 +99,9 @@ function bibdk_theme_pager_link($variables) {
     static $titles = NULL;
     if (!isset($titles)) {
       $titles = array(
-        t('<< first') => t('Go to first page'), 
-        t('< previous') => t('Go to previous page'), 
-        t('next >') => t('Go to next page'), 
+        t('<< first') => t('Go to first page'),
+        t('< previous') => t('Go to previous page'),
+        t('next >') => t('Go to next page'),
         t('last >>') => t('Go to last page'),
       );
     }
@@ -136,20 +119,19 @@ function bibdk_theme_pager_link($variables) {
   //   possible to use l() here.
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
-  if ( in_array('works-pager-back',$attributes['class']) ) {
+  if (in_array('works-pager-back', $attributes['class'])) {
     return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">&or;</span></a>';
   }
 
-  if ( in_array('works-pager-forward',$attributes['class']) ) {
+  if (in_array('works-pager-forward', $attributes['class'])) {
     return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">&or;</span></a>';
   }
 
-  if ( in_array('works-pager-select',$attributes['class']) ) {
+  if (in_array('works-pager-select', $attributes['class'])) {
     return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">&or;</span></a>';
   }
 
   return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';
-
 }
 
 function bibdk_theme_pager_first($variables) {
@@ -157,9 +139,9 @@ function bibdk_theme_pager_first($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control','works-pager-select','dropdown-toggle'),
+    'class' => array('works-control', 'works-pager-select', 'dropdown-toggle'),
   );
-  if ( isset($parameters['previous']) ) {
+  if (isset($parameters['previous'])) {
     $attributes = $parameters['previous'];
     unset($parameters['previous']);
   }
@@ -175,7 +157,7 @@ function bibdk_theme_pager_first($variables) {
   return $output;
 }
 
-function  bibdk_theme_pager_previous($variables) {
+function bibdk_theme_pager_previous($variables) {
   $text = $variables['text'];
   $element = $variables['element'];
   $interval = $variables['interval'];
@@ -183,10 +165,10 @@ function  bibdk_theme_pager_previous($variables) {
   global $pager_page_array;
   $output = '';
   $attributes = array(
-    'class' => array('works-control','works-pager-back'),
+    'class' => array('works-control', 'works-pager-back'),
   );
   $parameters['previous'] = array(
-    'class' => array('works-control','works-pager-back'),
+    'class' => array('works-control', 'works-pager-back'),
   );
 
   // If we are anywhere but the first page
@@ -213,7 +195,7 @@ function bibdk_theme_pager_next($variables) {
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control','works-pager-forward'),
+    'class' => array('works-control', 'works-pager-forward'),
   );
 
   global $pager_page_array, $pager_total;
@@ -240,7 +222,7 @@ function bibdk_theme_pager_last($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control','works-pager-back'),
+    'class' => array('works-control', 'works-pager-back'),
   );
 
   global $pager_page_array, $pager_total;
