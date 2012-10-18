@@ -10,6 +10,29 @@
 
       });
 
+      // Find library header action
+      $('.header-action-vejviser a').click(function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        $(this).addClass('visuallyhidden');
+        $(this).closest('.header-action').addClass('toggled');
+        $(this).closest('.header-action').find('form').removeClass('visuallyhidden');
+        $(this).closest('.header-action').find('input[type=text]').focus();
+
+      });
+
+      // $('html').click(function() {
+
+      //   $('.header-action-vejviser').find('a').show();
+      //   $('.header-action-vejviser').find('form').addClass('visuallyhidden');
+      //   $('.header-action-vejviser').css({
+      //     width: "",
+      //   });
+      // });
+
+
+
 
       // Toggle dropdown menus
       $('.dropdown-toggle').once().click(function(e) {
@@ -58,7 +81,7 @@
 
       // Disable button and dropdown when toggling details of a work
       $('.work-toggle-element', context).click(function() {
-                
+
         if (!$(this).hasClass('toggled')){
           $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
@@ -70,7 +93,7 @@
         }else
         {
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
-        }   
+        }
       });
 
       // Toggle visibility of "next section of an element"
@@ -87,7 +110,7 @@
           $(this).removeClass('toggled');
           $(this).closest('.element-section').next().addClass('visuallyhidden');
         }
-                
+
       });
 
       // Make entire widget clickable
@@ -114,7 +137,7 @@
           var id = $(this).attr('href');
           $(id).siblings().addClass('visuallyhidden');
           $(id).removeClass('visuallyhidden')
-        }                
+        }
       });
 
       $('#search-tabs a').click(function(){
@@ -152,27 +175,6 @@
         $(this).children('input[type=checkbox]').click();
       });
 
-      // // Find bib stuff ##fix##
-      // $('.page-action-find-bib').click(function (e) {
-
-      //     e.stopPropagation();
-      //     $clicked = $(this);
-
-      //     $clicked.animate({
-      //         width: 300,
-      //     }, 300, function() {
-      //         $clicked.find('form').removeClass('visuallyhidden');
-      //         $clicked.next().find('input[type=text]').focus();
-      //     });
-      // });
-
-      $('html').click(function() {
-
-        // $('.page-action-find-bib').find('form').addClass('visuallyhidden');
-        // $('.page-action-find-bib').css({
-        //     width: "",
-        // });
-        });
 
       $('.subwork-type-navigation a').click(function(e) {
         e.preventDefault();
