@@ -14,30 +14,9 @@ function format_tags($tags) {
   return $output;
 }
 
-/*
-  function bibdk_theme_form_search_block_form_alter(&$form, &$form_alter, $form_id) {
-  dsm($form_id);
+/* HOOK_FORM_ALTER BEGIN */
 
-  }
- * 
- */
-
-function bibdk_theme_page_alter(&$page) {
-  //removing search form rendered in content region by search module
-  // Logged in
-  if (!empty($page['content']['system_main']['content']['search_form'])) {
-    unset($page['content']['system_main']['content']['search_form']);
-  }
-  // Not logged in
-  if (!empty($page['content']['system_main']['search_form'])) {
-    unset($page['content']['system_main']['search_form']);
-  }
-}
-
-function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
-  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-}
-
+//One hook_form_alter() to rule them all:
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'search_block_form':
@@ -59,6 +38,24 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 function _alter_user_login_form(&$form, &$form_state, $form_id) {
   unset($form['inputs']['name']['#description']);
   unset($form['inputs']['pass']['#description']);
+}
+
+/* HOOK_FORM_ALTER END */
+
+function bibdk_theme_page_alter(&$page) {
+  //removing search form rendered in content region by search module
+  // Logged in
+  if (!empty($page['content']['system_main']['content']['search_form'])) {
+    unset($page['content']['system_main']['content']['search_form']);
+  }
+  // Not logged in
+  if (!empty($page['content']['system_main']['search_form'])) {
+    unset($page['content']['system_main']['search_form']);
+  }
+}
+
+function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
+  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
 
 function bibdk_theme_preprocess_page(&$variables) {
