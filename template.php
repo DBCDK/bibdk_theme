@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * 
+ * implements template_preprocess_region
+ */
+function bibdk_theme_preprocess_region(&$variables) {
+  $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
+   $variables['theme_hook_suggestions'] = $s;
+}
 /**
  * Implements Hook theme
  */
