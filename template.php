@@ -7,10 +7,10 @@
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'search_block_form':
-      _alter_search_block_form(&$form, &$form_state, $form_id);
+      _alter_search_block_form($form, $form_state, $form_id);
       break;
     case 'user_login':
-      _alter_user_login_form(&$form, &$form_state, $form_id);
+      _alter_user_login_form($form, $form_state, $form_id);
       break;
   }
 }
