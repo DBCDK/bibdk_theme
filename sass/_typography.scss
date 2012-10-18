@@ -1,21 +1,17 @@
 //
-// Import: Typography 
+// Import: Typography
 //
 
-html {
-	font-size: 62.5%;
-}
 body,
 button,
 input,
 select,
 textarea {
-	@include rem('font-size', 12px);
+	font-size: 12px;
   line-height: 1.5;
 	font-family: 'Arial';
   color: $dark_grey2;
 }
-
 a {
 	text-decoration: none;
   color:$btn_blue;
@@ -39,7 +35,7 @@ textarea {
 input,
 button,
 textarea {
-  @include reset-input; 
+  @include reset-input;
 }
 input[type=text] {
 	@include border-radius(4px);
@@ -47,8 +43,8 @@ input[type=text] {
 }
 input[type=checkbox],
 input[type=radio] {
-	@include rem('font-size', 16px);
-	@include rem('margin-right', 8px);
+	font-size: 1.333em;
+	margin-right: 8px;
 	cursor:pointer;
 }
 img {
@@ -79,12 +75,12 @@ address {
 }
 
 
+
 .text {
 
 	p {
 		margin:0 0 0.8333em 0;
 	}
-
 	li {
 		list-style:none;
 		background:url(../img/list-style-image.gif) no-repeat 0% center;
@@ -92,8 +88,6 @@ address {
 		line-height:180%;
 	}
 }
-
-
 .text-white {
 	color:$white;
 }
@@ -104,7 +98,7 @@ address {
 	color:$light_grey5;
 }
 .text-small {
-	font-size:11px; // 11px;
+	font-size:0.916667; // 11px;
 }
 
 
@@ -113,14 +107,13 @@ address {
 
 	table {
 		line-height:180%;
-		font-size:12px;
 	}
 	th {
 		padding-right:40px;
 		text-align:left;
 		color:$light_grey5;
 		font-weight:normal;
-                width: 180px;
+    width: 180px;
 	}
 	td {
 		color:$dark_grey4;

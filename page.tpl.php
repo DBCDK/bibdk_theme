@@ -1,92 +1,152 @@
-<?php if (!empty($page['topbar']) && !(isset($variables['node']->type) && $variables['node']->type == 'userhelp')): ?>
-  <div id="topbar-wrapper">
-    <div class="container">
-      <div class="row">
-        <nav id="service-nav">
-          <?php print render($page['topbar']); ?>
-        </nav>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-<!-- #topbar-wrapper -->
+<nav id="topbar-wrapper">
 
-
-<div id="header-wrapper">
   <div class="container">
     <div class="row">
       <div class="span24">
 
-        <div id="header-logo">
-          <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
-          </a>
+        <div id="topbar">
+          <?php print render($page['topbar']); ?>
         </div>
-
-        <?php print render($page['header_actions']); ?>
+        <!-- #topbar -->
 
       </div>
     </div>
   </div>
-</div>
+
+</nav>
+<!-- #topbar-wrapper -->
+
+
+
+<header id="header-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="header">
+
+          <div id="header-logo">
+            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+            </a>
+          </div>
+
+          <?php print render($page['header_actions']); ?>
+
+        </div>
+        <!-- #header -->
+
+      </div>
+    </div>
+  </div>
+
+</header>
 <!-- #header-wrapper -->
 
 
-<?php if (!empty($page['search_panel']) && !(isset($variables['node']->type) && $variables['node']->type == 'userhelp')): ?>
-  <div id="search-panel-wrapper">
-    <div class="container">
-      <div class="row">
-        <?php print render($page['search_panel']); ?>
+
+<nav id="search-panel-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="search-panel">
+          <?php print render($page['search_panel']); ?>
+        </div>
+        <!-- #search-panel -->
+
       </div>
     </div>
   </div>
-<?php endif; ?>
+
+</nav>
 <!-- #search-panel-wrapper -->
 
 
-<?php if (!empty($messages)): ?>
-  <div id="messages">
-    <div class="container">
-      <div class="row">
-        <?php print $messages; ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
 
+<section id="messages-wrapper">
 
-<div id="subjects-wrapper">
-
-</div>
-
-
-<!-- PANELS BELOW THIS -->
-
-<?php if (!empty($page['content'])): ?>
-  <div id="page-columns">
-    <div class="container">
-      <div class="row">
-        <?php print render($tabs); ?><!-- ##FIX"" -->
-        <?php print render($page['content']); ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-<!-- #page-columns -->
-
-
-<!-- PANELS ABOVE THIS -->
-
-<div id="footer-wrapper">
   <div class="container">
     <div class="row">
-      <div id="footer-logo">
-        <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+      <div class="span24">
+
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+        <!-- #messages -->
+
       </div>
     </div>
-    <div class="text-white">
-      <?php print render($page['footer']); ?>
+  </div>
+
+</section>
+<!-- #messages-wrapper -->
+
+
+
+<section id="subjects-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="subjects">
+          <?php print render($page['subjects']); ?>
+        </div>
+        <!-- #subjects -->
+
+      </div>
     </div>
   </div>
-</div>
+
+</section>
+<!-- #subjects-wrapper -->
+
+
+
+<section id="columns-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="columns">
+          <?php print render($tabs); ?>
+          <?php print render($page['content']); ?>
+        </div>
+        <!-- #columns -->
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- #columns-wrapper -->
+
+
+
+<footer id="footer-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="footer">
+
+          <div id="footer-logo">
+            <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+          </div>
+
+          <?php print render($page['footer']); ?>
+
+        </div>
+        <!-- #footer -->
+
+      </div>
+    </div>
+  </div>
+
+</footer>
 <!-- #footer-wrapper -->
