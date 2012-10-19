@@ -2,6 +2,7 @@ name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
 screenshot = 'screenshot.png'
 core = 7.x
+version = 7.x-0.1
 
 plugins[panels][layouts] = layouts
 
