@@ -110,15 +110,27 @@
 
   <div class="container">
     <div class="row">
-      <div class="span24">
 
-        <div id="columns">
-          <?php print render($tabs); ?>
-          <?php print render($page['content']); ?>
-        </div>
-        <!-- #columns -->
+      <div id="columns">
+
+        <?php if (!empty($page['sidebar'])): ?>
+          <div class="span5">
+            <?php print render($page['sidebar']); ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if (!empty($page['content'])): ?>
+          <div class="<?php print $content_span; ?>">
+            <?php print render($page['content']); ?>
+          </div>
+        <?php endif; ?>
+
+
+          <?php //print render($tabs); ?>
 
       </div>
+      <!-- #columns -->
+
     </div>
   </div>
 

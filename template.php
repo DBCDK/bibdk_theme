@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * implements template_preprocess_region
  */
 function bibdk_theme_preprocess_region(&$variables) {
@@ -75,15 +75,23 @@ function bibdk_theme_preprocess_page(&$variables) {
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
-  
-  
+
+
   // unset primary tabs for user pages
   $args = arg();
   if( $args[0] == 'user' ) {
     if( isset($variables['tabs']['#primary']) ) {
       unset($variables['tabs']['#primary']);
     }
-  }  
+  }
+
+  if (!empty($variables['page']['sidebar'])) {
+    $variables['content_span'] = "span19";
+  }
+  else {
+    $variables['content_span'] = "span24";
+  }
+
 }
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
@@ -104,7 +112,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables){
   $fields = $variables['fields'];
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
-  
+
   $tabs = array(
     'subjects' => array(
       'title' => t('Subjects'),
@@ -126,7 +134,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables){
     ),
   );
   $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
-  
+
 }
 
 /***** PAGER *******/
