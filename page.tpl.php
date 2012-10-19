@@ -1,20 +1,161 @@
-<?php print render($page['topbar']); ?>
-<?php print render($page['header']); ?>
-<?php print render($page['search_panel']); ?>
-<?php print render($page['content']); ?>
-<div id="page-columns">
-  
-  <div class="container_24">
-  	<div id="region-content">
-	    <?php //render('views', 'new-information'); ?>
-	    <?php //render('views', 'new-books'); ?>
-	    <?php //render('views', 'new-movies'); ?>
-	    <?php //render('views', 'new-music'); ?>
-	    <?php //render('views', 'new-games'); ?>
-  	</div>
+<nav id="topbar-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="topbar">
+          <?php print render($page['topbar']); ?>
+        </div>
+        <!-- #topbar -->
+
+      </div>
+    </div>
   </div>
 
-</div>
-<!-- page columns -->
+</nav>
+<!-- #topbar-wrapper -->
 
-<?php print render($page['footer']); ?>
+
+
+<header id="header-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="header">
+
+          <div id="header-logo">
+            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
+              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+            </a>
+          </div>
+
+          <?php print render($page['header_actions']); ?>
+
+        </div>
+        <!-- #header -->
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- #header-wrapper -->
+
+
+
+<nav id="search-panel-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="search-panel">
+          <?php print render($page['search_panel']); ?>
+        </div>
+        <!-- #search-panel -->
+
+      </div>
+    </div>
+  </div>
+
+</nav>
+<!-- #search-panel-wrapper -->
+
+
+
+<section id="messages-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+        <!-- #messages -->
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- #messages-wrapper -->
+
+
+
+<section id="subjects-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="subjects">
+          <?php print render($page['subjects']); ?>
+        </div>
+        <!-- #subjects -->
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- #subjects-wrapper -->
+
+
+
+<section id="columns-wrapper">
+
+  <div class="container">
+    <div class="row">
+
+      <div id="columns">
+
+        <?php if (!empty($page['sidebar'])): ?>
+          <div class="span5">
+            <?php print render($page['sidebar']); ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if (!empty($page['content'])): ?>
+          <div class="<?php print $content_span; ?>">
+            <?php print render($page['content']); ?>
+          </div>
+        <?php endif; ?>
+
+      </div>
+      <!-- #columns -->
+
+    </div>
+  </div>
+
+</section>
+<!-- #columns-wrapper -->
+
+
+
+<footer id="footer-wrapper">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="footer">
+
+          <div id="footer-logo">
+            <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+          </div>
+
+          <?php print render($page['footer']); ?>
+
+        </div>
+        <!-- #footer -->
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- #footer-wrapper -->

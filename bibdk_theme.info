@@ -1,14 +1,24 @@
-name = Bibliotek.dk theme
+name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
+screenshot = 'screenshot.png'
 core = 7.x
+version = 7.x-0.1
+
+plugins[panels][layouts] = layouts
 
 stylesheets[all][] = css/screen.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.theme.css
+
 scripts[] = js/script.js
+scripts[] = js/jquery.popupwindow.js
 
 regions[topbar] = Top bar
-regions[header] = Header
+regions[header_actions] = Header actions
 regions[search_panel] = Search panel
 
 regions[content] = Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
+
+settings[bibdk_theme_footer_logo] = img/logo_small.png

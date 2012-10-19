@@ -1,18 +1,14 @@
 //
-// Import: Icons for links/buttons 
+// Import: Icons for links/buttons
 //
 
 .icon {
-	display:inline-block;
+	@include inline-block(top);
 	width:15px;
-	background-position:center;
+	background-position:50% 50%;
 	background-repeat:no-repeat;
 
-
-	//hide text
-	text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  color: transparent;
 }
 .icon-left {
 	margin-right:7px;
@@ -27,21 +23,21 @@
 // White icons
 //
 
-// White grey right/left
+// White right/left
 .icon-white-right {
 	background-image:url(../img/icons/white-right.png);
 }
 .toggled .icon-white-right {
 	background-image:url(../img/icons/white-left.png);
 }
-// White grey down/up
+// White down/up
 .icon-white-down {
 	background-image:url(../img/icons/white-down.png);
 }
 .toggled .icon-white-down {
 	background-image:url(../img/icons/white-up.png);
 }
-// White grey plus/minus
+// White plus/minus
 .icon-white-plus {
 	background-image:url(../img/icons/white-plus.png);
 }
@@ -49,6 +45,47 @@
 	background-image:url(../img/icons/white-minus.png);
 }
 
+
+
+//
+// Blue icons
+//
+
+// Blue plus/minus
+.icon-blue-plus {
+  background-image:url(../img/icons/blue-plus.png);
+}
+.toggled .icon-blue-plus {
+  background-image:url(../img/icons/blue-minus.png);
+}
+// Blue right/left
+.icon-blue-right {
+  background-image:url(../img/icons/blue-right.png);
+}
+.toggled .icon-blue-right {
+  background-image:url(../img/icons/blue-left.png);
+}
+// Blue left/right
+.icon-blue-left {
+  background-image:url(../img/icons/blue-left.png);
+}
+.toggled .icon-blue-left {
+  background-image:url(../img/icons/blue-right.png);
+}
+// Blue down/up
+.icon-blue-down {
+  background-image:url(../img/icons/blue-down.png);
+}
+.toggled .icon-blue-down {
+  background-image:url(../img/icons/blue-up.png);
+}
+// Blue add basket/red delete
+.icon-blue-addbasket {
+  background-image:url(../img/icons/blue-addbasket.png);
+}
+.toggled .icon-blue-addbasket {
+  background-image:url(../img/icons/red-x.png);
+}
 
 
 //
@@ -83,48 +120,6 @@
 .toggled .icon-darkgrey-addbasket {
 	background-image:url(../img/icons/red-x.png);
 }
-
-
-//
-// Blue icons
-//
-
-// Blue plus/minus
-.icon-blue-plus {
-	background-image:url(../img/icons/blue-plus.png);
-}
-.toggled .icon-blue-plus {
-	background-image:url(../img/icons/blue-minus.png);
-}
-// Blue right/left
-.icon-blue-right {
-	background-image:url(../img/icons/blue-right.png);
-}
-.toggled .icon-blue-right {
-	background-image:url(../img/icons/blue-left.png);
-}
-// Blue left/right
-.icon-blue-left {
-	background-image:url(../img/icons/blue-left.png);
-}
-.toggled .icon-blue-left {
-	background-image:url(../img/icons/blue-right.png);
-}
-// Blue down/up
-.icon-blue-down {
-	background-image:url(../img/icons/blue-down.png);
-}
-.toggled .icon-blue-down {
-	background-image:url(../img/icons/blue-up.png);
-}
-// Blue add basket/red delete
-.icon-blue-addbasket {
-	background-image:url(../img/icons/blue-addbasket.png);
-}
-.toggled .icon-blue-addbasket {
-	background-image:url(../img/icons/red-x.png);
-}
-
 
 
 
@@ -184,6 +179,10 @@
 	background-image:url(../img/icons/red-x.png);
 }
 
+
+//
+// Green icons
+//
 
 .icon-green-refresh {
 	background-image:url(../img/icons/green-refresh.png);

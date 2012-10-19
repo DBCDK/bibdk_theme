@@ -4,9 +4,11 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/appearance";
 @import "compass/css3/background-clip";
+@import "compass/css3/inline-block";
 
 @import "normalize";
 @import "960_24_col";
+@import "grid";
 @import "functions";
 @import "typography";
 @import "elements/icons";
