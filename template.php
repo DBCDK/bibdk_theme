@@ -1,15 +1,15 @@
 <?php
-/**
- *
- * implements template_preprocess_region
- */
-function bibdk_theme_preprocess_region(&$variables) {
-  $arg = arg();
-  if( $arg[0] == 'user' ) {
-  $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
-   $variables['theme_hook_suggestions'] = $s;
-  }
-}
+
+// /**
+//  * Implements template_preprocess_region
+//  */
+// function bibdk_theme_preprocess_region(&$variables) {
+//   $arg = arg();
+//   if( $arg[0] == 'user' ) {
+//   $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
+//    $variables['theme_hook_suggestions'] = $s;
+//   }
+// }
 
 /**
  * Implements Hook theme
@@ -23,7 +23,7 @@ function bibdk_theme_theme(){
       'template'  => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
-    );
+  );
 }
 
 /* HOOK_FORM_ALTER BEGIN */
