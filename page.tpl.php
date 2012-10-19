@@ -125,9 +125,6 @@
           </div>
         <?php endif; ?>
 
-
-          <?php print render($tabs); ?>
-
       </div>
       <!-- #columns -->
 

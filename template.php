@@ -76,15 +76,7 @@ function bibdk_theme_preprocess_page(&$variables) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
 
-
-  // unset primary tabs for user pages
-  $args = arg();
-  if( $args[0] == 'user' ) {
-    if( isset($variables['tabs']['#primary']) ) {
-      unset($variables['tabs']['#primary']);
-    }
-  }
-
+  // Create span# class for the content region
   if (!empty($variables['page']['sidebar'])) {
     $variables['content_span'] = "span19";
   }
