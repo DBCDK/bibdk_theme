@@ -5,7 +5,7 @@
         <div class="primary-actions">
           <div class="dropdown-wrapper">
             <a class="btn btn-blue dropdown-toggle" href="#">
-              Bestil uanset udgave <span class="icon icon-right icon-white-down">▼</span>
+              Bestil uanset udgave <span class="icon icon-right icon-white-down">&nbsp;</span>
             </a>
             <ul class="dropdown-menu visuallyhidden">
               <li><a href="#">Option 1</a></li>
@@ -27,7 +27,7 @@
 
       <div class="toggle-next-section toggle-work">
         <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
-          <span class="icon icon-left icon-blue-down">▼</span><span class="toggle-text"><?php echo t('More info'); ?></span></span><span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
+          <span class="icon icon-left icon-blue-down">&nbsp;</span><span class="toggle-text"><?php echo t('More info'); ?></span></span><span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
         </a>
         <?php print $showinfo; ?>
       </div>
