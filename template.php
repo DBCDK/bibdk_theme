@@ -4,9 +4,13 @@
  * implements template_preprocess_region
  */
 function bibdk_theme_preprocess_region(&$variables) {
+  $arg = arg();
+  if( $arg[0] == 'user' ) {
   $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
    $variables['theme_hook_suggestions'] = $s;
+  }
 }
+
 /**
  * Implements Hook theme
  */
@@ -71,6 +75,15 @@ function bibdk_theme_preprocess_page(&$variables) {
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
+  
+  
+  // unset primary tabs for user pages
+  $args = arg();
+  if( $args[0] == 'user' ) {
+    if( isset($variables['tabs']['#primary']) ) {
+      unset($variables['tabs']['#primary']);
+    }
+  }  
 }
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
