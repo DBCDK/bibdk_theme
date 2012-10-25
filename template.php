@@ -12,15 +12,6 @@ function bibdk_theme_css_alter(&$css) {
 
   unset($css['misc/vertical-tabs.css']);
   unset($css['modules/user/user.css']);
-
-  // unset($css['modules/field/theme/field.css']);
-  // unset($css['modules/node/node.css']);
-  // unset($css['modules/search/search.css']);
-  // unset($css['modules/user/user.css']);
-  // unset($css['profiles/bibdk/modules/contrib/panels/css/panels.css']);
-  // unset($css['profiles/bibdk/modules/contrib/ctools/css/ctools.css']);
-
-  dpm($css);
 }
 
 
