@@ -1,15 +1,30 @@
 <?php
 
-// /**
-//  * Implements template_preprocess_region
-//  */
-// function bibdk_theme_preprocess_region(&$variables) {
-//   $arg = arg();
-//   if( $arg[0] == 'user' ) {
-//   $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
-//    $variables['theme_hook_suggestions'] = $s;
-//   }
-// }
+
+/**
+ * Implements hook_css_alter().
+ */
+function bibdk_theme_css_alter(&$css) {
+  unset($css['modules/system/system.base.css']);
+  unset($css['modules/system/system.messages.css']);
+  unset($css['modules/system/system.theme.css']);
+  unset($css['modules/system/system.menus.css']);
+
+  unset($css['misc/vertical-tabs.css']);
+  unset($css['modules/user/user.css']);
+
+  // unset($css['modules/field/theme/field.css']);
+  // unset($css['modules/node/node.css']);
+  // unset($css['modules/search/search.css']);
+  // unset($css['modules/user/user.css']);
+  // unset($css['profiles/bibdk/modules/contrib/panels/css/panels.css']);
+  // unset($css['profiles/bibdk/modules/contrib/ctools/css/ctools.css']);
+
+  dpm($css);
+}
+
+
+
 
 /**
  * Implements Hook theme
@@ -42,7 +57,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#attributes']['class'] = array('clearfix');
-  $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
+  // $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
   $form['actions']['#weight'] = -10;
   $form['search_block_form']['#weight'] = - 12;
 }

@@ -1,8 +1,12 @@
-//
+// =============================================================================
 // Import: Buttons
-//
+// =============================================================================
 
+
+
+//
 // Generate button skins based on a color
+//
 @mixin btn-skin($color) {
 	@include gradient(lighten($color, 2%), darken($color, 2%));
   &:hover {
@@ -24,7 +28,10 @@
 }
 
 
+
+//
 // Classes
+//
 .btn {
   @include border-radius(3px);
   @include transition(all .1s);
