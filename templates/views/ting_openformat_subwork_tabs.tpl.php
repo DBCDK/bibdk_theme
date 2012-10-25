@@ -2,7 +2,7 @@
   <?php $counter = 0; ?>
   <?php foreach ($variables['subWorks'] as $type => $subWork) : $counter++ ?>
     <a href="#<?php print $type; ?>" class="<?php print ($counter == 1) ? "active" : ""  ?>"><?php print $type; ?></a>
-    <?php foreach ($subWork as $subtype => $manifestation) : $innerCount++; ?>
+    <?php foreach ($subWork as $subtype => $manifestation) : ?>
       <?php $typesarray[$type][] = array($subtype, $manifestation['translation']['subtype']); ?>
     <?php endforeach; ?>
   <?php endforeach; ?>
