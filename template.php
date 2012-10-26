@@ -177,15 +177,15 @@ function bibdk_theme_pager_link($variables) {
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
   if (in_array('works-pager-back', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">' . t('back'). '</span></a>';
   }
 
   if (in_array('works-pager-forward', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">' . t('forward'). '</span></a>';
   }
 
   if (in_array('works-pager-select', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">' . t('select'). '</span></a>';
   }
 
   return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';

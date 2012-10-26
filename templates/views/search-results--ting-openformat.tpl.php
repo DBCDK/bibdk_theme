@@ -5,6 +5,7 @@
  */
 ?>
 <?php if ($search_results): ?>
+<?php print_r('Use search-results--ting-openformat.tpl.php'); ?>
   <section class="works" >
     <div class="works-controls clearfix">
       <div class="works-control-wrapper-left">
