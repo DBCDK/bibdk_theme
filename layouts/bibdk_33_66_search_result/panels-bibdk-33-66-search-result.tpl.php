@@ -17,7 +17,7 @@
       <div class="works-controls clearfix">
         <?php print $content['works_controls']; ?>
       </div>
-      <div class="work element-wrapper">
+      <div>
         <?php print $content['works']; ?>
       </div>
     </section>
