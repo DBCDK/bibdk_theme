@@ -1,0 +1,420 @@
+// =============================================================================
+// Drupal form element
+// =============================================================================
+
+.form-section {
+  padding:20px;
+  border-bottom:solid 1px #ddd;
+}
+.form-wrapper {
+}
+.form-item {
+  margin:0 0 40px;
+
+  &:last-child {
+    margin:0 0 10px;
+  }
+}
+.form-item .form-item {
+  margin:0;
+}
+.form-item .form-type-radio,
+.form-item .form-type-checkbox {
+  margin:0 0 3px;
+}
+
+
+
+// =============================================================================
+// Fieldsets
+// =============================================================================
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.fieldset-wrapper {
+  padding:20px 0 0;
+}
+.fieldset-notitle .fieldset-wrapper {
+  padding:0;
+}
+.vertical-tabs .fieldset-wrapper {
+  padding:20px;
+}
+
+
+
+// =============================================================================
+// Legends
+// =============================================================================
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+}
+
+
+
+// =============================================================================
+// Labels
+// =============================================================================
+
+label {
+  display: block;
+  font-size:14px;
+  margin-bottom:5px;
+  color:$labelColor;
+}
+label.option {
+  display: inline;
+  color:$baseColor;
+}
+.form-type-password-confirm > label {
+  margin-bottom:15px;
+}
+
+
+
+// =============================================================================
+// Descriptions
+// =============================================================================
+
+.form-item .description {
+  margin-top:5px;
+}
+
+
+
+// =============================================================================
+// Radios and checkboxes
+// =============================================================================
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+  cursor:pointer;
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-type-checkbox {
+}
+.form-checkbox {
+}
+.form-type-radios {
+}
+.form-radios {
+}
+.form-radio {
+}
+
+
+
+// =============================================================================
+// Selects
+// =============================================================================
+
+select {
+  @include inline-block();
+  @include box-sizing(border-box);
+
+  border: 1px solid $borderColor;
+  background-color:#fff;
+  min-width: 180px;
+  height: 30px;
+
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #555555;
+
+  &:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+.form-type-select {
+}
+.form-select {
+}
+
+
+
+
+
+// =============================================================================
+// Text fields and text areas
+// =============================================================================
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  @include inline-block();
+  @include box-sizing(border-box);
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+  @include transition(border .2s, box-shadow .2s);
+
+  width:100%;
+  padding: 10px;
+
+  color: #555555;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid $borderColor;
+}
+
+textarea {
+  @include border-radius(3px 3px 0 0);
+  resize: vertical;
+  height: auto;
+  line-height: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  @include border-radius(3px);
+  max-width:30em;
+  height: 30px;
+  line-height: 30px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9; // IE9
+}
+
+.form-type-textfield,
+.form-item-textfield-disabled,
+.form-item-textfield-required,
+.form-type-password,
+.form-type-password-confirm {
+}
+.form-text {
+}
+.form-type-textarea {
+}
+.form-textarea-wrapper {
+}
+.form-textarea {
+}
+
+
+
+
+
+
+// =============================================================================
+// Password with confirm.
+// =============================================================================
+
+input.password-confirm,
+input.password-field {
+  width: 45%;
+}
+input.password-field {
+  margin-bottom: 15px;
+}
+.confirm-parent,
+.password-parent {
+  width: 100%;
+}
+div.password-confirm,
+.password-strength {
+  width: 50%;
+  margin-top:25px;
+}
+.form-item .password-suggestions {
+  @include box-sizing(border-box);
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #B4B4B4;
+}
+
+
+// =============================================================================
+// File upload
+// =============================================================================
+
+input[type="file"] {
+  height: 30px; // In IE7, the height of the select element cannot be changed by height, only font-size
+  *margin-top: 4px; // For IE7, add top margin to align select with labels
+  line-height: 30px;
+}
+input[type="file"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-type-file {
+}
+.form-file {
+}
+
+
+
+
+
+// =============================================================================
+// Submit buttons
+// =============================================================================
+
+.form-actions {
+}
+.form-submit {
+}
+
+
+input[type="submit"] {
+  height:30px;
+  // line-height:30px;
+  @include box-sizing(border-box);
+
+  @include border-radius(3px);
+  @include transition(all .1s);
+  @include inline-block(middle);
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
+
+  border:none;
+  background-color:$btn_blue;
+}
+
+
+
+
+
+
+
+// =============================================================================
+// Disabled fields
+// =============================================================================
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+}
+
+textarea[disabled],
+textarea[readonly],
+input[type="text"][disabled],
+input[type="text"][readonly] {
+  @include box-shadow(none);
+  background-color: #eeeeee;
+  border-color: $borderColor;
+  color: #999999;
+}
+
+
+
+
+
+
+
+
+
+// =============================================================================
+// Misc forms stuff
+// =============================================================================
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid red;
+}
+
+.form-required {
+  color: #f00;
+}
+
+
+
+
+
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+
+
+
+
+
+// =============================================================================
+// Input size
+// =============================================================================
+
+.input-mini {
+  width: 60px;
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  width: 530px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,6 @@
+// =============================================================================
+// Import compass mixins
+// =============================================================================
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
@@ -6,15 +9,54 @@
 @import "compass/css3/background-clip";
 @import "compass/css3/inline-block";
 
+
+
+// =============================================================================
+// Import reset grid and custom mixins i.e.
+// =============================================================================
 @import "normalize";
-@import "960_24_col";
 @import "grid";
-@import "functions";
+@import "colors";
+
+
+
+// =============================================================================
+// Dominate drupal!
+// See template.php (hook_css_alter())
+// =============================================================================
+@import "drupal/system.base";
+@import "drupal/system.menus";
+@import "drupal/system.messages";
+@import "drupal/system.theme";
+@import "drupal/vertical-tabs";
+@import "drupal/user";
+// @import "drupal/node";
+// @import "drupal/search";
+// @import "drupal/ctools";
+// @import "drupal/panels";
+
+
+
+// =============================================================================
+// Import default styling
+// =============================================================================
 @import "typography";
+@import "forms";
+
+
+
+// =============================================================================
+// Import styling for custom elements
+// =============================================================================
 @import "elements/icons";
 @import "elements/buttons";
 @import "elements/basic_elements";
 @import "elements/global_elements";
 @import "elements/specific_elements";
-@import "experimental";
+
+
+
+// =============================================================================
+// Import extra styling which needs to be added last
+// =============================================================================
 @import "extra";

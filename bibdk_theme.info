@@ -7,11 +7,11 @@ version = 7.x-0.1
 plugins[panels][layouts] = layouts
 
 stylesheets[all][] = css/screen.css
-stylesheets[all][] = system.menus.css
-stylesheets[all][] = system.theme.css
-
-scripts[] = js/script.js
+scripts[] = js/modernizr-2.6.2.min.js
+scripts[] = js/selectivizr-min.js
 scripts[] = js/jquery.popupwindow.js
+scripts[] = js/script.js
+
 
 regions[topbar] = Top bar
 regions[header_actions] = Header actions
