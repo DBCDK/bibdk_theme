@@ -113,11 +113,20 @@
 
             });
 
-            // Make entire widget clickable
-            $('.widget').css('cursor', 'pointer');
-            $('.widget').click(function () {
-                window.location = $(this).find(".field-title a").attr("href");
+            // Make entire element clickable
+            // Add .element-clickable to parent
+            // Add .element-target to destination link
+            $('.element-clickable').css('cursor', 'pointer');
+            $('.element-clickable').click(function () {
+              $(this).find(".element-target").trigger('click');
             });
+
+
+            // Make entire widget clickable
+            // $('.widget').css('cursor', 'pointer');
+            // $('.widget').click(function () {
+            //     window.location = $(this).find(".field-title a").attr("href");
+            // });
 
             // Adjust margin-left on widgets with image
             $('.widget-wrapper').each(function () {
@@ -225,7 +234,7 @@
                     $(this).addClass('visuallyhidden');
                 }
             });
-      
+
             // Toggle visibility of "next section of an element"
             $('.toggle-next-section').toggle(function(e) {
                 e.preventDefault();
