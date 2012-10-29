@@ -225,8 +225,22 @@
                     top:10
                 }
             };
-
-            $(".bibdk-popup-link").popupwindow(profiles);
+            
+            
+            $('.bibdk-popup-link').once().click(function(e){
+                e.preventDefault();
+                if($(this).hasClass('orderedonce')){
+                    var test = confirm("You have already ordered this item once. Continue?");
+                    if(test == true){
+                        $(this).popupwindow(profiles);
+                        $(this).trigger('click.hest', profiles);
+                        $(this).unbind('.hest');
+                    }
+                } else {
+                    $(this).popupwindow(profiles);
+                    $(this).trigger('click.hest', profiles);
+                }
+            });
 
             //Top menu language menu fix
             $('#lang-nav a').each(function(){
