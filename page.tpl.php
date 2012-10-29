@@ -117,7 +117,7 @@
           <div class="span5">
             <?php print render($page['sidebar']); ?>
           </div>
-        <?php endif; ?>
+        <?php endif; ?>        
 
         <?php if (!empty($page['content'])): ?>
           <div class="<?php print $content_span; ?>">
