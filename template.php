@@ -75,21 +75,22 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 }
 
 function bibdk_theme_preprocess_page(&$variables) {
+
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
-  
+
   /****** sidebar ******/
-  // only set sidebar on user pages  
+  // only set sidebar on user pages
   if (strpos(current_path(), 'user') !== 0) {
     unset($variables['page']['sidebar']);
   }
 
-  // Create span# class for the content region 
+  // Create span# class for the content region
   if (!empty($variables['page']['sidebar'])) {
     $variables['content_span'] = "span19";
-  }  
+  }
   else {
     $variables['content_span'] = "span24";
   }

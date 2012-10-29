@@ -304,3 +304,43 @@
 .block.block-bibdk-help {
   margin-bottom: 0;
 }
+
+
+
+// =============================================================================
+// Drupal messages
+// =============================================================================
+
+
+#messages {
+
+  .messages {
+    background-position: 10px 10px; // LTR
+    background-repeat: no-repeat;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    padding: 14px 14px 14px 50px; // LTR
+  }
+  .status {
+    background-image: url(../img/messages/message-24-ok.png);
+    background-color: lighten($messagesGreen, 20%);
+  }
+  .warning {
+    background-image: url(../img/messages/message-24-warning.png);
+    background-color: lighten($messagesYellow, 20%);
+  }
+  .error {
+    background-image: url(../img/messages/message-24-error.png);
+    background-color: lighten($messagesRed, 20%);
+  }
+  ul {
+    margin: 0 0 0 1em; // LTR
+    padding: 0;
+    list-style:none
+  }
+}
+
+
+
+
+
