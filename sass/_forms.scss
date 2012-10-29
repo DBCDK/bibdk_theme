@@ -401,6 +401,18 @@ textarea::-webkit-input-placeholder {
   width: 530px;
 }
 
+// =============================================================================
+// a specific form ? user-profile-form
+// =============================================================================
+#user-profile-form input {
+  display:block;
+}
+
+#user-profile-form .actions {
+position:relative;
+top:-4em;
+}
+
 
 
 
