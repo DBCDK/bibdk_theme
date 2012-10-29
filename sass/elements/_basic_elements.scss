@@ -140,11 +140,21 @@
       }
     }
   }
-  .tabs-sub-nav {
-    @include inline-block();
-    padding:10px;
-    border:solid 1px $light_grey3;
-    @include border-radius(10px);
+  .tabs-nav-sub {
+    margin:10px 20px;
+
+    a {
+      color:$dark_grey4;
+      @include inline-block();
+      @include border-radius(10px);
+      padding:5px 10px;
+      border:solid 1px $light_grey3;
+
+      &.active {
+        font-weight:bold;
+        border-color:darken($light_grey3, 10%);
+      }
+    }
   }
 }
 

@@ -11,12 +11,12 @@
   <?php endforeach; ?>
 </div>
 
-<div class="tabs-nav clearfix">
+<div class="tabs-nav-sub clearfix">
   <?php $counter = 0; ?>
   <?php foreach ($typesarray as $type => $subtypes) : $counter++ ?>
     <div id="<?php print $type ?>" class="<?php print ($counter != 1) ? "visuallyhidden" : ""  ?>">
       <?php foreach ($subtypes as $subtype) : ?>
-        <a href="#<?php print $subtype[0]; ?>" class="tabs-sub-nav" ><?php print $subtype[1]; ?> (<?php print $subtype[2]; ?>)</a>
+        <a href="#<?php print $subtype[0]; ?>"><?php print $subtype[1]; ?> (<?php print $subtype[2]; ?>)</a>
       <?php endforeach; ?>
     </div>
   <?php endforeach; ?>
