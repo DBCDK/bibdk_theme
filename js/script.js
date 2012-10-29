@@ -18,7 +18,7 @@
                 $(this).addClass('visuallyhidden');
                 $(this).closest('.header-action').addClass('toggled');
                 $(this).closest('.header-action').find('form').removeClass('visuallyhidden');
-                $(this).closest('.header-action').find('input[type=text]').focus();
+                // $(this).closest('.header-action').find('input[type=text]').focus();
 
             });
 
@@ -31,6 +31,29 @@
             //   });
             // });
 
+
+
+            // Add placeholder support in older browsers
+            $('[placeholder]').focus(function() {
+              var input = $(this);
+              if (input.val() == input.attr('placeholder')) {
+                input.val('');
+                input.removeClass('placeholder');
+              }
+            }).blur(function() {
+              var input = $(this);
+              if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                input.addClass('placeholder');
+                input.val(input.attr('placeholder'));
+              }
+            }).blur().parents('form').submit(function() {
+              $(this).find('[placeholder]').each(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                  input.val('');
+                }
+              })
+            });
 
 
 
