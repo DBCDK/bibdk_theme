@@ -15,8 +15,6 @@ function bibdk_theme_css_alter(&$css) {
 }
 
 
-
-
 /**
  * Implements Hook theme
  */
@@ -81,11 +79,17 @@ function bibdk_theme_preprocess_page(&$variables) {
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
+  
+  /****** sidebar ******/
+  // only set sidebar on user pages  
+  if (strpos(current_path(), 'user') !== 0) {
+    unset($variables['page']['sidebar']);
+  }
 
-  // Create span# class for the content region
+  // Create span# class for the content region 
   if (!empty($variables['page']['sidebar'])) {
     $variables['content_span'] = "span19";
-  }
+  }  
   else {
     $variables['content_span'] = "span24";
   }
@@ -352,3 +356,4 @@ function bibdk_theme_item_list($variables) {
   }
   return $output;
 }
+
