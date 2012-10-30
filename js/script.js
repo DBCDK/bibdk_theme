@@ -161,7 +161,7 @@
             });
 
             // Control .active class on tabs
-            $('.tabs-nav a').click(function(e){
+            $('.tabs-nav a, .tabs-nav-sub a').click(function(e){
                 e.preventDefault();
                 if(!$(this).hasClass('inactive')){
                     $(this).siblings().removeClass('active');
@@ -171,6 +171,7 @@
                     $(id).removeClass('visuallyhidden')
                 }
             });
+
 
             $('#search-tabs a').click(function(){
                 $(this).parent().siblings().removeClass('active');
@@ -248,8 +249,8 @@
                     top:10
                 }
             };
-            
-            
+
+
             $('.bibdk-popup-link').once().click(function(e){
                 e.preventDefault();
                 if($(this).hasClass('orderedonce')){
@@ -276,12 +277,10 @@
             $('.toggle-next-section').toggle(function(e) {
                 e.preventDefault();
                 $(this).addClass('toggled');
-                //$(this).html($(this).html().replace('Mere', 'Mindre'));
                 $(this).closest('.element-section').next().removeClass('visuallyhidden');
             }, function(e) {
                 e.preventDefault();
                 $(this).removeClass('toggled');
-                //$(this).html($(this).html().replace('Mindre', 'Mere'));
                 $(this).closest('.element-section').next().addClass('visuallyhidden');
             });
 
