@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Implements hook_css_alter().
  */
@@ -13,7 +12,6 @@ function bibdk_theme_css_alter(&$css) {
   unset($css['misc/vertical-tabs.css']);
   unset($css['modules/user/user.css']);
 }
-
 
 /**
  * Implements Hook theme
@@ -52,6 +50,10 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 }
 
 function _alter_user_login_form(&$form, &$form_state, $form_id) {
+  $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
+  $form['#suffix'] = '</div></div>';
+  $form['#attributes'] = array('class' => array('form-section'));
+
   unset($form['inputs']['name']['#description']);
   unset($form['inputs']['pass']['#description']);
 }
@@ -75,17 +77,12 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 }
 
 function bibdk_theme_preprocess_page(&$variables) {
-
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
 
-  /****** sidebar ******/
-  // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
-    unset($variables['page']['sidebar']);
-  }
+  _bibdk_theme_create_user_sidebar($variables);
 
   // Create span# class for the content region
   if (!empty($variables['page']['sidebar'])) {
@@ -93,6 +90,20 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
   else {
     $variables['content_span'] = "span24";
+  }
+}
+
+function _bibdk_theme_create_user_sidebar(&$variables) {
+  /*   * **** SIDEBAR ***** */
+  // only set sidebar on user pages
+  if (strpos(current_path(), 'user') !== 0) {
+    unset($variables['page']['sidebar']);
+  }
+  else {
+    global $user;
+    if (!$user->uid && isset($variables['tabs']['#primary'])) {
+      $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
+    }
   }
 }
 
@@ -188,15 +199,15 @@ function bibdk_theme_pager_link($variables) {
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
   if (in_array('works-pager-back', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">' . t('back'). '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">' . t('back') . '</span></a>';
   }
 
   if (in_array('works-pager-forward', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">' . t('forward'). '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">' . t('forward') . '</span></a>';
   }
 
   if (in_array('works-pager-select', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">' . t('select'). '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">' . t('select') . '</span></a>';
   }
 
   return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';
