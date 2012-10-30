@@ -25,7 +25,7 @@
         </hgroup>
       </div>
 
-      <div class="toggle-next-section toggle-work">
+      <div class="toggle-work">
         <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
           <span class="icon icon-left icon-blue-down">&nbsp;</span><span class="toggle-text"><?php echo t('More info'); ?></span></span><span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
         </a>
