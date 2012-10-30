@@ -1,4 +1,4 @@
-<nav id="topbar-wrapper">
+<nav id="topbar-wrapper" role="navigation">
 
   <div class="container">
     <div class="row">
@@ -46,7 +46,7 @@
 
 
 
-<nav id="search-panel-wrapper">
+<nav id="search-panel-wrapper" role="search">
 
   <div class="container">
     <div class="row">
@@ -66,7 +66,7 @@
 
 
 
-<section id="messages-wrapper">
+<section id="messages-wrapper" role="alert">
 
   <div class="container">
     <div class="row">
@@ -117,7 +117,7 @@
           <div class="span5">
             <?php print render($page['sidebar']); ?>
           </div>
-        <?php endif; ?>        
+        <?php endif; ?>
 
         <?php if (!empty($page['content'])): ?>
           <div class="<?php print $content_span; ?>">
