@@ -285,6 +285,21 @@
             });
 
 
+
+            // Toggle sub menus in help overlay menu
+            $('.pane-bibdk-help-bibdk-help-popup-menu ul ul').hide();
+            $('.pane-bibdk-help-bibdk-help-popup-menu a').click(function(e) {
+
+              if ($(this).parent().hasClass('expanded')) {
+                e.preventDefault();
+                $(this).next().toggle();
+              }
+            });
+
+
+
+
+
         // NO CODE AFTER THIS!
         }
     };
