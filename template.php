@@ -32,6 +32,7 @@ function bibdk_theme_theme() {
 
 //One hook_form_alter() to rule them all:
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
+  
   switch ($form_id) {
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -42,8 +43,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'user_profile_form':
       _alter_user_profile_form($form, $form_state, $form_id);
       break;
-    
-  }
+   }
 }
 
 function _alter_user_profile_form(&$form, &$form_state, $form_id) {
@@ -90,9 +90,6 @@ function bibdk_theme_preprocess_page(&$variables) {
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
   }
-  
-  dpm($variables);
-  
 
   _bibdk_theme_create_user_sidebar($variables);
 
