@@ -7,7 +7,9 @@
       <?php $typesarray[$type][] = array($subtype, $manifestation['translation']['subtype'], $subMaterialCounter); ?>
       <?php $materialCounter += $subMaterialCounter; ?>
     <?php endforeach; ?>
-    <a href="#<?php print $type; ?>" class="<?php print ($counter == 1) ? "active" : ""  ?>"><?php print $type; ?> (<?php print $materialCounter; ?>)</a>
+    <?php if ($type) : //if statement should be removed when openFormat is in production. If-statement temporarily included to avoid printing "polluted" data from OpenFormat?> 
+      <a href="#<?php print $type; ?>" class="<?php print ($counter == 1) ? "active" : ""  ?>"><?php print $type; ?> (<?php print $materialCounter; ?>)</a>
+    <?php endif; ?>
   <?php endforeach; ?>
 </div>
 
