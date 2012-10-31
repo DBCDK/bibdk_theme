@@ -93,6 +93,11 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
 }
 
+/** \brief set sidebar block for user pages
+ *
+ * @global type $user
+ * @param type $variables 
+ */
 function _bibdk_theme_create_user_sidebar(&$variables) {
   /*   * **** SIDEBAR ***** */
   // only set sidebar on user pages
@@ -103,6 +108,11 @@ function _bibdk_theme_create_user_sidebar(&$variables) {
     global $user;
     if (!$user->uid && isset($variables['tabs']['#primary'])) {
       $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
+    }
+    else{
+      if( isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] ) ) {
+        unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
+      }
     }
   }
 }
