@@ -16,7 +16,7 @@
 </nav>
 <!-- #topbar-wrapper -->
 
-
+<?php print $title; ?>
 
 <header id="header-wrapper">
 
