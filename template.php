@@ -131,6 +131,11 @@ function bibdk_theme_preprocess_page(&$variables) {
   else {
     $variables['content_span'] = "span24";
   }
+  
+   if( arg(0) == 'reservation' ) {
+    $variables['theme_hook_suggestions'] = array('page__overlay');
+   }
+
 }
 
 /** \brief set sidebar block for user pages
@@ -162,12 +167,6 @@ function bibdk_theme_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'lift-columns';
 
   }
-}
-
-function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
-  $variables['link_attributes']['class'][] = 'btn';
-  $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
-  return $variables;
 }
 
 function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
