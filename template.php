@@ -286,9 +286,12 @@ function bibdk_theme_pager_first($variables) {
   $output = '';
 
   // If we are anywhere but the first page
-  // if ($pager_page_array[$element] > 0) {
+  if ($pager_page_array[$element] > 0) {
     $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
-  // }
+  } else {
+    $attributes['class'][] = 'disabled';
+    $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+  }
 
   return $output;
 }
