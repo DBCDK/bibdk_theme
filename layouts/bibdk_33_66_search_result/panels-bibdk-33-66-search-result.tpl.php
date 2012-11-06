@@ -15,10 +15,13 @@
   <div class="span19">
     <section class="works">
       <div class="works-controls clearfix">
-        <?php print $content['works_controls']; ?>
+        <?php print $content['works_controls_top']; ?>
       </div>
       <div>
         <?php print $content['works']; ?>
+      </div>
+      <div class="works-controls clearfix">
+        <?php print $content['works_controls_bottom']; ?>
       </div>
     </section>
   </div>

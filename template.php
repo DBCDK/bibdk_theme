@@ -255,6 +255,7 @@ function bibdk_theme_pager_link($variables) {
   //   possible to use l() here.
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
+
   if (in_array('works-pager-back', $attributes['class'])) {
     return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">' . t('back') . '</span></a>';
   }
@@ -361,7 +362,7 @@ function bibdk_theme_pager_last($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-back'),
+    'class' => array('works-control', 'works-pager-forward'),
   );
 
   global $pager_page_array, $pager_total;
