@@ -321,6 +321,10 @@
     margin-bottom: 10px;
     padding: 14px 14px 14px 50px; // LTR
   }
+  .notice {
+    background-image: url(../img/messages/message-24-info.png);
+    background-color: lighten(#437ed7, 20%);
+  }
   .status {
     background-image: url(../img/messages/message-24-ok.png);
     background-color: lighten($messagesGreen, 20%);
@@ -342,11 +346,38 @@
 
 
 // =============================================================================
-// Overlay pages
+// Help menu
 // =============================================================================
 
+.pane-bibdk-help {
+  padding:20px 20px 0;
+}
+
+.pane-bibdk-help-bibdk-help-popup-menu li a {
+  background-color:$btn_blue;
+  background-repeat:no-repeat;
+  background-position:100%;
+  display:block;
+  padding:10px 20px;
+  margin-bottom:1px;
+  color:#fff;
+  text-shadow:0 -1px rgba(black,0.3);
+}
+.pane-bibdk-help-bibdk-help-popup-menu li.expanded a {
+  // background-image: url(../img/leaf.png);
+}
+.pane-bibdk-help-bibdk-help-popup-menu li li a {
+  background-color:lighten($btn_blue, 5%);
+}
+
+.pane-bibdk-help-bibdk-help-popup-menu li li li a {
+  background-color:lighten($btn_blue, 10%);
+}
 
 
+.pane-bibdk-help-bibdk-help-popup-menu .pane-content > .menu {
+  padding:20px 20px 0;
+}
 
 
 

@@ -14,6 +14,21 @@ function bibdk_theme_css_alter(&$css) {
 }
 
 /**
+ * Implements template_preprocess_block().
+ *
+ * Adds classes for styling.
+ *
+ * Good options are:
+ * - Block name:    $vars['elements']['#block']->bid.
+ * - Module:        $vars['elements']['#block']->module.
+ * - Region:        $vars['elements']['#block']->region.
+ */
+function bibdk_theme_preprocess_block(&$variables) {
+
+}
+
+
+/**
  * Implements Hook theme
  */
 function bibdk_theme_theme() {
@@ -32,7 +47,7 @@ function bibdk_theme_theme() {
 
 //One hook_form_alter() to rule them all:
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-  
+
   switch ($form_id) {
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -42,6 +57,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'user_profile_form':
       _alter_user_profile_form($form, $form_state, $form_id);
+      break;
+    case 'bibdk_help_search_form':
+      _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
    }
 }
@@ -67,7 +85,20 @@ function _alter_user_login_form(&$form, &$form_state, $form_id) {
   unset($form['inputs']['pass']['#description']);
 }
 
+function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
+
+  $form['form_section'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section'),
+    ),
+  );
+  $form['form_section'][] = $form['userhelp'];
+  unset($form['userhelp']);
+}
+
 /* HOOK_FORM_ALTER END */
+
 
 function bibdk_theme_page_alter(&$page) {
   //removing search form rendered in content region by search module
@@ -105,7 +136,7 @@ function bibdk_theme_preprocess_page(&$variables) {
 /** \brief set sidebar block for user pages
  *
  * @global type $user
- * @param type $variables 
+ * @param type $variables
  */
 function _bibdk_theme_create_user_sidebar(&$variables) {
   /*   * **** SIDEBAR ***** */
@@ -129,7 +160,7 @@ function _bibdk_theme_create_user_sidebar(&$variables) {
 function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'user') {
     $variables['classes_array'][] = 'lift-columns';
-       
+
   }
 }
 
@@ -256,6 +287,9 @@ function bibdk_theme_pager_first($variables) {
 
   // If we are anywhere but the first page
   if ($pager_page_array[$element] > 0) {
+    $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+  } else {
+    $attributes['class'][] = 'disabled';
     $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
   }
 

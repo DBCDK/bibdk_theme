@@ -6,15 +6,15 @@
       <h1 class="padded"><?php print $title; ?></h1>
 
 
-    <?php if (!empty($messages)): ?>
-      <div id="messages">
-        <?php print $messages; ?>
-      </div>
-    <?php endif; ?>
+      <?php if (!empty($messages)): ?>
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+      <?php endif; ?>
 
-    <?php print render($page['content']); ?>
+      <?php print render($page['content']); ?>
 
-  </div>
+    </div>
 
   </div>
 

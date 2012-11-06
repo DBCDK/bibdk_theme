@@ -17,15 +17,15 @@ ul.menu {
   text-align: left; // LTR
 }
 ul.menu li {
-  margin: 0 0 0 0.5em; // LTR
+  // margin: 0 0 0 0.5em; // LTR
 }
 ul li.expanded {
-  list-style-image: url(../img/drupal/menu-expanded.png);
-  list-style-type: circle;
+  // list-style-image: url(../img/drupal/menu-expanded.png);
+  // list-style-type: circle;
 }
 ul li.collapsed {
-  list-style-image: url(../img/drupal/menu-collapsed.png); // LTR
-  list-style-type: disc;
+  // list-style-image: url(../img/drupal/menu-collapsed.png); // LTR
+  // list-style-type: disc;
 }
 ul li.leaf {
   // list-style-image: url(../img/drupal/menu-leaf.png);
