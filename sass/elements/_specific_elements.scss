@@ -80,7 +80,7 @@
 //
 
 .library {
-
+  @extend .clearfix;
   border-top:solid 1px $light_grey3;
   background:url(../img/favorite.png) no-repeat 20px 22px;
 
@@ -124,7 +124,7 @@
 //
 
 .block {
-  margin-bottom:30px;
+  // margin-bottom:30px;
 
   .block-title h2 {
     padding-left:46px; // icon width + 10px
