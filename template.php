@@ -65,6 +65,19 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function _alter_user_profile_form(&$form, &$form_state, $form_id) {
+
+  $form['form_section'] = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('form-section'),
+    ),
+  );
+
+  $form['form_section'][] = $form['account'];
+  $form['form_section'][] = $form['actions'];
+  unset($form['account']);
+  unset($form['actions']);
+
   $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
   $form['#suffix'] = '</div></div>';
 }

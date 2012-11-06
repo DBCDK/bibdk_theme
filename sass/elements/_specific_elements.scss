@@ -82,7 +82,7 @@
 .library {
   @extend .clearfix;
   border-top:solid 1px $light_grey3;
-  background:url(../img/favorite.png) no-repeat 20px 22px;
+  // background:url(../img/favorite.png) no-repeat 20px 22px;
 
   hgroup {
     margin-bottom:10px;
@@ -103,7 +103,7 @@
     border:none;
   }
   .element-section {
-    padding-left:45px;
+    // padding-left:45px;
   }
 }
 
