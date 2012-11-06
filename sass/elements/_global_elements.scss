@@ -219,23 +219,21 @@ body.page-overlay {
     margin:0;
   }
 
-
-
-
   form {
     width:300px;
 
     input {
-      float:left;
-      // padding:0 5px;
-      // line-height:30px;
-      // height:30px;
+      line-height:30px;
+      height:30px;
     }
     input[type=text] {
+      float:left;
       width:220px;
-      margin-right:5px;
+      font-size:12px;
+      padding:0 5px;
     }
     input[type=submit] {
+      float:right;
       width:75px;
     }
   }
@@ -251,16 +249,17 @@ body.page-overlay {
 
   input {
     height:40px;
-    // line-height:40px;
+    line-height:40px;
   }
   input[type=text] {
     float:left;
-    max-width:80%;
+    padding:0 10px;
+    width:85%;
     font-size:1.166667em; // 14px
   }
   input[type=submit] {
     float:right;
-    width:19%;
+    width:14%;
     font-size:1.333333em; // 16px
   }
 }

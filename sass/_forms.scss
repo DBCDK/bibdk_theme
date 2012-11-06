@@ -6,10 +6,17 @@
   padding:20px;
   border-bottom:solid 1px #ddd;
 }
+
+.form-section-last {
+  // border-bottom:none;
+}
+
+
+
 .form-wrapper {
 }
 .form-item {
-  margin:0 0 40px;
+  margin:0 0 30px;
 
   &:last-child {
     margin:0 0 10px;
@@ -22,6 +29,12 @@
 .form-item .form-type-checkbox {
   margin:0 0 3px;
 }
+
+.form-section-horizontal {
+}
+
+
+
 
 
 
@@ -129,12 +142,9 @@ select {
   @include inline-block();
   @include box-sizing(border-box);
 
-  border: 1px solid $borderColor;
+  border: 1px solid darken($borderColor, 10%);
   background-color:#fff;
-  min-width: 180px;
-  height: 30px;
-
-  line-height: 30px;
+  min-width: 100px;
   font-size: 14px;
   font-weight: normal;
   color: #555555;
@@ -172,9 +182,8 @@ input[type="password"] {
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
   @include transition(border .2s, box-shadow .2s);
 
-  width:100%;
+  // max-width:100%;
   padding: 10px;
-
   color: #555555;
   font-size: 14px;
   background-color: #fff;
@@ -185,15 +194,16 @@ textarea {
   @include border-radius(3px 3px 0 0);
   resize: vertical;
   height: auto;
-  line-height: 20px;
+  width:100%;
+  padding:10px;
 }
 
 input[type="text"],
 input[type="password"] {
   @include border-radius(3px);
-  max-width:30em;
-  height: 30px;
-  line-height: 30px;
+  max-width:100%;
+  // height: 30px;
+  // line-height: 30px;
 }
 
 textarea:focus,
@@ -281,27 +291,36 @@ input[type="file"]:focus {
 // =============================================================================
 // Submit buttons
 // =============================================================================
+input[type="submit"] {
+  @include box-sizing(border-box);
+  @include border-radius(3px);
+  @include transition(all .1s);
+  @include inline-block();
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
+  border:none;
+  background-color:$btn_blue;
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
+}
+
 
 .form-actions {
+  text-align:right;
+
+  input[type="submit"],
+  a {
+    margin-left:5px;
+    &:first-child {
+      margin-left:0;
+    }
+  }
 }
 .form-submit {
 }
 
 
-input[type="submit"] {
-  height:30px;
-  // line-height:30px;
-  @include box-sizing(border-box);
-
-  @include border-radius(3px);
-  @include transition(all .1s);
-  @include inline-block(middle);
-  color:$white;
-  text-shadow:0px -1px rgba(black,.4);
-
-  border:none;
-  background-color:$btn_blue;
-}
 
 
 
@@ -331,11 +350,6 @@ input[type="text"][readonly] {
   border-color: $borderColor;
   color: #999999;
 }
-
-
-
-
-
 
 
 
@@ -404,19 +418,18 @@ textarea::-webkit-input-placeholder {
   width: 530px;
 }
 
+
+
 // =============================================================================
 // a specific form ? user-profile-form
 // =============================================================================
-#user-profile-form input {
-  display:block;
-}
-
-#user-profile-form .actions {
-position:relative;
-top:-4em;
-}
 
 .order-agency {
 border:5px solid red;
 background-color:red;
+}
+
+.form-item-persistent-login {
+  padding-top:10px;
+  text-align:right;
 }
