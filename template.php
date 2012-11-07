@@ -40,6 +40,7 @@ function bibdk_theme_page_alter(&$page) {
   if (!empty($page['content']['system_main']['search_form'])) {
     unset($page['content']['system_main']['search_form']);
   }
+
 }
 
 /**
@@ -59,6 +60,7 @@ function bibdk_theme_preprocess_html(&$variables) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$variables) {
+
 
   if (arg(0) == 'reservation') {
     $variables['theme_hook_suggestions'][] = 'page__overlay';
@@ -86,6 +88,23 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
 
 }
+
+
+
+/**
+ * Implements template_process_page().
+ */
+function bibdk_theme_process_page(&$variables) {
+
+  if (arg(0) == 'search') {
+    unset($variables['title']);
+  }
+  if (arg(0) == 'node' && arg(1) == '') {
+    unset($variables['title']);
+  }
+
+}
+
 
 
 /**
@@ -442,7 +461,7 @@ function bibdk_theme_item_list($variables) {
 
 
 function bibdk_theme_links__locale_block(&$variables) {
-  // #534 BUG: Sprogvælger på biblioteksvejviser-søgeresultatsiden returnerer en blank side
+  // #534 BUG: Sprogv?lger p? biblioteksvejviser-s?geresultatsiden returnerer en blank side
   foreach ($variables['links'] as $id => $link) {
     $variables['links'][$id]['query'] = drupal_get_query_parameters($_GET);
   }
@@ -463,7 +482,7 @@ function bibdk_theme_links__locale_block(&$variables) {
         // is a string.
         $heading = array(
           'text' => $heading,
-          // Set the default level of the heading. 
+          // Set the default level of the heading.
           'level' => 'h2',
         );
       }
