@@ -69,6 +69,17 @@ function bibdk_theme_preprocess_page(&$variables) {
   else {
     $variables['content_span'] = "span24";
   }
+
+
+
+  if (arg(0) == 'vejviser') {
+    $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+    $variables['page']['content']['#suffix'] = '</div></div>';
+  }
+
+
+
+
 }
 
 
@@ -79,22 +90,19 @@ function bibdk_theme_preprocess_page(&$variables) {
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 
   switch ($form_id) {
-    case 'search_block_form':
-      _alter_search_block_form($form, $form_state, $form_id);
-      break;
     case 'user_login':
       _alter_user_login($form, $form_state, $form_id);
       _add_element_wrapper($form);
       break;
     case 'user_pass':
       _alter_user_login($form, $form_state, $form_id);
-      break;
-    case 'user_profile_form':
-      _alter_user_profile_form($form, $form_state, $form_id);
       _add_element_wrapper($form);
       break;
-    case 'bibdk_help_search_form':
-      _alter_bibdk_help_search_form($form, $form_state, $form_id);
+    case 'user_profile_form':
+      _add_element_wrapper($form);
+      break;
+    case 'search_block_form':
+      _alter_search_block_form($form, $form_state, $form_id);
       break;
     case 'bibdk_vejviser_form':
       _alter_bibdk_vejviser_form($form, $form_state, $form_id);
@@ -107,25 +115,9 @@ function _add_element_wrapper(&$form) {
   $form['#suffix'] = '</div></div>';
 }
 
-function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
-  $form['openagency_submit']['#attributes']['class'] = array('btn-blue');
-}
-
-function _alter_user_profile_form(&$form, &$form_state, $form_id) {
-
-  // $form['form_section'] = array(
-  //   '#type' => 'container',
-  //   '#attributes' => array(
-  //     'class' => array('form-section'),
-  //   ),
-  // );
-  // $form['form_section'][] = $form['account'];
-  // $form['form_section'][] = $form['actions'];
-  // unset($form['account']);
-  // unset($form['actions']);
-
-  // $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
-  // $form['#suffix'] = '</div></div>';
+function _alter_user_login(&$form, &$form_state, $form_id) {
+  unset($form['inputs']['name']['#description']);
+  unset($form['inputs']['pass']['#description']);
 }
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
@@ -135,21 +127,8 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#weight'] = - 12;
 }
 
-function _alter_user_login(&$form, &$form_state, $form_id) {
-  unset($form['inputs']['name']['#description']);
-  unset($form['inputs']['pass']['#description']);
-}
-
-function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
-
-  // $form['form_section'] = array(
-  //   '#type' => 'container',
-  //   '#attributes' => array(
-  //     'class' => array('form-section'),
-  //   ),
-  // );
-  // $form['form_section'][] = $form['userhelp'];
-  // unset($form['userhelp']);
+function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
+  $form['openagency_submit']['#attributes']['class'] = array('btn-blue');
 }
 
 /* HOOK_FORM_ALTER END */
