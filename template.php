@@ -8,28 +8,12 @@ function bibdk_theme_css_alter(&$css) {
   unset($css['modules/system/system.messages.css']);
   unset($css['modules/system/system.theme.css']);
   unset($css['modules/system/system.menus.css']);
-
   unset($css['misc/vertical-tabs.css']);
   unset($css['modules/user/user.css']);
 }
 
 /**
- * Implements template_preprocess_block().
- *
- * Adds classes for styling.
- *
- * Good options are:
- * - Block name:    $vars['elements']['#block']->bid.
- * - Module:        $vars['elements']['#block']->module.
- * - Region:        $vars['elements']['#block']->region.
- */
-function bibdk_theme_preprocess_block(&$variables) {
-
-}
-
-
-/**
- * Implements Hook theme
+ * Implements hook_theme().
  */
 function bibdk_theme_theme() {
   $path = drupal_get_path('theme', 'bibdk_theme') . '/templates/';
@@ -43,76 +27,9 @@ function bibdk_theme_theme() {
   );
 }
 
-/* HOOK_FORM_ALTER BEGIN */
-
-//One hook_form_alter() to rule them all:
-function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-
-  switch ($form_id) {
-    case 'search_block_form':
-      _alter_search_block_form($form, $form_state, $form_id);
-      break;
-    case 'user_login':
-      _alter_user_login_form($form, $form_state, $form_id);
-      break;
-    case 'user_profile_form':
-      _alter_user_profile_form($form, $form_state, $form_id);
-      break;
-    case 'bibdk_help_search_form':
-      _alter_bibdk_help_search_form($form, $form_state, $form_id);
-      break;
-   }
-}
-
-function _alter_user_profile_form(&$form, &$form_state, $form_id) {
-
-  $form['form_section'] = array(
-    '#type' => 'container',
-    '#attributes' => array(
-      'class' => array('form-section'),
-    ),
-  );
-
-  $form['form_section'][] = $form['account'];
-  $form['form_section'][] = $form['actions'];
-  unset($form['account']);
-  unset($form['actions']);
-
-  $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
-  $form['#suffix'] = '</div></div>';
-}
-
-function _alter_search_block_form(&$form, &$form_state, $form_id) {
-  $form['search_block_form']['#attributes']['class'] = array('clearfix');
-  // $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
-  $form['actions']['#weight'] = -10;
-  $form['search_block_form']['#weight'] = - 12;
-}
-
-function _alter_user_login_form(&$form, &$form_state, $form_id) {
-  $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
-  $form['#suffix'] = '</div></div>';
-  $form['#attributes'] = array('class' => array('form-section'));
-
-  unset($form['inputs']['name']['#description']);
-  unset($form['inputs']['pass']['#description']);
-}
-
-function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
-
-  $form['form_section'] = array(
-    '#type' => 'container',
-    '#attributes' => array(
-      'class' => array('form-section'),
-    ),
-  );
-  $form['form_section'][] = $form['userhelp'];
-  unset($form['userhelp']);
-}
-
-/* HOOK_FORM_ALTER END */
-
-
+/**
+ * Implements hook_page_alter().
+ */
 function bibdk_theme_page_alter(&$page) {
   //removing search form rendered in content region by search module
   // Logged in
@@ -125,10 +42,18 @@ function bibdk_theme_page_alter(&$page) {
   }
 }
 
-function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
-  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+/**
+ * Implements template_preprocess_html().
+ */
+function bibdk_theme_preprocess_html(&$variables) {
+  if (arg(0) == 'user') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
 }
 
+/**
+ * Implements template_preprocess_page().
+ */
 function bibdk_theme_preprocess_page(&$variables) {
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
   if (!empty($footer_logo)) {
@@ -145,6 +70,101 @@ function bibdk_theme_preprocess_page(&$variables) {
     $variables['content_span'] = "span24";
   }
 }
+
+
+/**
+ * Implements hook_form_alter().
+ * One hook_form_alter() to rule them all:
+ */
+function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
+
+  switch ($form_id) {
+    case 'search_block_form':
+      _alter_search_block_form($form, $form_state, $form_id);
+      break;
+    case 'user_login':
+      _alter_user_login($form, $form_state, $form_id);
+      _add_element_wrapper($form);
+      break;
+    case 'user_pass':
+      _alter_user_login($form, $form_state, $form_id);
+      break;
+    case 'user_profile_form':
+      _alter_user_profile_form($form, $form_state, $form_id);
+      _add_element_wrapper($form);
+      break;
+    case 'bibdk_help_search_form':
+      _alter_bibdk_help_search_form($form, $form_state, $form_id);
+      break;
+    case 'bibdk_vejviser_form':
+      _alter_bibdk_vejviser_form($form, $form_state, $form_id);
+      break;
+   }
+}
+
+function _add_element_wrapper(&$form) {
+  $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
+  $form['#suffix'] = '</div></div>';
+}
+
+function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
+  $form['openagency_submit']['#attributes']['class'] = array('btn-blue');
+}
+
+function _alter_user_profile_form(&$form, &$form_state, $form_id) {
+
+  // $form['form_section'] = array(
+  //   '#type' => 'container',
+  //   '#attributes' => array(
+  //     'class' => array('form-section'),
+  //   ),
+  // );
+  // $form['form_section'][] = $form['account'];
+  // $form['form_section'][] = $form['actions'];
+  // unset($form['account']);
+  // unset($form['actions']);
+
+  // $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
+  // $form['#suffix'] = '</div></div>';
+}
+
+function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#attributes']['class'] = array('clearfix');
+  $form['actions']['submit']['#attributes']['class'] = array('btn-blue');
+  $form['actions']['#weight'] = -10;
+  $form['search_block_form']['#weight'] = - 12;
+}
+
+function _alter_user_login(&$form, &$form_state, $form_id) {
+  unset($form['inputs']['name']['#description']);
+  unset($form['inputs']['pass']['#description']);
+}
+
+function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
+
+  // $form['form_section'] = array(
+  //   '#type' => 'container',
+  //   '#attributes' => array(
+  //     'class' => array('form-section'),
+  //   ),
+  // );
+  // $form['form_section'][] = $form['userhelp'];
+  // unset($form['userhelp']);
+}
+
+/* HOOK_FORM_ALTER END */
+
+
+
+
+
+
+
+function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
+  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+}
+
+
 
 /** \brief set sidebar block for user pages
  *
@@ -170,12 +190,7 @@ function _bibdk_theme_create_user_sidebar(&$variables) {
   }
 }
 
-function bibdk_theme_preprocess_html(&$variables) {
-  if (arg(0) == 'user') {
-    $variables['classes_array'][] = 'lift-columns';
 
-  }
-}
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   $variables['link_attributes']['class'][] = 'btn';

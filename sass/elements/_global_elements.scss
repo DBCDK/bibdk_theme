@@ -217,6 +217,7 @@ body.page-overlay {
 
   .form-item {
     margin:0;
+    padding:0;
   }
 
   form {
@@ -228,13 +229,13 @@ body.page-overlay {
     }
     input[type=text] {
       float:left;
-      width:220px;
+      width:210px;
       font-size:12px;
       padding:0 5px;
     }
     input[type=submit] {
       float:right;
-      width:75px;
+      width:85px;
     }
   }
 }
@@ -246,6 +247,11 @@ body.page-overlay {
 // =============================================================================
 #search-form {
   margin-bottom:10px;
+
+  .form-item {
+    padding:0;
+    margin:0;
+  }
 
   input {
     height:40px;

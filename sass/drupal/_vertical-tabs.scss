@@ -7,8 +7,8 @@
 // =============================================================================
 
 div.vertical-tabs {
-  margin: 1em 0 1em 15em; // LTR
-  border: 1px solid #ccc;
+  margin-left:15em; // LTR
+  border: 1px solid $borderColor;
   position: relative; // IE6/7
 }
 .vertical-tabs ul.vertical-tabs-list {
@@ -47,15 +47,15 @@ fieldset.vertical-tabs-pane fieldset legend {
 .vertical-tabs ul.vertical-tabs-list li a {
   display: block;
   text-decoration: none;
-  padding: 0.5em 0.6em;
+  padding: 1em;
 }
 .vertical-tabs ul.vertical-tabs-list li a:focus strong,
 .vertical-tabs ul.vertical-tabs-list li a:active strong,
 .vertical-tabs ul.vertical-tabs-list li a:hover strong {
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 .vertical-tabs ul.vertical-tabs-list li a:hover {
-  outline: 1px dotted;
+  // outline: 1px dotted;
 }
 .vertical-tabs ul.vertical-tabs-list li.selected {
   background-color: #fff;
@@ -78,10 +78,10 @@ fieldset.vertical-tabs-pane fieldset legend {
 // with "box-sizing" to prevent box model issues from occurring in most browsers.
 //
 .vertical-tabs .form-type-textfield input {
-  width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  // width: 100%;
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
 }
 * html .vertical-tabs .form-type-textfield,
 * html .vertical-tabs .form-textarea-wrapper {

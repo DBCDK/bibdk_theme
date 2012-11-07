@@ -3,38 +3,45 @@
 // =============================================================================
 
 .form-section {
-  padding:20px;
+  padding:0 20px;
   border-bottom:solid 1px #ddd;
 }
-
-.form-section-last {
-  // border-bottom:none;
+.form-section .form-item {
+  padding:20px 0;
 }
+
+
+
+
+
 
 
 
 .form-wrapper {
+  padding:0 20px;
+  border-bottom:solid 1px #ddd;
+}
+.form-wrapper.form-actions {
+  padding:20px;
+  border-bottom:none;
 }
 .form-item {
-  margin:0 0 30px;
-
-  &:last-child {
-    margin:0 0 10px;
-  }
+  padding:20px;
+}
+.form-wrapper .form-item {
+  padding:20px 0;
 }
 .form-item .form-item {
-  margin:0;
-}
-.form-item .form-type-radio,
-.form-item .form-type-checkbox {
-  margin:0 0 3px;
-}
-
-.form-section-horizontal {
+  padding:0;
 }
 
 
-
+.vertical-tabs {
+  margin:20px 0;
+}
+.vertical-tabs .form-item {
+  padding:20px;
+}
 
 
 
@@ -47,30 +54,13 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-.fieldset-wrapper {
-  padding:20px 0 0;
-}
 .sidebar-nav .fieldset-wrapper {
   padding:0;
 }
-.fieldset-notitle .fieldset-wrapper {
-  padding:0;
-}
-.vertical-tabs .fieldset-wrapper {
-  padding:20px;
-}
-
-
-
-// =============================================================================
-// Legends
-// =============================================================================
-
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
+.fieldset-legend {
   font-size: 16px;
+  display:block;
+  padding:20px 0;
 }
 
 
@@ -121,15 +111,14 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
-.form-type-checkbox {
-}
-.form-checkbox {
-}
-.form-type-radios {
-}
+.form-checkboxes,
 .form-radios {
+  @extend .clearfix;
 }
-.form-radio {
+.form-checkboxes .form-type-checkbox,
+.form-radios .form-type-radio {
+  float:left;
+  margin-right:20px;
 }
 
 
@@ -160,13 +149,6 @@ select[multiple],
 select[size] {
   height: auto;
 }
-
-.form-type-select {
-}
-.form-select {
-}
-
-
 
 
 
@@ -215,23 +197,6 @@ input[type="password"]:focus {
   outline: thin dotted \9; // IE9
 }
 
-.form-type-textfield,
-.form-item-textfield-disabled,
-.form-item-textfield-required,
-.form-type-password,
-.form-type-password-confirm {
-}
-.form-text {
-}
-.form-type-textarea {
-}
-.form-textarea-wrapper {
-}
-.form-textarea {
-}
-
-
-
 
 
 
@@ -279,31 +244,18 @@ input[type="file"]:focus {
   outline-offset: -2px;
 }
 
-.form-type-file {
-}
-.form-file {
-}
-
-
-
 
 
 // =============================================================================
 // Submit buttons
 // =============================================================================
 input[type="submit"] {
-  @include box-sizing(border-box);
-  @include border-radius(3px);
-  @include transition(all .1s);
-  @include inline-block();
-  color:$white;
-  text-shadow:0px -1px rgba(black,.4);
   border:none;
-  background-color:$btn_blue;
-  padding:0 20px;
-  height:30px;
-  line-height:30px;
-  font-size:14px;
+  @extend .btn;
+  @extend .btn-blue;
+}
+input[type="submit"].btn-grey {
+  @extend .btn-grey;
 }
 
 
@@ -312,17 +264,20 @@ input[type="submit"] {
 
   input[type="submit"],
   a {
+    font-size:14px;
     margin-left:5px;
     &:first-child {
       margin-left:0;
     }
   }
+  a {
+    @include box-sizing(border-box);
+    @include inline-block();
+    height:30px;
+    line-height:30px;
+    margin-left:10px;
+  }
 }
-.form-submit {
-}
-
-
-
 
 
 
@@ -354,7 +309,6 @@ input[type="text"][readonly] {
 
 
 
-
 // =============================================================================
 // Misc forms stuff
 // =============================================================================
@@ -368,9 +322,6 @@ input[type="text"][readonly] {
 .form-required {
   color: #f00;
 }
-
-
-
 
 
 
@@ -390,9 +341,6 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #999999;
 }
-
-
-
 
 
 
@@ -426,11 +374,11 @@ textarea::-webkit-input-placeholder {
 // =============================================================================
 
 .order-agency {
-border:5px solid red;
-background-color:red;
+  border:5px solid red;
+  background-color:red;
 }
 
 .form-item-persistent-login {
-  padding-top:10px;
+  padding-top:0;
   text-align:right;
 }

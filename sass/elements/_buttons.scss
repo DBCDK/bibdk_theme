@@ -4,9 +4,9 @@
 
 
 
-//
+// =============================================================================
 // Generate button skins based on a color
-//
+// =============================================================================
 @mixin btn-skin($color) {
 	@include gradient(lighten($color, 2%), darken($color, 2%));
   &:hover {
@@ -20,25 +20,39 @@
     @include gradient(lighten($color, 2%), darken($color, 2%));
   }
 }
+
+
+
+// =============================================================================
+// Define color variations of buttons
+// =============================================================================
 .btn-blue {
   @include btn-skin($btn_blue);
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
 }
 .btn-grey {
   @include btn-skin($dark_grey5);
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
 }
 
 
 
-//
+
+
+// =============================================================================
 // Classes
-//
+// =============================================================================
 .btn {
+  @include box-sizing(border-box);
   @include border-radius(3px);
   @include transition(all .1s);
-  @include inline-block(middle);
-  color:$white;
-  text-shadow:0px -1px rgba(black,.4);
-  padding:0.667em 1.25em;
+  @include inline-block();
+  // padding:0.667em 1.25em;
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
 
   &:hover {
     @include box-shadow(0 2px 2px rgba(black,0.2));
@@ -63,6 +77,9 @@
     text-align:center;
   }
 }
+
+
+
 
 .btn-wrapper {
   margin-bottom:10px;
