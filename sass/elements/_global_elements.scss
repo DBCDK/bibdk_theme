@@ -5,10 +5,10 @@
 body {
   background:$dark_grey3;
 }
-body.page-overlay {
+body.page-overlay,
+body.page-reservation {
   background:$white;
 }
-
 
 
 // =============================================================================

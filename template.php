@@ -46,6 +46,10 @@ function bibdk_theme_page_alter(&$page) {
  * Implements template_preprocess_html().
  */
 function bibdk_theme_preprocess_html(&$variables) {
+
+  if (arg(0) == 'search') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
   if (arg(0) == 'user') {
     $variables['classes_array'][] = 'lift-columns';
   }
@@ -55,6 +59,17 @@ function bibdk_theme_preprocess_html(&$variables) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$variables) {
+
+  if (arg(0) == 'reservation') {
+    $variables['theme_hook_suggestions'][] = 'page__overlay';
+  }
+
+  if (arg(0) == 'vejviser') {
+    $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+    $variables['page']['content']['#suffix'] = '</div></div>';
+  }
+
+
   $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
   if (!empty($footer_logo)) {
     $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
@@ -69,16 +84,6 @@ function bibdk_theme_preprocess_page(&$variables) {
   else {
     $variables['content_span'] = "span24";
   }
-
-
-
-  if (arg(0) == 'vejviser') {
-    $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
-    $variables['page']['content']['#suffix'] = '</div></div>';
-  }
-
-
-
 
 }
 
@@ -132,8 +137,6 @@ function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
 }
 
 /* HOOK_FORM_ALTER END */
-
-
 
 
 

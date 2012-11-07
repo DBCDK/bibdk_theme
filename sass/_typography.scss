@@ -173,11 +173,13 @@ blockquote {
   th {
     padding-right:10px;
     text-align:left;
+    vertical-align:top;
     color:$light_grey5;
     font-weight:normal;
     width: 100px;
   }
   td {
     color:$dark_grey4;
+    vertical-align:top;
   }
 }
