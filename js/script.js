@@ -192,6 +192,7 @@
                 $(this).children('.toggle-text').toggleClass('hidden');
                 $(this).parents(id).find(".toggle").toggleClass('visuallyhidden');
             });
+
             $('.markall-button input[type=checkbox]').click(function(e) {
                 e.stopPropagation();
                 $(this).toggleClass('checked');

@@ -27,26 +27,26 @@
                   <!--<a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>-->
                 </div>
                 <a class="text-small link-add-basket" href="#">
-                  <span class="icon icon-left icon-blue-addbasket">▼</span>Tilføj indkøbskurv
+                  <span class="icon icon-left icon-blue-addbasket">&nbsp;</span>Tilføj indkøbskurv
                 </a>
               </div>
             </div>
             <a href="#" class="text-small text-lightgrey">
-              <span class="icon icon-left icon-lightgrey-list">▼</span>Hvilke biblioteker har materialet?
+              <span class="icon icon-left icon-lightgrey-list">&nbsp;</span>Hvilke biblioteker har materialet?
             </a>
           </div>
           <!-- tabs-content -->
           <div class="manifestations zebra-wrapper">
             <div class="zebra-content">
               <?php $count_manifestation = 0; ?>
-              <?php foreach ($manifest['manifest']['manifestations'] as $manifestation) : $count_manifestation++; ?> 
+              <?php foreach ($manifest['manifest']['manifestations'] as $manifestation) : $count_manifestation++; ?>
                 <div class="manifestation zebra <?php print ($count_manifestation > 2) ? "visuallyhidden toggle" : ""  ?>">
                   <?php print $manifestation; ?>
-                </div>  
+                </div>
               <?php endforeach; ?>
 
             </div>
-            <!-- end zebra-content -->  
+            <!-- end zebra-content -->
             <?php if (count($manifest['manifest']['manifestations']) > 2) : ?>
               <div class="zebra-toggle">
                 <a href="#<?php print $subtype; ?>">

@@ -145,7 +145,7 @@
         <div id="footer">
 
           <div id="footer-logo">
-            <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+            <?php print render($logo_small); ?>
           </div>
 
           <?php print render($page['footer']); ?>

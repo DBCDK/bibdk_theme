@@ -61,21 +61,19 @@ function bibdk_theme_preprocess_html(&$variables) {
  */
 function bibdk_theme_preprocess_page(&$variables) {
 
-
   if (arg(0) == 'reservation') {
     $variables['theme_hook_suggestions'][] = 'page__overlay';
   }
-
   if (arg(0) == 'vejviser') {
     $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
     $variables['page']['content']['#suffix'] = '</div></div>';
   }
 
-
-  $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
-  if (!empty($footer_logo)) {
-    $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
-  }
+  $variables['logo_small'] = array(
+    '#theme' => 'image',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo_small.png',
+    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+  );
 
   _bibdk_theme_create_user_sidebar($variables);
 
@@ -86,7 +84,6 @@ function bibdk_theme_preprocess_page(&$variables) {
   else {
     $variables['content_span'] = "span24";
   }
-
 }
 
 
@@ -116,14 +113,14 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'user_login':
       _alter_user_login($form, $form_state, $form_id);
-      _add_element_wrapper($form);
+      _wrap_in_element($form);
       break;
     case 'user_pass':
       _alter_user_login($form, $form_state, $form_id);
-      _add_element_wrapper($form);
+      _wrap_in_element($form);
       break;
     case 'user_profile_form':
-      _add_element_wrapper($form);
+      _wrap_in_element($form);
       break;
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -134,25 +131,19 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
    }
 }
 
-function _add_element_wrapper(&$form) {
+function _wrap_in_element(&$form) {
   $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
   $form['#suffix'] = '</div></div>';
 }
-
 function _alter_user_login(&$form, &$form_state, $form_id) {
   unset($form['inputs']['name']['#description']);
   unset($form['inputs']['pass']['#description']);
 }
-
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
-  $form['search_block_form']['#attributes']['class'] = array('clearfix');
-  $form['actions']['submit']['#attributes']['class'] = array('btn-blue');
-  $form['actions']['#weight'] = -10;
-  $form['search_block_form']['#weight'] = - 12;
+  $form['#attributes']['class'] = array('search-form-horizontal');
 }
-
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
-  $form['openagency_submit']['#attributes']['class'] = array('btn-blue');
+  $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');
 }
 
 /* HOOK_FORM_ALTER END */

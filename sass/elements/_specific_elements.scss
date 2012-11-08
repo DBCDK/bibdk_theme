@@ -1,13 +1,6 @@
-//
-// Import: Specific elements
-//
-
-
-
-
-//
+// =============================================================================
 // Work
-//
+// =============================================================================
 
 // Work header
 .work-header {
@@ -46,7 +39,7 @@
   float:right;
   margin:0 0 10px 20px;
   padding:0 0 0 15px;
-  border-left:dotted 1px $light_grey3;
+  border-left:dotted 1px $borderColor;
   img {
     width:100%;
   }
@@ -75,14 +68,13 @@
 
 
 
-//
+// =============================================================================
 // Library
-//
+// =============================================================================
 
 .library {
   @extend .clearfix;
-  border-top:solid 1px $light_grey3;
-  // background:url(../img/favorite.png) no-repeat 20px 22px;
+  border-top:solid 1px $borderColor;
 
   hgroup {
     margin-bottom:10px;
@@ -98,12 +90,8 @@
   &:nth-child(2n) {
     background-color:$light_grey1;
   }
-
   .actions {
     border:none;
-  }
-  .element-section {
-    // padding-left:45px;
   }
 }
 
@@ -119,9 +107,9 @@
 
 
 
-//
+// =============================================================================
 // Frontpage Teaser blocks
-//
+// =============================================================================
 
 .block {
   // margin-bottom:30px;
@@ -155,14 +143,9 @@
   background:url(../img/mediatype_icons/games.png) no-repeat;
 }
 
-
-
-
 //
-// Teaser widgets
-//
-
 // Settings box heights
+//
 .widget-height-1 {
   height:100px;
 }
@@ -173,8 +156,9 @@
   height:320px;
 }
 
-
+//
 // widget wrapper used when image is outside widget
+//
 .widget-wrapper {
 
   .field-image {
@@ -183,7 +167,9 @@
   }
 }
 
+//
 // Common widget styling
+//
 .widget {
   position: relative;
   margin-bottom:10px;
@@ -203,7 +189,9 @@
   }
 }
 
+//
 // Dark grey widget
+//
 .widget-dark-grey {
   background:$dark_grey3;
   color: $light_grey4;
@@ -235,8 +223,9 @@
   }
 }
 
-
+//
 // Light grey widget
+//
 .widget-light-grey {
   background:$light_grey2;
   color:$dark_grey3;
@@ -266,8 +255,9 @@
 }
 
 
-
+//
 // Custom Biblioteksvagt widget
+//
 .widget-biblioteksvagt {
   background: $btn_blue;
   color:$white;

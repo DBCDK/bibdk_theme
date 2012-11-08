@@ -85,9 +85,26 @@ ul, ol {
 // =============================================================================
 // Misc
 // =============================================================================
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
 address {
   font-style:normal;
 }
+b,
+strong {
+  font-weight: bold;
+}
+pre {
+  margin:0 0 10px;
+}
+blockquote {
+  margin: 1em 40px;
+}
+
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -105,35 +122,6 @@ address {
 hr {
   border: 1px solid gray;
   height: 1px;
-}
-
-
-
-
-img {
-  border: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-}
-
-
-
-
-b,
-strong {
-  font-weight: bold;
-}
-
-
-pre {
-  margin:0 0 10px;
-}
-
-
-
-
-blockquote {
-  margin: 1em 40px;
 }
 
 

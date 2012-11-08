@@ -9,16 +9,16 @@
 // =============================================================================
 
 .element-wrapper {
-  background:$light_grey2;
+  background:$elementWrapper;
   padding:10px;
   margin-bottom:10px;
 }
 .element {
   background:$white;
-  border:solid 1px $light_grey3;
+  border:solid 1px $borderColor;
 }
 .element-section {
-  border-top:solid 1px $light_grey3;
+  border-top:solid 1px $borderColor;
   position:relative;
 
   &:first-child {
@@ -68,7 +68,7 @@
     font-size:12px;
   }
   tr {
-    border-bottom:solid 1px $light_grey3;
+    border-bottom:solid 1px $borderColor;
   }
   th,
   td {
@@ -113,15 +113,15 @@
 // =============================================================================
 
 .bibdk-tabs {
-  border:solid 1px $light_grey3;
+  border:solid 1px $borderColor;
 
   .tabs-nav {
-    border-bottom:solid 1px $light_grey3;
+    border-bottom:solid 1px $borderColor;
 
     a {
       float:left;
       display:block;
-      border-right:solid 1px $light_grey3;
+      border-right:solid 1px $borderColor;
       background-color:$light_grey1;
       color:$dark_grey4;
 
@@ -148,11 +148,11 @@
       @include inline-block();
       @include border-radius(10px);
       padding:5px 10px;
-      border:solid 1px $light_grey3;
+      border:solid 1px $borderColor;
 
       &.active {
         font-weight:bold;
-        border-color:darken($light_grey3, 10%);
+        border-color:darken($borderColor, 10%);
       }
     }
   }
@@ -203,7 +203,7 @@
 .zebra {
   padding:20px 20px 20px 10px;
   border-left:solid 10px $zebraOdd;
-  border-bottom:solid 1px $light_grey3;
+  border-bottom:solid 1px $borderColor;
   background-color:$light_grey1;
 
   &:nth-child(even) {
@@ -225,7 +225,7 @@
 .actions {
   float:right;
   padding-left:15px;
-  border-left:dotted 1px $light_grey3;
+  border-left:dotted 1px $borderColor;
 }
 .subwork .actions {
   width: 140px;
@@ -235,7 +235,7 @@
 .secondary-actions {
   padding:10px 0 0 0;
   margin:10px 0 0 0;
-  border-top:dotted 1px $light_grey3;
+  border-top:dotted 1px $borderColor;
 }
 
 
@@ -270,7 +270,7 @@
   font-size:12px;
 
   .divider {
-    border-bottom:solid 1px $light_grey3;
+    border-bottom:solid 1px $borderColor;
   }
 
   a {
@@ -298,6 +298,36 @@
 
 
 // =============================================================================
+// Horizontal search form
+// =============================================================================
+
+.search-form-horizontal {
+  overflow:hidden;
+
+  .form-type-textfield {
+    float:left;
+    margin:0;
+    padding:0;
+  }
+  .form-actions {
+    float:right;
+    margin:0;
+    padding:0;
+  }
+
+  input {
+    display:block;
+  }
+  input[type=text] {
+    width:100%;
+  }
+  input[type=submit] {
+    width:100%;
+  }
+}
+
+
+// =============================================================================
 // Works controls (above the list of works)
 // =============================================================================
 
@@ -305,7 +335,7 @@
   display:block;
   background:#fbfbfb;
   margin-bottom:20px;
-  border:solid 1px $light_grey3;
+  border:solid 1px $borderColor;
 
   line-height:60px;
   height:60px;
@@ -318,11 +348,11 @@
 }
 .works-control-wrapper-left {
   float:left;
-  border-right:solid 1px $light_grey3;
+  border-right:solid 1px $borderColor;
 }
 .works-control-wrapper-right {
   float:right;
-  border-left:solid 1px $light_grey3;
+  border-left:solid 1px $borderColor;
 }
 .works-control {
   font-size:14px;
@@ -375,6 +405,6 @@
 }
 .works-pager-select {
   padding:0 20px;
-  border-left:solid 1px $light_grey3;
-  border-right:solid 1px $light_grey3;
+  border-left:solid 1px $borderColor;
+  border-right:solid 1px $borderColor;
 }

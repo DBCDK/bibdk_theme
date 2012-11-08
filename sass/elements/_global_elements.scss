@@ -172,7 +172,6 @@ body.page-reservation {
 }
 
 
-
 // =============================================================================
 // Header actions
 // =============================================================================
@@ -210,34 +209,29 @@ body.page-reservation {
 }
 .header-action-vejviser {
 
+  //.search-form-horizontal handles the floating
   &.toggled {
     padding:0;
     background:transparent;
   }
 
-
-  .form-item {
-    margin:0;
-    padding:0;
+  .form-type-textfield {
+    width:210px;
+  }
+  .form-actions {
+    width:85px;
   }
 
   form {
     width:300px;
-
-    input {
-      line-height:30px;
-      height:30px;
-    }
-    input[type=text] {
-      float:left;
-      width:210px;
-      font-size:12px;
-      padding:0 5px;
-    }
-    input[type=submit] {
-      float:right;
-      width:85px;
-    }
+  }
+  input {
+    line-height:30px;
+    height:30px;
+  }
+  input[type=text] {
+    padding:0 5px;
+    font-size:12px;
   }
 }
 
@@ -245,17 +239,16 @@ body.page-reservation {
 
 // =============================================================================
 // Search form
+// .search-form-horizontal handles the floating
 // =============================================================================
 #search-form {
   margin-bottom:10px;
 
-  .form-actions {
-    padding:0;
+  .form-type-textfield {
+    width:85%;
   }
-
-  .form-item {
-    padding:0;
-    margin:0;
+  .form-actions {
+    width:14%;
   }
 
   input {
@@ -263,20 +256,13 @@ body.page-reservation {
     line-height:40px;
   }
   input[type=text] {
-    float:left;
     padding:0 10px;
-    width:85%;
     font-size:1.166667em; // 14px
   }
   input[type=submit] {
-    float:right;
-    width:14%;
     font-size:1.333333em; // 16px
   }
 }
-
-
-
 
 
 #search-tabs {
