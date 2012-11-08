@@ -297,14 +297,14 @@
             $('.toggle-next-section').toggle(function(e) {
                 e.preventDefault();
                 $(this).addClass('toggled');
-                $('.toggle-next-section .show-more').addClass('visuallyhidden');
-                $('.toggle-next-section .show-less').removeClass('visuallyhidden');
+                $('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
+                $('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
                 $(this).closest('.element-section').next().removeClass('visuallyhidden');
             }, function(e) {
                 e.preventDefault();
+                $('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
+                $('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
                 $(this).removeClass('toggled');
-                $('.toggle-next-section .show-more').removeClass('visuallyhidden');
-                $('.toggle-next-section .show-less').addClass('visuallyhidden');
                 $(this).closest('.element-section').next().addClass('visuallyhidden');
             });
 
