@@ -73,12 +73,12 @@ function bibdk_theme_preprocess_page(&$variables) {
   // Add $logo and $logo_small to page.tpl
   $variables['logo'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo.png',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
   $variables['logo_small'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo-small.png',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
 
@@ -110,6 +110,9 @@ function bibdk_theme_preprocess_page(&$variables) {
 function bibdk_theme_process_page(&$variables) {
 
   if (arg(0) == 'search') {
+    unset($variables['title']);
+  }
+  if (arg(0) == 'bibdk_frontpage') {
     unset($variables['title']);
   }
   if (arg(0) == 'node' && arg(1) == '') {
