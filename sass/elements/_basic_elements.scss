@@ -299,13 +299,9 @@
 .search-form-horizontal {
   overflow:hidden;
 
-  .form-type-textfield {
+  .form-type-textfield,
+   .form-actions {
     float:left;
-    margin:0;
-    padding:0;
-  }
-  .form-actions {
-    float:right;
     margin:0;
     padding:0;
   }

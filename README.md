@@ -8,4 +8,5 @@ With compass installed run from within the theme folder root
     compass watch
 
 
-
+See wiki for more information
+https://github.com/DBCDK/bibdk_theme/wiki
