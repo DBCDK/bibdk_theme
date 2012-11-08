@@ -297,7 +297,8 @@
 // =============================================================================
 
 .search-form-horizontal {
-  overflow:hidden;
+  // overflow:hidden;
+  clear:both;
 
   .form-type-textfield,
    .form-actions {

@@ -164,6 +164,8 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 }
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
+  $form['search_block_form']['#weight'] = -2;
+  $form['actions']['#weight'] = -1;
 }
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');

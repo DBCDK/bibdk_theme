@@ -118,7 +118,7 @@
     padding-left:46px; // icon width + 10px
     margin-bottom:20px;
 
-    font-family: 'Lato';
+    font-family: 'Dosis', sans-serif;
     font-weight:300;
     font-size:2em; // 24px
     text-transform:uppercase;
@@ -238,7 +238,7 @@
     margin-bottom:10px;
 
     h3 {
-      font-family: 'Lato';
+      font-family: 'Dosis', sans-serif;
       font-size:2em; // 24px
       font-weight:300;
       line-height:120%;
@@ -290,10 +290,6 @@
 }
 
 
-//user-help-topbar-menu
-.block.block-bibdk-help {
-  margin-bottom: 0;
-}
 
 
 
@@ -340,35 +336,34 @@
 // Help menu
 // =============================================================================
 
+.pane-bibdk-help-bibdk-help-popup-menu,
 .pane-bibdk-help {
-  padding:20px 20px 0;
+  padding:20px;
 }
 
+.pane-bibdk-help-bibdk-help-popup-menu .menu .menu {
+  margin-bottom:10px;
+}
 .pane-bibdk-help-bibdk-help-popup-menu li a {
-  background-color:$btn_blue;
+  border:solid 1px $borderColor;
   background-repeat:no-repeat;
   background-position:100%;
   display:block;
   padding:10px 20px;
   margin-bottom:1px;
-  color:#fff;
-  text-shadow:0 -1px rgba(black,0.3);
 }
+
+
 .pane-bibdk-help-bibdk-help-popup-menu li.expanded a {
-  // add background image ##fix##
 }
 .pane-bibdk-help-bibdk-help-popup-menu li li a {
-  background-color:lighten($btn_blue, 5%);
+  margin-left:10px;
 }
-
 .pane-bibdk-help-bibdk-help-popup-menu li li li a {
-  background-color:lighten($btn_blue, 10%);
 }
 
 
-.pane-bibdk-help-bibdk-help-popup-menu .pane-content > .menu {
-  padding:20px 20px 0;
-}
+
 
 
 
