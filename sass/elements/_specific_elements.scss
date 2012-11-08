@@ -248,10 +248,6 @@
       }
     }
   }
-
-  .field-body {
-    line-height:150%;
-  }
 }
 
 
@@ -261,6 +257,13 @@
 .widget-biblioteksvagt {
   background: $btn_blue;
   color:$white;
+
+  footer {
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:2;
+  }
 
   .field-title {
     margin-bottom:10px;
@@ -275,15 +278,14 @@
       }
     }
   }
-
   .field-body {
-    line-height:150%;
+    position:relative;
+    z-index:3;
   }
-
-  footer {
-    bottom:0px;
-    left:0px;
-    right:0px;
+  .field-vagt-image {
+    text-align:right;
+  }
+  .field-link {
     background:darken($btn_blue, 5%);
     padding:15px;
   }
