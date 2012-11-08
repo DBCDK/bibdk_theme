@@ -2,6 +2,9 @@
 
 /**
  * Implements hook_css_alter().
+ *
+ * Unset Drupal CSS files we want to override
+ * See: sass/drupal
  */
 function bibdk_theme_css_alter(&$css) {
   unset($css['modules/system/system.base.css']);
@@ -31,7 +34,7 @@ function bibdk_theme_theme() {
  * Implements hook_page_alter().
  */
 function bibdk_theme_page_alter(&$page) {
-  //removing search form rendered in content region by search module
+  // Remove search form rendered in content region by search module
   // Logged in
   if (!empty($page['content']['system_main']['content']['search_form'])) {
     unset($page['content']['system_main']['content']['search_form']);
@@ -61,6 +64,18 @@ function bibdk_theme_preprocess_html(&$variables) {
  */
 function bibdk_theme_preprocess_page(&$variables) {
 
+  // Add $logo and $logo_small to page.tpl
+  $variables['logo'] = array(
+    '#theme' => 'image',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo.png',
+    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+  );
+  $variables['logo_small'] = array(
+    '#theme' => 'image',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo-small.png',
+    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+  );
+
   if (arg(0) == 'reservation') {
     $variables['theme_hook_suggestions'][] = 'page__overlay';
   }
@@ -69,11 +84,6 @@ function bibdk_theme_preprocess_page(&$variables) {
     $variables['page']['content']['#suffix'] = '</div></div>';
   }
 
-  $variables['logo_small'] = array(
-    '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/logo_small.png',
-    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
-  );
 
   _bibdk_theme_create_user_sidebar($variables);
 
@@ -110,6 +120,8 @@ function bibdk_theme_process_page(&$variables) {
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 
+  // dpm($form_id);
+
   switch ($form_id) {
     case 'user_login':
       _alter_user_login($form, $form_state, $form_id);
@@ -128,8 +140,13 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_vejviser_form':
       _alter_bibdk_vejviser_form($form, $form_state, $form_id);
       break;
+    case 'bibdk_help_search_form':
+      _alter_bibdk_help_search_form($form, $form_state, $form_id);
+      break;
    }
 }
+
+
 
 function _wrap_in_element(&$form) {
   $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
@@ -144,6 +161,9 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 }
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');
+}
+function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'] = array('search-form-horizontal');
 }
 
 /* HOOK_FORM_ALTER END */
@@ -227,6 +247,13 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
   );
   $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
 }
+
+
+
+
+
+
+
 
 /* * *** PAGER ****** */
 

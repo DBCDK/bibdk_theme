@@ -26,7 +26,7 @@
 
           <div id="header-logo">
             <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+              <?php print render($logo); ?>
             </a>
           </div>
 

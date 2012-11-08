@@ -4,19 +4,17 @@ screenshot = 'screenshot.png'
 core = 7.x
 version = 7.x-0.1
 
-plugins[panels][layouts] = layouts
-
 stylesheets[all][] = css/screen.css
 scripts[] = js/modernizr-2.6.2.min.js
 scripts[] = js/selectivizr-min.js
 scripts[] = js/jquery.popupwindow.js
 scripts[] = js/script.js
 
-
 regions[topbar] = Top bar
 regions[header_actions] = Header actions
 regions[search_panel] = Search panel
-
 regions[content] = Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
+
+plugins[panels][layouts] = templates/layouts
