@@ -119,7 +119,7 @@
         <?php if (!empty($page['content'])): ?>
           <div class="<?php print $content_span; ?>">
             <?php if (!empty($title)): ?>
-              <h1><?php print $title; ?></h1>
+              <h1 id="title"><?php print $title; ?></h1>
             <?php endif; ?>
             <?php print render($page['content']); ?>
           </div>
