@@ -221,7 +221,7 @@
 
             //window popup function
             var profiles = {
-                default: {
+                standard: {
                     height:600,   // sets the height in pixels of the window.
                     width:600,    // sets the width in pixels of the window.
                     toolbar:0,    // determines whether a toolbar (includes the forward and back buttons) is displayed {1 (YES) or 0 (NO)}.
