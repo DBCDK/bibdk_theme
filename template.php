@@ -57,6 +57,12 @@ function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'user') {
     $variables['classes_array'][] = 'lift-columns';
   }
+  if (arg(0) == 'vejviser') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+
+
+
 }
 
 /**
