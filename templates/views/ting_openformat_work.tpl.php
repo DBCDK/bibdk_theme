@@ -27,12 +27,12 @@
                   <!--<a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>-->
                 </div>
                 <a class="text-small link-add-basket" href="#">
-                  <span class="icon icon-left icon-blue-addbasket">&nbsp;</span>Tilføj indkøbskurv
+                  <span class="icon icon-left icon-blue-addbasket">&nbsp;</span><?php print t('Tilføj indkøbskurv'); ?>
                 </a>
               </div>
             </div>
             <a href="#" class="text-small text-lightgrey">
-              <span class="icon icon-left icon-lightgrey-list">&nbsp;</span>Hvilke biblioteker har materialet?
+              <span class="icon icon-left icon-lightgrey-list">&nbsp;</span><?php print t('Hvilke biblioteker har materialet?'); ?>
             </a>
           </div>
           <!-- tabs-content -->
