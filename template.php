@@ -263,6 +263,25 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
 
 
 
+/**
+ * Override theme function for a CAPTCHA element.
+ */
+function bibdk_theme_captcha($variables) {
+  $element = $variables['element'];
+  if (!empty($element['#description']) && isset($element['captcha_widgets'])) {
+    $fieldset = array(
+      '#type' => 'fieldset',
+      '#title' => FALSE,
+      '#description' => $element['#description'],
+      '#children' => drupal_render_children($element),
+      '#attributes' => array('class' => array('captcha')),
+    );
+    return theme('fieldset', array('element' => $fieldset));
+  }
+  else {
+    return '<div class="captcha">' . drupal_render_children($element) . '</div>';
+  }
+}
 
 
 
