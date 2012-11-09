@@ -173,14 +173,9 @@
                 }
             });
 
-
-            $('#search-tabs a').click(function(){
-                $(this).parent().siblings().removeClass('active');
-                $(this).parent().addClass('active');
-            });
-
             // Toggle advanced search options
             $('#search-advanced a').click(function(e) {
+                e.preventDefault();
                 $(this).toggleClass('toggled');
                 $(this).parent().next().toggleClass('visuallyhidden');
             });
