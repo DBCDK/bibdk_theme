@@ -6,7 +6,7 @@
 //dpm($variables);
 ?>
 
-<article class="library">
+<article class="library favourite_<?php print $branchid;?>">
   <div class="element-section padded">
     <div class="actions">
       <?php print $actions; ?>
