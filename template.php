@@ -269,6 +269,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
 function bibdk_theme_captcha($variables) {
   $element = $variables['element'];
   if (!empty($element['#description']) && isset($element['captcha_widgets'])) {
+    $element['captcha_widgets']['captcha_response']['#description'] = FALSE;
     $fieldset = array(
       '#type' => 'fieldset',
       '#title' => FALSE,
