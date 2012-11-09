@@ -7,7 +7,7 @@
 ?>
 
 <article class="library favourite_<?php print $branchid;?>">
-  <div class="element-section">
+  <div class="element-section clearfix">
     <div class="actions">
       <?php print $actions; ?>
     </div>
