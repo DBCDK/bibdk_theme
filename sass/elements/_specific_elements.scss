@@ -120,12 +120,14 @@
   @include inline-block();
   padding-left:20px;
   margin-bottom:3px;
+  color:#999;
 }
 
 .delete-favourite {
   background:url(../img/icons/red-x.png) no-repeat 0%;
   @include inline-block();
   padding-left:20px;
+  color:#999;
 }
 
 
