@@ -9,6 +9,17 @@
 @import "compass/css3/background-clip";
 @import "compass/css3/inline-block";
 
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
+}
 
 
 // =============================================================================

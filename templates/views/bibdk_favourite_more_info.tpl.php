@@ -6,7 +6,7 @@
 //dpm($variables);
 //dpm($branch);
 ?>
-<div class="element-section padded visuallyhidden">
+<div class="element-section visuallyhidden">
   <div class="library-details text clearfix">
     <div class="library-details-column-1">
       <strong><?php print t('bibdk_favourite_address'); ?></strong>
@@ -28,7 +28,7 @@
         <strong><?php print t('bibdk_favourite_tools'); ?></strong>
         <br/>
         <?php print $tools; ?>
-      </address>  
+      </address>
     </div>
   </div>
 </div>

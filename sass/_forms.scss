@@ -12,11 +12,10 @@
 }
 .form-wrapper.form-actions {
   padding:20px;
-  border-bottom:none;
 }
 .form-item {
   padding:20px;
-  overflow:hidden;
+  @include clearfix();
 }
 .form-wrapper .form-item {
   padding:20px 0;
@@ -31,6 +30,7 @@
 .vertical-tabs .form-item {
   padding:20px 0;
 }
+
 
 
 
@@ -246,6 +246,11 @@ input[type="submit"] {
 input[type="submit"].btn-grey {
   @extend .btn-grey;
 }
+input[type="submit"].btn-add-library {
+  @extend .btn-add-library;
+}
+
+
 
 
 .form-actions {

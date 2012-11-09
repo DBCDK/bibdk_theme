@@ -13,6 +13,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css['modules/system/system.menus.css']);
   unset($css['misc/vertical-tabs.css']);
   unset($css['modules/user/user.css']);
+  unset($css['profiles/bibdk/modules/ding_facetbrowser/css/facetbrowser.css']);
 }
 
 /**
@@ -315,15 +316,15 @@ function bibdk_theme_pager_link($variables) {
   $attributes['href'] = url($_GET['q'], array('query' => $query));
 
   if (in_array('works-pager-back', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">' . t('back') . '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">&nbsp;</span></a>';
   }
 
   if (in_array('works-pager-forward', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">' . t('forward') . '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">&nbsp;</span></a>';
   }
 
   if (in_array('works-pager-select', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">' . t('select') . '</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">&nbsp;</span></a>';
   }
 
   return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';

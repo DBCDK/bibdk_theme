@@ -245,6 +245,10 @@ body.page-reservation {
 #search-form {
   margin-bottom:10px;
 
+  .form-wrapper {
+    padding:0;
+  }
+
   .form-type-textfield {
     width:84%;
     margin-right:1%;
@@ -419,6 +423,39 @@ body.page-reservation {
     display: none;
   }
 }
+
+
+// =============================================================================
+// Exceptions for facets
+// =============================================================================
+
+#ding-facetbrowser-form {
+
+  .form-item {
+    padding:0;
+  }
+
+  .fieldset-legend {
+    font-size: 14px;
+    padding:0;
+  }
+
+  label.option {
+    display: block;
+    margin-bottom:0;
+  }
+  .form-type-checkbox {
+    float:none;
+    margin:0;
+  }
+
+  .expand_more {
+    cursor:pointer;
+  }
+}
+
+
+
 
 
 

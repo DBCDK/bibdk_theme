@@ -1,6 +1,6 @@
 <div id="search-advanced">
   <div id="search-advanced-toggle">
-    <a class="text-white" href="#"><span class="icon icon-left icon-darkgrey-plus">&#9660;</span><?php echo t('Expand search options'); ?></a>
+    <a class="text-white" href="#"><span class="icon icon-left icon-darkgrey-plus">&nbsp;</span><?php echo t('Expand search options'); ?></a>
   </div>
   <div id="search-advanced-panel" class="visuallyhidden">
     <!-- ADVANCED SEARCH-->

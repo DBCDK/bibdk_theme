@@ -1,6 +1,6 @@
 <div class="work element-wrapper">
   <div class="element">
-    <div class="work-header element-section padded">
+    <div class="work-header element-section">
       <div class="actions">
         <div class="primary-actions">
           <div class="dropdown-wrapper">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <!-- element-section (work-header) -->
-    <div class="work-body work-body-has-cover element-section padded visuallyhidden">
+    <div class="work-body work-body-has-cover element-section visuallyhidden">
       <div id="ajax_placeholder_<?php print $uid; ?>"></div>
      </div>
     <!-- element-section -->

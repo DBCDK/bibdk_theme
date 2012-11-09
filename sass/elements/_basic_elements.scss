@@ -9,25 +9,20 @@
 // =============================================================================
 
 .element-wrapper {
-  background:$elementWrapper;
-  padding:10px;
+  border:solid 10px $elementWrapper;
   margin-bottom:10px;
 }
 .element {
-  background:$white;
   border:solid 1px $borderColor;
+  border-bottom:none;
 }
 .element-section {
-  border-top:solid 1px $borderColor;
+  border-bottom:solid 1px $borderColor;
   position:relative;
-
-  &:first-child {
-    border-top:none;
-  }
+  padding:20px;
 }
-
 .element-section-with-controls {
-  padding-left:20px;
+  padding:0 0 0 20px;
   height:60px;
   line-height:60px;
 }
@@ -297,11 +292,15 @@
 // =============================================================================
 
 .search-form-horizontal {
-  // overflow:hidden;
-  clear:both;
+  @include clearfix();
+  padding:0;
+
+  .form-wrapper {
+    border:none;
+  }
 
   .form-type-textfield,
-   .form-actions {
+  .form-actions {
     float:left;
     margin:0;
     padding:0;
