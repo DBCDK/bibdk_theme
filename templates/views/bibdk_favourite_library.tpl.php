@@ -3,10 +3,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-//dpm($variables);
 ?>
 
-<article class="library favourite_<?php print $branchid;?>">
+<article class="<?php print $classes?>" >
   <div class="element-section clearfix">
     <div class="actions">
       <?php print $actions; ?>
