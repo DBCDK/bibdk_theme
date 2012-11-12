@@ -10,7 +10,7 @@
 <!-- wrapper -->
 </div>
 <!-- work-share-data -->
-
+<?php fb($variables); ?>
 <div class="bibdk-tabs bibdk-tabs-heavy">
   <?php print $tabs; ?>
   <!-- tabs-nav -->
@@ -23,8 +23,7 @@
             <div class="actions">
               <div class="primary-actions">
                 <div class="btn-wrapper">
-                  <?php echo drupal_render($subwork['fields']); ?>
-                  <!--<a class="btn btn-blue" href="#">Bestil <strong>bog</strong> uanset udgave</a>-->
+                  <?php echo drupal_render($subwork['fields']); //APPARENTLY UNUSED...? ?>
                 </div>
                 <a class="text-small link-add-basket" href="#">
                   <span class="icon icon-left icon-blue-addbasket">&nbsp;</span><?php print t('Tilføj indkøbskurv'); ?>
