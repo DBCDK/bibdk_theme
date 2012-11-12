@@ -110,6 +110,10 @@
   float:left;
   width:50%;
 }
+.library-details-column-1 .subheader,
+.library-details-column-2 .subheader {
+  margin-bottom: 0;
+}
 .select-default-library {
   margin-bottom:5px;
 }
