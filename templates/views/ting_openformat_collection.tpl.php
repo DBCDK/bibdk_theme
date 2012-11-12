@@ -1,22 +1,7 @@
 <div class="work element-wrapper">
   <div class="element">
     <div class="work-header element-section">
-      <div class="actions">
-        <div class="primary-actions">
-          <div class="dropdown-wrapper">
-            <a class="btn btn-blue dropdown-toggle" href="#">
-              Bestil uanset udgave <span class="icon icon-right icon-white-down">&nbsp;</span>
-            </a>
-            <ul class="dropdown-menu visuallyhidden">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
-              <li><a href="#">Option 4</a></li>
-              <li><a href="#">Option 5</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <?php print($actions); ?>
       <!-- actions -->
       <div class="element-title">
         <hgroup>
@@ -35,7 +20,7 @@
     <!-- element-section (work-header) -->
     <div class="work-body work-body-has-cover element-section visuallyhidden">
       <div id="ajax_placeholder_<?php print $uid; ?>"></div>
-     </div>
+    </div>
     <!-- element-section -->
   </div>
   <!-- element -->
