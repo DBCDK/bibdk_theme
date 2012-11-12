@@ -20,14 +20,14 @@
 
     <div class="library-details-column-2">
       <address>
-        <strong><?php print t('bibdk_favourite_opening_hours'); ?></strong>
-        <br/>
-        <?php print $openingHours; ?>
-        <br/>
-        <br/>
-        <strong><?php print t('bibdk_favourite_tools'); ?></strong>
-        <br/>
-        <?php print $tools; ?>
+        <?php if ( $openingHours != 'ting_agency_no_opening_hours' ) { ?>
+          <p class="subheader"><strong><?php print t('bibdk_favourite_opening_hours'); ?></strong></p>
+          <p><?php print $openingHours; ?></p>
+        <?php } ?>
+        <?php if ( $tools ) { ?>
+          <p class="subheader"><strong><?php print t('bibdk_favourite_tools'); ?></strong></p>
+          <p><?php print $tools; ?></p>
+        <?php } ?>
       </address>
     </div>
   </div>
