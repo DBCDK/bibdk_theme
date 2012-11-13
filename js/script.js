@@ -242,6 +242,17 @@
                     status:1
                 }
                 ,
+                reservation: {
+                    height:650,
+                    width:480,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:1
+                    left:15,
+                    top:15,
+                }
+                ,
                 windowLeftTop: {
                     height:500,
                     width:780,
