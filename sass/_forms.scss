@@ -450,20 +450,30 @@ textarea::-webkit-input-placeholder {
 #popup #title {
   margin:0 0 0 20px;
 }
+
 #popup .messages {
   margin:10px 20px;
 }
 
-
-.page-reservation .form-wrapper .form-submit {
+#popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
+#popup #edit-navigation .form-submit {
+  margin-top: 20px;
+  margin-right: 20px;
+}
 
+#popup article.manifestation {
+  padding: 0 20px;
+}
 
+#popup #edit-needbeforedate div.form-item-needBeforeDate-month,
+#popup #edit-needbeforedate div.form-item-needBeforeDate-day {
+  float: left;
+  margin-right: 20px;
+}
 
-
-
-
-
-
+#popup #edit-branchparameters {
+  padding-top: 20px;
+}
