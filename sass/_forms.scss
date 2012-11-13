@@ -474,6 +474,15 @@ textarea::-webkit-input-placeholder {
   margin-right: 20px;
 }
 
-#popup #edit-branchparameters {
+#popup article.selected_branch .element-section {
+  border-bottom-width: 0;
+  padding: 0 0 20px 20px;
+}
+
+#popup article.selected_branch h3 {
+  font-size: 1.2em;
+}
+
+#popup article.manifestation {
   padding-top: 20px;
 }
