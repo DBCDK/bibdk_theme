@@ -236,6 +236,28 @@ body.page-reservation {
   }
 }
 
+.header-action-reservation {
+
+  .form-type-textfield {
+    /*width:210px;*/
+    margin-right:5px;
+  }
+  .form-actions {
+    width:85px;
+  }
+
+  form {
+    /*width:300px;*/
+  }
+  input {
+    line-height:30px;
+    height:30px;
+  }
+  input[type=text] {
+    padding:0 5px;
+    font-size:12px;
+  }
+}
 
 
 // =============================================================================
