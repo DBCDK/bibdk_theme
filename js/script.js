@@ -248,9 +248,9 @@
                     center:0,
                     createnew:0,
                     scrollbars:1,
-                    status:1
+                    status:1,
                     left:15,
-                    top:15,
+                    top:15
                 }
                 ,
                 windowLeftTop: {
