@@ -1,7 +1,7 @@
 <div class="work element-wrapper">
   <div class="element">
     <div class="work-header element-section">
-      <?php print($actions); ?>
+      <?php print drupal_render($actions); ?>
       <!-- actions -->
       <div class="element-title">
         <hgroup>
