@@ -80,6 +80,12 @@ ul, ol {
   list-style: none;
 }
 
+.region-content ul, .region-content ol {
+  padding: 0 0 0 20px;;
+  list-style: disc outside none;
+}
+
+
 
 
 // =============================================================================
