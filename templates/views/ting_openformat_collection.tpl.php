@@ -24,5 +24,5 @@
     <!-- element-section -->
   </div>
   <!-- element -->
-
+  <div class="msg-<?php print $uid; ?>"></div>
 </div>
