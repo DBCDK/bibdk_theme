@@ -177,3 +177,18 @@ hr {
     vertical-align:top;
   }
 }
+
+table.table-data{
+  th {
+    padding-right:10px;
+    text-align:left;
+    vertical-align:top;
+    color:$dark_grey5;
+    font-weight:bold;
+    width: 100px;
+  }
+  td {
+    color:$dark_grey4;
+    vertical-align:top;
+  }
+}

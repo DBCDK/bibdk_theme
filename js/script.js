@@ -244,7 +244,7 @@
                 ,
                 reservation: {
                     height:650,
-                    width:480,
+                    width:495,
                     center:0,
                     createnew:0,
                     scrollbars:1,
