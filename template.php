@@ -44,7 +44,6 @@ function bibdk_theme_page_alter(&$page) {
   if (!empty($page['content']['system_main']['search_form'])) {
     unset($page['content']['system_main']['search_form']);
   }
-
 }
 
 /**
@@ -61,9 +60,6 @@ function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'vejviser') {
     $variables['classes_array'][] = 'lift-columns';
   }
-
-
-
 }
 
 /**
@@ -103,8 +99,6 @@ function bibdk_theme_preprocess_page(&$variables) {
   }
 }
 
-
-
 /**
  * Implements template_process_page().
  */
@@ -119,10 +113,7 @@ function bibdk_theme_process_page(&$variables) {
   if (arg(0) == 'node' && arg(1) == '') {
     unset($variables['title']);
   }
-
 }
-
-
 
 /**
  * Implements hook_form_alter().
@@ -153,42 +144,46 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
-   }
+  }
 }
-
-
 
 function _wrap_in_element(&$form) {
   $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
   $form['#suffix'] = '</div></div>';
 }
+
 function _alter_user_login(&$form, &$form_state, $form_id) {
   unset($form['inputs']['name']['#description']);
   unset($form['inputs']['pass']['#description']);
+
+  // move persistent login checkbox to actions 
+  if (isset($form['persistent_login'])) {
+    // show checkbox BEFORE submit button
+    $form['persistent_login']['#weight'] = -1;
+    $form['actions']['remember_me'] = $form['persistent_login'];
+    unset($form['persistent_login']);
+  }
 }
+
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
 }
+
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');
 }
+
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
 }
 
 /* HOOK_FORM_ALTER END */
 
-
-
-
-
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
-
-
 
 /** \brief set sidebar block for user pages
  *
@@ -206,15 +201,13 @@ function _bibdk_theme_create_user_sidebar(&$variables) {
     if (!$user->uid && isset($variables['tabs']['#primary'])) {
       $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
     }
-    else{
-      if( isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] ) ) {
+    else {
+      if (isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
         unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
       }
     }
   }
 }
-
-
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   $variables['link_attributes']['class'][] = 'btn';
@@ -260,9 +253,6 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
   $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
 }
 
-
-
-
 /**
  * Override theme function for a CAPTCHA element.
  */
@@ -283,9 +273,6 @@ function bibdk_theme_captcha($variables) {
     return '<div class="captcha">' . drupal_render_children($element) . '</div>';
   }
 }
-
-
-
 
 /* * *** PAGER ****** */
 
@@ -368,7 +355,8 @@ function bibdk_theme_pager_first($variables) {
   // If we are anywhere but the first page
   if ($pager_page_array[$element] > 0) {
     $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
-  } else {
+  }
+  else {
     $attributes['class'][] = 'disabled';
     $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
   }
@@ -509,7 +497,6 @@ function bibdk_theme_item_list($variables) {
   return $output;
 }
 
-
 function bibdk_theme_links__locale_block(&$variables) {
   // #534 BUG: Sprogv?lger p? biblioteksvejviser-s?geresultatsiden returnerer en blank side
   foreach ($variables['links'] as $id => $link) {
@@ -559,7 +546,7 @@ function bibdk_theme_links__locale_block(&$variables) {
         $class[] = 'last';
       }
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
-           && (empty($link['language']) || $link['language']->language == $language_url->language)) {
+          && (empty($link['language']) || $link['language']->language == $language_url->language)) {
         $class[] = 'active';
       }
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';

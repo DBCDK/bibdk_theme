@@ -415,8 +415,23 @@ textarea::-webkit-input-placeholder {
 }
 
 
+// ===========
+// another specific form ? user-login (remember-me checkbox)
+//===========
 
-
+#user-login {
+  .form-item.form-item-remember-me{
+    float:left;
+    margin:0;
+    padding:0;
+  }
+  input[type="submit"] {
+    float:left;
+  }
+  #edit-actions{
+    padding-bottom:3em;
+  }
+}
 
 // =============================================================================
 // Reservation
