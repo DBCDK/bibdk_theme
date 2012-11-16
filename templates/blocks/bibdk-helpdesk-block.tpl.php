@@ -12,7 +12,7 @@
 
       <footer>
         <div class="field-vagt-image">
-          <img class="field-vagt-image" src="<?php print $image; ?>" />
+          <?php print $image; ?>
         </div>
         <div class="field-link">
           <span class="icon icon-left icon-white-right">&nbsp;</span><?php print $link;?>
