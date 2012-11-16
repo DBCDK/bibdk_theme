@@ -72,7 +72,7 @@
 // Library
 // =============================================================================
 
-.library {
+.ting-agency-library {
   @extend .clearfix;
 
   hgroup {
@@ -85,6 +85,10 @@
     font-weight:normal;
     color:$light_grey5;
   }
+
+ul{
+list-style-type:none;
+}
 
   &:nth-child(2n) {
     background-color:$light_grey1;
@@ -100,9 +104,6 @@
   &.order-agency {
 
   }
-
-
-
 }
 
 .library-details-column-1,
