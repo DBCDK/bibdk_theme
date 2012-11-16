@@ -421,13 +421,11 @@ textarea::-webkit-input-placeholder {
 
 #user-login {
   .form-item.form-item-remember-me{
-    float:left;
+    float:right;
     margin:0;
     padding:0;
   }
-  input[type="submit"] {
-    float:left;
-  }
+  
   #edit-actions{
     padding-bottom:3em;
   }
