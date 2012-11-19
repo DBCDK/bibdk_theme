@@ -469,8 +469,12 @@ textarea::-webkit-input-placeholder {
 // Popup
 // =============================================================================
 
+
 #popup #title {
-  margin:0 0 0 20px;
+  margin:20px 0 0 20px;
+  line-height:35px;
+  height:auto;
+  min-height:73px;
 }
 
 #popup .messages {
