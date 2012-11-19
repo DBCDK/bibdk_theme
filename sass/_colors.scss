@@ -1,0 +1,78 @@
+// =============================================================================
+// Colors
+// =============================================================================
+
+$white:       #ffffff;
+$btn_blue:    #2590b0;
+
+$zebraOdd:    #c7e1e8;
+$zebraEven:   lighten($zebraOdd, 10%);
+
+$dark_grey1:  #161616; // Darkest
+$dark_grey2:  #25292c;
+$dark_grey3:  #3c4043;
+$dark_grey4:  #51565a;
+$dark_grey5:  #6c7379;
+
+$light_grey1: #f7f7f7; // Lightest
+$light_grey2: #ebebeb;
+$light_grey3: #dcdcdc;
+$light_grey4: #a5a5a5;
+$light_grey5: #999999;
+
+
+$elementWrapper: #ebebeb;
+
+$baseColor: #25292c;
+$labelColor: #999;
+$borderColor: #dcdcdc;
+
+
+$messagesGreen:   #47a747;
+$messagesYellow:  #f9b000;
+$messagesRed:     #e04646;
+
+
+.text-white {
+  color:$white;
+}
+.text-darkgrey {
+  color:$dark_grey5;
+}
+.text-lightgrey {
+  color:$light_grey5;
+}
+
+
+
+// =============================================================================
+// Gradients
+// Simple mixin to create gradient with two color
+// =============================================================================
+@mixin gradient($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%);
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,63 +1,116 @@
-//
-// Import: Typography
-//
+// =============================================================================
+// Defaults
+// =============================================================================
 
-body,
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin:0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $dark_grey2;
+}
+
+html,
 button,
 input,
 select,
 textarea {
-	font-size: 12px;
-  line-height: 1.5;
-	font-family: 'Arial';
-  color: $dark_grey2;
+  font-family: 'Arial', sans-serif;
 }
+
+
+
+
+// =============================================================================
+// Links
+// =============================================================================
+
 a {
-	text-decoration: none;
+  text-decoration: none;
   color:$btn_blue;
 }
+
+
+
+// =============================================================================
+// Headers
+// =============================================================================
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	margin:0;
+  margin:0;
 }
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+
+
+
+// =============================================================================
+// Lists
+// =============================================================================
 dl, dt, dd {
-	margin:0;
+  margin:0;
 }
-fieldset {
-}
-textarea {
-  resize: vertical;
-}
-input,
-button,
-textarea {
-  @include reset-input;
-}
-input[type=text] {
-	@include border-radius(4px);
-	@include box-shadow(inset 0px 1px 2px rgba(black,.3));
-}
-input[type=checkbox],
-input[type=radio] {
-	font-size: 1.333em;
-	margin-right: 8px;
-	cursor:pointer;
-}
-img {
-  vertical-align: middle;
-}
+
 ul, ol {
   margin:0;
   padding:0;
   list-style: none;
 }
-address {
-	font-style:normal;
+
+.field-name-body ul, .field-name-body ol {
+  padding: 0 0 0 20px;;
+  list-style: disc outside none;
 }
+
+
+
+
+// =============================================================================
+// Misc
+// =============================================================================
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+address {
+  font-style:normal;
+}
+b,
+strong {
+  font-weight: bold;
+}
+pre {
+  margin:0 0 10px;
+}
+blockquote {
+  margin: 1em 40px;
+}
+
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -73,49 +126,70 @@ address {
 :-moz-placeholder {
   color: $dark_grey4;
 }
+hr {
+  border: 1px solid gray;
+  height: 1px;
+}
 
 
 
 .text {
 
-	p {
-		margin:0 0 0.8333em 0;
-	}
-	li {
-		list-style:none;
-		background:url(../img/list-style-image.gif) no-repeat 0% center;
-		padding-left:10px;
-		line-height:180%;
-	}
+  p {
+    margin:0 0 0.8333em 0;
+  }
+  li {
+    list-style:none;
+    background:url(../img/list-style-image.gif) no-repeat 0% center;
+    padding-left:10px;
+    line-height:180%;
+  }
 }
-.text-white {
-	color:$white;
-}
-.text-darkgrey {
-	color:$dark_grey5;
-}
-.text-lightgrey {
-	color:$light_grey5;
-}
+
 .text-small {
-	font-size:0.916667; // 11px;
+  font-size:0.916667; // 11px;
 }
 
 
 
+// =============================================================================
+// Tables
+// =============================================================================
+
+
+//
+// Manifestation data
+//
 .manifestation-data {
 
-	table {
-		line-height:180%;
-	}
-	th {
-		padding-right:10px;
-		text-align:left;
-		color:$light_grey5;
-		font-weight:normal;
+  table {
+    line-height:180%;
+  }
+  th {
+    padding-right:10px;
+    text-align:left;
+    vertical-align:top;
+    color:$light_grey5;
+    font-weight:normal;
     width: 100px;
-	}
-	td {
-		color:$dark_grey4;
-	}
+  }
+  td {
+    color:$dark_grey4;
+    vertical-align:top;
+  }
+}
+
+table.table-data{
+  th {
+    padding-right:10px;
+    text-align:left;
+    vertical-align:top;
+    color:$dark_grey5;
+    font-weight:bold;
+    width: 100px;
+  }
+  td {
+    color:$dark_grey4;
+    vertical-align:top;
+  }
 }

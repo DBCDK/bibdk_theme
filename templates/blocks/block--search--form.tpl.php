@@ -1,3 +1,3 @@
 <nav id="search-form" class="clearfix" >
-    <?php print $content; ?>
+  <?php print $content; ?>
 </nav>

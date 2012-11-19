@@ -1,0 +1,520 @@
+// =============================================================================
+// Drupal form element
+// =============================================================================
+
+.form-wrapper {
+  padding:0 20px;
+  border-bottom:solid 1px #ddd;
+}
+.form-wrapper .form-wrapper {
+  padding:0;
+  border-bottom:none;
+}
+.form-wrapper.form-actions {
+  padding:20px;
+}
+.form-item {
+  padding:20px;
+  @include clearfix();
+}
+.form-wrapper .form-item {
+  padding:20px 0;
+}
+.form-item .form-item {
+  padding:0;
+}
+
+.vertical-tabs .form-wrapper {
+  padding:0 20px;
+}
+.vertical-tabs .form-item {
+  padding:20px 0;
+}
+
+
+
+
+// =============================================================================
+// Fieldsets
+// =============================================================================
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-nav .fieldset-wrapper {
+  padding:0;
+}
+.fieldset-legend {
+  font-size: 16px;
+  display:block;
+  padding:20px 0;
+}
+
+
+
+// =============================================================================
+// Labels
+// =============================================================================
+
+label {
+  display: block;
+  font-size:14px;
+  margin-bottom:5px;
+  color:$labelColor;
+}
+label.option {
+  display: inline;
+  color:$baseColor;
+}
+.form-type-password-confirm > label {
+  margin-bottom:15px;
+}
+
+
+
+// =============================================================================
+// Descriptions
+// =============================================================================
+
+.form-item .description {
+  margin-top:5px;
+}
+
+
+
+// =============================================================================
+// Radios and checkboxes
+// =============================================================================
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+  cursor:pointer;
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-checkboxes,
+.form-radios {
+  @extend .clearfix;
+}
+.form-checkboxes .form-type-checkbox,
+.form-radios .form-type-radio {
+  float:left;
+  margin-right:20px;
+}
+
+
+
+// =============================================================================
+// Selects
+// =============================================================================
+
+select {
+  @include inline-block();
+  @include box-sizing(border-box);
+
+  border: 1px solid darken($borderColor, 10%);
+  background-color:#fff;
+  min-width: 100px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #555555;
+
+  &:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+
+
+// =============================================================================
+// Text fields and text areas
+// =============================================================================
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  @include inline-block();
+  @include box-sizing(border-box);
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+  @include transition(border .2s, box-shadow .2s);
+
+  // max-width:100%;
+  padding: 10px;
+  color: #555555;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid $borderColor;
+}
+
+textarea {
+  @include border-radius(3px 3px 0 0);
+  resize: vertical;
+  height: auto;
+  width:100%;
+  padding:10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  @include border-radius(3px);
+  max-width:100%;
+  // height: 30px;
+  // line-height: 30px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9; // IE9
+}
+
+
+
+
+// =============================================================================
+// Password with confirm.
+// =============================================================================
+
+input.password-confirm,
+input.password-field {
+  width: 45%;
+}
+input.password-field {
+  margin-bottom: 15px;
+}
+.confirm-parent,
+.password-parent {
+  width: 100%;
+}
+div.password-confirm,
+.password-strength {
+  width: 50%;
+  margin-top:25px;
+}
+.form-item .password-suggestions {
+  @include box-sizing(border-box);
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #B4B4B4;
+}
+
+
+// =============================================================================
+// File upload
+// =============================================================================
+
+input[type="file"] {
+  height: 30px; // In IE7, the height of the select element cannot be changed by height, only font-size
+  *margin-top: 4px; // For IE7, add top margin to align select with labels
+  line-height: 30px;
+}
+input[type="file"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+// =============================================================================
+// Submit buttons
+// =============================================================================
+input[type="submit"] {
+  border:none;
+  @extend .btn;
+  @extend .btn-blue;
+}
+input[type="submit"].btn-grey {
+  @extend .btn-grey;
+}
+input[type="submit"].btn-add-library {
+  @extend .btn-add-library;
+}
+
+
+
+
+.form-actions {
+  text-align:right;
+
+  input[type="submit"],
+  a {
+    font-size:14px;
+    margin-left:5px;
+    &:first-child {
+      margin-left:0;
+    }
+  }
+  a {
+    @include box-sizing(border-box);
+    @include inline-block();
+    height:30px;
+    line-height:30px;
+    margin-left:10px;
+  }
+}
+
+
+
+// =============================================================================
+// Disabled fields
+// =============================================================================
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+}
+
+textarea[disabled],
+textarea[readonly],
+input[type="text"][disabled],
+input[type="text"][readonly] {
+  @include box-shadow(none);
+  background-color: #eeeeee;
+  border-color: $borderColor;
+  color: #999999;
+}
+
+
+
+// =============================================================================
+// Misc forms stuff
+// =============================================================================
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid red;
+}
+
+.form-required {
+  color: #f00;
+}
+
+
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+
+
+// =============================================================================
+// Inline form elements
+// =============================================================================
+
+.form-wrapper-horizontal {
+
+  label {
+    float: left;
+    width: 39%;
+
+    &.option {
+      float:none;
+    }
+  }
+
+  .form-radio {
+    margin-left:39%;
+  }
+  .form-radios .form-radio {
+    margin-left:0;
+  }
+
+  .form-checkbox {
+    margin-left:39%;
+  }
+  .form-checkboxes .form-checkbox {
+    margin-left:0;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    float:right;
+  }
+
+  .form-item .description {
+    margin-top:5px;
+    float:right;
+    width:60%;
+  }
+
+  .form-textarea-wrapper {
+    width:60%;
+    float:right;
+  }
+}
+
+
+
+// =============================================================================
+// Input size
+// =============================================================================
+
+.input-20 {
+  width: 20%;
+}
+.input-40 {
+  width: 40%;
+}
+.input-60 {
+  width: 60%;
+}
+.input-80 {
+  width: 80%;
+}
+.input-100 {
+  width: 100%;
+}
+
+
+
+// =============================================================================
+// a specific form ? user-profile-form
+// =============================================================================
+
+.form-item-persistent-login {
+  padding-top:0;
+  text-align:right;
+}
+
+
+// ===========
+// another specific form ? user-login (remember-me checkbox)
+//===========
+
+#user-login {
+  .form-item.form-item-remember-me{
+    float:right;
+    margin:0;
+    padding:0;
+  }
+  
+  #edit-actions{
+    padding-bottom:3em;
+  }
+}
+
+
+// =============================================================================
+// Reservation
+// =============================================================================
+
+.page-reservation .element {
+  padding-top:50px;
+}
+
+.form-step-guide.form-wrapper {
+  padding:0;
+  border-bottom:none;
+}
+
+.form-step-guide {
+  position:fixed;
+  top:11px;
+  left:11px;
+  right:11px;
+  // background:#999;
+
+  input[type="submit"] {
+    width:25%;
+    height:50px;
+    line-height:50px;
+    font-size:14px;
+    border-radius:0;
+  }
+}
+
+.page-reservation .bottom-space {
+  padding-bottom: 20px;
+}
+
+// =============================================================================
+// Popup
+// =============================================================================
+
+#popup #title {
+  margin:0 0 0 20px;
+}
+
+#popup .messages {
+  margin:10px 20px;
+}
+
+#popup .form-wrapper .form-submit {
+  margin-bottom: 20px;
+}
+
+#popup #edit-navigation .form-submit {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#popup article.manifestation {
+  padding: 0 20px;
+}
+
+#popup #edit-needbeforedate div.form-item-needBeforeDate-month,
+#popup #edit-needbeforedate div.form-item-needBeforeDate-day {
+  float: left;
+  margin-right: 20px;
+}
+
+#popup article.selected_branch .element-section {
+  border-bottom-width: 0;
+  padding: 0 0 20px 20px;
+}
+
+#popup article.selected_branch h3 {
+  font-size: 1.2em;
+}
+
+#popup article.manifestation {
+  padding-top: 20px;
+}
+
+#popup #edit-userparameters  {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+#popup #edit-userparameters .form-item {
+  padding: 20px 0 0 0;
+}
+

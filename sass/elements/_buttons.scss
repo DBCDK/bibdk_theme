@@ -1,8 +1,12 @@
-//
+// =============================================================================
 // Import: Buttons
-//
+// =============================================================================
 
+
+
+// =============================================================================
 // Generate button skins based on a color
+// =============================================================================
 @mixin btn-skin($color) {
 	@include gradient(lighten($color, 2%), darken($color, 2%));
   &:hover {
@@ -12,26 +16,44 @@
   &:active {
     @include gradient($color, darken($color, 4%));
   }
+  &:disabled:hover,
   &.disabled:hover {
     @include gradient(lighten($color, 2%), darken($color, 2%));
   }
 }
+
+
+
+// =============================================================================
+// Define color variations of buttons
+// =============================================================================
 .btn-blue {
   @include btn-skin($btn_blue);
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
 }
 .btn-grey {
   @include btn-skin($dark_grey5);
+  color:$white;
+  text-shadow:0px -1px rgba(black,.4);
 }
 
 
+
+
+
+// =============================================================================
 // Classes
+// =============================================================================
 .btn {
+  @include box-sizing(border-box);
   @include border-radius(3px);
   @include transition(all .1s);
-  @include inline-block(middle);
-  color:$white;
-  text-shadow:0px -1px rgba(black,.4);
-  padding:0.667em 1.25em;
+  @include inline-block();
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
+  white-space:nowrap;
 
   &:hover {
     @include box-shadow(0 2px 2px rgba(black,0.2));
@@ -42,6 +64,7 @@
     @include box-shadow(inset 0 2px 2px rgba(black,0.2));
   }
 
+  &:disabled,
   &.disabled {
     cursor:default;
     opacity:0.5;
@@ -50,11 +73,12 @@
     	@include box-shadow(0 0 0);
     }
   }
+}
 
-  &.btn-fixed-size {
-    padding:0;
-    text-align:center;
-  }
+
+.btn-fixed-size {
+  padding:0;
+  text-align:center;
 }
 
 .btn-wrapper {
@@ -66,3 +90,55 @@
   }
 }
 
+
+
+.btn-add-library {
+  @include transition(none);
+  border:solid 1px #d7d7d7;
+  color:$btn_blue;
+  text-shadow:none;
+  padding-left:40px;
+
+  background: #fff;
+  background-image: url(../img/library-favorite.png); /* fallback */
+  background-image: url(../img/library-favorite.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
+  background-image: url(../img/library-favorite.png), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
+  background-image: url(../img/library-favorite.png),    -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
+  background-image: url(../img/library-favorite.png),     -ms-linear-gradient(top, #fff, #eee); /* IE10 */
+  background-image: url(../img/library-favorite.png),      -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
+  background-image: url(../img/library-favorite.png),         linear-gradient(top, #fff, #eee);
+  background-repeat:no-repeat;
+  background-position:0%;
+  &:hover {
+    @include box-shadow(0 2px 2px rgba(black,0.1));
+  }
+}
+
+
+.set-default-order-agency {
+  @extend .btn;
+  border:solid 1px #d7d7d7;
+  margin-bottom:10px;
+
+  background: #fff;
+  background-image: url(); /* fallback */
+  background-image: url(), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
+  background-image: url(), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
+  background-image: url(),    -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
+  background-image: url(),     -ms-linear-gradient(top, #fff, #eee); /* IE10 */
+  background-image: url(),      -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
+  background-image: url(),         linear-gradient(top, #fff, #eee);
+  background-repeat:no-repeat;
+  background-position:0%;
+  &:hover {
+    @include box-shadow(0 2px 2px rgba(black,0.1));
+  }
+}
+
+.order-agency .set-default-order-agency {
+  @include box-shadow(inset 0 1px 1px rgba(black,0.4));
+}
+
+.selected-agency {
+  font-weight:bold;
+}

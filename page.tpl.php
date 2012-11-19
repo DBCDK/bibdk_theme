@@ -1,4 +1,4 @@
-<nav id="topbar-wrapper">
+<nav id="topbar-wrapper" role="navigation">
 
   <div class="container">
     <div class="row">
@@ -16,8 +16,6 @@
 </nav>
 <!-- #topbar-wrapper -->
 
-
-
 <header id="header-wrapper">
 
   <div class="container">
@@ -28,7 +26,7 @@
 
           <div id="header-logo">
             <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Bibliotek.dk logo'); ?>"/>
+              <?php print render($logo); ?>
             </a>
           </div>
 
@@ -46,7 +44,7 @@
 
 
 
-<nav id="search-panel-wrapper">
+<nav id="search-panel-wrapper" role="search">
 
   <div class="container">
     <div class="row">
@@ -66,7 +64,7 @@
 
 
 
-<section id="messages-wrapper">
+<section id="messages-wrapper" role="alert">
 
   <div class="container">
     <div class="row">
@@ -105,7 +103,6 @@
 <!-- #subjects-wrapper -->
 
 
-
 <section id="columns-wrapper">
 
   <div class="container">
@@ -121,6 +118,9 @@
 
         <?php if (!empty($page['content'])): ?>
           <div class="<?php print $content_span; ?>">
+            <?php if (!empty($title)): ?>
+              <h1 id="title"><?php print $title; ?></h1>
+            <?php endif; ?>
             <?php print render($page['content']); ?>
           </div>
         <?php endif; ?>
@@ -145,7 +145,7 @@
         <div id="footer">
 
           <div id="footer-logo">
-            <img src="<?php print $footer_logo; ?>" alt="<?php print t('Bibliotek.dk - loan of books, music, and films'); ?>" />
+            <?php print render($logo_small); ?>
           </div>
 
           <?php print render($page['footer']); ?>

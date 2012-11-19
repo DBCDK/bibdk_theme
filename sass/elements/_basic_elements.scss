@@ -1,378 +1,399 @@
-//
+// =============================================================================
 // Import: Basic elements
-//
+// =============================================================================
 
 
 
-
-//
-// An element!
-//
+// =============================================================================
+// A basic element
+// =============================================================================
 
 .element-wrapper {
-	background:$light_grey2;
-	padding:10px;
-	margin-bottom:10px;
+  border:solid 10px $elementWrapper;
+  margin-bottom:10px;
 }
 .element {
-	background:$white;
-	border:solid 1px $light_grey3;
+  border:solid 1px $borderColor;
+  border-bottom:none;
 }
 .element-section {
-	border-top:solid 1px $light_grey3;
-	position:relative;
-
-	&:first-child {
-		border-top:none;
-	}
+  border-bottom:solid 1px $borderColor;
+  position:relative;
+  padding:20px;
 }
-
 .element-section-with-controls {
-	padding-left:20px;
-	height:60px;
-	line-height:60px;
+  padding:0 0 0 20px;
+  height:60px;
+  line-height:60px;
 }
 
 .element-title {
 
-	hgroup {
-		margin-bottom:10px;
-	}
-	h2 {
-		font-size:1.666em; // 20px
-		line-height:100%;
-		color:$dark_grey4;
+  hgroup {
+    margin-bottom:10px;
+  }
+  h2 {
+    font-size:1.666em; // 20px
+    line-height:100%;
+    color:$dark_grey4;
 
-		span {
-			font-size:0.7em;
-			font-weight:normal;
-			color:$dark_grey5;
-		}
-	}
-	h3 {
-		font-size:1.1666em; // 14px
-		font-weight:normal;
-		color:$light_grey5;
-	}
+    span {
+      font-size:0.7em;
+      font-weight:normal;
+      color:$dark_grey5;
+    }
+  }
+  h3 {
+    font-size:1.1666em; // 14px
+    font-weight:normal;
+    color:$light_grey5;
+  }
 }
 
 
 
-
-//
+// =============================================================================
 // Table (with toggle)
-//
+// =============================================================================
 
 .table {
 
-	table {
-		width:100%;
-		font-size:12px;
-	}
-	tr {
-		border-bottom:solid 1px $light_grey3;
-	}
-	th,
-	td {
-		text-align:left;
-		line-height:20px;
-		padding:10px 10px;
+  table {
+    width:100%;
+    font-size:12px;
+  }
+  tr {
+    border-bottom:solid 1px $borderColor;
+  }
+  th,
+  td {
+    text-align:left;
+    line-height:20px;
+    padding:10px 10px;
 
-		&:first-child {
-			text-align:left;
-			padding-left:20px;
-		}
-		&:last-child {
-			text-align:left;
-			padding-right:20px;
-		}
-	}
-	th {
-		color:$light-grey5;
-	}
+    &:first-child {
+      text-align:left;
+      padding-left:20px;
+    }
+    &:last-child {
+      text-align:left;
+      padding-right:20px;
+    }
+  }
+  th {
+    color:$light-grey5;
+  }
 
-	.table-toggle {
-		padding:10px 20px;
-	}
+  .table-toggle {
+    padding:10px 20px;
+  }
 }
+
 .table-actions {
-	position:absolute;
-	top:15px;
-	right:20px;
+  position:absolute;
+  top:15px;
+  right:20px;
 }
 .table-actions button {
-	border:solid 1px #d7d7d7;
-	@include border-radius(3px);
-	padding: 6px 10px;
-
-	@include gradient(#ffffff, #eeeeee);
+  @include gradient(#ffffff, #eeeeee);
+  @include border-radius(3px);
+  border:solid 1px #d7d7d7;
+  padding: 6px 10px;
 }
 
-
-
-
-//
+// =============================================================================
 // Tabs
-//
+// =============================================================================
 
 .bibdk-tabs {
-	border:solid 1px $light_grey3;
+  border:solid 1px $borderColor;
 
-	.tabs-nav {
-		border-bottom:solid 1px $light_grey3;
+  .tabs-nav {
+    border-bottom:solid 1px $borderColor;
 
-		a {
-			float:left;
-			display:block;
-			border-right:solid 1px $light_grey3;
-			background-color:$light_grey1;
-			color:$dark_grey4;
+    a {
+      float:left;
+      display:block;
+      border-right:solid 1px $borderColor;
+      background-color:$light_grey1;
+      color:$dark_grey4;
 
-			&:hover {
-			}
+      &:hover {
+      }
 
-			&.active {
-				background-color:$white;
-				border-bottom:solid 1px $white;
-				margin-bottom:-1px;
-				font-weight:bold;
-			}
+      &.active {
+        background-color:$white;
+        border-bottom:solid 1px $white;
+        margin-bottom:-1px;
+        font-weight:bold;
+      }
       &.inactive{
         opacity:0.5;
         cursor: default;
       }
-		}
-	}
+    }
+  }
+  .tabs-nav-sub {
+    margin:10px 20px;
 
+    a {
+      color:$dark_grey4;
+      @include inline-block();
+      @include border-radius(10px);
+      padding:5px 10px;
+      border:solid 1px $borderColor;
+
+      &.active {
+        font-weight:bold;
+        border-color:darken($borderColor, 10%);
+      }
+    }
+  }
 }
+
+//
 // Light tabs
+//
 .bibdk-tabs-light {
-	margin-bottom:10px;
-	font-size:0.91666em; // 11px
+  margin-bottom:10px;
+  font-size:0.91666em; // 11px
 
-	.tabs-nav {
+  .tabs-nav {
 
-		a {
-			padding:10px 20px;
-		}
-	}
+    a {
+      padding:10px 20px;
+    }
+  }
 }
+
+//
 // Heavy tabs
+//
 .bibdk-tabs-heavy {
 
-	.tabs-nav {
+  .tabs-nav {
 
-		a {
-			padding:12px 20px;
-		}
-	}
+    a {
+      padding:12px 20px;
+    }
+  }
 }
 
 
 
-
-//
+// =============================================================================
 // Zebra striped content
-//
+// =============================================================================
 
 .zebra-toggle {
-	background:$zebraOdd;
-	padding:10px 20px;
+  background:$zebraOdd;
+  padding:10px 20px;
 
-	a {
-		color:darken($btn_blue, 5%);
-	}
+  a {
+    color:darken($btn_blue, 5%);
+  }
 }
 .zebra {
-	padding:20px 20px 20px 10px;
-	border-left:solid 10px $zebraOdd;
-	border-bottom:solid 1px $light_grey3;
-	background-color:$light_grey1;
+  padding:20px 20px 20px 10px;
+  border-left:solid 10px $zebraOdd;
+  border-bottom:solid 1px $borderColor;
+  background-color:$light_grey1;
 
-	&:nth-child(even) {
-		border-left:solid 10px $zebraEven;
-		background-color:$white;
-	}
+  &:nth-child(even) {
+    border-left:solid 10px $zebraEven;
+    background-color:$white;
+  }
 
-	&:last-child {
-		border-bottom:none;
-	}
+  &:last-child {
+    border-bottom:none;
+  }
 }
 
 
 
-
-//
+// =============================================================================
 // Actions
-//
+// =============================================================================
 
 .actions {
-	float:right;
-	padding-left:15px;
-	border-left:dotted 1px $light_grey3;
-}
-.subwork .actions {
-    width: 140px;
-}
-.primary-actions {
+  float:right;
+  padding-left:15px;
+  border-left:dotted 1px $borderColor;
 }
 .secondary-actions {
-	padding:10px 0 0 0;
-	margin:10px 0 0 0;
-	border-top:dotted 1px $light_grey3;
+  padding:10px 0 0 0;
+  margin:10px 0 0 0;
+  border-top:dotted 1px $borderColor;
 }
 
 
 
-
-//
+// =============================================================================
 // Dropdown menu
-//
+// =============================================================================
 
 .dropdown-wrapper {
-	position:relative;
-	float:left;
+  position:relative;
+  float:left;
 }
 .dropdown-leftalign {
-	left: 0;
+  left: 0;
 }
 .dropdown-rightalign {
-	right: 0;
+  right: 0;
 }
 .dropdown-menu {
-	@include border-radius(6px);
-	@include box-shadow(0 5px 10px rgba(black,0.2));
+  @include border-radius(6px);
+  @include box-shadow(0 5px 10px rgba(black,0.2));
 
-	position: absolute;
+  position: absolute;
   top: 100%;
   z-index: 5;
   min-width:100%;
   padding:6px 0;
   margin: 2px 0 0;
 
-	border: 1px solid rgba(black, 0.2);
-	background-color: $white;
-	font-size:12px;
+  border: 1px solid rgba(black, 0.2);
+  background-color: $white;
+  font-size:12px;
 
-	.divider {
-		border-bottom:solid 1px $light_grey3;
-	}
+  .divider {
+    border-bottom:solid 1px $borderColor;
+  }
 
-	a {
-		display:block;
-		margin:0;
-		padding:5px 20px;
-		line-height:20px;
+  a {
+    display:block;
+    margin:0;
+    padding:5px 20px;
+    line-height:20px;
 
-		&:hover {
-			background:$light_grey1;
-		}
+    &:hover {
+      background:$light_grey1;
+    }
 
-		&.current {
-			background:$light_grey2;
-		}
-	}
-       li.pager-current a {
-              background:$light_grey2;
-       }
-       li a span {
-              display: none;
-       }
+    &.current {
+      background:$light_grey2;
+    }
+  }
+  li.pager-current a {
+    background:$light_grey2;
+  }
+  li a span {
+    display: none;
+  }
 }
 
 
 
+// =============================================================================
+// Horizontal search form
+// =============================================================================
 
-//
+.search-form-horizontal {
+  @include clearfix();
+  padding:0;
+
+  .form-wrapper {
+    border:none;
+  }
+
+  .form-type-textfield,
+  .form-actions {
+    float:left;
+    margin:0;
+    padding:0;
+  }
+
+  input {
+    display:block;
+  }
+  input[type=text] {
+    width:100%;
+  }
+  input[type=submit] {
+    width:100%;
+  }
+}
+
+
+// =============================================================================
 // Works controls (above the list of works)
-//
+// =============================================================================
 
 .works-controls {
-	display:block;
-	background:#fbfbfb;
-	margin-bottom:20px;
-	border:solid 1px $light_grey3;
+  display:block;
+  background:#fbfbfb;
+  margin-bottom:20px;
+  border:solid 1px $borderColor;
 
-	line-height:60px;
-	height:60px;
+  line-height:60px;
+  height:60px;
 
-	h1 {
-		margin-left:20px;
-		font-size:18px;
-		color:$btn_blue;
-	}
+  h1 {
+    margin-left:20px;
+    font-size:18px;
+    color:$btn_blue;
+  }
 }
 .works-control-wrapper-left {
-	float:left;
-	border-right:solid 1px $light_grey3;
+  float:left;
+  border-right:solid 1px $borderColor;
 }
 .works-control-wrapper-right {
-	float:right;
-	border-left:solid 1px $light_grey3;
+  float:right;
+  border-left:solid 1px $borderColor;
 }
 .works-control {
-	font-size:14px;
+  font-size:14px;
 
-	&:active,
-	&.toggled {
-		@include box-shadow(inset 0 0px 1px rgba(black,.8));
-		background-color:darken(#fbfbfb, 2%);
-	}
+  &:active,
+  &.toggled {
+    @include box-shadow(inset 0 0px 1px rgba(black,.8));
+    background-color:darken(#fbfbfb, 2%);
+  }
 }
 
+//
 // Toggle collapsed/expanded
+//
 .works-toggle {
-	padding:0 20px;
-	float:left;
+  padding:0 20px;
+  float:left;
 }
 .works-toggle-collapse,
 .works-toggle-expand {
-	@include inline-block(middle);
-	width:17px;
+  @include inline-block(middle);
+  width:17px;
 }
 .works-toggle-collapse {
-	background:url(../img/works-collapse.png) no-repeat 50% 50%;
+  background:url(../img/works-collapse.png) no-repeat 50% 50%;
 }
 .works-toggle-expand {
-	background:url(../img/works-expand.png) no-repeat 50% 50%;
+  background:url(../img/works-expand.png) no-repeat 50% 50%;
 }
 
+//
 // Sorting
+//
 .works-sort {
-	padding:0 20px;
-	float:left;
+  padding:0 20px;
+  float:left;
 }
 
+//
 // Paging
+//
 .works-pager-back,
 .works-pager-forward,
 .works-pager-select {
-	float:left;
+  float:left;
 }
 .works-pager-back,
 .works-pager-forward {
-	padding:0 10px;
+  padding:0 10px;
 }
 .works-pager-select {
-	padding:0 20px;
-	border-left:solid 1px $light_grey3;
-	border-right:solid 1px $light_grey3;
+  padding:0 20px;
+  border-left:solid 1px $borderColor;
+  border-right:solid 1px $borderColor;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

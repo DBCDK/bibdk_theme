@@ -1,13 +1,6 @@
-//
-// Import: Specific elements
-//
-
-
-
-
-//
+// =============================================================================
 // Work
-//
+// =============================================================================
 
 // Work header
 .work-header {
@@ -46,7 +39,7 @@
   float:right;
   margin:0 0 10px 20px;
   padding:0 0 0 15px;
-  border-left:dotted 1px $light_grey3;
+  border-left:dotted 1px $borderColor;
   img {
     width:100%;
   }
@@ -75,14 +68,12 @@
 
 
 
-//
+// =============================================================================
 // Library
-//
+// =============================================================================
 
-.library {
-
-  border-top:solid 1px $light_grey3;
-  background:url(../img/favorite.png) no-repeat 20px 22px;
+.ting-agency-library {
+  @extend .clearfix;
 
   hgroup {
     margin-bottom:10px;
@@ -95,15 +86,23 @@
     color:$light_grey5;
   }
 
+ul{
+list-style-type:none;
+}
+
   &:nth-child(2n) {
     background-color:$light_grey1;
   }
-
   .actions {
     border:none;
   }
-  .element-section {
-    padding-left:45px;
+
+  &.favourite {
+
+  }
+
+  &.order-agency {
+
   }
 }
 
@@ -112,25 +111,44 @@
   float:left;
   width:50%;
 }
+.library-details-column-1 .subheader,
+.library-details-column-2 .subheader {
+  margin-bottom: 0;
+}
 .select-default-library {
   margin-bottom:5px;
 }
 
 
+.edit-personal-info {
+  background:url(../img/icons/blue-edit.png) no-repeat 0%;
+  @include inline-block();
+  padding-left:20px;
+  margin-bottom:3px;
+  color:#999;
+}
+
+.delete-favourite {
+  background:url(../img/icons/red-x.png) no-repeat 0%;
+  @include inline-block();
+  padding-left:20px;
+  color:#999;
+}
 
 
-//
+
+// =============================================================================
 // Frontpage Teaser blocks
-//
+// =============================================================================
 
 .block {
-  margin-bottom:30px;
+  // margin-bottom:30px;
 
   .block-title h2 {
     padding-left:46px; // icon width + 10px
     margin-bottom:20px;
 
-    font-family: 'Lato';
+    font-family: 'Dosis', sans-serif;
     font-weight:300;
     font-size:2em; // 24px
     text-transform:uppercase;
@@ -155,14 +173,9 @@
   background:url(../img/mediatype_icons/games.png) no-repeat;
 }
 
-
-
-
 //
-// Teaser widgets
-//
-
 // Settings box heights
+//
 .widget-height-1 {
   height:100px;
 }
@@ -173,8 +186,9 @@
   height:320px;
 }
 
-
+//
 // widget wrapper used when image is outside widget
+//
 .widget-wrapper {
 
   .field-image {
@@ -183,7 +197,9 @@
   }
 }
 
+//
 // Common widget styling
+//
 .widget {
   position: relative;
   margin-bottom:10px;
@@ -203,7 +219,9 @@
   }
 }
 
+//
 // Dark grey widget
+//
 .widget-dark-grey {
   background:$dark_grey3;
   color: $light_grey4;
@@ -235,8 +253,9 @@
   }
 }
 
-
+//
 // Light grey widget
+//
 .widget-light-grey {
   background:$light_grey2;
   color:$dark_grey3;
@@ -249,7 +268,7 @@
     margin-bottom:10px;
 
     h3 {
-      font-family: 'Lato';
+      font-family: 'Dosis', sans-serif;
       font-size:2em; // 24px
       font-weight:300;
       line-height:120%;
@@ -259,18 +278,22 @@
       }
     }
   }
-
-  .field-body {
-    line-height:150%;
-  }
 }
 
 
-
+//
 // Custom Biblioteksvagt widget
+//
 .widget-biblioteksvagt {
   background: $btn_blue;
   color:$white;
+
+  footer {
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:2;
+  }
 
   .field-title {
     margin-bottom:10px;
@@ -285,22 +308,92 @@
       }
     }
   }
-
   .field-body {
-    line-height:150%;
+    position:relative;
+    z-index:3;
   }
-
-  footer {
-    bottom:0px;
-    left:0px;
-    right:0px;
+  .field-vagt-image {
+    text-align:right;
+  }
+  .field-link {
     background:darken($btn_blue, 5%);
     padding:15px;
   }
 }
 
 
-//user-help-topbar-menu
-.block.block-bibdk-help {
-  margin-bottom: 0;
+
+
+
+// =============================================================================
+// Drupal messages
+// =============================================================================
+
+  .messages {
+    background-position: 10px 10px; // LTR
+    background-repeat: no-repeat;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    padding: 14px 14px 14px 50px; // LTR
+  }
+  .messages.notice {
+    background-image: url(../img/messages/message-24-info.png);
+    background-color: lighten(#437ed7, 20%);
+  }
+  .messages.status {
+    background-image: url(../img/messages/message-24-ok.png);
+    background-color: lighten($messagesGreen, 20%);
+  }
+  .messages.warning {
+    background-image: url(../img/messages/message-24-warning.png);
+    background-color: lighten($messagesYellow, 20%);
+  }
+  .messages.error {
+    background-image: url(../img/messages/message-24-error.png);
+    background-color: lighten($messagesRed, 20%);
+  }
+  .messages ul {
+    margin: 0 0 0 1em; // LTR
+    padding: 0;
+    list-style:none
+  }
+
+
+
+
+// =============================================================================
+// Help menu
+// =============================================================================
+
+.pane-bibdk-help-bibdk-help-popup-menu,
+.pane-bibdk-help {
+  padding:20px;
 }
+
+.pane-bibdk-help-bibdk-help-popup-menu .menu .menu {
+  margin-bottom:10px;
+}
+.pane-bibdk-help-bibdk-help-popup-menu li a {
+  border:solid 1px $borderColor;
+  background-repeat:no-repeat;
+  background-position:100%;
+  display:block;
+  padding:10px 20px;
+  margin-bottom:1px;
+}
+
+
+.pane-bibdk-help-bibdk-help-popup-menu li.expanded a {
+}
+.pane-bibdk-help-bibdk-help-popup-menu li li a {
+  margin-left:10px;
+}
+.pane-bibdk-help-bibdk-help-popup-menu li li li a {
+}
+
+
+
+
+
+
+

@@ -1,28 +1,22 @@
-<?php if (!empty($messages)): ?>
-  <div id="messages">
-    <div class="container">
-      <div class="row">
+<div id="popup">
+
+  <div class="element-wrapper">
+    <div class="element">
+
+      <?php if (!empty($title)): ?>
+        <h1 id="title"><?php print $title; ?></h1>
+      <?php endif; ?>
+
+      <?php if (!empty($messages)): ?>
+        <div id="messages">
           <?php print $messages; ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-
-<section id="columns-wrapper">
-
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-
-        <div id="columns">
-          <?php print render($tabs); ?>
-          <?php print render($page['content']); ?>
         </div>
-        <!-- #columns -->
+      <?php endif; ?>
 
-      </div>
+      <?php print render($page['content']); ?>
+
     </div>
   </div>
 
-</section>
-<!-- #columns-wrapper -->
+</div>
+<!-- #popup -->

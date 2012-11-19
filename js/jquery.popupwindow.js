@@ -5,7 +5,7 @@ jQuery.fn.popupwindow = function(p)
 
 	return this.each(function(index){
 		var settings, parameters, mysettings, b, a;
-		
+                
 		// for overrideing the default settings
 		mysettings = (jQuery(this).attr("rel") || "").split(",");
 
@@ -59,7 +59,7 @@ jQuery.fn.popupwindow = function(p)
 		
 		parameters = "location=" + settings.location + ",menubar=" + settings.menubar + ",height=" + settings.height + ",width=" + settings.width + ",toolbar=" + settings.toolbar + ",scrollbars=" + settings.scrollbars  + ",status=" + settings.status + ",resizable=" + settings.resizable + ",left=" + settings.left  + ",screenX=" + settings.left + ",top=" + settings.top  + ",screenY=" + settings.top;
 		
-		jQuery(this).bind("click", function(){
+		jQuery(this).bind("click.hest", function(){
 			var name = settings.createnew ? "PopUpWindow" + index : "PopUpWindow";
 			window.open(this.href, name, parameters).focus();
 			return false;

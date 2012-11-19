@@ -1,0 +1,62 @@
+// =============================================================================
+// vertical-tabs.css
+// Original file location: 'misc/'
+//
+// @file
+// Vertical tabs styling.
+// =============================================================================
+
+.vertical-tabs {
+  margin:20px 0 20px 180px;
+  border: 1px solid $borderColor;
+  position: relative; // IE6/7
+}
+.vertical-tabs .vertical-tabs-list {
+  width: 180px;
+  border-top: 1px solid $borderColor;
+  position: relative; // IE6
+  margin: -1px 0 -1px -180px; // LTR
+  float: left; // LTR
+}
+.vertical-tabs .vertical-tabs-pane {
+  margin: 0 !important;
+  border: 0;
+}
+.vertical-tabs-pane legend {
+  display: none;
+}
+.vertical-tabs-pane fieldset legend {
+  display: block;
+}
+
+// =============================================================================
+// Layout of each tab
+// =============================================================================
+.vertical-tabs .vertical-tabs-list li {
+  background-color:$light_grey1;
+  border: 1px solid $borderColor;
+  border-top: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0; // IE7
+}
+.vertical-tabs .vertical-tabs-list li a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  color:$light_grey5;
+}
+.vertical-tabs .vertical-tabs-list li.selected {
+  background-color: #fff;
+  border-right-width: 0; // LTR
+}
+.vertical-tabs .vertical-tabs-list .selected strong {
+  color: #333;
+}
+.vertical-tabs .vertical-tabs-list .summary {
+  display: block;
+}
+.vertical-tabs .vertical-tabs ul.vertical-tabs-list .summary {
+  line-height: normal;
+  margin-bottom: 0;
+}

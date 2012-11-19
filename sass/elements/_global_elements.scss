@@ -1,16 +1,19 @@
-//
+// =============================================================================
 // Import: Global elements
-//
+// =============================================================================
 
 body {
   background:$dark_grey3;
 }
+body.page-overlay,
+body.page-reservation {
+  background:$white;
+}
 
 
-
-//
+// =============================================================================
 // Page region wrappers
-//
+// =============================================================================
 #topbar-wrapper {
   background:$dark_grey1;
 }
@@ -31,7 +34,7 @@ body {
   background:$white;
   padding:40px 0 30px;
 }
- .lift-columns #columns-wrapper {
+ .lift-columns #columns {
     margin-top:-112px;
 }
 #footer-wrapper {
@@ -41,21 +44,21 @@ body {
 
 
 
-//
+// =============================================================================
 // Panel content wrappers
-//
+// =============================================================================
 #search-result-wrapper {
   clear: both;
 }
 
 
 
-//
+// =============================================================================
 // Identity
-//
+// =============================================================================
 #header-logo {
   position: absolute;
-  top:15px;
+  top:20px;
 }
 #footer-logo {
   text-align: center;
@@ -63,9 +66,9 @@ body {
 
 
 
-//
+// =============================================================================
 // Language navigation
-//
+// =============================================================================
 #lang-nav,
 #user-help-topbar-menu {
   float: left;
@@ -97,9 +100,9 @@ body {
 
 
 
-//
+// =============================================================================
 // Service navigation
-//
+// =============================================================================
 #user-help-topbar-menu,
 #lang-nav {
 
@@ -118,13 +121,14 @@ body {
 
 
 
-//
+// =============================================================================
 // User navigation
-//
+// =============================================================================
 #user-nav {
   position:absolute;
   top:0;
   width:950px;
+  z-index: 99;
 
   &.with-mats {
       position:fixed;
@@ -133,7 +137,7 @@ body {
 #user-nav-inner {
   position:absolute;
   right:0;
-  z-index: 10;
+  z-index: 99;
 
   a {
     line-height:300%;
@@ -168,10 +172,9 @@ body {
 }
 
 
-
-//
+// =============================================================================
 // Header actions
-//
+// =============================================================================
 .region-header-actions {
   position:absolute;
   right:0;
@@ -206,55 +209,91 @@ body {
 }
 .header-action-vejviser {
 
+  //.search-form-horizontal handles the floating
   &.toggled {
     padding:0;
     background:transparent;
   }
 
+  .form-type-textfield {
+    width:210px;
+    margin-right:5px;
+  }
+  .form-actions {
+    width:85px;
+  }
+
   form {
     width:300px;
+  }
+  input {
+    line-height:30px;
+    height:30px;
+  }
+  input[type=text] {
+    padding:0 5px;
+    font-size:12px;
+  }
+}
 
-    input {
-      float:left;
-      padding:0 5px;
-      line-height:30px;
-      height:30px;
-    }
-    input[type=text] {
-        width:220px;
-        margin-right:5px;
-    }
-    input[type=submit] {
-        width:75px;
-    }
+.header-action-reservation {
+
+  .form-type-textfield {
+    /*width:210px;*/
+    margin-right:5px;
+  }
+  .form-actions {
+    width:85px;
+  }
+
+  form {
+    /*width:300px;*/
+  }
+  input {
+    line-height:30px;
+    height:30px;
+  }
+  input[type=text] {
+    padding:0 5px;
+    font-size:12px;
   }
 }
 
 
-
-//
+// =============================================================================
 // Search form
-//
+// .search-form-horizontal handles the floating
+// =============================================================================
 #search-form {
   margin-bottom:10px;
 
-  input {
-    float:left;
-    height:40px;
-    line-height:40px;
+  .form-wrapper {
+    padding:0;
+  }
+
+  .form-type-textfield {
+    width:84%;
+    margin-right:1%;
     margin-bottom:10px;
   }
+  .form-actions {
+    width:15%;
+    margin-bottom:10px;
+  }
+
+  input {
+    height:40px;
+    line-height:40px;
+  }
   input[type=text] {
-    width:830px;
-    margin-right: 10px;
-    padding:0 1em;
+    padding:0 10px;
     font-size:1.166667em; // 14px
   }
   input[type=submit] {
-    width:110px;
     font-size:1.333333em; // 16px
   }
 }
+
 
 #search-tabs {
   margin-bottom:15px;
@@ -265,7 +304,6 @@ body {
     margin-right:1px;
     padding:10px 20px;
     border-top:solid 1px darken($dark_grey3, 5%);
-
     color:$white;
 
     &:hover {
@@ -273,10 +311,10 @@ body {
     }
   }
 
-  li:first-child a {
+  li.first a {
     @include border-radius(5px 0 0 5px);
   }
-  li:last-child a {
+  li.last a {
     @include border-radius(0 5px 5px 0);
   }
 
@@ -302,9 +340,9 @@ body {
 
 
 
-//
+// =============================================================================
 // Subjects navigation
-//
+// =============================================================================
 #subjects-nav {
 
   li {
@@ -322,12 +360,12 @@ body {
 
 
 
-//
+// =============================================================================
 // Sidebar
-//
+// =============================================================================
 .sidebar-header {
-  height:71px;
-  line-height:71px;
+  height:67px;
+  line-height:67px;
   background-color:$dark_grey3;
   border-bottom:solid 1px darken($dark_grey3, 5%);
 
@@ -407,3 +445,93 @@ body {
     display: none;
   }
 }
+
+
+// =============================================================================
+// Exceptions for facets
+// =============================================================================
+
+#ding-facetbrowser-form {
+
+  .form-item {
+    padding:0;
+  }
+
+  .fieldset-legend {
+    font-size: 14px;
+    padding:0;
+  }
+
+  label.option {
+    display: block;
+    margin-bottom:0;
+  }
+  .form-type-checkbox {
+    float:none;
+    margin:0;
+  }
+
+  .expand_more {
+    cursor:pointer;
+  }
+}
+
+
+
+
+
+
+// =============================================================================
+// Page title
+// =============================================================================
+
+#title {
+  color:#3497be;
+  height:73px;
+  line-height:73px;
+  margin-bottom:10px;
+  margin-left:30px;
+  font-weight:normal;
+  text-transform:uppercase;
+  font-family: 'Dosis', sans-serif;
+}
+
+
+// =============================================================================
+// Help search form
+// =============================================================================
+
+#bibdk-help-search-form {
+
+  padding: 0 20px;
+
+  border-bottom: solid 1px #ddd;
+
+  fieldset.form-wrapper {
+    padding: 0px;
+  }
+
+  .form-type-textfield {
+    width:84%;
+    margin-right:1%;
+  }
+
+  .form-actions {
+    width:15%;
+  }
+
+  input {
+    height:40px;
+    line-height:40px;
+  }
+
+  input[type=text] {
+    padding:0 10px;
+    font-size:1.166667em; // 14px
+  }
+
+  input[type=submit] {
+    font-size:1.333333em; // 16px
+  }
+}
+

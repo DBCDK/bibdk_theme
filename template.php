@@ -1,61 +1,41 @@
 <?php
 
-// /**
-//  * Implements template_preprocess_region
-//  */
-// function bibdk_theme_preprocess_region(&$variables) {
-//   $arg = arg();
-//   if( $arg[0] == 'user' ) {
-//   $s = theme_get_suggestions(arg(), 'region__'.$variables['region']);
-//    $variables['theme_hook_suggestions'] = $s;
-//   }
-// }
+/**
+ * Implements hook_css_alter().
+ *
+ * Unset Drupal CSS files we want to override
+ * See: sass/drupal
+ */
+function bibdk_theme_css_alter(&$css) {
+  unset($css['modules/system/system.base.css']);
+  unset($css['modules/system/system.messages.css']);
+  unset($css['modules/system/system.theme.css']);
+  unset($css['modules/system/system.menus.css']);
+  unset($css['misc/vertical-tabs.css']);
+  unset($css['modules/user/user.css']);
+  unset($css['profiles/bibdk/modules/ding_facetbrowser/css/facetbrowser.css']);
+}
 
 /**
- * Implements Hook theme
+ * Implements hook_theme().
  */
-function bibdk_theme_theme(){
+function bibdk_theme_theme() {
   $path = drupal_get_path('theme', 'bibdk_theme') . '/templates/';
   return array(
     'bibdk_theme_work_info_tabs' => array(
-      'path' => $path.'/views',
-      'variables' => array('tabs'=>''),
-      'template'  => 'bibdk_theme_work_info_tabs',
+      'path' => $path . '/views',
+      'variables' => array('tabs' => ''),
+      'template' => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
   );
 }
 
-/* HOOK_FORM_ALTER BEGIN */
-
-//One hook_form_alter() to rule them all:
-function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-  switch ($form_id) {
-    case 'search_block_form':
-      _alter_search_block_form($form, $form_state, $form_id);
-      break;
-    case 'user_login':
-      _alter_user_login_form($form, $form_state, $form_id);
-      break;
-  }
-}
-
-function _alter_search_block_form(&$form, &$form_state, $form_id) {
-  $form['search_block_form']['#attributes']['class'] = array('clearfix');
-  $form['actions']['submit']['#attributes']['class'] = array('btn', 'btn-blue', 'btn-fixed-size');
-  $form['actions']['#weight'] = -10;
-  $form['search_block_form']['#weight'] = - 12;
-}
-
-function _alter_user_login_form(&$form, &$form_state, $form_id) {
-  unset($form['inputs']['name']['#description']);
-  unset($form['inputs']['pass']['#description']);
-}
-
-/* HOOK_FORM_ALTER END */
-
+/**
+ * Implements hook_page_alter().
+ */
 function bibdk_theme_page_alter(&$page) {
-  //removing search form rendered in content region by search module
+  // Remove search form rendered in content region by search module
   // Logged in
   if (!empty($page['content']['system_main']['content']['search_form'])) {
     unset($page['content']['system_main']['content']['search_form']);
@@ -66,15 +46,49 @@ function bibdk_theme_page_alter(&$page) {
   }
 }
 
-function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
-  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+/**
+ * Implements template_preprocess_html().
+ */
+function bibdk_theme_preprocess_html(&$variables) {
+
+  if (arg(0) == 'search') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+  if (arg(0) == 'user') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+  if (arg(0) == 'vejviser') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
 }
 
+/**
+ * Implements template_preprocess_page().
+ */
 function bibdk_theme_preprocess_page(&$variables) {
-  $footer_logo = theme_get_setting('bibdk_theme_footer_logo');
-  if (!empty($footer_logo)) {
-    $variables['footer_logo'] = file_create_url(drupal_get_path('theme', 'bibdk_theme') . '/' . $footer_logo);
+
+  // Add $logo and $logo_small to page.tpl
+  $variables['logo'] = array(
+    '#theme' => 'image',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header.png',
+    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+  );
+  $variables['logo_small'] = array(
+    '#theme' => 'image',
+    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png',
+    '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+  );
+
+  if (arg(0) == 'reservation') {
+    $variables['theme_hook_suggestions'][] = 'page__overlay';
   }
+  if (arg(0) == 'vejviser') {
+    $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+    $variables['page']['content']['#suffix'] = '</div></div>';
+  }
+
+
+  _bibdk_theme_create_user_sidebar($variables);
 
   // Create span# class for the content region
   if (!empty($variables['page']['sidebar'])) {
@@ -83,7 +97,116 @@ function bibdk_theme_preprocess_page(&$variables) {
   else {
     $variables['content_span'] = "span24";
   }
+}
 
+/**
+ * Implements template_process_page().
+ */
+function bibdk_theme_process_page(&$variables) {
+
+  if (arg(0) == 'search') {
+    unset($variables['title']);
+  }
+  if (arg(0) == 'bibdk_frontpage') {
+    unset($variables['title']);
+  }
+  if (arg(0) == 'node' && arg(1) == '') {
+    unset($variables['title']);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ * One hook_form_alter() to rule them all:
+ */
+function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
+
+  // dpm($form_id);
+
+  switch ($form_id) {
+    case 'user_login':
+      _alter_user_login($form, $form_state, $form_id);
+      _wrap_in_element($form);
+      break;
+    case 'user_pass':
+      _alter_user_login($form, $form_state, $form_id);
+      _wrap_in_element($form);
+      break;
+    case 'user_profile_form':
+      _wrap_in_element($form);
+      break;
+    case 'search_block_form':
+      _alter_search_block_form($form, $form_state, $form_id);
+      break;
+    case 'bibdk_vejviser_form':
+      _alter_bibdk_vejviser_form($form, $form_state, $form_id);
+      break;
+    case 'bibdk_help_search_form':
+      _alter_bibdk_help_search_form($form, $form_state, $form_id);
+      break;
+  }
+}
+
+function _wrap_in_element(&$form) {
+  $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
+  $form['#suffix'] = '</div></div>';
+}
+
+function _alter_user_login(&$form, &$form_state, $form_id) {
+  unset($form['inputs']['name']['#description']);
+  unset($form['inputs']['pass']['#description']);
+
+  // move persistent login checkbox to actions 
+  if (isset($form['persistent_login'])) {
+    // show checkbox BEFORE submit button
+    $form['persistent_login']['#weight'] = -1;
+    $form['actions']['remember_me'] = $form['persistent_login'];
+    unset($form['persistent_login']);
+  }
+}
+
+function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'] = array('search-form-horizontal');
+  $form['search_block_form']['#weight'] = -2;
+  $form['actions']['#weight'] = -1;
+}
+
+function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');
+}
+
+function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'] = array('search-form-horizontal');
+}
+
+/* HOOK_FORM_ALTER END */
+
+function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
+  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
+}
+
+/** \brief set sidebar block for user pages
+ *
+ * @global type $user
+ * @param type $variables
+ */
+function _bibdk_theme_create_user_sidebar(&$variables) {
+  /*   * **** SIDEBAR ***** */
+  // only set sidebar on user pages
+  if (strpos(current_path(), 'user') !== 0) {
+    unset($variables['page']['sidebar']);
+  }
+  else {
+    global $user;
+    if (!$user->uid && isset($variables['tabs']['#primary'])) {
+      $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
+    }
+    else {
+      if (isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
+        unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
+      }
+    }
+  }
 }
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
@@ -92,15 +215,17 @@ function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   return $variables;
 }
 
-function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables){
+function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
   $fields = $variables['fields'];
-  foreach($fields as $name => $field){
-    $field_groups[$field['#formatter']][$name] = $field;
+  foreach ($fields as $name => $field) {
+    if (isset($field['#formatter'])) {
+      $field_groups[$field['#formatter']][$name] = $field;
+    }
   }
   $variables['fields'] = $field_groups;
 }
 
-function bibdk_theme_preprocess_ting_openformat_work(&$variables){
+function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
   $fields = $variables['fields'];
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
@@ -126,10 +251,31 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables){
     ),
   );
   $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
-
 }
 
-/***** PAGER *******/
+/**
+ * Override theme function for a CAPTCHA element.
+ */
+function bibdk_theme_captcha($variables) {
+  $element = $variables['element'];
+  if (!empty($element['#description']) && isset($element['captcha_widgets'])) {
+    $element['captcha_widgets']['captcha_response']['#description'] = FALSE;
+    $fieldset = array(
+      '#type' => 'fieldset',
+      '#title' => FALSE,
+      '#description' => $element['#description'],
+      '#children' => drupal_render_children($element),
+      '#attributes' => array('class' => array('captcha')),
+    );
+    return theme('fieldset', array('element' => $fieldset));
+  }
+  else {
+    return '<div class="captcha">' . drupal_render_children($element) . '</div>';
+  }
+}
+
+/* * *** PAGER ****** */
+
 function bibdk_theme_pager_link($variables) {
   $text = $variables['text'];
   $page_new = $variables['page_new'];
@@ -175,16 +321,17 @@ function bibdk_theme_pager_link($variables) {
   //   possible to use l() here.
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
+
   if (in_array('works-pager-back', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-left">&nbsp;</span></a>';
   }
 
   if (in_array('works-pager-forward', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-blue-right">&nbsp;</span></a>';
   }
 
   if (in_array('works-pager-select', $attributes['class'])) {
-    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">&or;</span></a>';
+    return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '<span class="icon icon-right icon-blue-down">&nbsp;</span></a>';
   }
 
   return '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>';
@@ -207,6 +354,10 @@ function bibdk_theme_pager_first($variables) {
 
   // If we are anywhere but the first page
   if ($pager_page_array[$element] > 0) {
+    $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
+  }
+  else {
+    $attributes['class'][] = 'disabled';
     $output = theme('pager_link', array('text' => $text, 'page_new' => pager_load_array(0, $element, $pager_page_array), 'element' => $element, 'parameters' => $parameters, 'attributes' => $attributes));
   }
 
@@ -278,7 +429,7 @@ function bibdk_theme_pager_last($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-back'),
+    'class' => array('works-control', 'works-pager-forward'),
   );
 
   global $pager_page_array, $pager_total;
@@ -345,3 +496,84 @@ function bibdk_theme_item_list($variables) {
   }
   return $output;
 }
+
+function bibdk_theme_links__locale_block(&$variables) {
+  // #534 BUG: Sprogv?lger p? biblioteksvejviser-s?geresultatsiden returnerer en blank side
+  foreach ($variables['links'] as $id => $link) {
+    $variables['links'][$id]['query'] = drupal_get_query_parameters($_GET);
+  }
+  $links = $variables['links'];
+  $attributes = $variables['attributes'];
+  $heading = $variables['heading'];
+  global $language_url;
+  $output = '';
+
+  if (count($links) > 0) {
+    $output = '';
+
+    // Treat the heading first if it is present to prepend it to the
+    // list of links.
+    if (!empty($heading)) {
+      if (is_string($heading)) {
+        // Prepare the array that will be used when the passed heading
+        // is a string.
+        $heading = array(
+          'text' => $heading,
+          // Set the default level of the heading.
+          'level' => 'h2',
+        );
+      }
+      $output .= '<' . $heading['level'];
+      if (!empty($heading['class'])) {
+        $output .= drupal_attributes(array('class' => $heading['class']));
+      }
+      $output .= '>' . check_plain($heading['text']) . '</' . $heading['level'] . '>';
+    }
+
+    $output .= '<ul' . drupal_attributes($attributes) . '>';
+
+    $num_links = count($links);
+    $i = 1;
+
+    foreach ($links as $key => $link) {
+      $class = array($key);
+
+      // Add first, last and active classes to the list of links to help out themers.
+      if ($i == 1) {
+        $class[] = 'first';
+      }
+      if ($i == $num_links) {
+        $class[] = 'last';
+      }
+      if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
+          && (empty($link['language']) || $link['language']->language == $language_url->language)) {
+        $class[] = 'active';
+      }
+      $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
+
+      if (isset($link['href'])) {
+        // Pass in $link as $options, they share the same keys.
+        $output .= l($link['title'], $link['href'], $link);
+      }
+      elseif (!empty($link['title'])) {
+        // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+        if (empty($link['html'])) {
+          $link['title'] = check_plain($link['title']);
+        }
+        $span_attributes = '';
+        if (isset($link['attributes'])) {
+          $span_attributes = drupal_attributes($link['attributes']);
+        }
+        $output .= '<span' . $span_attributes . '>' . $link['title'] . '</span>';
+      }
+
+      $i++;
+      $output .= "</li>\n";
+    }
+
+    $output .= '</ul>';
+  }
+
+  return $output;
+}
+
