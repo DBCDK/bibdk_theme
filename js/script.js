@@ -281,7 +281,7 @@
             $('.bibdk-popup-link').once().click(function(e){
                 e.preventDefault();
                 if($(this).hasClass('orderedonce')){
-                    var test = confirm("You have already ordered this item once. Continue?");
+                    var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
                     if(test == true){
                         $(this).popupwindow(profiles);
                         $(this).trigger('click.hest', profiles);
