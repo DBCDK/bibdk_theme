@@ -100,6 +100,14 @@ function bibdk_theme_preprocess_page(&$variables) {
 }
 
 /**
+ * Implements template_process_field
+ */
+function bibdk_theme_process_field(&$variables) {
+  //Make field labels translatable the right way!
+  $variables['label'] = isset($variables['label']) ? t($variables['label']) : NULL;
+}
+
+/**
  * Implements template_process_page().
  */
 function bibdk_theme_process_page(&$variables) {
