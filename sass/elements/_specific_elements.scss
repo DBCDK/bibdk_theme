@@ -397,3 +397,18 @@ list-style-type:none;
 
 
 
+// =============================================================================
+// Christmas special
+// =============================================================================
+
+.kravlenisse {
+  background-image: url('../img/kravlenisse.png');
+  z-index: 200;
+  position: absolute;
+  height: 100px;
+  width: 84px;
+  background-repeat: no-repeat;
+  top: -21px;
+  left: 300px;
+}
+

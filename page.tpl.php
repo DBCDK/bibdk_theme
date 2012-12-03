@@ -28,6 +28,7 @@
             <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
               <?php print render($logo); ?>
             </a>
+            <span id="seasonal"></span>
           </div>
 
           <?php print render($page['header_actions']); ?>
