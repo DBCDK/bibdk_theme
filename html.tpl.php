@@ -7,7 +7,14 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+    @font-face {
+        font-family: "Dosis";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Dosis Regular"), local("Dosis-Regular"), url("<?php echo file_create_url(drupal_get_path('theme', 'bibdk_theme')); ?>/dosis.woff") format("woff");
+    }
+  </style>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
