@@ -327,6 +327,15 @@
               }
             });
 
+            //Seasonal images
+            var today = new Date();
+            month = today.getMonth() + 1;
+            if ( month == 12 ) {
+              $('#seasonal').each(function(){
+                $(this).addClass('kravlenisse');
+              });
+            }
+
         // NO CODE AFTER THIS!
         }
     };
