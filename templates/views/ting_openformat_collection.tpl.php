@@ -7,6 +7,9 @@
         <hgroup>
           <h2><?php print $title; ?></h2>
           <h3><?php print $author; ?></h3>
+          <?php if (isset($partOf)) : ?>
+              <span><?php print $partOf; ?></span>
+          <?php endif; ?>
         </hgroup>
       </div>
 
