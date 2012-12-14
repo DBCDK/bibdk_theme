@@ -278,19 +278,19 @@
             };
 
 
-            var orderPopup = false;
-            $('.bibdk-popup-link').unbind('.orderPopup').bind('click.orderPopup', function(event) {
-                event.preventDefault();
-                if( !orderPopup ) {
-                    orderPopup = true;
-                    if ( $(this).hasClass('orderedonce') ) {
-                        var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
-                        if ( test != true ) {
-                            return false;
-                        }
+            $('.bibdk-popup-link').once().click(function(e){
+                e.preventDefault();
+                if($(this).hasClass('orderedonce')){
+                    var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
+                    if(test == true){
+                        $(this).popupwindow(profiles);
+                        $(this).triggerHandler('click.orderPopup', profiles);
+                    } else {
+                        return false;
                     }
+                } else {
                     $(this).popupwindow(profiles);
-                    $(this).trigger('click.orderPopup', profiles);
+                    $(this).triggerHandler('click.orderPopup', profiles);
                 }
             });
 
