@@ -284,14 +284,16 @@
                     var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
                     if(test == true){
                         $(this).popupwindow(profiles);
-                        $(this).trigger('click.hest', profiles);
-                        $(this).unbind('.hest');
+                        $(this).triggerHandler('click.orderPopup', profiles);
+                    } else {
+                        return false;
                     }
                 } else {
                     $(this).popupwindow(profiles);
-                    $(this).trigger('click.hest', profiles);
+                    $(this).triggerHandler('click.orderPopup', profiles);
                 }
             });
+
 
             //Top menu language menu fix
             $('#lang-nav a').each(function(){
