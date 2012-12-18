@@ -123,15 +123,17 @@
             $('.work-toggle-element', context).click(function(e) {
                 e.preventDefault();
                 var id  = $(this).attr('href');
+                var msg_id = ".msg-" + id.substring(6);
                 $(id).trigger('click');
                 $(this).children('.toggle-text').toggleClass('hidden');
                 if (!$(this).hasClass('toggled')){
                     $(this).addClass('toggled');
                     $(this).closest('.element-section').next().removeClass('visuallyhidden');
-
+                    $(msg_id).addClass('visuallyhidden');
                 }else{
                     $(this).removeClass('toggled');
                     $(this).closest('.element-section').next().addClass('visuallyhidden');
+                    $(msg_id).removeClass('visuallyhidden');
                 }
 
             });
