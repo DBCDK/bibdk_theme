@@ -17,7 +17,7 @@
       <?php $count = 0; ?>
       <?php foreach ($subWorks as $type) : ?>
       <?php foreach ($type as $subtype => $manifest) : $count++; ?>
-            <div id="<?php print $subtype; ?>"
+            <div id="<?php print $subtype; ?><?php print $ding_id; ?>"
                  class="subwork tabs-section <?php print ($count != 1) ? "visuallyhidden" : ""  ?>">
                 <div class="padded text clearfix">
                     <div class="actions">
