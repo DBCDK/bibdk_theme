@@ -330,6 +330,24 @@
                 $(this).next().toggle();
               }
             });
+            
+            // Password fields
+            $(".bibdk-password-field").each(function() {
+                this.type='password';
+            });
+            $('.bibdk-unmask-password-field').click(function() {
+                var label=$(this).next('label');                
+                $('.bibdk-password-field').each(function() {
+                    if( this.type == 'password' ){
+                        this.type='text';
+                        label.text(Drupal.t('Hide_masked_input'));
+                    }
+                    else{
+                        this.type='password';
+                        label.text((Drupal.t('Show_masked_input')));
+                    }
+                });
+            });
 
             //Seasonal images
             var today = new Date();
