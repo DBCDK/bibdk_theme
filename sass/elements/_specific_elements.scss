@@ -412,14 +412,29 @@ div#search-advanced-toggle {
   padding-bottom: 10px;
 }
 
+.container-inline div.bibdk-subgroup {
+  display: block;
+}
+
 div#search-advanced-panel {
   background-color: $light_grey1;
   margin: 2% 0 0 2%;
   display: block;
+  input {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+  }
+  input.form-checkbox {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 2px;
+  }
   fieldset {
     width: 30%;
     display: inline;
     border: 0px solid red;
+    vertical-align: top;
     legend {
       display: block;
       float: left;
@@ -435,16 +450,55 @@ div#search-advanced-panel {
       .form-type-textfield {
           margin-bottom: 0;
           margin-right: 1%;
-          width: 98%;
+          width: 100%;
       }
+      /*
       input {
           margin-top: 5px;
           height: 30px;
           line-height: 30px;
       }
+      */
+      .fieldset-description {
+          white-space: nowrap;
+          display: inline-block;
+          float: inherit;
+      }
+      p.helptext {
+          background-color: #CCAAEE;
+          border: 1px solid #AAAAAA;
+          display: inline-block;
+          float: inherit;
+          margin: 0 5px;
+          padding: 0 2px;
+      }
     }
     div.bibdk-custom-search-element {
+      display: block;
       clear: both;
+      margin: 5px 0 0 0;
+      padding: 0 5px 0 0;
+      div.form-item {
+        margin: 0;
+        padding: 0;
+        .toggle-subgroup {
+          display: block;
+          float: left;
+          padding: 0 5px 0 1px;
+          width: 12px;
+        }
+      }
+      div.form-type-checkbox {
+        float: none;
+        label {
+          display: block;
+          float: left;
+        }
+        input {
+          display: block;
+          float: left;
+        }
+      }
     }
   }
 }
@@ -455,12 +509,7 @@ div#search-advanced-panel > fieldset > div.fieldset-wrapper {
   .form-type-textfield {
     margin-bottom: 0;
     margin-right: 1%;
-    width: 98%;
-  }
-  input {
-    margin-top: 5px;
-    height: 30px;
-    line-height: 30px;
+    width: 100%;
   }
 }
 
@@ -502,13 +551,15 @@ div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
       .form-type-textfield {
           margin-bottom: 0;
           margin-right: 1%;
-          width: 98%;
+          width: 100%;
       }
+      /*
       input {
           margin-top: 5px;
           height: 30px;
           line-height: 30px;
       }
+      */
     }
   }
   .form-type-textfield {
@@ -516,11 +567,13 @@ div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
     margin-right: 1%;
     width: 98%;
   }
+  /*
   input {
     margin-top: 5px;
     height: 30px;
     line-height: 30px;
   }
+  */
 }
 
 div#search-advanced-panel .bibdk-custom-search-element .form-item-term1 {
