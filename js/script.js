@@ -106,7 +106,8 @@
             $('.work-toggle-element', context).click(function() {
 
                 if (!$(this).hasClass('toggled')){
-                    $(this).closest('.work-header').find('.btn').addClass('disabled');
+                    // pjo comment out disabled class to allow 'order any edition' always
+                   // $(this).closest('.work-header').find('.btn').addClass('disabled');
                     $(this).closest('.work-header').find('.btn').removeClass('toggled');
                     $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
