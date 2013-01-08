@@ -304,9 +304,25 @@
                     $(this).addClass('visuallyhidden');
                 }
             });
+            
+            // pjo 08-01-13 bug in outcommented toggle function 
+            $('.toggle-next-section').click(function(e) {
+                e.preventDefault();
+               var section = $(this).closest('.element-section').next('.element-section');
+               if( section.hasClass('visuallyhidden') ) {
+                   section.removeClass('visuallyhidden');
+                   $(this).children('.show-more').addClass('visuallyhidden');
+                   $(this).children('.show-less').removeClass('visuallyhidden');
+               }
+               else {
+                   section.addClass('visuallyhidden');
+                   $(this).children('.show-more').removeClass('visuallyhidden');
+                   $(this).children('.show-less').addClass('visuallyhidden');
+               }
+            });
 
             // Toggle visibility of "next section of an element"
-            $('.toggle-next-section').toggle(function(e) {
+         /*   $('.toggle-next-section').toggle(function(e) {
                 e.preventDefault();
                 $(this).addClass('toggled');
                 $('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
@@ -318,7 +334,7 @@
                 $('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
                 $(this).removeClass('toggled');
                 $(this).closest('.element-section').next().addClass('visuallyhidden');
-            });
+            }); */
 
 
 
