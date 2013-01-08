@@ -443,7 +443,9 @@ div#search-advanced-panel {
       margin-bottom: 10px;
       padding:4px 20px;
       width: auto;
-      font-size: 12px;
+      .fieldset-legend {
+        font-size: 12px;
+      }
       a {
         color:$white;
       }
@@ -505,6 +507,7 @@ div#search-advanced-panel {
       div.form-item {
         margin: 0;
         padding: 0;
+        display: block;
         .toggle-subgroup {
           @include inline-block(top);
           width:15px;
