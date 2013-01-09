@@ -451,8 +451,16 @@ div#search-advanced-panel {
       }
     }
   }
+  /* first row of columns in "expanded search" */
+  fieldset:first-child {
+    margin-left: 0%;
+  }
+  fieldset:last-child {
+    margin-left: 0%;
+  }
   fieldset {
-    width: 30%;
+    width: 32%;
+    margin-left: 1%;
     display: inline;
     border: 0px solid red;
     vertical-align: top;
@@ -473,13 +481,6 @@ div#search-advanced-panel {
           margin-right: 1%;
           width: 100%;
       }
-      /*
-      input {
-          margin-top: 5px;
-          height: 30px;
-          line-height: 30px;
-      }
-      */
       .fieldset-description {
           white-space: nowrap;
           display: inline-block;
@@ -554,14 +555,18 @@ div#search-advanced-panel > fieldset > div.fieldset-wrapper {
   display: block;
 }
 
+/* columns in "advanced search" */
 div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   position: static;
   top: 0;
   text-align: left;
+  fieldset:first-child {
+    margin-left: 0%;
+  }
   fieldset {
     width: 24%;
+    margin-left: 1%;
     display: inline;
-    border: 0px solid red;
     legend {
       display: block;
       float: left;
@@ -579,13 +584,6 @@ div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
           margin-right: 1%;
           width: 100%;
       }
-      /*
-      input {
-          margin-top: 5px;
-          height: 30px;
-          line-height: 30px;
-      }
-      */
     }
   }
   .form-type-textfield {
@@ -593,13 +591,6 @@ div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
     margin-right: 1%;
     width: 98%;
   }
-  /*
-  input {
-    margin-top: 5px;
-    height: 30px;
-    line-height: 30px;
-  }
-  */
 }
 
 /* jgn.ding.dbc.dk year selector */
@@ -611,6 +602,47 @@ div#search-advanced-panel .bibdk-custom-search-element .form-item-term1 {
 div#search-advanced-panel .bibdk-custom-search-element .form-item-term35 {
   float: left;
 }
+
+/* jgn.ding.dbc.dk sprog */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term9 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* bib.ding.dbc.dk sprog:artikler */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term28 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* bib.ding.dbc.dk sprog:artikler */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term37 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* bib.ding.dbc.dk sprog */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term38 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* bib.ding.dbc.dk spilgenre */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term23 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
 
 
 // =============================================================================
