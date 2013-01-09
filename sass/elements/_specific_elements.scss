@@ -430,6 +430,19 @@ div#search-advanced-panel {
     line-height: 20px;
     margin-top: 2px;
   }
+  select {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px 3px 3px 3px;
+    padding: 4px;
+  }
+  option {
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 6px;
+    border-radius: 3px 3px 3px 3px;
+  }
   fieldset#edit-expand {
     margin-top: 0em;
     width: 98%;
@@ -635,8 +648,16 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term38 {
   }
 }
 
-/* bib.ding.dbc.dk spilgenre */
+/* bib.ding.dbc.dk spil:genre */
 div#search-advanced-panel .bibdk-custom-search-element #edit-term23 {
+  div {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* bib.ding.dbc.dk film:genre */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term18 {
   div {
     width: 50%;
     float: left;
