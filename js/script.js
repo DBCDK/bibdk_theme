@@ -133,7 +133,7 @@
                     $(msg_id).addClass('visuallyhidden');
                 }else{
                     $(this).removeClass('toggled');
-                    $(this).closest('.element-section').next().addClass('visuallyhidden');
+                    $(this).closest('.element-section').next().addClass('visuallyhiddenuserId');
                     $(msg_id).removeClass('visuallyhidden');
                 }
 
@@ -353,15 +353,12 @@
                 this.type='password';
             });
             $('.bibdk-unmask-password-field').click(function() {
-                var label=$(this).next('label');                
                 $('.bibdk-password-field').each(function() {
                     if( this.type == 'password' ){
                         this.type='text';
-                        label.text(Drupal.t('Hide_masked_input'));
                     }
                     else{
                         this.type='password';
-                        label.text((Drupal.t('Show_masked_input')));
                     }
                 });
             });
