@@ -133,7 +133,7 @@
                     $(msg_id).addClass('visuallyhidden');
                 }else{
                     $(this).removeClass('toggled');
-                    $(this).closest('.element-section').next().addClass('visuallyhiddenuserId');
+                    $(this).closest('.element-section').next().addClass('visuallyhidden');
                     $(msg_id).removeClass('visuallyhidden');
                 }
 
