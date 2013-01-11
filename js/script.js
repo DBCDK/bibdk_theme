@@ -304,8 +304,8 @@
                     $(this).addClass('visuallyhidden');
                 }
             });
-            
-            // pjo 08-01-13 bug in outcommented toggle function 
+
+            // pjo 08-01-13 bug in outcommented toggle function
             $('.toggle-next-section').click(function(e) {
                 e.preventDefault();
                var section = $(this).closest('.element-section').next('.element-section');
@@ -347,7 +347,7 @@
                 $(this).next().toggle();
               }
             });
-            
+
             // Password fields
             $(".bibdk-password-field").each(function() {
                 this.type='password';
@@ -371,6 +371,33 @@
                 $(this).addClass('kravlenisse');
               });
             }
+
+            // Disable custom search elements that don't have a functional search term
+            $('#edit-bibdk-custom-search-element-f8fc7021-fe06-1034-89f6-1f1d1ccdda23 select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-613a4f50-fdc5-6304-5536-55a506c96dbc input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-960e56f7-9ab5-ea94-cd0b-31116bcdeadc select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-8ef145dd-bd72-6094-6d1a-b2c4397b5778 select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-66e5ef39-d2b1-e894-7db7-15b6bee02962 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-a9b79f24-8bae-7cc4-4d82-fac33507cbb0 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-68bee1ea-4906-5ab4-4904-2fb2b0069ce6 select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-100d19c8-6104-7dd4-edca-576ddee7c38d select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+
 
         // NO CODE AFTER THIS!
         }
