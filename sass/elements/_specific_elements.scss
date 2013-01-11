@@ -448,19 +448,18 @@ div#search-advanced-panel {
     width: 98%;
     display: block;
     > legend {
-      float: none;
+      background-color: inherit;
+      border: none;
       display: block;
-      background-color:$btn_blue;
-      @include border-radius(3px);
-      margin-right: 1px;
-      margin-bottom: 10px;
-      padding:4px 20px;
       width: auto;
-      .fieldset-legend {
-        font-size: 12px;
-      }
       a {
-        color:$white;
+        padding-left: 20px;
+        background-image: url("../img/icons/blue-plus.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+      a.toggled {
+        background-image: url("../img/icons/blue-minus.png");
       }
     }
   }
@@ -592,10 +591,15 @@ div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
     div.fieldset-wrapper {
       clear: both;
       text-align: right;
+      position: relative;
+      top: -20px;
       .form-type-textfield {
           margin-bottom: 0;
           margin-right: 1%;
           width: 100%;
+      }
+      .fieldset-description {
+        display: none;
       }
     }
   }
@@ -612,9 +616,15 @@ div#search-advanced-panel .bibdk-custom-search-element .form-item-termdd18e670-8
 }
 
 /* sprog */
+
+div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
+  fieldset#edit-bibdk-custom-search-element-e74cadf0-cd77-93b4-dd64-8cd38abb1083 {
+    width: 48%;
+  }
+}
 div#search-advanced-panel .bibdk-custom-search-element #edit-term1035e851-4790-a5b4-dd1b-f5da9050d165 {
   div {
-    width: 50%;
+    width: 25%;
     float: left;
   }
 }
@@ -626,6 +636,20 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-termf7e91291-4268-f
     float: left;
   }
 }
+/* bøger:målgruppe */
+div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
+  fieldset#edit-bibdk-custom-search-element-161f5183-b254-7f44-a5df-10257190c9b2 {
+  }
+}
+/* bøger:år */
+.page-bibdk-frontpage-bog div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
+  fieldset#edit-bibdk-custom-search-element-6c70823e-0c81-c3d4-f9b8-716937b6c813 {
+    margin-left: 0;
+    position: relative;
+    top: -90px;
+  }
+}
+
 
 /* artikler:sprog */
 div#search-advanced-panel .bibdk-custom-search-element #edit-termb7f1815e-8686-5794-1526-2465935c4e49 {
@@ -651,6 +675,7 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term5c19953e-db52-9
   }
 }
 
+
 /* film:genre */
 div#search-advanced-panel .bibdk-custom-search-element #edit-term4f816bdc-6230-4844-41e7-6498c09e267d {
   div {
@@ -668,7 +693,26 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-termc81bc63b-60d4-a
     float: left;
   }
 }
-
+/* Film: Materialetype */
+div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
+  fieldset#edit-bibdk-custom-search-element-8d3b9c95-d4dc-8134-3565-ee212b143534 {
+    width: 49%;
+  }
+}
+div#search-advanced-panel .bibdk-custom-search-element #edit-term5ae0e50c-3fbd-ad64-6da2-0b0961e4489b {
+  div {
+    width: 33%;
+    float: left;
+  }
+}
+/* Film: Aldersanbefaling */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term0195f7a7-e884-2154-4db8-12c17a96e30e {
+  width: 100%;
+}
+/* Film: Tilladt for */
+div#search-advanced-panel .bibdk-custom-search-element #edit-term76d3e53c-8f50-6c04-2569-f4eb18180b56 {
+  width: 100%;
+}
 
 
 /* På Nettet:Materialetype */
@@ -683,8 +727,6 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term8b9faa48-6f6d-5
     float: left;
   }
 }
-
-
 
 
 /* spil:platform */
@@ -708,8 +750,27 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term5b12d524-01af-6
   width: 100%;
 }
 
+/* Musik */
+div#search-advanced-panel {
+  fieldset#edit-bibdk-custom-search-element-577a6e95-a4c4-1364-9d35-b520727a66e3 {
+    margin-left: 0;
+  }
+}
 
-
+/* Expanded by default */
+.page-bibdk-frontpage-net div#search-advanced-panel,
+.page-bibdk-frontpage-spil div#search-advanced-panel {
+  fieldset#edit-expand {
+    > legend {
+      a {
+        background-image: url("../img/icons/blue-minus.png");
+      }
+      a.toggled {
+        background-image: url("../img/icons/blue-plus.png");
+      }
+    }
+  }
+}
 
 // =============================================================================
 // Christmas special
