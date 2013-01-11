@@ -616,7 +616,6 @@ div#search-advanced-panel .bibdk-custom-search-element .form-item-termdd18e670-8
 }
 
 /* sprog */
-
 div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   fieldset#edit-bibdk-custom-search-element-e74cadf0-cd77-93b4-dd64-8cd38abb1083 {
     width: 48%;
@@ -632,24 +631,23 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term1035e851-4790-a
 /* bøger:sprog */
 div#search-advanced-panel .bibdk-custom-search-element #edit-termf7e91291-4268-f8a4-d13b-e04f370efe06 {
   div {
-    width: 50%;
+    width: 49%;
     float: left;
   }
 }
-/* bøger:målgruppe */
+/* bøger:form & målgruppe */
 div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-161f5183-b254-7f44-a5df-10257190c9b2 {
+  fieldset#edit-bibdk-custom-search-element-161f5183-b254-7f44-a5df-10257190c9b2,
+  fieldset#edit-bibdk-custom-search-element-0a253843-1684-ee94-81dd-9ea005010668 {
+    width: 23.5%;
   }
 }
 /* bøger:år */
 .page-bibdk-frontpage-bog div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   fieldset#edit-bibdk-custom-search-element-6c70823e-0c81-c3d4-f9b8-716937b6c813 {
     margin-left: 0;
-    position: relative;
-    top: -90px;
   }
 }
-
 
 /* artikler:sprog */
 div#search-advanced-panel .bibdk-custom-search-element #edit-termb7f1815e-8686-5794-1526-2465935c4e49 {
