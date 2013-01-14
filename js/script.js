@@ -397,9 +397,6 @@
             $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-56558f6c-0175-3a14-71c9-eac27a76cc85 select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
 
             // Bøger Litterær form og Målgruppe
             $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
