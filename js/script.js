@@ -363,6 +363,14 @@
                 });
             });
 
+            // Linkme field
+            $('.linkme-button').click(function(e){
+                $(this).siblings().removeClass('visuallyhidden').find('input').select();
+            });
+            $('.linkme-wrapper .close').click(function (e){
+                $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+            });
+
             //Seasonal images
             var today = new Date();
             month = today.getMonth() + 1;

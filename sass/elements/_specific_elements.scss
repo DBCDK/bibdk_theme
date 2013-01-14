@@ -628,21 +628,21 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term1035e851-4790-a
   }
 }
 
-/* bøger:sprog */
+/* bÃ¸ger:sprog */
 div#search-advanced-panel .bibdk-custom-search-element #edit-termf7e91291-4268-f8a4-d13b-e04f370efe06 {
   div {
     width: 49%;
     float: left;
   }
 }
-/* bøger:form & målgruppe */
+/* bÃ¸ger:mÃ¥lgruppe */
 div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   fieldset#edit-bibdk-custom-search-element-161f5183-b254-7f44-a5df-10257190c9b2,
   fieldset#edit-bibdk-custom-search-element-0a253843-1684-ee94-81dd-9ea005010668 {
     width: 23.5%;
   }
 }
-/* bøger:år */
+/* bÃ¸ger:Ã¥r */
 .page-bibdk-frontpage-bog div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   fieldset#edit-bibdk-custom-search-element-6c70823e-0c81-c3d4-f9b8-716937b6c813 {
     margin-left: 0;
@@ -713,7 +713,7 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term76d3e53c-8f50-6
 }
 
 
-/* På Nettet:Materialetype */
+/* PÃ¥ Nettet:Materialetype */
 div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
   fieldset#edit-bibdk-custom-search-element-76e8d8bc-900b-e0d4-c972-c6d3340e41b3 {
     width: 48%;
@@ -732,7 +732,7 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term37553c44-91b9-9
   width: 100%;
 }
 
-/* spil:Medierådets aldersanbefalinger */
+/* spil:MedierÃ¥dets aldersanbefalinger */
 div#search-advanced-panel .bibdk-custom-search-element #edit-term802e059d-b454-53a4-11a5-aa541e8708f6 {
   width: 100%;
 }
@@ -768,6 +768,25 @@ div#search-advanced-panel {
       }
     }
   }
+}
+
+/* Linkme */
+.linkme-wrapper {
+  position: absolute;
+  width: 30em;
+  left: 25em;
+  background-color: white;
+  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+}
+
+.linkme-wrapper .form-item {
+  width: 25em;
+  float: left;
+  padding: 10px;
+}
+
+.linkme-wrapper .close {
+  padding: 20px 5px;
 }
 
 // =============================================================================
