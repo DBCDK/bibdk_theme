@@ -380,29 +380,77 @@
               });
             }
 
-            // Disable custom search elements that don't have a functional search term
-            $('#edit-bibdk-custom-search-element-f8fc7021-fe06-1034-89f6-1f1d1ccdda23 select').each(function(){
+            // Disable custom search elements that don't have a working search term
+            // På nettet
+            $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-613a4f50-fdc5-6304-5536-55a506c96dbc input').each(function(){
+            $('#edit-bibdk-custom-search-element-9576133e-7fed-45d4-29ec-6920f85c69bb input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-960e56f7-9ab5-ea94-cd0b-31116bcdeadc select').each(function(){
+            $('#edit-bibdk-custom-search-element-b9392a11-5676-3574-fd47-143ad3edcefa input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-8ef145dd-bd72-6094-6d1a-b2c4397b5778 select').each(function(){
+            $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-66e5ef39-d2b1-e894-7db7-15b6bee02962 input').each(function(){
+            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-a9b79f24-8bae-7cc4-4d82-fac33507cbb0 input').each(function(){
+            $('#edit-bibdk-custom-search-element-56558f6c-0175-3a14-71c9-eac27a76cc85 select').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-68bee1ea-4906-5ab4-4904-2fb2b0069ce6 select').each(function(){
+
+            // Bøger Litterær form og Målgruppe
+            $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-100d19c8-6104-7dd4-edca-576ddee7c38d select').each(function(){
+            $('#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+
+            // Spil-platform, Spil-genre, Medierådetsalderanbefaling & Bibliotekets anbefaling
+            $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-7c3bfbbf-3038-9ca4-952a-85f9785337e2 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-cd37520a-f3c2-63a4-9979-416311ef9a2b select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-3e7a88b5-6ffe-1bb4-d1b7-f218359219ac select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+
+            // Film: personer, genre, aldersanbefaling & tilladt for
+            $('#edit-bibdk-custom-search-element-88b1285a-384d-b874-7d8b-ec675f89ade7 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-ae797962-8b73-3044-31d3-6eebde66c95f input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-3bde0fbf-1f9e-d914-61bb-f92ce00fd65c select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            $('#edit-bibdk-custom-search-element-7b5202bd-ebe9-2344-8d16-1bae6c3ca027 select').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+
+            // alle: sprog
+            $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            // Bøger
+            $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            // Artikler
+            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+            // På nettet
+            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
               $(this).attr('disabled','disabled');
             });
 
