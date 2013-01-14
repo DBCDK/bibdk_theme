@@ -50,7 +50,7 @@
                     <!-- end zebra-content -->
                   <?php if (count($manifest['manifest']['manifestations']) > 2) : ?>
                     <div class="zebra-toggle">
-                        <a href="#<?php print $subtype; ?>">
+                        <a href="#<?php print $subtype; ?><?php print $ding_id; ?>">
                             <span class="icon icon-left icon-blue-down">▼</span>
                             <span class="toggle-text"><?php print t("show all (@count)", array('@count' => count($manifest['manifest']['manifestations']))); ?></span>
                             <span class="toggle-text hidden"><?php print t("hide"); ?></span>
