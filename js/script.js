@@ -381,35 +381,32 @@
             }
 
             // Disable custom search elements that don't have a working search term
-            // På nettet
-            $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-9576133e-7fed-45d4-29ec-6920f85c69bb input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-b9392a11-5676-3574-fd47-143ad3edcefa input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
+            // Alle: Materialetyper
+            $('#edit-bibdk-custom-search-element-8a82ae05-e3d7-2cc4-394f-104685da18b8 input').each(function(){
               $(this).attr('disabled','disabled');
             });
 
-            // Bøger Litterær form og Målgruppe
-            $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
+            // Bøger: Materialetyper
+            $('#edit-bibdk-custom-search-element-6bfbdc58-a531-19f4-29a2-4e080de94cd8 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            $('#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde input').each(function(){
+            // Bøger Litterær form og Målgruppe
+            // $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // $('#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+
+            // Artikler: Materialetyper
+            $('#edit-bibdk-custom-search-element-2e4be922-5e61-bb64-8123-d9c01c3a1640 input').each(function(){
               $(this).attr('disabled','disabled');
             });
 
             // Spil-platform, Spil-genre, Medierådetsalderanbefaling & Bibliotekets anbefaling
-            $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
+            // $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
             $('#edit-bibdk-custom-search-element-7c3bfbbf-3038-9ca4-952a-85f9785337e2 input').each(function(){
               $(this).attr('disabled','disabled');
             });
@@ -434,22 +431,42 @@
               $(this).attr('disabled','disabled');
             });
 
-            // alle: sprog
-            $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            // Bøger
-            $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            // Artikler
-            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
             // På nettet
-            $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
+            // $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // $('#edit-bibdk-custom-search-element-9576133e-7fed-45d4-29ec-6920f85c69bb input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // $('#edit-bibdk-custom-search-element-b9392a11-5676-3574-fd47-143ad3edcefa input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
+            // Materialetyper
               $(this).attr('disabled','disabled');
             });
+
+            // Musik: Materialetyper
+            $('#edit-bibdk-custom-search-element-05b8e136-f60b-65d4-edd0-56c69d20ce8d input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
+
+            // // alle: sprog
+            // $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // // Bøger
+            // $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // // Artikler
+            // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
+            // // På nettet
+            // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
+            //   $(this).attr('disabled','disabled');
+            // });
 
 
         // NO CODE AFTER THIS!
