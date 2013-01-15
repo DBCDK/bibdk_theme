@@ -450,6 +450,10 @@
             $('#edit-bibdk-custom-search-element-05b8e136-f60b-65d4-edd0-56c69d20ce8d input').each(function(){
               $(this).attr('disabled','disabled');
             });
+            // Musik: Genre
+            $('#edit-bibdk-custom-search-element-57308136-ba7d-8224-19af-26b0f6567f77 input').each(function(){
+              $(this).attr('disabled','disabled');
+            });
 
             // // alle: sprog
             // $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
