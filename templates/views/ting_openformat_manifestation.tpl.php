@@ -7,9 +7,9 @@
             </div>
         </div>
         <div class="secondary-actions">
-            <!-- <ul>
+            <ul>
         <?php print drupal_render($fields['bibdk_linkme_permalink_default']); ?>
-      </ul> -->
+      </ul>
         </div>
     </div>
     <!-- .actions -->
