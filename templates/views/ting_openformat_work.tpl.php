@@ -27,14 +27,11 @@
                             </div>
                             <!--
                             <a class="text-small link-add-basket" href="#">
-                            <span class="icon icon-left icon-blue-addbasket">&nbsp;</span><?php print t('Tilføj indkøbskurv'); ?>
+                            <span class="icon icon-left icon-blue-addbasket">&nbsp;</span><?php print t('Add to basket'); ?>
                             </a> -->
                         </div>
                     </div>
-                    <!--
-                    <a href="#" class="text-small text-lightgrey">
-                    <span class="icon icon-left icon-lightgrey-list">&nbsp;</span><?php print t('Hvilke biblioteker har materialet?'); ?>
-                    </a> -->
+                    <?php print drupal_render($manifest['manifest']['localisation_link']); ?>
                 </div>
                 <!-- tabs-content -->
                 <div class="manifestations zebra-wrapper">
@@ -51,7 +48,7 @@
                   <?php if (count($manifest['manifest']['manifestations']) > 2) : ?>
                     <div class="zebra-toggle">
                         <a href="#<?php print $subtype; ?><?php print $ding_id; ?>">
-                            <span class="icon icon-left icon-blue-down">▼</span>
+                            <span class="icon icon-left icon-blue-down">?</span>
                             <span class="toggle-text"><?php print t("show all (@count)", array('@count' => count($manifest['manifest']['manifestations']))); ?></span>
                             <span class="toggle-text hidden"><?php print t("hide"); ?></span>
                         </a>
