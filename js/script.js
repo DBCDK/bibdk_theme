@@ -390,7 +390,7 @@
             $('#edit-bibdk-custom-search-element-6bfbdc58-a531-19f4-29a2-4e080de94cd8 input').each(function(){
                 $(this).attr('disabled','disabled');
             });
-            // B�ger Litter�r form og M�lgruppe
+            // Bøger Litterær form og Målgruppe
             // $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
             //   $(this).attr('disabled','disabled');
             // });
@@ -403,7 +403,7 @@
                 $(this).attr('disabled','disabled');
             });
 
-            // Spil-platform, Spil-genre, Medier�detsalderanbefaling & Bibliotekets anbefaling
+            // Spil-platform, Spil-genre, Medierådetsalderanbefaling & Bibliotekets anbefaling
             // $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
             //   $(this).attr('disabled','disabled');
             // });
@@ -431,7 +431,7 @@
                 $(this).attr('disabled','disabled');
             });
 
-            // P� nettet
+            // På nettet
             // $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
             //   $(this).attr('disabled','disabled');
             // });
@@ -459,7 +459,7 @@
         // $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
         //   $(this).attr('disabled','disabled');
         // });
-        // // B�ger
+        // // Bøger
         // $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
         //   $(this).attr('disabled','disabled');
         // });
@@ -467,7 +467,7 @@
         // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
         //   $(this).attr('disabled','disabled');
         // });
-        // // P� nettet
+        // // På nettet
         // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
         //   $(this).attr('disabled','disabled');
         // });
