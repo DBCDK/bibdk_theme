@@ -347,6 +347,13 @@
                     $(this).next().toggle();
                 }
             });
+            
+            // Favourite selector
+            $('.reservation-favourite-selector').change(function(e){
+                var selector = $('.hidden_selector');
+                selector.val(1);
+                $(this).closest('form').submit();
+            });
 
             // Password fields
             $(".bibdk-password-field").each(function() {
