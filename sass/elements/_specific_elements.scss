@@ -803,6 +803,43 @@ div#search-advanced-panel .bibdk-custom-search-element #edit-term604357bb-a73b-6
   padding: 20px 5px;
 }
 
+
+// =============================================================================
+// Localisations popup
+// =============================================================================
+
+.count-localisations {
+  margin: 0 0 1em 0;
+  font-weight: bold;
+}
+
+p.note-localisations {
+  margin: 0 0 0.5em 0;
+}
+
+.localisation-agency {
+  border-top: 1px solid $light_grey5;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.localisation-agency p {
+  margin: 0 0 0.2em 0;
+  clear: both;
+}
+
+.localisation-agency p.city,
+.localisation-agency p.postalCode {
+  float: left;
+  clear: none;
+}
+
+.localisation-agency p.postalCode {
+  margin: 0 0.3em 0.2em 0;
+}
+
+
+
 // =============================================================================
 // Christmas special
 // =============================================================================

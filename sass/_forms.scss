@@ -49,7 +49,7 @@ fieldset {
 .fieldset-legend {
   font-size: 16px;
   display:block;
-  padding:15px 0 2px 0;
+  padding:20px 0;
 }
 
 
@@ -61,8 +61,7 @@ fieldset {
 label {
   display: block;
   font-size:14px;
-  margin-bottom:2px;
-  padding-left: 2px;
+  margin-bottom:5px;
   color:$labelColor;
 }
 label.option {
@@ -155,7 +154,7 @@ input[type="password"] {
   @include transition(border .2s, box-shadow .2s);
 
   // max-width:100%;
-  padding: 6px;
+  padding: 10px;
   color: #555555;
   font-size: 14px;
   background-color: #fff;
@@ -186,6 +185,8 @@ input[type="password"]:focus {
   outline: 0;
   outline: thin dotted \9; // IE9
 }
+
+
 
 
 // =============================================================================
@@ -474,9 +475,11 @@ textarea::-webkit-input-placeholder {
   margin:20px 0 0 20px;
   line-height:35px;
   height:auto;
+  min-height:73px;
 }
 
-#popup .messages {
+#popup .messages,
+#popup .region-content {
   margin:10px 20px;
 }
 
@@ -499,11 +502,6 @@ textarea::-webkit-input-placeholder {
   margin-right: 20px;
 }
 
-/* overriding date.css */
-#popup .container-inline-date .date-padding {
-  padding: 0px;
-}
-
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
@@ -517,16 +515,11 @@ textarea::-webkit-input-placeholder {
   padding-top: 20px;
 }
 
-#popup #edit-userparameters  {
+#popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
 #popup #edit-userparameters .form-item {
-  padding: 10px 0 0 0;
-}
-
-#popup #edit-navigation {
-  float:right;
-  margin-right: -6px;
+  padding: 20px 0 0 0;
 }
