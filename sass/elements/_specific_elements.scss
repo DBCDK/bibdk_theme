@@ -553,7 +553,7 @@ div#search-advanced-panel {
   }
 }
 
-div#search-advanced-panel > fieldset > div.fieldset-wrapper {
+div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
   top: -18px;
   .form-type-textfield {
@@ -567,207 +567,108 @@ div#search-advanced-panel > fieldset > div.fieldset-wrapper {
   display: block;
 }
 
-/* columns in "advanced search" */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  position: static;
-  top: 0;
-  text-align: left;
-  fieldset:first-child {
-    margin-left: 0%;
+div#search-advanced-panel #edit-expand{
+  .fieldset-description {
+    display: none;
   }
-  fieldset {
+  .element-wrapper {
+    float: left;
     width: 24%;
     margin-left: 1%;
-    display: inline;
-    legend {
-      display: block;
-      float: left;
-      border: 0px solid blue;
-      .fieldset-legend {
-          font-size: 16px;
-          padding: 0;
-      }
-    }
-    div.fieldset-wrapper {
-      clear: both;
-      text-align: right;
-      position: relative;
-      top: -20px;
-      .form-type-textfield {
-          margin-bottom: 0;
-          margin-right: 1%;
-          width: 100%;
-      }
-      .fieldset-description {
-        display: none;
-      }
-    }
+    clear: none;
   }
-  .form-type-textfield {
-    margin-bottom: 0;
-    margin-right: 1%;
-    width: 98%;
+
+  .sub-elements {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
   }
 }
 
-/* year */
-div#search-advanced-panel .bibdk-custom-search-element .form-item-term3021bc15-1305-10f4-2112-d08af39718bf {
-  float: left;
-}
-
-/* alle materialer:sprog */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be {
+.page-bibdk-frontpage div#search-advanced-panel #edit-expand{
+  .sprog {
     width: 48%;
+    .bibdk-custom-search-element .form-wrapper {
+      width: 33%;
+      float: left;
+    }
   }
-}
-div#search-advanced-panel .bibdk-custom-search-element #edit-term95788824-6d40-ebd4-8912-ce2194f48d62 {
-  div {
-    width: 25%;
-    float: left;
+  .udgivelsesar{
+    .form-type-select{
+      float: left;
+    }
+    .form-type-select:last-child{
+      float: right;
+    }
   }
 }
 
 /* bøger:sprog */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term4ed2c5d5-656b-be14-b55f-fbc7c1aff047 {
-  div {
-    width: 49%;
-    float: left;
-  }
-}
-/* bøger:målgruppe */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df,
-  fieldset#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde {
-    width: 23.5%;
-  }
-}
-/* bøger:år */
-.page-bibdk-frontpage-bog div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-56558f6c-0175-3a14-71c9-eac27a76cc85 {
-    margin-left: 0;
+.page-bibdk-frontpage-artikel div#search-advanced-panel #edit-expand,
+.page-bibdk-frontpage-bog div#search-advanced-panel #edit-expand{
+  .sprog{
+    width: 24%;
+    .bibdk-custom-search-element .form-wrapper{
+      width: 49%;
+      float: left;
+    }
   }
 }
 
-/* artikler:sprog */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term12a1e89e-1274-a394-a12a-588d3abde6e9 {
-  div {
-    width: 50%;
-    float: left;
-  }
-}
-div#search-advanced-panel {
-  fieldset#edit-bibdk-custom-search-element-7b391b37-7099-50a4-e1f6-0a3623de1421,
-  fieldset#edit-bibdk-custom-search-element-61b61f9b-531d-4914-11d4-75430ea98677,
-  fieldset#edit-bibdk-custom-search-element-b35762f5-54c6-4044-355a-96a20c9d21dc,
-  fieldset#edit-bibdk-custom-search-element-8e5ca7c5-c063-4824-15c3-eef91eb682e8 {
-    width: 23.5%;
-  }
-}
-
-
-/* film:genre */
-div#search-advanced-panel .bibdk-custom-search-element #edit-termf81d0c50-5f4b-d1f4-f11f-c000c901c841 {
-  div {
-    width: 50%;
-    float: left;
-  }
-}
-/* film:nationalitet */
-div#search-advanced-panel fieldset#edit-bibdk-custom-search-element-26707474-294f-1c34-e50b-f7831578913d {
+.page-bibdk-frontpage-film div#search-advanced-panel {
+  .nationalitet {
     width: 98%;
-}
-div#search-advanced-panel .bibdk-custom-search-element #edit-term8e7bda97-5430-9774-e54c-4d2b0005a06b {
-  div {
-    width: 33%;
-    float: left;
+    .bibdk-custom-search-element .form-wrapper {
+      width: 33%;
+      float: left;
+    }
   }
-}
-/* Film: Materialetype */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-1458f855-531f-b484-1df2-1c7762dc339b {
-    width: 49%;
+  .genre_type {
+    .bibdk-custom-search-element .form-wrapper {
+      width: 50%;
+      float: left;
+    }
   }
-}
-div#search-advanced-panel .bibdk-custom-search-element #edit-termf79c6d0f-effe-6944-7951-211d70e904d7 {
-  div {
-    width: 33%;
-    float: left;
-  }
-}
-/* Film: Aldersanbefaling */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term6918cf0f-f206-d494-f9da-32aa0d945ab9 {
-  width: 100%;
-}
-/* Film: Tilladt for */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term7b0919f2-915d-0484-6da0-a54570056151 {
-  width: 100%;
-}
-
-
-/* På Nettet:Materialetype */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 {
-    width: 48%;
-  }
-}
-div#search-advanced-panel .bibdk-custom-search-element #edit-term819ed112-ec85-8f64-2573-a5a88f7ac3d9 {
-  div {
-    width: 50%;
-    float: left;
+  .materialetype {
+    .bibdk-custom-search-element .form-wrapper {
+      width: 33%;
+      float: left;
+    }
   }
 }
 
-
-/* spil:genre */
-div#search-advanced-panel .bibdk-custom-search-element #edit-termfbeb5556-778a-ab64-2522-89eeef2793eb {
-  div {
-    width: 50%;
-    float: left;
+.page-bibdk-frontpage-net div#search-advanced-panel #edit-expand{
+  .sprog {
+    width: 24%;
   }
-}
-/* spil:platform */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term3c0f6ff4-63f2-8a54-4500-6198904477ba {
-  width: 100%;
-}
-
-/* spil:Medierådets aldersanbefalinger */
-div#search-advanced-panel .bibdk-custom-search-element #edit-termceae1f55-323f-9774-250b-4b39f9b0bf91 {
-  width: 100%;
-}
-/* spil:Aldersanbefaling */
-div#search-advanced-panel .bibdk-custom-search-element #edit-term3389bb76-ad3a-5c94-81de-2bfc154f8298 {
-  width: 100%;
-}
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-cd37520a-f3c2-63a4-9979-416311ef9a2b,
-  fieldset#edit-bibdk-custom-search-element-3e7a88b5-6ffe-1bb4-d1b7-f218359219ac {
-    width: 49%;
+  .materialetype, .sprog {
+    .bibdk-custom-search-element .form-wrapper{
+      width: 50%;
+      float: left;
+    }
   }
 }
 
-
-/* Musik */
-div#search-advanced-panel {
-  fieldset#edit-bibdk-custom-search-element-acdb74f6-dd28-81c4-5190-af28a09e5d47 {
-    margin-left: 0;
+.page-bibdk-frontpage-spil div#search-advanced-panel{
+  select {
+    width: 100%;
   }
-}
-/* Musik:Materiale */
-div#search-advanced-panel > fieldset#edit-expand > div.fieldset-wrapper {
-  fieldset#edit-bibdk-custom-search-element-05b8e136-f60b-65d4-edd0-56c69d20ce8d {
-    width: 49%;
-  }
-}
-div#search-advanced-panel .bibdk-custom-search-element #edit-term604357bb-a73b-65c4-11d8-cf798b7eabe1 {
-  div {
-    width: 50%;
-    float: left;
+  .spilgenre_type{
+    .bibdk-custom-search-element .form-wrapper{
+      width: 50%;
+      float: left;
+    }
   }
 }
 
-
-
+.page-bibdk-frontpage-musik div#search-advanced-panel{
+  .materiale{
+    .bibdk-custom-search-element .form-wrapper{
+      width: 50%;
+      float: left;
+    }
+  }
+}
 
 /* Expanded by default */
 .page-bibdk-frontpage-net div#search-advanced-panel,
