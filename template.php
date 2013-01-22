@@ -164,7 +164,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
   unset($form['inputs']['name']['#description']);
   unset($form['inputs']['pass']['#description']);
 
-  // move persistent login checkbox to actions 
+  // move persistent login checkbox to actions
   if (isset($form['persistent_login'])) {
     // show checkbox BEFORE submit button
     $form['persistent_login']['#weight'] = -1;
@@ -350,7 +350,7 @@ function bibdk_theme_pager_first($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-select', 'dropdown-toggle'),
+    'class' => array('works-control', 'works-pager-first', 'works-pager-select'),
   );
   if (isset($parameters['previous'])) {
     $attributes = $parameters['previous'];
@@ -437,7 +437,7 @@ function bibdk_theme_pager_last($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-forward'),
+    'class' => array('works-control', 'works-pager-forward', 'works-pager-last'),
   );
 
   global $pager_page_array, $pager_total;
