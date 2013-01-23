@@ -12,9 +12,15 @@
   border:solid 10px $elementWrapper;
   margin-bottom:10px;
 }
+#popup .element-wrapper {
+  margin-bottom:0px;
+}
 .element {
   border:solid 1px $borderColor;
   border-bottom:none;
+}
+#popup .element {
+  border-bottom: solid 1px $borderColor;
 }
 .element-section {
   border-bottom:solid 1px $borderColor;
