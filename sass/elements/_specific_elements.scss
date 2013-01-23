@@ -747,6 +747,20 @@ p.note-localisations {
   margin: 0 0 0 1em;
 }
 
+/* LIGHTSIGNAL */
+.holding-status {
+  .status{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 1px #dcdcdc;
+    @include border-radius(3px);
+  }
+  .red{background-color: #ff0000;}
+  .green{background-color: #008000;}
+  .yellow{background-color: #ffff00;}
+}
 
 // =============================================================================
 // Christmas special
