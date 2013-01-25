@@ -437,7 +437,7 @@ textarea::-webkit-input-placeholder {
 // =============================================================================
 
 .page-reservation .element {
-  padding-top:50px;
+    padding-top:50px;
 }
 
 .page-reservation #popup #title {
@@ -446,8 +446,8 @@ textarea::-webkit-input-placeholder {
 }
 
 .page-reservation .form-step-guide.form-wrapper {
-  padding:0;
-  border-bottom:none;
+    padding:0;
+    border-bottom:none;
 }
 
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
@@ -455,28 +455,35 @@ textarea::-webkit-input-placeholder {
 }
 
 .page-reservation .form-step-guide {
-  position:fixed;
-  top:11px;
-  left:11px;
-  right:11px;
-  // background:#999;
+    position:fixed;
+    top:11px;
+    left:11px;
+    right:11px;
+    // background:#999;
 
-  input[type="submit"] {
-    width:25%;
-    height:50px;
-    line-height:50px;
-    font-size:14px;
-    border-radius:0;
-    text-shadow: none;
-  }
+    input[type="submit"] {
+        width:25%;
+        height:50px;
+        line-height:50px;
+        font-size:14px;
+        border-radius:0;
+        text-shadow: none;
+    }
 }
 
 .page-reservation .bottom-space {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
-.page-reservation .label {
-  margin-bottom: 2px;
+.page-reservation label {
+    margin-bottom: 2px;
+    float: left;
+    width: 215px;
+}
+
+.page-reservation input[type="text"], .page-reservation input[type="password"] {
+    float: left;
+    width: 290px;
 }
 
 .page-reservation #popup #edit-userparameters .form-item {
@@ -497,17 +504,17 @@ textarea::-webkit-input-placeholder {
 }
 
 .page-reservation #edit-branchdata {
-  .branch-data {
-    float: left;
-  }
-  input {
-    float: right;
-    margin-right: 20px;
-  }
+    .branch-data {
+        float: left;
+    }
+    input {
+        float: right;
+        margin-right: 20px;
+    }
 }
 
 .page-reservation #edit-navigation {
-  text-align: right;
+    text-align: right;
 }
 
 // =============================================================================
