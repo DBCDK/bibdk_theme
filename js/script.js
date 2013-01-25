@@ -246,8 +246,8 @@
                 }
                 ,
                 reservation: {
-                    height:650,
-                    width:495,
+                    height:780,
+                    width:570,
                     center:0,
                     createnew:0,
                     scrollbars:1,
@@ -385,8 +385,8 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
                     }
                 });
             });
-            
-            
+
+
             // Favourite selector
             $('.reservation-favourite-selector').change(function(e){
                 var selector = $('.hidden_selector');
