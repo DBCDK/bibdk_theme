@@ -437,33 +437,85 @@ textarea::-webkit-input-placeholder {
 // =============================================================================
 
 .page-reservation .element {
-  padding-top:50px;
+    padding-top:50px;
 }
 
-.form-step-guide.form-wrapper {
-  padding:0;
-  border-bottom:none;
+.page-reservation #popup #title {
+    min-height: 40px;
+    margin-top : 10px;
 }
 
-.form-step-guide {
-  position:fixed;
-  top:11px;
-  left:11px;
-  right:11px;
-  // background:#999;
+.page-reservation .form-step-guide.form-wrapper {
+    padding:0;
+    border-bottom:none;
+}
 
-  input[type="submit"] {
-    width:25%;
-    height:50px;
-    line-height:50px;
-    font-size:14px;
-    border-radius:0;
-    text-shadow: none;
-  }
+.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+    padding: 10px 0;
+}
+
+.page-reservation .form-step-guide {
+    position:fixed;
+    top:11px;
+    left:11px;
+    right:11px;
+    // background:#999;
+
+    input[type="submit"] {
+        width:25%;
+        height:50px;
+        line-height:50px;
+        font-size:14px;
+        border-radius:0;
+        text-shadow: none;
+    }
 }
 
 .page-reservation .bottom-space {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.page-reservation label {
+    margin-bottom: 2px;
+    float: left;
+    width: 215px;
+}
+
+.page-reservation input[type="text"], .page-reservation input[type="password"] {
+    float: left;
+    margin-right: 20px;
+    width: 290px;
+}
+
+.page-reservation #popup #edit-userparameters .form-item {
+    padding: 10px 0 0;
+}
+
+.page-reservation .fieldset-legend {
+    padding: 20px 0 10px;
+}
+
+.page-reservation #edit-manifestation .fieldset-legend {
+  padding: 10px 0;
+}
+
+.page-reservation .container-inline-date .date-padding {
+    float: left;
+    padding: 5px 10px;
+}
+
+.page-reservation #edit-branchdata {
+    .branch-data {
+        float: left;
+    }
+    input {
+        float: right;
+        margin-right: 20px;
+    }
+}
+
+.page-reservation #edit-navigation {
+    text-align: right;
 }
 
 // =============================================================================
@@ -478,7 +530,8 @@ textarea::-webkit-input-placeholder {
   min-height:73px;
 }
 
-#popup .messages {
+#popup .messages,
+#popup .region-content {
   margin:10px 20px;
 }
 
@@ -514,7 +567,7 @@ textarea::-webkit-input-placeholder {
   padding-top: 20px;
 }
 
-#popup #edit-userparameters  {
+#popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
@@ -522,4 +575,3 @@ textarea::-webkit-input-placeholder {
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
-

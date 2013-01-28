@@ -24,11 +24,11 @@
 
             // $('html').click(function() {
 
-            //   $('.header-action-vejviser').find('a').show();
-            //   $('.header-action-vejviser').find('form').addClass('visuallyhidden');
-            //   $('.header-action-vejviser').css({
-            //     width: "",
-            //   });
+            // $('.header-action-vejviser').find('a').show();
+            // $('.header-action-vejviser').find('form').addClass('visuallyhidden');
+            // $('.header-action-vejviser').css({
+            // width: "",
+            // });
             // });
 
 
@@ -81,13 +81,13 @@
             $('.link-add-basket').toggle(function(e) {
                 e.preventDefault();
 
-                $(this).html($(this).html().replace('TilfÃ¸j', 'Fjern'));
+                $(this).html($(this).html().replace('TilfÃƒÂ¸j', 'Fjern'));
                 $(this).toggleClass('toggled');
 
             }, function (e) {
                 e.preventDefault();
 
-                $(this).html($(this).html().replace('Fjern', 'TilfÃ¸j'));
+                $(this).html($(this).html().replace('Fjern', 'TilfÃƒÂ¸j'));
                 $(this).toggleClass('toggled');
             });
 
@@ -123,7 +123,7 @@
             // Toggle visibility of "next section of an element"
             $('.work-toggle-element', context).click(function(e) {
                 e.preventDefault();
-                var id  = $(this).attr('href');
+                var id = $(this).attr('href');
                 var msg_id = ".msg-" + id.substring(6);
                 $(id).trigger('click');
                 $(this).children('.toggle-text').toggleClass('hidden');
@@ -151,7 +151,7 @@
             // Make entire widget clickable
             // $('.widget').css('cursor', 'pointer');
             // $('.widget').click(function () {
-            //     window.location = $(this).find(".field-title a").attr("href");
+            // window.location = $(this).find(".field-title a").attr("href");
             // });
 
             // Adjust margin-left on widgets with image
@@ -221,18 +221,18 @@
             //window popup function
             var profiles = {
                 standard: {
-                    height:600,   // sets the height in pixels of the window.
-                    width:600,    // sets the width in pixels of the window.
-                    toolbar:0,    // determines whether a toolbar (includes the forward and back buttons) is displayed {1 (YES) or 0 (NO)}.
+                    height:600, // sets the height in pixels of the window.
+                    width:600, // sets the width in pixels of the window.
+                    toolbar:0, // determines whether a toolbar (includes the forward and back buttons) is displayed {1 (YES) or 0 (NO)}.
                     scrollbars:1, // determines whether scrollbars appear on the window {1 (YES) or 0 (NO)}.
-                    status:0,     // whether a status line appears at the bottom of the window {1 (YES) or 0 (NO)}.
-                    resizable:0,  // whether the window can be resized {1 (YES) or 0 (NO)}. Can also be overloaded using resizable.
-                    left:0,       // left position when the window appears.
-                    top:0,        // top position when the window appears.
-                    center:0,     // should we center the window? {1 (YES) or 0 (NO)}. overrides top and left
-                    createnew:0,  // should we create a new window for each occurance {1 (YES) or 0 (NO)}.
-                    location:0,   // determines whether the address bar is displayed {1 (YES) or 0 (NO)}.
-                    menubar:0,    // determines whether the menu bar is displayed {1 (YES) or 0 (NO)}.
+                    status:0, // whether a status line appears at the bottom of the window {1 (YES) or 0 (NO)}.
+                    resizable:0, // whether the window can be resized {1 (YES) or 0 (NO)}. Can also be overloaded using resizable.
+                    left:0, // left position when the window appears.
+                    top:0, // top position when the window appears.
+                    center:0, // should we center the window? {1 (YES) or 0 (NO)}. overrides top and left
+                    createnew:0, // should we create a new window for each occurance {1 (YES) or 0 (NO)}.
+                    location:0, // determines whether the address bar is displayed {1 (YES) or 0 (NO)}.
+                    menubar:0, // determines whether the menu bar is displayed {1 (YES) or 0 (NO)}.
                     onUnload:null // function to call when the window is closed
                 }
                 ,
@@ -246,8 +246,8 @@
                 }
                 ,
                 reservation: {
-                    height:650,
-                    width:495,
+                    height:780,
+                    width:570,
                     center:0,
                     createnew:0,
                     scrollbars:1,
@@ -277,6 +277,29 @@
                     resizable:1,
                     left:20,
                     top:20
+                }
+                ,
+                lookupUrl: {
+                    height:600,
+                    width:840,
+                    center:0,
+                    createnew:1,
+                    scrollbars:1,
+                    status:1,
+                    left:10,
+                    top:10
+                }
+                ,
+                holdings: {
+                    height:700,
+                    width:580,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:0,
+                    resizable:1,
+                    left:30,
+                    top:30
                 }
             };
 
@@ -322,19 +345,19 @@
             });
 
             // Toggle visibility of "next section of an element"
-         /*   $('.toggle-next-section').toggle(function(e) {
-                e.preventDefault();
-                $(this).addClass('toggled');
-                $('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
-                $('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
-                $(this).closest('.element-section').next().removeClass('visuallyhidden');
-            }, function(e) {
-                e.preventDefault();
-                $('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
-                $('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
-                $(this).removeClass('toggled');
-                $(this).closest('.element-section').next().addClass('visuallyhidden');
-            }); */
+         /* $('.toggle-next-section').toggle(function(e) {
+e.preventDefault();
+$(this).addClass('toggled');
+$('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
+$('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
+$(this).closest('.element-section').next().removeClass('visuallyhidden');
+}, function(e) {
+e.preventDefault();
+$('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
+$('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
+$(this).removeClass('toggled');
+$(this).closest('.element-section').next().addClass('visuallyhidden');
+}); */
 
 
 
@@ -363,6 +386,14 @@
                 });
             });
 
+
+            // Favourite selector
+            $('.reservation-favourite-selector').change(function(e){
+                var selector = $('.hidden_selector');
+                selector.val(1);
+                $(this).closest('form').submit();
+            });
+
             // Linkme field
             $('.linkme-button').click(function(e){
                 $(this).siblings().removeClass('visuallyhidden').find('input').select();
@@ -386,16 +417,16 @@
               $(this).attr('disabled','disabled');
             });
 
-            // Bøger: Materialetyper
+            // Boeger: Materialetyper
             $('#edit-bibdk-custom-search-element-6bfbdc58-a531-19f4-29a2-4e080de94cd8 input').each(function(){
               $(this).attr('disabled','disabled');
             });
-            // Bøger Litterær form og Målgruppe
+            // Boeger Litteraer form og Maalgruppe
             // $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
             // $('#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
 
             // Artikler: Materialetyper
@@ -403,9 +434,9 @@
               $(this).attr('disabled','disabled');
             });
 
-            // Spil-platform, Spil-genre, Medierådetsalderanbefaling & Bibliotekets anbefaling
+            // Spil-platform, Spil-genre, Medieraadetsalderanbefaling & Bibliotekets anbefaling
             // $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
             $('#edit-bibdk-custom-search-element-7c3bfbbf-3038-9ca4-952a-85f9785337e2 input').each(function(){
               $(this).attr('disabled','disabled');
@@ -431,20 +462,20 @@
               $(this).attr('disabled','disabled');
             });
 
-            // På nettet
+            // Paa nettet
             // $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
             // $('#edit-bibdk-custom-search-element-9576133e-7fed-45d4-29ec-6920f85c69bb input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
             // $('#edit-bibdk-custom-search-element-b9392a11-5676-3574-fd47-143ad3edcefa input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
-            $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
+            // $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
             // Materialetyper
-              $(this).attr('disabled','disabled');
-            });
+            // $(this).attr('disabled','disabled');
+            // });
 
             // Musik: Materialetyper
             $('#edit-bibdk-custom-search-element-05b8e136-f60b-65d4-edd0-56c69d20ce8d input').each(function(){
@@ -457,19 +488,19 @@
 
             // // alle: sprog
             // $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
-            // // Bøger
+            // // Boeger
             // $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
             // // Artikler
             // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
-            // // På nettet
+            // // Paa nettet
             // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
-            //   $(this).attr('disabled','disabled');
+            // $(this).attr('disabled','disabled');
             // });
 
 
