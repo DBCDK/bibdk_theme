@@ -475,13 +475,17 @@ textarea::-webkit-input-placeholder {
     padding-bottom: 20px;
 }
 
+.page-overlay-favourite-userdata label,
 .page-reservation label {
     margin-bottom: 2px;
     float: left;
     width: 170px;
 }
 
-.page-reservation input[type="text"], .page-reservation input[type="password"] {
+.page-overlay-favourite-userdata input[type="text"],
+.page-overlay-favourite-userdata input[type="password"],
+.page-reservation input[type="text"],
+.page-reservation input[type="password"] {
     float: left;
     margin-right: 20px;
     width: 260px;
