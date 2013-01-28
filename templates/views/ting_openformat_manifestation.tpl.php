@@ -9,6 +9,7 @@
         <div class="secondary-actions">
             <ul>
         <?php print drupal_render($fields['bibdk_linkme_permalink_default']); ?>
+        <?php print drupal_render($fields['bibdk_holdingstatus_favourite_default']); ?>
       </ul>
         </div>
     </div>
