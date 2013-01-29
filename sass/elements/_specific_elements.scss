@@ -728,9 +728,15 @@ p.note-localisations {
   padding-bottom: 1em;
 }
 
-.localisation-agency p {
+.localisation-agency p,
+.localisation-agency .holding-status,
+.localisation-agency .holding-status-load {
   margin: 0;
   clear: both;
+}
+
+.localisation-agency .holding-status-load.ajax-progress {
+  display: block;
 }
 
 .localisation-agency p.city,
