@@ -12,6 +12,7 @@
 
             // Find library header action
             $('.header-action-vejviser a').click(function (e) {
+                $('#edit-openagency-query').focus();
                 e.stopPropagation();
                 e.preventDefault();
 
@@ -502,6 +503,23 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
             // $(this).attr('disabled','disabled');
             // });
+
+
+            // Cursor positions
+            // Default in search block form - unless it's a search result.
+            $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"]').focus();
+            // Move to library search form, if form is shown.
+            $('#search-advanced-toggle').click(function(e) {
+                $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+            });
+            // Helpdesk popup
+            $('.page-overlay-helpdesk').find('input[type=text], textarea').filter(':visible:first').focus();
+            // User login form
+            $('form#user-login').find('input[type=text], textarea').filter(':visible:first').focus();
+            // User help popup
+            $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
+
+
 
 
         // NO CODE AFTER THIS!
