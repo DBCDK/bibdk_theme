@@ -480,6 +480,7 @@ textarea::-webkit-input-placeholder {
     margin-bottom: 2px;
     float: left;
     width: 170px;
+    line-height: 1.3em;
 }
 
 .page-overlay-favourite-userdata input[type="text"],
@@ -489,6 +490,8 @@ textarea::-webkit-input-placeholder {
     float: left;
     margin-right: 20px;
     width: 260px;
+    font-size: 12px;
+    padding: 8px;
 }
 
 .form-item.form-item-favouriteselector {
@@ -507,7 +510,7 @@ select#edit-favouriteselector {
 
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
 }
 
 .page-reservation .fieldset-legend {

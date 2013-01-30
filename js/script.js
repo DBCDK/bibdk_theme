@@ -247,7 +247,7 @@
                 }
                 ,
                 reservation: {
-                    height:780,
+                    height:860,
                     width:570,
                     center:0,
                     createnew:0,
