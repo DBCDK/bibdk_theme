@@ -31,7 +31,7 @@
                             </a> -->
                         </div>
                     </div>
-                    <?php echo drupal_render($manifest['manifest']['localisation_link']); ?>
+                    <?php echo drupal_render($manifest['manifest']['subtype_actions']); ?>
                 </div>
                 <!-- tabs-content -->
                 <div class="manifestations zebra-wrapper">
