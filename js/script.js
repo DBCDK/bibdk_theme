@@ -508,7 +508,7 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             // Cursor positions
             // Default in search block form - unless it's a search result.
             $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"]').focus();
-            // Move to library search form, if form is shown.
+            // Move to first input field in expanded search, if activated.
             $('#search-advanced-toggle').click(function(e) {
                 $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
             });
@@ -516,6 +516,10 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('.page-overlay-helpdesk').find('input[type=text], textarea').filter(':visible:first').focus();
             // User login form
             $('form#user-login').find('input[type=text], textarea').filter(':visible:first').focus();
+            // Create new account
+            $('form#user-register-form').find('input[type=text], textarea').filter(':visible:first').focus();
+            // Request new password
+            $('form#user-pass').find('input[type=text], textarea').filter(':visible:first').focus();
             // User help popup
             $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
 
