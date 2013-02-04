@@ -234,7 +234,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
 }
 
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
-  dpm($variables, 'variables');
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
   $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
