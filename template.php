@@ -237,13 +237,14 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
   $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
+  $id = $variables['ding_id'];
 
   $tabs = array(
     'subjects' => array(
       'title' => t('Subjects'),
       'content' => $subjects,
       'class' => 'active',
-      'active' => 'active',
+      'active' => '',
     ),
     'more-about' => array(
       'title' => t('More Info'),
@@ -258,7 +259,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
       'active' => 'visuallyhidden',
     ),
   );
-  $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
+  $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs, 'id' => $id));
 }
 
 /**

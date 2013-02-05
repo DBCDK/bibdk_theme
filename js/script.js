@@ -172,7 +172,7 @@
                     $(this).addClass('active');
                     var id = $(this).attr('href');
                     $(id).siblings().addClass('visuallyhidden');
-                    $(id).removeClass('visuallyhidden')
+                    $(id).removeClass('visuallyhidden');
                     $(id).children().filter('.active').trigger('click');
                 }
             });
