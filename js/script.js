@@ -1,4 +1,5 @@
 (function ($) {
+
     Drupal.behaviors.bibdk_theme = {
         attach: function(context, settings) {
             // Toggle tables
@@ -524,9 +525,20 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
 
 
-
+            // Search sort dropdown
+            $('.bibdk-search-controls-form .dropdown-menu li a').click(function() {
+              var value = "";
+              var textString = $(this).text();
+              var idHidden = $(this).parents(".bibdk-search-controls-form").attr('data');
+              if ( selectValue = $(this).attr('data') )  {
+                value = selectValue;
+              }
+              $("#" + idHidden).val(value);
+              $(this).parents(".bibdk-search-controls-form").find(".selected-text").text(textString);
+            });
 
         // NO CODE AFTER THIS!
         }
     };
+
 })(jQuery);

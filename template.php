@@ -28,6 +28,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
+    'bibdk_search_controls-select' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_search_controls-select',
+      'render element' => 'form',
+    ),
   );
 }
 

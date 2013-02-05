@@ -238,6 +238,7 @@
 // Dropdown menu
 // =============================================================================
 
+div.works-controls > div > div,
 .dropdown-wrapper {
   position:relative;
   float:left;
@@ -289,7 +290,14 @@
   }
 }
 
-
+form.bibdk-search-controls-form {
+  label {
+    display: none;
+  }
+  .form-item {
+    padding: 0;
+  }
+}
 
 // =============================================================================
 // Horizontal search form
@@ -342,13 +350,13 @@
     color:$btn_blue;
   }
 }
+div.works-controls > div,
 .works-control-wrapper-left {
   float:left;
   border-right:solid 1px $borderColor;
 }
 .works-control-wrapper-right {
   float:right;
-  border-left:solid 1px $borderColor;
 }
 .works-control {
   font-size:14px;
@@ -390,6 +398,10 @@
 //
 // Paging, works
 //
+div.works-controls > .pane-ting-openformat-pager-mini {
+  float: right;
+}
+
 .works-pager-back,
 .works-pager-forward,
 .works-pager-select {
@@ -398,6 +410,10 @@
 .works-pager-back,
 .works-pager-forward {
   padding:0 10px;
+}
+.works-pager-back {
+  padding:0 10px;
+  border-left:solid 1px $borderColor;
 }
 .works-pager-select {
   padding:0 20px;
