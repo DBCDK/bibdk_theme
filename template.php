@@ -356,7 +356,7 @@ function bibdk_theme_pager_first($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-first', 'works-pager-select'),
+    'class' => array('works-control', 'works-pager-first', 'works-pager-select', 'dropdown-toggle'),
   );
   if (isset($parameters['previous'])) {
     $attributes = $parameters['previous'];
