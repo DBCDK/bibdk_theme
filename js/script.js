@@ -535,6 +535,7 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
               }
               $("#" + idHidden).val(value);
               $(this).parents(".bibdk-search-controls-form").find(".selected-text").text(textString);
+              $("#search-block-form").submit();
             });
 
         // NO CODE AFTER THIS!
