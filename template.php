@@ -194,6 +194,32 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /* HOOK_FORM_ALTER END */
 
+/**
+ * Overrides them_menu_link in order to add counter span to the cart menu item
+ * @param array $variables
+ * @return string
+ */
+function bibdk_theme_menu_link(array$variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == 'items in cart') && module_exists('bibdk_cart')) {
+    $count = count(BibdkCart::getAll());
+    $linkText = '<span class="cartcount">' . $count . '</span> ' . $element['#title'];
+    $element['#localized_options']['html'] = TRUE;
+  }
+  else {
+    $linkText = $element['#title'];
+  }
+
+  $output = l($linkText, $element['#href'], $options = $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
@@ -560,7 +586,8 @@ function bibdk_theme_links__locale_block(&$variables) {
         $class[] = 'last';
       }
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
-          && (empty($link['language']) || $link['language']->language == $language_url->language)) {
+        && (empty($link['language']) || $link['language']->language == $language_url->language)
+      ) {
         $class[] = 'active';
       }
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';
