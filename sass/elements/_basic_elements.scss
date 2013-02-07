@@ -291,7 +291,10 @@ div.works-controls > div > div,
 }
 
 form.bibdk-search-controls-form {
-  label {
+  .form-type-select > label, .form-type-radios > label, .form-type-checkboxes > label {
+    display: none;
+  }
+  .form-type-select > .description, .form-type-radios > .description, .form-type-checkboxes > .description {
     display: none;
   }
   .form-item {
