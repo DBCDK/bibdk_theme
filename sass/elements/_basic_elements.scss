@@ -270,6 +270,7 @@ div.works-controls > div > div,
 
   a {
     display:block;
+    float: none;
     margin:0;
     padding:5px 20px;
     line-height:20px;
@@ -284,6 +285,9 @@ div.works-controls > div > div,
   }
   li.pager-current a {
     background:$light_grey2;
+  }
+  li a {
+    border-width: 0;
   }
   li a span {
     display: none;
