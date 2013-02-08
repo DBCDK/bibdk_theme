@@ -8,6 +8,8 @@ $options = array();
 foreach ( $variables['form'] as $name => $elem ) {
   if ( !empty($elem['#options']) && $elem['#type'] == 'select' ) {
     $selected = ( !empty($elem['#default_value']) ) ? $elem['#default_value'] : '';
+    $accesskey = ( !empty($elem['#attributes']['accesskey'][0]) ) ? $elem['#attributes']['accesskey'][0] : '';
+    $tabindex = ( !empty($elem['#attributes']['tabindex'][0]) ) ? $elem['#attributes']['tabindex'][0] : '';
     $options  = $elem['#options'];
     $selected_label = ( !empty($options[$selected]) ) ? $options[$selected] : '';
   }
@@ -15,7 +17,7 @@ foreach ( $variables['form'] as $name => $elem ) {
 ?>
 
 <a class="works-control works-sort dropdown-toggle" href="#">
-  <span class="selected-text"><?php print t($selected_label); ?></span>
+  <span class="selected-text" tabindex="<?php print $tabindex; ?>" accesskey="<?php print $accesskey; ?>"><?php print t($selected_label); ?></span>
   <span class="icon icon-right icon-blue-down">?</span>
 </a>
 
