@@ -238,6 +238,7 @@
 // Dropdown menu
 // =============================================================================
 
+div.works-controls > div > div,
 .dropdown-wrapper {
   position:relative;
   float:left;
@@ -269,6 +270,7 @@
 
   a {
     display:block;
+    float: none;
     margin:0;
     padding:5px 20px;
     line-height:20px;
@@ -284,12 +286,25 @@
   li.pager-current a {
     background:$light_grey2;
   }
+  li a {
+    border-width: 0;
+  }
   li a span {
     display: none;
   }
 }
 
-
+form.bibdk-search-controls-form {
+  .form-type-select > label, .form-type-radios > label, .form-type-checkboxes > label {
+    display: none;
+  }
+  .form-type-select > .description, .form-type-radios > .description, .form-type-checkboxes > .description {
+    display: none;
+  }
+  .form-item {
+    padding: 0;
+  }
+}
 
 // =============================================================================
 // Horizontal search form
@@ -342,13 +357,13 @@
     color:$btn_blue;
   }
 }
+div.works-controls > div,
 .works-control-wrapper-left {
   float:left;
   border-right:solid 1px $borderColor;
 }
 .works-control-wrapper-right {
   float:right;
-  border-left:solid 1px $borderColor;
 }
 .works-control {
   font-size:14px;
@@ -390,6 +405,10 @@
 //
 // Paging, works
 //
+div.works-controls > .pane-ting-openformat-pager-mini {
+  float: right;
+}
+
 .works-pager-back,
 .works-pager-forward,
 .works-pager-select {
@@ -398,6 +417,10 @@
 .works-pager-back,
 .works-pager-forward {
   padding:0 10px;
+}
+.works-pager-back {
+  padding:0 10px;
+  border-left:solid 1px $borderColor;
 }
 .works-pager-select {
   padding:0 20px;
@@ -413,6 +436,7 @@
 .page-overlay .pager-item,
 .page-overlay .pager-current,
 .page-overlay .pager-next,
+.page-overlay .pager-ellipsis,
 .page-overlay .pager-last {
   float:left;
 }
@@ -430,7 +454,7 @@
 .page-overlay .pager-next,
 .page-overlay .pager-last,
 .page-overlay .works-pager-back {
-  padding:0 10px;
+  padding:0 7px;
 }
 
 .page-overlay .pager-back a,
@@ -442,15 +466,16 @@
 }
 
 .page-overlay .pager-current {
-  padding: 0 20px;
-  margin: 0 10px;
+  padding: 0 7px;
+  margin: 0 7px;
   border-left:solid 1px $borderColor;
   border-right:solid 1px $borderColor;
 }
 
 .page-overlay .works-pager-select {
-  padding:0 20px;
+  padding:0 10px;
   border-left:solid 0px $borderColor;
   border-right:solid 0px $borderColor;
 }
+
 

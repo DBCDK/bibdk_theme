@@ -475,20 +475,42 @@ textarea::-webkit-input-placeholder {
     padding-bottom: 20px;
 }
 
+.page-overlay-favourite-userdata label,
 .page-reservation label {
     margin-bottom: 2px;
     float: left;
-    width: 215px;
+    width: 170px;
+    line-height: 1.3em;
 }
 
-.page-reservation input[type="text"], .page-reservation input[type="password"] {
+.page-overlay-favourite-userdata input[type="text"],
+.page-overlay-favourite-userdata input[type="password"],
+.page-reservation input[type="text"],
+.page-reservation input[type="password"] {
     float: left;
     margin-right: 20px;
-    width: 290px;
+    width: 260px;
+    font-size: 12px;
+    padding: 8px;
 }
 
+.form-item.form-item-favouriteselector {
+  clear: both;
+  padding: 0 0 20px 0;
+}
+
+.form-item-favouriteselector label {
+  width: auto;
+}
+
+select#edit-favouriteselector {
+  max-width: 430px;
+}
+
+
+.page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
-    padding: 10px 0 0;
+    padding: 10px 0 0 0;
 }
 
 .page-reservation .fieldset-legend {

@@ -28,6 +28,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
+    'bibdk_search_controls-select' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_search_controls-select',
+      'render element' => 'form',
+    ),
   );
 }
 
@@ -189,6 +194,32 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /* HOOK_FORM_ALTER END */
 
+/**
+ * Overrides them_menu_link in order to add counter span to the cart menu item
+ * @param array $variables
+ * @return string
+ */
+function bibdk_theme_menu_link(array$variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == 'items in cart') && module_exists('bibdk_cart')) {
+    $count = count(BibdkCart::getAll());
+    $linkText = '<span class="cartcount">' . $count . '</span> ' . $element['#title'];
+    $element['#localized_options']['html'] = TRUE;
+  }
+  else {
+    $linkText = $element['#title'];
+  }
+
+  $output = l($linkText, $element['#href'], $options = $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
@@ -234,21 +265,22 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
 }
 
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
-  $fields = $variables['fields'];
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
+  $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
+  $id = $variables['ding_id'];
 
   $tabs = array(
     'subjects' => array(
       'title' => t('Subjects'),
       'content' => $subjects,
       'class' => 'active',
-      'active' => 'active',
+      'active' => '',
     ),
     'more-about' => array(
       'title' => t('More Info'),
-      'content' => '',
-      'class' => 'inactive',
+      'content' => $adhl,
+      'class' => '',
       'active' => 'visuallyhidden',
     ),
     'reviews' => array(
@@ -258,7 +290,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
       'active' => 'visuallyhidden',
     ),
   );
-  $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs));
+  $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs, 'id' => $id));
 }
 
 /**
@@ -350,7 +382,7 @@ function bibdk_theme_pager_first($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = array(
-    'class' => array('works-control', 'works-pager-first', 'works-pager-select'),
+    'class' => array('works-control', 'works-pager-first', 'works-pager-select', 'dropdown-toggle'),
   );
   if (isset($parameters['previous'])) {
     $attributes = $parameters['previous'];
@@ -554,7 +586,8 @@ function bibdk_theme_links__locale_block(&$variables) {
         $class[] = 'last';
       }
       if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))
-          && (empty($link['language']) || $link['language']->language == $language_url->language)) {
+        && (empty($link['language']) || $link['language']->language == $language_url->language)
+      ) {
         $class[] = 'active';
       }
       $output .= '<li' . drupal_attributes(array('class' => $class)) . '>';

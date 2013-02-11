@@ -1,4 +1,5 @@
 (function ($) {
+
     Drupal.behaviors.bibdk_theme = {
         attach: function(context, settings) {
             // Toggle tables
@@ -12,6 +13,7 @@
 
             // Find library header action
             $('.header-action-vejviser a').click(function (e) {
+                $('#edit-openagency-query').focus();
                 e.stopPropagation();
                 e.preventDefault();
 
@@ -171,7 +173,7 @@
                     $(this).addClass('active');
                     var id = $(this).attr('href');
                     $(id).siblings().addClass('visuallyhidden');
-                    $(id).removeClass('visuallyhidden')
+                    $(id).removeClass('visuallyhidden');
                     $(id).children().filter('.active').trigger('click');
                 }
             });
@@ -246,7 +248,7 @@
                 }
                 ,
                 reservation: {
-                    height:780,
+                    height:860,
                     width:570,
                     center:0,
                     createnew:0,
@@ -504,7 +506,40 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             // });
 
 
+            // Cursor positions
+            // Default in search block form - unless it's a search result.
+            $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"]').focus();
+            // Move to first input field in expanded search, if activated.
+            $('#search-advanced-toggle').click(function(e) {
+                $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+            });
+            // Helpdesk popup
+            $('.page-overlay-helpdesk').find('input[type=text], textarea').filter(':visible:first').focus();
+            // User login form
+            $('form#user-login').find('input[type=text], textarea').filter(':visible:first').focus();
+            // Create new account
+            $('form#user-register-form').find('input[type=text], textarea').filter(':visible:first').focus();
+            // Request new password
+            $('form#user-pass').find('input[type=text], textarea').filter(':visible:first').focus();
+            // User help popup
+            $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
+
+
+            // Search sort dropdown
+            $('.bibdk-search-controls-form .dropdown-menu li a').click(function() {
+              var value = "";
+              var textString = $(this).text();
+              var idHidden = $(this).parents(".bibdk-search-controls-form").attr('data');
+              if ( selectValue = $(this).attr('data') )  {
+                value = selectValue;
+              }
+              $("#" + idHidden).val(value);
+              $(this).parents(".bibdk-search-controls-form").find(".selected-text").text(textString);
+              $("#search-block-form").submit();
+            });
+
         // NO CODE AFTER THIS!
         }
     };
+
 })(jQuery);
