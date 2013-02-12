@@ -1,4 +1,5 @@
 <div class="tabs-nav clearfix">
+    <?php dpm($variables); ?>
   <?php $counter = 0; ?>
   <?php foreach ($variables['subWorks'] as $type => $subWork) : $counter++ ?>
     <?php $materialCounter = 0; ?>
@@ -7,7 +8,7 @@
       <?php $typesarray[$type][] = array($subtype, $manifestation['translation']['subtype'], $subMaterialCounter); ?>
       <?php $materialCounter += $subMaterialCounter; ?>
     <?php endforeach; ?>
-    <?php if ($type) : //if statement should be removed when openFormat is in production. If-statement temporarily included to avoid printing "polluted" data from OpenFormat?> 
+    <?php if ($type) : //if statement should be removed when openFormat is in production. If-statement temporarily included to avoid printing "polluted" data from OpenFormat?>
       <a href="#<?php print $type; ?><?php print $ding_id; ?>" class="<?php print ($counter == 1) ? "active" : ""  ?>"><?php print $type; ?> (<?php print $materialCounter; ?>)</a>
     <?php endif; ?>
   <?php endforeach; ?>
