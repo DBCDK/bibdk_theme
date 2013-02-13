@@ -280,7 +280,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
     'more-about' => array(
       'title' => t('More Info'),
       'content' => $adhl,
-      'class' => 'inactive',
+      'class' => '',
       'active' => 'visuallyhidden',
     ),
     'reviews' => array(
