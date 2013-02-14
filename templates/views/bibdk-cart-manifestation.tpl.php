@@ -15,7 +15,16 @@
     </div>
     <!-- .actions -->
     <div class="manifestation-data text">
+      <?php if (!empty($title)) : ?>
         <h4><?php print $title; ?></h4>
+      <?php endif; ?>
+
+      <?php if (!empty($author)) : ?>
         <h6><?php print $author; ?></h6>
+      <?php endif; ?>
+
+      <?php if (!empty($several_editions)) : ?>
+        <h6><?php print $several_editions; ?></h6>
+      <?php endif; ?>
     </div>
 </article>
