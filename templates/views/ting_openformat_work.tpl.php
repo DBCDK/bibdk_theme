@@ -10,7 +10,6 @@
 <!-- wrapper -->
 </div>
 <!-- work-share-data -->
-<?php dpm($variables); ?>
 <div class="bibdk-tabs bibdk-tabs-heavy">
   <?php print $tabs; ?>
     <!-- tabs-nav -->
