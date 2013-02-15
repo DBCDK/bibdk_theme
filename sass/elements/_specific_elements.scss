@@ -840,20 +840,23 @@ p.note-localisations {
     border-top: 1px solid #dddddd;
     line-height: 41px;
   }
-  div.bibdk-mypage-row {
+  div.bibdk-mypage-row, .bibdk-mypage-row item-row {
     max-width: 310px;
     overflow: hidden;
   }
   p {
     margin: 0;
+    max-height: 41px;
   }
   p.label-row {
     float: left;
     margin-right: 10px;
+    max-width: 185px;
   }
   p.value-row,  {
     color: $dark_grey4;
     float: left;
+    max-width: 115px;
   }
 }
 
