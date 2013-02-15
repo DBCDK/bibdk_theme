@@ -788,7 +788,7 @@ p.note-localisations {
 
 .page-user-edit-bibdk-mypage {
   #title {
-    visibility: hidden;
+    /* visibility: hidden; */
   }
   color: $light_grey5;
   .element-wrapper {
@@ -807,10 +807,6 @@ p.note-localisations {
 
 .bibdk-mypage-link {
   text-align: right;
-}
-
-#edit-bibdk-favourite {
-  margin-right: 10px;
 }
 
 .bibdk-mypage-wrapper {
@@ -859,6 +855,10 @@ p.note-localisations {
     color: $dark_grey4;
     float: left;
   }
+}
+
+.bibdk-mypage-wrapper:nth-child(even) {
+  margin-right: 10px;
 }
 
 .bibdk-mypage-wrapper.form-wrapper {
