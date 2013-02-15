@@ -179,6 +179,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 }
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#maxlength'] = 1000;
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
