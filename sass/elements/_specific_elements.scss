@@ -790,7 +790,7 @@ p.note-localisations {
   #title {
     /* visibility: hidden; */
   }
-  color: $light_grey5;
+  color: $dark_grey5;
   .element-wrapper {
     .element {
       border-style: none;
@@ -824,7 +824,7 @@ p.note-localisations {
   }
   h2 {
     padding: 0 16px;
-    color:#3497be;
+    color: #3497be;
     height:51px;
     line-height:51px;
     margin-bottom:0px;
@@ -854,7 +854,7 @@ p.note-localisations {
     max-width: 185px;
   }
   p.value-row,  {
-    color: $dark_grey4;
+    color: $dark_grey3;
     float: left;
     max-width: 115px;
   }
