@@ -142,8 +142,8 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_user_login($form, $form_state, $form_id);
       _wrap_in_element($form);
       break;
+    case 'bibdk_cart_view_form':
     case 'user_profile_form':
-      if ($form['#user_category'] != 'bibdk_cart_list')
         _wrap_in_element($form);
       break;
     case 'search_block_form':

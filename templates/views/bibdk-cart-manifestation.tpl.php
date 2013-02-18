@@ -23,8 +23,7 @@
         <h6><?php print $author; ?></h6>
       <?php endif; ?>
 
-      <?php if (!empty($several_editions)) : ?>
-        <h6><?php print $several_editions; ?></h6>
-      <?php endif; ?>
+        <h6><?php print $type; ?> <?php print $several_editions; ?></h6>
+
     </div>
 </article>
