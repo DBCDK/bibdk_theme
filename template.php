@@ -65,6 +65,10 @@ function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'vejviser') {
     $variables['classes_array'][] = 'lift-columns';
   }
+  if (arg(0) == 'wayf') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+
 }
 
 /**
@@ -156,6 +160,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
+      break;
+    case 'ding_wayf_accept_form':
+      _wrap_in_element($form);
       break;
   }
 }
