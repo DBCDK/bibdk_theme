@@ -202,6 +202,29 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /* HOOK_FORM_ALTER END */
 
+
+/** \brief Theme links given from agency
+ *
+ * @param array $variables
+ * @return string (html unordered list)
+ */
+function bibdk_theme_ting_agency_tools($variables) {
+  $branch = $variables['branch'];
+   if( empty($branch) ) {
+    return;
+  }
+  $links = $branch->getActionLinks();
+  $items = array();
+  if (!empty($links)) {
+    foreach ($links as $name => $link) {
+      $item['data'] = l($name, $link, array('attributes' => array('target'=>'_blank')));
+      $items[] = $item;
+    }
+    return theme('item_list', array('items' => $items));
+  }
+}
+
+
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
  * @param array $variables
