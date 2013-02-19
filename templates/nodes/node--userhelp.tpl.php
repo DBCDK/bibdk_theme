@@ -6,11 +6,11 @@
  * Copy this file to the active theme's '/templates' folder
  */
 ?>
-<div<?php print $attributes; ?>>
+<div<?php print $content; ?>>
 
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>
-      <a href="<?php print ( isset($content['help_url']) ) ? $content['help_url'] : $node_url; ?>"><?php print $title; ?></a>
+      <?php print $title; ?>
     </h2>
   <?php print render($title_suffix); ?>
 
