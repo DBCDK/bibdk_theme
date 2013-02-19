@@ -65,6 +65,10 @@ function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'vejviser') {
     $variables['classes_array'][] = 'lift-columns';
   }
+  if (arg(0) == 'wayf') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+
 }
 
 /**
@@ -157,6 +161,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
+    case 'ding_wayf_accept_form':
+      _wrap_in_element($form);
+      break;
   }
 }
 
@@ -179,6 +186,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 }
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#maxlength'] = 1000;
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
