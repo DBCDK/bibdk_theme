@@ -452,9 +452,7 @@ div#search-advanced-panel {
     border-radius: 3px 3px 3px 3px;
   }
   fieldset#edit-expand {
-    margin-top: 0em;
-    width: 98%;
-    display: block;
+    width: 100%;
     > legend {
       background-color: inherit;
       border: none;
@@ -482,20 +480,18 @@ div#search-advanced-panel {
     width: 32%;
     margin-left: 1%;
     display: inline;
-    border: 0px solid red;
     vertical-align: top;
-    legend {
-      display: block;
-      float: left;
-      border: 0px solid green;
       .fieldset-legend {
           font-size: 16px;
           padding: 0;
       }
-    }
     div.fieldset-wrapper {
       clear: both;
       text-align: right;
+      .fieldset-legend{
+        float: left;
+        max-width: 195px;
+      }
       .form-type-textfield {
           margin-bottom: 0;
           margin-right: 1%;
@@ -504,7 +500,6 @@ div#search-advanced-panel {
       .fieldset-description {
           white-space: nowrap;
           display: inline-block;
-          float: inherit;
       }
       p.helptext {
         background-color:$btn_blue;
@@ -513,7 +508,7 @@ div#search-advanced-panel {
         border: none;
         display: inline-block;
         float: inherit;
-        margin: 0 5px;
+        margin: 3px 5px;
         padding: 0 5px;
         font-size: 12px;
         color:$white;
@@ -563,7 +558,6 @@ div#search-advanced-panel {
 
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
-  top: -18px;
   .form-type-textfield {
     margin-bottom: 0;
     margin-right: 1%;
@@ -576,6 +570,10 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 }
 
 div#search-advanced-panel #edit-expand{
+  .fieldset-wrapper{
+    text-align: left;
+    padding: 10px 0;
+  }
   .fieldset-description {
     display: none;
   }
