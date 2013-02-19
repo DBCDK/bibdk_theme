@@ -538,6 +538,13 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
               $("#search-block-form").submit();
             });
 
+
+            // SELECT SEARCH INPUT ON CLICK
+            $('form#search-block-form input[name="search_block_form"]').focus(function(){
+              this.select();
+            });
+
+
         // NO CODE AFTER THIS!
         }
     };
