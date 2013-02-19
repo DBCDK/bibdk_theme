@@ -34,7 +34,6 @@
             // });
 
 
-
             // Add placeholder support in older browsers
             $('[placeholder]').focus(function() {
               var input = $(this);
@@ -543,6 +542,10 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('form#search-block-form input[name="search_block_form"]').focus(function(){
               this.select();
             });
+
+            // TOGGLE 'EXPAND SEARCH'
+            $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
+            $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
 
 
         // NO CODE AFTER THIS!
