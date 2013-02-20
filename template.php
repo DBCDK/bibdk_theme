@@ -144,7 +144,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_cart_view_form':
     case 'user_profile_form':
-        _wrap_in_element($form);
+      _wrap_in_element($form);
       break;
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -194,6 +194,7 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
+ *
  * @param array $variables
  * @return string
  */
