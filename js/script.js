@@ -547,6 +547,18 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
             $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
 
+            // Move secondary actions in search result to bottom right:
+            $('article.manifestation').filter(':visible').each(function(){
+              var hAction = $(this).find('.actions').height();
+              var hData = $(this).find('.manifestation-data').height();
+              var highestCol = Math.max( hAction, hData );
+              $(this).find('.actions').height(highestCol);
+              var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
+              $(this).find('.secondary-actions').height(hSecondaryAction);
+              var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
+              $(this).find('.secondary-actions > ul').css('margin-top',hSecondaryActionContentMargin);
+            });
+
 
         // NO CODE AFTER THIS!
         }
