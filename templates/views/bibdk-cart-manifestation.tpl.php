@@ -1,5 +1,6 @@
-<article
-        class="element-section manifestation clearfix cart-item-id-<?php print $pid; ?>">
+
+<article class="clearfix cart-item-id-<?php print $pid; ?>" xmlns="http://www.w3.org/1999/html">
+    <!--
     <div class="actions">
 
         <div class="primary-actions">
@@ -7,23 +8,17 @@
               <?php print drupal_render($fields['bibdk_mani_reservation_button']); ?>
             </div>
         </div>
-        <div class="secondary-actions">
-            <ul>
-              <?php print $cart_btn; ?>
-            </ul>
-        </div>
     </div>
+    -->
     <!-- .actions -->
     <div class="manifestation-data text">
       <?php if (!empty($title)) : ?>
-        <h4><?php print $title; ?></h4>
+        <h6><?php print $title; ?><span class="italic normal"> - <?php print $type; ?> <?php print $several_editions; ?></span></h6>
       <?php endif; ?>
 
       <?php if (!empty($author)) : ?>
-        <h6><?php print $author; ?></h6>
+        <p><?php print $author; ?></p>
       <?php endif; ?>
-
-        <h6><?php print $type; ?> <?php print $several_editions; ?></h6>
 
     </div>
 </article>
