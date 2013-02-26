@@ -52,7 +52,24 @@ fieldset {
   padding:20px 0;
 }
 
+// =============================================================================
+// a specific fieldset ? bibdk_reservation_user_parameters
+// =============================================================================
+fieldset.bibdk-reservation-title legend{
+  float:left;
+  margin-top:-12px;
+}
 
+fieldset.bibdk-reservation-title .form-item-checkbox{
+  float:left;
+  margin-left:5em;
+}
+fieldset.collapsible legend {
+  padding: 0 10px;
+}
+fieldset.bibdk-reservation-title .bibdk_clear{
+  clear:both;
+}
 
 // =============================================================================
 // Labels
@@ -403,6 +420,16 @@ textarea::-webkit-input-placeholder {
   width: 100%;
 }
 
+// =============================================================================
+// a specific form ? wayf-accept-form
+// =============================================================================
+.wayf-accept-form{
+padding:0.5em;
+}
+
+.wayf-accept-form input{
+margin-right:0.5em;
+}
 
 
 // =============================================================================

@@ -73,7 +73,9 @@
   }
 }
 
-
+.search-results article.manifestation {
+  min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
+}
 
 
 // =============================================================================
@@ -452,9 +454,7 @@ div#search-advanced-panel {
     border-radius: 3px 3px 3px 3px;
   }
   fieldset#edit-expand {
-    margin-top: 0em;
-    width: 98%;
-    display: block;
+    width: 100%;
     > legend {
       background-color: inherit;
       border: none;
@@ -482,20 +482,18 @@ div#search-advanced-panel {
     width: 32%;
     margin-left: 1%;
     display: inline;
-    border: 0px solid red;
     vertical-align: top;
-    legend {
-      display: block;
-      float: left;
-      border: 0px solid green;
       .fieldset-legend {
           font-size: 16px;
           padding: 0;
       }
-    }
     div.fieldset-wrapper {
       clear: both;
       text-align: right;
+      .fieldset-legend{
+        float: left;
+        max-width: 195px;
+      }
       .form-type-textfield {
           margin-bottom: 0;
           margin-right: 1%;
@@ -504,7 +502,6 @@ div#search-advanced-panel {
       .fieldset-description {
           white-space: nowrap;
           display: inline-block;
-          float: inherit;
       }
       p.helptext {
         background-color:$btn_blue;
@@ -513,7 +510,7 @@ div#search-advanced-panel {
         border: none;
         display: inline-block;
         float: inherit;
-        margin: 0 5px;
+        margin: 3px 5px;
         padding: 0 5px;
         font-size: 12px;
         color:$white;
@@ -563,7 +560,6 @@ div#search-advanced-panel {
 
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
-  top: -18px;
   .form-type-textfield {
     margin-bottom: 0;
     margin-right: 1%;
@@ -576,6 +572,10 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 }
 
 div#search-advanced-panel #edit-expand{
+  .fieldset-wrapper{
+    text-align: left;
+    padding: 10px 0;
+  }
   .fieldset-description {
     display: none;
   }
@@ -780,6 +780,104 @@ p.note-localisations {
   .red{background-color: #ff0000;}
   .green{background-color: #008000;}
   .yellow{background-color: #ffff00;}
+}
+
+// =============================================================================
+// My page
+// =============================================================================
+
+.page-user-edit-bibdk-mypage {
+  #title {
+    /* visibility: hidden; */
+  }
+  color: $dark_grey5;
+  .element-wrapper {
+    .element {
+      border-style: none;
+    }
+    border-style: none;
+    .element-wrapper {
+      .element {
+        border-style: solid solid none;
+      }
+      border: 10px solid #EBEBEB;
+    }
+  }
+}
+
+.bibdk-mypage-link {
+  text-align: right;
+}
+
+.bibdk-mypage-wrapper {
+  width: 310px;
+  float: left;
+  div.fieldset-wrapper {
+    border-color: #DCDCDC #DCDCDC;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    padding: 0;
+    min-height: 218px;
+    max-height: 218px;
+    overflow: hidden;
+  }
+  h2 {
+    padding: 0 16px;
+    color: #3497be;
+    height:51px;
+    line-height:51px;
+    margin-bottom:0px;
+    margin-left:0px;
+    font-weight:normal;
+    font-size: 1.6em;
+    text-transform:uppercase;
+    font-family: 'Dosis', sans-serif;
+  }
+  div {
+    padding: 0 16px;
+    clear: both;
+    border-top: 1px solid #dddddd;
+    line-height: 41px;
+  }
+  div.bibdk-mypage-row, .bibdk-mypage-row item-row {
+    max-width: 310px;
+    overflow: hidden;
+  }
+  p {
+    margin: 0;
+    max-height: 41px;
+  }
+  p.label-row {
+    float: left;
+    margin-right: 10px;
+    max-width: 185px;
+  }
+  p.value-row,  {
+    color: $dark_grey3;
+    float: left;
+    max-width: 115px;
+  }
+}
+
+.bibdk-mypage-wrapper:nth-child(even) {
+  margin-right: 10px;
+}
+
+.bibdk-mypage-wrapper.form-wrapper {
+  padding: 0;
+}
+
+#edit-bibdk-mypage {
+  p.label-row {
+    float: left;
+    width: 145px;
+    margin-right: 0px;
+  }
+  p.value-row,  {
+    float: left;
+    width: 130px;
+  }
 }
 
 // =============================================================================

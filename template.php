@@ -65,6 +65,10 @@ function bibdk_theme_preprocess_html(&$variables) {
   if (arg(0) == 'vejviser') {
     $variables['classes_array'][] = 'lift-columns';
   }
+  if (arg(0) == 'wayf') {
+    $variables['classes_array'][] = 'lift-columns';
+  }
+
 }
 
 /**
@@ -133,9 +137,6 @@ function bibdk_theme_process_page(&$variables) {
  * One hook_form_alter() to rule them all:
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-
-  // dpm($form_id);
-
   switch ($form_id) {
     case 'user_login':
       _alter_user_login($form, $form_state, $form_id);
@@ -146,7 +147,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _wrap_in_element($form);
       break;
     case 'user_profile_form':
-      _wrap_in_element($form);
+      if ($form['#user_category'] != 'bibdk_cart_list') {
+        _wrap_in_element($form);
+      }
       break;
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -156,6 +159,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
+      break;
+    case 'ding_wayf_accept_form':
+      _wrap_in_element($form);
       break;
   }
 }
@@ -179,6 +185,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 }
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#maxlength'] = 1000;
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
@@ -194,8 +201,32 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /* HOOK_FORM_ALTER END */
 
+
+/** \brief Theme links given from agency
+ *
+ * @param array $variables
+ * @return string (html unordered list)
+ */
+function bibdk_theme_ting_agency_tools($variables) {
+  $branch = $variables['branch'];
+   if( empty($branch) ) {
+    return;
+  }
+  $links = $branch->getActionLinks();
+  $items = array();
+  if (!empty($links)) {
+    foreach ($links as $name => $link) {
+      $item['data'] = l($name, $link, array('attributes' => array('target'=>'_blank')));
+      $items[] = $item;
+    }
+    return theme('item_list', array('items' => $items));
+  }
+}
+
+
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
+ *
  * @param array $variables
  * @return string
  */
@@ -280,7 +311,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
     'more-about' => array(
       'title' => t('More Info'),
       'content' => $adhl,
-      'class' => '',
+      'class' => 'inactive',
       'active' => 'visuallyhidden',
     ),
     'reviews' => array(

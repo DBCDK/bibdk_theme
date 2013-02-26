@@ -34,7 +34,6 @@
             // });
 
 
-
             // Add placeholder support in older browsers
             $('[placeholder]').focus(function() {
               var input = $(this);
@@ -506,9 +505,9 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             // });
 
 
-            // Cursor positions
+            // CURSOR POSITIONS
             // Default in search block form - unless it's a search result.
-            $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"]').focus();
+            $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
             // Move to first input field in expanded search, if activated.
             $('#search-advanced-toggle').click(function(e) {
                 $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
@@ -525,7 +524,7 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
 
 
-            // Search sort dropdown
+            // SEARCH SORT DROPDOWN
             $('.bibdk-search-controls-form .dropdown-menu li a').click(function() {
               var value = "";
               var textString = $(this).text();
@@ -537,6 +536,29 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
               $(this).parents(".bibdk-search-controls-form").find(".selected-text").text(textString);
               $("#search-block-form").submit();
             });
+
+
+            // SELECT SEARCH INPUT ON CLICK
+            $('form#search-block-form input[name="search_block_form"]').focus(function(){
+              this.select();
+            });
+
+            // TOGGLE 'EXPAND SEARCH'
+            $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
+            $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
+
+            // Move secondary actions in search result to bottom right:
+            $('article.manifestation').filter(':visible').each(function(){
+              var hAction = $(this).find('.actions').height();
+              var hData = $(this).find('.manifestation-data').height();
+              var highestCol = Math.max( hAction, hData );
+              $(this).find('.actions').height(highestCol);
+              var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
+              $(this).find('.secondary-actions').height(hSecondaryAction);
+              var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
+              $(this).find('.secondary-actions > ul').css('margin-top',hSecondaryActionContentMargin);
+            });
+
 
         // NO CODE AFTER THIS!
         }

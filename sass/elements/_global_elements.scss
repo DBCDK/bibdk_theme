@@ -3,46 +3,50 @@
 // =============================================================================
 
 body {
-  background:$dark_grey3;
-}
-body.page-overlay,
-body.page-reservation {
-  background:$white;
+  background: $dark_grey3;
 }
 
+body.page-overlay,
+body.page-reservation {
+  background: $white;
+}
 
 // =============================================================================
 // Page region wrappers
 // =============================================================================
 #topbar-wrapper {
-  background:$dark_grey1;
+  background: $dark_grey1;
 }
+
 #header-wrapper {
   background: $dark_grey2;
-  height:80px;
+  height: 80px;
 }
+
 #search-panel-wrapper {
-  background:$dark_grey3;
-  padding:20px 0;
+  background: $dark_grey3;
+  padding: 20px 0;
 }
+
 #subjects-wrapper {
   background: $light_grey2;
-  padding:30px 0 10px;
-  min-height:60px;
+  padding: 30px 0 10px;
+  min-height: 60px;
 }
+
 #columns-wrapper {
-  background:$white;
-  padding:40px 0 30px;
+  background: $white;
+  padding: 40px 0 30px;
 }
- .lift-columns #columns {
-    margin-top:-112px;
+
+.lift-columns #columns {
+  margin-top: -112px;
 }
+
 #footer-wrapper {
   background: $dark_grey3;
-  padding:40px 0 100px;
+  padding: 40px 0 100px;
 }
-
-
 
 // =============================================================================
 // Panel content wrappers
@@ -51,20 +55,17 @@ body.page-reservation {
   clear: both;
 }
 
-
-
 // =============================================================================
 // Identity
 // =============================================================================
 #header-logo {
   position: absolute;
-  top:20px;
+  top: 20px;
 }
+
 #footer-logo {
   text-align: center;
 }
-
-
 
 // =============================================================================
 // Language navigation
@@ -76,29 +77,27 @@ body.page-reservation {
 
 #lang-nav {
   li {
-    float:left;
-    display:block;
+    float: left;
+    display: block;
   }
   a {
-    float:left;
-    display:block;
+    float: left;
+    display: block;
   }
 
   li:last-child a {
-    border-right:none;
+    border-right: none;
   }
 }
 
 #user-help-topbar-menu {
   li:first-child a {
-    padding-left:0;
+    padding-left: 0;
   }
   a {
-    border-right:solid 1px $dark_grey2;
+    border-right: solid 1px $dark_grey2;
   }
 }
-
-
 
 // =============================================================================
 // Service navigation
@@ -109,42 +108,41 @@ body.page-reservation {
   li {
 
     a {
-      padding:0.5em 1em;
-      color:$light_grey5;
+      padding: 0.5em 1em;
+      color: $light_grey5;
 
       &:hover {
-        color:$light_grey3;
+        color: $light_grey3;
       }
     }
   }
 }
 
-
-
 // =============================================================================
 // User navigation
 // =============================================================================
 #user-nav {
-  position:absolute;
-  top:0;
-  width:950px;
+  position: absolute;
+  top: 0;
+  width: 950px;
   z-index: 99;
 
   &.with-mats {
-      position:fixed;
+    position: fixed;
   }
 }
+
 #user-nav-inner {
-  position:absolute;
-  right:0;
+  position: absolute;
+  right: 0;
   z-index: 99;
 
   a {
-    line-height:300%;
-    padding:0 1em;
-    border-right:solid 1px lighten($dark_grey3, 5%);
+    line-height: 300%;
+    padding: 0 1em;
+    border-right: solid 1px lighten($dark_grey3, 5%);
     color: lighten($btn_blue, 10%);
-    text-shadow:0 -1px rgba(black,.3);
+    text-shadow: 0 -1px rgba(black, .3);
     background: $dark_grey3;
   }
 
@@ -153,86 +151,89 @@ body.page-reservation {
   }
   li:last-child a {
     @include border-bottom-right-radius(5px);
-    border-right:none;
+    border-right: none;
   }
 
   .materials-button {
 
     .mats {
-      float:left;
-      margin-right:0.5em;
-      font-size:1.5em; // 18px
-      font-weight:bold;
+      float: left;
+      margin-right: 0.5em;
+      font-size: 1.5em;
+      // 18px
+      font-weight: bold;
     }
   }
 
   .login-button {
-    font-weight:bold;
+    font-weight: bold;
   }
 }
-
 
 // =============================================================================
 // Header actions
 // =============================================================================
 .region-header-actions {
-  position:absolute;
-  right:0;
-  top:30px;
+  position: absolute;
+  right: 0;
+  top: 30px;
 }
+
 .header-action {
   @include inline-block(middle);
   @include border-radius(3px);
 
-  background:$dark_grey3;
-  line-height:30px;
-  padding:0 10px;
-  margin-left:2px;
+  background: $dark_grey3;
+  line-height: 30px;
+  padding: 0 10px;
+  margin-left: 2px;
 
   a {
-    color:$white;
+    color: $white;
   }
 }
+
 .header-action-helpdesk {
-  padding-left:0;
+  padding-left: 0;
 
   img {
-    float:left;
-    position:relative;
-    top:2px;
-    left:2px;
-    width:26px;
-    height:26px;
-    margin-right:12px;
+    float: left;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
     @include border-radius(3px);
   }
 }
+
 .header-action-vejviser {
 
   //.search-form-horizontal handles the floating
   &.toggled {
-    padding:0;
-    background:transparent;
+    padding: 0;
+    background: transparent;
   }
 
   .form-type-textfield {
-    width:230px;
-    margin-right:5px;
+    width: 230px;
+    margin-right: 5px;
   }
   .form-actions {
-    width:85px;
+    width: 85px;
   }
 
   form {
-    width:320px;
+    width: 320px;
   }
   input {
-    line-height:30px;
-    height:30px;
+    line-height: 30px;
+    height: 30px;
   }
   input[type=text] {
-    padding:0 5px;
-    font-size:12px;
+    padding: 0 5px;
+    font-size: 12px;
   }
 }
 
@@ -240,71 +241,71 @@ body.page-reservation {
 
   .form-type-textfield {
     /*width:210px;*/
-    margin-right:5px;
+    margin-right: 5px;
   }
   .form-actions {
-    width:85px;
+    width: 85px;
   }
 
   form {
     /*width:300px;*/
   }
   input {
-    line-height:30px;
-    height:30px;
+    line-height: 30px;
+    height: 30px;
   }
   input[type=text] {
-    padding:0 5px;
-    font-size:12px;
+    padding: 0 5px;
+    font-size: 12px;
   }
 }
-
 
 // =============================================================================
 // Search form
 // .search-form-horizontal handles the floating
 // =============================================================================
 #search-form {
-  margin-bottom:10px;
+  margin-bottom: 10px;
 
   .form-wrapper {
-    padding:0;
+    padding: 0;
   }
 
   .form-type-textfield {
-    width:84%;
-    margin-right:1%;
-    margin-bottom:10px;
+    width: 84%;
+    margin-right: 1%;
+    margin-bottom: 10px;
   }
   .form-actions {
-    width:15%;
-    margin-bottom:10px;
+    width: 15%;
+    margin-bottom: 10px;
   }
 
   input {
-    height:40px;
-    line-height:40px;
+    height: 40px;
+    line-height: 40px;
   }
   input[type=text] {
-    padding:0 10px;
-    font-size:1.166667em; // 14px
+    padding: 0 10px;
+    font-size: 1.166667em;
+    // 14px
   }
   input[type=submit] {
-    font-size:1.333333em; // 16px
+    font-size: 1.333333em;
+    // 16px
   }
 }
 
-
 #search-tabs {
-  margin-bottom:15px;
+  margin-bottom: 15px;
 
   a {
     background: $dark_grey4;
     @include transition(background-color .5s);
-    margin-right:1px;
-    padding:10px 20px;
-    border-top:solid 1px darken($dark_grey3, 5%);
-    color:$white;
+    margin-right: 1px;
+    padding: 10px 20px;
+    border-top: solid 1px darken($dark_grey3, 5%);
+    color: $white;
 
     &:hover {
       background: lighten($dark_grey4, 10%);
@@ -319,20 +320,18 @@ body.page-reservation {
   }
 
   li.active a {
-    background-color:$btn_blue;
+    background-color: $btn_blue;
     @include border-radius(3px);
-    text-shadow:0px -1px rgba(black,.2);
+    text-shadow: 0px -1px rgba(black, .2);
 
-    border:none;
-    padding:12px 21px;
+    border: none;
+    padding: 12px 21px;
     position: relative;
-    top:-1px;
-    left:-1px;
-    margin-right:-1px;
+    top: -1px;
+    left: -1px;
+    margin-right: -1px;
   }
 }
-
-
 
 // =============================================================================
 // Subjects navigation
@@ -340,19 +339,18 @@ body.page-reservation {
 #subjects-nav {
 
   li {
-    float:left;
-    width:33%;
+    float: left;
+    width: 33%;
   }
 
   a {
-    display:block;
-    margin-bottom:20px;
-    font-size:1.16667em; // 14px
-    color:$dark_grey3;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.16667em;
+    // 14px
+    color: $dark_grey3;
   }
 }
-
-
 
 // =============================================================================
 // Sidebar
@@ -367,14 +365,17 @@ body.page-reservation {
   font-weight:bold;
   text-align:center;
   color:$white;
+  a {
+    color:$white;
+  }
 }
 
 // ##fix##
 .page-laanerstatus .sidebar-header,
 .page-favoritbiblioteker .sidebar-header {
-  background-image:url(../img/min-side-smiley.png);
-  background-repeat:no-repeat;
-  background-position:10%;
+  background-image: url(../img/min-side-smiley.png);
+  background-repeat: no-repeat;
+  background-position: 10%;
 }
 
 #block-bibdk-frontend-tabs1,
@@ -382,45 +383,46 @@ body.page-reservation {
 .sidebar-nav {
 
   a, fieldset .expand {
-    background:$dark_grey4;
-    display:block;
-    padding:8px 15px;
-    color:$white;
+    background: $dark_grey4;
+    display: block;
+    padding: 8px 15px;
+    color: $white;
 
-    border-top:solid 1px lighten($dark_grey4, 2%);
-    border-bottom:solid 1px darken($dark_grey4, 5%);
+    border-top: solid 1px lighten($dark_grey4, 2%);
+    border-bottom: solid 1px darken($dark_grey4, 5%);
 
     @include transition(background-color .5s);
 
     &:hover {
-      background:lighten($dark_grey4, 2%);
+      background: lighten($dark_grey4, 2%);
     }
 
     &:visited {
-      color:$white;
+      color: $white;
     }
 
     &.active {
-      border:none;
+      border: none;
       @include border-radius(3px);
-      background:$btn_blue;
-      padding:8px 18px;
-      margin-left:-3px;
-      margin-right:-3px;
-      font-weight:bold;
-      text-shadow:0 -1px 1px rgba(black, 0.3);
+      background: $btn_blue;
+      padding: 8px 18px;
+      margin-left: -3px;
+      margin-right: -3px;
+      font-weight: bold;
+      text-shadow: 0 -1px 1px rgba(black, 0.3);
 
       &:hover {
-        background:lighten($btn_blue, 2%);
+        background: lighten($btn_blue, 2%);
       }
     }
   }
 
-  legend { /* , .facet-type */
-    background:darken($dark_grey3, 2%);
-    padding:8px 15px;
-    color:$white;
-    font-weight:bold;
+  legend {
+    /* , .facet-type */
+    background: darken($dark_grey3, 2%);
+    padding: 8px 15px;
+    color: $white;
+    font-weight: bold;
     width: 160px;
   }
 
@@ -440,7 +442,6 @@ body.page-reservation {
   }
 }
 
-
 // =============================================================================
 // Exceptions for facets
 // =============================================================================
@@ -448,48 +449,42 @@ body.page-reservation {
 #ding-facetbrowser-form {
 
   .form-item {
-    padding:0;
+    padding: 0;
   }
 
   .fieldset-legend {
     font-size: 14px;
-    padding:0;
+    padding: 0;
   }
 
   label.option {
     display: block;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
   .form-type-checkbox {
-    float:none;
-    margin:0;
+    float: none;
+    margin: 0;
   }
 
   .expand_more {
-    cursor:pointer;
+    cursor: pointer;
   }
 }
-
-
-
-
-
 
 // =============================================================================
 // Page title
 // =============================================================================
 
 #title {
-  color:#3497be;
-  height:73px;
-  line-height:73px;
-  margin-bottom:10px;
-  margin-left:30px;
-  font-weight:normal;
-  text-transform:uppercase;
+  color: #3497be;
+  height: 73px;
+  line-height: 73px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
   font-family: 'Dosis', sans-serif;
 }
-
 
 // =============================================================================
 // Help search form
@@ -499,33 +494,48 @@ body.page-reservation {
 
   padding: 0 20px;
 
-  border-bottom: solid 1px #ddd;
-
   fieldset.form-wrapper {
     padding: 0px;
   }
 
   .form-type-textfield {
-    width:84%;
-    margin-right:1%;
+    width: 84%;
+    margin-right: 1%;
   }
 
   .form-actions {
-    width:15%;
+    width: 15%;
   }
 
   input {
-    height:40px;
-    line-height:40px;
+    height: 40px;
+    line-height: 40px;
   }
 
   input[type=text] {
-    padding:0 10px;
-    font-size:1.166667em; // 14px
+    padding: 0 10px;
+    font-size: 1.166667em;
+    // 14px
   }
 
   input[type=submit] {
-    font-size:1.333333em; // 16px
+    font-size: 1.333333em;
+    // 16px
   }
 }
 
+// =============================================================================
+// Font style helpers
+// =============================================================================
+.normal {
+  font-weight: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+a.inactive {
+  color: $dark_grey5;
+  cursor: default;
+}

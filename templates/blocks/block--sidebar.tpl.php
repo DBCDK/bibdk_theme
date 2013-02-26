@@ -1,13 +1,15 @@
 <?php if (isset($variables['elements']['#secondary'])) : ?>
   <div id="sidebar">
-    <div class="sidebar-header">
-      <?php print t('Min side'); ?> 
-    </div>
-    <nav class="sidebar-nav">    
+    <nav class="sidebar-header">
+      <ul>
+        <?php print ( isset($variables['elements']['#bibdk_mypage_tab']) ) ? drupal_render($variables['elements']['#bibdk_mypage_tab']) : '<li>' . t('My page') . '</li>'; ?>
+      </ul>
+    </nav>
+    <nav class="sidebar-nav">
       <ul>
         <?php print drupal_render($variables['elements']['#primary']); ?>
         <?php print drupal_render($variables['elements']['#secondary']); ?>
-      </ul> 
-    </nav>  
+      </ul>
+    </nav>
   </div>
 <?php endif; ?>
