@@ -23,12 +23,8 @@
                     <div class="actions">
                         <div class="primary-actions">
                             <div class="btn-wrapper">
-                              <?php echo drupal_render($subwork['fields']); //APPARENTLY UNUSED...? ?>
                             </div>
-                            <!--
-                            <a class="text-small link-add-basket" href="#">
-                            <span class="icon icon-left icon-blue-addbasket">&nbsp;</span><?php print t('Add to basket'); ?>
-                            </a> -->
+                            <?php print drupal_render($manifest['manifest']['subtype_actions']['cart']); ?>
                         </div>
                     </div>
                     <?php echo drupal_render($manifest['manifest']['subtype_actions']); ?>

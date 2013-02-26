@@ -137,9 +137,6 @@ function bibdk_theme_process_page(&$variables) {
  * One hook_form_alter() to rule them all:
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-
-  // dpm($form_id);
-
   switch ($form_id) {
     case 'user_login':
       _alter_user_login($form, $form_state, $form_id);
@@ -150,7 +147,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _wrap_in_element($form);
       break;
     case 'user_profile_form':
-      _wrap_in_element($form);
+      if ($form['#user_category'] != 'bibdk_cart_list') {
+        _wrap_in_element($form);
+      }
       break;
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
@@ -227,6 +226,7 @@ function bibdk_theme_ting_agency_tools($variables) {
 
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
+ *
  * @param array $variables
  * @return string
  */

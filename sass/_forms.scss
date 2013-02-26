@@ -64,9 +64,11 @@ fieldset.bibdk-reservation-title .form-item-checkbox{
   float:left;
   margin-left:5em;
 }
-
+fieldset.collapsible legend {
+  padding: 0 10px;
+}
 fieldset.bibdk-reservation-title .bibdk_clear{
-clear:both;
+  clear:both;
 }
 
 // =============================================================================
