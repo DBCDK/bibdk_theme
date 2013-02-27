@@ -156,6 +156,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
+    case 'bibdk_cart_get_form':
+      _alter_bibdk_cart_form($form);
+      break;
   }
 }
 
@@ -189,6 +192,25 @@ function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
+}
+
+/**
+ * Adding prefix and suffix to bibdk_cart_view form
+ * @param $form
+ */
+function _alter_bibdk_cart_form(&$form) {
+  if (isset($form['cart_table_secondary_actions']['actions'])) {
+    $items = $form['cart_table_secondary_actions']['actions'];
+    $new_items = array();
+
+    foreach ($items as $key => $item) {
+      $item['#prefix'] = '<div>';
+      $item['#suffix'] = '</div>';
+      $new_items[$key] = $item;
+    }
+
+    $form['cart_table_secondary_actions']['actions'] = $new_items;
+  }
 }
 
 /* HOOK_FORM_ALTER END */
