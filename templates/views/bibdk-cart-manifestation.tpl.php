@@ -1,13 +1,15 @@
-<article class="clearfix cart-item-id-<?php print $pid; ?>" xmlns="http://www.w3.org/1999/html">
-    <div class="manifestation-data text">
-      <?php if (!empty($title)) : ?>
-        <h6><?php print $title; ?>
-            <span class="italic normal"> - <?php print $type; ?> <?php print $several_editions; ?></span>
-        </h6>
-      <?php endif; ?>
+<article class="clearfix cart-item-id-<?php print $pid; ?>">
+  <div class="manifestation-data text">
 
-      <?php if (!empty($author)) : ?>
-        <p><?php print $author; ?></p>
-      <?php endif; ?>
-    </div>
+    <?php if (!empty($fields['bibdk_mani_title'])) : ?>
+      <h6>
+        <?php print $fields['bibdk_mani_title'][0]['#markup']; ?>
+        <span class="italic normal"> - <?php print $fields['bibdk_mani_type'][0]['#markup']; ?> <?php print $several_editions; ?></span>
+      </h6>
+
+      <?php hide($fields['bibdk_mani_title']); ?>
+      <?php hide($fields['bibdk_mani_type']); ?>
+    <?php endif; ?>
+    <?php print drupal_render($fields); ?>
+  </div>
 </article>
