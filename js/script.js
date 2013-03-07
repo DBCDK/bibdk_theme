@@ -24,12 +24,12 @@
 
             });
             
-            $('.bibdk-favourite-vejviser-link').click(function (e) {
+           /* $('.bibdk-favourite-vejviser-link').click(function (e) {
                 e.preventDefault();
                 $('#edit-openagency-query').focus();
                 $('.header-action-vejviser').find('a').addClass('visuallyhidden');
                 $('.header-action-vejviser').find('form').removeClass('visuallyhidden');
-            });
+            });*/
 
             // $('html').click(function() {
 
