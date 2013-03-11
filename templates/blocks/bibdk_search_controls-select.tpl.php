@@ -18,6 +18,9 @@ foreach ( $variables['form'] as $key => $elem ) {
 
 $action = explode('?', $variables['form']['#action']);
 parse_str($action[1], $query);
+if ( isset($query['page']) ) {
+  unset($query['page']);
+}
 
 ?>
 
