@@ -492,7 +492,7 @@ div#search-advanced-panel {
       text-align: right;
       .fieldset-legend{
         float: left;
-        max-width: 195px;
+        max-width: inherit;
       }
       .form-type-textfield {
           margin-bottom: 0;
@@ -594,14 +594,19 @@ div#search-advanced-panel #edit-expand{
 }
 
 .page-bibdk-frontpage div#search-advanced-panel #edit-expand{
+  .materialetype {
+    width: 20%;
+  }
   .sprog {
     width: 48%;
-    .bibdk-custom-search-element .form-wrapper {
+    margin-left: 5%;
+    .bibdk-custom-search-element .column {
       width: 33%;
       float: left;
     }
   }
   .udgivelsesar{
+    width: 24%;
     .form-type-select{
       float: left;
     }
@@ -611,35 +616,72 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-/* bøger:sprog */
-.page-bibdk-frontpage-artikel div#search-advanced-panel #edit-expand,
-.page-bibdk-frontpage-bog div#search-advanced-panel #edit-expand{
-  .sprog{
-    width: 24%;
-    .bibdk-custom-search-element .form-wrapper{
-      width: 49%;
-      float: left;
+/* boeger:sprog */
+.page-bibdk-frontpage-bog{
+   div#search-advanced-panel #edit-expand {
+    .element-wrapper.materialetype, .element-wrapper.litterar_form {
+      width: 17%;
+      margin-left: 0;
     }
+    .element-wrapper.malgruppe {
+      width: 15%;
+      margin-left: 0;
+    }
+    .element-wrapper.udgivelsesar {
+      width: 24%;
+      margin-left: 0;
+    }
+    .element-wrapper.sprog{
+      width: 24%;
+      margin-left: 0;
+      .bibdk-custom-search-element .column {
+        width: 49%;
+        float: left;
+      }
+    }
+  }
+
+  div#search-advanced-panel fieldset.artiklens_emne {
+    margin-left: 0;
+  }
+}
+
+.page-bibdk-frontpage-artikel{
+   div#search-advanced-panel #edit-expand {
+    .sprog{
+      width: 24%;
+      .bibdk-custom-search-element .column {
+        width: 49%;
+        float: left;
+      }
+    }
+  }
+  div#search-advanced-panel fieldset.artiklens_emne {
+    margin-left: 0;
   }
 }
 
 .page-bibdk-frontpage-film div#search-advanced-panel {
+  #edit-expand .materialetype {
+    width: 30%;
+  }
   .nationalitet {
     width: 98%;
-    .bibdk-custom-search-element .form-wrapper {
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
       width: 33%;
       float: left;
     }
   }
   .genre_type {
-    .bibdk-custom-search-element .form-wrapper {
+    .bibdk-custom-search-element .column {
       width: 50%;
       float: left;
     }
   }
   .materialetype {
-    .bibdk-custom-search-element .form-wrapper {
-      width: 33%;
+    .bibdk-custom-search-element .column {
+      width: 50%;
       float: left;
     }
   }
@@ -647,10 +689,14 @@ div#search-advanced-panel #edit-expand{
 
 .page-bibdk-frontpage-net div#search-advanced-panel #edit-expand{
   .sprog {
-    width: 24%;
+    width: 26%;
+    margin-left: 1%;
+  }
+  .materialetype {
+    width: 40%;
   }
   .materialetype, .sprog {
-    .bibdk-custom-search-element .form-wrapper{
+    .bibdk-custom-search-element .column{
       width: 50%;
       float: left;
     }
@@ -662,19 +708,28 @@ div#search-advanced-panel #edit-expand{
     width: 100%;
   }
   .spilgenre_type{
-    .bibdk-custom-search-element .form-wrapper{
+    .bibdk-custom-search-element .column{
       width: 50%;
       float: left;
     }
   }
+  #edit-expand .element-wrapper {
+    width: 30%;
+  }
 }
 
 .page-bibdk-frontpage-musik div#search-advanced-panel{
+  .alle_titler {
+    margin-left: 0;
+  }
   .materiale{
-    .bibdk-custom-search-element .form-wrapper{
-      width: 50%;
+    .bibdk-custom-search-element .column{
+      width: 25%;
       float: left;
     }
+  }
+  #edit-expand .element-wrapper {
+    width: 66%
   }
 }
 
