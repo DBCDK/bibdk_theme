@@ -2,6 +2,7 @@
 // Import: Global elements
 // =============================================================================
 
+
 body {
   background: $dark_grey3;
 }
@@ -212,6 +213,11 @@ margin-top:-75px;
     margin-right: 12px;
     @include border-radius(3px);
   }
+}
+
+.vejviser-raw{
+float:right;
+margin-top:-75px;
 }
 
 .header-action-vejviser ,.vejviser-raw{
