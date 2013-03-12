@@ -56,14 +56,16 @@ function bibdk_theme_page_alter(&$page) {
  */
 function bibdk_theme_preprocess_html(&$variables) {
 
-  if (arg(0) == 'search') {
-    $variables['classes_array'][] = 'lift-columns';
-  }
-  if (arg(0) == 'user') {
-    $variables['classes_array'][] = 'lift-columns';
-  }
-  if (arg(0) == 'vejviser') {
-    $variables['classes_array'][] = 'lift-columns';
+  switch (arg(0)) {
+    case 'search':
+    case 'user':
+    case 'vejviser':
+      $variables['classes_array'][] = 'lift-columns';
+      break;
+
+    case 'email':
+      $variables['classes_array'][] = 'page-overlay';
+      break;
   }
   if (arg(0) == 'wayf') {
     $variables['classes_array'][] = 'lift-columns';
@@ -88,14 +90,17 @@ function bibdk_theme_preprocess_page(&$variables) {
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
 
-  if (arg(0) == 'reservation') {
-    $variables['theme_hook_suggestions'][] = 'page__overlay';
-  }
-  if (arg(0) == 'vejviser') {
-    $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
-    $variables['page']['content']['#suffix'] = '</div></div>';
-  }
+  switch (arg(0)) {
+    case 'reservation':
+    case 'email':
+      $variables['theme_hook_suggestions'][] = 'page__overlay';
+      break;
 
+    case 'vejviser':
+      $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+      $variables['page']['content']['#suffix'] = '</div></div>';
+      break;
+  }
 
   _bibdk_theme_create_user_sidebar($variables);
 
@@ -162,6 +167,8 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'ding_wayf_accept_form':
       _wrap_in_element($form);
+    case 'bibdk_cart_get_form':
+      _alter_bibdk_cart_form($form);
       break;
   }
 }
@@ -197,6 +204,26 @@ function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
+}
+
+/**
+ * Adding prefix and suffix to bibdk_cart_view form
+ *
+ * @param $form
+ */
+function _alter_bibdk_cart_form(&$form) {
+  if (isset($form['cart_table_secondary_actions']['actions'])) {
+    $items = $form['cart_table_secondary_actions']['actions'];
+    $new_items = array();
+
+    foreach ($items as $key => $item) {
+      $item['#prefix'] = '<div>';
+      $item['#suffix'] = '</div>';
+      $new_items[$key] = $item;
+    }
+
+    $form['cart_table_secondary_actions']['actions'] = $new_items;
+  }
 }
 
 /* HOOK_FORM_ALTER END */
