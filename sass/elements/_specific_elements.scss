@@ -647,16 +647,25 @@ div#search-advanced-panel #edit-expand{
 }
 
 .page-bibdk-frontpage-artikel{
-   div#search-advanced-panel #edit-expand {
-    .sprog{
-      width: 24%;
-      .bibdk-custom-search-element .column {
-        width: 49%;
-        float: left;
+  div#search-advanced-panel {
+    > fieldset {
+      width: 41.5%;
+    }
+    #edit-expand {
+      .sprog {
+        width: 24%;
+        margin-left: 1%;
+        .bibdk-custom-search-element .column {
+          width: 33%;
+          float: left;
+        }
+      }
+      .udgivelsesar {
+        margin-left: 3.5%;
       }
     }
   }
-  div#search-advanced-panel fieldset.artiklens_emne {
+  div#search-advanced-panel fieldset.artiklens_forfatter {
     margin-left: 0;
   }
 }
@@ -687,18 +696,24 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-.page-bibdk-frontpage-net div#search-advanced-panel #edit-expand{
-  .sprog {
-    width: 26%;
-    margin-left: 1%;
-  }
-  .materialetype {
-    width: 40%;
-  }
-  .materialetype, .sprog {
-    .bibdk-custom-search-element .column{
-      width: 50%;
-      float: left;
+.page-bibdk-frontpage-net div#search-advanced-panel {
+  #edit-expand{
+    .sprog {
+      width: 32%;
+      margin-left: 1%;
+      .bibdk-custom-search-element .column {
+        width: 33%;
+        float: left;
+      }
+    }
+    .materialetype {
+      width: 32%;
+    }
+    .materialetype {
+      .bibdk-custom-search-element .column{
+        width: 50%;
+        float: left;
+      }
     }
   }
 }

@@ -204,7 +204,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   _break_into_columns_expand('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
 
   // language, articles
-  _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
+  _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
 
   // nationality, film
   _break_into_columns('26707474-294f-1c34-e50b-f7831578913d', '8e7bda97-5430-9774-e54c-4d2b0005a06b', 3, $form);
