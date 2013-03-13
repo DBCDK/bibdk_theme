@@ -96,9 +96,10 @@ function bibdk_theme_preprocess_page(&$variables) {
       $variables['theme_hook_suggestions'][] = 'page__overlay';
       break;
 
-    case 'vejviser':
+    case 'vejviser':      
       $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
       $variables['page']['content']['#suffix'] = '</div></div>';
+      drupal_alter('vejviser_page_content',$variables['page']['content']);
       break;
   }
 
