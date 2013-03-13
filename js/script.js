@@ -23,7 +23,7 @@
                 // $(this).closest('.header-action').find('input[type=text]').focus();
 
             });
-            
+
            /* $('.bibdk-favourite-vejviser-link').click(function (e) {
                 e.preventDefault();
                 $('#edit-openagency-query').focus();
@@ -418,99 +418,6 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
                 $(this).addClass('kravlenisse');
               });
             }
-
-            // Disable custom search elements that don't have a working search term
-            // Alle: Materialetyper
-            $('#edit-bibdk-custom-search-element-8a82ae05-e3d7-2cc4-394f-104685da18b8 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-
-            // Boeger: Materialetyper
-            $('#edit-bibdk-custom-search-element-6bfbdc58-a531-19f4-29a2-4e080de94cd8 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            // Boeger Litteraer form og Maalgruppe
-            // $('#edit-bibdk-custom-search-element-d868dbb4-c49f-8674-5560-4b0547a2c9df input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // $('#edit-bibdk-custom-search-element-54d61692-fd9b-07f4-55a0-c1ba3094cbde input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-
-            // Artikler: Materialetyper
-            $('#edit-bibdk-custom-search-element-2e4be922-5e61-bb64-8123-d9c01c3a1640 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-
-            // Spil-platform, Spil-genre, Medieraadetsalderanbefaling & Bibliotekets anbefaling
-            // $('#edit-bibdk-custom-search-element-40cb1fd2-d934-0734-69f7-01248b663172 select').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            $('#edit-bibdk-custom-search-element-7c3bfbbf-3038-9ca4-952a-85f9785337e2 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-cd37520a-f3c2-63a4-9979-416311ef9a2b select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-3e7a88b5-6ffe-1bb4-d1b7-f218359219ac select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-
-            // Film: personer, genre, aldersanbefaling & tilladt for
-            $('#edit-bibdk-custom-search-element-88b1285a-384d-b874-7d8b-ec675f89ade7 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-ae797962-8b73-3044-31d3-6eebde66c95f input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-3bde0fbf-1f9e-d914-61bb-f92ce00fd65c select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            $('#edit-bibdk-custom-search-element-7b5202bd-ebe9-2344-8d16-1bae6c3ca027 select').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-
-            // Paa nettet
-            // $('#edit-bibdk-custom-search-element-a0e64424-68f9-71f4-1df2-bf0100315aa4 input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // $('#edit-bibdk-custom-search-element-9576133e-7fed-45d4-29ec-6920f85c69bb input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // $('#edit-bibdk-custom-search-element-b9392a11-5676-3574-fd47-143ad3edcefa input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // $('#edit-bibdk-custom-search-element-66d1dd8d-2742-7d64-8d4c-ab7f601a7916 input').each(function(){
-            // Materialetyper
-            // $(this).attr('disabled','disabled');
-            // });
-
-            // Musik: Materialetyper
-            $('#edit-bibdk-custom-search-element-05b8e136-f60b-65d4-edd0-56c69d20ce8d input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-            // Musik: Genre
-            $('#edit-bibdk-custom-search-element-57308136-ba7d-8224-19af-26b0f6567f77 input').each(function(){
-              $(this).attr('disabled','disabled');
-            });
-
-            // // alle: sprog
-            // $('#edit-bibdk-custom-search-element-a54a7813-741a-f3d4-615d-e60a322df4be input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // // Boeger
-            // $('#edit-bibdk-custom-search-element-03d3d960-f884-1fe4-2db0-52e51ac82a6e input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // // Artikler
-            // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-            // // Paa nettet
-            // $('#edit-bibdk-custom-search-element-553e8edb-bbb1-c6e4-5574-8182d8ed4e15 input').each(function(){
-            // $(this).attr('disabled','disabled');
-            // });
-
 
             // CURSOR POSITIONS
             // Default in search block form - unless it's a search result.
