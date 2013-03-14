@@ -653,7 +653,7 @@ div#search-advanced-panel #edit-expand{
     }
     #edit-expand {
       .sprog {
-        width: 24%;
+        width: 35%;
         margin-left: 1%;
         .bibdk-custom-search-element .column {
           width: 33%;
@@ -671,27 +671,42 @@ div#search-advanced-panel #edit-expand{
 }
 
 .page-bibdk-frontpage-film div#search-advanced-panel {
-  #edit-expand .materialetype {
-    width: 30%;
+  .filmens_titel, .personer  {
+    width: 48.5%;
   }
   .nationalitet {
     width: 98%;
     margin-left: 0;
     .bibdk-custom-search-element .column {
-      width: 33%;
+      width: 20%;
       float: left;
+    }
+    .bibdk-custom-search-element .column2, .bibdk-custom-search-element .column3 {
+      width: 30%;
     }
   }
   .genre_type {
+    width: 98%;
+    margin-left: 0;
     .bibdk-custom-search-element .column {
-      width: 50%;
+      width: 19%;
       float: left;
     }
   }
-  .materialetype {
-    .bibdk-custom-search-element .column {
-      width: 50%;
-      float: left;
+  #edit-expand {
+    .materialetype {
+      width: 20%;
+      margin-left: 0;
+      .bibdk-custom-search-element .column {
+        width: 50%;
+        float: left;
+      }
+    }
+    .aldersanbefaling, .tilladt_for  {
+      width: 32%;
+      select {
+        width: 95%;
+      }
     }
   }
 }
@@ -722,20 +737,36 @@ div#search-advanced-panel #edit-expand{
   select {
     width: 100%;
   }
+  .titel , .platform {
+    width: 41.5%;
+  }
   .spilgenre_type{
+    width: 84.5%;
+    margin-left: 0;
     .bibdk-custom-search-element .column{
-      width: 50%;
+      width: 24.5%;
       float: left;
     }
   }
   #edit-expand .element-wrapper {
-    width: 30%;
+    width: 33%;
   }
 }
 
 .page-bibdk-frontpage-musik div#search-advanced-panel{
   .alle_titler {
     margin-left: 0;
+  }
+  .musikgenre{
+    width: 98%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column{
+      width: 19.5%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column4{
+      width: 22%;
+    }
   }
   .materiale{
     .bibdk-custom-search-element .column{
@@ -744,7 +775,7 @@ div#search-advanced-panel #edit-expand{
     }
   }
   #edit-expand .element-wrapper {
-    width: 66%
+    width: 75%
   }
 }
 
