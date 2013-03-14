@@ -8,6 +8,12 @@
 // A basic element
 // =============================================================================
 
+// fake element wrapper(no border)
+.element-wrapper-fake {
+  padding:12px;
+  margin-bottom:10px;  
+}
+
 .element-wrapper {
   border:solid 10px $elementWrapper;
   margin-bottom:10px;

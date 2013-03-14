@@ -2,6 +2,7 @@
 // Import: Global elements
 // =============================================================================
 
+
 body {
   background: $dark_grey3;
 }
@@ -179,7 +180,13 @@ body.page-reservation {
   top: 30px;
 }
 
-.header-action {
+.bibdk-favourite-vejviser-link {
+color: $white;
+float:right;
+margin-top:-75px;
+}
+
+.header-action, .bibdk-favourite-vejviser-link {
   @include inline-block(middle);
   @include border-radius(3px);
 
@@ -208,7 +215,12 @@ body.page-reservation {
   }
 }
 
-.header-action-vejviser {
+.vejviser-raw{
+float:right;
+margin-top:-75px;
+}
+
+.header-action-vejviser ,.vejviser-raw{
 
   //.search-form-horizontal handles the floating
   &.toggled {
