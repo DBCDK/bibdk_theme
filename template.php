@@ -209,7 +209,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // nationality, film
   _break_into_columns('26707474-294f-1c34-e50b-f7831578913d', '8e7bda97-5430-9774-e54c-4d2b0005a06b', 4, $form);
   // genre type, film
-  _break_into_columns('ae797962-8b73-3044-31d3-6eebde66c95f', 'f81d0c50-5f4b-d1f4-f11f-c000c901c841', 5, $form);
+  _break_into_columns('ae797962-8b73-3044-31d3-6eebde66c95f', 'f81d0c50-5f4b-d1f4-f11f-c000c901c841', 6, $form);
   // material type, film
   // _break_into_columns_expand('1458f855-531f-b484-1df2-1c7762dc339b', 'f79c6d0f-effe-6944-7951-211d70e904d7', 2, $form);
 
@@ -235,8 +235,11 @@ function _break_into_columns($parent_id, $id, $cnum, &$form) {
   if ( !$cnum ) return false;
   if ( !empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
+    if ( isset($slice['#tree']) ) {
+      unset($slice['#tree']);
+    }
     unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
-    $len = round((sizeof($slice)-1)/$cnum); // $slice includes a #tree key
+    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
     if ( !$len ) return false;
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
@@ -245,6 +248,10 @@ function _break_into_columns($parent_id, $id, $cnum, &$form) {
       if ( floor($n/$len) == ($n/$len) ) {
         $colkey++;
       }
+    }
+    if ( sizeof($snippets) > $cnum ) {
+      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+      unset($snippets[$colkey]);
     }
     foreach ($snippets as $key => $snippet) {
       $snippet['#type'] = 'container';
@@ -258,8 +265,11 @@ function _break_into_columns_expand($parent_id, $id, $cnum, &$form) {
   if ( !$cnum ) return false;
   if ( !empty($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
     $slice = $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id];
+    if ( isset($slice['#tree']) ) {
+      unset($slice['#tree']);
+    }
     unset($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]);
-    $len = round((sizeof($slice)-1)/$cnum); // $slice includes a #tree key
+    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
     if ( !$len ) return false;
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
@@ -268,6 +278,10 @@ function _break_into_columns_expand($parent_id, $id, $cnum, &$form) {
       if ( floor($n/$len) == ($n/$len) ) {
         $colkey++;
       }
+    }
+    if ( sizeof($snippets) > $cnum ) {
+      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+      unset($snippets[$colkey]);
     }
     foreach ($snippets as $key => $snippet) {
       $snippet['#type'] = 'container';
