@@ -678,10 +678,13 @@ div#search-advanced-panel #edit-expand{
     width: 98%;
     margin-left: 0;
     .bibdk-custom-search-element .column {
-      width: 20%;
+      width: 22%;
       float: left;
     }
-    .bibdk-custom-search-element .column2, .bibdk-custom-search-element .column3 {
+    .bibdk-custom-search-element .column2 {
+      width: 26%;
+    }
+    .bibdk-custom-search-element .column3 {
       width: 30%;
     }
   }
@@ -689,7 +692,7 @@ div#search-advanced-panel #edit-expand{
     width: 98%;
     margin-left: 0;
     .bibdk-custom-search-element .column {
-      width: 19%;
+      width: 20%;
       float: left;
     }
   }
