@@ -1,3 +1,7 @@
+
+
+<div class="<?php print $ding_id; echo '_start' ?>"></div>
+
 <!-- cover -->
 <?php print $cover ?>
 <!-- cover -->
@@ -61,3 +65,4 @@
 
 </div>
 <!-- tabs -->
+<div class="<?php print $ding_id; echo '_slut' ?>"></div>
