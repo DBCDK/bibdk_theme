@@ -96,7 +96,7 @@ function bibdk_theme_preprocess_page(&$variables) {
       $variables['theme_hook_suggestions'][] = 'page__overlay';
       break;
 
-    case 'vejviser':      
+    case 'vejviser':
       $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
       $variables['page']['content']['#suffix'] = '</div></div>';
       drupal_alter('vejviser_page_content',$variables['page']['content']);
@@ -265,7 +265,7 @@ function bibdk_theme_menu_link(array$variables) {
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
-  if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == 'items in cart') && module_exists('bibdk_cart')) {
+  if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == t('items in cart')) && module_exists('bibdk_cart')) {
     $count = count(BibdkCart::getAll());
     $linkText = '<span class="cartcount">' . $count . '</span> ' . $element['#title'];
     $element['#localized_options']['html'] = TRUE;
