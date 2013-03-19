@@ -1,6 +1,5 @@
 <article class="manifestation clearfix">
   <div class="actions">
-    <?php dpm($fields); ?>
     <div class="primary-actions">
       <div class="btn-wrapper">
         <?php print drupal_render($fields['bibdk_reservation_button_default']); ?>
