@@ -168,6 +168,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'ding_wayf_accept_form':
       _wrap_in_element($form);
+      break;
     case 'bibdk_cart_get_form':
       _alter_bibdk_cart_form($form);
       break;
@@ -329,6 +330,7 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
   dpm($variables);
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
+  $further_search = (isset($variables['fields']['further_search'])) ? drupal_render($variables['fields']['further_search']) : t('no_further_search');
   $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
   $id = $variables['ding_id'];
@@ -340,10 +342,16 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
       'class' => 'active',
       'active' => '',
     ),
+    'further-search' => array(
+      'title' => t('further_search'),
+      'content' => $further_search,
+      'class' => '',
+      'active' => 'visuallyhidden',
+    ),
     'more-about' => array(
       'title' => t('More info'),
       'content' => $adhl,
-      'class' => '',
+      'class' => 'inactive',
       'active' => 'visuallyhidden',
     ),
     'reviews' => array(
