@@ -22,7 +22,7 @@
           <th><?php print $field['#title']; ?></th>
           <td><?php print $field[0]['#markup']; ?></td>
         </tr>
-      <? endforeach; ?>
+      <?php endforeach; ?>
       </tbody>
     </table>
   </div>
