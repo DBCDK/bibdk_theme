@@ -19,7 +19,7 @@
       <tbody>
       <?php foreach ($fields['ting_openformat_default_formatter'] as $field) : ?>
         <tr>
-          <th><?php print $field['#title']; ?></th>
+          <th><?php print t($field['#title']); ?></th>
           <td><?php print $field[0]['#markup']; ?></td>
         </tr>
       <?php endforeach; ?>
