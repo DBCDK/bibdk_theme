@@ -215,9 +215,20 @@ margin-top:-75px;
   }
 }
 
-.vejviser-raw{
-float:right;
-margin-top:-75px;
+#bibdk-vejviser-header {
+  float: right;
+  margin-top: -70px;
+  width: 100%;
+  #bibdk-vejviser-count {
+    white-space: nowrap;
+    font-size: large;
+    line-height: 1.5;
+    float: left;
+    padding: 0px 25%;
+  }
+  .vejviser-raw{
+    float:right;
+  }
 }
 
 .header-action-vejviser ,.vejviser-raw{
