@@ -321,6 +321,16 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
     }
   }
   $variables['fields'] = $field_groups;
+  usort($variables['fields']['ting_openformat_default_formatter'], '_sortfields_by_weight');
+}
+
+/**
+ * @param array $a
+ * @param array $b
+ * @return Boolean
+ */
+function _sortfields_by_weight($a, $b) {
+  return $a['#weight'] - $b['#weight'];
 }
 
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {

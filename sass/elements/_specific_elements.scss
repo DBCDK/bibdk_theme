@@ -75,6 +75,9 @@
 
 .search-results article.manifestation {
   min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
+  .actions{
+    max-width:175px;
+  }
 }
 
 
