@@ -238,7 +238,7 @@ function _alter_bibdk_cart_form(&$form) {
  */
 function bibdk_theme_ting_agency_tools($variables) {
   $branch = $variables['branch'];
-   if( empty($branch) ) {
+  if( empty($branch) ) {
     return;
   }
   $links = $branch->getActionLinks();
@@ -322,34 +322,41 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
     }
   }
   $variables['fields'] = $field_groups;
+  usort($variables['fields']['ting_openformat_default_formatter'], '_sortfields_by_weight');
 }
 
 /**
- * @param $variables array
+ * @param array $a
+ * @param array $b
+ * @return Boolean
  */
+function _sortfields_by_weight($a, $b) {
+  return $a['#weight'] - $b['#weight'];
+}
+
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
-  dpm($variables, 'variables');
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
-  $further_search = (isset($variables['fields']['further_search'])) ? drupal_render($variables['fields']['further_search']) : t('no_further_search');
+  $further_search = (isset($variables['fields']['bibdk_furthersearch_options'])) ? drupal_render($variables['fields']['bibdk_furthersearch_options']) : t('no_further_search');
   $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
   $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
   $id = $variables['ding_id'];
 
+  //XXX mmj set 'subjcts' as active // further-search as 'visuallyhidden'
   $tabs = array(
     'subjects' => array(
       'title' => t('Subjects'),
       'content' => $subjects,
-      'class' => 'active',
-      'active' => '',
+      'class' => '',
+      'active' => 'visuallyhidden',
     ),
     'further-search' => array(
       'title' => t('further_search'),
       'content' => $further_search,
-      'class' => '',
-      'active' => 'visuallyhidden',
+      'class' => 'active',
+      'active' => '',
     ),
     'more-about' => array(
-      'title' => t('More info'),
+      'title' => t('More Info'),
       'content' => $adhl,
       'class' => 'inactive',
       'active' => 'visuallyhidden',
