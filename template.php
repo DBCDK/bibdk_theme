@@ -33,6 +33,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_search_controls-select',
       'render element' => 'form',
     ),
+    'bibdk_user_pass_reset' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_user_pass_reset',
+      'render element' => 'form',
+    ),
   );
 }
 
@@ -152,6 +157,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_user_login($form, $form_state, $form_id);
       _wrap_in_element($form);
       break;
+    case 'user_pass_reset':
+      _alter_user_pass_reset($form, $form_state, $form_id);
+      break;
     case 'user_profile_form':
       if ($form['#user_category'] != 'bibdk_cart_list') {
         _wrap_in_element($form);
@@ -191,6 +199,13 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
     unset($form['persistent_login']);
   }
 }
+
+function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'bibdk_user_pass_reset';
+  dpm(menu_build_tree('user-menu'));
+  // http://api.drupal.org/api/drupal/includes!menu.inc/group/menu/7
+}
+
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#maxlength'] = 1000;

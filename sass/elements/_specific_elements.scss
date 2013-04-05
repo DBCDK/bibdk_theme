@@ -908,3 +908,24 @@ p.note-localisations {
   padding-right: 20px;
 
 }
+
+
+// =============================================================================
+// User password reset
+// =============================================================================
+
+.user-pass-reset-message {
+  float: left;
+  padding-left: 20px;
+  width: 568px;
+}
+
+.user-pass-reset-action {
+  float: left;
+  .form-wrapper.form-actions {
+      padding: 1em 10px;
+  }
+  .form-wrapper {
+      border-bottom-width: 0px;
+  }
+}
