@@ -202,7 +202,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 
 function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
   $form['#theme'] = 'bibdk_user_pass_reset';
-  dpm(menu_build_tree('user-menu'));
+  // dpm(menu_build_tree('user-menu'));
   // http://api.drupal.org/api/drupal/includes!menu.inc/group/menu/7
 }
 
@@ -306,12 +306,22 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 function _bibdk_theme_create_user_sidebar(&$variables) {
   /*   * **** SIDEBAR ***** */
   // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
+  if ( strpos(current_path(), 'user') !== 0 ) {
     unset($variables['page']['sidebar']);
+  }
+  else if ( strpos(current_path(), 'user/reset') === 0 ) {
+    $tree = menu_build_tree('user-menu');
+    $data = array_shift($tree);
+    foreach ( $data['below'] as $link) {
+      $item['#theme'] = 'menu_local_task';
+      $item['#link']  = $link['link'];
+      $user_menu[] = $item;
+    }
+    $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
   }
   else {
     global $user;
-    if (!$user->uid && isset($variables['tabs']['#primary'])) {
+    if ( !$user->uid && isset($variables['tabs']['#primary']) ) {
       $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
     }
     else {
