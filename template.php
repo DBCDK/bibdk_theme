@@ -334,11 +334,16 @@ function _sortfields_by_weight($a, $b) {
   return $a['#weight'] - $b['#weight'];
 }
 
+/**
+ * @param array $variables
+ */
+//TODO XXX remove this method as it is getting deprecated with the implementation of worktabs
 function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
+  /*
   $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
   $further_search = (isset($variables['fields']['bibdk_furthersearch_options'])) ? drupal_render($variables['fields']['bibdk_furthersearch_options']) : t('no_further_search');
   $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
-  $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
+  #$variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
   $id = $variables['ding_id'];
 
   //XXX mmj set 'subjcts' as active // further-search as 'visuallyhidden'
@@ -369,6 +374,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
     ),
   );
   $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs, 'id' => $id));
+  */
 }
 
 /**

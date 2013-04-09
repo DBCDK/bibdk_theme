@@ -1,14 +1,11 @@
 <div class="<?php print $ding_id; echo '_start' ?>"></div>
 
 <!-- cover -->
-<?php print $cover ?>
+<?php print drupal_render($fields['ting_cover_work']); ?>
 <!-- cover -->
 
 <div class="wrapper">
   <?php print drupal_render($fields); ?>
-  <!-- work tabs -->
-  <?php print $work_tabs ?>
-  <!-- work tabs -->
   <!-- tabs -->
 </div>
 <!-- wrapper -->
