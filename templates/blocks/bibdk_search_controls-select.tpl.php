@@ -5,15 +5,23 @@
  */
 $selected = $selected_label = '';
 $options = array();
-foreach ( $variables['form'] as $name => $elem ) {
+foreach ( $variables['form'] as $key => $elem ) {
   if ( !empty($elem['#options']) && $elem['#type'] == 'select' ) {
     $selected = ( !empty($elem['#default_value']) ) ? $elem['#default_value'] : '';
     $accesskey = ( !empty($elem['#attributes']['accesskey'][0]) ) ? $elem['#attributes']['accesskey'][0] : '';
     $tabindex = ( !empty($elem['#attributes']['tabindex'][0]) ) ? $elem['#attributes']['tabindex'][0] : '';
     $options  = $elem['#options'];
     $selected_label = ( !empty($options[$selected]) ) ? $options[$selected] : '';
+    $name = $key;
   }
 }
+
+$action = explode('?', $variables['form']['#action']);
+parse_str($action[1], $query);
+if ( isset($query['page']) ) {
+  unset($query['page']);
+}
+
 ?>
 
 <a class="works-control works-sort dropdown-toggle" href="#">
@@ -23,8 +31,9 @@ foreach ( $variables['form'] as $name => $elem ) {
 
 <ul class="dropdown-menu dropdown-leftalign visuallyhidden">
 <?php foreach ( $options as $value => $label ) { ?>
+  <?php $query[$name] = $value; ?>
   <li>
-    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="#" data="<?php print $value; ?>"><?php print $label; ?></a>
+    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="<?php echo $action[0] . '?' . http_build_query($query, '', '&amp;'); ?>" data="<?php print $value; ?>"><?php print $label; ?></a>
   </li>
 <?php } ?>
 </ul>

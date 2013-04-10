@@ -33,6 +33,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_search_controls-select',
       'render element' => 'form',
     ),
+    'bibdk_user_pass_reset' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_user_pass_reset',
+      'render element' => 'form',
+    ),
   );
 }
 
@@ -152,6 +157,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_user_login($form, $form_state, $form_id);
       _wrap_in_element($form);
       break;
+    case 'user_pass_reset':
+      _alter_user_pass_reset($form, $form_state, $form_id);
+      break;
     case 'user_profile_form':
       if ($form['#user_category'] != 'bibdk_cart_list') {
         _wrap_in_element($form);
@@ -192,11 +200,112 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
   }
 }
 
+function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'bibdk_user_pass_reset';
+  // dpm(menu_build_tree('user-menu'));
+  // http://api.drupal.org/api/drupal/includes!menu.inc/group/menu/7
+}
+
+
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#maxlength'] = 1000;
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
+
+  // break language up in columns : language, frontpage
+  _break_into_columns_expand('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
+  // language all other search pages
+  _break_into_columns('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
+
+  // language, books
+  _break_into_columns('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
+
+  // language, articles
+  _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
+
+  // nationality, film
+  _break_into_columns('26707474-294f-1c34-e50b-f7831578913d', '8e7bda97-5430-9774-e54c-4d2b0005a06b', 4, $form);
+  // genre type, film
+  _break_into_columns('ae797962-8b73-3044-31d3-6eebde66c95f', 'f81d0c50-5f4b-d1f4-f11f-c000c901c841', 6, $form);
+  // material type, film
+  // _break_into_columns_expand('1458f855-531f-b484-1df2-1c7762dc339b', 'f79c6d0f-effe-6944-7951-211d70e904d7', 2, $form);
+
+  // material type, net
+  _break_into_columns('66d1dd8d-2742-7d64-8d4c-ab7f601a7916', '819ed112-ec85-8f64-2573-a5a88f7ac3d9', 2, $form);
+  // language, net
+  _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
+
+  // genre, games
+  _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 4, $form);
+
+  // genre, music
+  _break_into_columns('57308136-ba7d-8224-19af-26b0f6567f77', 'e8258795-3bbe-5e34-fda2-04a8b420d93f', 5, $form);
+  // material type, music
+  _break_into_columns('05b8e136-f60b-65d4-edd0-56c69d20ce8d', '604357bb-a73b-65c4-11d8-cf798b7eabe1', 4, $form);
+
+
+}
+
+
+function _break_into_columns($parent_id, $id, $cnum, &$form) {
+  if ( !$cnum ) return false;
+  if ( !empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
+    $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
+    if ( isset($slice['#tree']) ) {
+      unset($slice['#tree']);
+    }
+    unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
+    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
+    if ( !$len ) return false;
+    $n = $colkey = 0;
+    foreach ($slice as $key => $val) {
+      $snippets[$colkey][$key] = $val;
+      $n++;
+      if ( floor($n/$len) == ($n/$len) ) {
+        $colkey++;
+      }
+    }
+    if ( sizeof($snippets) > $cnum ) {
+      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+      unset($snippets[$colkey]);
+    }
+    foreach ($snippets as $key => $snippet) {
+      $snippet['#type'] = 'container';
+      $snippet['#attributes']['class'] = array('column column' . $key);
+      $form['advanced']['bibdk_custom_search_element_' . $parent_id]['column' . $key] = $snippet;
+    }
+  }
+}
+
+function _break_into_columns_expand($parent_id, $id, $cnum, &$form) {
+  if ( !$cnum ) return false;
+  if ( !empty($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
+    $slice = $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id];
+    if ( isset($slice['#tree']) ) {
+      unset($slice['#tree']);
+    }
+    unset($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]);
+    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
+    if ( !$len ) return false;
+    $n = $colkey = 0;
+    foreach ($slice as $key => $val) {
+      $snippets[$colkey][$key] = $val;
+      $n++;
+      if ( floor($n/$len) == ($n/$len) ) {
+        $colkey++;
+      }
+    }
+    if ( sizeof($snippets) > $cnum ) {
+      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+      unset($snippets[$colkey]);
+    }
+    foreach ($snippets as $key => $snippet) {
+      $snippet['#type'] = 'container';
+      $snippet['#attributes']['class'] = array('column column' . $key);
+      $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id]['column' . $key] = $snippet;
+    }
+  }
 }
 
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
@@ -291,12 +400,22 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 function _bibdk_theme_create_user_sidebar(&$variables) {
   /*   * **** SIDEBAR ***** */
   // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
+  if ( strpos(current_path(), 'user') !== 0 ) {
     unset($variables['page']['sidebar']);
+  }
+  else if ( strpos(current_path(), 'user/reset') === 0 ) {
+    $tree = menu_build_tree('user-menu');
+    $data = array_shift($tree);
+    foreach ( $data['below'] as $link) {
+      $item['#theme'] = 'menu_local_task';
+      $item['#link']  = $link['link'];
+      $user_menu[] = $item;
+    }
+    $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
   }
   else {
     global $user;
-    if (!$user->uid && isset($variables['tabs']['#primary'])) {
+    if ( !$user->uid && isset($variables['tabs']['#primary']) ) {
       $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
     }
     else {
@@ -349,7 +468,7 @@ function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
     'more-about' => array(
       'title' => t('More Info'),
       'content' => $adhl,
-      'class' => 'inactive',
+      'class' => '',
       'active' => 'visuallyhidden',
     ),
     'reviews' => array(
