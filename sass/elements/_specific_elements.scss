@@ -1103,11 +1103,11 @@ p.note-localisations {
   p.label-row {
     float: left;
     margin-right: 10px;
-    max-width: 185px;
+    max-width: 150px;
   }
   p.value-row,  {
     color: $dark_grey3;
-    float: left;
+    float: right;
     max-width: 115px;
   }
 }
@@ -1131,6 +1131,24 @@ p.note-localisations {
     width: 130px;
   }
 }
+
+
+// =============================================================================
+// Favorites data popup
+// =============================================================================
+
+#bibdk-favourite-user-form-fields {
+  width: 500px;
+  input#edit-submit {
+    width: 70px;
+    margin-left: 360px;
+    margin-top: 10px;
+  }
+  .form-wrapper {
+    border-width: 0px;
+  }
+}
+
 
 // =============================================================================
 // Christmas special
