@@ -482,6 +482,7 @@ div#search-advanced-panel {
     margin-left: 0%;
   }
   fieldset {
+    margin-bottom: 1em;
     width: 32%;
     margin-left: 1%;
     display: inline;
@@ -495,7 +496,7 @@ div#search-advanced-panel {
       text-align: right;
       .fieldset-legend{
         float: left;
-        max-width: 195px;
+        max-width: inherit;
       }
       .form-type-textfield {
           margin-bottom: 0;
@@ -573,7 +574,6 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 .container-inline div#search-advanced-panel {
   display: block;
 }
-
 div#search-advanced-panel #edit-expand{
   .fieldset-wrapper{
     text-align: left;
@@ -596,66 +596,270 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-.page-bibdk-frontpage div#search-advanced-panel #edit-expand{
+.page-bibdk-frontpage div#search-advanced-panel {
+  .materialetype {
+    width: 20%;
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
   .sprog {
     width: 48%;
-    .bibdk-custom-search-element .form-wrapper {
+    margin-left: 5%;
+    .bibdk-custom-search-element .column {
       width: 33%;
       float: left;
     }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
   }
   .udgivelsesar{
+    width: 24%;
     .form-type-select{
       float: left;
     }
     .form-type-select:last-child{
       float: right;
     }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
   }
 }
 
-/* bøger:sprog */
-.page-bibdk-frontpage-artikel div#search-advanced-panel #edit-expand,
-.page-bibdk-frontpage-bog div#search-advanced-panel #edit-expand{
-  .sprog{
-    width: 24%;
-    .bibdk-custom-search-element .form-wrapper{
-      width: 49%;
-      float: left;
+/* boeger:sprog */
+.page-bibdk-frontpage-bog{
+   div#search-advanced-panel {
+    .materialetype, .element-wrapper.litterar_form {
+      width: 17%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
     }
+    .malgruppe {
+      width: 15%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+    .udgivelsesar {
+      margin-left: 0;
+      width: 24%;
+      .form-type-select {
+        float: left;
+      }
+      .form-type-select:last-child {
+        float: right;
+      }
+      div.form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+    .element-wrapper.sprog{
+      width: 24%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+      .bibdk-custom-search-element .column {
+        width: 49%;
+        float: left;
+      }
+    }
+  }
+
+  div#search-advanced-panel fieldset.artiklens_emne {
+    margin-left: 0;
+  }
+}
+
+.page-bibdk-frontpage-artikel{
+  div#search-advanced-panel {
+    > fieldset {
+      width: 41.5%;
+    }
+    > fieldset.materialetype {
+      margin-left: 0;
+      width: 20%;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+    > fieldset.sprog {
+      width: 35%;
+      margin-left: 1%;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+      .bibdk-custom-search-element .column {
+        width: 33%;
+        float: left;
+      }
+    }
+    > fieldset.udgivelsesar {
+      margin-left: 3.5%;
+      width: 24%;
+      .form-type-select{
+        float: left;
+      }
+      .form-type-select:last-child{
+        float: right;
+      }
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+
+  }
+  div#search-advanced-panel fieldset.artiklens_forfatter {
+    margin-left: 0;
   }
 }
 
 .page-bibdk-frontpage-film div#search-advanced-panel {
+  .filmens_titel, .personer  {
+    width: 48.5%;
+  }
   .nationalitet {
     width: 98%;
-    .bibdk-custom-search-element .form-wrapper {
-      width: 33%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 22%;
       float: left;
+    }
+    .bibdk-custom-search-element .column2 {
+      width: 26%;
+    }
+    .bibdk-custom-search-element .column3 {
+      width: 30%;
     }
   }
   .genre_type {
-    .bibdk-custom-search-element .form-wrapper {
-      width: 50%;
+    width: 98%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 16%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column1 {
+      width: 20%;
       float: left;
     }
   }
   .materialetype {
-    .bibdk-custom-search-element .form-wrapper {
-      width: 33%;
+    width: 20%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 50%;
       float: left;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .aldersanbefaling, .tilladt_for  {
+    width: 32%;
+    select {
+      width: 95%;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
     }
   }
 }
 
-.page-bibdk-frontpage-net div#search-advanced-panel #edit-expand{
+.page-bibdk-frontpage-net div#search-advanced-panel {
   .sprog {
-    width: 24%;
+    width: 32%;
+    margin-left: 1%;
+    .bibdk-custom-search-element .column {
+      width: 33%;
+      float: left;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
   }
-  .materialetype, .sprog {
-    .bibdk-custom-search-element .form-wrapper{
+  .materialetype {
+    margin-left: 0;
+    width: 32%;
+    .bibdk-custom-search-element .column{
       width: 50%;
       float: left;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .udgivelsesar {
+    width: 24%;
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+    div.form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
     }
   }
 }
@@ -664,18 +868,63 @@ div#search-advanced-panel #edit-expand{
   select {
     width: 100%;
   }
+  .titel , .platform {
+    width: 41.5%;
+  }
   .spilgenre_type{
-    .bibdk-custom-search-element .form-wrapper{
-      width: 50%;
+    width: 84.5%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column{
+      width: 24.5%;
       float: left;
     }
+  }
+  .medieradets_aldersanbefalinger, .aldersanbefaling {
+    width: 33%;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .medieradets_aldersanbefalinger {
+    margin-left: 0;
   }
 }
 
 .page-bibdk-frontpage-musik div#search-advanced-panel{
-  .materiale{
-    .bibdk-custom-search-element .form-wrapper{
-      width: 50%;
+  .alle_titler {
+    margin-left: 0;
+  }
+  .musikgenre{
+    width: 98%;
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .bibdk-custom-search-element .column{
+      width: 19.5%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column3{
+      width: 22%;
+    }
+  }
+  .materiale {
+    width: 75%;
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .bibdk-custom-search-element .column{
+      width: 25%;
       float: left;
     }
   }
