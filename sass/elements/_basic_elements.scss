@@ -11,7 +11,7 @@
 // fake element wrapper(no border)
 .element-wrapper-fake {
   padding:12px;
-  margin-bottom:10px;  
+  margin-bottom:10px;
 }
 
 .element-wrapper {
@@ -159,6 +159,26 @@
         font-weight:bold;
         border-color:darken($borderColor, 10%);
       }
+    }
+  }
+
+  .tab-item{
+    .tab-title {
+      float: left;
+      color: $dark_grey5;
+
+      &.active {
+        color: $dark_grey1;
+        font-weight:bold;
+      }
+    }
+
+    .tab-link {
+      float:right;
+    }
+
+    .tab-content {
+      border-top:solid 1px $borderColor;
     }
   }
 }

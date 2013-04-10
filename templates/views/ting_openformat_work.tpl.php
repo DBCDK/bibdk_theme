@@ -1,4 +1,4 @@
-<div class="<?php print $ding_id; echo '_start' ?>"></div>
+<div class="<?php print $ding_id . '_start'; ?>"></div>
 
 <!-- cover -->
 <?php print drupal_render($fields['ting_cover_work']); ?>
@@ -62,4 +62,4 @@
 
 </div>
 <!-- tabs -->
-<div class="<?php print $ding_id; echo '_slut' ?>"></div>
+<div class="<?php print $ding_id . '_slut'; ?>"></div>
