@@ -5,6 +5,7 @@
         <?php print drupal_render($fields['bibdk_reservation_button_default']); ?>
       </div>
       <?php print drupal_render($fields['bibdk_cart_link_default']); ?>
+      <?php print drupal_render($fields['ting_infomedia_link_default']); ?>
     </div>
     <div class="secondary-actions">
       <ul>
