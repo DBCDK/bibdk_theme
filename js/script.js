@@ -410,6 +410,14 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
                 $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
             });
 
+            // Infomedia field
+            $('.infomedia-button').click(function(e){
+                $(this).siblings().removeClass('visuallyhidden');
+            });
+            $('.infomedia-wrapper .close').click(function (e){
+                $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
+            });
+
             //Seasonal images
             var today = new Date();
             month = today.getMonth() + 1;

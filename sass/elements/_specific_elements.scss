@@ -945,11 +945,13 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-/* Linkme */
-.linkme-wrapper {
+/* Linkme, Infomedia */
+.linkme-wrapper, .infomedia-wrapper {
   position: absolute;
   width: 30em;
   left: 25em;
+  margin-top: 5px;
+  min-height: 3.5em;
   background-color: white;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
 
@@ -962,6 +964,10 @@ div#search-advanced-panel #edit-expand{
     width: 25em;
     float: left;
     padding: 10px;
+  }
+  .user-msg {
+    line-height: 3.5em;
+    margin: 10px;
   }
   .close {
     margin: 10px 10px 0 0;
