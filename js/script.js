@@ -309,6 +309,18 @@
                     left:30,
                     top:30
                 }
+                ,
+                infomedia: {
+                    height:840,
+                    width:780,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:0,
+                    resizable:1,
+                    left:35,
+                    top:35
+                }
             };
 
 
