@@ -966,8 +966,10 @@ div#search-advanced-panel #edit-expand{
     padding: 10px;
   }
   .user-msg {
-    line-height: 3.5em;
+    min-height: 3.5em;
+    line-height: 2em;
     margin: 10px;
+    float: left;
   }
   .close {
     margin: 10px 10px 0 0;
