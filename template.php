@@ -176,6 +176,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'ding_wayf_accept_form':
       _wrap_in_element($form);
+      break;
     case 'bibdk_cart_get_form':
       _alter_bibdk_cart_form($form);
       break;
@@ -346,7 +347,7 @@ function _alter_bibdk_cart_form(&$form) {
  */
 function bibdk_theme_ting_agency_tools($variables) {
   $branch = $variables['branch'];
-   if( empty($branch) ) {
+  if( empty($branch) ) {
     return;
   }
   $links = $branch->getActionLinks();
@@ -450,35 +451,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
  */
 function _sortfields_by_weight($a, $b) {
   return $a['#weight'] - $b['#weight'];
-}
-
-function bibdk_theme_preprocess_ting_openformat_work(&$variables) {
-  $subjects = (isset($variables['fields']['ting_openformat_work_subjects'])) ? drupal_render($variables['fields']['ting_openformat_work_subjects']) : t("No subjects for this work");
-  $adhl = (isset($variables['fields']['bibdk_adhl_info'])) ? drupal_render($variables['fields']['bibdk_adhl_info']) : t("No ADHL for this work");
-  $variables['cover'] = (isset($variables['fields']['ting_cover_work'])) ? drupal_render($variables['fields']['ting_cover_work']) : "";
-  $id = $variables['ding_id'];
-
-  $tabs = array(
-    'subjects' => array(
-      'title' => t('Subjects'),
-      'content' => $subjects,
-      'class' => 'active',
-      'active' => '',
-    ),
-    'more-about' => array(
-      'title' => t('More Info'),
-      'content' => $adhl,
-      'class' => '',
-      'active' => 'visuallyhidden',
-    ),
-    'reviews' => array(
-      'title' => t('Reviews'),
-      'content' => '',
-      'class' => 'inactive',
-      'active' => 'visuallyhidden',
-    ),
-  );
-  $variables['work_tabs'] = theme('bibdk_theme_work_info_tabs', array('tabs' => $tabs, 'id' => $id));
 }
 
 /**
