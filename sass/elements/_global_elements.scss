@@ -2,7 +2,6 @@
 // Import: Global elements
 // =============================================================================
 
-
 body {
   background: $dark_grey3;
 }
@@ -181,9 +180,9 @@ body.page-reservation {
 }
 
 .bibdk-favourite-vejviser-link {
-color: $white;
-float:right;
-margin-top:-75px;
+  color: $white;
+  float: right;
+  margin-top: -75px;
 }
 
 .header-action, .bibdk-favourite-vejviser-link {
@@ -226,12 +225,12 @@ margin-top:-75px;
     float: left;
     padding: 0px 25%;
   }
-  .vejviser-raw{
-    float:right;
+  .vejviser-raw {
+    float: right;
   }
 }
 
-.header-action-vejviser ,.vejviser-raw{
+.header-action-vejviser, .vejviser-raw {
 
   //.search-form-horizontal handles the floating
   &.toggled {
@@ -322,38 +321,39 @@ margin-top:-75px;
 #search-tabs {
   margin-bottom: 15px;
 
-  a {
-    background: $dark_grey4;
-    @include transition(background-color .5s);
-    margin-right: 1px;
-    padding: 10px 20px;
-    border-top: solid 1px darken($dark_grey3, 5%);
-    color: $white;
+  li {
+    padding-right: 1px;
 
-    &:hover {
-      background: lighten($dark_grey4, 10%);
+    input[type=submit] {
+      font-size: 12px;
+      background: $dark_grey4;
+      @include transition(background-color .5s);
+      margin-right: 1px;
+      border-top: solid 1px darken($dark_grey3, 5%);
+      color: $white;
+
+      &:hover {
+        background: lighten($dark_grey4, 10%);
+        @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
+      }
+
+      &.active {
+        background: $btn_blue;
+        @include border-radius(3px);
+        text-shadow: 0px -1px rgba(black, .2);
+
+        border: none;
+        position: relative;
+      }
+    }
+    &:first-child {
+      @include border-radius(5px 0 0 5px);
+    }
+    &:last-child {
+      @include border-radius(0 5px 5px 0);
     }
   }
 
-  li.first a {
-    @include border-radius(5px 0 0 5px);
-  }
-  li.last a {
-    @include border-radius(0 5px 5px 0);
-  }
-
-  li.active a {
-    background-color: $btn_blue;
-    @include border-radius(3px);
-    text-shadow: 0px -1px rgba(black, .2);
-
-    border: none;
-    padding: 12px 21px;
-    position: relative;
-    top: -1px;
-    left: -1px;
-    margin-right: -1px;
-  }
 }
 
 // =============================================================================
@@ -379,17 +379,18 @@ margin-top:-75px;
 // Sidebar
 // =============================================================================
 .sidebar-header {
-  height:67px;
-  line-height:67px;
-  background-color:$dark_grey3;
-  border-bottom:solid 1px darken($dark_grey3, 5%);
+  height: 67px;
+  line-height: 67px;
+  background-color: $dark_grey3;
+  border-bottom: solid 1px darken($dark_grey3, 5%);
 
-  font-size:1.333em; // 16px
-  font-weight:bold;
-  text-align:center;
-  color:$white;
+  font-size: 1.333em;
+  // 16px
+  font-weight: bold;
+  text-align: center;
+  color: $white;
   a {
-    color:$white;
+    color: $white;
   }
 }
 
