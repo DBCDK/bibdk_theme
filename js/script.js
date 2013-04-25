@@ -226,7 +226,8 @@
 
 
 
-            //window popup function
+            // ****************************  pop-ups profiles **************************** //
+
             var profiles = {
                 standard: {
                     height:600, // sets the height in pixels of the window.
@@ -324,6 +325,12 @@
             };
 
 
+            // ****************************  pop-ups **************************** //
+
+            $('.bibdk-popup-link').click(function(e){
+                $('.popover').addClass('visuallyhidden');
+            });
+
             $('.bibdk-popup-link').once().click(function(e){
                 e.preventDefault();
                 if($(this).hasClass('orderedonce')){
@@ -341,7 +348,8 @@
             });
 
 
-            //Top menu language menu fix
+            // ************************ Top menu language menu fix ************************ //
+            //
             $('#lang-nav a').each(function(){
                 if($(this).hasClass('active')){
                     $(this).addClass('visuallyhidden');
@@ -415,8 +423,11 @@
             });
 
 
+
+
+
+
             // ****************************  popovers **************************** //
-            // Popovers
             $('.popover-button').click(function(e){
                 $('.popover').addClass('visuallyhidden');
                 $(this).siblings().removeClass('visuallyhidden').find('input').select();
