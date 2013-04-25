@@ -1,5 +1,5 @@
 <li>
-    <a href="#<?php print $path; ?>" class="linkme-button load-holdings text-small text-lightgrey">
+    <a href="#<?php print $path; ?>" class="popover-button load-holdings text-small text-lightgrey">
         <span class="icon icon-left icon-lightgrey-link">&nbsp;</span><?php print $link_text; ?>
     </a>
     <div class='popover element-wrapper visuallyhidden linkme-wrapper'>

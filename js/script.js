@@ -416,6 +416,17 @@
 
 
             // ****************************  popovers **************************** //
+            // Popovers
+            $('.popover-button').click(function(e){
+                $('.popover').addClass('visuallyhidden');
+                $(this).siblings().removeClass('visuallyhidden').find('input').select();
+            });
+            $('.popover .close').click(function (e){
+                $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+            });
+
+
+            /* /begin TODO: delete after sprint 32 */
             // Linkme field
             $('.linkme-button').click(function(e){
                 $('.popover').addClass('visuallyhidden');
@@ -433,6 +444,7 @@
             $('.infomedia-wrapper .close').click(function (e){
                 $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
             });
+            /* /end TODO: delete after sprint 32 */
 
             // ****************************  Seasonal images **************************** //
             var today = new Date();
