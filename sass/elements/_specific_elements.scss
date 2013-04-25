@@ -452,6 +452,12 @@ div#search-advanced-panel {
     background-color: $btn_blue;
   }
 
+  .sub-elements {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+  }
+
   input {
     margin-top: 5px;
     height: 30px;
@@ -646,7 +652,6 @@ div#search-advanced-panel #edit-expand {
   .sprog {
     width: 48%;
     margin-left: 5%;
-    padding-left: 4%;
     .bibdk-custom-search-element .column {
       min-width: 25%;
       float: left;
@@ -743,16 +748,21 @@ div#search-advanced-panel #edit-expand {
 
 .page-bibdk-frontpage-artikel {
   div#search-advanced-panel {
-    fieldset {
-      width: 42%;
+
+    .tidsskrift_eller_avis,
+    .artikel_titelord,
+    .artiklens_forfatter,
+    .artiklens_emne {
+      width: 49%;
+    }
 
       .materialetype {
-        width: 20%;
+        width: 26%;
       }
 
       .sprog {
         width: 25%;
-        margin: 0 4% 0 1%;
+        margin: 0 4% 0 8%;
         div.fieldset-wrapper {
           text-align: left;
         }
@@ -766,8 +776,8 @@ div#search-advanced-panel #edit-expand {
       }
 
       .udgivelsesar {
-        width: 24%;
-        margin: 0 1% 0 1%;
+        width: 25%;
+        margin: 0 1% 0 3%;
         .form-type-select {
           float: left;
         }
@@ -786,7 +796,6 @@ div#search-advanced-panel #edit-expand {
           display: none;
         }
       }
-    }
   }
   div#search-advanced-panel fieldset.artiklens_forfatter {
     margin-left: 0;
