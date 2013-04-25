@@ -443,6 +443,15 @@ div#search-advanced-panel {
   background-color: $light_grey1;
   margin: 2% 0 0 2%;
   display: block;
+
+  .btn-submit {
+    float: right;
+    margin: 1%;
+    height: 30px;
+    width: 140px;
+    background-color: $btn_blue;
+  }
+
   input {
     margin-top: 5px;
     height: 30px;
@@ -930,7 +939,7 @@ div#search-advanced-panel #edit-expand {
   }
   .musikgenre {
     width: 98%;
-    margin-left: 0;
+    margin-left: 1%;
     div.fieldset-wrapper {
       text-align: left;
     }
