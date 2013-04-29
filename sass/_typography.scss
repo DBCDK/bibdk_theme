@@ -178,7 +178,8 @@ hr {
     vertical-align:top;
     /*break long links*/
     word-wrap: break-word;
-    word-break: normal;
+    word-break: break-all;
+    -ms-word-wrap: break-word;
   }
 }
 
