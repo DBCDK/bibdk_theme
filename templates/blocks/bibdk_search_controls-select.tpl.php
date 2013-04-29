@@ -17,11 +17,12 @@ foreach ( $variables['form'] as $key => $elem ) {
 }
 
 $action = explode('?', $variables['form']['#action']);
-parse_str($action[1], $query);
-if ( isset($query['page']) ) {
-  unset($query['page']);
+if (count($action) > 1){
+  parse_str($action[1], $query);
+  if ( isset($query['page']) ) {
+    unset($query['page']);
+  }
 }
-
 ?>
 
 <a class="works-control works-sort dropdown-toggle" href="#">
