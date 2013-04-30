@@ -237,7 +237,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // material type, net
   _break_into_columns('66d1dd8d-2742-7d64-8d4c-ab7f601a7916', '819ed112-ec85-8f64-2573-a5a88f7ac3d9', 2, $form);
   // language, net
-  _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
+  _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
 
   // genre, games
   _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 4, $form);

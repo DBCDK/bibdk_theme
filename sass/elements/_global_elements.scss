@@ -353,7 +353,9 @@ body.page-reservation {
       @include border-radius(0 5px 5px 0);
     }
   }
-
+  .ajax-progress .throbber {
+    margin-left: 40%;
+  }
 }
 
 // =============================================================================

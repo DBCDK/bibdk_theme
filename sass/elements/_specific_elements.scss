@@ -446,7 +446,7 @@ div#search-advanced-panel {
 
   .btn-submit {
     float: right;
-    margin: 1%;
+    margin: 1% 1% 1% 1%;
     height: 30px;
     width: 140px;
     background-color: $btn_blue;
@@ -756,46 +756,54 @@ div#search-advanced-panel #edit-expand {
       width: 49%;
     }
 
-      .materialetype {
-        width: 26%;
-      }
+    .materialetype {
+      width: 14%;
 
-      .sprog {
-        width: 25%;
-        margin: 0 4% 0 8%;
-        div.fieldset-wrapper {
-          text-align: left;
-        }
-        .fieldset-description {
-          display: none;
-        }
-        .bibdk-custom-search-element .column {
-          width: 33%;
-          float: left;
-        }
+      .fieldset-description {
+        display: none;
       }
+    }
 
-      .udgivelsesar {
-        width: 25%;
-        margin: 0 1% 0 3%;
-        .form-type-select {
-          float: left;
-        }
-        .form-type-select:last-child {
-          float: right;
-        }
-        div.form-item {
-          display: block;
-          margin: 0;
-          padding: 0;
-        }
-        div.fieldset-wrapper {
-          text-align: left;
-        }
-        .fieldset-description {
-          display: none;
-        }
+    .sprog {
+      width: 25%;
+      margin: 0 4% 0 8%;
+      div.fieldset-wrapper {
+        text-align: left;
       }
+      .fieldset-description {
+        display: none;
+      }
+      .bibdk-custom-search-element .column {
+        width: 33%;
+        float: left;
+      }
+    }
+
+    .udgivelsesar {
+      width: 25%;
+      margin: 0 1% 0 3%;
+      .form-type-select {
+        float: left;
+      }
+      .form-type-select:last-child {
+        float: right;
+      }
+      div.form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+
+    .btn-submit {
+      margin-top: 100px;
+    }
   }
   div#search-advanced-panel fieldset.artiklens_forfatter {
     margin-left: 0;
@@ -804,48 +812,55 @@ div#search-advanced-panel #edit-expand {
 
 .page-bibdk-frontpage-net {
   div#search-advanced-panel {
-    fieldset {
+    .materialetype,
+    .element-wrapper
+    .litterar_form {
+
+      width: 34%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+
+    .element-wrapper.sprog {
       width: 32%;
-
-      .materialetype {
-        width: 20%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
       }
-
-      .sprog {
-        width: 25%;
-        margin: 0 4% 0 1%;
-        div.fieldset-wrapper {
-          text-align: left;
-        }
-        .fieldset-description {
-          display: none;
-        }
-        .bibdk-custom-search-element .column {
-          width: 33%;
-          float: left;
-        }
+      .fieldset-description {
+        display: none;
       }
+      .bibdk-custom-search-element .column {
+        width: 49%;
+        float: left;
+      }
+    }
 
-      .udgivelsesar {
-        width: 24%;
-        margin: 0 1% 0 1%;
-        .form-type-select {
-          float: left;
-        }
-        .form-type-select:last-child {
-          float: right;
-        }
-        div.form-item {
-          display: block;
-          margin: 0;
-          padding: 0;
-        }
-        div.fieldset-wrapper {
-          text-align: left;
-        }
-        .fieldset-description {
-          display: none;
-        }
+    .udgivelsesar {
+      //margin-right: 1%;
+      margin: 0 1% 0 1%;
+      width: 25%;
+      .form-type-select {
+        float: left;
+      }
+      .form-type-select:last-child {
+        float: right;
+      }
+      div.form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
       }
     }
   }
@@ -917,10 +932,10 @@ div#search-advanced-panel #edit-expand {
     width: 100%;
   }
   .titel, .platform {
-    width: 41.5%;
+    width: 49%;
   }
   .spilgenre_type {
-    width: 65%;
+    width: 85%;
     margin-left: 0;
     margin-top: 8px;
     .bibdk-custom-search-element .column {
@@ -929,7 +944,7 @@ div#search-advanced-panel #edit-expand {
     }
   }
   .medieradets_aldersanbefalinger, .aldersanbefaling {
-    width: 33%;
+    width: 40%;
     div.fieldset-wrapper {
       text-align: left;
     }
@@ -939,6 +954,10 @@ div#search-advanced-panel #edit-expand {
   }
   .medieradets_aldersanbefalinger {
     margin-left: 0;
+  }
+
+  .btn-submit {
+    margin-top: 30px;
   }
 }
 
@@ -959,7 +978,7 @@ div#search-advanced-panel #edit-expand {
       width: 19%;
       float: left;
     }
-    .bibdk-custom-search-element .column4 {
+    .bibdk-custom-search-element .column3 {
       width: 22%;
     }
   }
@@ -976,6 +995,10 @@ div#search-advanced-panel #edit-expand {
       width: 25%;
       float: left;
     }
+  }
+
+  .btn-submit {
+    margin-top: 50px;
   }
 }
 
