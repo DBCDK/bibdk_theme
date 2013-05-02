@@ -104,7 +104,7 @@ function bibdk_theme_preprocess_page(&$variables) {
     case 'vejviser':
       $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
       $variables['page']['content']['#suffix'] = '</div></div>';
-      drupal_alter('vejviser_page_content',$variables['page']['content']);
+      drupal_alter('vejviser_page_content', $variables['page']['content']);
       break;
   }
 
@@ -221,9 +221,11 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 
   // language, books
   _break_into_columns('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
+  #_break_into_columns_expand('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
 
   // language, articles
   _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
+  #_break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
 
   // nationality, film
   _break_into_columns('26707474-294f-1c34-e50b-f7831578913d', '8e7bda97-5430-9774-e54c-4d2b0005a06b', 4, $form);
@@ -235,7 +237,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // material type, net
   _break_into_columns('66d1dd8d-2742-7d64-8d4c-ab7f601a7916', '819ed112-ec85-8f64-2573-a5a88f7ac3d9', 2, $form);
   // language, net
-  _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
+  _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
 
   // genre, games
   _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 4, $form);
@@ -245,30 +247,33 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // material type, music
   _break_into_columns('05b8e136-f60b-65d4-edd0-56c69d20ce8d', '604357bb-a73b-65c4-11d8-cf798b7eabe1', 4, $form);
 
-
 }
 
 
 function _break_into_columns($parent_id, $id, $cnum, &$form) {
-  if ( !$cnum ) return false;
-  if ( !empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
+  if (!$cnum) {
+    return false;
+  }
+  if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
-    if ( isset($slice['#tree']) ) {
+    if (isset($slice['#tree'])) {
       unset($slice['#tree']);
     }
     unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
-    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
-    if ( !$len ) return false;
+    $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
+    if (!$len) {
+      return false;
+    }
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
       $snippets[$colkey][$key] = $val;
       $n++;
-      if ( floor($n/$len) == ($n/$len) ) {
+      if (floor($n / $len) == ($n / $len)) {
         $colkey++;
       }
     }
-    if ( sizeof($snippets) > $cnum ) {
-      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+    if (sizeof($snippets) > $cnum) {
+      $snippets[$colkey - 1] = $snippets[$colkey - 1] + $snippets[$colkey];
       unset($snippets[$colkey]);
     }
     foreach ($snippets as $key => $snippet) {
@@ -280,25 +285,29 @@ function _break_into_columns($parent_id, $id, $cnum, &$form) {
 }
 
 function _break_into_columns_expand($parent_id, $id, $cnum, &$form) {
-  if ( !$cnum ) return false;
-  if ( !empty($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]) ) {
+  if (!$cnum) {
+    return false;
+  }
+  if (!empty($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id];
-    if ( isset($slice['#tree']) ) {
+    if (isset($slice['#tree'])) {
       unset($slice['#tree']);
     }
     unset($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]);
-    $len = round((sizeof($slice))/$cnum); // $slice includes a #tree key
-    if ( !$len ) return false;
+    $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
+    if (!$len) {
+      return false;
+    }
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
       $snippets[$colkey][$key] = $val;
       $n++;
-      if ( floor($n/$len) == ($n/$len) ) {
+      if (floor($n / $len) == ($n / $len)) {
         $colkey++;
       }
     }
-    if ( sizeof($snippets) > $cnum ) {
-      $snippets[$colkey-1] = $snippets[$colkey-1] + $snippets[$colkey];
+    if (sizeof($snippets) > $cnum) {
+      $snippets[$colkey - 1] = $snippets[$colkey - 1] + $snippets[$colkey];
       unset($snippets[$colkey]);
     }
     foreach ($snippets as $key => $snippet) {
@@ -347,14 +356,14 @@ function _alter_bibdk_cart_form(&$form) {
  */
 function bibdk_theme_ting_agency_tools($variables) {
   $branch = $variables['branch'];
-  if( empty($branch) ) {
+  if (empty($branch)) {
     return;
   }
   $links = $branch->getActionLinks();
   $items = array();
   if (!empty($links)) {
     foreach ($links as $name => $link) {
-      $item['data'] = l($name, $link, array('attributes' => array('target'=>'_blank')));
+      $item['data'] = l($name, $link, array('attributes' => array('target' => '_blank')));
       $items[] = $item;
     }
     return theme('item_list', array('items' => $items));
@@ -401,22 +410,22 @@ function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
 function _bibdk_theme_create_user_sidebar(&$variables) {
   /*   * **** SIDEBAR ***** */
   // only set sidebar on user pages
-  if ( strpos(current_path(), 'user') !== 0 ) {
+  if (strpos(current_path(), 'user') !== 0) {
     unset($variables['page']['sidebar']);
   }
-  else if ( strpos(current_path(), 'user/reset') === 0 ) {
+  else if (strpos(current_path(), 'user/reset') === 0) {
     $tree = menu_build_tree('user-menu');
     $data = array_shift($tree);
-    foreach ( $data['below'] as $link) {
+    foreach ($data['below'] as $link) {
       $item['#theme'] = 'menu_local_task';
-      $item['#link']  = $link['link'];
+      $item['#link'] = $link['link'];
       $user_menu[] = $item;
     }
     $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
   }
   else {
     global $user;
-    if ( !$user->uid && isset($variables['tabs']['#primary']) ) {
+    if (!$user->uid && isset($variables['tabs']['#primary'])) {
       $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
     }
     else {
@@ -515,11 +524,11 @@ function bibdk_theme_pager_link($variables) {
     }
   }
 
-  // @todo l() cannot be used here, since it adds an 'active' class based on the
+  //   todo l() cannot be used here, since it adds an 'active' class based on the
   //   path only (which is always the current path for pager links). Apparently,
   //   none of the pager links is active at any time - but it should still be
   //   possible to use l() here.
-  // @see http://drupal.org/node/1410574
+  //   @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], array('query' => $query));
 
   if (in_array('works-pager-back', $attributes['class'])) {
