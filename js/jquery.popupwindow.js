@@ -1,3 +1,5 @@
+var myWindow = 0;
+
 jQuery.fn.popupwindow = function(p)
 {
 
@@ -70,8 +72,12 @@ jQuery.fn.popupwindow = function(p)
         }
       }
       var name = settings.createnew ? "PopUpWindow" + index : "PopUpWindow";
-      window.open(this.href, name, parameters).focus();
-      $(this).unbind(event);
+      if ( myWindow ) {
+        myWindow.close();
+      }
+      myWindow = window.open(this.href, name, parameters);
+      myWindow.focus();
+      jQuery(this).unbind(event);
       return false;
     });
   });
