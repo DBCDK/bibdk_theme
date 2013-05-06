@@ -228,7 +228,8 @@
 
 
 
-            //window popup function
+            // ****************************  pop-ups profiles **************************** //
+
             var profiles = {
                 standard: {
                     height:600, // sets the height in pixels of the window.
@@ -338,6 +339,12 @@
             };
 
 
+            // ****************************  pop-ups **************************** //
+
+            $('.bibdk-popup-link').click(function(e){
+                $('.popover').addClass('visuallyhidden');
+            });
+
             $('.bibdk-popup-link').once().click(function(e){
                 e.preventDefault();
                 if($(this).hasClass('orderedonce')){
@@ -355,7 +362,8 @@
             });
 
 
-            //Top menu language menu fix
+            // ************************ Top menu language menu fix ************************ //
+            //
             $('#lang-nav a').each(function(){
                 if($(this).hasClass('active')){
                     $(this).addClass('visuallyhidden');
@@ -380,19 +388,19 @@
 
             // Toggle visibility of "next section of an element"
          /* $('.toggle-next-section').toggle(function(e) {
-e.preventDefault();
-$(this).addClass('toggled');
-$('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
-$('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
-$(this).closest('.element-section').next().removeClass('visuallyhidden');
-}, function(e) {
-e.preventDefault();
-$('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
-$('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
-$(this).removeClass('toggled');
-$(this).closest('.element-section').next().addClass('visuallyhidden');
-}); */
-
+            e.preventDefault();
+            $(this).addClass('toggled');
+            $('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
+            $('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
+            $(this).closest('.element-section').next().removeClass('visuallyhidden');
+            }, function(e) {
+            e.preventDefault();
+            $('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
+            $('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
+            $(this).removeClass('toggled');
+            $(this).closest('.element-section').next().addClass('visuallyhidden');
+            });
+          */
 
 
             // Toggle sub menus in help overlay menu
@@ -428,8 +436,25 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
                 $(this).closest('form').submit();
             });
 
+
+
+
+
+
+            // ****************************  popovers **************************** //
+            $('.popover-button').click(function(e){
+                $('.popover').addClass('visuallyhidden');
+                $(this).siblings().removeClass('visuallyhidden').find('input').select();
+            });
+            $('.popover .close').click(function (e){
+                $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+            });
+
+
+            /* /begin TODO: delete after sprint 32 */
             // Linkme field
             $('.linkme-button').click(function(e){
+                $('.popover').addClass('visuallyhidden');
                 $(this).siblings().removeClass('visuallyhidden').find('input').select();
             });
             $('.linkme-wrapper .close').click(function (e){
@@ -438,13 +463,15 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
 
             // Infomedia field
             $('.infomedia-button').click(function(e){
+                $('.popover').addClass('visuallyhidden');
                 $(this).siblings().removeClass('visuallyhidden');
             });
             $('.infomedia-wrapper .close').click(function (e){
                 $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
             });
 
-            //Seasonal images
+            /* /end TODO: delete after sprint 32 */
+            // ****************************  Seasonal images **************************** //
             var today = new Date();
             month = today.getMonth() + 1;
             if ( month == 12 ) {
@@ -453,7 +480,7 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
               });
             }
 
-            // CURSOR POSITIONS
+            // ****************************  CURSOR POSITIONS **************************** //
             // Default in search block form - unless it's a search result.
             $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
             // Move to first input field in expanded search, if activated.
@@ -472,6 +499,7 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
 
 
+            // ****************************  popovers **************************** //
             // SEARCH SORT DROPDOWN
             $('.bibdk-search-controls-form .dropdown-menu li a').click(function() {
               var value = "";
@@ -486,16 +514,16 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             });
 
 
-            // SELECT SEARCH INPUT ON CLICK
+            // ************************** SELECT SEARCH INPUT ON CLICK ************************* //
             $('form#search-block-form input[name="search_block_form"]').focus(function(){
               this.select();
             });
 
-            // TOGGLE 'EXPAND SEARCH'
+            // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
             $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
             $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
 
-            // Move secondary actions in search result to bottom right:
+            // *************** Move secondary actions in search result to bottom right *************** //
             $('article.manifestation').filter(':visible').each(function(){
               var hAction = $(this).find('.actions').height();
               var hData = $(this).find('.manifestation-data').height();
