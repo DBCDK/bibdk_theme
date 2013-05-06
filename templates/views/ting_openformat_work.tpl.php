@@ -1,15 +1,19 @@
-<div class="<?php print $ding_id . '_start'; ?>"></div>
+<div class="<?php print $ding_id; echo '_start' ?>"></div>
 
-<!-- cover -->
-<?php print drupal_render($fields['ting_cover_work']); ?>
-<!-- cover -->
+<div class="work-shared-data clearfix">
 
-<div class="wrapper">
-  <?php print drupal_render($fields); ?>
-  <!-- tabs -->
+  <?php print $cover ?>
+  <!-- cover -->
+
+  <div class="wrapper">
+    <?php print drupal_render($fields); ?>
+    <?php print $work_tabs ?>
+    <!-- tabs -->
+  </div>
+  <!-- wrapper -->
+
 </div>
-<!-- wrapper -->
-</div>
+
 <!-- work-share-data -->
 <div class="bibdk-tabs bibdk-tabs-heavy">
   <?php print $tabs; ?>

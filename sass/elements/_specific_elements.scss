@@ -14,7 +14,8 @@
 .work-header {
 
   .actions {
-    border:none; // Remove left border from actions in work header
+    border: none;
+    // Remove left border from actions in work header
   }
 }
 
@@ -22,64 +23,65 @@
 .work-body {
 
   .field-tags {
-    margin-bottom:20px;
-    color:$light_grey5;
+    margin-bottom: 20px;
+    color: $light_grey5;
 
     a {
-      color:$btn_blue;
+      color: $btn_blue;
     }
   }
 
   .field-summary {
-    color:$dark_grey4;
-    margin-bottom:10px;
+    color: $dark_grey4;
+    margin-bottom: 10px;
   }
 
   &.work-body-has-cover .wrapper {
-    width:490px;
-    float:left;
+    width: 490px;
+    float: left;
   }
 }
 
 // Work cover
 .work-cover {
   width: 140px;
-  float:right;
-  margin:0 0 10px 20px;
-  padding:0 0 0 15px;
-  border-left:dotted 1px $borderColor;
+  float: right;
+  margin: 0 0 10px 20px;
+  padding: 0 0 0 15px;
+  border-left: dotted 1px $borderColor;
   img {
-    width:100%;
+    width: 100%;
   }
 }
+
 .work-cover-image {
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
+
 .work-cover-selector {
 
   a {
-    float:left;
-    display:block;
-    width:14px;
-    height:17px;
-    margin-right:5px;
+    float: left;
+    display: block;
+    width: 14px;
+    height: 17px;
+    margin-right: 5px;
 
     &.work-cover-front {
-      background:url(../img/cover-front.png);
+      background: url(../img/cover-front.png);
     }
     &.work-cover-back {
-      background:url(../img/cover-back.png);
+      background: url(../img/cover-back.png);
     }
   }
 }
 
 .search-results article.manifestation {
   min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
-  .actions{
-    max-width:175px;
+  .actions {
+    max-width: 175px;
   }
 }
-
 
 // =============================================================================
 // Library
@@ -89,25 +91,25 @@
   @extend .clearfix;
 
   hgroup {
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
   h3 {
-    font-weight:normal;
+    font-weight: normal;
   }
   h4 {
-    font-weight:normal;
-    color:$light_grey5;
+    font-weight: normal;
+    color: $light_grey5;
   }
 
-ul{
-list-style-type:none;
-}
+  ul {
+    list-style-type: none;
+  }
 
   &:nth-child(2n) {
-    background-color:$light_grey1;
+    background-color: $light_grey1;
   }
   .actions {
-    border:none;
+    border: none;
   }
 
   &.favourite {
@@ -121,34 +123,33 @@ list-style-type:none;
 
 .library-details-column-1,
 .library-details-column-2 {
-  float:left;
-  width:50%;
+  float: left;
+  width: 50%;
 }
+
 .library-details-column-1 .subheader,
 .library-details-column-2 .subheader {
   margin-bottom: 0;
 }
+
 .select-default-library {
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
-
 .edit-personal-info {
-  background:url(../img/icons/blue-edit.png) no-repeat 0%;
+  background: url(../img/icons/blue-edit.png) no-repeat 0%;
   @include inline-block();
-  padding-left:20px;
-  margin-bottom:3px;
-  color:#999;
+  padding-left: 20px;
+  margin-bottom: 3px;
+  color: #999;
 }
 
 .delete-favourite {
-  background:url(../img/icons/red-x.png) no-repeat 0%;
+  background: url(../img/icons/red-x.png) no-repeat 0%;
   @include inline-block();
-  padding-left:20px;
-  color:#999;
+  padding-left: 20px;
+  color: #999;
 }
-
-
 
 // =============================================================================
 // Frontpage Teaser blocks
@@ -158,45 +159,54 @@ list-style-type:none;
   // margin-bottom:30px;
 
   .block-title h2 {
-    padding-left:46px; // icon width + 10px
-    margin-bottom:20px;
+    padding-left: 46px;
+    // icon width + 10px
+    margin-bottom: 20px;
 
     font-family: 'Dosis', sans-serif;
-    font-weight:300;
-    font-size:2em; // 24px
-    text-transform:uppercase;
-    color:$btn_blue;
-    line-height:36px; // icon height
+    font-weight: 300;
+    font-size: 2em;
+    // 24px
+    text-transform: uppercase;
+    color: $btn_blue;
+    line-height: 36px;
+    // icon height
   }
 }
 
 #block-news .block-title h2 {
-  background:url(../img/mediatype_icons/news.png) no-repeat;
+  background: url(../img/mediatype_icons/news.png) no-repeat;
 }
+
 #block-books .block-title h2 {
-  background:url(../img/mediatype_icons/books.png) no-repeat;
+  background: url(../img/mediatype_icons/books.png) no-repeat;
 }
+
 #block-movies .block-title h2 {
-  background:url(../img/mediatype_icons/movies.png) no-repeat;
+  background: url(../img/mediatype_icons/movies.png) no-repeat;
 }
+
 #block-music .block-title h2 {
-  background:url(../img/mediatype_icons/music.png) no-repeat;
+  background: url(../img/mediatype_icons/music.png) no-repeat;
 }
+
 #block-games .block-title h2 {
-  background:url(../img/mediatype_icons/games.png) no-repeat;
+  background: url(../img/mediatype_icons/games.png) no-repeat;
 }
 
 //
 // Settings box heights
 //
 .widget-height-1 {
-  height:100px;
+  height: 100px;
 }
+
 .widget-height-2 {
-  height:210px;
+  height: 210px;
 }
+
 .widget-height-3 {
-  height:320px;
+  height: 320px;
 }
 
 //
@@ -205,8 +215,8 @@ list-style-type:none;
 .widget-wrapper {
 
   .field-image {
-    float:left;
-    position:relative;
+    float: left;
+    position: relative;
   }
 }
 
@@ -215,20 +225,20 @@ list-style-type:none;
 //
 .widget {
   position: relative;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   @include transition(background-color 0.3s);
 
   .inner {
-    padding:15px;
+    padding: 15px;
   }
   footer {
-    position:absolute;
-    bottom:15px;
-    right:15px;
-    left:15px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
   }
   &:hover footer a {
-    text-decoration:underline;
+    text-decoration: underline;
   }
 }
 
@@ -236,24 +246,26 @@ list-style-type:none;
 // Dark grey widget
 //
 .widget-dark-grey {
-  background:$dark_grey3;
+  background: $dark_grey3;
   color: $light_grey4;
-  font-size: 0.91666em; // 11px
+  font-size: 0.91666em;
+  // 11px
 
   &:hover {
-    background:lighten($dark_grey3, 3%);
+    background: lighten($dark_grey3, 3%);
   }
 
   .field-title {
     margin-bottom: 3px;
 
     h3 {
-      font-size: 1.1666em; // 14px
-      font-weight:bold;
+      font-size: 1.1666em;
+      // 14px
+      font-weight: bold;
       line-height: 120%;
 
       a {
-        color:$white;
+        color: $white;
       }
     }
   }
@@ -270,110 +282,112 @@ list-style-type:none;
 // Light grey widget
 //
 .widget-light-grey {
-  background:$light_grey2;
-  color:$dark_grey3;
+  background: $light_grey2;
+  color: $dark_grey3;
 
   &:hover {
-    background:lighten($light_grey2, 2%);
+    background: lighten($light_grey2, 2%);
   }
 
   .field-title {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
     h3 {
       font-family: 'Dosis', sans-serif;
-      font-size:2em; // 24px
-      font-weight:300;
-      line-height:120%;
+      font-size: 2em;
+      // 24px
+      font-weight: 300;
+      line-height: 120%;
 
       a {
-        color:$dark_grey2;
+        color: $dark_grey2;
       }
     }
   }
 }
-
 
 //
 // Custom Biblioteksvagt widget
 //
 .widget-biblioteksvagt {
   background: $btn_blue;
-  color:$white;
+  color: $white;
 
   footer {
-    bottom:0px;
-    left:0px;
-    right:0px;
-    z-index:2;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
   }
 
   .field-title {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
     h3 {
-      font-size: 1.1666em; // 14px
-      font-weight:bold;
+      font-size: 1.1666em;
+      // 14px
+      font-weight: bold;
       line-height: 120%;
 
       a {
-        color:$white;
+        color: $white;
       }
     }
   }
   .field-body {
-    position:relative;
+    position: relative;
     width: 80px;
-    z-index:3;
+    z-index: 3;
   }
   .field-vagt-image {
-    text-align:right;
+    text-align: right;
   }
   .field-link {
-    background:darken($btn_blue, 5%);
-    padding:15px;
+    background: darken($btn_blue, 5%);
+    padding: 15px;
   }
 }
-
-
-
-
 
 // =============================================================================
 // Drupal messages
 // =============================================================================
 
-  .messages {
-    background-position: 10px 10px; // LTR
-    background-repeat: no-repeat;
-    border: 1px solid #333;
-    margin-bottom: 10px;
-    padding: 14px 14px 14px 50px; // LTR
-  }
-  .messages.notice {
-    background-image: url(../img/messages/message-24-info.png);
-    background-color: lighten(#437ed7, 20%);
-  }
-  .messages.status {
-    background-image: url(../img/messages/message-24-ok.png);
-    background-color: lighten($messagesGreen, 20%);
-  }
-  .messages.warning {
-    background-image: url(../img/messages/message-24-warning.png);
-    background-color: lighten($messagesYellow, 20%);
-  }
-  .messages.error {
-    background-image: url(../img/messages/message-24-error.png);
-    background-color: lighten($messagesRed, 20%);
-  }
-  .messages ul {
-    margin: 0 0 0 1em; // LTR
-    padding: 0;
-    list-style:none
-  }
+.messages {
+  background-position: 10px 10px;
+  // LTR
+  background-repeat: no-repeat;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  padding: 14px 14px 14px 50px;
+  // LTR
+}
 
+.messages.notice {
+  background-image: url(../img/messages/message-24-info.png);
+  background-color: lighten(#437ed7, 20%);
+}
 
+.messages.status {
+  background-image: url(../img/messages/message-24-ok.png);
+  background-color: lighten($messagesGreen, 20%);
+}
 
+.messages.warning {
+  background-image: url(../img/messages/message-24-warning.png);
+  background-color: lighten($messagesYellow, 20%);
+}
+
+.messages.error {
+  background-image: url(../img/messages/message-24-error.png);
+  background-color: lighten($messagesRed, 20%);
+}
+
+.messages ul {
+  margin: 0 0 0 1em;
+  // LTR
+  padding: 0;
+  list-style: none
+}
 
 // =============================================================================
 // Help menu
@@ -381,31 +395,31 @@ list-style-type:none;
 
 .pane-bibdk-help-bibdk-help-popup-menu,
 .pane-bibdk-help {
-  padding:20px;
+  padding: 20px;
 }
 
 .pane-bibdk-help-bibdk-help-popup-menu .menu .menu {
-  margin-bottom:10px;
-}
-.pane-bibdk-help-bibdk-help-popup-menu li a {
-  border:solid 1px $borderColor;
-  background-repeat:no-repeat;
-  background-position:100%;
-  display:block;
-  padding:10px 20px;
-  margin-bottom:1px;
+  margin-bottom: 10px;
 }
 
+.pane-bibdk-help-bibdk-help-popup-menu li a {
+  border: solid 1px $borderColor;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 1px;
+}
 
 .pane-bibdk-help-bibdk-help-popup-menu li.expanded a {
 }
+
 .pane-bibdk-help-bibdk-help-popup-menu li li a {
-  margin-left:10px;
+  margin-left: 10px;
 }
+
 .pane-bibdk-help-bibdk-help-popup-menu li li li a {
 }
-
-
 
 // =============================================================================
 // Bib.dk search pages
@@ -413,10 +427,6 @@ list-style-type:none;
 
 #edit-advanced {
   background-color: $light_grey1;
-}
-
-#search-advanced {
-  background-color: #ffffff;
 }
 
 div#search-advanced-toggle {
@@ -433,6 +443,21 @@ div#search-advanced-panel {
   background-color: $light_grey1;
   margin: 2% 0 0 2%;
   display: block;
+
+  .btn-submit {
+    float: right;
+    margin: 1% 1% 1% 1%;
+    height: 30px;
+    width: 140px;
+    background-color: $btn_blue;
+  }
+
+  .sub-elements {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+  }
+
   input {
     margin-top: 5px;
     height: 30px;
@@ -441,7 +466,7 @@ div#search-advanced-panel {
   input.form-checkbox {
     height: 20px;
     line-height: 20px;
-    margin-top: 2px;
+    margin-top: 1px;
   }
   select {
     margin-top: 5px;
@@ -456,7 +481,24 @@ div#search-advanced-panel {
     padding: 4px 6px;
     border-radius: 3px 3px 3px 3px;
   }
+
   fieldset#edit-expand {
+    width: 100%;
+    > legend {
+      background-color: inherit;
+      border: none;
+      display: block;
+      width: auto;
+      a {
+        background-image: url("../img/icons/blue-minus.png");
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+  }
+
+  fieldset#edit-expand.collapsed {
     width: 100%;
     > legend {
       background-color: inherit;
@@ -469,11 +511,9 @@ div#search-advanced-panel {
         background-repeat: no-repeat;
         background-position: left center;
       }
-      a.toggled {
-        background-image: url("../img/icons/blue-minus.png");
-      }
     }
   }
+
   /* first row of columns in "expanded search" */
   fieldset:first-child {
     margin-left: 0%;
@@ -487,28 +527,28 @@ div#search-advanced-panel {
     margin-left: 1%;
     display: inline;
     vertical-align: top;
-      .fieldset-legend {
-          font-size: 16px;
-          padding: 0;
-      }
+    .fieldset-legend {
+      font-size: 16px;
+      padding: 0;
+    }
     div.fieldset-wrapper {
       clear: both;
       text-align: right;
-      .fieldset-legend{
+      .fieldset-legend {
         float: left;
         max-width: inherit;
       }
       .form-type-textfield {
-          margin-bottom: 0;
-          margin-right: 1%;
-          width: 100%;
+        margin-bottom: 0;
+        margin-right: 1%;
+        width: 100%;
       }
       .fieldset-description {
-          white-space: nowrap;
-          display: inline-block;
+        white-space: nowrap;
+        display: inline-block;
       }
       p.helptext {
-        background-color:$btn_blue;
+        background-color: $btn_blue;
         @include border-radius(3px);
         width: auto;
         border: none;
@@ -517,7 +557,7 @@ div#search-advanced-panel {
         margin: 3px 5px;
         padding: 0 5px;
         font-size: 12px;
-        color:$white;
+        color: $white;
         cursor: pointer;
       }
     }
@@ -526,25 +566,26 @@ div#search-advanced-panel {
       clear: both;
       margin: 2px 0 0 0;
       padding: 0 5px 0 0;
+
       div.form-item {
         margin: 0;
         padding: 0;
         display: block;
         .toggle-subgroup {
           @include inline-block(top);
-          width:15px;
-          background-position:50% 50%;
-          background-repeat:no-repeat;
+          width: 15px;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
           color: transparent;
-          background-image:url(../img/icons/blue-plus.png);
+          background-image: url(../img/icons/blue-plus.png);
           border: none;
           display: block;
           float: left;
           position: relative;
-          top: 2px;
+          margin-right: 5px;
         }
         .toggle-subgroup.toggled {
-          background-image:url(../img/icons/blue-minus.png);
+          background-image: url(../img/icons/blue-minus.png);
         }
       }
       div.form-type-checkbox {
@@ -574,8 +615,9 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 .container-inline div#search-advanced-panel {
   display: block;
 }
-div#search-advanced-panel #edit-expand{
-  .fieldset-wrapper{
+
+div#search-advanced-panel #edit-expand {
+  .fieldset-wrapper {
     text-align: left;
     padding: 10px 0;
   }
@@ -584,7 +626,7 @@ div#search-advanced-panel #edit-expand{
   }
   .element-wrapper {
     float: left;
-    width: 24%;
+    //width: 24%;
     margin-left: 1%;
     clear: none;
   }
@@ -596,7 +638,7 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-.page-bibdk-frontpage div#search-advanced-panel {
+.allematerialer div#search-advanced-panel {
   .materialetype {
     width: 20%;
     margin-left: 0;
@@ -611,7 +653,7 @@ div#search-advanced-panel #edit-expand{
     width: 48%;
     margin-left: 5%;
     .bibdk-custom-search-element .column {
-      width: 33%;
+      min-width: 25%;
       float: left;
     }
     div.fieldset-wrapper {
@@ -621,12 +663,12 @@ div#search-advanced-panel #edit-expand{
       display: none;
     }
   }
-  .udgivelsesar{
-    width: 24%;
-    .form-type-select{
+  .udgivelsesar {
+    width: 25%;
+    .form-type-select {
       float: left;
     }
-    .form-type-select:last-child{
+    .form-type-select:last-child {
       float: right;
     }
     div.fieldset-wrapper {
@@ -639,10 +681,10 @@ div#search-advanced-panel #edit-expand{
 }
 
 /* boeger:sprog */
-.page-bibdk-frontpage-bog{
-   div#search-advanced-panel {
+.page-bibdk-frontpage-bog {
+  div#search-advanced-panel {
     .materialetype, .element-wrapper.litterar_form {
-      width: 17%;
+      width: 18%;
       margin-left: 0;
       div.fieldset-wrapper {
         text-align: left;
@@ -652,7 +694,7 @@ div#search-advanced-panel #edit-expand{
       }
     }
     .malgruppe {
-      width: 15%;
+      width: 12%;
       margin-left: 0;
       div.fieldset-wrapper {
         text-align: left;
@@ -662,8 +704,9 @@ div#search-advanced-panel #edit-expand{
       }
     }
     .udgivelsesar {
-      margin-left: 0;
-      width: 24%;
+      //margin-right: 1%;
+      margin: 0 1% 0 1%;
+      width: 23%;
       .form-type-select {
         float: left;
       }
@@ -682,8 +725,8 @@ div#search-advanced-panel #edit-expand{
         display: none;
       }
     }
-    .element-wrapper.sprog{
-      width: 24%;
+    .element-wrapper.sprog {
+      width: 21%;
       margin-left: 0;
       div.fieldset-wrapper {
         text-align: left;
@@ -703,24 +746,27 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-.page-bibdk-frontpage-artikel{
+.page-bibdk-frontpage-artikel {
   div#search-advanced-panel {
-    > fieldset {
-      width: 41.5%;
+
+    .tidsskrift_eller_avis,
+    .artikel_titelord,
+    .artiklens_forfatter,
+    .artiklens_emne {
+      width: 49%;
     }
-    > fieldset.materialetype {
-      margin-left: 0;
-      width: 20%;
-      div.fieldset-wrapper {
-        text-align: left;
-      }
+
+    .materialetype {
+      width: 14%;
+
       .fieldset-description {
         display: none;
       }
     }
-    > fieldset.sprog {
-      width: 35%;
-      margin-left: 1%;
+
+    .sprog {
+      width: 25%;
+      margin: 0 4% 0 8%;
       div.fieldset-wrapper {
         text-align: left;
       }
@@ -732,14 +778,20 @@ div#search-advanced-panel #edit-expand{
         float: left;
       }
     }
-    > fieldset.udgivelsesar {
-      margin-left: 3.5%;
-      width: 24%;
-      .form-type-select{
+
+    .udgivelsesar {
+      width: 25%;
+      margin: 0 1% 0 3%;
+      .form-type-select {
         float: left;
       }
-      .form-type-select:last-child{
+      .form-type-select:last-child {
         float: right;
+      }
+      div.form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
       }
       div.fieldset-wrapper {
         text-align: left;
@@ -749,6 +801,68 @@ div#search-advanced-panel #edit-expand{
       }
     }
 
+    .btn-submit {
+      margin-top: 100px;
+    }
+  }
+  div#search-advanced-panel fieldset.artiklens_forfatter {
+    margin-left: 0;
+  }
+}
+
+.page-bibdk-frontpage-net {
+  div#search-advanced-panel {
+    .materialetype,
+    .element-wrapper
+    .litterar_form {
+
+      width: 34%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
+
+    .element-wrapper.sprog {
+      width: 32%;
+      margin-left: 0;
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+      .bibdk-custom-search-element .column {
+        width: 49%;
+        float: left;
+      }
+    }
+
+    .udgivelsesar {
+      //margin-right: 1%;
+      margin: 0 1% 0 1%;
+      width: 25%;
+      .form-type-select {
+        float: left;
+      }
+      .form-type-select:last-child {
+        float: right;
+      }
+      div.form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      div.fieldset-wrapper {
+        text-align: left;
+      }
+      .fieldset-description {
+        display: none;
+      }
+    }
   }
   div#search-advanced-panel fieldset.artiklens_forfatter {
     margin-left: 0;
@@ -756,7 +870,7 @@ div#search-advanced-panel #edit-expand{
 }
 
 .page-bibdk-frontpage-film div#search-advanced-panel {
-  .filmens_titel, .personer  {
+  .filmens_titel, .personer {
     width: 48.5%;
   }
   .nationalitet {
@@ -799,7 +913,7 @@ div#search-advanced-panel #edit-expand{
       display: none;
     }
   }
-  .aldersanbefaling, .tilladt_for  {
+  .aldersanbefaling, .tilladt_for {
     width: 32%;
     select {
       width: 95%;
@@ -813,74 +927,24 @@ div#search-advanced-panel #edit-expand{
   }
 }
 
-.page-bibdk-frontpage-net div#search-advanced-panel {
-  .sprog {
-    width: 32%;
-    margin-left: 1%;
-    .bibdk-custom-search-element .column {
-      width: 33%;
-      float: left;
-    }
-    div.fieldset-wrapper {
-      text-align: left;
-    }
-    .fieldset-description {
-      display: none;
-    }
-  }
-  .materialetype {
-    margin-left: 0;
-    width: 32%;
-    .bibdk-custom-search-element .column{
-      width: 50%;
-      float: left;
-    }
-    div.fieldset-wrapper {
-      text-align: left;
-    }
-    .fieldset-description {
-      display: none;
-    }
-  }
-  .udgivelsesar {
-    width: 24%;
-    .form-type-select {
-      float: left;
-    }
-    .form-type-select:last-child {
-      float: right;
-    }
-    div.form-item {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-    div.fieldset-wrapper {
-      text-align: left;
-    }
-    .fieldset-description {
-      display: none;
-    }
-  }
-}
-
-.page-bibdk-frontpage-spil div#search-advanced-panel{
+.page-bibdk-frontpage-spil div#search-advanced-panel {
   select {
     width: 100%;
   }
-  .titel , .platform {
-    width: 41.5%;
+  .titel, .platform {
+    width: 49%;
   }
-  .spilgenre_type{
-    width: 84.5%;
+  .spilgenre_type {
+    width: 85%;
     margin-left: 0;
-    .bibdk-custom-search-element .column{
-      width: 24.5%;
+    margin-top: 8px;
+    .bibdk-custom-search-element .column {
+      width: 25%;
       float: left;
     }
   }
   .medieradets_aldersanbefalinger, .aldersanbefaling {
-    width: 33%;
+    width: 40%;
     div.fieldset-wrapper {
       text-align: left;
     }
@@ -891,26 +955,30 @@ div#search-advanced-panel #edit-expand{
   .medieradets_aldersanbefalinger {
     margin-left: 0;
   }
+
+  .btn-submit {
+    margin-top: 30px;
+  }
 }
 
-.page-bibdk-frontpage-musik div#search-advanced-panel{
+.page-bibdk-frontpage-musik div#search-advanced-panel {
   .alle_titler {
     margin-left: 0;
   }
-  .musikgenre{
+  .musikgenre {
     width: 98%;
-    margin-left: 0;
+    margin-left: 1%;
     div.fieldset-wrapper {
       text-align: left;
     }
     .fieldset-description {
       display: none;
     }
-    .bibdk-custom-search-element .column{
-      width: 19.5%;
+    .bibdk-custom-search-element .column {
+      width: 19%;
       float: left;
     }
-    .bibdk-custom-search-element .column3{
+    .bibdk-custom-search-element .column3 {
       width: 22%;
     }
   }
@@ -923,33 +991,24 @@ div#search-advanced-panel #edit-expand{
     .fieldset-description {
       display: none;
     }
-    .bibdk-custom-search-element .column{
+    .bibdk-custom-search-element .column {
       width: 25%;
       float: left;
     }
   }
-}
 
-/* Expanded by default */
-.page-bibdk-frontpage-net div#search-advanced-panel,
-.page-bibdk-frontpage-spil div#search-advanced-panel {
-  fieldset#edit-expand {
-    > legend {
-      a {
-        background-image: url("../img/icons/blue-minus.png");
-      }
-      a.toggled {
-        background-image: url("../img/icons/blue-plus.png");
-      }
-    }
+  .btn-submit {
+    margin-top: 50px;
   }
 }
 
-/* Linkme */
-.linkme-wrapper {
+/* Linkme, Infomedia */
+.linkme-wrapper, .infomedia-wrapper {
   position: absolute;
   width: 30em;
   left: 25em;
+  margin-top: 5px;
+  min-height: 3.5em;
   background-color: white;
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
 
@@ -962,6 +1021,12 @@ div#search-advanced-panel #edit-expand{
     width: 25em;
     float: left;
     padding: 10px;
+  }
+  .user-msg {
+    min-height: 3.5em;
+    line-height: 2em;
+    margin: 10px;
+    float: left;
   }
   .close {
     margin: 10px 10px 0 0;
@@ -1021,7 +1086,7 @@ p.note-localisations {
 .holding-status {
   padding: 0;
   border: none;
-  .status{
+  .status {
     width: 15px;
     height: 15px;
     display: inline-block;
@@ -1029,9 +1094,15 @@ p.note-localisations {
     border: solid 1px #dcdcdc;
     @include border-radius(3px);
   }
-  .red{background-color: #ff0000;}
-  .green{background-color: #008000;}
-  .yellow{background-color: #ffff00;}
+  .red {
+    background-color: #ff0000;
+  }
+  .green {
+    background-color: #008000;
+  }
+  .yellow {
+    background-color: #ffff00;
+  }
 }
 
 // =============================================================================
@@ -1077,13 +1148,13 @@ p.note-localisations {
   h2 {
     padding: 0 16px;
     color: #3497be;
-    height:51px;
-    line-height:51px;
-    margin-bottom:0px;
-    margin-left:0px;
-    font-weight:normal;
+    height: 51px;
+    line-height: 51px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-weight: normal;
     font-size: 1.6em;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
   }
   div {
@@ -1105,7 +1176,7 @@ p.note-localisations {
     margin-right: 10px;
     max-width: 150px;
   }
-  p.value-row,  {
+  p.value-row, {
     color: $dark_grey3;
     float: right;
     max-width: 115px;
@@ -1126,12 +1197,11 @@ p.note-localisations {
     width: 145px;
     margin-right: 0px;
   }
-  p.value-row,  {
+  p.value-row, {
     float: left;
     width: 130px;
   }
 }
-
 
 // =============================================================================
 // Favorites data popup
@@ -1148,7 +1218,6 @@ p.note-localisations {
     border-width: 0px;
   }
 }
-
 
 // =============================================================================
 // Christmas special
@@ -1169,7 +1238,6 @@ p.note-localisations {
 // Cart View
 // =============================================================================
 
-
 .cart-actions {
   float: left;
   padding-right: 20px;
@@ -1180,18 +1248,27 @@ p.note-localisations {
 // Search History
 // =============================================================================
 
-  .search-history-table {
-    width: 100%;
-  }
+.search-history-table {
+  width: 100%;
+}
 
-  .search-action-list {
-    padding: 0px 20px;
-    border:0;
-    a, input {
-      margin-right: 20px;
-    }
+.search-action-list {
+  padding: 0px 20px;
+  border: 0;
+  a, input {
+    margin-right: 20px;
   }
+}
 
+// =============================================================================
+// Reviews
+// =============================================================================
+
+
+  .bibdk-review {
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+  }
 
 // =============================================================================
 // User password reset
@@ -1206,9 +1283,10 @@ p.note-localisations {
 .user-pass-reset-action {
   float: left;
   .form-wrapper.form-actions {
-      padding: 1em 10px;
+    padding: 1em 10px;
   }
   .form-wrapper {
-      border-bottom-width: 0px;
+    border-bottom-width: 0px;
   }
 }
+

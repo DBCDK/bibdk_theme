@@ -100,7 +100,9 @@
             });
 
             // Select side of work cover
-            $('.work-cover-selector a').once().click(function(e) {
+            // For now, we open the back cover pdf in a popup on click on .work-cover-back bibdk-popup-link jquery-once-1-processed
+            $('.work-cover-selector a.work-cover-front').once().click(function(e) {
+            // $('.work-cover-selector a').once().click(function(e) {
                 e.preventDefault();
 
                 var index = $(this).index() + 1;
@@ -309,6 +311,30 @@
                     left:30,
                     top:30
                 }
+                ,
+                infomedia: {
+                    height:840,
+                    width:780,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:0,
+                    resizable:1,
+                    left:35,
+                    top:35
+                }
+                ,
+                backcoverpdf: {
+                    height:900,
+                    width:650,
+                    center:0,
+                    createnew:0,
+                    scrollbars:1,
+                    status:0,
+                    resizable:1,
+                    left:40,
+                    top:40
+                }
             };
 
 
@@ -408,6 +434,14 @@ $(this).closest('.element-section').next().addClass('visuallyhidden');
             });
             $('.linkme-wrapper .close').click(function (e){
                 $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+            });
+
+            // Infomedia field
+            $('.infomedia-button').click(function(e){
+                $(this).siblings().removeClass('visuallyhidden');
+            });
+            $('.infomedia-wrapper .close').click(function (e){
+                $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
             });
 
             //Seasonal images
