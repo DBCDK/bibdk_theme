@@ -386,7 +386,7 @@ function bibdk_theme_menu_link(array$variables) {
   }
   if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == t('items in cart', array(), array('context' => 'bibdk_frontend'))) && module_exists('bibdk_cart')) {
     $count = count(BibdkCart::getAll());
-    $linkText = '<span class="cartcount">' . $count . '</span> ' . $element['#title'];
+    $linkText = '<span class="cartcount">'.format_plural($count, '1 item in cart', '@count items in cart').'</span>';
     $element['#localized_options']['html'] = TRUE;
   }
   else {
