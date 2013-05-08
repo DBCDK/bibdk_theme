@@ -154,6 +154,7 @@
             // Add .element-target to destination link
             $('.element-clickable').css('cursor', 'pointer');
             $('.element-clickable').click(function () {
+              e.preventDefault();
               $(this).find(".element-target").trigger('click');
             });
 
@@ -241,7 +242,7 @@
                     left:0, // left position when the window appears.
                     top:0, // top position when the window appears.
                     center:0, // should we center the window? {1 (YES) or 0 (NO)}. overrides top and left
-                    createnew:0, // should we create a new window for each occurance {1 (YES) or 0 (NO)}.
+                    createnew:1, // should we create a new window for each occurance {1 (YES) or 0 (NO)}.
                     location:0, // determines whether the address bar is displayed {1 (YES) or 0 (NO)}.
                     menubar:0, // determines whether the menu bar is displayed {1 (YES) or 0 (NO)}.
                     onUnload:null // function to call when the window is closed
@@ -251,7 +252,16 @@
                     height:500,
                     width:780,
                     center:0,
-                    createnew:0,
+                    createnew:1,
+                    scrollbars:1,
+                    status:1
+                }
+                ,
+                helpdesk: {
+                    height:900,
+                    width:700,
+                    center:0,
+                    createnew:1,
                     scrollbars:1,
                     status:1
                 }
@@ -260,7 +270,7 @@
                     height:860,
                     width:570,
                     center:0,
-                    createnew:0,
+                    createnew:1,
                     scrollbars:1,
                     status:1,
                     left:15,
@@ -282,7 +292,7 @@
                     height:700,
                     width:580,
                     center:0,
-                    createnew:0,
+                    createnew:1,
                     scrollbars:1,
                     status:0,
                     resizable:1,
@@ -305,7 +315,7 @@
                     height:700,
                     width:580,
                     center:0,
-                    createnew:0,
+                    createnew:1,
                     scrollbars:1,
                     status:0,
                     resizable:1,
@@ -317,7 +327,7 @@
                     height:840,
                     width:780,
                     center:0,
-                    createnew:0,
+                    createnew:1,
                     scrollbars:1,
                     status:0,
                     resizable:1,
@@ -329,7 +339,7 @@
                     height:900,
                     width:650,
                     center:0,
-                    createnew:0,
+                    createnew:1,
                     scrollbars:1,
                     status:0,
                     resizable:1,
