@@ -1,4 +1,4 @@
-var myWindow = 0;
+var myWindow = myWindow ? myWindow : false;
 
 jQuery.fn.popupwindow = function(p)
 {
@@ -72,7 +72,7 @@ jQuery.fn.popupwindow = function(p)
         }
       }
       var name = settings.createnew ? "PopUpWindow" + index : "PopUpWindow";
-      if ( myWindow ) {
+      if ( myWindow && settings.createnew ) { // close other popups, if it opens in a new window
         myWindow.close();
       }
       myWindow = window.open(this.href, name, parameters);
