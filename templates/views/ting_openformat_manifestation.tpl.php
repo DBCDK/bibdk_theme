@@ -4,8 +4,8 @@
       <div class="btn-wrapper">
         <?php print drupal_render($fields['bibdk_reservation_button_default']); ?>
       </div>
-      <?php print drupal_render($fields['bibdk_holdingstatus_favourite_default']); ?>
       <?php print drupal_render($fields['bibdk_cart_link_default']); ?>
+      <?php print drupal_render($fields['bibdk_holdingstatus_favourite_default']); ?>
     </div>
     <div class="secondary-actions">
       <ul>
