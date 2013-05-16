@@ -100,17 +100,14 @@
             });
 
             // Select side of work cover
-            // For now, we open the back cover pdf in a popup on click on .work-cover-back bibdk-popup-link jquery-once-1-processed
-            $('.work-cover-selector a.work-cover-front').once().click(function(e) {
-            // $('.work-cover-selector a').once().click(function(e) {
-                e.preventDefault();
-
-                var index = $(this).index() + 1;
-                var $image = $(this).closest('.work-cover').find('.work-cover-image a:nth-child(' + index +')');
-
-                $image.siblings().addClass('visuallyhidden');
-                $image.removeClass('visuallyhidden');
-            });
+            // $('.work-cover-selector a.work-cover-front').once().click(function(e) {
+            //     // $('.work-cover-selector a').once().click(function(e) {
+            //     e.preventDefault();
+            //     var index = $(this).index() + 1;
+            //     var $image = $(this).closest('.work-cover').find('.work-cover-image a:nth-child(' + index +')');
+            //     $image.siblings().addClass('visuallyhidden');
+            //     $image.removeClass('visuallyhidden');
+            // });
 
             // Disable button and dropdown when toggling details of a work
             $('.work-toggle-element', context).click(function() {
