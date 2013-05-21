@@ -161,7 +161,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_user_pass_reset($form, $form_state, $form_id);
       break;
     case 'user_profile_form':
-      if (!in_array($form['#user_category'], array('bibdk_cart_list', 'bibdk_search_history'))) {
+      if (!in_array($form['#user_category'], array('bibdk_cart_list', 'bibdk_search_history', 'bibdk_openuserstatus'))) {
         _wrap_in_element($form);
       }
       break;
