@@ -131,7 +131,6 @@ function bibdk_theme_process_field(&$variables) {
  * Implements template_process_page().
  */
 function bibdk_theme_process_page(&$variables) {
-
   if (arg(0) == 'search') {
     unset($variables['title']);
   }
@@ -180,6 +179,17 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_cart_get_form':
       _alter_bibdk_cart_form($form);
       break;
+    case 'bibdk_openuserstatus_form':
+      _alter_openuserstatus_tables($form);
+      break;
+  }
+}
+
+function _alter_openuserstatus_tables(&$form) {
+  $keys = array('loans', 'readyforpickup', 'reservations', 'fiscal');
+  foreach ($keys as $key) {
+    $form[$key]['#prefix'] = '<section><div class="element-wrapper"><div class="element"><div class="element-section"><div class="table">';
+    $form[$key]['#suffix'] = '</div></div></div></div></section>';
   }
 }
 
