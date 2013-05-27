@@ -1297,3 +1297,16 @@ p.note-localisations {
   }
 }
 
+.openuserstatus {
+  .form-item {
+    padding:5px;
+  }
+
+  select {
+    font-size:12px;
+  }
+
+  input[type="submit"] {
+    margin: 10px 5px 0 0;
+  }
+}

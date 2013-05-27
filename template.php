@@ -188,9 +188,12 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 function _alter_openuserstatus_tables(&$form) {
   $keys = array('loans', 'readyforpickup', 'reservations', 'fiscal');
   foreach ($keys as $key) {
-    $form[$key]['#prefix'] = '<section><div class="element-wrapper"><div class="element"><div class="element-section"><div class="table">';
+    $form[$key]['#prefix'] = '<section><div class="element-wrapper"><div class="element"><div class="element-section"><div class="table"><a name="'.$key.'"></a>';
     $form[$key]['#suffix'] = '</div></div></div></div></section>';
   }
+
+  $form['#prefix'] = '<div class="openuserstatus">';
+  $form['#suffix'] = '</div>';
 }
 
 function _wrap_in_element(&$form) {
