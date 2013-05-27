@@ -312,26 +312,27 @@
 .widget-biblioteksvagt {
   background: $btn_blue;
   color: $white;
-
-  footer {
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 2;
-  }
-
   .field-title {
     margin-bottom: 10px;
-
+    position: relative;
+    z-index: 3;
     h3 {
       font-size: 1.1666em;
       // 14px
       font-weight: bold;
-      line-height: 120%;
-
+      line-height: 100%;
       a {
         color: $white;
       }
+    }
+  }
+  .inner {
+    padding: 0px;
+    .field-title {
+      padding: 8px;
+      background: none repeat scroll 0 0 #217F9B;
+      opacity:0.7;
+      filter:alpha(opacity=60); /* For IE8 and earlier */
     }
   }
   .field-body {
@@ -339,13 +340,32 @@
     width: 80px;
     z-index: 3;
   }
+
+  footer {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+  }
+
   .field-vagt-image {
     text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+
   .field-link {
+    z-index: 2;
     background: darken($btn_blue, 5%);
-    padding: 15px;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
+
 }
 
 // =============================================================================
