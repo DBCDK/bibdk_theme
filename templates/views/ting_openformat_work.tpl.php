@@ -1,8 +1,9 @@
 <div class="<?php print $ding_id; echo '_start' ?>"></div>
 
-<div class="work-shared-data clearfix">
-
-  <?php print $cover ?>
+<div class="clearfix">
+  <div class="cover">
+    <?php print drupal_render($fields['ting_cover_work']); ?>
+  </div>
   <!-- cover -->
 
   <div class="wrapper">
