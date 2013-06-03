@@ -9,6 +9,7 @@
   <div class="wrapper">
     <?php print drupal_render($fields); ?>
     <?php print $work_tabs ?>
+    
     <!-- tabs -->
   </div>
   <!-- wrapper -->
@@ -18,6 +19,7 @@
 <!-- work-share-data -->
 <div class="bibdk-tabs bibdk-tabs-heavy">
   <?php print $tabs; ?>
+  
   <!-- tabs-nav -->
   <div class="tabs-sections">
     <?php $count = 0; ?>
@@ -26,13 +28,6 @@
         <div id="<?php print $subtype; ?><?php print $ding_id; ?>"
              class="subwork tabs-section <?php print ($count != 1) ? "visuallyhidden" : "" ?>">
           <div class="padded text clearfix">
-            <div class="actions">
-              <div class="primary-actions">
-                <div class="btn-wrapper">
-                </div>
-                <?php print drupal_render($manifest['manifest']['subtype_actions']['cart']); ?>
-              </div>
-            </div>
             <?php echo drupal_render($manifest['manifest']['subtype_actions']); ?>
           </div>
           <!-- tabs-content -->
