@@ -8,17 +8,31 @@ $btn_blue:    #2590b0;
 $zebraOdd:    #c7e1e8;
 $zebraEven:   lighten($zebraOdd, 10%);
 
-$dark_grey1:  #161616; // Darkest
-$dark_grey2:  #25292c;
-$dark_grey3:  #3c4043;
-$dark_grey4:  #51565a;
-$dark_grey5:  #6c7379;
+//$dark_grey1:  #161616; // Darkest
+//$dark_grey2:  #25292c;
+//$dark_grey3:  #3c4043;
+//$dark_grey4:  #51565a;
+//$dark_grey5:  #6c7379;
 
-$light_grey1: #f7f7f7; // Lightest
-$light_grey2: #ebebeb;
-$light_grey3: #dcdcdc;
-$light_grey4: #a5a5a5;
-$light_grey5: #999999;
+
+//$light_grey1: #f7f7f7; // Lightest
+//$light_grey2: #ebebeb;
+//$light_grey3: #dcdcdc;
+//$light_grey4: #a5a5a5;
+//$light_grey5: #999999;
+
+$dark_grey1:  #161616;
+$dark_grey2:#25292c;
+$dark_grey3:#3c4043;
+$dark_grey4:#51565a;
+$dark_grey5:#51565a;
+
+
+$light_grey1:#f7f7f7;
+$light_grey2:#ebebeb;
+$light_grey3:#dcdcdc;
+$light_grey4:#999999;
+$light_grey5:#6c7379;
 
 $elementWrapper: #ebebeb;
 
