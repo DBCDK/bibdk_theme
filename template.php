@@ -131,7 +131,6 @@ function bibdk_theme_process_field(&$variables) {
  * Implements template_process_page().
  */
 function bibdk_theme_process_page(&$variables) {
-
   if (arg(0) == 'search') {
     unset($variables['title']);
   }
@@ -161,7 +160,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_user_pass_reset($form, $form_state, $form_id);
       break;
     case 'user_profile_form':
-      if (!in_array($form['#user_category'], array('bibdk_cart_list', 'bibdk_search_history'))) {
+      if (!in_array($form['#user_category'], array('bibdk_cart_list', 'bibdk_search_history', 'bibdk_openuserstatus'))) {
         _wrap_in_element($form);
       }
       break;
@@ -180,7 +179,21 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_cart_get_form':
       _alter_bibdk_cart_form($form);
       break;
+    case 'bibdk_openuserstatus_form':
+      _alter_openuserstatus_tables($form);
+      break;
   }
+}
+
+function _alter_openuserstatus_tables(&$form) {
+  $keys = array('loans', 'readyforpickup', 'reservations', 'fiscal');
+  foreach ($keys as $key) {
+    $form[$key]['#prefix'] = '<section><div class="element-wrapper"><div class="element"><div class="element-section"><div class="table"><a name="'.$key.'"></a>';
+    $form[$key]['#suffix'] = '</div></div></div></div></section>';
+  }
+
+  $form['#prefix'] = '<div class="openuserstatus">';
+  $form['#suffix'] = '</div>';
 }
 
 function _wrap_in_element(&$form) {
@@ -386,7 +399,7 @@ function bibdk_theme_menu_link(array$variables) {
   }
   if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == t('items in cart', array(), array('context' => 'bibdk_frontend'))) && module_exists('bibdk_cart')) {
     $count = count(BibdkCart::getAll());
-    $linkText = '<span class="cartcount">' . $count . '</span> ' . $element['#title'];
+    $linkText = '<span class="cartcount">'.format_plural($count, '1 item in cart', '@count items in cart').'</span>';
     $element['#localized_options']['html'] = TRUE;
   }
   else {
