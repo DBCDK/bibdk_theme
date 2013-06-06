@@ -7,6 +7,7 @@
       <?php print drupal_render($fields['bibdk_cart_link_default']); ?>
       <?php print drupal_render($fields['bibdk_holdingstatus_favourite_default']); ?>
       <?php print drupal_render($fields['ting_infomedia_link_default']); ?>
+      <?php print drupal_render($actions); ?>
     </div>
     <div class="secondary-actions">
       <ul>
