@@ -456,24 +456,26 @@ function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
 }
 
 function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
-  $fields = $variables['fields'];
-  foreach ($fields as $name => $field) {
-    if (isset($field['#formatter'])) {
-      $field_groups[$field['#formatter']][$name] = $field;
-    }
+
+  $variables['secondary_actions'] = array();
+  if ($actions = $variables['actions']){
+    foreach($actions as $key => $action){
+      switch ($key){
+        case 'reservation' :
+          $actions[$key]['#prefix'] = '<div class="btn-wrapper">';
+          $actions[$key]['#suffix'] = '</div>';
+          break;
+        case 'linkme' :
+          $variables['secondary_actions'][$key] = $action;
+          unset($actions[$key]);
+          break;
+        }
+      }
+
+  $variables['actions'] = $actions;
   }
-  $variables['fields'] = $field_groups;
-  usort($variables['fields']['ting_openformat_default_formatter'], '_sortfields_by_weight');
 }
 
-/**
- * @param array $a
- * @param array $b
- * @return Boolean
- */
-function _sortfields_by_weight($a, $b) {
-  return $a['#weight'] - $b['#weight'];
-}
 
 /**
  * Override theme function for a CAPTCHA element.
