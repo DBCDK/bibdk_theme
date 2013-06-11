@@ -21,7 +21,7 @@
       <?php foreach ($fields['ting_openformat_default_formatter'] as $field) : ?>
         <tr>
           <th><?php print t($field['#title']); ?></th>
-          <td><?php print $field[0]['#markup']; ?></td>
+          <td class="hyphenate <?php print $field['#field_type']; ?>"><?php print $field[0]['#markup']; ?></td>
         </tr>
       <?php endforeach; ?>
       </tbody>

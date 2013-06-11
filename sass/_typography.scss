@@ -177,9 +177,8 @@ hr {
     color:$dark_grey4;
     vertical-align:top;
     /*break long links*/
-    word-wrap: break-word;
-    word-break: break-all;
-    -ms-word-wrap: break-word;
+    @include hyphenation;
+    word-break: normal;
   }
 }
 
