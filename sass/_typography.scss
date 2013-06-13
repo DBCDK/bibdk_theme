@@ -173,6 +173,7 @@ hr {
     width: 100px;
   }
   .field-items {
+    width: 510px;
     display: inline-block;
     color:$dark_grey4;
     vertical-align:top;
@@ -183,7 +184,7 @@ hr {
   }
   .field-label-hidden {
     .field-items {
-      margin-left: 100px;
+      margin-left: 112px;
     }
   }
 }
