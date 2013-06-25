@@ -411,6 +411,17 @@ function bibdk_theme_menu_link(array$variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+function bibdk_theme_preprocess_links(&$links){
+  if ($links['heading'] == t('export links')){
+    $links['heading'] = '';
+    foreach($links['links'] as $key => $link){
+      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
+      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
+      $links['links'][$key] = $link;
+    }
+  }
+}
+
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }

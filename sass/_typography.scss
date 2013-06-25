@@ -173,14 +173,14 @@ hr {
     width: 100px;
   }
   .field-items {
-    width: 510px;
+    width: 340px;
     display: inline-block;
     color:$dark_grey4;
     vertical-align:top;
     /*break long links*/
-    word-wrap: break-word;
-    word-break: break-all;
-    -ms-word-wrap: break-word;
+    word-wrap: normal;
+    word-break: normal;
+    -ms-word-wrap: normal;
   }
   .field-label-hidden {
     .field-items {
