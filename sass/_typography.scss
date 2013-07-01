@@ -161,11 +161,10 @@ hr {
 // Manifestation data
 //
 .manifestation-data {
+  line-height:180%;
 
-  table {
-    line-height:180%;
-  }
-  th {
+  .field-label {
+    display: inline-block;
     padding-right:10px;
     text-align:left;
     vertical-align:top;
@@ -173,12 +172,21 @@ hr {
     font-weight:normal;
     width: 100px;
   }
-  td {
+  .field-items {
+    width: 340px;
+    display: inline-block;
     color:$dark_grey4;
     vertical-align:top;
     /*break long links*/
     @include hyphenation;
+    word-wrap: normal;
     word-break: normal;
+    -ms-word-wrap: normal;
+  }
+  .field-label-hidden {
+    .field-items {
+      margin-left: 112px;
+    }
   }
 }
 

@@ -411,6 +411,17 @@ function bibdk_theme_menu_link(array$variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+function bibdk_theme_preprocess_links(&$links){
+  if ($links['heading'] == t('export links')){
+    $links['heading'] = '';
+    foreach($links['links'] as $key => $link){
+      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
+      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
+      $links['links'][$key] = $link;
+    }
+  }
+}
+
 function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
   return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
 }
@@ -456,24 +467,26 @@ function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
 }
 
 function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
-  $fields = $variables['fields'];
-  foreach ($fields as $name => $field) {
-    if (isset($field['#formatter'])) {
-      $field_groups[$field['#formatter']][$name] = $field;
-    }
+
+  $variables['secondary_actions'] = array();
+  if ($actions = $variables['actions']){
+    foreach($actions as $key => $action){
+      switch ($key){
+        case 'reservation' :
+          $actions[$key]['#prefix'] = '<div class="btn-wrapper">';
+          $actions[$key]['#suffix'] = '</div>';
+          break;
+        case 'linkme' :
+          $variables['secondary_actions'][$key] = $action;
+          unset($actions[$key]);
+          break;
+        }
+      }
+
+  $variables['actions'] = $actions;
   }
-  $variables['fields'] = $field_groups;
-  usort($variables['fields']['ting_openformat_default_formatter'], '_sortfields_by_weight');
 }
 
-/**
- * @param array $a
- * @param array $b
- * @return Boolean
- */
-function _sortfields_by_weight($a, $b) {
-  return $a['#weight'] - $b['#weight'];
-}
 
 /**
  * Override theme function for a CAPTCHA element.
