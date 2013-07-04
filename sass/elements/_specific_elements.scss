@@ -1357,3 +1357,18 @@ body.page-ting-moreinfo {
 #lightboxFrame {
   border-width: 0;
 }
+
+// =============================================================================
+// User settings
+// =============================================================================
+
+.bibdk-usersettings {
+  padding-bottom: 20px;
+  .form-item {
+    padding: 5px 0;
+  }
+  input[type=submit] {
+    display: block;
+    float: right;
+  }
+}
