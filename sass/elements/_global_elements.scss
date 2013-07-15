@@ -24,14 +24,22 @@ body.page-reservation {
 }
 
 #search-panel-wrapper {
-  background: $dark_grey3;
-  padding: 20px 0;
+  background: $light_grey2;
+  padding: 20px 0 0 0;
 }
 
 #subjects-wrapper {
-  background: $light_grey2;
-  padding: 30px 0 10px;
-  min-height: 60px;
+  background: $light_grey1;
+  /* padding: 30px 0 10px; */
+  border-bottom: 1px solid $light_grey3;
+  min-height: 0px;
+}
+
+#messages-wrapper {
+  background: $nav_msg_bg;
+  #messages {
+    color: $white;
+  }
 }
 
 #columns-wrapper {
@@ -140,10 +148,11 @@ body.page-reservation {
   a {
     line-height: 300%;
     padding: 0 1em;
-    border-right: solid 1px lighten($dark_grey3, 5%);
-    color: lighten($btn_blue, 10%);
+    border-right: solid 1px lighten($nav_user_bg, 5%);
+    color: lighten($white, 10%);
     text-shadow: 0 -1px rgba(black, .3);
-    background: $dark_grey3;
+    background: $nav_user_bg;
+    font-weight: bold;
   }
 
   li:first-child a {
@@ -298,6 +307,7 @@ body.page-reservation {
     margin-right: 1%;
     margin-bottom: 10px;
   }
+
   .form-actions {
     width: 15%;
     margin-bottom: 10px;
@@ -307,13 +317,17 @@ body.page-reservation {
     height: 40px;
     line-height: 40px;
   }
+
   input[type=text] {
     padding: 0 10px;
     font-size: 1.166667em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
     // 14px
   }
+
   input[type=submit] {
     font-size: 1.333333em;
+    font-weight: bold;
     // 16px
   }
 }
@@ -322,34 +336,50 @@ body.page-reservation {
   margin-bottom: 15px;
 
   li {
-    padding-right: 1px;
+    padding-right: 0px;
 
     input[type=submit] {
       font-size: 12px;
-      background: $dark_grey4;
+      /* background: $dark_grey4; */
+      background: $white;
       @include transition(background-color .5s);
-      margin-right: 1px;
-      border-top: solid 1px darken($dark_grey3, 5%);
-      color: $white;
+      /* margin-right: 1px; */
+      margin-right: 0px;
+      /* border-top: solid 1px darken($dark_grey3, 5%); */
+      background-color: $white;
+      color: $dark_grey4;
+      height: 32px;
+      line-height: 32px;
+      margin-top: 4px;
+      border: solid 1px #d4d4d4;
+      @include border-radius(0px);
+      border-width: 1px 1px 1px 0px;
+      box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.05) inset;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
 
       &:hover {
+        color: $white;
         background: lighten($dark_grey4, 10%);
         @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
       }
 
       &.active {
+        color: $white;
         background: $btn_blue;
         @include border-radius(3px);
         text-shadow: 0px -1px rgba(black, .2);
-
+        height: 40px;
+        line-height: 40px;
         border: none;
         position: relative;
+        margin-top: 0px;
       }
     }
-    &:first-child {
+    &:first-child input[type=submit] {
+      border-left-width: 1px;
       @include border-radius(5px 0 0 5px);
     }
-    &:last-child {
+    &:last-child input[type=submit] {
       @include border-radius(0 5px 5px 0);
     }
   }

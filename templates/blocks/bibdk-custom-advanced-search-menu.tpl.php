@@ -1,6 +1,6 @@
 <div id="search-advanced">
   <div id="search-advanced-toggle">
-    <a class="text-white<?php ($form['#visuallyhidden']) ? print '' : print 'toggled'; ?>" href="#"><span class="icon icon-left icon-blue-plus">&nbsp;</span><?php print t('Expand search options'); ?>
+    <a class="text-darkgrey<?php ($form['#visuallyhidden']) ? print '' : print ' toggled'; ?>" href="#"><span class="icon icon-left icon-blue-plus">&nbsp;</span><?php print t('Expand search options'); ?>
     </a>
   </div>
   <div id="search-advanced-panel" class="<?php ($form['#visuallyhidden']) ? print 'visuallyhidden' : print ''; ?>">

@@ -8,7 +8,7 @@
 }
 
 div#search-advanced-toggle {
-  background-color: $dark_grey3;
+  background: $light_grey2;
   display: block;
   padding-bottom: 10px;
 }
@@ -21,6 +21,7 @@ div#search-advanced-panel {
   background-color: $light_grey1;
   margin: 2% 0 0 2%;
   display: block;
+  @include border-radius(5px);
 
   .btn-submit {
     float: right;

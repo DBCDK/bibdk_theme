@@ -45,26 +45,6 @@
 
 
 
-<nav id="search-panel-wrapper" role="search">
-
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-
-        <div id="search-panel">
-          <?php print render($page['search_panel']); ?>
-        </div>
-        <!-- #search-panel -->
-
-      </div>
-    </div>
-  </div>
-
-</nav>
-<!-- #search-panel-wrapper -->
-
-
-
 <section id="messages-wrapper" role="alert">
 
   <div class="container">
@@ -84,6 +64,26 @@
 
 </section>
 <!-- #messages-wrapper -->
+
+
+
+<nav id="search-panel-wrapper" role="search">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <div id="search-panel">
+          <?php print render($page['search_panel']); ?>
+        </div>
+        <!-- #search-panel -->
+
+      </div>
+    </div>
+  </div>
+
+</nav>
+<!-- #search-panel-wrapper -->
 
 
 
