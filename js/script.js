@@ -185,10 +185,11 @@
             });
 
             // Toggle advanced search options
-            $('#search-advanced a').click(function(e) {
+            $('#search-advanced-toggle').click(function(e) {
                 e.preventDefault();
                 $(this).toggleClass('toggled');
-                $(this).parent().next().toggleClass('visuallyhidden');
+                $(this).siblings().toggleClass('visuallyhidden');
+                $('#edit-advanced').toggleClass('toggled');
             });
 
             //Control zebra-toggle
@@ -527,8 +528,9 @@
             });
 
             // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
-            $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
-            $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
+            $('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
+            $('.page-bibdk-frontpage #search-advanced-toggle a').toggleClass('toggled');
+            $('.page-bibdk-frontpage #search-advanced').toggleClass('visuallyhidden');
 
             // *************** Move secondary actions in search result to bottom right *************** //
             $('article.manifestation').filter(':visible').each(function(){

@@ -378,9 +378,15 @@ body.page-reservation {
     &:first-child input[type=submit] {
       border-left-width: 1px;
       @include border-radius(5px 0 0 5px);
+      &.active {
+        @include border-radius(3px);
+      }
     }
     &:last-child input[type=submit] {
       @include border-radius(0 5px 5px 0);
+      &.active {
+        @include border-radius(3px);
+      }
     }
   }
   .ajax-progress .throbber {
