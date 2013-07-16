@@ -5,9 +5,9 @@
 
 form#search-block-form fieldset#edit-advanced {
   /* background-color: $light_grey1; */
-  margin-bottom: -3em;
+  margin-bottom: 0em;
   &.toggled {
-    margin-bottom: 0em;
+    margin-bottom: -3em;
   }
 }
 
@@ -20,7 +20,10 @@ div#search-advanced-toggle {
     display: block;
     float: left;
   }
-  &.toggled .icon-blue-plus {
+  .icon-blue-minus {
+    background-image: url("../img/icons/blue-minus.png");
+  }
+  &.toggled .icon-blue-minus {
     background-image: url("../img/icons/blue-plus.png");
   }
 }

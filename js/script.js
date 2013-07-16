@@ -528,8 +528,9 @@
             });
 
             // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
+            // $('#edit-advanced').not('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
             $('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
-            $('.page-bibdk-frontpage #search-advanced-toggle a').toggleClass('toggled');
+            $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').toggleClass('toggled');
             $('.page-bibdk-frontpage #search-advanced').toggleClass('visuallyhidden');
 
             // *************** Move secondary actions in search result to bottom right *************** //
