@@ -71,6 +71,8 @@
     <div class="row">
       <div class="span24">
 
+        <a name="messages"></a>
+
         <div id="messages">
           <?php print $messages; ?>
         </div>
@@ -110,6 +112,8 @@
     <div class="row">
 
       <div id="columns">
+
+        <a name="content"></a>
 
         <?php if (!empty($page['sidebar'])): ?>
           <div class="span5">

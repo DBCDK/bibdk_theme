@@ -1,0 +1,545 @@
+
+// =============================================================================
+// Bib.dk search pages
+// =============================================================================
+
+#edit-advanced {
+  background-color: $light_grey1;
+}
+
+div#search-advanced-toggle {
+  background-color: $dark_grey3;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.container-inline div.bibdk-subgroup {
+  display: block;
+}
+
+div#search-advanced-panel {
+  background-color: $light_grey1;
+  margin: 2% 0 0 2%;
+  display: block;
+
+  .btn-submit {
+    float: right;
+    margin: 1% 1% 1% 1%;
+    height: 30px;
+    width: 140px;
+    background-color: $btn_blue;
+  }
+
+  .sub-elements {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  input {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+  }
+  input.form-checkbox {
+    height: 20px;
+    line-height: 20px;
+    margin-top: 1px;
+  }
+  select {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px 3px 3px 3px;
+    padding: 4px;
+  }
+  option {
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 6px;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  fieldset#edit-expand {
+    margin-left: 0;
+    width: 100%;
+    > legend {
+      background-color: inherit;
+      border: none;
+      display: block;
+      width: auto;
+      a {
+        background-image: url("../img/icons/blue-minus.png");
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+    .fieldset-wrapper {
+      text-align: left;
+      padding: 10px 0;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .element-wrapper {
+      float: left;
+      margin-left: 1%;
+      clear: none;
+    }
+    fieldset:first-child {
+      margin-left: 0%;
+    }
+    .sub-elements {
+      display: block;
+      margin-left: 20px;
+      width: 100%;
+    }
+  }
+
+  fieldset#edit-expand.collapsed {
+    width: 100%;
+    > legend {
+      background-color: inherit;
+      border: none;
+      display: block;
+      width: auto;
+      a {
+        padding-left: 20px;
+        background-image: url("../img/icons/blue-plus.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+  }
+
+  /* first row of columns in "expanded search" */
+  fieldset:first-child {
+    margin-left: 0%;
+  }
+  fieldset:last-child {
+    margin-left: 0%;
+  }
+  fieldset {
+    margin-bottom: 1em;
+    width: 32%;
+    margin-left: 1%;
+    display: inline;
+    vertical-align: top;
+    .fieldset-legend {
+      font-size: 16px;
+      padding: 0;
+    }
+    div.fieldset-wrapper {
+      clear: both;
+      text-align: right;
+      .fieldset-legend {
+        float: left;
+        max-width: inherit;
+      }
+      .form-type-textfield {
+        margin-bottom: 0;
+        margin-right: 1%;
+        width: 100%;
+      }
+      .fieldset-description {
+        white-space: nowrap;
+        display: inline-block;
+      }
+      p.helptext {
+        background-color: $btn_blue;
+        @include border-radius(3px);
+        width: auto;
+        border: none;
+        display: inline-block;
+        float: inherit;
+        margin: 3px 5px;
+        padding: 0 5px;
+        font-size: 12px;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+    div.bibdk-custom-search-element {
+      display: block;
+      clear: both;
+      margin: 2px 0 0 0;
+      padding: 0 5px 0 0;
+
+      div.form-item {
+        margin: 0;
+        padding: 0;
+        display: block;
+        .toggle-subgroup {
+          @include inline-block(top);
+          width: 15px;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          color: transparent;
+          background-image: url(../img/icons/blue-plus.png);
+          border: none;
+          display: block;
+          float: left;
+          position: relative;
+          margin-right: 5px;
+        }
+        .toggle-subgroup.toggled {
+          background-image: url(../img/icons/blue-minus.png);
+        }
+      }
+      div.form-type-checkbox {
+        float: none;
+        label {
+          display: block;
+          float: left;
+        }
+        input {
+          display: block;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
+  position: relative;
+  .form-type-textfield {
+    margin-bottom: 0;
+    margin-right: 1%;
+    width: 100%;
+  }
+}
+
+.container-inline div#search-advanced-panel {
+  display: block;
+}
+
+.allematerialer div#search-advanced-panel {
+  .materialetype {
+    width: 20%;
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .sprog {
+    width: 48%;
+    padding-left: 3%;
+    .bibdk-custom-search-element .column {
+      min-width: 25%;
+      float: left;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .udgivelsesar {
+    width: 25%;
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+}
+
+/* boeger:sprog */
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'],
+.page-bibdk-frontpage-bog div#search-advanced-panel {
+  .element-wrapper.materialetype {
+    width: 16%;
+  }
+  .element-wrapper.litterar_form {
+    width: 17%;
+  }
+  .element-wrapper.malgruppe {
+    width: 13%;
+  }
+  .element-wrapper.sprog {
+    width: 21%;
+  }
+  .element-wrapper.sprog {
+    .bibdk-custom-search-element .column {
+      width: 49%;
+      float: left;
+    }
+  }
+  .element-wrapper.udgivelsesar {
+    margin: 0 1% 0 1%;
+    width: 23%;
+  }
+  .element-wrapper {
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+    div.form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  div#search-advanced-panel fieldset.artiklens_emne {
+    margin-left: 0;
+  }
+}
+
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'],
+.page-bibdk-frontpage-artikel div#search-advanced-panel {
+  .element-wrapper.tidsskrift_eller_avis,
+  .element-wrapper.artikel_titelord,
+  .element-wrapper.artiklens_forfatter,
+  .element-wrapper.artiklens_emne {
+    width: 49%;
+  }
+  .element-wrapper.materialetype {
+    width: 20%;
+  }
+  .element-wrapper.sprog {
+    width: 23%;
+    margin: 0 0 0 8%;
+    .bibdk-custom-search-element .column {
+      width: 50%;
+      float: left;
+    }
+  }
+  .element-wrapper.udgivelsesar {
+    width: 23%;
+    margin: 0 1% 0 3%;
+    div.form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .element-wrapper {
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+  }
+  .btn-submit {
+    margin-bottom: 1em;
+  }
+  fieldset.artiklens_forfatter {
+    margin-left: 0;
+  }
+}
+
+
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/film'],
+.page-bibdk-frontpage-film div#search-advanced-panel {
+  .element-wrapper.filmens_titel,
+  .element-wrapper.personer {
+    width: 48.5%;
+  }
+  .element-wrapper.nationalitet {
+    width: 98%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 22%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column2 {
+      width: 26%;
+    }
+    .bibdk-custom-search-element .column3 {
+      width: 30%;
+    }
+  }
+  .element-wrapper.genre_type {
+    width: 98%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 20.5%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column2 {
+      width: 17%;
+      float: left;
+    }
+  }
+  .element-wrapper.materialetype {
+    width: 20%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 50%;
+      float: left;
+    }
+  }
+  .element-wrapper.aldersanbefaling,
+  .element-wrapper.tilladt_for {
+    width: 32%;
+    select {
+      width: 95%;
+    }
+  }
+  .element-wrapper {
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+}
+
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/net'],
+.page-bibdk-frontpage-net div#search-advanced-panel {
+  .element-wrapper.materialetype,
+  .element-wrapper.element-wrapper
+  .element-wrapper.litterar_form {
+    width: 34%;
+    margin-left: 0;
+  }
+  .element-wrapper.sprog {
+    width: 32%;
+    margin-left: 0;
+    .bibdk-custom-search-element .column {
+      width: 49%;
+      float: left;
+    }
+  }
+  .udgivelsesar {
+    margin: 0 1% 0 1%;
+    width: 25%;
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+    div.form-item {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .element-wrapper {
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .form-type-select {
+      float: left;
+    }
+    .form-type-select:last-child {
+      float: right;
+    }
+  }
+}
+
+
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'],
+.page-bibdk-frontpage-spil div#search-advanced-panel {
+  select {
+    width: 100%;
+  }
+  .element-wrapper.titel,
+  .element-wrapper.platform {
+    width: 49%;
+  }
+  .element-wrapper.spilgenre_type {
+    width: 85%;
+    margin-left: 0;
+    margin-top: 8px;
+    .bibdk-custom-search-element .column {
+      width: 25%;
+      float: left;
+    }
+  }
+  .element-wrapper.medieradets_aldersanbefalinger,
+  .element-wrapper.aldersanbefaling {
+    width: 40%;
+  }
+  .medieradets_aldersanbefalinger {
+    margin-left: 0;
+  }
+  .element-wrapper {
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+  }
+  .btn-submit {
+    margin-top: 30px;
+  }
+}
+
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'],
+.page-bibdk-frontpage-musik div#search-advanced-panel {
+  .alle_titler {
+    margin-left: 0;
+  }
+  .musikgenre {
+    width: 98%;
+    margin-left: 1%;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .bibdk-custom-search-element .column {
+      width: 25%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column3 {
+      width: 22%;
+    }
+  }
+  .materiale {
+    width: 75%;
+    margin-left: 0;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .bibdk-custom-search-element .column {
+      width: 25%;
+      float: left;
+    }
+  }
+
+  .btn-submit {
+    margin-top: 50px;
+  }
+}
