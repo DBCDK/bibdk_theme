@@ -88,12 +88,16 @@
     > .element {
       border-width: 0;
       .element-section {
-        border-width: 0px;
+        border-color: $white;
+        border-bottom-width: 0;
       }
-      &.toggled {
-        border-width: 3px;
-        border-style: solid;
-        border-color: $light_grey3;
+    }
+    > .element.toggled-element {
+      border-width: 3px;
+      border-style: solid;
+      border-color: $light_grey3;
+      .element-section {
+        margin: 0px;
       }
     }
   }
