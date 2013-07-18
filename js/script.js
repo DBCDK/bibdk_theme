@@ -112,17 +112,15 @@
             // Disable button and dropdown when toggling details of a work
             $('.work-toggle-element', context).click(function() {
 
-                if (!$(this).hasClass('toggled')){
+                if ( !$(this).hasClass('toggled') ){
                     // pjo comment out disabled class to allow 'order any edition' always
-                   // $(this).closest('.work-header').find('.btn').addClass('disabled');
+                    // $(this).closest('.work-header').find('.btn').addClass('disabled');
                     $(this).closest('.work-header').find('.btn').removeClass('toggled');
                     $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
-
                     $('html, body').animate({
                         scrollTop: $(this).closest('.work').offset().top
                     }, 500);
-                }else
-                {
+                } else {
                     $(this).closest('.work-header').find('.btn').removeClass('disabled');
                 }
             });
@@ -134,14 +132,16 @@
                 var msg_id = ".msg-" + id.substring(6);
                 $(id).trigger('click');
                 $(this).children('.toggle-text').toggleClass('hidden');
-                if (!$(this).hasClass('toggled')){
+                if ( !$(this).hasClass('toggled') ) {
                     $(this).addClass('toggled');
                     $(this).closest('.element-section').next().removeClass('visuallyhidden');
                     $(msg_id).addClass('visuallyhidden');
-                }else{
+                    $(this).parents(".element").addClass('toggled');
+                } else {
                     $(this).removeClass('toggled');
                     $(this).closest('.element-section').next().addClass('visuallyhidden');
                     $(msg_id).removeClass('visuallyhidden');
+                    $(this).parents(".element").removeClass('toggled');
                 }
 
             });
@@ -528,7 +528,6 @@
             });
 
             // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
-            // $('#edit-advanced').not('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
             $('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
             $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').toggleClass('toggled');
             $('.page-bibdk-frontpage #search-advanced').toggleClass('visuallyhidden');

@@ -37,9 +37,14 @@
   }
 
   &.work-body-has-cover .wrapper {
-    width: 490px;
+    width: 540px;
     float: left;
   }
+
+  &.element-section {
+    padding: 0;
+  }
+
 }
 
 // Work cover
@@ -47,8 +52,6 @@
   width: 140px;
   float: right;
   margin: 0 0 10px 20px;
-  padding: 0 0 0 15px;
-  border-left: dotted 1px $borderColor;
   img {
     width: 100%;
   }
@@ -76,10 +79,37 @@
   }
 }
 
-.search-results article.manifestation {
-  min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
-  .actions {
-    max-width: 175px;
+
+
+.search-results {
+  .work.element-wrapper {
+    border-width: 0;
+    background: $white;
+    > .element {
+      border-width: 0;
+      .element-section {
+        border-width: 0px;
+      }
+      &.toggled {
+        border-width: 3px;
+        border-style: solid;
+        border-color: $light_grey3;
+      }
+    }
+  }
+  .manifestation {
+    background: $white;
+    min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
+    &.zebra {
+      background: $white;
+      border-color: $light_blue1;
+    }
+    .actions {
+      max-width: 175px;
+    }
+    a {
+      font-weight: normal;
+    }
   }
 }
 
@@ -688,7 +718,7 @@ p.note-localisations {
 .cart-actions {
   float: left;
   padding-right: 20px;
-  
+
 }
 .page-email input {
   margin: 20px;
