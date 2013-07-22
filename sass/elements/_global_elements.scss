@@ -438,7 +438,34 @@ body.page-reservation {
   }
 }
 
-// ##fix##
+
+.page-search .sidebar-header {
+    background-color:transparent;
+    height: 34px;
+    line-height: 34px;
+    border-bottom-width: 0px;
+}
+
+.sidebar-header .ting-openformat-search-amount-block {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    font-size: 1.066em;
+    color: $dark_grey4;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #DCDCDC;
+    border-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    height: 30px;
+    line-height: 30px;
+    margin: 9px 0
+}
+
+
+
 .page-laanerstatus .sidebar-header,
 .page-favoritbiblioteker .sidebar-header {
   background-image: url(../img/min-side-smiley.png);
@@ -450,7 +477,7 @@ body.page-reservation {
 #block-bibdk-frontend-tabs2,
 .sidebar-nav {
 
-  a, fieldset .expand {
+  a, fieldset {
     background: $dark_grey4;
     display: block;
     padding: 8px 15px;
@@ -486,7 +513,6 @@ body.page-reservation {
   }
 
   legend {
-    /* , .facet-type */
     background: darken($dark_grey3, 2%);
     padding: 8px 15px;
     color: $white;
@@ -505,39 +531,9 @@ body.page-reservation {
     }
   }
 
-  .form-type-checkbox input {
-    display: none;
-  }
+
 }
 
-// =============================================================================
-// Exceptions for facets
-// =============================================================================
-
-#ding-facetbrowser-form {
-
-  .form-item {
-    padding: 0;
-  }
-
-  .fieldset-legend {
-    font-size: 14px;
-    padding: 0;
-  }
-
-  label.option {
-    display: block;
-    margin-bottom: 0;
-  }
-  .form-type-checkbox {
-    float: none;
-    margin: 0;
-  }
-
-  .expand_more {
-    cursor: pointer;
-  }
-}
 
 // =============================================================================
 // Page title

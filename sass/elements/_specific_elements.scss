@@ -99,6 +99,11 @@
       .element-section {
         padding: 17px;
         margin: 0px;
+        &.work-body {
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+        }
       }
     }
   }
@@ -107,7 +112,11 @@
     min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
     &.zebra {
       background: $white;
-      border-color: $light_blue1;
+      border-color: $light_grey1;
+      border-left-width: 1px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      margin-left: 20px;
     }
     .actions {
       max-width: 175px;
