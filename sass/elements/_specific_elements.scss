@@ -124,6 +124,15 @@
     a {
       font-weight: normal;
     }
+    .primary-actions {
+      > a  {
+        display: block;
+      }
+      > a, ul li {
+        margin-left: 24px;
+        text-indent: -24px;
+      }
+    }
   }
 }
 
