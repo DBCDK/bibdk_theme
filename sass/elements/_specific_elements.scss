@@ -688,7 +688,7 @@ p.note-localisations {
 .cart-actions {
   float: left;
   padding-right: 20px;
-  
+
 }
 .page-email input {
   margin: 20px;
@@ -793,5 +793,15 @@ body.page-ting-moreinfo {
   input[type=submit] {
     display: block;
     float: right;
+  }
+}
+
+// =============================================================================
+// Manifestation actions
+// =============================================================================
+.manifestation .primary-actions {
+
+  a {
+    display: block;
   }
 }
