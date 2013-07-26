@@ -363,12 +363,6 @@ body.page-reservation {
       box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.05) inset;
       text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
 
-      &:hover {
-        color: $white;
-        background: lighten($dark_grey4, 10%);
-        @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
-      }
-
       &.active {
         color: $white;
         background: $btn_blue;
