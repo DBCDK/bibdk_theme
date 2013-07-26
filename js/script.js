@@ -1,7 +1,9 @@
 (function ($) {
 
     Drupal.behaviors.bibdk_theme = {
+
         attach: function(context, settings) {
+
             // Toggle tables
             $('.table-toggle a').click(function(e) {
                 e.preventDefault();
@@ -542,6 +544,14 @@
               $(this).find('.secondary-actions').height(hSecondaryAction);
               var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
               $(this).find('.secondary-actions > ul').css('margin-top',hSecondaryActionContentMargin);
+            });
+
+            // ****************************  Force move to fragment, if present  **************************** //
+            $(document).ready(function () {
+              var anchor_id = window.location.hash; if (anchor_id != "") {
+                var new_position = $(anchor_id).offset();
+                window.scrollTo(new_position.left,new_position.top);
+              }
             });
 
 

@@ -44,14 +44,11 @@
 <!-- #header-wrapper -->
 
 
-
 <section id="messages-wrapper" role="alert">
 
   <div class="container">
     <div class="row">
       <div class="span24">
-
-        <a name="messages"></a>
 
         <div id="messages">
           <?php print $messages; ?>
@@ -106,14 +103,14 @@
 <!-- #subjects-wrapper -->
 
 
+<div id="content-anchor"><a id="content" name="content"></a></div>
+
 <section id="columns-wrapper">
 
   <div class="container">
     <div class="row">
 
       <div id="columns">
-
-        <a name="content"></a>
 
         <?php if (!empty($page['sidebar'])): ?>
           <div class="span5">
