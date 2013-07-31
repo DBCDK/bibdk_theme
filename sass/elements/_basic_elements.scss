@@ -322,9 +322,9 @@ div.works-controls > div > div,
       background: $light_grey2;
     }
   }
-  li.pager-current a {
+  /*li.pager-current a {
     background: $light_grey2;
-  }
+  }*/
   li a {
     border-width: 0;
   }
@@ -379,7 +379,7 @@ form.bibdk-search-controls-form {
 // Works controls (above the list of works)
 // =============================================================================
 
-.pager,
+/*.pager,*/
 .works-controls {
   display: block;
   background: #fbfbfb;
@@ -449,7 +449,7 @@ div.works-controls > div,
 //
 // Paging, works
 //
-div.works-controls > .pane-ting-openformat-pager-mini {
+/*div.works-controls > .pane-ting-openformat-pager-mini {
   float: right;
 }
 
@@ -524,6 +524,6 @@ div.works-controls > .pane-ting-openformat-pager-mini {
   padding: 0 10px;
   border-left: solid 0px $borderColor;
   border-right: solid 0px $borderColor;
-}
+}*/
 
 

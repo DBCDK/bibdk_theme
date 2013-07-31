@@ -519,7 +519,8 @@ function bibdk_theme_captcha($variables) {
 
 /* * *** PAGER ****** */
 
-function bibdk_theme_pager_link($variables) {
+/*function bibdk_theme_pager_link($variables) {
+  dpm($variables, 'vars');
   $text = $variables['text'];
   $page_new = $variables['page_new'];
   $element = $variables['element'];
@@ -741,7 +742,6 @@ function bibdk_theme_item_list($variables) {
 }
 
 function bibdk_theme_links__locale_block(&$variables) {
-  // #534 BUG: Sprogv?lger p? biblioteksvejviser-s?geresultatsiden returnerer en blank side
   foreach ($variables['links'] as $id => $link) {
     $variables['links'][$id]['query'] = drupal_get_query_parameters($_GET);
   }
@@ -821,3 +821,4 @@ function bibdk_theme_links__locale_block(&$variables) {
   return $output;
 }
 
+*/
