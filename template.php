@@ -518,6 +518,7 @@ function bibdk_theme_captcha($variables) {
 }
 
 /* * *** PAGER ****** */
+//TODO mmj these lines should be deleted prior to final commit
 
 /*function bibdk_theme_pager_link($variables) {
   dpm($variables, 'vars');

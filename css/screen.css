@@ -4885,6 +4885,24 @@ body.page-ting-moreinfo img {
   display: block;
 }
 
+/* line 813, ../sass/elements/_specific_elements.scss */
+.pane-ting-openformat-load-more-results {
+  text-align: center;
+  padding-bottom: 8px;
+}
+/* line 817, ../sass/elements/_specific_elements.scss */
+.pane-ting-openformat-load-more-results #link {
+  font-size: 14px;
+}
+
+/* line 822, ../sass/elements/_specific_elements.scss */
+.load_more_res_splitter {
+  background-color: #999999;
+  height: 2px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 /* line 6, ../sass/elements/_custom_search_elements.scss */
 #edit-advanced {
   background-color: #f7f7f7;
