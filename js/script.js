@@ -126,7 +126,6 @@
                     $(this).closest('.work-header').find('.btn').removeClass('disabled');
                 }
             });
-
             // Toggle visibility of "next section of an element"
             $('.work-toggle-element', context).click(function(e) {
                 e.preventDefault();
@@ -192,12 +191,13 @@
             });
 
             //Control zebra-toggle
-            $('.zebra-toggle a').once().click(function (e){
+            $('.zebra-toggle span').once().click(function (e){
                 e.preventDefault();
-                var id = $(this).attr('href');
-                $(this).toggleClass('toggled');
-                $(this).children('.toggle-text').toggleClass('hidden');
-                $(this).parents(id).find(".toggle").toggleClass('visuallyhidden');
+                var wrapper = $(this).parent('a');
+                var id = wrapper.attr('href');
+                wrapper.toggleClass('toggled');
+                wrapper.children('.toggle-text').toggleClass('hidden');
+                wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
             });
 
             $('.markall-button input[type=checkbox]').click(function(e) {
