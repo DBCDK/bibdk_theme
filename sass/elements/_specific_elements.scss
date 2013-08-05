@@ -414,35 +414,30 @@
 // =============================================================================
 
 .pane-bibdk-help-bibdk-help-popup-menu,
+.pane-bibdk-help-bibdk-help-popup-menu-eng,
 .pane-bibdk-help {
   padding: 20px;
-}
-
-.pane-bibdk-help-bibdk-help-popup-menu .menu .menu {
-  margin-bottom: 10px;
-}
-
-.pane-bibdk-help-bibdk-help-popup-menu li a {
-  border: solid 1px $borderColor;
-  background-repeat: no-repeat;
-  background-position: 100%;
-  display: block;
-  padding: 10px 20px;
-  margin-bottom: 1px;
-}
-
-.pane-bibdk-help-bibdk-help-popup-menu li.expanded a {
-}
-
-.pane-bibdk-help-bibdk-help-popup-menu li li a {
-  margin-left: 10px;
-}
-
-.pane-bibdk-help-bibdk-help-popup-menu li li li a {
+  .menu .menu {
+    margin-bottom: 10px;
+  }
+  li a {
+    border: solid 1px $borderColor;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 1px;
+  }
+  li li a {
+    margin-left: 10px;
+  }
 }
 
 
-/* Linkme, Infomedia */
+// =============================================================================
+// Linkme, Infomedia
+// =============================================================================
+
 .linkme-wrapper, .infomedia-wrapper {
   position: absolute;
   width: 30em;
@@ -450,7 +445,11 @@
   margin-top: 5px;
   min-height: 3.5em;
 }
-/* Popover (linkme, holding status, infomedia, etc) */
+
+// =============================================================================
+// Popover (linkme, holding status, infomedia, etc)
+// =============================================================================
+
 .popover {
   position: absolute;
   width: 30em;
