@@ -480,7 +480,7 @@
             /* /end TODO: delete after sprint 32 */
             // ****************************  Seasonal images **************************** //
             var today = new Date();
-            month = today.getMonth() + 1;
+            var month = today.getMonth() + 1;
             if ( month == 12 ) {
               $('#seasonal').each(function(){
                 $(this).addClass('kravlenisse');
@@ -527,8 +527,10 @@
             });
 
             // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
+          if($('#search-advanced-toggle a').hasClass('toggled') === false){
             $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
             $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
+          }
 
             // *************** Move secondary actions in search result to bottom right *************** //
             $('article.manifestation').filter(':visible').each(function(){
