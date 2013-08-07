@@ -804,3 +804,23 @@ body.page-ting-moreinfo {
     display: block;
   }
 }
+
+
+// =============================================================================
+// Load more results
+// =============================================================================
+.pane-ting-openformat-load-more-results {
+  text-align: center;
+  padding-bottom: 8px;
+
+  #link {
+    font-size: 14px;
+  }
+}
+
+.load_more_res_splitter {
+  background-color: $light_grey4;
+  height: 2px;
+  width: 100%;
+  margin-bottom: 10px;
+}

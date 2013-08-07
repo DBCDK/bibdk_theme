@@ -5,8 +5,7 @@
 .icon {
   @include inline-block(top);
   width:15px;
-  background-position:50% 50%;
-  background-repeat:no-repeat;
+  background: no-repeat 50% 50%;
   color: transparent;
 }
 #toolbar .icon {
