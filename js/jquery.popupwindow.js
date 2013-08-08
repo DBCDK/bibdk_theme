@@ -10,7 +10,8 @@ jQuery.fn.popupwindow = function(p)
 
     // for overrideing the default settings
     mysettings = (jQuery(this).attr("rel") || "").split(",");
-
+    mysettings_html5 = (jQuery(this).attr("data-rel") || "").split(",");
+    mysettings = ( mysettings_html5.length > 0 ) ? mysettings_html5 : mysettings;
 
     settings = {
       height:600, // sets the height in pixels of the window.
