@@ -474,6 +474,11 @@ color:black;
 #block-bibdk-frontend-tabs2,
 .sidebar-nav {
 
+  h2.pane-title {
+    font-size: 1.4em;
+    margin-top: 8px;
+  }
+
   a, fieldset {
     background: $dark_grey4;
     display: block;
