@@ -33,10 +33,15 @@ div#search-advanced-toggle {
 }
 
 div#search-advanced {
+  display: block;
   @include border-radius(5px);
   background-color: $light_grey1;
   padding: 1% 2%;
-  display: block;
+  &.toggled {
+    @include border-radius(0px);
+    background-color: $light_grey1;
+    padding: 0%;
+  }
 }
 
 div#search-advanced-panel {

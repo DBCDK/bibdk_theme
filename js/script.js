@@ -181,13 +181,6 @@
         }
       });
 
-      // Toggle advanced search options
-      $('#search-advanced a').click(function(e) {
-        e.preventDefault();
-        $(this).toggleClass('toggled');
-        $(this).parent().next().toggleClass('visuallyhidden');
-      });
-
       //Control zebra-toggle
       $('.zebra-toggle a').once().click(function(e) {
         e.preventDefault();
@@ -465,10 +458,6 @@
       // ****************************  CURSOR POSITIONS **************************** //
       // Default in search block form - unless it's a search result.
       $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-      // Move to first input field in expanded search, if activated.
-      $('#search-advanced-toggle').click(function(e) {
-        $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
-      });
       // Helpdesk popup
       $('.page-overlay-helpdesk').find('input[type=text], textarea').filter(':visible:first').focus();
       // User login form
@@ -500,9 +489,19 @@
       });
 
       // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
-      if($('#search-advanced-toggle a').hasClass('toggled') === false) {
-        $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
-        $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
+      // Toggle advanced search options
+      $('#search-advanced-toggle').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('toggled');
+        $('#search-advanced').toggleClass('toggled');
+        $('#edit-advanced').toggleClass('toggled');
+        $('#search-advanced-panel').toggleClass('visuallyhidden');
+        // Move to first input field in expanded search, if activated.
+        $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+      });
+      // toggle front page onLoad:
+      if ( $('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
+        $('#search-advanced-toggle').click();
       }
 
 
