@@ -24,7 +24,7 @@
       <?php foreach ($subtypes as $subtype) : $innercounter++ ?>
         <a href="#<?php print $subtype[0]; ?><?php print $ding_id; ?>"
            class="<?php print ($innercounter == 1) ? "active" : ""  ?>"><?php print $subtype[1]; ?>
-            (<?php print $subtype[2]; ?>)</a>
+            </a>
       <?php endforeach; ?>
     </div>
   <?php endforeach; ?>

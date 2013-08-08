@@ -1,4 +1,4 @@
-<nav id="topbar-wrapper" role="navigation">
+<nav id="topbar-wrapper" data-role="navigation">
 
   <div class="container">
     <div class="row">
@@ -44,27 +44,8 @@
 <!-- #header-wrapper -->
 
 
-<section id="messages-wrapper" role="alert">
 
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-
-        <div id="messages">
-          <?php print $messages; ?>
-        </div>
-        <!-- #messages -->
-
-      </div>
-    </div>
-  </div>
-
-</section>
-<!-- #messages-wrapper -->
-
-
-
-<nav id="search-panel-wrapper" role="search">
+<nav id="search-panel-wrapper" data-role="search">
 
   <div class="container">
     <div class="row">
@@ -81,6 +62,28 @@
 
 </nav>
 <!-- #search-panel-wrapper -->
+
+
+
+<section id="messages-wrapper" data-role="alert">
+
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+
+        <a name="messages"></a>
+
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+        <!-- #messages -->
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- #messages-wrapper -->
 
 
 
@@ -103,14 +106,14 @@
 <!-- #subjects-wrapper -->
 
 
-<div id="content-anchor"><a id="content" name="content"></a></div>
-
 <section id="columns-wrapper">
 
   <div class="container">
     <div class="row">
 
       <div id="columns">
+
+        <a name="content"></a>
 
         <?php if (!empty($page['sidebar'])): ?>
           <div class="span5">
