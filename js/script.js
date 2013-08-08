@@ -1,7 +1,9 @@
 (function($) {
 
   Drupal.behaviors.bibdk_theme = {
+
     attach: function(context, settings) {
+
       // Toggle tables
       $('.table-toggle a').click(function(e) {
         e.preventDefault();
@@ -492,27 +494,38 @@
         // $("#search-block-form").submit();
       });
 
+
       // ************************** SELECT SEARCH INPUT ON CLICK ************************* //
       $('form#search-block-form input[name="search_block_form"]').focus(function() {
         this.select();
       });
 
-      // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
-      if($('#search-advanced-toggle a').hasClass('toggled') === false) {
-        $('#search-advanced-toggle a').not('.front #search-advanced-toggle a').toggleClass('toggled');
-        $('#search-advanced-panel').not('.front #search-advanced-panel').toggleClass('visuallyhidden');
-      }
 
-      // *************** Move secondary actions in search result to bottom right *************** //
-      $('article.manifestation').filter(':visible').each(function() {
+      // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
+      $('.page-bibdk-frontpage #edit-advanced').toggleClass('toggled');
+      $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').toggleClass('toggled');
+      $('.page-bibdk-frontpage #search-advanced').toggleClass('visuallyhidden');
+
+
+      // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
+      $('article.manifestation').filter(':visible').each(function(){
         var hAction = $(this).find('.actions').height();
         var hData = $(this).find('.manifestation-data').height();
-        var highestCol = Math.max(hAction, hData);
+        var highestCol = Math.max( hAction, hData );
         $(this).find('.actions').height(highestCol);
         var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
         $(this).find('.secondary-actions').height(hSecondaryAction);
         var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
-        $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin);
+        $(this).find('.secondary-actions > ul').css('margin-top',hSecondaryActionContentMargin);
+      });
+
+
+      // ****************************  FORCE MOVE TO FRAGMENT, IF PRESENT  **************************** //
+      $(document).ready(function () {
+        var anchor_id = window.location.hash; if (anchor_id != "") {
+          var new_position = $(anchor_id).offset();
+          window.scrollTo(new_position.left,new_position.top);
+        }
       });
 
       // NO CODE AFTER THIS!

@@ -267,8 +267,18 @@ input[type="submit"].btn-add-library {
   @extend .btn-add-library;
 }
 
-
-
+// one id and one class are required to target buttons for specialized search pages !!!
+body.html {
+  #search-panel-wrapper {
+    input[type="submit"] {
+      &:hover, &:focus {
+        color: $white;
+        background: lighten($dark_grey4, 10%);
+        @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
+      }
+    }
+  }
+}
 
 .form-actions {
   text-align:right;

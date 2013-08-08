@@ -1,4 +1,4 @@
-<div class="work element-wrapper">
+<div class="work element-wrapper <?php print $work_type; ?>">
   <div class="element">
     <div class="work-header element-section">
       <?php print drupal_render($actions); ?>

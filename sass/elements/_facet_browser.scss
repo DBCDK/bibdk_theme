@@ -1,0 +1,59 @@
+
+// =============================================================================
+// Bib.dk search facet browser
+// =============================================================================
+
+#ding-facetbrowser-form {
+
+  a, fieldset, legend {
+      background: $dark_grey4;
+      background-color: transparent;
+      color: $dark_grey1;
+  }
+
+  legend {
+    padding-left: 0;
+  }
+
+  .form-item {
+      padding: 0;
+      margin-left: 0;
+  }
+
+  .fieldset-legend {
+      font-size: 15px;
+      padding: 0;
+  }
+
+
+  .form-type-checkbox {
+      margin-right: 0px;
+  }
+
+  label.option {
+      color: $dark_grey1;
+      display: block;
+      float: left;
+      width: 170px;
+      a {
+          background-color: transparent;
+          border-bottom-width: 0px;
+          border-top-width: 0px;
+          color: $dark_grey1;
+          padding: 0px 8px;
+          transition: background-color 0.5s ease 0s;
+      }
+  }
+
+  input[type="checkbox"] {
+      display: block;
+      float: left;
+      margin: 5px 0px;
+  }
+
+  #expand_more {
+      cursor: pointer;
+      margin: 0 0 7px 0px;
+  }
+}
+

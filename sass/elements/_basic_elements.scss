@@ -121,25 +121,29 @@
 // Tabs
 // =============================================================================
 
+.addi-tabs {
+  padding: 0 20px;
+  .tabs-sections {
+    border: solid 1px $light_grey2;
+  }
+}
+
 .bibdk-tabs {
-  border: solid 1px $borderColor;
-
   .tabs-nav {
-    border-bottom: solid 1px $borderColor;
-
     a {
       float: left;
       display: block;
-      border-right: solid 1px $borderColor;
-      background-color: $light_grey1;
-      color: $dark_grey4;
-
+      border-left: solid 1px $white;
+      background-color: $light_grey2;
+      border-bottom: 1px solid $light_grey2;
+      color: $dark_grey2;
+      position: relative;
+      top: 1px;
       &:hover {
       }
-
       &.active {
-        background-color: $white;
-        border-bottom: solid 1px $white;
+        background-color: $light_blue1;
+        border-bottom: 1px solid $light_blue1;
         margin-bottom: -1px;
         font-weight: bold;
       }
@@ -147,16 +151,21 @@
         opacity: 0.5;
         cursor: default;
       }
+      &:first-child {
+        border-left-width: 0;
+      }
     }
   }
   .tabs-nav-sub {
-    margin: 10px 20px;
+    padding: 10px 20px;
+    background-color: $light_blue1;
 
     a {
       color: $dark_grey4;
       @include inline-block();
       @include border-radius(10px);
       padding: 5px 10px;
+      background-color: $white;
       border: solid 1px $borderColor;
 
       &.active {
@@ -168,7 +177,7 @@
 
   .tab-item {
     padding: 10px 10px 10px 0;
-    border-bottom: solid 1px $borderColor;
+    border-bottom: solid 1px $light_blue1;
 
     &:last-child {
       border-bottom: none;
@@ -192,6 +201,27 @@
 
     .tab-content {
       padding: 20px 30px 10px 30px;
+    }
+  }
+  .tabs-sections {
+    .tabs-sections-wrapper {
+      border: solid 8px $light_blue1;
+      line-height: 1.5em;
+    }
+    .subwork {
+      background: $light_blue1;
+      .padded {
+        line-height: 2;
+      }
+    }
+    a {
+      font-weight: bold;
+      color: $btn_blue;
+    }
+    .btn-wrapper, .field-type-bibdk-mani-reservation-button {
+      a {
+        color: $white;
+      }
     }
   }
 }
@@ -382,12 +412,8 @@ form.bibdk-search-controls-form {
 /*.pager,*/
 .works-controls {
   display: block;
-  background: #fbfbfb;
-  margin-bottom: 20px;
-  border: solid 1px $borderColor;
-
-  line-height: 60px;
-  height: 60px;
+  margin-bottom: 5px;
+  padding: 9px 0;
 
   h1 {
     margin-left: 20px;
@@ -399,7 +425,18 @@ form.bibdk-search-controls-form {
 div.works-controls > div,
 .works-control-wrapper-left {
   float: left;
-  border-right: solid 1px $borderColor;
+  line-height: 30px;
+  height: 30px;
+  background: $white;
+  @include border-radius(3px);
+  border: solid 1px $borderColor;
+  border-left-width: 0;
+  &.panel-separator {
+    border-width: 0;
+  }
+  .works-control.toggled {
+    @include border-radius(3px);
+  }
 }
 
 .works-control-wrapper-right {
@@ -444,4 +481,56 @@ div.works-controls > div,
 .works-sort {
   padding: 0 20px;
   float: left;
+}
+
+
+//
+// Paging, other
+//
+.page-overlay .pager-first,
+.page-overlay .pager-previous,
+.page-overlay .pager-item,
+.page-overlay .pager-current,
+.page-overlay .pager-next,
+.page-overlay .pager-ellipsis,
+.page-overlay .pager-last {
+  float: left;
+}
+
+.page-overlay .pager-first span,
+.page-overlay .pager-previous span,
+.page-overlay .pager-item span,
+.page-overlay .pager-current span,
+.page-overlay .pager-next span,
+.page-overlay .pager-last span {
+  display: none;
+}
+
+.page-overlay .pager-back,
+.page-overlay .pager-previous,
+.page-overlay .pager-next,
+.page-overlay .pager-last,
+.page-overlay .works-pager-back {
+  padding: 0 7px;
+}
+
+.page-overlay .pager-back a,
+.page-overlay .pager-previous a,
+.page-overlay .pager-next a,
+.page-overlay .pager-last a,
+.page-overlay .works-pager-back a {
+  padding: 0;
+}
+
+.page-overlay .pager-current {
+  padding: 0 7px;
+  margin: 0 7px;
+  border-left: solid 1px $borderColor;
+  border-right: solid 1px $borderColor;
+}
+
+.page-overlay .works-pager-select {
+  padding: 0 10px;
+  border-left: solid 0px $borderColor;
+  border-right: solid 0px $borderColor;
 }

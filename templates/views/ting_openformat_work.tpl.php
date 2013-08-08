@@ -1,6 +1,6 @@
 <div class="<?php print $ding_id; echo '_start' ?>"></div>
 
-<div class="clearfix">
+<div class="addi-tabs clearfix">
   <div class="cover">
     <?php print drupal_render($fields['ting_cover_work']); ?>
   </div>
@@ -9,7 +9,7 @@
   <div class="wrapper">
     <?php print drupal_render($fields); ?>
     <?php print $work_tabs ?>
-    
+
     <!-- tabs -->
   </div>
   <!-- wrapper -->
@@ -19,7 +19,7 @@
 <!-- work-share-data -->
 <div class="bibdk-tabs bibdk-tabs-heavy">
   <?php print $tabs; ?>
-  
+
   <!-- tabs-nav -->
   <div class="tabs-sections">
     <?php $count = 0; ?>

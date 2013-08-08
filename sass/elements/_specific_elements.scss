@@ -37,9 +37,14 @@
   }
 
   &.work-body-has-cover .wrapper {
-    width: 490px;
+    width: 540px;
     float: left;
   }
+
+  &.element-section {
+    padding: 0;
+  }
+
 }
 
 // Work cover
@@ -47,8 +52,6 @@
   width: 140px;
   float: right;
   margin: 0 0 10px 20px;
-  padding: 0 0 0 15px;
-  border-left: dotted 1px $borderColor;
   img {
     width: 100%;
   }
@@ -76,10 +79,60 @@
   }
 }
 
-.search-results article.manifestation {
-  min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
-  .actions {
-    max-width: 175px;
+
+
+.search-results {
+  .work.element-wrapper {
+    border-width: 0;
+    background: $white;
+    > .element {
+      border-width: 0;
+      .element-section {
+        border-color: $white;
+        border-bottom-width: 0;
+      }
+    }
+    > .element.toggled-element {
+      border-width: 3px;
+      border-style: solid;
+      border-color: $light_grey3;
+      .element-section {
+        padding: 17px;
+        margin: 0px;
+        &.work-body {
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+  .manifestation {
+    background: $white;
+    min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
+    &.zebra {
+      background: $white;
+      border-color: $light_grey1;
+      border-left-width: 1px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      margin-left: 20px;
+    }
+    .actions {
+      max-width: 175px;
+    }
+    a {
+      font-weight: normal;
+    }
+    .primary-actions {
+      > a  {
+        display: block;
+      }
+      > a, ul li {
+        margin-left: 24px;
+        text-indent: -24px;
+      }
+    }
   }
 }
 
@@ -377,6 +430,7 @@
   // LTR
   background-repeat: no-repeat;
   border: 1px solid #333;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 14px 14px 14px 50px;
   // LTR
