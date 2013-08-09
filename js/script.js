@@ -494,16 +494,18 @@
       $('#search-advanced-toggle').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
-        $('#search-advanced').toggleClass('toggled');
-        $('#edit-advanced').toggleClass('toggled');
-        $('#search-advanced-panel').toggleClass('visuallyhidden');
+        $('#search-advanced').toggleClass('visuallyhidden');
         // Move to first input field in expanded search, if activated.
-        $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+        if ( $('#search-advanced-toggle').hasClass('toggled') === true ) {
+          $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
+        } else {
+          $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+        }
       });
-      // toggle front page onLoad:
-      /*if ( $('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
-        //$('#search-advanced-panel').toggleClass('visuallyhidden');
-      }*/
+      // Toggle advanced search options onLoad:
+      if ( $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
+        $('#search-advanced-toggle').click();
+      }
 
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
