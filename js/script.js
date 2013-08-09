@@ -489,7 +489,8 @@
       });
 
       // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
-      // Toggle advanced search options
+
+        // Toggle advanced search options
       $('#search-advanced-toggle').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
@@ -501,7 +502,7 @@
       });
       // toggle front page onLoad:
       if ( $('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
-        $('#search-advanced-toggle').click();
+        $('#search-advanced-panel').toggleClass('visuallyhidden');
       }
 
 
