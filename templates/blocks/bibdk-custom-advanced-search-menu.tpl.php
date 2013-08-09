@@ -2,7 +2,7 @@
   <a class="text-darkgrey" href="#"><span class="icon icon-left icon-blue-minus">&nbsp;</span><?php print t('Expand search options'); ?></a>
 </div>
 <div id="search-advanced" class="clearfix">
-  <div id="search-advanced-panel" class="clearfix">
+  <div id="search-advanced-panel" class="clearfix visuallyhidden">
     <!-- ADVANCED SEARCH-->
     <?php print drupal_render_children($form); ?>
     <?php print drupal_render($form['#custom_submit']); ?>

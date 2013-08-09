@@ -501,9 +501,9 @@
         $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
       });
       // toggle front page onLoad:
-      if ( $('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
-        $('#search-advanced-panel').toggleClass('visuallyhidden');
-      }
+      /*if ( $('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
+        //$('#search-advanced-panel').toggleClass('visuallyhidden');
+      }*/
 
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
