@@ -1,4 +1,4 @@
-<nav id="topbar-wrapper" role="navigation">
+<nav id="topbar-wrapper" data-role="navigation">
 
   <div class="container">
     <div class="row">
@@ -45,7 +45,7 @@
 
 
 
-<nav id="search-panel-wrapper" role="search">
+<nav id="search-panel-wrapper" data-role="search">
 
   <div class="container">
     <div class="row">
@@ -65,7 +65,7 @@
 
 
 
-<section id="messages-wrapper" role="alert">
+<section id="messages-wrapper" data-role="alert">
 
   <div class="container">
     <div class="row">

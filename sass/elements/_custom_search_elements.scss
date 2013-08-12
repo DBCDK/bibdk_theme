@@ -3,25 +3,49 @@
 // Bib.dk search pages
 // =============================================================================
 
-#edit-advanced {
-  background-color: $light_grey1;
+form#search-block-form fieldset#edit-advanced {
+  /* background-color: $light_grey1; */
+  margin-bottom: 0em;
+  &.toggled {
+    margin-bottom: 0em;
+  }
 }
 
 div#search-advanced-toggle {
-  background-color: $dark_grey3;
-  display: block;
-  padding-bottom: 10px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  a {
+    min-height: 30px;
+    display: block;
+    float: left;
+  }
+  .icon-blue-minus {
+    background-image: url("../img/icons/blue-minus.png");
+  }
+  &.toggled .icon-blue-minus {
+    background-image: url("../img/icons/blue-plus.png");
+  }
 }
 
 .container-inline div.bibdk-subgroup {
   display: block;
 }
 
-div#search-advanced-panel {
-  background-color: $light_grey1;
-  margin: 2% 0 0 2%;
+div#search-advanced {
   display: block;
+  @include border-radius(5px);
+  background-color: $light_grey1;
+  padding: 1% 2%;
+  &.toggled {
+    @include border-radius(0px);
+    background-color: $light_grey1;
+    padding: 0%;
+  }
+}
 
+div#search-advanced-panel {
+  display: block;
   .btn-submit {
     float: right;
     margin: 1% 1% 1% 1%;
@@ -68,6 +92,7 @@ div#search-advanced-panel {
       border: none;
       display: block;
       width: auto;
+      padding-left: 0;
       a {
         background-image: url("../img/icons/blue-minus.png");
         padding-left: 20px;
