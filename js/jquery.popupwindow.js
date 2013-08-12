@@ -9,7 +9,7 @@ jQuery.fn.popupwindow = function(p)
     var settings, parameters, mysettings, b, a;
 
     // for overrideing the default settings
-    mysettings = (jQuery(this).attr("rel") || "").split(",");
+    mysettings       = (jQuery(this).attr("rel") || "").split(",");
     mysettings_html5 = (jQuery(this).attr("data-rel") || "").split(",");
     mysettings = ( mysettings_html5.length > 0 ) ? mysettings_html5 : mysettings;
 
