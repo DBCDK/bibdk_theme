@@ -5147,21 +5147,30 @@ body.page-ting-moreinfo img {
 }
 
 /* line 890, ../sass/elements/_specific_elements.scss */
+.order-any-btn-list {
+  margin-left: -50px;
+}
+
+/* line 894, ../sass/elements/_specific_elements.scss */
 .col1 {
   float: left;
   width: 240px;
 }
-/* line 893, ../sass/elements/_specific_elements.scss */
-.col1 .it {
-  width: 180px;
+/* line 897, ../sass/elements/_specific_elements.scss */
+.col1 .bibdk-popup-order-work {
+  min-width: 60%;
   margin-right: 200px;
 }
 
-/* line 899, ../sass/elements/_specific_elements.scss */
+/* line 903, ../sass/elements/_specific_elements.scss */
 .col2 {
   float: left;
   width: 0px;
   margin-left: -70px;
+}
+/* line 908, ../sass/elements/_specific_elements.scss */
+.col2 input[type="checkbox"] {
+  margin-right: 100px;
 }
 
 /* line 6, ../sass/elements/_custom_search_elements.scss */

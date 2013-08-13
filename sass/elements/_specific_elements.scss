@@ -887,11 +887,15 @@ body.page-ting-moreinfo {
   padding: 0 1em 0;
 }
 
+.order-any-btn-list {
+  margin-left: -50px;
+}
+
 .col1 {
   float: left;
   width: 240px;
-  .it{
-    width: 180px;
+  .bibdk-popup-order-work{
+    min-width: 60%;
     margin-right: 200px;
   }
 }
@@ -900,4 +904,8 @@ body.page-ting-moreinfo {
   float: left;
   width: 0px;
   margin-left: -70px;
+
+  input[type="checkbox"] {
+    margin-right: 100px;
+  }
 }
