@@ -34,7 +34,7 @@ if (count($action) > 1){
 <?php foreach ( $options as $value => $label ) { ?>
   <?php $query[$name] = $value; ?>
   <li>
-    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="<?php echo $action[0] . '?' . http_build_query($query, '', '&amp;'); ?>" data="<?php print $value; ?>"><?php print $label; ?></a>
+    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="<?php echo $action[0] . '?' . http_build_query($query, '', '&amp;'); ?>" data-value="<?php print $value; ?>"><?php print $label; ?></a>
   </li>
 <?php } ?>
 </ul>
