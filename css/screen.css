@@ -5150,27 +5150,45 @@ body.page-ting-moreinfo img {
 .order-any-btn-list {
   margin-left: -50px;
 }
+/* line 893, ../sass/elements/_specific_elements.scss */
+.order-any-btn-list h3 {
+  font-size: 1.2em;
+  color: #1890b3;
+  margin-left: 10%;
+  padding: 0 0 10px 0;
+}
 
-/* line 894, ../sass/elements/_specific_elements.scss */
+/* line 901, ../sass/elements/_specific_elements.scss */
 .col1 {
   float: left;
   width: 240px;
 }
-/* line 897, ../sass/elements/_specific_elements.scss */
+/* line 905, ../sass/elements/_specific_elements.scss */
 .col1 .bibdk-popup-order-work {
   min-width: 60%;
   margin-right: 200px;
 }
+/* line 910, ../sass/elements/_specific_elements.scss */
+.col1 a {
+  padding: 5px 0 5px 20px;
+}
 
-/* line 903, ../sass/elements/_specific_elements.scss */
+/* line 915, ../sass/elements/_specific_elements.scss */
 .col2 {
   float: left;
   width: 0px;
   margin-left: -70px;
 }
-/* line 908, ../sass/elements/_specific_elements.scss */
-.col2 input[type="checkbox"] {
-  margin-right: 100px;
+/* line 920, ../sass/elements/_specific_elements.scss */
+.col2 a {
+  display: block;
+  float: none;
+  margin-left: 13px;
+  padding: 5px 0 5px 0;
+}
+/* line 927, ../sass/elements/_specific_elements.scss */
+.col2 input[type=submit] {
+  margin-left: 20px;
 }
 
 /* line 6, ../sass/elements/_custom_search_elements.scss */

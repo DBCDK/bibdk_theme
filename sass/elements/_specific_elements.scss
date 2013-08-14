@@ -889,14 +889,26 @@ body.page-ting-moreinfo {
 
 .order-any-btn-list {
   margin-left: -50px;
+
+  h3 {
+    font-size: 1.2em;
+    color: #1890b3;
+    margin-left: 10%;
+    padding: 0 0 10px 0;
+  }
 }
 
 .col1 {
   float: left;
   width: 240px;
-  .bibdk-popup-order-work{
+
+  .bibdk-popup-order-work {
     min-width: 60%;
     margin-right: 200px;
+  }
+
+  a {
+    padding: 5px 0 5px 20px;
   }
 }
 
@@ -905,7 +917,14 @@ body.page-ting-moreinfo {
   width: 0px;
   margin-left: -70px;
 
-  input[type="checkbox"] {
-    margin-right: 100px;
+  a {
+    display: block;
+    float: none;
+    margin-left: 13px;
+    padding: 5px 0 5px 0;
+  }
+
+  input[type=submit] {
+    margin-left: 20px;
   }
 }
