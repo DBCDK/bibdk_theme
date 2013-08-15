@@ -5185,97 +5185,84 @@ body.page-ting-moreinfo img {
   padding-right: 5px;
 }
 /* line 917, ../sass/elements/_specific_elements.scss */
-.item-list .material-types-list li span {
+.item-list .material-types-list li .materialtype {
   background: url(../img/icons/material-sprites.png) no-repeat top left;
   display: block;
 }
-
-/* line 925, ../sass/elements/_specific_elements.scss */
-.materialtype-andre-medier-icon-small {
-  background-position: 0 0;
-  width: 19px;
-  height: 19px;
-}
-
-/* line 931, ../sass/elements/_specific_elements.scss */
-.materialtype-artikler-icon-small {
-  background-position: -21px 0;
-  width: 17px;
-  height: 19px;
-}
-
-/* line 937, ../sass/elements/_specific_elements.scss */
-.materialtype-bog-store-bogstaver-icon-small {
-  background-position: -40px 0;
-  width: 25px;
-  height: 22px;
-}
-
-/* line 943, ../sass/elements/_specific_elements.scss */
-.materialtype-bog-icon-small {
+/* line 922, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-bog-icon-small {
   background-position: -67px 0;
   width: 16px;
   height: 22px;
 }
-
-/* line 949, ../sass/elements/_specific_elements.scss */
-.materialtype-film-icon-small {
+/* line 928, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-andre-medier-icon-small {
+  background-position: 0 0;
+  width: 19px;
+  height: 19px;
+}
+/* line 934, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-artikler-icon-small {
+  background-position: -21px 0;
+  width: 17px;
+  height: 19px;
+}
+/* line 940, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-bog-store-bogstaver-icon-small {
+  background-position: -40px 0;
+  width: 25px;
+  height: 22px;
+}
+/* line 946, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-film-icon-small {
   background-position: -85px 0;
   width: 17px;
   height: 20px;
 }
-
-/* line 955, ../sass/elements/_specific_elements.scss */
-.materialtype-lyd-icon-small {
+/* line 952, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-lyd-icon-small {
   background-position: -104px 0;
   width: 19px;
   height: 19px;
 }
-
-/* line 961, ../sass/elements/_specific_elements.scss */
-.materialtype-lydbog-icon-small {
+/* line 958, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-lydbog-icon-small {
   background-position: -125px 0;
   width: 25px;
   height: 22px;
 }
-
-/* line 967, ../sass/elements/_specific_elements.scss */
-.materialtype-musik-icon-small {
+/* line 964, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-musik-icon-small {
   background-position: -152px 0;
   width: 19px;
   height: 15px;
 }
-
-/* line 973, ../sass/elements/_specific_elements.scss */
-.materialtype-net-icon-small {
+/* line 970, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-net-icon-small {
   background-position: -173px 0;
   width: 19px;
   height: 21px;
 }
-
-/* line 979, ../sass/elements/_specific_elements.scss */
-.materialtype-noder-icon-small {
+/* line 976, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-noder-icon-small {
   background-position: -194px 0;
   width: 19px;
   height: 20px;
 }
-
-/* line 985, ../sass/elements/_specific_elements.scss */
-.materialtype-punktskrift-icon-small {
+/* line 982, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-punktskrift-icon-small {
   background-position: -215px 0;
   width: 17px;
   height: 20px;
 }
-
-/* line 991, ../sass/elements/_specific_elements.scss */
-.materialtype-spil-icon-small {
+/* line 988, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-spil-icon-small {
   background-position: -234px 0;
   width: 21px;
   height: 12px;
 }
-
-/* line 997, ../sass/elements/_specific_elements.scss */
-.materialtype-tidsskrifter-icon-small {
+/* line 994, ../sass/elements/_specific_elements.scss */
+.item-list .material-types-list li .materialtype-tidsskrifter-icon-small {
   background-position: -257px 0;
   width: 17px;
   height: 20px;
