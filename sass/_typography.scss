@@ -156,51 +156,6 @@ hr {
 // Tables
 // =============================================================================
 
-
-//
-// Manifestation data
-//
-.manifestation-data {
-  line-height:180%;
-
-  .field-label {
-    display: inline-block;
-    padding-right:10px;
-    text-align:left;
-    vertical-align:top;
-    color:$dark_grey2;
-    font-weight:normal;
-    width: 100px;
-  }
-  .field-items {
-    width: 340px;
-    display: inline-block;
-    color:$dark_grey4;
-    vertical-align:top;
-    /*break long links*/
-    @include hyphenation;
-    word-wrap: normal;
-    word-break: normal;
-    -ms-word-wrap: normal;
-  }
-  .field-label-hidden {
-    .field-items {
-      margin-left: 112px;
-    }
-  }
-  .field-name-bibdk-mani-volume .field-items,
-  .field-name-bibdk-mani-section .field-items {
-    margin-left: 0;
-    width: auto;
-  }
-  .field-name-bibdk-mani-volume .field-items .field-items,
-  .field-name-bibdk-mani-section .field-items .field-items{
-    margin-left: 0;
-    width: 340px;
-  }
-
-}
-
 table.table-data{
   th {
     padding-right:10px;
