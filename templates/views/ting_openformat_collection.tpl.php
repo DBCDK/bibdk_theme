@@ -3,6 +3,7 @@
     <div class="work-header element-section">
       <?php print drupal_render($actions); ?>
       <!-- actions -->
+      <?php print $types; ?>
 
       <div class="element-title">
         <hgroup>
@@ -12,7 +13,6 @@
           <?php if (isset($partOf)) : ?>
             <span>I: <?php print $partOf; ?></span>
           <?php endif; ?>
-          <?php print $types; ?>
         </hgroup>
       </div>
 

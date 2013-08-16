@@ -906,8 +906,7 @@ body.page-ting-moreinfo {
   .material-types-list {
 
     display: block;
-    width: 100%;
-    float: left;
+    float: right;
     padding: 3px 0px 3px 0;
 
     li {
@@ -919,79 +918,67 @@ body.page-ting-moreinfo {
         display: block;
       }
 
-      .materialtype-bog-icon-small {
-        background-position: -67px 0;
-        width: 16px;
-        height: 22px;
-      }
-
-      .materialtype-andre-medier-icon-small {
+      .other-icon-small {
         background-position: 0 0;
         width: 19px;
         height: 19px;
       }
-
-      .materialtype-artikler-icon-small {
+      .article-icon-small {
         background-position: -21px 0;
         width: 17px;
         height: 19px;
       }
-
-      .materialtype-bog-store-bogstaver-icon-small {
+      .bog-store-bogstaver-icon-small {
         background-position: -40px 0;
         width: 25px;
         height: 22px;
       }
-
-      .materialtype-film-icon-small {
+      .book-icon-small {
+        background-position: -67px 0;
+        width: 16px;
+        height: 22px;
+      }
+      .movie-icon-small {
         background-position: -85px 0;
         width: 17px;
         height: 20px;
       }
-
-      .materialtype-lyd-icon-small {
+      .lyd-icon-small {
         background-position: -104px 0;
         width: 19px;
         height: 19px;
       }
-
-      .materialtype-lydbog-icon-small {
+      .audiobook-icon-small {
         background-position: -125px 0;
         width: 25px;
         height: 22px;
       }
-
-      .materialtype-musik-icon-small {
+      .music-icon-small {
         background-position: -152px 0;
         width: 19px;
         height: 15px;
       }
-
-      .materialtype-net-icon-small {
+      .online-icon-small {
         background-position: -173px 0;
         width: 19px;
         height: 21px;
       }
-
-      .materialtype-noder-icon-small {
+      .sheetmusic-icon-small {
         background-position: -194px 0;
         width: 19px;
         height: 20px;
       }
-
-      .materialtype-punktskrift-icon-small {
+      .punktskrift-icon-small {
         background-position: -215px 0;
         width: 17px;
         height: 20px;
       }
-
-      .materialtype-spil-icon-small {
+      .game-icon-small {
         background-position: -234px 0;
         width: 21px;
         height: 12px;
       }
-
-      .materialtype-tidsskrifter-icon-small {
+      .tidsskrifter-icon-small {
         background-position: -257px 0;
         width: 17px;
         height: 20px;
