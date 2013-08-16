@@ -3,6 +3,8 @@
     <div class="work-header element-section">
       <?php print drupal_render($actions); ?>
       <!-- actions -->
+      <?php print $types; ?>
+
       <div class="element-title">
         <hgroup>
           <h2><?php print $title; ?></h2>
