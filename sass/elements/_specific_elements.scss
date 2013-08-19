@@ -766,3 +766,19 @@ body.page-ting-moreinfo {
 .sbkopi-description-container.form-wrapper{
   padding: 0 1em 0;
 }
+
+
+
+// =============================================================================
+// My page
+// =============================================================================
+.page-user-edit {
+  #title {
+    height: 58px;
+    line-height: 58px;
+  }
+  &.lift-columns #columns {
+    margin-top: -40px;
+  }
+}
+
