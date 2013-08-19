@@ -147,10 +147,10 @@ function bibdk_theme_process_page(&$variables) {
  * One hook_form_alter() to rule them all:
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-  
-  
+
+
   switch ($form_id) {
-    
+
     case 'user_register_form':
       drupal_set_title(t('Create new account'));
       break;
@@ -190,7 +190,26 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_openuserstatus_form':
       _alter_openuserstatus_tables($form);
       break;
+    case 'bibdk_favourite_user_form_fields':
+      _alter_bibdk_favourite_user_form_fields($form);
+      break;
   }
+}
+
+function _alter_bibdk_favourite_user_form_fields(&$form) {
+  $form['wrapper']['button_close_popup_link']['#type'] = 'markup';
+  $form['wrapper']['button_close_popup_link']['#markup'] = l(
+    'x',
+    '#',
+    $options = array(
+      'attributes' => array(
+        'class'=>array('button-close-popup'),
+        'title'=> t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
+      ),
+    )
+  );
+  $form['wrapper']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper">';
+  $form['wrapper']['button_close_popup_link']['#suffix'] = '</div>';
 }
 
 function _alter_openuserstatus_tables(&$form) {

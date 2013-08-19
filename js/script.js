@@ -520,6 +520,14 @@
         $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin);
       });
 
+      // ****************************  POPUP WINDOW CLOSE BUTTON **************************** //
+      // Toggle advanced search options
+      $('.button-close-popup').click(function(e) {
+        e.preventDefault();
+        window.close();
+        return false;
+      });
+
       // NO CODE AFTER THIS!
     }
   };
