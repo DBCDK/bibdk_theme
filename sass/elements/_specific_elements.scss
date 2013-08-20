@@ -940,6 +940,26 @@ body.page-ting-moreinfo {
   }
 }
 
+
+//
+// an experiment with an icon on userstatus
+//
+.openuserstatus {
+  .materialtype {
+    background: url(../img/icons/material-sprites_hest.png) no-repeat top left;
+    display: block;
+  }
+  .other-icon-small {
+    background-position:5px -22px;  
+    width: 0;
+    height: 19px;
+  }
+  span.materialtype{
+    padding-left:25px;
+  }
+}
+
+
 // =============================================================================
 // Material type icons
 // =============================================================================
@@ -956,7 +976,7 @@ body.page-ting-moreinfo {
       padding-right: 5px;
 
       .materialtype {
-        background: url(../img/icons/material-sprites.png) no-repeat top left;
+        background: url(../img/icons/material-sprites_hest.png) no-repeat top left;
         display: block;
       }
 
