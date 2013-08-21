@@ -504,11 +504,6 @@
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
-      // Toggle advanced search options onLoad:
-      if ( $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
-        $('#search-advanced-toggle').click();
-      }
-
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
       $('article.manifestation').filter(':visible').each(function() {
