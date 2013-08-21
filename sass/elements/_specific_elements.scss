@@ -8,6 +8,51 @@
 
 
 // =============================================================================
+// FULL VIEW BUTTONS
+// =============================================================================
+
+.icon.full-view {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/full-short-view-icon.gif) no-repeat;
+}
+
+a {
+  .icon.full-view {
+    -ms-background-position-y: -18px;
+    background-position-y: -18px;
+  }
+}
+
+a.inactive {
+  .icon.full-view {
+    -ms-background-position-y: 0px;
+    background-position-y: 0px;
+  }
+}
+
+.icon.full-view.closed {
+  -ms-background-position-x: 0px;
+  background-position-x: 0px;
+}
+
+.icon.full-view.expanded {
+  -ms-background-position-x: -17px;
+  background-position-x: -17px;
+}
+
+.full-view-links {
+  padding: 0 10px;
+}
+
+.panel-separator {
+  margin: 0 10px;
+}
+
+
+// =============================================================================
 // Library
 // =============================================================================
 
