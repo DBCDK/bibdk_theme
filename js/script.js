@@ -1,5 +1,6 @@
 (function($) {
 
+    Drupal.settings.full_view = false;
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
@@ -110,28 +111,28 @@
       // });
 
       // Disable button and dropdown when toggling details of a work
-      $('.work-toggle-element', context).click(function() {
-
+      $('.work-toggle-element', context).click(function(e) {
+          e.preventDefault();
+          $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
-          $('html, body').animate({
-            scrollTop: $(this).closest('.work').offset().top
-          }, 500);
+            if (!Drupal.settings.full_view){
+                $('html, body').animate({
+                    scrollTop: $(this).closest('.work').offset().top
+                }, 500);
+            }
         } else {
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
         }
       });
 
       // Toggle visibility of "next section of an element"
-      $('.work-toggle-element', context).click(function(e) {
-        e.preventDefault();
-        var id = $(this).attr('href');
+      $('.work-toggle-element', context).bind('load-work', function(e) {
         var msg_id = ".msg-" + id.substring(6);
-        $(id).trigger('click');
         $(this).children('.toggle-text').toggleClass('hidden');
         if(!$(this).hasClass('toggled')) {
           $(this).addClass('toggled');
@@ -145,7 +146,14 @@
 
       });
 
-      // Make entire element clickable
+        // Full view js
+        if (Drupal.settings.full_view){
+            $('.work-toggle-element', context).trigger('load-work');
+        }
+
+
+
+        // Make entire element clickable
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
