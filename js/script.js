@@ -132,6 +132,7 @@
 
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).bind('load-work', function(e) {
+          var id = $(this).attr('href');
         var msg_id = ".msg-" + id.substring(6);
         $(this).children('.toggle-text').toggleClass('hidden');
         if(!$(this).hasClass('toggled')) {
