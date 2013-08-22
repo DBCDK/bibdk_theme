@@ -947,21 +947,37 @@ body.page-ting-moreinfo {
 
 
 //
-// an experiment with an icon on userstatus
+// alerts
 //
-.openuserstatus {
-  .materialtype {
-    background: url(../img/icons/material-sprites_hest.png) no-repeat top left;
-    display: block;
-  }
-  .other-icon-small {
-    background-position:5px -22px;  
-    width: 0;
-    height: 19px;
-  }
-  span.materialtype{
-    padding-left:25px;
-  }
+
+.alert {
+  background: url(../img/icons/alert-sprites.png) no-repeat top left;
+  display: block;
+  padding-left:17px;
+}
+
+.blue-alert {
+  background-position: 0 0;  
+  width: 0px;
+  height: 22px;
+}
+
+.green-alert {
+  background-position: -18px 0;  
+  width: 0px;
+  height: 22px;
+}
+  
+.yellow-alert {
+background-position: -36px 0;  
+  width: 0px;
+  height: 22px;
+}
+
+.red-alert{
+background-position: -54px 0;  
+  width: 0px;
+  height: 22px;
 }
 
 
@@ -981,7 +997,7 @@ body.page-ting-moreinfo {
       padding-right: 5px;
 
       .materialtype {
-        background: url(../img/icons/material-sprites_hest.png) no-repeat top left;
+        background: url(../img/icons/material-sprites.png) no-repeat top left;
         display: block;
       }
 
