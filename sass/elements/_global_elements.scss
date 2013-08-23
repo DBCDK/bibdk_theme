@@ -47,7 +47,7 @@ color:black;
 
 #columns-wrapper {
   background: $white;
-  padding: 40px 0 30px;
+  padding: 40px 0px 30px;
 }
 
 .page-search #columns-wrapper {
@@ -148,7 +148,12 @@ color:black;
 }
 
 #user-nav-inner {
-  position: absolute;
+  position: inherit;
+  margin-right: 10px;
+  @media screen and (min-width: $break-max) {
+    position: absolute;
+    margin-right: 0px;
+  }
   right: 0;
   z-index: 99;
 
@@ -519,7 +524,7 @@ color:black;
     padding: 8px 15px;
     color: $white;
     font-weight: bold;
-    width: 160px;
+    width: auto;
   }
 
   fieldset {

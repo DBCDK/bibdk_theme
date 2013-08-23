@@ -6,133 +6,6 @@
   margin-bottom: inherit;
 }
 
-// =============================================================================
-// Work
-// =============================================================================
-
-// Work header
-.work-header {
-
-  .actions {
-    border: none;
-    // Remove left border from actions in work header
-  }
-}
-
-// Work body
-.work-body {
-
-  .field-tags {
-    margin-bottom: 20px;
-    color: $light_grey5;
-
-    a {
-      color: $btn_blue;
-    }
-  }
-
-  .field-summary {
-    color: $dark_grey4;
-    margin-bottom: 10px;
-  }
-
-  &.work-body-has-cover .wrapper {
-    width: 540px;
-    float: left;
-  }
-
-  &.element-section {
-    padding: 0;
-  }
-
-}
-
-// Work cover
-.work-cover {
-  width: 140px;
-  float: right;
-  margin: 0 0 10px 20px;
-  img {
-    width: 100%;
-  }
-}
-
-.work-cover-image {
-  margin-bottom: 10px;
-}
-
-.work-cover-selector {
-
-  a {
-    float: left;
-    display: block;
-    width: 14px;
-    height: 17px;
-    margin-right: 5px;
-
-    &.work-cover-front {
-      background: url(../img/cover-front.png);
-    }
-    &.work-cover-back {
-      background: url(../img/cover-back.png);
-    }
-  }
-}
-
-.search-results {
-  .work.element-wrapper {
-    border-width: 0;
-    background: $white;
-    > .element {
-      border-width: 0;
-      .element-section {
-        border-color: $white;
-        border-bottom-width: 0;
-      }
-    }
-    > .element.toggled-element {
-      border-width: 3px;
-      border-style: solid;
-      border-color: $light_grey3;
-      .element-section {
-        padding: 17px;
-        margin: 0px;
-        &.work-body {
-          padding-left: 0px;
-          padding-right: 0px;
-          padding-bottom: 0px;
-        }
-      }
-    }
-  }
-  .manifestation {
-    background: $white;
-    min-width: 650px; /* needed for US732: Move secondary actions in search result to bottom right.*/
-    &.zebra {
-      background: $white;
-      border-color: $light_grey1;
-      border-left-width: 1px;
-      border-top-width: 1px;
-      border-top-style: solid;
-      margin-left: 20px;
-    }
-    .actions {
-      max-width: 175px;
-    }
-    a {
-      font-weight: normal;
-    }
-    .primary-actions {
-      > a {
-        display: block;
-      }
-      > a, ul li {
-        margin-left: 24px;
-        text-indent: -24px;
-      }
-    }
-  }
-}
 
 // =============================================================================
 // Library
@@ -405,6 +278,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 100%;
   }
 
   .field-link {
@@ -627,10 +501,13 @@ p.note-localisations {
 
 .bibdk-mypage-link {
   text-align: right;
+  a {
+    margin: 0 10px;
+  }
 }
 
 .bibdk-mypage-wrapper {
-  width: 310px;
+  width: 46%;
   float: left;
   div.fieldset-wrapper {
     border-color: #DCDCDC #DCDCDC;
@@ -903,133 +780,17 @@ body.page-ting-moreinfo {
   padding: 0 1em 0;
 }
 
-.order-any-btn-list {
-  margin-left: -50px;
-
-  h3 {
-    font-size: 1.2em;
-    color: #1890b3;
-    margin-left: 10%;
-    padding: 0 0 10px 0;
-  }
-}
-
-.col1 {
-  float: left;
-  width: 240px;
-
-  .bibdk-popup-order-work {
-    min-width: 60%;
-    margin-right: 200px;
-  }
-
-  a {
-    padding: 5px 0 5px 20px;
-  }
-}
-
-.col2 {
-  float: left;
-  width: 100px;
-  margin-left: -100px;
-
-  a {
-    display: block;
-    float: none;
-    margin-left: 30px;
-    padding: 5px 0 5px 0;
-  }
-
-  input[type=submit] {
-    margin-left: 20px;
-  }
-}
 
 // =============================================================================
-// Material type icons
+// My page
 // =============================================================================
-
-.item-list {
-  .material-types-list {
-
-    display: block;
-    float: right;
-    padding: 3px 0px 3px 0;
-
-    li {
-      float: left;
-      padding-right: 5px;
-
-      .materialtype {
-        background: url(../img/icons/material-sprites.png) no-repeat top left;
-        display: block;
-      }
-
-      .other-icon-small {
-        background-position: 0 0;
-        width: 19px;
-        height: 19px;
-      }
-      .article-icon-small {
-        background-position: -21px 0;
-        width: 17px;
-        height: 19px;
-      }
-      .bog-store-bogstaver-icon-small {
-        background-position: -40px 0;
-        width: 25px;
-        height: 22px;
-      }
-      .book-icon-small {
-        background-position: -67px 0;
-        width: 16px;
-        height: 22px;
-      }
-      .movie-icon-small {
-        background-position: -85px 0;
-        width: 17px;
-        height: 20px;
-      }
-      .lyd-icon-small {
-        background-position: -104px 0;
-        width: 19px;
-        height: 19px;
-      }
-      .audiobook-icon-small {
-        background-position: -125px 0;
-        width: 25px;
-        height: 22px;
-      }
-      .music-icon-small {
-        background-position: -152px 0;
-        width: 19px;
-        height: 15px;
-      }
-      .online-icon-small {
-        background-position: -173px 0;
-        width: 19px;
-        height: 21px;
-      }
-      .sheetmusic-icon-small {
-        background-position: -194px 0;
-        width: 19px;
-        height: 20px;
-      }
-      .punktskrift-icon-small {
-        background-position: -215px 0;
-        width: 17px;
-        height: 20px;
-      }
-      .game-icon-small {
-        background-position: -234px 0;
-        width: 21px;
-        height: 12px;
-      }
-      .tidsskrifter-icon-small {
-        background-position: -257px 0;
-        width: 17px;
-        height: 20px;
-      }
-    }
+.page-user {
+  #title {
+    height: 58px;
+    line-height: 58px;
+  }
+  &.lift-columns #columns {
+    margin-top: -40px;
   }
 }
+
