@@ -8,8 +8,8 @@ $options = array();
 foreach ( $variables['form'] as $key => $elem ) {
   if ( !empty($elem['#options']) && $elem['#type'] == 'select' ) {
     $selected = ( !empty($elem['#default_value']) ) ? $elem['#default_value'] : '';
-    $accesskey = ( !empty($elem['#attributes']['accesskey'][0]) ) ? $elem['#attributes']['accesskey'][0] : '';
-    $tabindex = ( !empty($elem['#attributes']['tabindex'][0]) ) ? $elem['#attributes']['tabindex'][0] : '';
+    $accesskey = ( !empty($elem['#attributes']['accesskey'][0]) ) ? ' accesskey="' . $elem['#attributes']['accesskey'][0] . '"' : '';
+    $tabindex = ( !empty($elem['#attributes']['tabindex'][0]) ) ? ' tabindex="' . $elem['#attributes']['tabindex'][0] . '"': '';
     $options  = $elem['#options'];
     $selected_label = ( !empty($options[$selected]) ) ? $options[$selected] : '';
     $name = $key;
@@ -26,7 +26,7 @@ if (count($action) > 1){
 ?>
 
 <a class="works-control works-sort dropdown-toggle" href="#">
-  <span class="selected-text" tabindex="<?php print $tabindex; ?>" accesskey="<?php print $accesskey; ?>"><?php print t($selected_label); ?></span>
+  <span class="selected-text"<?php print $tabindex; ?><?php print $accesskey; ?>><?php print t($selected_label); ?></span>
   <span class="icon icon-right icon-blue-down">?</span>
 </a>
 
@@ -34,7 +34,7 @@ if (count($action) > 1){
 <?php foreach ( $options as $value => $label ) { ?>
   <?php $query[$name] = $value; ?>
   <li>
-    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="<?php echo $action[0] . '?' . http_build_query($query, '', '&amp;'); ?>" data="<?php print $value; ?>"><?php print $label; ?></a>
+    <a class="<?php print ( $value == $selected ) ? 'current' : ''; ?>" href="<?php echo $action[0] . '?' . http_build_query($query, '', '&amp;'); ?>" data-value="<?php print $value; ?>"><?php print $label; ?></a>
   </li>
 <?php } ?>
 </ul>
