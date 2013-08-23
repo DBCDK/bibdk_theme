@@ -197,9 +197,16 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function _alter_bibdk_favourite_user_form_fields(&$form) {
-  $form['wrapper']['button_close_popup_link']['#type'] = 'markup';
-  $form['wrapper']['button_close_popup_link']['#markup'] = l(
-    'x',
+  $submit = $form['wrapper']['submit'];
+  unset($form['wrapper']['submit']);
+  $form['wrapper']['buttons'] = array(
+    '#type'         => 'fieldset',
+    '#tree'         => TRUE,
+  );
+  $form['wrapper']['buttons']['submit'] = $submit;
+  $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
+  $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
+    'label_close_popup',
     '#',
     $options = array(
       'attributes' => array(
@@ -208,8 +215,8 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
       ),
     )
   );
-  $form['wrapper']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper">';
-  $form['wrapper']['button_close_popup_link']['#suffix'] = '</div>';
+  $form['wrapper']['buttons']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper btn btn-blue">';
+  $form['wrapper']['buttons']['button_close_popup_link']['#suffix'] = '</div>';
 }
 
 function _alter_openuserstatus_tables(&$form) {

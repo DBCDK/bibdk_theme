@@ -711,7 +711,7 @@ p.note-localisations {
   width: 500px;
   input#edit-submit {
     width: 70px;
-    margin-left: 360px;
+    margin-left: 60px;
     margin-top: 10px;
   }
   input#button-close-popup {
@@ -720,6 +720,20 @@ p.note-localisations {
   }
   .form-wrapper {
     border-width: 0px;
+  }
+  fieldset#edit-buttons .fieldset-wrapper {
+    text-align: right;
+  }
+  .form-wrapper .form-submit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .close-link-wrapper {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    a {
+      color: white;
+    }
   }
 }
 
