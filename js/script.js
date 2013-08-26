@@ -234,8 +234,8 @@
           onUnload: null // function to call when the window is closed
         },
         userhelp: {
-          height: 500,
-          width: 780,
+          height: 616,
+          width: 700,
           center: 0,
           createnew: 1,
           scrollbars: 1,
