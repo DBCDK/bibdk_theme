@@ -35,14 +35,14 @@
             <div class="zebra-content">
               <?php $count_manifestation = 0; ?>
               <?php foreach ($manifest['manifest']['manifestations'] as $manifestation) : $count_manifestation++; ?>
-                <div class="manifestation zebra <?php print ($count_manifestation > 2) ? "visuallyhidden toggle" : "" ?>">
+                <div class="manifestation zebra <?php print ($count_manifestation > 1) ? "visuallyhidden toggle" : "" ?>">
                   <?php print $manifestation; ?>
                 </div>
               <?php endforeach; ?>
 
             </div>
             <!-- end zebra-content -->
-            <?php if (count($manifest['manifest']['manifestations']) > 2) : ?>
+            <?php if (count($manifest['manifest']['manifestations']) > 1) : ?>
               <div class="zebra-toggle">
                 <a href="#<?php print $subtype; ?><?php print $ding_id; ?>">
                   <span class="icon icon-left icon-blue-down">?</span>

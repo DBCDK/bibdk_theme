@@ -60,6 +60,7 @@
             var input = $(this);
             if(input.val() == input.attr('placeholder')) {
               input.val('');
+
             }
           })
         });
@@ -182,13 +183,14 @@
       });
 
       //Control zebra-toggle
-      $('.zebra-toggle a').once().click(function(e) {
-        e.preventDefault();
-        var id = $(this).attr('href');
-        $(this).toggleClass('toggled');
-        $(this).children('.toggle-text').toggleClass('hidden');
-        $(this).parents(id).find(".toggle").toggleClass('visuallyhidden');
-      });
+        $('.zebra-toggle span').once().click(function (e){
+            e.preventDefault();
+            var wrapper = $(this).parent('a');
+            var id = wrapper.attr('href');
+            wrapper.toggleClass('toggled');
+            wrapper.children('.toggle-text').toggleClass('hidden');
+            wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
+        });
 
       $('.markall-button input[type=checkbox]').click(function(e) {
         e.stopPropagation();
@@ -232,8 +234,8 @@
           onUnload: null // function to call when the window is closed
         },
         userhelp: {
-          height: 500,
-          width: 780,
+          height: 616,
+          width: 700,
           center: 0,
           createnew: 1,
           scrollbars: 1,
@@ -502,11 +504,6 @@
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
-      // Toggle advanced search options onLoad:
-      if ( $('#search-advanced-toggle').not('.page-bibdk-frontpage #search-advanced-toggle').hasClass('toggled') === true ) {
-        $('#search-advanced-toggle').click();
-      }
-
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
       $('article.manifestation').filter(':visible').each(function() {

@@ -1,0 +1,226 @@
+// =============================================================================
+// Work
+// =============================================================================
+
+// Work header
+.work-header {
+
+  .actions {
+    border: none;
+    // Remove left border from actions in work header
+  }
+}
+
+// Work body
+.work-body {
+
+  .field-tags {
+    margin-bottom: 20px;
+    color: $light_grey5;
+
+    a {
+      color: $btn_blue;
+    }
+  }
+
+  .field-summary {
+    color: $dark_grey4;
+    margin-bottom: 10px;
+  }
+
+  &.work-body-has-cover .wrapper {
+    width: 540px;
+    float: left;
+  }
+
+  &.element-section {
+    padding: 0;
+  }
+
+}
+
+// Work cover
+.work-cover {
+  width: 140px;
+  float: right;
+  margin: 0 0 10px 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.work-cover-image {
+  margin-bottom: 10px;
+}
+
+.work-cover-selector {
+
+  a {
+    float: left;
+    display: block;
+    width: 14px;
+    height: 17px;
+    margin-right: 5px;
+
+    &.work-cover-front {
+      background: url(../img/cover-front.png);
+    }
+    &.work-cover-back {
+      background: url(../img/cover-back.png);
+    }
+  }
+}
+
+
+
+.search-results {
+  .work.element-wrapper {
+    border-width: 0;
+    background: $white;
+    > .element {
+      border-width: 0;
+      .element-section {
+        border-color: $white;
+        border-bottom-width: 0;
+      }
+    }
+    > .element.toggled-element {
+      border-width: 3px;
+      border-style: solid;
+      border-color: $light_grey3;
+      .element-section {
+        padding: 17px;
+        margin: 0px;
+        &.work-body {
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+  .manifestations.zebra-wrapper {
+    margin-left: 20px;
+    .manifestation {
+      background: $white;
+      &.zebra {
+        background: $white;
+        border-color: $light_grey1;
+        border-left-width: 1px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        .article {
+          width: 100%;
+        }
+      }
+      .actions {
+        max-width: 175px;
+      }
+      a {
+        font-weight: normal;
+      }
+      .primary-actions {
+        > a  {
+          display: block;
+        }
+        > a, ul li {
+          margin-left: 24px;
+          text-indent: -24px;
+        }
+      }
+    }
+  }
+}
+
+//
+// Manifestation data
+//
+.manifestation-data {
+  line-height:180%;
+
+  .field-label {
+    display: block;
+    float: left;
+    padding-right:10px;
+    text-align:left;
+    vertical-align:top;
+    color:$dark_grey2;
+    font-weight:normal;
+    width: 100px;
+  }
+  .field-items {
+    width: auto;
+    margin-left: 120px;
+    display: block;
+    color:$dark_grey4;
+    vertical-align:top;
+    /*break long links*/
+    @include hyphenation;
+    word-wrap: normal;
+    word-break: normal;
+    -ms-word-wrap: normal;
+  }
+  .field-label-hidden {
+    .field-items {
+      margin-left: 112px;
+    }
+  }
+  .field-name-bibdk-mani-volume .field-items,
+  .field-name-bibdk-mani-section .field-items {
+    margin-left: 0;
+    width: auto;
+  }
+  .field-name-bibdk-mani-volume .field-items .field-items,
+  .field-name-bibdk-mani-section .field-items .field-items{
+    margin-left: 0;
+    width: 340px;
+  }
+
+}
+
+
+//
+// Order any edition button
+//
+.order-any-btn-list {
+  margin-left: -50px;
+
+  h3 {
+    font-size: 1.2em;
+    color: #1890b3;
+    margin-left: 10%;
+    padding: 0 0 10px 0;
+  }
+}
+
+.col1 {
+  float: left;
+  width: 240px;
+
+  .bibdk-popup-order-work {
+    min-width: 60%;
+    margin-right: 200px;
+  }
+
+  a {
+    padding: 5px 0 5px 20px;
+  }
+}
+
+.col2 {
+  float: left;
+  width: 100px;
+  margin-left: -100px;
+
+  a {
+    display: block;
+    float: none;
+    margin-left: 30px;
+    padding: 5px 0 5px 0;
+  }
+
+  input[type=submit] {
+    margin-left: 20px;
+  }
+}
+
