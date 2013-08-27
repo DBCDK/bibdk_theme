@@ -115,6 +115,7 @@
           e.preventDefault();
           $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
+            $(this).trigger('show-work');
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
@@ -126,32 +127,35 @@
                 }, 500);
             }
         } else {
+            $(this).trigger('hide-work');
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
         }
       });
 
-      // Toggle visibility of "next section of an element"
-      $('.work-toggle-element', context).bind('load-work', function(e) {
-          var id = $(this).attr('href');
-        var msg_id = ".msg-" + id.substring(6);
-        $(this).children('.toggle-text').toggleClass('hidden');
-        if(!$(this).hasClass('toggled')) {
-          $(this).addClass('toggled');
-          $(this).closest('.element-section').next().removeClass('visuallyhidden');
-          $(msg_id).addClass('visuallyhidden');
-        } else {
-          $(this).removeClass('toggled');
-          $(this).closest('.element-section').next().addClass('visuallyhidden');
-          $(msg_id).removeClass('visuallyhidden');
-        }
+        // Toggle visibility of "next section of an element"
+        $('.work-toggle-element', context).bind('show-work', function (e) {
+            var id = $(this).attr('href');
+            var msg_id = ".msg-" + id.substring(6);
 
-      });
+            if (!$(this).hasClass('toggled')) {
+                $(this).children('.toggle-text').toggleClass('hidden');
+                $(this).addClass('toggled');
+                $(this).closest('.element-section').next().removeClass('visuallyhidden');
+                $(msg_id).addClass('visuallyhidden');
+            }
+        });
 
-        // Full view js
-        if (Drupal.settings.full_view){
-            $('.work-toggle-element', context).trigger('load-work');
-        }
 
+        $('.work-toggle-element', context).bind('hide-work', function (e) {
+            var id = $(this).attr('href');
+            var msg_id = ".msg-" + id.substring(6);
+            if ($(this).hasClass('toggled')) {
+                $(this).children('.toggle-text').toggleClass('hidden');
+                $(this).removeClass('toggled');
+                $(this).closest('.element-section').next().addClass('visuallyhidden');
+                $(msg_id).removeClass('visuallyhidden');
+            }
+        });
 
 
         // Make entire element clickable
