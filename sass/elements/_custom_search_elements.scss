@@ -1,24 +1,155 @@
+// =============================================================================
+// Search form
+// .search-form-horizontal handles the floating
+// =============================================================================
+#search-form {
+  margin-bottom: 10px;
+
+  .form-wrapper {
+    padding: 0;
+  }
+
+  .form-type-textfield {
+    width: 80%;
+    margin-right: 1%;
+    margin-bottom: 10px;
+  }
+
+  .form-actions {
+    width: 15%;
+    margin-bottom: 10px;
+  }
+
+  input {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  input[type=text] {
+    padding: 0 10px;
+    font-size: 1.166667em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
+    // 14px
+  }
+
+  input[type=submit] {
+    font-size: 1.333333em;
+    font-weight: bold;
+    // 16px
+  }
+}
+
+
+// one id and one class are required to target buttons for specialized search pages !!!
+body.html {
+  #search-panel-wrapper {
+    input[type="submit"] {
+      &:hover, &:focus {
+        color: $white;
+        background: lighten($dark_grey5, 10%);
+        @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
+        margin-right: 1px;
+      }
+    }
+  }
+}
+
+form#search-block-form {
+  #search-block-wrapper {
+    background-color: $light_grey1;
+    padding: 30px 30px 25px;
+    border: solid 1px darken($light_grey3, 5%);
+  }
+  #search-block-action {
+    position: absolute;
+    top: 64px;
+    right: 30px;
+    width: 15%;
+    .form-actions {
+      width: 100%;
+    }
+  }
+  #search-block-textinput {
+    margin: 0;
+  }
+  fieldset#edit-advanced {
+    background-color: $light_grey1;
+    margin-bottom: 0em;
+    &.toggled {
+      margin-bottom: 0em;
+    }
+  }
+}
+
+#search-tabs {
+  margin-bottom: 0px;
+  position: relative;
+  top: 1px;
+
+  li {
+    padding-right: 1px;
+    &:first-child {
+      padding-right: 0px;
+    }
+
+    input[type=submit] {
+      font-size: 12px;
+      background: $dark_grey5;
+      @include transition(background-color .5s);
+      margin-right: 1px;
+      border-top: solid 1px darken($dark_grey3, 5%);
+      color: $white;
+      height: 34px;
+      line-height: 34px;
+      border: solid 0px #d4d4d4;
+      @include border-radius(0px);
+      border-width: 1px 1px 1px 0px;
+      box-shadow: none;
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
+
+      &.active {
+        color: $dark_grey5;
+        background: $light_grey1;
+        @include border-radius(3px);
+        text-shadow: 0px -1px rgba(black, .2);
+        height: 34px;
+        line-height: 34px;
+        border: none;
+        border-top: solid 1px darken($light_grey3, 5%);
+        position: relative;
+        margin-top: 0px;
+      }
+    }
+    &:first-child input[type=submit] {
+      border-left: solid 1px darken($light_grey3, 5%);
+      @include border-radius(0);
+      &.active {
+        @include border-radius(3px);
+      }
+    }
+    &:last-child input[type=submit] {
+      border-right: solid 1px darken($light_grey3, 5%);
+      @include border-radius(0);
+      &.active {
+        @include border-radius(3px);
+      }
+    }
+  }
+
+}
+
+
 
 // =============================================================================
 // Bib.dk search pages
 // =============================================================================
 
-form#search-block-form fieldset#edit-advanced {
-  /* background-color: $light_grey1; */
-  margin-bottom: 0em;
-  &.toggled {
-    margin-bottom: 0em;
-  }
-}
+
 
 div#search-advanced-toggle {
-  position: absolute;
-  right: 0;
-  top: 60px;
+  text-align: right;
   a {
     min-height: 30px;
-    display: block;
-    float: left;
   }
   .icon-blue-minus {
     background-image: url("../img/icons/blue-minus.png");
@@ -34,9 +165,7 @@ div#search-advanced-toggle {
 
 div#search-advanced {
   display: block;
-  @include border-radius(5px);
   background-color: $light_grey1;
-  padding: 1% 2%;
   &.toggled {
     @include border-radius(0px);
     background-color: $light_grey1;
@@ -45,7 +174,9 @@ div#search-advanced {
 }
 
 div#search-advanced-panel {
+
   display: block;
+
   .btn-submit {
     float: right;
     margin: 1% 1% 1% 1%;
@@ -65,11 +196,13 @@ div#search-advanced-panel {
     height: 30px;
     line-height: 30px;
   }
+
   input.form-checkbox {
     height: 20px;
     line-height: 20px;
     margin-top: 1px;
   }
+
   select {
     margin-top: 5px;
     height: 30px;
@@ -77,6 +210,7 @@ div#search-advanced-panel {
     border-radius: 3px 3px 3px 3px;
     padding: 4px;
   }
+
   option {
     height: 20px;
     line-height: 20px;
@@ -147,7 +281,7 @@ div#search-advanced-panel {
   }
   fieldset {
     margin-bottom: 1em;
-    width: 32%;
+    width: 32.4%;
     margin-left: 1%;
     display: inline;
     vertical-align: top;
@@ -293,7 +427,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   }
   .element-wrapper.udgivelsesar {
     margin: 0 1% 0 1%;
-    width: 23%;
+    width: 24%;
   }
   .element-wrapper {
     margin-left: 0;
@@ -341,7 +475,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
     }
   }
   .element-wrapper.udgivelsesar {
-    width: 23%;
+    width: 24%;
     margin: 0 1% 0 3%;
     div.form-item {
       display: block;

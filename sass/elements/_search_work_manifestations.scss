@@ -24,7 +24,7 @@
   }
 
   .field-summary {
-    color: $dark_grey4;
+    color: $dark_grey5;
     margin-bottom: 10px;
   }
 
@@ -152,7 +152,7 @@
     width: auto;
     margin-left: 120px;
     display: block;
-    color:$dark_grey4;
+    color:$dark_grey5;
     vertical-align:top;
     /*break long links*/
     @include hyphenation;
@@ -305,7 +305,7 @@
         width: 17px;
         height: 20px;
       }
-    } 
+    }
 }
 }
 
