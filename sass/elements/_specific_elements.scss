@@ -754,8 +754,16 @@ body.page-ting-moreinfo {
 // =============================================================================
 .pane-ting-openformat-load-more-results {
   text-align: center;
-  padding-bottom: 8px;
-
+  padding: 8px;
+  background-color:$light_grey2;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-color: #DDDDDD #DDDDDD #C5C5C5;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
   #link {
     font-size: 14px;
   }
@@ -793,4 +801,6 @@ body.page-ting-moreinfo {
     margin-top: -40px;
   }
 }
+
+
 
