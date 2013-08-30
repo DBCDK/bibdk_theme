@@ -29,20 +29,23 @@ body.page-reservation {
 }
 
 #subjects-wrapper {
-  background: $light_grey1;
-  /* padding: 30px 0 10px; */
-  border-bottom: 1px solid $light_grey3;
+  background: $light_grey2;
+  border-bottom: 1px solid $light_grey2;
   min-height: 0px;
 }
 
+
 #messages-wrapper {
-  background: $nav_msg_bg;
+  background:  $nav_msg_bg;
+  div[class^="span"] {
+    min-height: 0;
+  }
   #messages {
     /*color: $white;*/
   }
-.krumo-call, .krumo-child{
-color:black;
-}
+  .krumo-call, .krumo-child {
+  color:black;
+  }
 }
 
 #columns-wrapper {
@@ -51,7 +54,7 @@ color:black;
 }
 
 .page-search #columns-wrapper {
-  background: $light_grey1;
+  background: $light_grey2;
 }
 
 .lift-columns #columns {
