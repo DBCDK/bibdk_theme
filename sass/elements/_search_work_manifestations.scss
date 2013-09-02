@@ -138,6 +138,10 @@
 .manifestation-data {
   line-height:180%;
 
+  .field {
+    clear:left;
+  }
+
   .field-label {
     display: block;
     float: left;
