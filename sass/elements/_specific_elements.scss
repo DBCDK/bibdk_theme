@@ -20,27 +20,21 @@
 }
 
 a {
-  .icon.full-view {
-    -ms-background-position-y: -18px;
-    background-position-y: -18px;
+  .icon.full-view.closed {
+    background-position: 0 -18px;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px -18px;
   }
 }
 
 a.inactive {
-  .icon.full-view {
-    -ms-background-position-y: 0px;
-    background-position-y: 0px;
+  .icon.full-view.closed {
+    background-position: 0 0;
   }
-}
-
-.icon.full-view.closed {
-  -ms-background-position-x: 0px;
-  background-position-x: 0px;
-}
-
-.icon.full-view.expanded {
-  -ms-background-position-x: -17px;
-  background-position-x: -17px;
+  .icon.full-view.expanded {
+    background-position: -17px 0;
+  }
 }
 
 .full-view-links {
