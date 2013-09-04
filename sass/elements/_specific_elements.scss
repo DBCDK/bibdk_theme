@@ -297,15 +297,20 @@
 
 .messages {
   background-position: 10px 10px;
-  // LTR
   background-repeat: no-repeat;
   border: 1px solid #333;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 14px 14px 14px 50px;
-  // LTR
+
   a {
     color: #1032c5;
+  }
+
+  ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+    list-style: none
   }
 }
 
@@ -327,13 +332,6 @@
 .messages.error {
   background-image: url(../img/messages/message-24-error.png);
   background-color: lighten($messagesRed, 20%);
-}
-
-.messages ul {
-  margin: 0 0 0 1em;
-  // LTR
-  padding: 0;
-  list-style: none
 }
 
 // =============================================================================

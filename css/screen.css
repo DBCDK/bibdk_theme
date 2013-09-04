@@ -4707,55 +4707,54 @@ a.inactive, input[type="submit"].button-as-link:disabled {
   margin-bottom: 10px;
   padding: 14px 14px 14px 50px;
 }
-/* line 307, ../sass/elements/_specific_elements.scss */
+/* line 306, ../sass/elements/_specific_elements.scss */
 .messages a {
   color: #1032c5;
 }
-
-/* line 312, ../sass/elements/_specific_elements.scss */
-.messages.notice {
-  background-image: url(../img/messages/message-24-info.png);
-  background-color: #97b8e9;
-}
-
-/* line 317, ../sass/elements/_specific_elements.scss */
-.messages.status {
-  background-image: url(../img/messages/message-24-ok.png);
-  background-color: #88cc88;
-}
-
-/* line 322, ../sass/elements/_specific_elements.scss */
-.messages.warning {
-  background-image: url(../img/messages/message-24-warning.png);
-  background-color: #ffd060;
-}
-
-/* line 327, ../sass/elements/_specific_elements.scss */
-.messages.error {
-  background-image: url(../img/messages/message-24-error.png);
-  background-color: #ef9d9d;
-}
-
-/* line 332, ../sass/elements/_specific_elements.scss */
+/* line 310, ../sass/elements/_specific_elements.scss */
 .messages ul {
   margin: 0 0 0 1em;
   padding: 0;
   list-style: none;
 }
 
-/* line 345, ../sass/elements/_specific_elements.scss */
+/* line 317, ../sass/elements/_specific_elements.scss */
+.messages.notice {
+  background-image: url(../img/messages/message-24-info.png);
+  background-color: #97b8e9;
+}
+
+/* line 322, ../sass/elements/_specific_elements.scss */
+.messages.status {
+  background-image: url(../img/messages/message-24-ok.png);
+  background-color: #88cc88;
+}
+
+/* line 327, ../sass/elements/_specific_elements.scss */
+.messages.warning {
+  background-image: url(../img/messages/message-24-warning.png);
+  background-color: #ffd060;
+}
+
+/* line 332, ../sass/elements/_specific_elements.scss */
+.messages.error {
+  background-image: url(../img/messages/message-24-error.png);
+  background-color: #ef9d9d;
+}
+
+/* line 343, ../sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu,
 .pane-bibdk-help-bibdk-help-popup-menu-eng,
 .pane-bibdk-help {
   padding: 20px;
 }
-/* line 347, ../sass/elements/_specific_elements.scss */
+/* line 345, ../sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu .menu .menu,
 .pane-bibdk-help-bibdk-help-popup-menu-eng .menu .menu,
 .pane-bibdk-help .menu .menu {
   margin-bottom: 10px;
 }
-/* line 350, ../sass/elements/_specific_elements.scss */
+/* line 348, ../sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu li a,
 .pane-bibdk-help-bibdk-help-popup-menu-eng li a,
 .pane-bibdk-help li a {
@@ -4766,14 +4765,14 @@ a.inactive, input[type="submit"].button-as-link:disabled {
   padding: 10px 20px;
   margin-bottom: 1px;
 }
-/* line 358, ../sass/elements/_specific_elements.scss */
+/* line 356, ../sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu li li a,
 .pane-bibdk-help-bibdk-help-popup-menu-eng li li a,
 .pane-bibdk-help li li a {
   margin-left: 10px;
 }
 
-/* line 367, ../sass/elements/_specific_elements.scss */
+/* line 365, ../sass/elements/_specific_elements.scss */
 .linkme-wrapper, .infomedia-wrapper {
   position: absolute;
   width: 30em;
@@ -4782,7 +4781,7 @@ a.inactive, input[type="submit"].button-as-link:disabled {
   min-height: 3.5em;
 }
 
-/* line 379, ../sass/elements/_specific_elements.scss */
+/* line 377, ../sass/elements/_specific_elements.scss */
 .popover {
   position: absolute;
   width: 30em;
@@ -4793,49 +4792,49 @@ a.inactive, input[type="submit"].button-as-link:disabled {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-/* line 387, ../sass/elements/_specific_elements.scss */
+/* line 385, ../sass/elements/_specific_elements.scss */
 .popover ul {
   list-style: square;
   margin-left: 1em;
 }
-/* line 392, ../sass/elements/_specific_elements.scss */
+/* line 390, ../sass/elements/_specific_elements.scss */
 .popover .form-item {
   width: 25em;
   float: left;
   padding: 10px;
 }
-/* line 397, ../sass/elements/_specific_elements.scss */
+/* line 395, ../sass/elements/_specific_elements.scss */
 .popover .user-msg {
   min-height: 3.5em;
   line-height: 2em;
   margin: 10px;
   float: left;
 }
-/* line 403, ../sass/elements/_specific_elements.scss */
+/* line 401, ../sass/elements/_specific_elements.scss */
 .popover .close {
   margin: 10px 10px 0 0;
   float: right;
 }
 
-/* line 413, ../sass/elements/_specific_elements.scss */
+/* line 411, ../sass/elements/_specific_elements.scss */
 .count-localisations {
   margin: 0 0 1em 0;
   font-weight: bold;
 }
 
-/* line 418, ../sass/elements/_specific_elements.scss */
+/* line 416, ../sass/elements/_specific_elements.scss */
 p.note-localisations {
   margin: 0 0 0.5em 0;
 }
 
-/* line 422, ../sass/elements/_specific_elements.scss */
+/* line 420, ../sass/elements/_specific_elements.scss */
 .localisation-agency {
   border-top: 1px solid #6c7379;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-/* line 430, ../sass/elements/_specific_elements.scss */
+/* line 428, ../sass/elements/_specific_elements.scss */
 .localisation-agency p,
 .localisation-agency .holding-status,
 .localisation-agency .holding-status-load {
@@ -4843,40 +4842,40 @@ p.note-localisations {
   clear: both;
 }
 
-/* line 435, ../sass/elements/_specific_elements.scss */
+/* line 433, ../sass/elements/_specific_elements.scss */
 .localisation-agency .holding-status-load.ajax-progress {
   display: block;
 }
 
-/* line 440, ../sass/elements/_specific_elements.scss */
+/* line 438, ../sass/elements/_specific_elements.scss */
 .localisation-agency p.city,
 .localisation-agency p.postalCode {
   float: left;
   clear: none;
 }
 
-/* line 445, ../sass/elements/_specific_elements.scss */
+/* line 443, ../sass/elements/_specific_elements.scss */
 .localisation-agency p.postalCode {
   margin: 0 0.3em 0.2em 0;
 }
 
-/* line 449, ../sass/elements/_specific_elements.scss */
+/* line 447, ../sass/elements/_specific_elements.scss */
 .localisation-agency p.postalCode {
   margin: 0 0.3em 0.2em 0;
 }
 
-/* line 453, ../sass/elements/_specific_elements.scss */
+/* line 451, ../sass/elements/_specific_elements.scss */
 .lookup-url + span {
   margin: 0 0 0 1em;
 }
 
 /* LIGHTSIGNAL */
-/* line 458, ../sass/elements/_specific_elements.scss */
+/* line 456, ../sass/elements/_specific_elements.scss */
 .holding-status {
   padding: 0;
   border: none;
 }
-/* line 461, ../sass/elements/_specific_elements.scss */
+/* line 459, ../sass/elements/_specific_elements.scss */
 .holding-status .status {
   width: 15px;
   height: 15px;
@@ -4889,59 +4888,59 @@ p.note-localisations {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 469, ../sass/elements/_specific_elements.scss */
+/* line 467, ../sass/elements/_specific_elements.scss */
 .holding-status .red {
   background-color: #ff0000;
 }
-/* line 472, ../sass/elements/_specific_elements.scss */
+/* line 470, ../sass/elements/_specific_elements.scss */
 .holding-status .green {
   background-color: #008000;
 }
-/* line 475, ../sass/elements/_specific_elements.scss */
+/* line 473, ../sass/elements/_specific_elements.scss */
 .holding-status .yellow {
   background-color: #ffff00;
 }
 
-/* line 484, ../sass/elements/_specific_elements.scss */
+/* line 482, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage {
   color: #51565a;
 }
-/* line 485, ../sass/elements/_specific_elements.scss */
+/* line 483, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage #title {
   /* visibility: hidden; */
 }
-/* line 489, ../sass/elements/_specific_elements.scss */
+/* line 487, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper {
   border-style: none;
 }
-/* line 490, ../sass/elements/_specific_elements.scss */
+/* line 488, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element {
   border-style: none;
 }
-/* line 494, ../sass/elements/_specific_elements.scss */
+/* line 492, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper {
   border: 10px solid #EBEBEB;
 }
-/* line 495, ../sass/elements/_specific_elements.scss */
+/* line 493, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper .element {
   border-style: solid solid none;
 }
 
-/* line 503, ../sass/elements/_specific_elements.scss */
+/* line 501, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-link {
   text-align: right;
 }
-/* line 505, ../sass/elements/_specific_elements.scss */
+/* line 503, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-link a {
   margin: 0 10px;
 }
 
-/* line 510, ../sass/elements/_specific_elements.scss */
+/* line 508, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper {
   width: 46%;
   float: left;
 }
-/* line 513, ../sass/elements/_specific_elements.scss */
+/* line 511, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.fieldset-wrapper {
   border-color: #DCDCDC #DCDCDC;
   border-image: none;
@@ -4952,7 +4951,7 @@ p.note-localisations {
   max-height: 218px;
   overflow: hidden;
 }
-/* line 523, ../sass/elements/_specific_elements.scss */
+/* line 521, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper h2 {
   padding: 0 16px;
   color: #3497be;
@@ -4965,74 +4964,74 @@ p.note-localisations {
   text-transform: uppercase;
   font-family: 'Dosis', sans-serif;
 }
-/* line 535, ../sass/elements/_specific_elements.scss */
+/* line 533, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div {
   padding: 0 16px;
   clear: both;
   border-top: 1px solid #dddddd;
   line-height: 41px;
 }
-/* line 541, ../sass/elements/_specific_elements.scss */
+/* line 539, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.bibdk-mypage-row, .bibdk-mypage-wrapper .bibdk-mypage-row item-row {
   max-width: 310px;
   overflow: hidden;
 }
-/* line 545, ../sass/elements/_specific_elements.scss */
+/* line 543, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p {
   margin: 0;
   max-height: 41px;
 }
-/* line 549, ../sass/elements/_specific_elements.scss */
+/* line 547, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.label-row {
   float: left;
   margin-right: 10px;
   max-width: 150px;
 }
-/* line 554, ../sass/elements/_specific_elements.scss */
+/* line 552, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.value-row {
   color: #3c4043;
   float: right;
   max-width: 115px;
 }
 
-/* line 561, ../sass/elements/_specific_elements.scss */
+/* line 559, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper:nth-child(even) {
   margin-left: 10px;
 }
 
-/* line 565, ../sass/elements/_specific_elements.scss */
+/* line 563, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper.form-wrapper {
   padding: 0;
 }
 
-/* line 570, ../sass/elements/_specific_elements.scss */
+/* line 568, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.label-row {
   float: left;
   width: 145px;
   margin-right: 0px;
 }
-/* line 575, ../sass/elements/_specific_elements.scss */
+/* line 573, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.value-row {
   float: left;
   width: 130px;
 }
 
-/* line 585, ../sass/elements/_specific_elements.scss */
+/* line 583, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields {
   width: 500px;
 }
-/* line 587, ../sass/elements/_specific_elements.scss */
+/* line 585, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#edit-submit {
   width: 70px;
   margin-left: 360px;
   margin-top: 10px;
 }
-/* line 592, ../sass/elements/_specific_elements.scss */
+/* line 590, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper {
   border-width: 0px;
 }
 
-/* line 601, ../sass/elements/_specific_elements.scss */
+/* line 599, ../sass/elements/_specific_elements.scss */
 .kravlenisse {
   background-image: url("../img/kravlenisse.png");
   z-index: 200;
@@ -5044,99 +5043,99 @@ p.note-localisations {
   left: 300px;
 }
 
-/* line 616, ../sass/elements/_specific_elements.scss */
+/* line 614, ../sass/elements/_specific_elements.scss */
 .cart-actions {
   float: left;
   padding-right: 20px;
 }
 
-/* line 622, ../sass/elements/_specific_elements.scss */
+/* line 620, ../sass/elements/_specific_elements.scss */
 .page-email input {
   margin: 20px;
 }
 
-/* line 626, ../sass/elements/_specific_elements.scss */
+/* line 624, ../sass/elements/_specific_elements.scss */
 .item-list .cart-actions ul li {
   margin: 0 0 0 0;
   padding: 0;
 }
 
-/* line 635, ../sass/elements/_specific_elements.scss */
+/* line 633, ../sass/elements/_specific_elements.scss */
 .search-history-table {
   width: 100%;
 }
 
-/* line 639, ../sass/elements/_specific_elements.scss */
+/* line 637, ../sass/elements/_specific_elements.scss */
 .search-action-list {
   padding: 0px 20px;
   border: 0;
 }
-/* line 642, ../sass/elements/_specific_elements.scss */
+/* line 640, ../sass/elements/_specific_elements.scss */
 .search-action-list a, .search-action-list input {
   margin-right: 20px;
 }
 
-/* line 651, ../sass/elements/_specific_elements.scss */
+/* line 649, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 660, ../sass/elements/_specific_elements.scss */
+/* line 658, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-message {
   float: left;
   padding-left: 20px;
   width: 568px;
 }
 
-/* line 666, ../sass/elements/_specific_elements.scss */
+/* line 664, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action {
   float: left;
 }
-/* line 668, ../sass/elements/_specific_elements.scss */
+/* line 666, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper.form-actions {
   padding: 1em 10px;
 }
-/* line 671, ../sass/elements/_specific_elements.scss */
+/* line 669, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper {
   border-bottom-width: 0px;
 }
 
-/* line 681, ../sass/elements/_specific_elements.scss */
+/* line 679, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item {
   padding: 5px;
 }
-/* line 685, ../sass/elements/_specific_elements.scss */
+/* line 683, ../sass/elements/_specific_elements.scss */
 .openuserstatus select {
   font-size: 12px;
 }
-/* line 689, ../sass/elements/_specific_elements.scss */
+/* line 687, ../sass/elements/_specific_elements.scss */
 .openuserstatus input[type="submit"] {
   margin: 10px 5px 0 0;
 }
-/* line 692, ../sass/elements/_specific_elements.scss */
+/* line 690, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item-select {
   float: left;
 }
-/* line 695, ../sass/elements/_specific_elements.scss */
+/* line 693, ../sass/elements/_specific_elements.scss */
 .openuserstatus .helptext {
   float: right;
 }
 
-/* line 705, ../sass/elements/_specific_elements.scss */
+/* line 703, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo {
   background: none repeat scroll 0 0 #ffffff;
 }
-/* line 707, ../sass/elements/_specific_elements.scss */
+/* line 705, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element-wrapper {
   border: 0px solid #ffffff;
   margin-bottom: 0px;
 }
-/* line 711, ../sass/elements/_specific_elements.scss */
+/* line 709, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element {
   border-width: 0;
 }
-/* line 714, ../sass/elements/_specific_elements.scss */
+/* line 712, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo img {
   position: absolute;
   margin: auto;
@@ -5146,31 +5145,31 @@ body.page-ting-moreinfo img {
   right: 0;
 }
 
-/* line 724, ../sass/elements/_specific_elements.scss */
+/* line 722, ../sass/elements/_specific_elements.scss */
 #lightboxFrame {
   border-width: 0;
 }
 
-/* line 732, ../sass/elements/_specific_elements.scss */
+/* line 730, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings {
   padding-bottom: 20px;
 }
-/* line 734, ../sass/elements/_specific_elements.scss */
+/* line 732, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings .form-item {
   padding: 5px 0;
 }
-/* line 737, ../sass/elements/_specific_elements.scss */
+/* line 735, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings input[type=submit] {
   display: block;
   float: right;
 }
 
-/* line 748, ../sass/elements/_specific_elements.scss */
+/* line 746, ../sass/elements/_specific_elements.scss */
 .manifestation .primary-actions a {
   display: block;
 }
 
-/* line 756, ../sass/elements/_specific_elements.scss */
+/* line 754, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more-results {
   text-align: center;
   padding: 8px;
@@ -5184,12 +5183,12 @@ body.page-ting-moreinfo img {
   border-style: solid;
   border-width: 1px;
 }
-/* line 768, ../sass/elements/_specific_elements.scss */
+/* line 766, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more-results #link {
   font-size: 14px;
 }
 
-/* line 773, ../sass/elements/_specific_elements.scss */
+/* line 771, ../sass/elements/_specific_elements.scss */
 .load_more_res_splitter {
   background-color: #999999;
   height: 2px;
@@ -5197,23 +5196,23 @@ body.page-ting-moreinfo img {
   margin-bottom: 10px;
 }
 
-/* line 783, ../sass/elements/_specific_elements.scss */
+/* line 781, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container {
   width: 50%;
   background-color: #f2f3f3;
 }
 
-/* line 788, ../sass/elements/_specific_elements.scss */
+/* line 786, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
 }
 
-/* line 797, ../sass/elements/_specific_elements.scss */
+/* line 795, ../sass/elements/_specific_elements.scss */
 .page-user #title {
   height: 58px;
   line-height: 58px;
 }
-/* line 801, ../sass/elements/_specific_elements.scss */
+/* line 799, ../sass/elements/_specific_elements.scss */
 .page-user.lift-columns #columns {
   margin-top: -40px;
 }
