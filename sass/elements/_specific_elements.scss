@@ -800,5 +800,37 @@ body.page-ting-moreinfo {
   }
 }
 
+// =============================================================================
+// Bibdk reviews
+// =============================================================================
+.bibdk-article-review{
 
+  border-top: 1px solid #dcdcdc;
+  padding: 10px 0;
+
+  .openformat-info{
+    float: left;
+    clear: left;
+    width: 280px;
+  }
+}
+
+
+span.star{
+  display: inline-block;
+  background: url('../img/rating-stars.png');
+  width: 17px;
+  height: 17px;
+}
+
+span.star.positive{
+  color: transparent;
+  background-position: 0 17px;
+
+}
+
+span.star.negative{
+  color: transparent;
+  background-position: 0 0;
+}
 
