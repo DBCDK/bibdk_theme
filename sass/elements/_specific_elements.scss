@@ -8,6 +8,84 @@
 
 
 // =============================================================================
+// FULL VIEW BUTTONS
+// =============================================================================
+
+.icon.full-view {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/full-short-view-icon.gif) no-repeat;
+}
+
+a {
+  .icon.full-view.closed {
+    background-position: 0 -18px;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px -18px;
+  }
+}
+
+a.inactive {
+  .icon.full-view.closed {
+    background-position: 0 0;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px 0;
+  }
+}
+
+.full-view-links {
+  padding: 0 10px;
+}
+
+.panel-separator {
+  margin: 0 10px;
+}
+
+
+// =============================================================================
+// FULL VIEW BUTTONS
+// =============================================================================
+
+.icon.full-view {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/full-short-view-icon.gif) no-repeat;
+}
+
+a {
+  .icon.full-view.closed {
+    background-position: 0 -18px;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px -18px;
+  }
+}
+
+a.inactive {
+  .icon.full-view.closed {
+    background-position: 0 0;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px 0;
+  }
+}
+
+.full-view-links {
+  padding: 0 10px;
+}
+
+.panel-separator {
+  margin: 0 10px;
+}
+
+
+// =============================================================================
 // Library
 // =============================================================================
 
@@ -818,5 +896,5 @@ body.page-ting-moreinfo {
   }
 }
 
-
+.bibdk-vejviser-help-text{padding-left: 20px;}
 

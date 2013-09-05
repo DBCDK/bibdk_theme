@@ -1,5 +1,6 @@
 (function($) {
 
+    Drupal.settings.full_view = false;
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
@@ -110,42 +111,54 @@
       // });
 
       // Disable button and dropdown when toggling details of a work
-      $('.work-toggle-element', context).click(function() {
-
+      $('.work-toggle-element', context).click(function(e) {
+          e.preventDefault();
+          $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
+            $(this).trigger('show-work');
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
-          $('html, body').animate({
-            scrollTop: $(this).closest('.work').offset().top
-          }, 500);
+            if (!Drupal.settings.full_view){
+                $('html, body').animate({
+                    scrollTop: $(this).closest('.work').offset().top
+                }, 500);
+            }
         } else {
+            $(this).trigger('hide-work');
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
         }
       });
 
-      // Toggle visibility of "next section of an element"
-      $('.work-toggle-element', context).click(function(e) {
-        e.preventDefault();
-        var id = $(this).attr('href');
-        var msg_id = ".msg-" + id.substring(6);
-        $(id).trigger('click');
-        $(this).children('.toggle-text').toggleClass('hidden');
-        if(!$(this).hasClass('toggled')) {
-          $(this).addClass('toggled');
-          $(this).closest('.element-section').next().removeClass('visuallyhidden');
-          $(msg_id).addClass('visuallyhidden');
-        } else {
-          $(this).removeClass('toggled');
-          $(this).closest('.element-section').next().addClass('visuallyhidden');
-          $(msg_id).removeClass('visuallyhidden');
-        }
+        // Toggle visibility of "next section of an element"
+        $('.work-toggle-element', context).bind('show-work', function (e) {
+            var id = $(this).attr('href');
+            var msg_id = ".msg-" + id.substring(6);
 
-      });
+            if (!$(this).hasClass('toggled')) {
+                $(this).children('.toggle-text').toggleClass('hidden');
+                $(this).addClass('toggled');
+                $(this).closest('.element-section').next().removeClass('visuallyhidden');
+                $(msg_id).addClass('visuallyhidden');
+            }
+        });
 
-      // Make entire element clickable
+
+        $('.work-toggle-element', context).bind('hide-work', function (e) {
+            var id = $(this).attr('href');
+            var msg_id = ".msg-" + id.substring(6);
+            if ($(this).hasClass('toggled')) {
+                $(this).children('.toggle-text').toggleClass('hidden');
+                $(this).removeClass('toggled');
+                $(this).closest('.element-section').next().addClass('visuallyhidden');
+                $(msg_id).removeClass('visuallyhidden');
+            }
+        });
+
+
+        // Make entire element clickable
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
