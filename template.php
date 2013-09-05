@@ -147,7 +147,17 @@ function bibdk_theme_process_page(&$variables) {
  * One hook_form_alter() to rule them all:
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
+<<<<<<< HEAD
   switch ($form_id) {
+=======
+
+
+  switch ($form_id) {
+
+    case 'user_register_form':
+      drupal_set_title(t('Create new account'));
+      break;
+>>>>>>> feature/979-popup_close_button
     case 'user_login':
       drupal_set_title(t('Log in'));
       _alter_user_login($form, $form_state, $form_id);
@@ -184,7 +194,33 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_openuserstatus_form':
       _alter_openuserstatus_tables($form);
       break;
+    case 'bibdk_favourite_user_form_fields':
+      _alter_bibdk_favourite_user_form_fields($form);
+      break;
   }
+}
+
+function _alter_bibdk_favourite_user_form_fields(&$form) {
+  $submit = $form['wrapper']['submit'];
+  unset($form['wrapper']['submit']);
+  $form['wrapper']['buttons'] = array(
+    '#type'         => 'fieldset',
+    '#tree'         => TRUE,
+  );
+  $form['wrapper']['buttons']['submit'] = $submit;
+  $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
+  $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
+    'label_close_popup',
+    '#',
+    $options = array(
+      'attributes' => array(
+        'class'=>array('button-close-popup'),
+        'title'=> t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
+      ),
+    )
+  );
+  $form['wrapper']['buttons']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper btn btn-blue">';
+  $form['wrapper']['buttons']['button_close_popup_link']['#suffix'] = '</div>';
 }
 
 function _alter_openuserstatus_tables(&$form) {
