@@ -147,17 +147,10 @@ function bibdk_theme_process_page(&$variables) {
  * One hook_form_alter() to rule them all:
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
-<<<<<<< HEAD
   switch ($form_id) {
-=======
-
-
-  switch ($form_id) {
-
     case 'user_register_form':
       drupal_set_title(t('Create new account'));
       break;
->>>>>>> feature/979-popup_close_button
     case 'user_login':
       drupal_set_title(t('Log in'));
       _alter_user_login($form, $form_state, $form_id);
