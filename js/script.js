@@ -520,8 +520,13 @@
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
       $('article.manifestation').filter(':visible').each(function() {
+
+          var wAction = $(this).find('.actions').width();
+          $(this).find('.manifestation-data').css('margin-right', wAction);
+          
         var hAction = $(this).find('.actions').height();
-        var hData = $(this).find('.manifestation-data').height();
+
+          var hData = $(this).find('.manifestation-data').height();
         var highestCol = Math.max(hAction, hData);
         $(this).find('.actions').height(highestCol);
         var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
