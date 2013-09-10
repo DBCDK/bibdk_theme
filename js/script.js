@@ -136,11 +136,11 @@
         if(!$(this).hasClass('toggled')) {
           $(this).addClass('toggled');
           $(this).closest('.element-section').next().removeClass('visuallyhidden');
-          $(msg_id).addClass('visuallyhidden');
+          //$(msg_id).addClass('visuallyhidden');
         } else {
           $(this).removeClass('toggled');
           $(this).closest('.element-section').next().addClass('visuallyhidden');
-          $(msg_id).removeClass('visuallyhidden');
+          //$(msg_id).removeClass('visuallyhidden');
         }
 
       });
