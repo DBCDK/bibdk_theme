@@ -8,6 +8,84 @@
 
 
 // =============================================================================
+// FULL VIEW BUTTONS
+// =============================================================================
+
+.icon.full-view {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/full-short-view-icon.gif) no-repeat;
+}
+
+a {
+  .icon.full-view.closed {
+    background-position: 0 -18px;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px -18px;
+  }
+}
+
+a.inactive {
+  .icon.full-view.closed {
+    background-position: 0 0;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px 0;
+  }
+}
+
+.full-view-links a{
+  padding: 0 10px;
+}
+
+.panel-separator {
+  margin: 0 10px;
+}
+
+
+// =============================================================================
+// FULL VIEW BUTTONS
+// =============================================================================
+
+.icon.full-view {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../img/full-short-view-icon.gif) no-repeat;
+}
+
+a {
+  .icon.full-view.closed {
+    background-position: 0 -18px;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px -18px;
+  }
+}
+
+a.inactive {
+  .icon.full-view.closed {
+    background-position: 0 0;
+  }
+  .icon.full-view.expanded {
+    background-position: -17px 0;
+  }
+}
+
+.full-view-links {
+  padding: 0 10px;
+}
+
+.panel-separator {
+  margin: 0 10px;
+}
+
+
+// =============================================================================
 // Library
 // =============================================================================
 
@@ -255,8 +333,6 @@
     .field-title {
       padding: 8px;
       background: none repeat scroll 0 0 #217F9B;
-      opacity: 0.7;
-      filter: alpha(opacity=60); /* For IE8 and earlier */
     }
   }
   .field-body {
@@ -585,11 +661,29 @@ p.note-localisations {
   width: 500px;
   input#edit-submit {
     width: 70px;
-    margin-left: 360px;
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+  input#button-close-popup {
+    margin-left: 30px;
     margin-top: 10px;
   }
   .form-wrapper {
     border-width: 0px;
+  }
+  fieldset#edit-buttons .fieldset-wrapper {
+    text-align: right;
+  }
+  .form-wrapper .form-submit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .close-link-wrapper {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    a {
+      color: white;
+    }
   }
 }
 
@@ -752,10 +846,18 @@ body.page-ting-moreinfo {
 // =============================================================================
 // Load more results
 // =============================================================================
-.pane-ting-openformat-load-more-results {
+.pane-ting-openformat-load-more {
   text-align: center;
-  padding-bottom: 8px;
-
+  padding: 8px;
+  background-color:$light_grey2;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-color: #DDDDDD #DDDDDD #C5C5C5;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
   #link {
     font-size: 14px;
   }
@@ -792,5 +894,38 @@ body.page-ting-moreinfo {
   &.lift-columns #columns {
     margin-top: -40px;
   }
+}
+
+.bibdk-vejviser-help-text{padding-left: 20px;}
+
+//
+// alerts
+//
+
+.alert {
+  background: url(../img/icons/alert-sprites.png) no-repeat top left;
+  padding: 3px 12px;
+  width: 12px;
+  height: 22px;
+}
+
+.blue-alert {
+  background-position: 0 0;
+}
+
+.green-alert {
+  background-position: -18px 0;
+}
+
+.yellow-alert {
+  background-position: -36px 0;
+}
+
+.red-alert{
+  background-position: -54px 0;
+}
+
+.no-alert {
+  background-image: none;
 }
 

@@ -51,7 +51,7 @@
     font-size: 1.666em;
     // 20px
     line-height: 100%;
-    color: $dark_grey4;
+    color: $dark_grey5;
     margin-bottom: 0.5em;
 
     span {
@@ -161,7 +161,7 @@
     background-color: $light_blue1;
 
     a {
-      color: $dark_grey4;
+      color: $dark_grey5;
       @include inline-block();
       @include border-radius(10px);
       padding: 5px 10px;
@@ -497,6 +497,8 @@ p.helptext {
   font-size: 12px;
   color: $white;
   cursor: pointer;
+  position: relative;
+  top: 3px;
 }
 
 //
@@ -549,3 +551,6 @@ p.helptext {
   border-left: solid 0px $borderColor;
   border-right: solid 0px $borderColor;
 }
+
+
+

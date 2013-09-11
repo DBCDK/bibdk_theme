@@ -14,9 +14,9 @@
   color: $color;
   background: transparent;
   text-shadow: none;
-  font: inherit; /* Inherit font settings (doesn’t work in IE7-) */
+  font: inherit; /* Inherit font settings (doesn't work in IE7-) */
   line-height: normal; /* Override line-height to avoid spacing issues */
-  cursor: pointer; /* Buttons don’t make the cursor change in all browsers */
+  cursor: pointer; /* Buttons don't make the cursor change in all browsers */
   -moz-user-select: text; /* Make button text selectable in Gecko */
 /* Make sure keyboard users get visual feedback */
   &:hover,
@@ -178,3 +178,6 @@ input[type="submit"].button-as-link {
 .further-search-btn {
   float: right;
 }
+
+
+

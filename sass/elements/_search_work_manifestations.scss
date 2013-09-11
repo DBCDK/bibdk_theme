@@ -24,7 +24,7 @@
   }
 
   .field-summary {
-    color: $dark_grey4;
+    color: $dark_grey5;
     margin-bottom: 10px;
   }
 
@@ -153,10 +153,10 @@
     width: 100px;
   }
   .field-items {
-    width: auto;
+    /*width: auto;*/
     margin-left: 120px;
     display: block;
-    color:$dark_grey4;
+    color:$dark_grey5;
     vertical-align:top;
     /*break long links*/
     @include hyphenation;
@@ -171,17 +171,22 @@
   }
   .field-name-bibdk-mani-volume .field-items,
   .field-name-bibdk-mani-section .field-items {
-    margin-left: 0;
+    margin-left: 0px;
     width: auto;
   }
   .field-name-bibdk-mani-volume .field-items .field-items,
   .field-name-bibdk-mani-section .field-items .field-items{
-    margin-left: 0;
+    margin-left: 120px;
     width: 340px;
   }
 
 }
 
+
+// manifestation in cart
+.cart-item-checkbox .manifestation-data .field-label-hidden .field-items {
+margin-left:0;
+}
 
 //
 // Order any edition button
@@ -192,8 +197,17 @@
   h3 {
     font-size: 1.2em;
     color: #1890b3;
-    margin-left: 10%;
+    margin-left: 8%;
     padding: 0 0 10px 0;
+    .icon {
+      height: 15px;
+      padding-top: 8px;
+    }
+  }
+  .to-cart-list li {
+    margin: 1px 1px 1px 1px;
+    line-height: 20px;
+    padding: 5px 0 5px 20px;
   }
 }
 
@@ -213,8 +227,8 @@
 
 .col2 {
   float: left;
-  width: 100px;
-  margin-left: -100px;
+  width: 130px;
+  margin-left: -130px;
 
   a {
     display: block;
