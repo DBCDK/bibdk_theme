@@ -725,8 +725,11 @@ p.note-localisations {
 // Search History
 // =============================================================================
 
-.search-history-table {
+.search-history-table {  
   width: 100%;
+  input {
+    border: none;
+  }
 }
 
 .search-action-list {
