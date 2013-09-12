@@ -211,21 +211,28 @@ a.inactive {
   height: 320px;
 }
 
-//
-// widget wrapper used when image is outside widget
-//
-.widget-wrapper {
-
-  .field-image {
-    float: left;
-    position: relative;
-  }
+.widget-height-4 {
+  height: 430px;
 }
+
+article.article-widget{
+float:left;
+margin-left:10px;
+overflow:hidden;
+}
+
+article.widget-biblioteksvagt{
+float:right;
+margin-left:10px;
+}
+
+
+
 
 //
 // Common widget styling
 //
-.widget {
+.widget, .article-widget{
   position: relative;
   margin-bottom: 10px;
   @include transition(background-color 0.3s);
@@ -312,7 +319,7 @@ a.inactive {
 // Custom Biblioteksvagt widget
 //
 .widget-biblioteksvagt {
-  background: $btn_blue;
+  background: #217F9B;
   color: $white;
   .field-title {
     margin-bottom: 10px;
@@ -339,6 +346,7 @@ a.inactive {
     position: relative;
     width: 80px;
     z-index: 3;
+    margin-left:10px;  
   }
 
   footer {
@@ -350,10 +358,7 @@ a.inactive {
   }
 
   .field-vagt-image {
-    text-align: right;
-    position: absolute;
-    top: 0;
-    left: 0;
+    text-align: center;
     max-width: 100%;
   }
 
