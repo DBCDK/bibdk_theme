@@ -1,7 +1,7 @@
-<div id="search-advanced-toggle" class="clearfix<?php ($form['#visuallyhidden']) ? print ' toggled' : print ''; ?>">
+<div id="search-advanced-toggle" data-toggle-state-hidden="<?php echo $form['#visuallyhidden'];?>" class="clearfix toggled">
   <a class="text-darkgrey" href="#"><span class="icon icon-left icon-blue-minus">&nbsp;</span><?php print t('Expand search options'); ?></a>
 </div>
-<div id="search-advanced" class="clearfix <?php ($form['#visuallyhidden']) ? print ' visuallyhidden' : print ''; ?>">
+<div id="search-advanced" class="clearfix visuallyhidden">
   <div id="search-advanced-panel" class="clearfix">
     <!-- ADVANCED SEARCH-->
     <?php print drupal_render_children($form); ?>

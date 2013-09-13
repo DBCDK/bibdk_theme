@@ -515,6 +515,11 @@
         }
       });
 
+        if($('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1'){
+            $('#search-advanced-toggle').toggleClass('toggled');
+            $('#search-advanced').toggleClass('visuallyhidden');
+        }
+
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
