@@ -503,7 +503,7 @@
       // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
 
         // Toggle advanced search options
-      $('#search-advanced-toggle').click(function(e) {
+      $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
