@@ -203,7 +203,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
   $form['wrapper']['buttons']['submit'] = $submit;
   $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
   $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
-    'label_close_popup',
+    t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
     '#',
     $options = array(
       'attributes' => array(
