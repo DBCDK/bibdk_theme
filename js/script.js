@@ -141,7 +141,6 @@
                 $(this).children('.toggle-text').toggleClass('hidden');
                 $(this).addClass('toggled');
                 $(this).closest('.element-section').next().removeClass('visuallyhidden');
-                $(msg_id).addClass('visuallyhidden');
             }
         });
 
@@ -153,10 +152,8 @@
                 $(this).children('.toggle-text').toggleClass('hidden');
                 $(this).removeClass('toggled');
                 $(this).closest('.element-section').next().addClass('visuallyhidden');
-                $(msg_id).removeClass('visuallyhidden');
             }
         });
-
 
         // Make entire element clickable
       // Add .element-clickable to parent

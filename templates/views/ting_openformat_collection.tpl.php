@@ -14,6 +14,7 @@
           <?php endif; ?>
         </div>
       </div>
+      <div class="msg-<?php print $uid; ?> collection-msg"></div>
       <div class="toggle-work">
         <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
           <span class="icon icon-left icon-blue-down">&nbsp;</span><span class="toggle-text"><?php echo t('More info'); ?></span>
@@ -29,5 +30,4 @@
     <!-- element-section -->
   </div>
   <!-- element -->
-  <div class="msg-<?php print $uid; ?>"></div>
 </div>
