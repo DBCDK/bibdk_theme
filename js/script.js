@@ -409,15 +409,22 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-        this.type = 'password';
+          // IE 8 compatibility 
+          $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+          $(this).remove();
       });
+            
       $('.bibdk-unmask-password-field').click(function() {
         $('.bibdk-password-field').each(function() {
-          if(this.type == 'password') {
-            this.type = 'text';
+          if($(this).attr('type') == 'password') {
+            //set type to text  
+            $("<input type='text' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+            $(this).remove();                
           }
           else {
-            this.type = 'password';
+            //set type to password    
+            $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+            $(this).remove();  
           }
         });
       });
