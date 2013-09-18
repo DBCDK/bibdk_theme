@@ -443,6 +443,7 @@ function bibdk_theme_menu_link(array$variables) {
 }
 
 function bibdk_theme_preprocess_links(&$links){
+
   if ($links['heading'] == t('export links')){
     $links['heading'] = '';
     foreach($links['links'] as $key => $link){
@@ -518,7 +519,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
   }
 }
 
-
 /**
  * Override theme function for a CAPTCHA element.
  */
@@ -538,4 +538,11 @@ function bibdk_theme_captcha($variables) {
   else {
     return '<div class="captcha">' . drupal_render_children($element) . '</div>';
   }
+}
+
+function bibdk_theme_preprocess_link(&$links){
+  if($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))){
+    $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
+  }
+
 }
