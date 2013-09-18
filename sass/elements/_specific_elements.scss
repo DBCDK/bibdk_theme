@@ -375,13 +375,24 @@ a.inactive {
 
 .messages {
   background-position: 10px 10px;
-  // LTR
   background-repeat: no-repeat;
   border: 1px solid #333;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 14px 14px 14px 50px;
-  // LTR
+
+  a {
+    color: #1032c5;
+    &:hover{
+      color: #143ef4;
+    }
+  }
+
+  ul {
+    margin: 0 0 0 1em;
+    padding: 0;
+    list-style: none
+  }
 }
 
 .messages.notice {
@@ -402,13 +413,6 @@ a.inactive {
 .messages.error {
   background-image: url(../img/messages/message-24-error.png);
   background-color: lighten($messagesRed, 20%);
-}
-
-.messages ul {
-  margin: 0 0 0 1em;
-  // LTR
-  padding: 0;
-  list-style: none
 }
 
 // =============================================================================
@@ -725,8 +729,11 @@ p.note-localisations {
 // Search History
 // =============================================================================
 
-.search-history-table {
+.search-history-table {  
   width: 100%;
+  input {
+    border: none;
+  }
 }
 
 .search-action-list {
@@ -884,7 +891,7 @@ body.page-ting-moreinfo {
 
 
 // =============================================================================
-// My page
+// My page  
 // =============================================================================
 .page-user {
   #title {
@@ -896,7 +903,14 @@ body.page-ting-moreinfo {
   }
 }
 
-.bibdk-vejviser-help-text{padding-left: 20px;}
+// =============================================================================
+// vejviser
+// =============================================================================
+
+.bibdk-vejviser-help-text{
+  clear: both;
+  padding-left: 20px;
+}
 
 //
 // alerts
@@ -929,3 +943,50 @@ body.page-ting-moreinfo {
   background-image: none;
 }
 
+// =============================================================================
+// Bibdk reviews
+// =============================================================================
+.bibdk-article-review{
+
+  border-top: 1px solid #dcdcdc;
+  padding: 10px 0;
+
+  .openformat-info{
+    float: left;
+    clear: left;
+    width: 280px;
+  }
+}
+
+span.star{
+  display: inline-block;
+  background: url('../img/rating-stars.png');
+  width: 17px;
+  height: 17px;
+}
+
+span.star.positive{
+  color: transparent;
+  background-position: 0 17px;
+
+}
+
+span.star.negative{
+  color: transparent;
+  background-position: 0 0;
+}
+
+// =============================================================================
+// WAYF NemId login page
+// =============================================================================
+.ding-wayf-logon-block {
+  margin-top: 20px; 
+
+  .ding-wayf-logoninfo {
+   //line-height: 20px;
+  }
+}
+
+#user-login .form-actions {
+   margin-top: -5.999em; 
+}

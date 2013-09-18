@@ -203,7 +203,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
   $form['wrapper']['buttons']['submit'] = $submit;
   $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
   $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
-    'label_close_popup',
+    t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
     '#',
     $options = array(
       'attributes' => array(
@@ -443,6 +443,7 @@ function bibdk_theme_menu_link(array$variables) {
 }
 
 function bibdk_theme_preprocess_links(&$links){
+
   if ($links['heading'] == t('export links')){
     $links['heading'] = '';
     foreach($links['links'] as $key => $link){
@@ -518,7 +519,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
   }
 }
 
-
 /**
  * Override theme function for a CAPTCHA element.
  */
@@ -538,4 +538,11 @@ function bibdk_theme_captcha($variables) {
   else {
     return '<div class="captcha">' . drupal_render_children($element) . '</div>';
   }
+}
+
+function bibdk_theme_preprocess_link(&$links){
+  if($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))){
+    $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
+  }
+
 }

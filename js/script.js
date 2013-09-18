@@ -141,7 +141,6 @@
                 $(this).children('.toggle-text').toggleClass('hidden');
                 $(this).addClass('toggled');
                 $(this).closest('.element-section').next().removeClass('visuallyhidden');
-                $(msg_id).addClass('visuallyhidden');
             }
         });
 
@@ -153,10 +152,8 @@
                 $(this).children('.toggle-text').toggleClass('hidden');
                 $(this).removeClass('toggled');
                 $(this).closest('.element-section').next().addClass('visuallyhidden');
-                $(msg_id).removeClass('visuallyhidden');
             }
         });
-
 
         // Make entire element clickable
       // Add .element-clickable to parent
@@ -412,15 +409,22 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-        this.type = 'password';
+          // IE 8 compatibility 
+          $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+          $(this).remove();
       });
+            
       $('.bibdk-unmask-password-field').click(function() {
         $('.bibdk-password-field').each(function() {
-          if(this.type == 'password') {
-            this.type = 'text';
+          if($(this).attr('type') == 'password') {
+            //set type to text  
+            $("<input type='text' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+            $(this).remove();                
           }
           else {
-            this.type = 'password';
+            //set type to password    
+            $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+            $(this).remove();  
           }
         });
       });
@@ -506,7 +510,7 @@
       // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
 
         // Toggle advanced search options
-      $('#search-advanced-toggle').click(function(e) {
+      $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
@@ -517,6 +521,11 @@
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
+
+        if($('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1'){
+            $('#search-advanced-toggle').toggleClass('toggled');
+            $('#search-advanced').toggleClass('visuallyhidden');
+        }
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
       $('article.manifestation').filter(':visible').each(function() {
