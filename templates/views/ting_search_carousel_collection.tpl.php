@@ -3,8 +3,10 @@
  * @file
  *
  */
+ // dpm($collection);
 ?>
 <li class="rs-carousel-item">
-  <a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>" class="rs-carousel-item-image" title="<?php print check_plain($collection->title); ?>"><img src="<?php echo $collection->image; ?>" alt=""/></a>
-  <a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>" class="rs-carousel-item-title"><?php print check_plain($collection->title); ?></a>
+  <div class="rs-carousel-item-image"><a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>" title="<?php print check_plain($collection->title); ?>"><img src="<?php echo $collection->image; ?>" alt=""/></a></div>
+  <div class="rs-carousel-item-title"><a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>"><?php print check_plain($collection->title); ?></a></div>
+  <div class="rs-carousel-item-creator"><a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>"><?php print check_plain($collection->creator); ?></a></div>
 </li>

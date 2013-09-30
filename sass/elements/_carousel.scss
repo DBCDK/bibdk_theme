@@ -1,0 +1,122 @@
+// =============================================================================
+// Carousel
+// =============================================================================
+
+#carousel-wrapper {
+  background-color: $light_grey1;
+}
+
+.rs-carousel {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.rs-carousel-header {
+  color: $btn_blue;
+  font-size: 15px;
+  margin-bottom: 30px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  .materialtype {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+  }
+  .header {
+  }
+}
+
+
+.rs-carousel-options {
+  margin-bottom: 30px;
+  text-align: right;
+  float: right;
+  select {
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    @include border-radius(3px);
+  }
+  option {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+  }
+}
+
+.rs-carousel-inner {
+    background-color: $light_grey1;
+    .rs-carousel-title {
+    }
+    min-height: 260px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.rs-carousel-compact .rs-carousel-mask {
+    max-width: 100%;
+    outline: 1px solid red;
+}
+
+.rs-carousel-mask {
+    max-height: 260px;
+    max-width: 100%;
+    position: absolute;
+    right: 0%;
+}
+
+.rs-carousel-mask ul li {
+  float: left;
+  max-width: 150px;
+  padding-right: 10px;
+  text-align: center;
+  .rs-carousel-item-image {
+    background-color: inherit;
+    border-radius: 0;
+  }
+}
+
+.rs-carousel-compact .rs-carousel-action-prev {
+    left: -5%;
+    top: 50%;
+}
+
+.rs-carousel-compact .rs-carousel-action-next {
+    background-position: right 0;
+    right: -5%;
+    top: 50%;
+}
+
+.rs-carousel-action-prev, .rs-carousel-action-next {
+    background-image: url("../img/carousel-arrows.png");
+    height: 41px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 30%;
+    width: 41px;
+}
+
+.rs-carousel-item-image img {
+    padding: 0;
+}
+
+.rs-carousel-item-title {
+  margin-top: 5px;
+  line-height: 14px;
+  a {
+    color: $dark_grey2;
+    font-weight: bold;
+  }
+}
+
+.rs-carousel-item-creator {
+  margin-top: 2px;
+  line-height: 14px;
+  a {
+    color: $dark_grey5;
+  }
+}
+
