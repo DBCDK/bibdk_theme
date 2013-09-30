@@ -79,6 +79,16 @@ function bibdk_theme_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_hjs_alter
+ * put javascript in footer of page to avoid page blocking 
+ */
+function bibdk_theme_js_alter(&$javascript) {
+  foreach ($javascript as $key => &$js ) {
+    $js['scope'] = 'footer';
+  }
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$variables) {
