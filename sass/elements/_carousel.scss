@@ -2,6 +2,14 @@
 // Carousel
 // =============================================================================
 
+// VARIABLES
+$form-width:       188px;
+
+// FUNCTIONS
+@function calculate-select-width($n) {
+  @return $n + 24
+}
+
 #carousel-wrapper {
   background-color: $light_grey1;
 }
@@ -14,7 +22,6 @@
 .rs-carousel-header {
   color: $btn_blue;
   font-size: 15px;
-  margin-bottom: 30px;
   height: 30px;
   line-height: 30px;
   float: left;
@@ -28,9 +35,16 @@
   }
 }
 
-
-.rs-carousel-options {
-  margin-bottom: 30px;
+.rs-carousel-select {
+  text-align: right;
+  float: right;
+  form {
+    // width: $form-width;
+    height: 30px;
+    display: inline-block;
+    // overflow: hidden;
+    // background: url("../img/carousel-select-bg.png") 0 0 no-repeat;
+  }
   text-align: right;
   float: right;
   select {
@@ -44,20 +58,34 @@
     line-height: 20px;
     padding: 5px;
   }
+
+  /*
+  select {
+    background-color: ;
+    height: 30px;
+    line-height: 30px;
+    // width: calculate-select-width($form-width);
+    padding:6px;
+    // border:none;
+    background-color: transparent;
+  }
+  option {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+  }
+  */
 }
 
 .rs-carousel-inner {
     background-color: $light_grey1;
-    .rs-carousel-title {
-    }
-    min-height: 260px;
+    min-height: 220px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .rs-carousel-compact .rs-carousel-mask {
     max-width: 100%;
-    outline: 1px solid red;
 }
 
 .rs-carousel-mask {
@@ -80,13 +108,13 @@
 
 .rs-carousel-compact .rs-carousel-action-prev {
     left: -5%;
-    top: 50%;
+    top: 40%;
 }
 
 .rs-carousel-compact .rs-carousel-action-next {
     background-position: right 0;
     right: -5%;
-    top: 50%;
+    top: 40%;
 }
 
 .rs-carousel-action-prev, .rs-carousel-action-next {
@@ -119,4 +147,5 @@
     color: $dark_grey5;
   }
 }
+
 

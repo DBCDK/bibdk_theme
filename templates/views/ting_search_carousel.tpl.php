@@ -21,22 +21,19 @@
 
     <!-- Only print dropdown if there is more than 1 -->
     <?php if (count($searches) > 1): ?>
-    <div class="rs-carousel-options span12">
+    <div class="rs-carousel-select span12">
       <form>
         <select>
+          <!--
           <option value="" class="">
             <?php echo t('LABEL_CAROUSEL_SELECT'); ?>
           </option>
+          -->
         <?php foreach ($searches as $i => $search): ?>
           <option value="<?php echo $i; ?>"
                   class="<?php echo ($i == 0) ? 'active' : ''; ?>" <?php echo ($i == 0) ? 'selected=selected' : ''; ?>>
             <?php echo $search['title'] ?>
           </option>
-          <!--
-          <li class="<?php echo ($i == 0) ? 'active' : ''; ?>">
-            <a href="#"><?php echo $search['title'] ?></a>
-          </li>
-          -->
         <?php endforeach; ?>
         </select>
       </form>
@@ -45,7 +42,7 @@
 
     <div class="rs-carousel-inner span24 clearfix">
       <div class="ajax-loader"></div>
-      <?php if ($toggle_description): ?>
+      <?php if ( $toggle_description == 'rs-carousel-wide' ): ?>
         <div class="rs-carousel-title"></div>
       <?php endif; ?>
       <ul class="rs-carousel-runner">
