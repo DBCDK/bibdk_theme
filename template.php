@@ -158,9 +158,6 @@ function bibdk_theme_process_page(&$variables) {
  */
 function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
-    case 'user_register_form':
-      drupal_set_title(t('Create new account'));
-      break;
     case 'user_login':
       drupal_set_title(t('Log in'));
       _alter_user_login($form, $form_state, $form_id);
