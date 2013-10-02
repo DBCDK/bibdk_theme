@@ -71,8 +71,6 @@
   }
 }
 
-
-
 .search-results {
   .work.element-wrapper {
     border-width: 0;
@@ -120,7 +118,7 @@
         font-weight: normal;
       }
       .primary-actions {
-        > a  {
+        > a {
           display: block;
         }
         > a, ul li {
@@ -137,28 +135,28 @@
 // Manifestation data
 //
 .manifestation-data {
-  line-height:180%;
+  line-height: 180%;
 
   .field {
-    clear:left;
+    clear: left;
   }
 
   .field-label {
     display: block;
     float: left;
-    padding-right:10px;
-    text-align:left;
-    vertical-align:top;
-    color:$dark_grey2;
-    font-weight:normal;
+    padding-right: 10px;
+    text-align: left;
+    vertical-align: top;
+    color: $dark_grey2;
+    font-weight: normal;
     width: 100px;
   }
   .field-items {
     /*width: auto;*/
     margin-left: 120px;
     display: block;
-    color:$dark_grey5;
-    vertical-align:top;
+    color: $dark_grey5;
+    vertical-align: top;
     /*break long links*/
     @include hyphenation;
     word-wrap: normal;
@@ -176,17 +174,16 @@
     width: auto;
   }
   .field-name-bibdk-mani-volume .field-items .field-items,
-  .field-name-bibdk-mani-section .field-items .field-items{
+  .field-name-bibdk-mani-section .field-items .field-items {
     margin-left: 120px;
     width: 340px;
   }
 
 }
 
-
 // manifestation in cart
 .cart-item-checkbox .manifestation-data .field-label-hidden .field-items {
-margin-left:0;
+  margin-left: 0;
 }
 
 //
@@ -263,70 +260,69 @@ margin-left:0;
 
       .other-icon-small {
         background-position: 0 0;
-        width: 19px;
-        height: 19px;
+        width: 22px;
+        height: 22px;
       }
       .article-icon-small {
-        background-position: -21px 0;
+        background-position: -24px 0;
         width: 17px;
         height: 19px;
       }
       .bog-store-bogstaver-icon-small {
-        background-position: -40px 0;
+        background-position: -43px 0;
         width: 25px;
         height: 22px;
       }
       .book-icon-small {
-        background-position: -67px 0;
+        background-position: -70px 0;
         width: 16px;
         height: 22px;
       }
       .movie-icon-small {
-        background-position: -85px 0;
+        background-position: -88px 0;
         width: 17px;
         height: 20px;
       }
       .lyd-icon-small {
-        background-position: -104px 0;
+        background-position: -107px 0;
         width: 19px;
         height: 19px;
       }
       .audiobook-icon-small {
-        background-position: -125px 0;
+        background-position: -128px 0;
         width: 25px;
         height: 22px;
       }
       .music-icon-small {
-        background-position: -152px 0;
+        background-position: -155px 0;
         width: 19px;
         height: 15px;
       }
       .online-icon-small {
-        background-position: -173px 0;
+        background-position: -176px 0;
         width: 19px;
         height: 21px;
       }
       .sheetmusic-icon-small {
-        background-position: -194px 0;
+        background-position: -197px 0;
         width: 19px;
         height: 20px;
       }
       .punktskrift-icon-small {
-        background-position: -215px 0;
+        background-position: -218px 0;
         width: 17px;
         height: 20px;
       }
       .game-icon-small {
-        background-position: -234px 0;
+        background-position: -237px 0;
         width: 21px;
         height: 12px;
       }
       .tidsskrifter-icon-small {
-        background-position: -257px 0;
+        background-position: -260px 0;
         width: 17px;
         height: 20px;
       }
     }
+  }
 }
-}
-
