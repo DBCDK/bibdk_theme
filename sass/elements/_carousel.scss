@@ -2,14 +2,6 @@
 // Carousel
 // =============================================================================
 
-// VARIABLES
-$form-width:       188px;
-
-// FUNCTIONS
-@function calculate-select-width($n) {
-  @return $n + 24
-}
-
 #carousel-wrapper {
   background-color: $light_grey1;
 }
@@ -36,14 +28,32 @@ $form-width:       188px;
 }
 
 .rs-carousel-select {
+    .works-control {
+        background-color: #FFFFFF;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
+        height: 30px;
+        line-height: 30px;
+        @include border-radius(6px);
+        float: left;
+        padding: 0 10px 0 20px;
+        min-width: 200px;
+    }
+    .dropdown-menu {
+        display: inline-block;
+        top: 60px;
+        right: 0px;
+        margin: 0px;
+        min-width: 228px;
+    }
+
+}
+
+.rs-carousel-select {
   text-align: right;
   float: right;
   form {
-    // width: $form-width;
     height: 30px;
     display: inline-block;
-    // overflow: hidden;
-    // background: url("../img/carousel-select-bg.png") 0 0 no-repeat;
   }
   text-align: right;
   float: right;
@@ -59,22 +69,6 @@ $form-width:       188px;
     padding: 5px;
   }
 
-  /*
-  select {
-    background-color: ;
-    height: 30px;
-    line-height: 30px;
-    // width: calculate-select-width($form-width);
-    padding:6px;
-    // border:none;
-    background-color: transparent;
-  }
-  option {
-    height: 20px;
-    line-height: 20px;
-    padding: 5px;
-  }
-  */
 }
 
 .rs-carousel-inner {
