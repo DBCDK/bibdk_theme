@@ -117,6 +117,10 @@ form#search-block-form {
         border-top: solid 1px darken($light_grey3, 5%);
         position: relative;
         margin-top: 0px;
+        &:hover {
+          color: $dark_grey5;
+          background: $light_grey1;
+        }
       }
     }
     &:first-child input[type=submit] {
