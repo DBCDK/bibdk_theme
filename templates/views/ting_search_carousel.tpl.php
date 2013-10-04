@@ -28,7 +28,7 @@
             <span class="selected-text" tabindex="" accesskey=""><?php echo $searches[0]['title'] ?></span>
             <span class="icon icon-right icon-blue-down">?</span>
           </a>
-          <ul class="dropdown-menu dropdown-rightalign visuallyhidden">
+          <ul class="dropdown-menu dropdown-rightalign rs-carousel-tabs visuallyhidden">
           <?php foreach ($searches as $i => $search): ?>
             <li><a class="foo<?php echo $i; ?>" href="#<?php echo $i; ?>" data-value="<?php echo $i; ?>"><?php echo $searches[$i]['title'] ?></a></li>
           <?php endforeach; ?>

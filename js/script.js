@@ -555,7 +555,7 @@
 
       // **************************** CAROUSEL ********************************************** //
 
-
+/*
       var carousel_request_sent = [];
       var carousel_current_index = 0;
       var carousel_cache = [];
@@ -654,7 +654,7 @@
         carousel_init(selected);
         return false;
       });
-
+*/
 
       // NO CODE AFTER THIS!
     }
