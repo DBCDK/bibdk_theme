@@ -782,6 +782,15 @@ p.note-localisations {
     padding: 5px;
   }
 
+  div.form-item.form-type-select {
+    display: inline;
+    padding: 0;
+  }
+
+  div.form-item:after {
+    display: none;
+  }
+
   select {
     font-size: 12px;
   }
@@ -794,6 +803,7 @@ p.note-localisations {
   }
   .helptext {
     float: right;
+    top: 0;
   }
 
 }
