@@ -24,6 +24,10 @@
 .element {
   border: solid 1px $borderColor;
   border-bottom: none;
+
+  .collection-msg {
+    padding-top: 0.2em;
+  }
 }
 
 #popup .element {
