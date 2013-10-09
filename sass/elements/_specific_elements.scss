@@ -802,8 +802,9 @@ p.note-localisations {
     float: left;
   }
   .helptext {
-    float: right;
     top: 0;
+    margin: 0;
+    position: inherit;
   }
 
 }
