@@ -19,7 +19,7 @@
       <div class="toggle-work">
         <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
           <span class="icon icon-left icon-blue-down">&nbsp;</span>
-          <span class="toggle-text" id="selid_<?php print $uid; ?>"><?php echo t('More info'); ?></span>
+          <span class="toggle-text" id="selid-<?php print $uid; ?>"><?php echo t('More info'); ?></span>
           <span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
         </a>
         <?php print $showinfo; ?>
