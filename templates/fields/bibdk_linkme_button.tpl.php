@@ -1,7 +1,7 @@
 <div>
-  <a href="#<?php print $path; ?>"
-     class="popover-button text-small text-lightgrey"><span
-      class="icon icon-left icon-lightgrey-link">&nbsp;</span><?php print $link_text; ?>
+  <a href="#<?php print $path; ?>" class="popover-button text-small text-lightgrey" id="<?php print $selid ?>">
+    <span class="icon icon-left icon-lightgrey-link">&nbsp;</span>
+    <?php print $link_text; ?>
   </a>
 
   <div class='popover element-wrapper visuallyhidden linkme-wrapper'>
