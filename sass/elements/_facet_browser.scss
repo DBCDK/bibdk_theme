@@ -3,6 +3,22 @@
 // Bib.dk search facet browser
 // =============================================================================
 
+.page-search .panel-left {
+    background-color: $light_grey1;
+    padding: 5px;
+    border: solid 1px darken($light_grey3, 5%);
+    border-width: 0 1px 1px;
+    padding: 13px 10px 10px;
+    position: relative;
+    top: -13px;
+}
+
+#carousel-wrapper div[class="span24"] {
+    min-height: 0;
+}
+
+
+
 #ding-facetbrowser-form {
 
   a, fieldset, legend {
