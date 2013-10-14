@@ -2,27 +2,45 @@
 // Carousel
 // =============================================================================
 
+/* Mixins
+   ========================================================================== */
+
+/* RGBa background (https://gist.github.com/1949202) */
+@mixin rgba-background($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba;
+  zoom: 1;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+}
+
+
 #carousel-wrapper {
   background-color: $light_grey1;
 }
 
 .rs-carousel {
+  background-color: inherit;
   padding-top: 30px;
   padding-bottom: 30px;
 
   .rs-carousel-inner {
-    background-color: $light_grey1;
+    background-color: inherit;
+    @include rgba-background($light_grey1, .1);
     min-height: 220px;
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 40px;
+    padding-top: 0px;
 
     .rs-carousel-mask {
+      background-color: inherit;
       max-height: 260px;
       max-width: 100%;
       position: absolute;
       right: 0%;
 
       .rs-carousel-item {
+        background-color: inherit;
         float: left;
         max-width: 150px;
         padding-right: 10px;
@@ -37,6 +55,7 @@
         .rs-carousel-item-title {
           margin-top: 5px;
           line-height: 14px;
+          overflow: hidden;
           a {
             color: $dark_grey2;
             font-weight: bold;
