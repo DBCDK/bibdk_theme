@@ -4,7 +4,7 @@
     <?php if (!empty($fields['bibdk_mani_title'])) : ?>
       <h6>
         <?php print $fields['bibdk_mani_title'][0]['#markup']; ?>
-        <span class="italic normal"> - <?php print $type_translated; ?> <?php print $several_editions; ?></span>
+        <span class="italic normal"> - <?php print $type_translated['type']; ?> <?php print $several_editions; ?></span>
       </h6>
 
       <?php hide($fields['bibdk_mani_title']); ?>
