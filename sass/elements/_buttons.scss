@@ -103,7 +103,8 @@ input[type="submit"].button-as-link {
   &:disabled,
   &.disabled {
     cursor: default;
-    opacity: 0.5;
+    background-color: $light_blue2;
+    background-image: none;
 
     &:hover {
       @include box-shadow(0 0 0);
