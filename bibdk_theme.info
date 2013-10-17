@@ -14,6 +14,7 @@ regions[topbar] = Top bar
 regions[header_actions] = Header actions
 regions[search_panel] = Search panel
 regions[content] = Content
+regions[carousel] = Carousel
 regions[sidebar] = Sidebar
 regions[footer] = Footer
 
