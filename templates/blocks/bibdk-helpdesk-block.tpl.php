@@ -1,5 +1,5 @@
-<div class="span5">
-  <article class="widget widget-biblioteksvagt widget-height-2">
+
+  <article class="widget widget-biblioteksvagt widget-height-2 span6">
     <div class="inner">
 
       <div class="field-title">
@@ -21,5 +21,5 @@
 
     </div>
   </article>
-</div>
+
 
