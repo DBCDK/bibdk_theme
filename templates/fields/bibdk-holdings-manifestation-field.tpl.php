@@ -1,3 +1,4 @@
+<!--
 <ul>
 <li>
     <a href="#<?php print $path; ?>" class="popover-button load-holdings text-small text-lightgrey">
@@ -10,3 +11,4 @@
     </div>
 </li>
 </ul>
+-->
