@@ -357,6 +357,15 @@
         }
       });
 
+
+      // **********************  "ORDER ANY EDITION" POPUP CHECKBOXES  ************************ //
+      $('.bibdk-reservation-item input').click(function(e) {
+        e.preventDefault();
+        $(this).parent().parent().find('a').click();
+        return false;
+      });
+
+
       // ************************ Top menu language menu fix ************************ //
       //
       $('#lang-nav a').each(function() {
@@ -409,22 +418,22 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-          // IE 8 compatibility 
+          // IE 8 compatibility
           $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
           $(this).remove();
       });
-            
+
       $('.bibdk-unmask-password-field').click(function() {
         $('.bibdk-password-field').each(function() {
           if($(this).attr('type') == 'password') {
-            //set type to text  
+            //set type to text
             $("<input type='text' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();                
+            $(this).remove();
           }
           else {
-            //set type to password    
+            //set type to password
             $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();  
+            $(this).remove();
           }
         });
       });
@@ -502,12 +511,12 @@
         // $("#search-block-form").submit();
       });
 
-      // ************************** SELECT SEARCH INPUT ON CLICK ************************* //
+      // ************************** SELECT SEARCH INPUT ON CLICK  ************************* //
       $('form#search-block-form input[name="search_block_form"]').focus(function() {
         this.select();
       });
 
-      // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
+      // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
 
         // Toggle advanced search options
       $('#search-advanced-toggle', context).click(function(e) {
@@ -527,12 +536,12 @@
             $('#search-advanced').toggleClass('visuallyhidden');
         }
 
-      // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
+      // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
           var wAction = $(this).find('.actions').width();
           $(this).find('.manifestation-data').css('margin-right', wAction);
-          
+
         var hAction = $(this).find('.actions').height();
 
           var hData = $(this).find('.manifestation-data').height();
@@ -544,7 +553,7 @@
         $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin);
       });
 
-      // ****************************  POPUP WINDOW CLOSE BUTTON **************************** //
+      // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
       $('.button-close-popup').click(function(e) {
         e.preventDefault();

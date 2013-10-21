@@ -190,13 +190,14 @@
 // Order any edition button
 //
 .order-any-btn-list {
-  margin-left: -50px;
+  right: 0;
+  width: 300px;
 
   h3 {
-    font-size: 1em;
     color: #1890b3;
-    margin-left: 8%;
-    padding: 0 0 10px 0;
+    font-size: 1em;
+    padding: 0 5px 0 10px;
+    text-align: right;
     .icon {
       height: 15px;
       padding-top: 8px;
@@ -211,32 +212,28 @@
 
 .col1 {
   float: left;
-  width: 240px;
-
+  width: 170px;
   .bibdk-popup-order-work {
-    min-width: 60%;
-    margin-right: 200px;
-  }
-
-  a {
-    padding: 6px 0 5px 20px;
+    .bibdk-popup-order-checkbox {
+      float: right;
+      padding: 7px 0 0;
+    }
+    a {
+      padding: 6px 0 5px 20px;
+    }
   }
 }
 
 .col2 {
+  width: 115px;
   float: left;
-  width: 110px;
-  margin-left: -130px;
   text-align: right;
-  padding-right: 20px;
-
   a {
     display: block;
     float: none;
     margin-left: 30px;
     padding: 5px 0 5px 0;
   }
-
   input[type=submit] {
     margin-left: 20px;
   }
