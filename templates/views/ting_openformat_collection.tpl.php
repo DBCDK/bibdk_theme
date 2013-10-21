@@ -8,6 +8,7 @@
       <div class="element-title">
         <div>
           <h2><?php print $title; ?></h2>
+
           <h3><?php print $author; ?></h3>
           <?php if (isset($partOf)) : ?>
             <span>I: <?php print $partOf; ?></span>
@@ -17,7 +18,8 @@
       <div class="msg-<?php print $uid; ?> collection-msg"></div>
       <div class="toggle-work">
         <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
-          <span class="icon icon-left icon-blue-down">&nbsp;</span><span class="toggle-text"><?php echo t('More info'); ?></span>
+          <span class="icon icon-left icon-blue-down">&nbsp;</span>
+          <span class="toggle-text" id="selid-<?php print $uid; ?>"><?php echo t('More info'); ?></span>
           <span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
         </a>
         <?php print $showinfo; ?>

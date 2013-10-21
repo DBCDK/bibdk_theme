@@ -17,19 +17,15 @@ body.page-reservation {
   .form-wrapper, .form-item {
     padding: 3px 0px 4px 0px;
   }
- 
-  .form-step-guide input[type="submit"] {
-    height: 30px;
-    line-height: 30px;
-  }
 
   .fieldset-legend {
     padding: 10px 0 10px;
   }
 
   #popup .messages, #popup .region-content {
-    margin: -15px 20px;
+    margin: 15px 20px;
   }
+
 }
 
 // =============================================================================
@@ -39,7 +35,7 @@ body.page-reservation {
   background: $dark_grey1;
 }
 
-#header-wrapper {
+#header-wrapper {       
   background: $dark_grey2;
   height: 80px;
 }

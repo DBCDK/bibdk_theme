@@ -80,6 +80,7 @@
         }
       });
 
+
       // Handle random html clicks
       $('html').click(function() {
         $('.dropdown-menu').addClass('visuallyhidden');
@@ -409,22 +410,22 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-          // IE 8 compatibility 
+          // IE 8 compatibility
           $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
           $(this).remove();
       });
-            
+
       $('.bibdk-unmask-password-field').click(function() {
         $('.bibdk-password-field').each(function() {
           if($(this).attr('type') == 'password') {
-            //set type to text  
+            //set type to text
             $("<input type='text' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();                
+            $(this).remove();
           }
           else {
-            //set type to password    
+            //set type to password
             $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();  
+            $(this).remove();
           }
         });
       });
@@ -532,7 +533,7 @@
 
           var wAction = $(this).find('.actions').width();
           $(this).find('.manifestation-data').css('margin-right', wAction);
-          
+
         var hAction = $(this).find('.actions').height();
 
           var hData = $(this).find('.manifestation-data').height();
@@ -549,6 +550,17 @@
       $('.button-close-popup').click(function(e) {
         e.preventDefault();
         window.close();
+        return false;
+      });
+
+
+      // **************************** CAROUSEL ********************************************** //
+
+      // Add click event to carousel tabs.
+      $('.rs-carousel-tabs li').once().click(function(e) {
+        e.preventDefault();
+        $('.rs-carousel-tabs').addClass('visuallyhidden');
+        $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
         return false;
       });
 

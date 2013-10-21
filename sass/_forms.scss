@@ -457,7 +457,7 @@ margin-right:0.5em;
 // =============================================================================
 
 .page-reservation .element {
-    padding-top:50px;
+    padding-top:10px;
 }
 
 .page-reservation #popup #title {
@@ -474,20 +474,30 @@ margin-right:0.5em;
     padding: 10px 0;
 }
 
+
+
 .page-reservation .form-step-guide {
     position:fixed;
-    top:11px;
+    top:0px;
     left:11px;
     right:11px;
-    // background:#999;
+
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-top-color: $elementWrapper;
+  margin: 0 1px;
 
     input[type="submit"] {
         width:25%;
-        height:50px;
-        line-height:50px;
+        height: 30px;
+        line-height: 30px;
         font-size:14px;
         border-radius:0;
         text-shadow: none;
+
+      border-top-color: white;
+      border-top-style: solid;
+      border-top-width: 1px;
     }
 }
 
