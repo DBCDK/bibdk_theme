@@ -197,7 +197,7 @@
     color: #1890b3;
     font-size: 1em;
     padding: 0 5px 0 10px;
-    text-align: right;
+    text-align: left;
     .icon {
       height: 15px;
       padding-top: 8px;
@@ -215,8 +215,8 @@
   width: 170px;
   .bibdk-popup-order-work {
     .bibdk-popup-order-checkbox {
-      float: right;
-      padding: 7px 0 0;
+      float: left;
+      padding: 8px 0 0 11px;
     }
     a {
       padding: 6px 0 5px 20px;
@@ -228,6 +228,10 @@
   width: 115px;
   float: left;
   text-align: right;
+  h3 {
+    text-align: right;
+    padding: 0 5px;
+  }
   a {
     display: block;
     float: none;
