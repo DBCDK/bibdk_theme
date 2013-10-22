@@ -4,7 +4,7 @@
 // =============================================================================
 
 // breakpoints:
-$break-max: 950px;
+$break-max: 960px;
 
 // span margin;
 $grid-margin-left: 10px;
@@ -29,7 +29,7 @@ $grid-margin-left: 10px;
   clear: both;
 }
 
-div[class^="span"], span[class^="span"] {
+div[class^="span"], span[class^="span"], article[class^="span"] {
   float: left;
   min-height: 1px;
   position:relative;
