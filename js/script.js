@@ -5,6 +5,11 @@
 
     attach: function(context, settings) {
 
+      // Toggle cart-checkbox 
+      $('.cart-checkbox').click(function(e) {
+        e.stopPropagation();
+      });
+
       // Toggle tables
       $('.table-toggle a').click(function(e) {
         e.preventDefault();
