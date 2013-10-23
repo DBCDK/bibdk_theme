@@ -127,6 +127,10 @@ a.inactive {
 .library-details-column-2 {
   float: left;
   width: 50%;
+  .item-list ul li {
+    background-image: none;
+    background: none;
+  }
 }
 
 .library-details-column-1 .subheader,
