@@ -252,7 +252,10 @@ left:-10px;
     right: 15px;
     left: 15px;
   }
-  &:hover footer a {
+  a {
+    font-weight:bold;
+  }
+  &:hover a {
     text-decoration: underline;
   }
 }
@@ -262,7 +265,7 @@ left:-10px;
 //
 .widget-dark-grey {
   background: $dark_grey3;
-  color: $light_grey4;
+  color: $white;
   font-size: 0.91666em;
   // 11px
 
@@ -298,7 +301,7 @@ left:-10px;
 //
 .widget-light-grey {
   background: $light_grey2;
-  color: $dark_grey3;
+  color: $black;
 
   &:hover {
     background: lighten($light_grey2, 2%);
