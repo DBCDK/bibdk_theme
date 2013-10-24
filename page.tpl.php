@@ -91,7 +91,13 @@
     <div class="row">
       <div class="span24">
         <div id="subjects">
-          <?php print render($page['subjects']); ?>
+          <?php
+            if ( $variables['is_front'] == TRUE ) {
+              print render($page['subjects']);
+            } else {
+              unset($page['subjects']);
+            }
+          ?>
         </div>
         <!-- #subjects -->
       </div>
