@@ -362,6 +362,12 @@
       $('.bibdk-reservation-item input').click(function(e) {
         e.preventDefault();
         $(this).parent().parent().find('a').click();
+        $(this).attr('checked','checked');
+        return false;
+      });
+      $('.bibdk-reservation-item a').click(function(e) {
+        e.preventDefault();
+        $(this).parent().find('input').attr('checked','checked');
         return false;
       });
 
