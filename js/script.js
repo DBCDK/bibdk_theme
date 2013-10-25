@@ -7,6 +7,7 @@
 
       // Toggle cart-checkbox 
       $('.cart-checkbox').click(function(e) {
+        $('.cart-checkbox').css('cursor', 'pointer');  
         e.stopPropagation();
       });
 
