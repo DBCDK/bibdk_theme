@@ -13,9 +13,6 @@ $grid-margin-left: 10px;
   margin-left: 0px;
   margin-right: 0px;
   *zoom: 1;
-  @media screen and (min-width: $break-max) {
-    margin-left: -10px;
-  }
 }
 
 .row:before,

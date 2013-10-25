@@ -1,5 +1,5 @@
 // =============================================================================
-// CTools modal window
+// Bibliotek.dk Subject hierachy
 // =============================================================================
 
 #subjects-wrapper {
@@ -12,6 +12,9 @@
 
 #bibdk-subject-hierarchy {
 
+    position: relative;
+    left: 0px;
+
     h3 {
       margin-left: 0px;
       color: $btn_blue;
@@ -21,9 +24,6 @@
     p {
       margin: 0.5em 0;
     }
-    position: relative;
-    left: -10px;
-
     .subject-hierarchy-item {
         margin: 0 0 0.5em 0;
         overflow: hidden;
@@ -35,7 +35,7 @@
             font-weight: bold;
         }
         .note {
-            color: $dark_grey1;
+            color: $dark_grey3;
         }
     }
 
