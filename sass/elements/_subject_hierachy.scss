@@ -1,0 +1,43 @@
+// =============================================================================
+// CTools modal window
+// =============================================================================
+
+#subjects-wrapper {
+    background-color: $light_grey1;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+#bibdk-subject-hierarchy {
+
+    h3 {
+      margin-left: 0px;
+      color: $btn_blue;
+      font-size: 15px;
+      line-height: 30px;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    position: relative;
+    left: -10px;
+
+    .subject-hierarchy-item {
+        margin: 0 0 0.5em 0;
+        overflow: hidden;
+        outline: 0px solid red;
+        .header {
+            a {
+              color: $dark_grey1;
+            }
+            font-weight: bold;
+        }
+        .note {
+            color: $dark_grey1;
+        }
+    }
+
+}
+
