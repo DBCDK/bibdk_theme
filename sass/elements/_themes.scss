@@ -1,59 +1,47 @@
 // =============================================================================
-// Bibliotek.dk Subject hierachy
+// Temaindgange
 // =============================================================================
 
 $blue: #d2eaf1;
 $themesBg: #f2f4f3;
 
-#bibdk-subject-hierarchy {
-
-    .themes__item {
-        float: left;
-        width: 25%;
-        overflow: hidden;
-        p {
-            margin: 0;
-            height: 85px;
-            position: relative;
-        }
-        .header {
-            display: block;
-            padding-right: 20px;
-            padding-bottom: 5px;
-            font-size: 14px;
-            font-weight: bold;
-            a {
-              color: $dark_grey1;
-            }
-        }
-        .note {
-            display: block;
-            padding-bottom: 20px;
-            padding-right: 20px;
-            a {
-              color: $dark_grey3;
-            }
-        }
-    }
-    .themes__item--active > p:after {
-        position: absolute;
-        z-index: 100;
-        bottom: 0;
-        left: 50%;
-        margin-left: -8px;
-        @include css-triangle(8px, $blue, bottom);
-    }
-    
-}
-
-// =============================================================================
-// Temaindgange
-// =============================================================================
-
 .themes {
   background-color: $themesBg;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.themes__item {
+  float: left;
+  width: 25%;
+  overflow: hidden;
+
+  a {
+    display: block;
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #25292c;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
+
+.themes__item--active {
+
+  > a:after {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    @include css-triangle(8px, $blue, bottom);
+  }
+
 }
 
 // Container of the sublists

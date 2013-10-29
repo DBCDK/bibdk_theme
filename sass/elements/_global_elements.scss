@@ -8,8 +8,8 @@ body {
 
 body.page-overlay,
 body.page-reservation {
-  background: $white; 
- 
+  background: $white;
+
   .bottom-space {
     padding-bottom: 10px;
   }
@@ -35,7 +35,7 @@ body.page-reservation {
   background: $dark_grey1;
 }
 
-#header-wrapper {       
+#header-wrapper {
   background: $dark_grey2;
   height: 80px;
 }
@@ -46,11 +46,13 @@ body.page-reservation {
 }
 
 #subjects-wrapper {
-  background: $light_grey2;
-  border-bottom: 1px solid $light_grey2;
+  background-color: $light_grey1;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  border-top: 1px solid $light_grey3;
+  border-bottom: 1px solid $light_grey3;
   min-height: 0px;
 }
-
 
 #messages-wrapper {
   background:  $nav_msg_bg;

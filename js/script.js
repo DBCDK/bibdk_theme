@@ -5,7 +5,7 @@
 
     attach: function(context, settings) {
 
-      // Toggle cart-checkbox 
+      // Toggle cart-checkbox
       $('.cart-checkbox').click(function(e) {
         e.stopPropagation();
       });
@@ -568,6 +568,13 @@
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
         return false;
       });
+
+
+      // **************************** EMNEHIERARKI ********************************************** //
+
+      $('.themes').themes();
+
+
 
       // NO CODE AFTER THIS!
     }
