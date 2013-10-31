@@ -364,6 +364,21 @@
         }
       });
 
+
+      // **********************  "ORDER ANY EDITION" POPUP CHECKBOXES  ************************ //
+      $('.bibdk-reservation-item input').click(function(e) {
+        e.preventDefault();
+        $(this).parent().parent().find('a').click();
+        $(this).attr('checked','checked');
+        return false;
+      });
+      $('.bibdk-reservation-item a').click(function(e) {
+        e.preventDefault();
+        $(this).parent().find('input').attr('checked','checked');
+        return false;
+      });
+
+
       // ************************ Top menu language menu fix ************************ //
       //
       $('#lang-nav a').each(function() {
@@ -509,12 +524,12 @@
         // $("#search-block-form").submit();
       });
 
-      // ************************** SELECT SEARCH INPUT ON CLICK ************************* //
+      // ************************** SELECT SEARCH INPUT ON CLICK  ************************* //
       $('form#search-block-form input[name="search_block_form"]').focus(function() {
         this.select();
       });
 
-      // ****************************  TOGGLE 'EXPAND SEARCH' **************************** //
+      // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
 
         // Toggle advanced search options
       $('#search-advanced-toggle', context).click(function(e) {
@@ -534,7 +549,7 @@
             $('#search-advanced').toggleClass('visuallyhidden');
         }
 
-      // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT *************** //
+      // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
           var wAction = $(this).find('.actions').width();
@@ -551,7 +566,7 @@
         $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin);
       });
 
-      // ****************************  POPUP WINDOW CLOSE BUTTON **************************** //
+      // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
       $('.button-close-popup').click(function(e) {
         e.preventDefault();
