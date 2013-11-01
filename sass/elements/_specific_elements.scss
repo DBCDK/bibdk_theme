@@ -102,7 +102,11 @@ a.inactive {
     font-weight: normal;
     color: $light_grey5;
   }
-
+  
+  .item-list ul li{
+    margin: 0px 0px 0px 0px 
+  }
+    
   ul {
     list-style-type: none;
   }
@@ -119,7 +123,7 @@ a.inactive {
   }
 
   &.order-agency {
-
+        
   }
 }
 
@@ -127,6 +131,10 @@ a.inactive {
 .library-details-column-2 {
   float: left;
   width: 50%;
+  .item-list ul li {
+    background-image: none;
+    background: none;
+  }
 }
 
 .library-details-column-1 .subheader,
@@ -225,6 +233,11 @@ article.widget-biblioteksvagt{
   float:right;
 }
 
+.bibdk_article_ajax_replace {
+position:relative;
+left:-10px;
+}
+
 
 //
 // Common widget styling
@@ -243,7 +256,10 @@ article.widget-biblioteksvagt{
     right: 15px;
     left: 15px;
   }
-  &:hover footer a {
+  a {
+    font-weight:bold;
+  }
+  &:hover a {
     text-decoration: underline;
   }
 }
@@ -253,7 +269,7 @@ article.widget-biblioteksvagt{
 //
 .widget-dark-grey {
   background: $dark_grey3;
-  color: $light_grey4;
+  color: $white;
   font-size: 0.91666em;
   // 11px
 
@@ -289,7 +305,7 @@ article.widget-biblioteksvagt{
 //
 .widget-light-grey {
   background: $light_grey2;
-  color: $dark_grey3;
+  color: $black;
 
   &:hover {
     background: lighten($light_grey2, 2%);
