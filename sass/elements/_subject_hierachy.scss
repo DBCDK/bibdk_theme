@@ -43,7 +43,16 @@ $themesBg: #f2f4f3;
         margin-left: -8px;
         @include css-triangle(8px, $blue, bottom);
     }
-    
+
+    .bibdk-subject-hierarchy-header {
+        color: $btn_blue;
+        font-size: 15px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
 }
 
 // =============================================================================
@@ -86,6 +95,7 @@ $themesBg: #f2f4f3;
   a {
     @include inline-block();
     font-size:14px;
+    margin-right: 3px;
 
     &:after {
       content: " \203A  ";

@@ -47,11 +47,12 @@ body.page-reservation {
 
 #subjects-wrapper {
   background-color: $light_grey1;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  border-top: 1px solid $light_grey3;
-  border-bottom: 1px solid $light_grey3;
   min-height: 0px;
+  border-bottom: 1px solid $light_grey3;
+  .region-subjects {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
 }
 
 #messages-wrapper {
