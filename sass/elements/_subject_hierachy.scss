@@ -23,7 +23,7 @@ $themesBg: #f2f4f3;
             font-size: 14px;
             font-weight: bold;
             a {
-              color: $dark_grey1;
+              // color: $dark_grey1;
             }
         }
         .note {
@@ -31,7 +31,7 @@ $themesBg: #f2f4f3;
             padding-bottom: 20px;
             padding-right: 20px;
             a {
-              color: $dark_grey3;
+              // color: $dark_grey3;
             }
         }
     }
@@ -45,7 +45,8 @@ $themesBg: #f2f4f3;
     }
 
     .bibdk-subject-hierarchy-header {
-        color: $btn_blue;
+        // color: $btn_blue;
+        color: $dark_grey3;
         font-size: 15px;
         height: 30px;
         line-height: 30px;
