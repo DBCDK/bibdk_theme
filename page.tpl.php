@@ -92,7 +92,7 @@
       <div class="span24 clearfix">
         <div id="subjects">
           <?php
-            if ( $variables['is_front'] == TRUE ) {
+            if ( $variables['is_front'] == TRUE && $variables['language']->language == 'da' ) {
               print render($page['subjects']);
             } else {
               unset($page['subjects']);
