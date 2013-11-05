@@ -37,10 +37,6 @@ a.inactive {
   }
 }
 
-.full-view-links a{
-  padding: 0 10px;
-}
-
 .panel-separator {
   margin: 0 10px;
 }
@@ -78,6 +74,15 @@ a.inactive {
 
 .full-view-links {
   padding: 0 10px;
+
+  a {
+    padding: 0 10px;
+  }
+
+  .ajax-progress .throbber{
+    float: right;
+    margin: 7px 0 0 5px;
+  }
 }
 
 .panel-separator {
