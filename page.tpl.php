@@ -52,7 +52,7 @@
 <section id="messages-wrapper" data-role="alert">
   <div class="container">
     <div class="row">
-      <div class="span24">
+      <div class="span24 clearfix">
         <a name="messages"></a>
         <div id="messages">
           <?php print $messages; ?>
@@ -89,9 +89,15 @@
 <section id="subjects-wrapper">
   <div class="container">
     <div class="row">
-      <div class="span24">
+      <div class="span24 clearfix">
         <div id="subjects">
-          <?php print render($page['subjects']); ?>
+          <?php
+            if ( $variables['is_front'] == TRUE && $variables['language']->language == 'da' ) {
+              print render($page['subjects']);
+            } else {
+              unset($page['subjects']);
+            }
+          ?>
         </div>
         <!-- #subjects -->
       </div>

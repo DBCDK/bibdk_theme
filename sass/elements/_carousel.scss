@@ -16,7 +16,8 @@
 
 
 #carousel-wrapper {
-  background-color: $light_grey1;
+  // background-color: $light_grey1;
+  background-color: $white;
 }
 
 .rs-carousel {
@@ -26,7 +27,7 @@
 
   .rs-carousel-inner {
     background-color: inherit;
-    @include rgba-background($light_grey1, .1);
+    /* @include rgba-background($light_grey1, .1); */
     min-height: 220px;
     margin-bottom: 0px;
     margin-top: 40px;
