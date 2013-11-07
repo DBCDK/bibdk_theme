@@ -22,8 +22,16 @@ body.page-reservation {
     padding: 10px 0 10px;
   }
 
-  #popup .messages, #popup .region-content {
+  #popup .region-content {
     margin: 15px 20px;
+  }
+
+  #popup .messages {
+    margin: 30px 20px 5px 20px;
+  }
+
+  #popup #messages + .region-content {
+    margin-top: 0px;
   }
 
 }
