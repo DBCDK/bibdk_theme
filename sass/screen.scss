@@ -24,12 +24,14 @@
 }
 
 
+
 // =============================================================================
 // Import reset grid and custom mixins i.e.
 // =============================================================================
 @import "normalize";
 @import "grid";
 @import "colors";
+@import "mixins";
 
 
 
@@ -71,7 +73,7 @@
 @import "elements/search_work_manifestations";
 @import "elements/ctools_modal";
 @import "elements/carousel";
-
+@import "elements/subject_hierachy";
 
 // =============================================================================
 // Import extra styling which needs to be added last

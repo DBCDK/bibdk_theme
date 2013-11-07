@@ -35,7 +35,7 @@ body.page-reservation {
   background: $dark_grey1;
 }
 
-#header-wrapper {       
+#header-wrapper {
   background: $dark_grey2;
   height: 80px;
 }
@@ -46,11 +46,14 @@ body.page-reservation {
 }
 
 #subjects-wrapper {
-  background: $light_grey2;
-  border-bottom: 1px solid $light_grey2;
+  background-color: $light_grey1;
   min-height: 0px;
+  border-bottom: 0px solid $light_grey3;
+  .region-subjects {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
 }
-
 
 #messages-wrapper {
   background:  $nav_msg_bg;

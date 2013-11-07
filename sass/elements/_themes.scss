@@ -1,0 +1,108 @@
+// =============================================================================
+// Temaindgange
+// =============================================================================
+
+$blue: #d2eaf1;
+$themesBg: #f2f4f3;
+
+.themes {
+  background-color: $themesBg;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.themes__item {
+  float: left;
+  width: 25%;
+  overflow: hidden;
+
+  a {
+    display: block;
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #25292c;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
+
+.themes__item--active {
+
+  > a:after {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    @include css-triangle(8px, $blue, bottom);
+  }
+
+}
+
+// Container of the sublists
+.themes__sublists__wrapper {
+  float: left;
+  width: 100%;
+  display:none;
+}
+.themes__sublists {
+  position:relative;
+  padding:15px;
+  border:solid 5px #d2eaf1;
+  background-color:#fff;
+  margin-bottom:30px;
+}
+
+// Close button
+.themes__close-button {
+  position:absolute;
+  top:8px;
+  right:10px;
+  cursor: pointer;
+}
+
+
+// Breadcrumb
+.themes__breadcrumb {
+  margin-bottom:20px;
+
+  a {
+    @include inline-block();
+    font-size:14px;
+
+    &:after {
+      content: " \203A  ";
+    }
+  }
+
+  a:last-child {
+    font-weight:bold;
+
+    &:after {
+      content: "";
+    }
+  }
+
+}
+
+// Each sublist
+.themes__sublist {
+
+  li {
+    @include inline-block(top);
+    width: 25%;
+    margin-right: -4px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    display:block;
+    padding-right:20px;
+  }
+
+}
