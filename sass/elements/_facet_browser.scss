@@ -17,6 +17,10 @@
     top: -13px;
 }
 
+.page-search .panel-left:empty {
+    display: none;
+}
+
 #carousel-wrapper div[class="span24"] {
     min-height: 0;
 }
