@@ -563,7 +563,7 @@
         var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
         $(this).find('.secondary-actions').height(hSecondaryAction);
         var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
-        $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin);
+        $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin + 15);
       });
 
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
