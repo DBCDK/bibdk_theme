@@ -1,13 +1,15 @@
+
 (function($) {
 
-    Drupal.settings.full_view = false;
+  Drupal.settings.full_view = false;
+
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
 
       // Toggle cart-checkbox
       $('.cart-checkbox').click(function(e) {
-        $('.cart-checkbox').css('cursor', 'pointer');  
+        $('.cart-checkbox').css('cursor', 'pointer');
         e.stopPropagation();
       });
 
@@ -41,7 +43,6 @@
        });*/
 
       // $('html').click(function() {
-
       // $('.header-action-vejviser').find('a').show();
       // $('.header-action-vejviser').find('form').addClass('visuallyhidden');
       // $('.header-action-vejviser').css({
@@ -139,30 +140,30 @@
         }
       });
 
-        // Toggle visibility of "next section of an element"
-        $('.work-toggle-element', context).bind('show-work', function (e) {
-            var id = $(this).attr('href');
-            var msg_id = ".msg-" + id.substring(6);
+      // Toggle visibility of "next section of an element"
+      $('.work-toggle-element', context).bind('show-work', function (e) {
+          var id = $(this).attr('href');
+          var msg_id = ".msg-" + id.substring(6);
 
-            if (!$(this).hasClass('toggled')) {
-                $(this).children('.toggle-text').toggleClass('hidden');
-                $(this).addClass('toggled');
-                $(this).closest('.element-section').next().removeClass('visuallyhidden');
-            }
-        });
+          if (!$(this).hasClass('toggled')) {
+              $(this).children('.toggle-text').toggleClass('hidden');
+              $(this).addClass('toggled');
+              $(this).closest('.element-section').next().removeClass('visuallyhidden');
+          }
+      });
 
 
-        $('.work-toggle-element', context).bind('hide-work', function (e) {
-            var id = $(this).attr('href');
-            var msg_id = ".msg-" + id.substring(6);
-            if ($(this).hasClass('toggled')) {
-                $(this).children('.toggle-text').toggleClass('hidden');
-                $(this).removeClass('toggled');
-                $(this).closest('.element-section').next().addClass('visuallyhidden');
-            }
-        });
+      $('.work-toggle-element', context).bind('hide-work', function (e) {
+          var id = $(this).attr('href');
+          var msg_id = ".msg-" + id.substring(6);
+          if ($(this).hasClass('toggled')) {
+              $(this).children('.toggle-text').toggleClass('hidden');
+              $(this).removeClass('toggled');
+              $(this).closest('.element-section').next().addClass('visuallyhidden');
+          }
+      });
 
-        // Make entire element clickable
+      // Make entire element clickable
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
@@ -531,7 +532,7 @@
 
       // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
 
-        // Toggle advanced search options
+      // Toggle advanced search options
       $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
@@ -544,10 +545,11 @@
         }
       });
 
-        if($('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1'){
-            $('#search-advanced-toggle').toggleClass('toggled');
-            $('#search-advanced').toggleClass('visuallyhidden');
-        }
+      // context == '.container' when clicking on a search page tab.
+      if ( context == '.container' && $('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1' ) {
+          $('#search-advanced-toggle').toggleClass('toggled');
+          $('#search-advanced').toggleClass('visuallyhidden');
+      }
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
@@ -588,9 +590,7 @@
 
       // **************************** EMNEHIERARKI ********************************************** //
 
-      $('.themes').themes();
-
-
+      // $('.themes').themes();
 
       // NO CODE AFTER THIS!
     }
