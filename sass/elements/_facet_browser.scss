@@ -3,6 +3,10 @@
 // Bib.dk search facet browser
 // =============================================================================
 
+.page-search .span24 .span5 {
+    margin-left: 0;
+}
+
 .page-search .panel-left {
     background-color: $light_grey1;
     padding: 5px;
@@ -11,6 +15,10 @@
     padding: 13px 10px 10px;
     position: relative;
     top: -13px;
+}
+
+.page-search .panel-left:empty {
+    display: none;
 }
 
 #carousel-wrapper div[class="span24"] {
@@ -26,7 +34,9 @@
   }
 
   legend {
+    padding-right: 0;
     padding-left: 0;
+    width: 100%;
   }
 
   .form-item {

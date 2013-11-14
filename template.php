@@ -38,6 +38,16 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_user_pass_reset',
       'render element' => 'form',
     ),
+    'bibdk_search_element' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_custom_search-search-element-form',
+      'render element' => 'form',
+    ),
+    'bibdk_openuserstatus_help_icon' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_openuserstatus_help_icon',
+      'render element' => 'form',
+    ),
   );
 }
 
@@ -280,8 +290,11 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // language, net
   _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
 
+  // Platform, games
+  _break_into_columns('40cb1fd2-d934-0734-69f7-01248b663172', '3c0f6ff4-63f2-8a54-4500-6198904477ba', 2, $form);
+
   // genre, games
-  _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 4, $form);
+  _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 3, $form);
 
   // genre, music
   _break_into_columns('57308136-ba7d-8224-19af-26b0f6567f77', 'e8258795-3bbe-5e34-fda2-04a8b420d93f', 4, $form);

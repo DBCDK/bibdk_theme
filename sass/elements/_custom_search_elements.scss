@@ -194,6 +194,14 @@ div#search-advanced-panel {
     width: 100%;
   }
 
+  .popover  {
+    left: 0;
+    text-align: left;
+    .user-msg {
+      min-height: 1.5em;
+    }
+  }
+
   input {
     margin-top: 5px;
     height: 30px;
@@ -619,16 +627,19 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   select {
     width: 100%;
   }
-  .element-wrapper.titel,
   .element-wrapper.platform {
-    width: 49%;
+    width: 40%;
+    .bibdk-custom-search-element .column {
+      width: 49%;
+      float: left;
+    }
   }
   .element-wrapper.spilgenre_type {
-    width: 85%;
+    width: 59%;
     margin-left: 0;
     margin-top: 8px;
     .bibdk-custom-search-element .column {
-      width: 25%;
+      width: 33%;
       float: left;
     }
   }
