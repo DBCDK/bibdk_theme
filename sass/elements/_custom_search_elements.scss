@@ -194,6 +194,14 @@ div#search-advanced-panel {
     width: 100%;
   }
 
+  .popover  {
+    left: 0;
+    text-align: left;
+    .user-msg {
+      min-height: 1.5em;
+    }
+  }
+
   input {
     margin-top: 5px;
     height: 30px;

@@ -38,6 +38,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_user_pass_reset',
       'render element' => 'form',
     ),
+    'bibdk_search_element' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_custom_search-search-element-form',
+      'render element' => 'form',
+    ),
   );
 }
 

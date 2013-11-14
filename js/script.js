@@ -477,7 +477,6 @@
       $('.linkme-wrapper .close').click(function(e) {
         $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
       });
-
       // Infomedia field
       $('.infomedia-button').click(function(e) {
         $('.popover').addClass('visuallyhidden');
@@ -486,8 +485,8 @@
       $('.infomedia-wrapper .close').click(function(e) {
         $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
       });
-
       /* /end TODO: delete after sprint 32 */
+
       // ****************************  Seasonal images **************************** //
       var today = new Date();
       var month = today.getMonth() + 1;
