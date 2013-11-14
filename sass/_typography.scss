@@ -149,8 +149,15 @@ hr {
 .text-small {
   font-size:0.916667; // 11px;
 }
-
-
+.text-white {
+  color: $white;
+}
+.text-darkgrey {
+  color: $dark_grey5;
+}
+.text-lightgrey {
+  color: $light_grey5;
+}
 
 // =============================================================================
 // Tables
