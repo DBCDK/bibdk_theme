@@ -43,6 +43,11 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_custom_search-search-element-form',
       'render element' => 'form',
     ),
+    'bibdk_openuserstatus_help_icon' => array(
+      'path' => $path . '/blocks',
+      'template' => 'bibdk_openuserstatus_help_icon',
+      'render element' => 'form',
+    ),
   );
 }
 
