@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+// Colors
+$black:       #000000;
+$white:       #ffffff;
+$btn_blue:    #178bad; /* was #2590b0; */
+$nav_user_bg: #00a271;
+$nav_msg_bg:  #1890b3;
+$zebraOdd:    #c7e1e8;
+$zebraEven:   lighten($zebraOdd, 10%);
+$dark_grey1:  #161616;
+$dark_grey2:  #25292c;
+$dark_grey3:  #3c4043;
+$dark_grey4:  #42474a;
+$dark_grey5:  #51565a;
+$light_grey1: #f2f3f3;
+$light_grey2: #e8e8e8;
+$light_grey3: #dcdcdc;
+$light_grey4: #999999;
+$light_grey5: #6c7379;
+// $light_blue1: #d1e9f0;
+$light_blue1: #c3dfe7;
+$light_blue2: #84C0D2;
+$elementWrapper: #ebebeb;
+$baseColor:   $dark_grey2;
+$labelColor:  $dark_grey5;
+$borderColor: $light_grey3;
+$messagesGreen:   #47a747;
+$messagesYellow:  #f9b000;
+$messagesRed:     #e04646;
