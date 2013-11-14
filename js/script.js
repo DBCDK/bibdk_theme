@@ -1,13 +1,13 @@
 (function($) {
 
-    Drupal.settings.full_view = false;
+  Drupal.settings.full_view = false;
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
 
       // Toggle cart-checkbox 
       $('.cart-checkbox').click(function(e) {
-        $('.cart-checkbox').css('cursor', 'pointer');  
+        $('.cart-checkbox').css('cursor', 'pointer');
         e.stopPropagation();
       });
 
@@ -119,50 +119,51 @@
 
       // Disable button and dropdown when toggling details of a work
       $('.work-toggle-element', context).click(function(e) {
-          e.preventDefault();
-          $(this).trigger('load-work');
+        e.preventDefault();
+        $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
-            $(this).trigger('show-work');
+          $(this).trigger('show-work');
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
-            if (!Drupal.settings.full_view){
-                $('html, body').animate({
-                    scrollTop: $(this).closest('.work').offset().top
-                }, 500);
-            }
-        } else {
-            $(this).trigger('hide-work');
+          if(!Drupal.settings.full_view) {
+            $('html, body').animate({
+              scrollTop: $(this).closest('.work').offset().top
+            }, 500);
+          }
+        }
+        else {
+          $(this).trigger('hide-work');
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
         }
       });
 
-        // Toggle visibility of "next section of an element"
-        $('.work-toggle-element', context).bind('show-work', function (e) {
-            var id = $(this).attr('href');
-            var msg_id = ".msg-" + id.substring(6);
+      // Toggle visibility of "next section of an element"
+      $('.work-toggle-element', context).bind('show-work', function(e) {
+        var id = $(this).attr('href');
+        var msg_id = ".msg-" + id.substring(6);
 
-            if (!$(this).hasClass('toggled')) {
-                $(this).children('.toggle-text').toggleClass('hidden');
-                $(this).addClass('toggled');
-                $(this).closest('.element-section').next().removeClass('visuallyhidden');
-            }
-        });
+        if(!$(this).hasClass('toggled')) {
+          $(this).children('.toggle-text').toggleClass('hidden');
+          $(this).addClass('toggled');
+          $(this).closest('.element-section').next().removeClass('visuallyhidden');
+        }
+      });
 
 
-        $('.work-toggle-element', context).bind('hide-work', function (e) {
-            var id = $(this).attr('href');
-            var msg_id = ".msg-" + id.substring(6);
-            if ($(this).hasClass('toggled')) {
-                $(this).children('.toggle-text').toggleClass('hidden');
-                $(this).removeClass('toggled');
-                $(this).closest('.element-section').next().addClass('visuallyhidden');
-            }
-        });
+      $('.work-toggle-element', context).bind('hide-work', function(e) {
+        var id = $(this).attr('href');
+        var msg_id = ".msg-" + id.substring(6);
+        if($(this).hasClass('toggled')) {
+          $(this).children('.toggle-text').toggleClass('hidden');
+          $(this).removeClass('toggled');
+          $(this).closest('.element-section').next().addClass('visuallyhidden');
+        }
+      });
 
-        // Make entire element clickable
+      // Make entire element clickable
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
@@ -200,14 +201,14 @@
       });
 
       //Control zebra-toggle
-        $('.zebra-toggle span').once().click(function (e){
-            e.preventDefault();
-            var wrapper = $(this).parent('a');
-            var id = wrapper.attr('href');
-            wrapper.toggleClass('toggled');
-            wrapper.children('.toggle-text').toggleClass('hidden');
-            wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
-        });
+      $('.zebra-toggle span').once().click(function(e) {
+        e.preventDefault();
+        var wrapper = $(this).parent('a');
+        var id = wrapper.attr('href');
+        wrapper.toggleClass('toggled');
+        wrapper.children('.toggle-text').toggleClass('hidden');
+        wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
+      });
 
       $('.markall-button input[type=checkbox]').click(function(e) {
         e.stopPropagation();
@@ -355,10 +356,12 @@
           if(test == true) {
             $(this).popupwindow(profiles);
             $(this).triggerHandler('click.orderPopup', profiles);
-          } else {
+          }
+          else {
             return false;
           }
-        } else {
+        }
+        else {
           $(this).popupwindow(profiles);
           $(this).triggerHandler('click.orderPopup', profiles);
         }
@@ -369,12 +372,12 @@
       $('.bibdk-reservation-item input').click(function(e) {
         e.preventDefault();
         $(this).parent().parent().find('a').click();
-        $(this).attr('checked','checked');
+        $(this).attr('checked', 'checked');
         return false;
       });
       $('.bibdk-reservation-item a').click(function(e) {
         e.preventDefault();
-        $(this).parent().find('input').attr('checked','checked');
+        $(this).parent().find('input').attr('checked', 'checked');
         return false;
       });
 
@@ -431,9 +434,9 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-          // IE 8 compatibility
-          $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-          $(this).remove();
+        // IE 8 compatibility
+        $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+        $(this).remove();
       });
 
       $('.bibdk-unmask-password-field').click(function() {
@@ -531,33 +534,34 @@
 
       // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
 
-        // Toggle advanced search options
+      // Toggle advanced search options
       $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
         // Move to first input field in expanded search, if activated.
-        if ( $('#search-advanced-toggle').hasClass('toggled') === true ) {
+        if($('#search-advanced-toggle').hasClass('toggled') === true) {
           $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-        } else {
+        }
+        else {
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
 
-        if($('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1'){
-            $('#search-advanced-toggle').toggleClass('toggled');
-            $('#search-advanced').toggleClass('visuallyhidden');
-        }
+      if($('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1') {
+        $('#search-advanced-toggle').toggleClass('toggled');
+        $('#search-advanced').toggleClass('visuallyhidden');
+      }
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
-          var wAction = $(this).find('.actions').width();
-          $(this).find('.manifestation-data').css('margin-right', wAction);
+        var wAction = $(this).find('.actions').width();
+        $(this).find('.manifestation-data').css('margin-right', wAction);
 
         var hAction = $(this).find('.actions').height();
 
-          var hData = $(this).find('.manifestation-data').height();
+        var hData = $(this).find('.manifestation-data').height();
         var highestCol = Math.max(hAction, hData);
         $(this).find('.actions').height(highestCol);
         var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
