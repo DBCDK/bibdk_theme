@@ -1,4 +1,4 @@
-<div class="<?php print $ding_id; echo '_start' ?>"></div>
+<div class="<?php print $ding_id . '_start' ?>"></div>
 
 <div class="addi-tabs clearfix">
   <div class="cover">
@@ -26,16 +26,16 @@
     <?php foreach ($subWorks as $type) : ?>
       <?php foreach ($type as $subtype => $manifest) : $count++; ?>
         <div id="<?php print $subtype; ?><?php print $ding_id; ?>"
-             class="subwork tabs-section <?php print ($count != 1) ? "visuallyhidden" : "" ?>">
+             class="subwork tabs-section <?php ($count != 1) ? print "visuallyhidden" : print "" ?>">
           <div class="padded text clearfix">
-            <?php echo drupal_render($manifest['manifest']['subtype_actions']); ?>
+            <?php print drupal_render($manifest['manifest']['subtype_actions']); ?>
           </div>
           <!-- tabs-content -->
           <div class="manifestations zebra-wrapper">
             <div class="zebra-content">
               <?php $count_manifestation = 0; ?>
               <?php foreach ($manifest['manifest']['manifestations'] as $manifestation) : $count_manifestation++; ?>
-                <div class="manifestation zebra <?php print ($count_manifestation > 1) ? "visuallyhidden toggle" : "" ?>">
+                <div class="manifestation zebra <?php ($count_manifestation > 1) ? print "visuallyhidden toggle" : print "" ?>">
                   <?php print $manifestation; ?>
                 </div>
               <?php endforeach; ?>
