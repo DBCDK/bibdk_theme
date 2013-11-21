@@ -7,19 +7,32 @@
 // Import Compass (http://compass-style.org/)
 @import "compass";
 
-// Import utilities
-@import "utilities/variables";
-@import "utilities/clearfix";
-@import "utilities/rem";
-@import "utilities/triangle";
-@import "utilities/gradient";
+// Import settings
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/mediaqueries";
+@import "settings/misc";
 
-// Import base
+// Import sprites
+@import "sprites/*.png";
+
+// Import mixins
+@import "mixins/button-as-link";
+@import "mixins/clearfix";
+@import "mixins/add-sprite";
+@import "mixins/gradient";
+@import "mixins/btn-skin"; // Must be imported after gradient
+@import "mixins/rem";
+@import "mixins/rgba-background";
+@import "mixins/triangle";
+
+
+
 
 
 
 // =============================================================================
-// Import reset grid and custom mixins i.e.
+// Import reset
 // =============================================================================
 @import "normalize";
 @import "grid";
@@ -32,7 +45,6 @@
 // =============================================================================
 @import "drupal/system.base";
 @import "drupal/system.menus";
-@import "drupal/system.messages";
 @import "drupal/system.theme";
 @import "drupal/vertical-tabs";
 @import "drupal/user";
@@ -48,6 +60,21 @@
 // =============================================================================
 @import "typography";
 @import "forms";
+
+
+
+
+
+// =============================================================================
+// Import components
+// =============================================================================
+@import "components/base/helpers";
+@import "components/global/messages";
+@import "components/global/global-login-menu";
+
+
+
+
 
 
 
