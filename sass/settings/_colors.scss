@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Colors by name
+// =============================================================================
+
+$red-pure:        #ff0000;
+$yellow-pure:     #ffff00;
+
+$white:           #ffffff;
+$black:           #161616;
+$blue:            #178bad;
+$blue-light:      #84C0D2;
+$blue-lighter:    #d2eaf1;
+$green:           #00a271;
+
+$grey-1:          #25292c; // Darkest
+$grey-2:          #3c4043; // Darker
+$grey-3:          #51565a; // Dark
+$grey-4:          #6c7379;
+$grey-5:          #dcdcdc; // Light
+$grey-6:          #e8e8e8; // Lighter
+$grey-7:          #f2f3f3; // Lightest
+
+
+// =============================================================================
+// Colors by function
+// =============================================================================
+
+$messages-blue:    #97b8e9;
+$messages-green:   #97e999;
+$messages-yellow:  #fafaa2;
+$messages-red:     #fba3a2;
+
+
+$zebra-odd:        #c7e1e8;
+$zebra-even:       lighten($zebra-odd, 10%);
