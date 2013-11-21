@@ -1,9 +1,8 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Bibliotek.dk Subject hierachy
 // =============================================================================
-
-$blue: #d2eaf1;
-$themesBg: #f2f4f3;
 
 #subjects-wrapper {
   .region-subjects {
@@ -29,17 +28,11 @@ $themesBg: #f2f4f3;
             padding-bottom: 5px;
             font-size: 14px;
             font-weight: bold;
-            a {
-              // color: $dark_grey1;
-            }
         }
         .note {
             display: block;
             padding-bottom: 20px;
             padding-right: 20px;
-            a {
-              // color: $dark_grey3;
-            }
         }
     }
     .themes__item--active > p:after {
@@ -48,12 +41,11 @@ $themesBg: #f2f4f3;
         bottom: 0;
         left: 50%;
         margin-left: -8px;
-        @include css-triangle(8px, $blue, bottom);
+        @include css-triangle(8px, $blue-lighter, bottom);
     }
 
     .bibdk-subject-hierarchy-header {
-        // color: $btn_blue;
-        color: $dark_grey3;
+        color: $grey-2;
         font-size: 15px;
         height: 30px;
         line-height: 30px;
@@ -70,7 +62,6 @@ $themesBg: #f2f4f3;
 // =============================================================================
 
 .themes {
-  background-color: $themesBg;
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -84,8 +75,8 @@ $themesBg: #f2f4f3;
 .themes__sublists {
   position:relative;
   padding:15px;
-  border:solid 5px #d2eaf1;
-  background-color:#fff;
+  border:solid 5px $blue-lighter;
+  background-color: $white;
   margin-bottom:30px;
 }
 

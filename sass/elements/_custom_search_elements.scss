@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Search form
 // .search-form-horizontal handles the floating
@@ -27,15 +29,13 @@
 
   input[type=text] {
     padding: 0 10px;
-    font-size: 1.166667em;
+    font-size: 1.166667em; // 14px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
-    // 14px
   }
 
   input[type=submit] {
-    font-size: 1.333333em;
+    font-size: 1.333333em; // 16px
     font-weight: bold;
-    // 16px
   }
 }
 
@@ -46,8 +46,8 @@ body.html {
     input[type="submit"] {
       &:hover, &:focus {
         color: $white;
-        background: lighten($dark_grey5, 10%);
-        @include box-shadow(0 2px 2px rgba($dark_grey3, 0.2));
+        background: lighten($grey-3, 10%);
+        @include box-shadow(0 2px 2px rgba($grey-2, 0.2));
       }
     }
   }
@@ -55,9 +55,9 @@ body.html {
 
 form#search-block-form {
   #search-block-wrapper {
-    background-color: $light_grey1;
+    background-color: $grey-7;
     padding: 30px 30px 15px;
-    border: solid 1px darken($light_grey3, 5%);
+    border: solid 1px darken($grey-5, 5%);
   }
   #search-block-action {
     position: absolute;
@@ -72,7 +72,7 @@ form#search-block-form {
     margin: 0;
   }
   fieldset#edit-advanced {
-    background-color: $light_grey1;
+    background-color: $grey-7;
     margin-bottom: 0em;
     &.toggled {
       margin-bottom: 0em;
@@ -93,10 +93,10 @@ form#search-block-form {
 
     input[type=submit] {
       font-size: 12px;
-      background: $dark_grey5;
+      background: $grey-3;
       @include transition(background-color .5s);
       margin-right: 1px;
-      border-top: solid 1px darken($dark_grey3, 5%);
+      border-top: solid 1px darken($grey-2, 5%);
       color: $white;
       height: 34px;
       line-height: 34px;
@@ -104,34 +104,34 @@ form#search-block-form {
       @include border-radius(0px);
       border-width: 1px 1px 1px 0px;
       box-shadow: none;
-      text-shadow: 0 -1px rgba(0, 0, 0, 0.15);
+      text-shadow: $text-shadow;
 
       &.active {
-        color: $dark_grey5;
-        background: $light_grey1;
+        color: $grey-3;
+        background: $grey-7;
         @include border-radius(3px);
-        text-shadow: 0px -1px rgba(black, .2);
+        text-shadow: $text-shadow;
         height: 34px;
         line-height: 34px;
         border: none;
-        border-top: solid 1px darken($light_grey3, 5%);
+        border-top: solid 1px darken($grey-5, 5%);
         position: relative;
         margin-top: 0px;
         &:hover {
-          color: $dark_grey5;
-          background: $light_grey1;
+          color: $grey-3;
+          background: $grey-7;
         }
       }
     }
     &:first-child input[type=submit] {
-      border-left: solid 1px darken($light_grey3, 5%);
+      border-left: solid 1px darken($grey-5, 5%);
       @include border-radius(0);
       &.active {
         @include border-radius(3px);
       }
     }
     &:last-child input[type=submit] {
-      border-right: solid 1px darken($light_grey3, 5%);
+      border-right: solid 1px darken($grey-5, 5%);
       @include border-radius(0);
       &.active {
         @include border-radius(3px);
@@ -168,10 +168,10 @@ div#search-advanced-toggle {
 
 div#search-advanced {
   display: block;
-  background-color: $light_grey1;
+  background-color: $grey-7;
   &.toggled {
     @include border-radius(0px);
-    background-color: $light_grey1;
+    background-color: $grey-7;
     padding: 0%;
   }
 }
@@ -185,7 +185,7 @@ div#search-advanced-panel {
     margin: 1% 1% 1% 1%;
     height: 30px;
     width: 140px;
-    background-color: $btn_blue;
+    background-color: $blue;
   }
 
   .sub-elements {
