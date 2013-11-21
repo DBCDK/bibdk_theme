@@ -464,9 +464,6 @@ function bibdk_theme_preprocess_links(&$links){
   }
 }
 
-function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
-  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-}
 
 /** \brief set sidebar block for user pages
  *
