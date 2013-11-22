@@ -48,13 +48,20 @@
 </nav>
 <!-- #search-panel-wrapper -->
 
-<?php if (!empty($messages)): ?>
+<?php if ( !empty($messages) || !empty($page['content']['user_alert_user_alert']) ): ?>
   <section id="messages-wrapper" data-role="alert">
     <div class="container">
       <div class="row">
         <div class="span24 clearfix">
           <div id="messages">
             <?php print $messages; ?>
+            <?php
+              if ( $variables['is_front'] == TRUE ) {
+                print drupal_render($page['content']['user_alert_user_alert']);
+              } else {
+                unset($page['content']['user_alert_user_alert']);
+              }
+            ?>
           </div>
           <!-- #messages -->
         </div>
