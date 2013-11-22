@@ -53,17 +53,14 @@
     <div class="container">
       <div class="row">
         <div class="span24 clearfix">
-          <div id="messages">
-            <?php print $messages; ?>
-            <?php
-              if ( $variables['is_front'] == TRUE ) {
-                print drupal_render($page['content']['user_alert_user_alert']);
-              } else {
-                unset($page['content']['user_alert_user_alert']);
-              }
-            ?>
-          </div>
+<?php if ( !empty($messages) ): ?>
+          <div id="messages"><?php print $messages; ?></div>
+<?php endif; ?>
           <!-- #messages -->
+<?php if ( !empty($page['content']['user_alert_user_alert']) && $variables['is_front'] == TRUE ): ?>
+          <div id="user-alerts"><?php print drupal_render($page['content']['user_alert_user_alert']); else: unset($page['content']['user_alert_user_alert']); ?></div>
+<?php endif; ?>
+          <!-- #user-alerts -->
         </div>
       </div>
     </div>

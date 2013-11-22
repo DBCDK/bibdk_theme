@@ -6,12 +6,11 @@
 
 #messages-wrapper {
   background-color: $grey-7;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 #messages {
-
+  margin-top: 10px;
+  margin-bottom: 10px;
   body.page-overlay & {
     margin: 20px;
   }
@@ -71,3 +70,36 @@
     @include add-sprite(messages--error);
   }
 }
+
+
+// =============================================================================
+// User alerts
+// =============================================================================
+
+div.user-alert {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $messages-red;
+  position: relative;
+  padding: 15px 15px 15px 48px;
+  border: 1px solid $grey-2;
+
+  &:after {
+    position: absolute;
+    left: 12px;
+    content: '';
+  }
+
+  a {
+    @extend .apparent-link;
+  }
+
+  .user-alert-close {
+    @include add-sprite(messages--error);
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
