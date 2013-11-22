@@ -29,7 +29,7 @@ The css folder is where our styling is compiled to. The files in this folder mus
 The js folder contains our JavaScript. Drupal uses jQuery, and the JavaScript in the js folder should preferably be written as jQuery code.
 
 ## /templates
-The templates foldes contains all the custom template files implemented by the theme (*.tpl.php) files.
+The templates foldes contains all the custom template files implemented by the theme (*.tpl.php) files. 
 
 ## bibdk_theme.info
 This file is necessary to let Drupal identify the theme. The file is primarily used to import css/js files and register content regions.
