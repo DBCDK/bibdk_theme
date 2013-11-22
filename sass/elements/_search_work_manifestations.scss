@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Work
 // =============================================================================
@@ -16,15 +18,15 @@
 
   .field-tags {
     margin-bottom: 20px;
-    color: $light_grey5;
+    color: $grey-4;
 
     a {
-      color: $btn_blue;
+      color: $blue;
     }
   }
 
   .field-summary {
-    color: $dark_grey5;
+    color: $grey-3;
     margin-bottom: 10px;
   }
 
@@ -85,7 +87,7 @@
     > .element.toggled-element {
       border-width: 3px;
       border-style: solid;
-      border-color: $light_grey3;
+      border-color: $grey-5;
       .element-section {
         padding: 17px;
         margin: 0px;
@@ -103,7 +105,7 @@
       background: $white;
       &.zebra {
         background: $white;
-        border-color: $light_grey1;
+        border-color: $grey-7;
         border-left-width: 1px;
         border-top-width: 1px;
         border-top-style: solid;
@@ -147,7 +149,7 @@
     padding-right: 10px;
     text-align: left;
     vertical-align: top;
-    color: $dark_grey2;
+    color: $grey-1;
     font-weight: normal;
     width: 100px;
   }
@@ -155,7 +157,7 @@
     /*width: auto;*/
     margin-left: 120px;
     display: block;
-    color: $dark_grey5;
+    color: $grey-3;
     vertical-align: top;
     /*break long links*/
     @include hyphenation;
@@ -194,7 +196,7 @@
   width: 300px;
 
   h3 {
-    color: #1890b3;
+    color: $blue;
     font-size: 1em;
     padding: 0 5px 0 10px;
     text-align: left;

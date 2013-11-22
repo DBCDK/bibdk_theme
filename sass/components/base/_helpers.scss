@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Text helpers
+// =============================================================================
+
+.apparent-link {
+  color: $black;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.horizontal-nav {
+  li {
+    float:left;
+    display:block;
+  }
+  a {
+    float:left;
+    display:block;
+  }
+}
+
+
+.clearfix {
+  @include clearfix();
+}

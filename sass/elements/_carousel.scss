@@ -1,22 +1,10 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Carousel
 // =============================================================================
 
-/* Mixins
-   ========================================================================== */
-
-/* RGBa background (https://gist.github.com/1949202) */
-@mixin rgba-background($color, $alpha) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: $rgba;
-  zoom: 1;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-}
-
-
 #carousel-wrapper {
-  // background-color: $light_grey1;
   background-color: $white;
 }
 
@@ -27,7 +15,6 @@
 
   .rs-carousel-inner {
     background-color: inherit;
-    /* @include rgba-background($light_grey1, .1); */
     min-height: 220px;
     margin-bottom: 0px;
     margin-top: 40px;
@@ -58,7 +45,7 @@
           line-height: 14px;
           overflow: hidden;
           a {
-            color: $dark_grey2;
+            color: $grey-1;
             font-weight: bold;
           }
         }
@@ -67,7 +54,7 @@
           line-height: 16px;
           min-height: 16px;
           a {
-            color: $dark_grey5;
+            color: $grey-3;
           }
         }
       }
@@ -79,7 +66,7 @@
 }
 
 .rs-carousel-header {
-  color: $dark_grey3;
+  color: $grey-2;
   font-size: 15px;
   height: 30px;
   line-height: 30px;
@@ -102,7 +89,7 @@
     display: inline-block;
   }
   .works-control {
-    background-color: #FFFFFF;
+    background-color: $white;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
     height: 30px;
     line-height: 30px;

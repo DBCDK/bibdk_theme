@@ -1,10 +1,12 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Drupal form element
 // =============================================================================
 
 .form-wrapper {
   padding:0 20px;
-  border-bottom:solid 1px #ddd;
+  border-bottom:solid 1px $grey-5;
 }
 .form-wrapper .form-wrapper {
   padding:0;
@@ -79,11 +81,11 @@ label {
   display: block;
   font-size:14px;
   margin-bottom:5px;
-  color:$labelColor;
+  color: $grey-3;
 }
 label.option {
   display: inline;
-  color:$baseColor;
+  color: $grey-1;
 }
 .form-type-password-confirm > label {
   margin-bottom:15px;
@@ -112,7 +114,7 @@ input[type="radio"] {
 }
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted $grey-2;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -137,15 +139,15 @@ select {
   @include inline-block();
   @include box-sizing(border-box);
 
-  border: 1px solid darken($borderColor, 10%);
-  background-color:#fff;
+  border: 1px solid darken($grey-5, 10%);
+  background-color: $white;
   min-width: 100px;
   font-size: 14px;
   font-weight: normal;
-  color: #555555;
+  color: $grey-3;
 
   &:focus {
-    outline: thin dotted #333;
+    outline: thin dotted $grey-2;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
   }
@@ -172,10 +174,10 @@ input[type="password"] {
 
   // max-width:100%;
   padding: 10px;
-  color: #555555;
+  color: $grey-3;
   font-size: 14px;
-  background-color: #fff;
-  border: 1px solid $borderColor;
+  background-color: $white;
+  border: 1px solid $grey-5;
 }
 
 textarea {
@@ -190,8 +192,6 @@ input[type="text"],
 input[type="password"] {
   @include border-radius(3px);
   max-width:100%;
-  // height: 30px;
-  // line-height: 30px;
 }
 
 textarea:focus,
@@ -231,7 +231,7 @@ div.password-confirm,
   padding: 10px;
   margin: 10px 0;
   width: 100%;
-  border: 1px solid #B4B4B4;
+  border: 1px solid $grey-5;
 }
 
 
@@ -245,7 +245,7 @@ input[type="file"] {
   line-height: 30px;
 }
 input[type="file"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted $grey-2;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -305,9 +305,9 @@ textarea[readonly],
 input[type="text"][disabled],
 input[type="text"][readonly] {
   @include box-shadow(none);
-  background-color: #eeeeee;
-  border-color: $borderColor;
-  color: #999999;
+  background-color: $grey-7;
+  border-color: $grey-5;
+  color: $grey-4;
 }
 
 // =============================================================================
@@ -317,11 +317,11 @@ input[type="text"][readonly] {
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
-  border: 2px solid red;
+  border: 2px solid $red-pure;
 }
 
 .form-required {
-  color: #f00;
+  color: $red-pure;
 }
 
 
@@ -332,15 +332,15 @@ input[type="text"][readonly] {
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #999999;
+  color: $grey-4;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #999999;
+  color: $grey-4;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #999999;
+  color: $grey-4;
 }
 
 
@@ -477,28 +477,28 @@ margin-right:0.5em;
 
 
 .page-reservation .form-step-guide {
-    position:fixed;
-    top:0px;
-    left:11px;
-    right:11px;
+  position:fixed;
+  top:0px;
+  left:11px;
+  right:11px;
 
   border-top-width: 10px;
   border-top-style: solid;
-  border-top-color: $elementWrapper;
+  border-top-color: $grey-6;
   margin: 0 1px;
 
-    input[type="submit"] {
-        width:25%;
-        height: 30px;
-        line-height: 30px;
-        font-size:14px;
-        border-radius:0;
-        text-shadow: none;
+  input[type="submit"] {
+    width:25%;
+    height: 30px;
+    line-height: 30px;
+    font-size:14px;
+    border-radius:0;
+    text-shadow: none;
 
-      border-top-color: white;
-      border-top-style: solid;
-      border-top-width: 1px;
-    }
+    border-top-color: $white;
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
 }
 
 .page-reservation .bottom-space {
@@ -582,7 +582,6 @@ select#edit-favouriteselector {
   min-height:73px;
 }
 
-#popup .messages,
 #popup .region-content {
   margin:10px 20px;
 }

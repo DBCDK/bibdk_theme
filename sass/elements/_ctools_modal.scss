@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // =============================================================================
 // CTools modal window
 // =============================================================================
@@ -9,8 +11,8 @@ div#modalContent {
 div.ctools-modal-content {
 
   .modal-header {
-    color: #999999;
-    background-color: #3C4043;
+    color: $grey-4;
+    background-color: $grey-2;
 
     a.close img {
       margin-left: 0.5em;

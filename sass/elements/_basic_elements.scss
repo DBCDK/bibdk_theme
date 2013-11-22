@@ -1,9 +1,7 @@
-// =============================================================================
-// Import: Basic elements
-// =============================================================================
+@charset "UTF-8";
 
 // =============================================================================
-// A basic element
+// Import: Basic elements
 // =============================================================================
 
 // fake element wrapper(no border)
@@ -13,16 +11,13 @@
 }
 
 .element-wrapper {
-  border: solid 10px $elementWrapper;
+  background-color: $white;
+  border: solid 10px $grey-6;
   margin-bottom: 10px;
 }
 
-#popup .element-wrapper {
-  margin-bottom: 0px;
-}
-
 .element {
-  border: solid 1px $borderColor;
+  border: solid 1px $grey-5;
   border-bottom: none;
 
   .collection-msg {
@@ -31,11 +26,11 @@
 }
 
 #popup .element {
-  border-bottom: solid 1px $borderColor;
+  border-bottom: solid 1px $grey-5;
 }
 
 .element-section {
-  border-bottom: solid 1px $borderColor;
+  border-bottom: solid 1px $grey-5;
   position: relative;
   padding: 20px;
 }
@@ -52,23 +47,21 @@
     margin-bottom: 10px;
   }
   h2 {
-    font-size: 1.666em;
-    // 20px
-    line-height: 100%;
-    color: $dark_grey5;
+    font-size: 1.666em; // 20px
+    line-height: 1;
+    color: $grey-3;
     margin-bottom: 0.5em;
 
     span {
       font-size: 0.7em;
       font-weight: normal;
-      color: $dark_grey5;
+      color: $grey-3;
     }
   }
   h3 {
-    font-size: 1.1666em;
-    // 14px
+    font-size: 1.1666em; // 14px
     font-weight: normal;
-    color: $light_grey5;
+    color: $grey-4;
   }
 }
 
@@ -83,7 +76,7 @@
     font-size: 12px;
   }
   tr {
-    border-bottom: solid 1px $borderColor;
+    border-bottom: solid 1px $grey-5;
   }
   th,
   td {
@@ -100,7 +93,7 @@
     }
   }
   th {
-    color: $light-grey5;
+    color: $grey-4;
   }
 
   .table-toggle {
@@ -115,9 +108,9 @@
 }
 
 .table-actions button {
-  @include gradient(#ffffff, #eeeeee);
+  @include gradient($white, $grey-7);
   @include border-radius(3px);
-  border: solid 1px #d7d7d7;
+  border: solid 1px $grey-5;
   padding: 6px 10px;
 }
 
@@ -128,7 +121,7 @@
 .addi-tabs {
   padding: 0 20px;
   .tabs-sections {
-    border: solid 1px $light_grey2;
+    border: solid 1px $grey-6;
   }
 }
 
@@ -138,16 +131,16 @@
       float: left;
       display: block;
       border-left: solid 1px $white;
-      background-color: $light_grey2;
-      border-bottom: 1px solid $light_grey2;
-      color: $dark_grey2;
+      background-color: $grey-6;
+      border-bottom: 1px solid $grey-6;
+      color: $grey-1;
       position: relative;
       top: 1px;
       &:hover {
       }
       &.active {
-        background-color: $light_blue1;
-        border-bottom: 1px solid $light_blue1;
+        background-color: $blue-lighter;
+        border-bottom: 1px solid $blue-lighter;
         margin-bottom: -1px;
         font-weight: bold;
       }
@@ -162,26 +155,26 @@
   }
   .tabs-nav-sub {
     padding: 10px 20px;
-    background-color: $light_blue1;
+    background-color: $blue-lighter;
 
     a {
-      color: $dark_grey5;
+      color: $grey-3;
       @include inline-block();
       @include border-radius(10px);
       padding: 5px 10px;
       background-color: $white;
-      border: solid 1px $borderColor;
+      border: solid 1px $grey-5;
 
       &.active {
         font-weight: bold;
-        border-color: darken($borderColor, 10%);
+        border-color: darken($grey-5, 10%);
       }
     }
   }
 
   .tab-item {
     padding: 10px 10px 10px 0;
-    border-bottom: solid 1px $light_blue1;
+    border-bottom: solid 1px $blue-lighter;
 
     &:last-child {
       border-bottom: none;
@@ -189,11 +182,11 @@
 
     .tab-title {
       float: left;
-      color: $dark_grey3;
+      color: $grey-2;
       padding: 0 0 0 30px;
 
       &.active {
-        color: $dark_grey1;
+        color: $black;
         font-weight: bold;
       }
     }
@@ -209,18 +202,18 @@
   }
   .tabs-sections {
     .tabs-sections-wrapper {
-      border: solid 8px $light_blue1;
+      border: solid 8px $blue-lighter;
       line-height: 1.5em;
     }
     .subwork {
-      background: $light_blue1;
+      background: $blue-lighter;
       .padded {
         line-height: 2;
       }
     }
     a {
       font-weight: bold;
-      color: $btn_blue;
+      color: $blue;
     }
     .btn-wrapper, .field-type-bibdk-mani-reservation-button {
       a {
@@ -235,8 +228,7 @@
 //
 .bibdk-tabs-light {
   margin-bottom: 10px;
-  font-size: 0.91666em;
-  // 11px
+  font-size: 0.91666em; // 11px
 
   .tabs-nav {
 
@@ -264,22 +256,22 @@
 // =============================================================================
 
 .zebra-toggle {
-  background: $zebraOdd;
+  background: $zebra-odd;
   padding: 10px 20px;
   font-size: 14px;
   a {
-    color: darken($btn_blue, 5%);
+    color: darken($blue, 5%);
   }
 }
 
 .zebra {
   padding: 20px 20px 20px 10px;
-  border-left: solid 10px $zebraOdd;
-  border-bottom: solid 1px $borderColor;
-  background-color: $light_grey1;
+  border-left: solid 10px $zebra-odd;
+  border-bottom: solid 1px $grey-5;
+  background-color: $grey-7;
 
   &:nth-child(even) {
-    border-left: solid 10px $zebraEven;
+    border-left: solid 10px $zebra-even;
     background-color: $white;
   }
 
@@ -295,13 +287,13 @@
 .actions {
   float: right;
   padding-left: 15px;
-  border-left: dotted 1px $borderColor;
+  border-left: dotted 1px $grey-5;
 }
 
 .secondary-actions {
   padding: 10px 0 0 0;
   margin: 10px 0 0 0;
-  border-top: dotted 1px $borderColor;
+  border-top: dotted 1px $grey-5;
 }
 
 // =============================================================================
@@ -338,7 +330,7 @@ div.works-controls > div > div,
   font-size: 12px;
 
   .divider {
-    border-bottom: solid 1px $borderColor;
+    border-bottom: solid 1px $grey-5;
   }
 
   a {
@@ -349,15 +341,15 @@ div.works-controls > div > div,
     line-height: 20px;
 
     &:hover {
-      background: $light_grey1;
+      background: $grey-7;
     }
 
     &.current {
-      background: $light_grey2;
+      background: $grey-6;
     }
   }
   li.pager-current a {
-    background: $light_grey2;
+    background: $grey-6;
   }
   li a {
     border-width: 0;
@@ -422,7 +414,7 @@ form.bibdk-search-controls-form {
   h1 {
     margin-left: 20px;
     font-size: 18px;
-    color: $btn_blue;
+    color: $blue;
   }
 }
 
@@ -433,7 +425,7 @@ div.works-controls > div,
   height: 30px;
   background: $white;
   @include border-radius(3px);
-  border: solid 1px $borderColor;
+  border: solid 1px $grey-5;
   border-left-width: 0;
   &.panel-separator {
     border-width: 0;
@@ -452,8 +444,8 @@ div.works-controls > div,
 
   &:active,
   &.toggled {
-    @include box-shadow(inset 0 0px 1px rgba(black, .8));
-    background-color: darken(#fbfbfb, 2%);
+    @include box-shadow(inset 0 0px 1px rgba($black, .8));
+    background-color: darken($grey-7, 2%);
   }
 }
 
@@ -490,7 +482,7 @@ div.works-controls > div,
 // Helptexts
 
 p.helptext {
-  background-color: $btn_blue;
+  background-color: $blue;
   @include border-radius(3px);
   width: auto;
   border: none;
@@ -546,14 +538,14 @@ p.helptext {
 .page-overlay .pager-current {
   padding: 0 7px;
   margin: 0 7px;
-  border-left: solid 1px $borderColor;
-  border-right: solid 1px $borderColor;
+  border-left: solid 1px $grey-5;
+  border-right: solid 1px $grey-5;
 }
 
 .page-overlay .works-pager-select {
   padding: 0 10px;
-  border-left: solid 0px $borderColor;
-  border-right: solid 0px $borderColor;
+  border-left: solid 0px $grey-5;
+  border-right: solid 0px $grey-5;
 }
 
 

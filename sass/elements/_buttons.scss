@@ -1,81 +1,27 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Import: Buttons
 // =============================================================================
 
-// =============================================================================
-// Style button as link
-// =============================================================================
-@mixin button-as-link($color) {
-  overflow: visible; /* Shrinkwrap the text in IE7- */
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-decoration: none;
-  color: $color;
-  background: transparent;
-  text-shadow: none;
-  font: inherit; /* Inherit font settings (doesn't work in IE7-) */
-  line-height: normal; /* Override line-height to avoid spacing issues */
-  cursor: pointer; /* Buttons don't make the cursor change in all browsers */
-  -moz-user-select: text; /* Make button text selectable in Gecko */
-/* Make sure keyboard users get visual feedback */
-  &:hover,
-  &:focus,
-  &:disabled:hover,
-  &.disabled:hover {
-    background-color: transparent;
-    @include gradient(transparent, transparent);
-    @include box-shadow(0 0 0 rgba(black, 0.1));
-  }
-  &:disabled {
-    opacity: 1;
-    @extend a.inactive;
-    @include gradient(transparent, transparent);
-  }
-/* Remove mystery padding in Gecko browsers.
- * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
- */
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-}
-
 input[type="submit"].button-as-link {
-  @include button-as-link($btn_blue);
+  @include button-as-link($blue);
 }
 
-// =============================================================================
-// Generate button skins based on a color
-// =============================================================================
-@mixin btn-skin($color) {
-  @include gradient(lighten($color, 2%), darken($color, 2%));
-  &:hover {
-    @include gradient(lighten($color, 4%), $color);
-  }
-  &.toggled,
-  &:active {
-    @include gradient($color, darken($color, 4%));
-  }
-  &:disabled:hover,
-  &.disabled:hover {
-    @include gradient(lighten($color, 2%), darken($color, 2%));
-  }
-}
 
 // =============================================================================
 // Define color variations of buttons
 // =============================================================================
 .btn-blue {
-  @include btn-skin($btn_blue);
+  @include btn-skin($blue);
   color: $white;
-  text-shadow: 0px -1px rgba(black, .4);
+  text-shadow: $text-shadow;
 }
 
 .btn-grey {
-  @include btn-skin($dark_grey5);
+  @include btn-skin($grey-3);
   color: $white;
-  text-shadow: 0px -1px rgba(black, .4);
+  text-shadow: $text-shadow;
 }
 
 // =============================================================================
@@ -103,7 +49,7 @@ input[type="submit"].button-as-link {
   &:disabled,
   &.disabled {
     cursor: default;
-    background-color: $light_blue2;
+    background-color: $blue-light;
     background-image: none;
 
     &:hover {
@@ -128,12 +74,12 @@ input[type="submit"].button-as-link {
 
 .btn-add-library {
   @include transition(none);
-  border: solid 1px #d7d7d7;
-  color: $btn_blue;
+  border: solid 1px $grey-5;
+  color: $blue;
   text-shadow: none;
   padding-left: 40px;
 
-  background: #fff;
+  background: $white;
   background-image: url(../img/library-favorite.png); /* fallback */
   background-image: url(../img/library-favorite.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
   background-image: url(../img/library-favorite.png), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
@@ -144,13 +90,13 @@ input[type="submit"].button-as-link {
   background-repeat: no-repeat;
   background-position: 0%;
   &:hover {
-    @include box-shadow(0 2px 2px rgba(black, 0.1));
+    @include box-shadow(0 2px 2px rgba($black, 0.1));
   }
 }
 
 .set-default-order-agency {
   @extend .btn;
-  border: solid 1px #d7d7d7;
+  border: solid 1px $grey-5;
   margin-bottom: 10px;
 
   background: #fff;

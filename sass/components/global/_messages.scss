@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Messages
+// =============================================================================
+
+#messages-wrapper {
+  background-color: $grey-7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#messages {
+
+  body.page-overlay & {
+    margin: 20px;
+  }
+}
+
+.messages {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 15px 15px 15px 48px;
+  border: 1px solid $grey-2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    content: '';
+  }
+
+  li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @extend .apparent-link;
+  }
+}
+
+
+.messages.notice {
+  background-color: $messages-blue;
+  &:after {
+    @include add-sprite(messages--notice);
+  }
+}
+.messages.status {
+  background-color: $messages-green;
+  &:after {
+    @include add-sprite(messages--status);
+  }
+}
+.messages.warning {
+  background-color: $messages-yellow;
+  &:after {
+    @include add-sprite(messages--warning);
+  }
+}
+.messages.error {
+  background-color: $messages-red;
+  &:after {
+    @include add-sprite(messages--error);
+  }
+}

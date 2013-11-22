@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // =============================================================================
 // system.base.css
 // Original file location: 'modules/system/'
@@ -29,8 +31,8 @@
   padding: 0;
 }
 #autocomplete li {
-  background: #fff;
-  color: #000;
+  background: $white;
+  color: $black;
   cursor: default;
   white-space: pre;
   zoom: 1; // IE7
@@ -151,7 +153,7 @@ div.tree-child-horizontal {
 // @see tableheader.js
 // =============================================================================
 table.sticky-header {
-  background-color: #fff;
+  background-color: $white;
   margin-top: 0;
 }
 
@@ -164,11 +166,11 @@ table.sticky-header {
 // Bar
 //
 .progress .bar {
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid;
 }
 .progress .filled {
-  background-color: #000;
+  background-color: $black;
   height: 1.5em;
   width: 5px;
 }

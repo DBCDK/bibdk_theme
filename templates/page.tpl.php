@@ -48,22 +48,21 @@
 </nav>
 <!-- #search-panel-wrapper -->
 
-
-<section id="messages-wrapper" data-role="alert">
-  <div class="container">
-    <div class="row">
-      <div class="span24 clearfix">
-        <a name="messages"></a>
-        <div id="messages">
-          <?php print $messages; ?>
+<?php if (!empty($messages)): ?>
+  <section id="messages-wrapper" data-role="alert">
+    <div class="container">
+      <div class="row">
+        <div class="span24 clearfix">
+          <div id="messages">
+            <?php print $messages; ?>
+          </div>
+          <!-- #messages -->
         </div>
-        <!-- #messages -->
       </div>
     </div>
-  </div>
-</section>
-<!-- #messages-wrapper -->
-
+  </section>
+  <!-- #messages-wrapper -->
+<?php endif; ?>
 
 <section id="carousel-wrapper">
   <div class="container">

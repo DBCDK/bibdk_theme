@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Mediaqueries
+// =============================================================================
+
+$smaller-screen:    30em; // 480px
+$small-screen:      48em; // 768px
+$medium-screen:     60em; // 960px
+$large-screen:      80em; // 1280px
+$larger-screen:     90em; // 1440px
+
+$screen:            "only screen";
+$smaller:           "only screen and (min-width: #{$smaller-screen})";
+$small:             "only screen and (min-width: #{$small-screen})";
+$medium:            "only screen and (min-width: #{$medium-screen})";
+$large:             "only screen and (min-width: #{$large-screen})";
+$larger:            "only screen and (min-width: #{$larger-screen})";
+$landscape:         "only screen and (orientation: landscape)";
+$portrait:          "only screen and (orientation: portrait)";

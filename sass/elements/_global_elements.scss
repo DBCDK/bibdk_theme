@@ -1,14 +1,16 @@
+@charset "UTF-8";
+
 // =============================================================================
 // Import: Global elements
 // =============================================================================
 
 body {
-  background: $dark_grey3;
+  background: $grey-2;
 }
 
 body.page-overlay,
 body.page-reservation {
-  background: $white;
+  background: $grey-6;
 
   .bottom-space {
     padding-bottom: 10px;
@@ -26,51 +28,32 @@ body.page-reservation {
     margin: 15px 20px;
   }
 
-  #popup .messages {
-    margin: 30px 20px 5px 20px;
-  }
-
-  #popup #messages + .region-content {
-    margin-top: 0px;
-  }
-
 }
 
 // =============================================================================
 // Page region wrappers
 // =============================================================================
 #topbar-wrapper {
-  background: $dark_grey1;
+  background: $black;
 }
 
 #header-wrapper {
-  background: $dark_grey2;
+  background: $grey-1;
   height: 80px;
 }
 
 #search-panel-wrapper {
-  background: $light_grey2;
+  background: $grey-6;
   padding: 20px 0 0 0;
 }
 
 #subjects-wrapper {
-  background-color: $light_grey1;
+  background-color: $grey-7;
   min-height: 0px;
-  border-bottom: 0px solid $light_grey3;
+  border-bottom: 0px solid $grey-5;
 }
 
-#messages-wrapper {
-  background:  $nav_msg_bg;
-  div[class^="span"] {
-    min-height: 0;
-  }
-  #messages {
-    /*color: $white;*/
-  }
-  .krumo-call, .krumo-child {
-  color:black;
-  }
-}
+
 
 #columns-wrapper {
   background: $white;
@@ -78,7 +61,7 @@ body.page-reservation {
 }
 
 .page-search #columns-wrapper {
-  background: $light_grey2;
+  background: $grey-6;
 }
 
 .lift-columns #columns {
@@ -86,7 +69,7 @@ body.page-reservation {
 }
 
 #footer-wrapper {
-  background: $dark_grey3;
+  background: $grey-2;
   padding: 40px 0 100px;
 }
 
@@ -137,7 +120,7 @@ body.page-reservation {
     padding-left: 0;
   }
   a {
-    border-right: solid 1px $dark_grey2;
+    border-right: solid 1px $grey-1;
   }
 }
 
@@ -151,73 +134,16 @@ body.page-reservation {
 
     a {
       padding: 0.5em 1em;
-      color: $light_grey3;
+      color: $grey-5;
 
       &:hover {
-        color: $light_grey1;
+        color: $grey-7;
       }
     }
   }
 }
 
-// =============================================================================
-// User navigation
-// =============================================================================
-#user-nav {
-  position: absolute;
-  top: 0;
-  width: 950px;
-  z-index: 99;
 
-  &.with-mats {
-    position: fixed;
-  }
-}
-
-#user-nav-inner {
-  position: inherit;
-  margin-right: 10px;
-  @media screen and (min-width: $break-max) {
-    position: absolute;
-    margin-right: 0px;
-  }
-  right: 0;
-  z-index: 99;
-
-  a {
-    font-size: 1.05em;
-    line-height: 300%;
-    padding: 0 1em;
-    border-right: solid 1px lighten($nav_user_bg, 5%);
-    color: lighten($white, 10%);
-    text-shadow: 0 -1px rgba(black, .3);
-    background: $nav_user_bg;
-    font-weight: bold;
-  }
-
-  li:first-child a {
-    @include border-bottom-left-radius(5px);
-  }
-  li:last-child a {
-    @include border-bottom-right-radius(5px);
-    border-right: none;
-  }
-
-  .materials-button {
-
-    .mats {
-      float: left;
-      margin-right: 0.5em;
-      font-size: 1.5em;
-      // 18px
-      font-weight: bold;
-    }
-  }
-
-  .login-button {
-    font-weight: bold;
-  }
-}
 
 // =============================================================================
 // Header actions
@@ -238,7 +164,7 @@ body.page-reservation {
   @include inline-block(middle);
   @include border-radius(3px);
 
-  background: $dark_grey3;
+  background: $grey-2;
   line-height: 30px;
   padding: 0 10px;
   margin-left: 2px;
@@ -347,7 +273,7 @@ body.page-reservation {
     margin-bottom: 20px;
     font-size: 1.16667em;
     // 14px
-    color: $dark_grey3;
+    color: $grey-2;
   }
 }
 
@@ -357,8 +283,8 @@ body.page-reservation {
 .sidebar-header {
   height: 67px;
   line-height: 67px;
-  background-color: $dark_grey3;
-  border-bottom: solid 1px darken($dark_grey3, 5%);
+  background-color: $grey-2;
+  border-bottom: solid 1px darken($grey-2, 5%);
 
   font-size: 1.333em;
   // 16px
@@ -384,9 +310,9 @@ body.page-reservation {
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     font-size: 1.066em;
-    color: $dark_grey5;
+    color: $grey-3;
     background: none repeat scroll 0 0 #FFFFFF;
-    border-color: #DCDCDC;
+    border-color: $grey-5;
     border-image: none;
     border-radius: 3px 3px 3px 3px;
     border-style: solid;
@@ -414,18 +340,18 @@ body.page-reservation {
   }
 
   a, fieldset {
-    background: $dark_grey5;
+    background: $grey-3;
     display: block;
     padding: 8px 15px;
     color: $white;
 
-    border-top: solid 1px lighten($dark_grey5, 2%);
-    border-bottom: solid 1px darken($dark_grey5, 5%);
+    border-top: solid 1px lighten($grey-3, 2%);
+    border-bottom: solid 1px darken($grey-3, 5%);
 
     @include transition(background-color .5s);
 
     &:hover {
-      background: lighten($dark_grey5, 2%);
+      background: lighten($grey-3, 2%);
     }
 
     &:visited {
@@ -435,21 +361,21 @@ body.page-reservation {
     &.active {
       border: none;
       @include border-radius(3px);
-      background: $btn_blue;
+      background: $blue;
       padding: 8px 18px;
       margin-left: -3px;
       margin-right: -3px;
       font-weight: bold;
-      text-shadow: 0 -1px 1px rgba(black, 0.3);
+      text-shadow: $text-shadow;
 
       &:hover {
-        background: lighten($btn_blue, 2%);
+        background: lighten($blue, 2%);
       }
     }
   }
 
   legend {
-    background: darken($dark_grey3, 2%);
+    background: darken($grey-2, 2%);
     padding: 8px 15px;
     color: $white;
     font-weight: bold;
@@ -476,14 +402,14 @@ body.page-reservation {
 // =============================================================================
 
 #title {
-  color: #3497be;
+  color: #3497be; // FIX
   height: 73px;
   line-height: 73px;
   margin-bottom: 10px;
   margin-left: 30px;
   font-weight: normal;
   text-transform: uppercase;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-secondary;
 }
 
 // =============================================================================
@@ -514,13 +440,11 @@ body.page-reservation {
 
   input[type=text] {
     padding: 0 10px;
-    font-size: 1.166667em;
-    // 14px
+    font-size: 1.166667em; // 14px
   }
 
   input[type=submit] {
-    font-size: 1.333333em;
-    // 16px
+    font-size: 1.333333em; // 16px
   }
 }
 
@@ -536,6 +460,6 @@ body.page-reservation {
 }
 
 a.inactive {
-  color: $dark_grey5;
+  color: $grey-3;
   cursor: default;
 }
