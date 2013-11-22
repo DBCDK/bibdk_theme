@@ -31,7 +31,7 @@ The js folder contains our JavaScript. Drupal uses jQuery, and the JavaScript in
 ## /templates
 The templates foldes contains all the custom template files implemented by the theme (*.tpl.php) files.
 
-## /bibdk_theme.info
+## bibdk_theme.info
 This file is necessary to let Drupal identify the theme. The file is primarily used to import css/js files and register content regions.
 
 ## template.php
