@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 642, sprites/*.png */
-.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert .user-alert-close {
+.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
   background: url('../img/sprites-s83727057ee.png') no-repeat;
 }
 
@@ -2787,7 +2787,7 @@ div.user-alert {
   margin-bottom: 10px;
   background-color: #fba3a2;
   position: relative;
-  padding: 15px 15px 15px 48px;
+  padding: 0px;
   border: 1px solid #3c4043;
 }
 /* line 88, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
@@ -2797,13 +2797,21 @@ div.user-alert:after {
   content: '';
 }
 /* line 98, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
-div.user-alert .user-alert-close {
+div.user-alert div.user-alert-close {
+  margin-top: 5px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+}
+/* line 103, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
+div.user-alert div.user-alert-close span.user-alert-close-image {
   height: 24px;
   width: 24px;
   background-position: -810px 0;
+  background-position: -810px 0;
+  height: 24px;
   width: 24px;
-  line-height: 24px;
-  text-align: center;
+  display: block;
 }
 
 /* line 7, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_global-login-menu.scss */

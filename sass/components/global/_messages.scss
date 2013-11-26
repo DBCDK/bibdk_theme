@@ -82,7 +82,7 @@ div.user-alert {
   margin-bottom: 10px;
   background-color: $messages-red;
   position: relative;
-  padding: 15px 15px 15px 48px;
+  padding: 0px;
   border: 1px solid $grey-2;
 
   &:after {
@@ -95,11 +95,17 @@ div.user-alert {
     @extend .apparent-link;
   }
 
-  .user-alert-close {
-    @include add-sprite(messages--error);
+  div.user-alert-close {
+    margin-top: 5px;
+    height: 24px;
     width: 24px;
     line-height: 24px;
-    text-align: center;
+    span.user-alert-close-image {
+      @include add-sprite(messages--error);
+      background-position: -810px 0;
+      height: 24px;
+      width: 24px;
+      display: block;
+    }
   }
 }
-
