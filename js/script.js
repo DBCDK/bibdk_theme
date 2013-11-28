@@ -413,11 +413,15 @@
 
       // ****************************  popovers **************************** //
       $('.popover-button').click(function(e) {
+        e.preventDefault();
         $('.popover').addClass('visuallyhidden');
         $(this).siblings().removeClass('visuallyhidden').find('input').select();
+        $(this).siblings().find('.close').focus();
       });
       $('.popover .close').click(function(e) {
+        e.preventDefault();
         $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+        $(this).parent().prev('.popover-button').find('a').focus();
       });
 
       /* /begin TODO: delete after sprint 32 */
