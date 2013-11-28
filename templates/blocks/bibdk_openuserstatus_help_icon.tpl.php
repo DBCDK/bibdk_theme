@@ -1,7 +1,7 @@
-<p class="helptext popover-button" title="<?php print $label; ?>">?</p>
+<p class="helptext popover-button" title="<?php print $help; ?>"><a href="#">?</a></p>
 <div class="popover element-wrapper linkme-wrapper visuallyhidden">
   <p class="user-msg">
     <?php print $label; ?>
   </p>
-  <p class="close icon icon-left icon-red-x"> </p>
+  <a href="#" class="close icon icon-left icon-red-x"> </a>
 </div>
