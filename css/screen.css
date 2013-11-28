@@ -2797,13 +2797,17 @@ div.user-alert:after {
   content: '';
 }
 /* line 98, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
+div.user-alert div.user-alert-message {
+  margin-left: 12px;
+}
+/* line 102, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
 div.user-alert div.user-alert-close {
   margin-top: 5px;
   height: 24px;
   width: 24px;
   line-height: 24px;
 }
-/* line 103, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
+/* line 107, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
 div.user-alert div.user-alert-close span.user-alert-close-image {
   height: 24px;
   width: 24px;

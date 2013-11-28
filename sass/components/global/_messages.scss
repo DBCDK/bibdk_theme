@@ -95,6 +95,10 @@ div.user-alert {
     @extend .apparent-link;
   }
 
+  div.user-alert-message {
+    margin-left: 12px;
+  }
+
   div.user-alert-close {
     margin-top: 5px;
     height: 24px;
@@ -109,3 +113,4 @@ div.user-alert {
     }
   }
 }
+
