@@ -134,6 +134,34 @@ a.inactive {
   }
 }
 
+//======== INFOMEDIA AGENCY LIST ===========//
+h3.library-list-header{
+  margin-bottom:10px;
+}
+
+.ting-infomedia-agency-list{
+  background-color:$grey-7;
+  .element-section{
+    padding:2px 5px 2px 10px;
+  }
+  hgroup {
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-weight: normal;
+    font-size:1.2em;
+  }
+  h4 {
+    font-weight: normal;
+    color: $grey-4;
+  }
+
+  &:nth-child(2n) {
+    background-color: $grey-7;
+  }
+}
+//========== END INFOMEDIA AGENCY LIST =======//
+
 .library-details-column-1,
 .library-details-column-2 {
   float: left;
