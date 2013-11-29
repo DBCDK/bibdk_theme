@@ -4,6 +4,7 @@
       <div class="element-title">
         <hgroup>
           <h2><?php print $title; ?></h2>
+
           <h3><?php print $author; ?></h3>
           <?php if (isset($partOf)) : ?>
             <span>I: <?php print $partOf; ?></span>

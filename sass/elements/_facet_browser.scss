@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 // =============================================================================
 // Bib.dk search facet browser
@@ -8,9 +9,9 @@
 }
 
 .page-search .panel-left {
-    background-color: $light_grey1;
+    background-color: $grey-7;
     padding: 5px;
-    border: solid 1px darken($light_grey3, 5%);
+    border: solid 1px darken($grey-5, 5%);
     border-width: 0 1px 1px;
     padding: 13px 10px 10px;
     position: relative;
@@ -28,9 +29,9 @@
 #ding-facetbrowser-form {
 
   a, fieldset, legend {
-      background: $dark_grey5;
+      background: $grey-3;
       background-color: transparent;
-      color: $dark_grey1;
+      color: $black;
   }
 
   legend {
@@ -55,7 +56,7 @@
   }
 
   label.option {
-      color: $dark_grey1;
+      color: $black;
       display: block;
       float: none;
       margin-left: 1em;
@@ -64,7 +65,7 @@
           background-color: transparent;
           border-bottom-width: 0px;
           border-top-width: 0px;
-          color: $dark_grey1;
+          color: $black;
           padding: 0px 8px;
           transition: background-color 0.5s ease 0s;
       }

@@ -16,19 +16,18 @@
         </div>
       </div>
       <div class="msg-<?php print $uid; ?> collection-msg"></div>
-      <div class="toggle-work">
-        <a href="#work_<?php print $uid; ?>" class="works-control work-toggle-element">
-          <span class="icon icon-left icon-blue-down">&nbsp;</span>
-          <span class="toggle-text" id="selid-<?php print $uid; ?>"><?php echo t('More info'); ?></span>
-          <span class="toggle-text hidden"><?php echo t('Less info'); ?></span>
-        </a>
-        <?php print $showinfo; ?>
-      </div>
+    <?php print $togglework; ?>
     </div>
     <!-- element-section (work-header) -->
-    <div class="work-body work-body-has-cover element-section visuallyhidden">
-      <div id="ajax_placeholder_<?php print $uid; ?>"></div>
-    </div>
+    <?php if(isset($work_one)): ?>
+      <div class="work-body work-body-has-cover element-section">
+        <div><?php print $work_one; ?></div>
+      </div>
+    <?php else: ?>
+      <div class="work-body work-body-has-cover element-section visuallyhidden">
+        <div id="ajax_placeholder_<?php print $uid; ?>"></div>
+      </div>
+    <?php endif; ?>
     <!-- element-section -->
   </div>
   <!-- element -->

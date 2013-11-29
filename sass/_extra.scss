@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // For image replacement
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }
@@ -21,25 +23,7 @@
   overflow: hidden;
 }
 
-// Contain floats
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
-
-// Create a horizontal nav
-.horizontal-nav {
-	li {
-		float:left;
-		display:block;
-	}
-	a {
-		float:left;
-		display:block;
-	}
-}
-
 // An easy way to add padding to elements!
 .padded {
 	padding: 20px;
 }
-

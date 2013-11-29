@@ -7,13 +7,13 @@
  * See: sass/drupal
  */
 function bibdk_theme_css_alter(&$css) {
-  unset($css['modules/system/system.base.css']);
-  unset($css['modules/system/system.messages.css']);
-  unset($css['modules/system/system.theme.css']);
-  unset($css['modules/system/system.menus.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.base.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.messages.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
+  unset($css[drupal_get_path('module', 'user') . '/user.css']);
+  unset($css[drupal_get_path('module', 'ding_facetbrowser') . '/css/facetbrowser.css']);
   unset($css['misc/vertical-tabs.css']);
-  unset($css['modules/user/user.css']);
-  unset($css['profiles/bibdk/modules/ding_facetbrowser/css/facetbrowser.css']);
 }
 
 /**
@@ -464,9 +464,6 @@ function bibdk_theme_preprocess_links(&$links){
   }
 }
 
-function bibdk_theme_menu_tree__menu_global_login_menu(&$variables) {
-  return "<ul class='horizontal-nav clearfix'>" . $variables['tree'] . "</ul>";
-}
 
 /** \brief set sidebar block for user pages
  *

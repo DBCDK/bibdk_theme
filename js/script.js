@@ -1,8 +1,4 @@
-
 (function($) {
-
-  Drupal.settings.full_view = false;
-
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
@@ -34,21 +30,6 @@
         // $(this).closest('.header-action').find('input[type=text]').focus();
 
       });
-
-      /* $('.bibdk-favourite-vejviser-link').click(function (e) {
-       e.preventDefault();
-       $('#edit-openagency-query').focus();
-       $('.header-action-vejviser').find('a').addClass('visuallyhidden');
-       $('.header-action-vejviser').find('form').removeClass('visuallyhidden');
-       });*/
-
-      // $('html').click(function() {
-      // $('.header-action-vejviser').find('a').show();
-      // $('.header-action-vejviser').find('form').addClass('visuallyhidden');
-      // $('.header-action-vejviser').css({
-      // width: "",
-      // });
-      // });
 
       // Add placeholder support in older browsers
       $('[placeholder]').focus(function() {
@@ -108,59 +89,50 @@
         $(this).toggleClass('toggled');
       });
 
-      // Select side of work cover
-      // $('.work-cover-selector a.work-cover-front').once().click(function(e) {
-      //     // $('.work-cover-selector a').once().click(function(e) {
-      //     e.preventDefault();
-      //     var index = $(this).index() + 1;
-      //     var $image = $(this).closest('.work-cover').find('.work-cover-image a:nth-child(' + index +')');
-      //     $image.siblings().addClass('visuallyhidden');
-      //     $image.removeClass('visuallyhidden');
-      // });
-
       // Disable button and dropdown when toggling details of a work
       $('.work-toggle-element', context).click(function(e) {
-          e.preventDefault();
-          $(this).trigger('load-work');
+        e.preventDefault();
+        $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
-            $(this).trigger('show-work');
+          $(this).trigger('show-work');
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
-            if (!Drupal.settings.full_view){
-                $('html, body').animate({
-                    scrollTop: $(this).closest('.work').offset().top
-                }, 500);
-            }
-        } else {
-            $(this).trigger('hide-work');
+          if(!Drupal.settings.full_view) {
+            $('html, body').animate({
+              scrollTop: $(this).closest('.work').offset().top
+            }, 500);
+          }
+        }
+        else {
+          $(this).trigger('hide-work');
           $(this).closest('.work-header').find('.btn').removeClass('disabled');
         }
       });
 
       // Toggle visibility of "next section of an element"
-      $('.work-toggle-element', context).bind('show-work', function (e) {
-          var id = $(this).attr('href');
-          var msg_id = ".msg-" + id.substring(6);
+      $('.work-toggle-element', context).bind('show-work', function(e) {
+        var id = $(this).attr('href');
+        var msg_id = ".msg-" + id.substring(6);
 
-          if (!$(this).hasClass('toggled')) {
-              $(this).children('.toggle-text').toggleClass('hidden');
-              $(this).addClass('toggled');
-              $(this).closest('.element-section').next().removeClass('visuallyhidden');
-          }
+        if(!$(this).hasClass('toggled')) {
+          $(this).children('.toggle-text').toggleClass('hidden');
+          $(this).addClass('toggled');
+          $(this).closest('.element-section').next().removeClass('visuallyhidden');
+        }
       });
 
 
-      $('.work-toggle-element', context).bind('hide-work', function (e) {
-          var id = $(this).attr('href');
-          var msg_id = ".msg-" + id.substring(6);
-          if ($(this).hasClass('toggled')) {
-              $(this).children('.toggle-text').toggleClass('hidden');
-              $(this).removeClass('toggled');
-              $(this).closest('.element-section').next().addClass('visuallyhidden');
-          }
+      $('.work-toggle-element', context).bind('hide-work', function(e) {
+        var id = $(this).attr('href');
+        var msg_id = ".msg-" + id.substring(6);
+        if($(this).hasClass('toggled')) {
+          $(this).children('.toggle-text').toggleClass('hidden');
+          $(this).removeClass('toggled');
+          $(this).closest('.element-section').next().addClass('visuallyhidden');
+        }
       });
 
       // Make entire element clickable
@@ -171,12 +143,6 @@
         e.preventDefault();
         $(this).find(".element-target").trigger('click');
       });
-
-      // Make entire widget clickable
-      // $('.widget').css('cursor', 'pointer');
-      // $('.widget').click(function () {
-      // window.location = $(this).find(".field-title a").attr("href");
-      // });
 
       // Adjust margin-left on widgets with image
       $('.widget-wrapper').each(function() {
@@ -201,14 +167,14 @@
       });
 
       //Control zebra-toggle
-        $('.zebra-toggle span').once().click(function (e){
-            e.preventDefault();
-            var wrapper = $(this).parent('a');
-            var id = wrapper.attr('href');
-            wrapper.toggleClass('toggled');
-            wrapper.children('.toggle-text').toggleClass('hidden');
-            wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
-        });
+      $('.zebra-toggle span').once().click(function(e) {
+        e.preventDefault();
+        var wrapper = $(this).parent('a');
+        var id = wrapper.attr('href');
+        wrapper.toggleClass('toggled');
+        wrapper.children('.toggle-text').toggleClass('hidden');
+        wrapper.parents(id).find(".toggle").toggleClass('visuallyhidden');
+      });
 
       $('.markall-button input[type=checkbox]').click(function(e) {
         e.stopPropagation();
@@ -356,10 +322,12 @@
           if(test == true) {
             $(this).popupwindow(profiles);
             $(this).triggerHandler('click.orderPopup', profiles);
-          } else {
+          }
+          else {
             return false;
           }
-        } else {
+        }
+        else {
           $(this).popupwindow(profiles);
           $(this).triggerHandler('click.orderPopup', profiles);
         }
@@ -370,12 +338,12 @@
       $('.bibdk-reservation-item input').click(function(e) {
         e.preventDefault();
         $(this).parent().parent().find('a').click();
-        $(this).attr('checked','checked');
+        $(this).attr('checked', 'checked');
         return false;
       });
       $('.bibdk-reservation-item a').click(function(e) {
         e.preventDefault();
-        $(this).parent().find('input').attr('checked','checked');
+        $(this).parent().find('input').attr('checked', 'checked');
         return false;
       });
 
@@ -404,22 +372,6 @@
         }
       });
 
-      // Toggle visibility of "next section of an element"
-      /* $('.toggle-next-section').toggle(function(e) {
-       e.preventDefault();
-       $(this).addClass('toggled');
-       $('.toggle-next-section.toggled .show-more').addClass('visuallyhidden');
-       $('.toggle-next-section.toggled .show-less').removeClass('visuallyhidden');
-       $(this).closest('.element-section').next().removeClass('visuallyhidden');
-       }, function(e) {
-       e.preventDefault();
-       $('.toggle-next-section.toggled .show-more').removeClass('visuallyhidden');
-       $('.toggle-next-section.toggled .show-less').addClass('visuallyhidden');
-       $(this).removeClass('toggled');
-       $(this).closest('.element-section').next().addClass('visuallyhidden');
-       });
-       */
-
       // Toggle sub menus in help overlay menu
       $('.pane-bibdk-help-bibdk-help-popup-menu ul ul').hide();
       $('.pane-bibdk-help-bibdk-help-popup-menu a').click(function(e) {
@@ -432,9 +384,9 @@
 
       // Password fields
       $(".bibdk-password-field").each(function() {
-          // IE 8 compatibility
-          $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-          $(this).remove();
+        // IE 8 compatibility
+        $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
+        $(this).remove();
       });
 
       $('.bibdk-unmask-password-field').click(function() {
@@ -461,11 +413,15 @@
 
       // ****************************  popovers **************************** //
       $('.popover-button').click(function(e) {
+        e.preventDefault();
         $('.popover').addClass('visuallyhidden');
         $(this).siblings().removeClass('visuallyhidden').find('input').select();
+        $(this).siblings().find('.close').focus();
       });
       $('.popover .close').click(function(e) {
+        e.preventDefault();
         $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+        $(this).parent().prev('.popover-button').find('a').focus();
       });
 
       /* /begin TODO: delete after sprint 32 */
@@ -537,28 +493,29 @@
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
         // Move to first input field in expanded search, if activated.
-        if ( $('#search-advanced-toggle').hasClass('toggled') === true ) {
+        if($('#search-advanced-toggle').hasClass('toggled') === true) {
           $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-        } else {
+        }
+        else {
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
 
       // context == '.container' when clicking on a search page tab.
-      if ( context == '.container' && $('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1' ) {
-          $('#search-advanced-toggle').toggleClass('toggled');
-          $('#search-advanced').toggleClass('visuallyhidden');
+      if(context == '.container' && $('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1') {
+        $('#search-advanced-toggle').toggleClass('toggled');
+        $('#search-advanced').toggleClass('visuallyhidden');
       }
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
-          var wAction = $(this).find('.actions').width();
-          $(this).find('.manifestation-data').css('margin-right', wAction);
+        var wAction = $(this).find('.actions').width();
+        $(this).find('.manifestation-data').css('margin-right', wAction);
 
         var hAction = $(this).find('.actions').height();
 
-          var hData = $(this).find('.manifestation-data').height();
+        var hData = $(this).find('.manifestation-data').height();
         var highestCol = Math.max(hAction, hData);
         $(this).find('.actions').height(highestCol);
         var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
