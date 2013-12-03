@@ -568,10 +568,14 @@ select#edit-favouriteselector {
     text-align: right;
 }
 
-.page-reservation .order-condition {
-    margin: 35px 0 0;
-    .fieldset-wrapper {
-      margin: 5px 10px 5px 45px;
+.page-reservation {
+    .messages {
+      margin: 35px 0 0;
+    }
+     .order-condition {
+      .fieldset-wrapper {
+        margin: 5px 10px 5px 45px;
+      }
     }
 }
 
