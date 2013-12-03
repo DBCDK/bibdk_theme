@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media print {
   /* line 8, ../sass/print.scss */
   * {
@@ -55,7 +56,8 @@
 
   @page {
     margin: 0.5cm;
-  }
+}
+
   /* line 18, ../sass/print.scss */
   p, h2, h3 {
     orphans: 3;
