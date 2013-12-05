@@ -486,7 +486,6 @@
       });
 
       // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
-
       // Toggle advanced search options
       $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
@@ -500,12 +499,6 @@
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });
-
-      // context == '.container' when clicking on a search page tab.
-      if(context == '.container' && $('#search-advanced-toggle').attr('data-toggle-state-hidden') != '1') {
-        $('#search-advanced-toggle').toggleClass('toggled');
-        $('#search-advanced').toggleClass('visuallyhidden');
-      }
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
