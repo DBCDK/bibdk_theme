@@ -708,3 +708,47 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
     margin-top: 50px;
   }
 }
+div#custom-search-options-list.popover {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -320px;
+  margin-top: -250px;
+  background-color: $grey-7;
+  z-index: 200;
+  width: 600px;
+  height: auto;
+  padding: 30px 30px 15px;
+  border: solid 1px $grey-5;
+  select {
+    height: inherit;
+    width: 220px;
+    padding: 5px;
+    @include clearfix;
+  }
+  .form-item {
+
+    width: initial;
+    float: left;
+  }
+  .form-wrapper {
+    float: left;
+  }
+  .list-actions {
+    margin-top: 150px;
+    float: left;
+    width: 140px;
+    padding: 10px;
+  }
+  .custom-search-list-save, .custom-search-list-close {
+    margin: 20px;
+    width: auto;
+    float: right;
+  }
+  h3 {
+    background-color: $blue;
+    color: white;
+    margin: -30px -30px 30px -30px;
+    padding: 10px;
+  }
+}
