@@ -1952,11 +1952,6 @@ hr {
   line-height: 1.8;
 }
 
-/* line 151, ../sass/_typography.scss */
-.text-small {
-  font-size: 0.916667em;
-}
-
 /* line 154, ../sass/_typography.scss */
 .text-white {
   color: white;
