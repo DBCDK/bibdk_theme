@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Modal window
+// =============================================================================
+
+.modal {
+  position: fixed;
+  z-index: 200;
+  padding: 30px 30px 15px;
+  background-color: $grey-7;
+  border: solid 1px $grey-5;
+  @include box-shadow(0 3px 10px rgba(136, 136, 136, 0.75));
+}
+
+.modal--center-vertically {
+  @extend .modal;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.modal--center-horizontally {
+  @extend .modal;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__title {
+  background-color: $blue;
+  color: white;
+  margin: -30px -30px 30px -30px;
+  padding: 10px 30px;
+}

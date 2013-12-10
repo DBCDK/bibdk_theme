@@ -265,10 +265,12 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
 
+  dpm($form);
+
   // break language up in columns : language, frontpage
-  _break_into_columns_expand('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
+  _break_into_columns_expand('sprog', 'a54a7813-741a-f3d4-615d-e60a322df4be', 'term_language', 3, $form);
   // language all other search pages
-  _break_into_columns('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
+ /* _break_into_columns('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
 
   // language, books
   // _break_into_columns('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
@@ -300,7 +302,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   _break_into_columns('57308136-ba7d-8224-19af-26b0f6567f77', 'e8258795-3bbe-5e34-fda2-04a8b420d93f', 4, $form);
   // material type, music
   _break_into_columns_expand('05b8e136-f60b-65d4-edd0-56c69d20ce8d', '604357bb-a73b-65c4-11d8-cf798b7eabe1', 2, $form);
-
+*/
 }
 
 
@@ -338,36 +340,49 @@ function _break_into_columns($parent_id, $id, $cnum, &$form) {
   }
 }
 
-function _break_into_columns_expand($parent_id, $id, $cnum, &$form) {
+function _break_into_columns_expand($group, $parent_id, $id, $cnum, &$form) {
   if (!$cnum) {
     return false;
   }
-  if (!empty($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id])) {
-    $slice = $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id];
+  if (!empty($form['advanced']['expand'][$group][$parent_id][$id])) {
+    $slice = $form['advanced']['expand'][$group][$parent_id][$id];
     if (isset($slice['#tree'])) {
       unset($slice['#tree']);
     }
-    unset($form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id][$id]);
+    unset($form['advanced']['expand'][$group][$parent_id][$id]);
+
+    foreach ($slice as $key => $val) {
+      if (preg_match('@-container@', $key)){
+        $container[$key] = $val;
+        unset($slice[$key]);
+      }
+      if (preg_match('@#@', $key)){
+        unset($slice[$key]);
+      }
+    }
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
     if (!$len) {
       return false;
     }
     $n = $colkey = 0;
+    dpm($slice);
     foreach ($slice as $key => $val) {
-      $snippets[$colkey][$key] = $val;
-      $n++;
-      if (floor($n / $len) == ($n / $len)) {
-        $colkey++;
-      }
+        $snippets[$colkey][$key] = $val;
+        $n++;
+        if (floor($n / $len) == ($n / $len)) {
+          $colkey++;
+        }
+
     }
     if (sizeof($snippets) > $cnum) {
       $snippets[$colkey - 1] = $snippets[$colkey - 1] + $snippets[$colkey];
       unset($snippets[$colkey]);
     }
+    dpm($snippets);
     foreach ($snippets as $key => $snippet) {
       $snippet['#type'] = 'container';
       $snippet['#attributes']['class'] = array('column column' . $key);
-      $form['advanced']['expand']['bibdk_custom_search_element_' . $parent_id]['column' . $key] = $snippet;
+      $form['advanced']['expand'][$group][$parent_id][$id]['column' . $key] = $snippet;
     }
   }
 }

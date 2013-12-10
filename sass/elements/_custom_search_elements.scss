@@ -708,37 +708,15 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
     margin-top: 50px;
   }
 }
-div#search-advanced .custom-search-options-list.popover {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -320px;
-  margin-top: -250px;
-  background-color: $grey-7;
-  z-index: 200;
-  width: 600px;
-  height: auto;
-  padding: 30px 30px 15px;
-  border: solid 1px $grey-5;
-  select {
-    height: inherit;
-    width: 220px;
-    padding: 5px;
-    @include clearfix;
-  }
-  .form-item {
 
-    width: initial;
-    float: left;
-  }
-  .form-wrapper {
-    float: left;
-  }
-  .list-actions {
-    margin-top: 150px;
-    float: left;
-    width: 140px;
-    padding: 10px;
+
+div#search-advanced-panel .custom-search-options-list {
+  @extend .modal--center-horizontally;
+  top: 150px;
+  width: 600px;
+
+  .panel-select{
+    @extend .two-panel-multi-select;
   }
   .custom-search-list-save, .custom-search-list-close {
     margin: 20px;
@@ -746,9 +724,6 @@ div#search-advanced .custom-search-options-list.popover {
     float: right;
   }
   h3 {
-    background-color: $blue;
-    color: white;
-    margin: -30px -30px 30px -30px;
-    padding: 10px;
+    @extend .modal__title;
   }
 }

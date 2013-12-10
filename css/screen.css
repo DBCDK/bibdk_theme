@@ -2679,20 +2679,77 @@ select#edit-favouriteselector {
 
 /* line 37, ../sass/components/base/_helpers.scss */
 .clearfix, .row, .form-checkboxes,
-.form-radios, .ting-agency-library {
+.form-radios, .two-panel-multi-select, div#search-advanced-panel .custom-search-options-list .panel-select, .ting-agency-library {
   *zoom: 1;
 }
 /* line 10, ../sass/mixins/_clearfix.scss */
 .clearfix:before, .row:before, .form-checkboxes:before,
-.form-radios:before, .ting-agency-library:before, .clearfix:after, .row:after, .form-checkboxes:after,
-.form-radios:after, .ting-agency-library:after {
+.form-radios:before, .two-panel-multi-select:before, div#search-advanced-panel .custom-search-options-list .panel-select:before, .ting-agency-library:before, .clearfix:after, .row:after, .form-checkboxes:after,
+.form-radios:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
   content: "";
   display: table;
 }
 /* line 14, ../sass/mixins/_clearfix.scss */
 .clearfix:after, .row:after, .form-checkboxes:after,
-.form-radios:after, .ting-agency-library:after {
+.form-radios:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
   clear: both;
+}
+
+/* line 44, ../sass/components/base/_helpers.scss */
+.two-panel-multi-select .form-type-select, div#search-advanced-panel .custom-search-options-list .panel-select .form-type-select {
+  width: 35%;
+  float: left;
+}
+/* line 48, ../sass/components/base/_helpers.scss */
+.two-panel-multi-select select, div#search-advanced-panel .custom-search-options-list .panel-select select {
+  width: 100%;
+  height: inherit;
+}
+/* line 52, ../sass/components/base/_helpers.scss */
+.two-panel-multi-select .list-actions, div#search-advanced-panel .custom-search-options-list .panel-select .list-actions {
+  margin-top: 50px;
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/components/base/_modal.scss */
+.modal, .modal--center-vertically, .modal--center-horizontally, div#search-advanced-panel .custom-search-options-list {
+  position: fixed;
+  z-index: 200;
+  padding: 30px 30px 15px;
+  background-color: #f2f3f3;
+  border: solid 1px gainsboro;
+  -webkit-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
+  -moz-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
+  box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
+}
+
+/* line 16, ../sass/components/base/_modal.scss */
+.modal--center-vertically {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 24, ../sass/components/base/_modal.scss */
+.modal--center-horizontally, div#search-advanced-panel .custom-search-options-list {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 32, ../sass/components/base/_modal.scss */
+.modal__title, div#search-advanced-panel .custom-search-options-list h3 {
+  background-color: #178bad;
+  color: white;
+  margin: -30px -30px 30px -30px;
+  padding: 10px 30px;
 }
 
 /* line 7, ../sass/components/global/_messages.scss */
@@ -6326,64 +6383,16 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   margin-top: 50px;
 }
 
-/* line 711, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -320px;
-  margin-top: -250px;
-  background-color: #f2f3f3;
-  z-index: 200;
+/* line 713, ../sass/elements/_custom_search_elements.scss */
+div#search-advanced-panel .custom-search-options-list {
+  top: 150px;
   width: 600px;
-  height: auto;
-  padding: 30px 30px 15px;
-  border: solid 1px gainsboro;
 }
-/* line 723, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover select {
-  height: inherit;
-  width: 220px;
-  padding: 5px;
-  *zoom: 1;
-}
-/* line 10, ../sass/mixins/_clearfix.scss */
-div#search-advanced .custom-search-options-list.popover select:before, div#search-advanced .custom-search-options-list.popover select:after {
-  content: "";
-  display: table;
-}
-/* line 14, ../sass/mixins/_clearfix.scss */
-div#search-advanced .custom-search-options-list.popover select:after {
-  clear: both;
-}
-/* line 729, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover .form-item {
-  width: initial;
-  float: left;
-}
-/* line 734, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover .form-wrapper {
-  float: left;
-}
-/* line 737, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover .list-actions {
-  margin-top: 150px;
-  float: left;
-  width: 140px;
-  padding: 10px;
-}
-/* line 743, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover .custom-search-list-save, div#search-advanced .custom-search-options-list.popover .custom-search-list-close {
+/* line 721, ../sass/elements/_custom_search_elements.scss */
+div#search-advanced-panel .custom-search-options-list .custom-search-list-save, div#search-advanced-panel .custom-search-options-list .custom-search-list-close {
   margin: 20px;
   width: auto;
   float: right;
-}
-/* line 748, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced .custom-search-options-list.popover h3 {
-  background-color: #178bad;
-  color: white;
-  margin: -30px -30px 30px -30px;
-  padding: 10px;
 }
 
 /* line 7, ../sass/elements/_facet_browser.scss */
