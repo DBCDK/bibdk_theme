@@ -30,6 +30,7 @@
     background-color: $green;
     color: $white;
     text-shadow: $text-shadow;
+    font-size: 1.08333em;
     font-weight: bold;
     @include transition(background-color, 200ms);
 
