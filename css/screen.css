@@ -6327,7 +6327,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
 }
 
 /* line 711, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover {
+div#search-advanced .custom-search-options-list.popover {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -6341,45 +6341,45 @@ div#custom-search-options-list.popover {
   border: solid 1px gainsboro;
 }
 /* line 723, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover select {
+div#search-advanced .custom-search-options-list.popover select {
   height: inherit;
   width: 220px;
   padding: 5px;
   *zoom: 1;
 }
 /* line 10, ../sass/mixins/_clearfix.scss */
-div#custom-search-options-list.popover select:before, div#custom-search-options-list.popover select:after {
+div#search-advanced .custom-search-options-list.popover select:before, div#search-advanced .custom-search-options-list.popover select:after {
   content: "";
   display: table;
 }
 /* line 14, ../sass/mixins/_clearfix.scss */
-div#custom-search-options-list.popover select:after {
+div#search-advanced .custom-search-options-list.popover select:after {
   clear: both;
 }
 /* line 729, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover .form-item {
+div#search-advanced .custom-search-options-list.popover .form-item {
   width: initial;
   float: left;
 }
 /* line 734, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover .form-wrapper {
+div#search-advanced .custom-search-options-list.popover .form-wrapper {
   float: left;
 }
 /* line 737, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover .list-actions {
+div#search-advanced .custom-search-options-list.popover .list-actions {
   margin-top: 150px;
   float: left;
   width: 140px;
   padding: 10px;
 }
 /* line 743, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover .custom-search-list-save, div#custom-search-options-list.popover .custom-search-list-close {
+div#search-advanced .custom-search-options-list.popover .custom-search-list-save, div#search-advanced .custom-search-options-list.popover .custom-search-list-close {
   margin: 20px;
   width: auto;
   float: right;
 }
 /* line 748, ../sass/elements/_custom_search_elements.scss */
-div#custom-search-options-list.popover h3 {
+div#search-advanced .custom-search-options-list.popover h3 {
   background-color: #178bad;
   color: white;
   margin: -30px -30px 30px -30px;
