@@ -265,57 +265,46 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
 
-  dpm($form);
-
-  // break language up in columns : language, frontpage
-  _break_into_columns_expand('sprog', 'a54a7813-741a-f3d4-615d-e60a322df4be', 'term_language', 3, $form);
-  // language all other search pages
- /* _break_into_columns('a54a7813-741a-f3d4-615d-e60a322df4be', '95788824-6d40-ebd4-8912-ce2194f48d62', 3, $form);
-
-  // language, books
-  // _break_into_columns('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
-  _break_into_columns_expand('03d3d960-f884-1fe4-2db0-52e51ac82a6e', '4ed2c5d5-656b-be14-b55f-fbc7c1aff047', 2, $form);
-
-  // language, articles
-  _break_into_columns('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
-  #_break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 3, $form);
-
-  // nationality, film
-  _break_into_columns('26707474-294f-1c34-e50b-f7831578913d', '8e7bda97-5430-9774-e54c-4d2b0005a06b', 4, $form);
-  // genre type, film
-  _break_into_columns('ae797962-8b73-3044-31d3-6eebde66c95f', 'f81d0c50-5f4b-d1f4-f11f-c000c901c841', 5, $form);
-  // material type, film
-  // _break_into_columns_expand('1458f855-531f-b484-1df2-1c7762dc339b', 'f79c6d0f-effe-6944-7951-211d70e904d7', 2, $form);
-
-  // material type, net
-  _break_into_columns('66d1dd8d-2742-7d64-8d4c-ab7f601a7916', '819ed112-ec85-8f64-2573-a5a88f7ac3d9', 2, $form);
-  // language, net
-  _break_into_columns_expand('553e8edb-bbb1-c6e4-5574-8182d8ed4e15', '12a1e89e-1274-a394-a12a-588d3abde6e9', 2, $form);
-
-  // Platform, games
-  _break_into_columns('40cb1fd2-d934-0734-69f7-01248b663172', '3c0f6ff4-63f2-8a54-4500-6198904477ba', 2, $form);
-
-  // genre, games
-  _break_into_columns('7c3bfbbf-3038-9ca4-952a-85f9785337e2', 'fbeb5556-778a-ab64-2522-89eeef2793eb', 3, $form);
-
-  // genre, music
-  _break_into_columns('57308136-ba7d-8224-19af-26b0f6567f77', 'e8258795-3bbe-5e34-fda2-04a8b420d93f', 4, $form);
-  // material type, music
-  _break_into_columns_expand('05b8e136-f60b-65d4-edd0-56c69d20ce8d', '604357bb-a73b-65c4-11d8-cf798b7eabe1', 2, $form);
-*/
+  // break elements into columns
+  if (!$page_id = $form['page_id']['#default_value']){
+    return;
+  }
+  switch($page_id){
+    case 'bibdk_frontpage':
+      _break_into_columns_expand('expand', 'sprog', 'term_language', 3, $form);
+      break;
+    case 'bibdk_frontpage/bog':
+    case 'bibdk_frontpage/net':
+      _break_into_columns_expand('expand', 'sprog', 'term_language', 2, $form);
+      break;
+    case 'bibdk_frontpage/film':
+      _break_into_columns_expand('main', 'nationalitet', 'term_nationality', 4, $form);
+      _break_into_columns_expand('main', 'genre, type', 'term_genre', 5, $form);
+      //_break_into_columns_expand('expand', 'materialetype', 'term_type', 2, $form);
+      break;
+    case 'bibdk_frontpage/spil':
+      _break_into_columns_expand('main', 'platform', 'term_type', 2, $form);
+      _break_into_columns_expand('main', 'spilgenre, type', 'dkcclphrase_lem', 3, $form);
+      break;
+    case 'bibdk_frontpage/musik':
+      _break_into_columns_expand('main', 'musikgenre', 'term_genre', 4, $form);
+      _break_into_columns_expand('expand', 'materiale', 'n/amateriale', 2, $form);
+      break;
+  }
 }
 
 
-function _break_into_columns($parent_id, $id, $cnum, &$form) {
+function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   if (!$cnum) {
     return false;
   }
   if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
-    if (isset($slice['#tree'])) {
+    /*if (isset($slice['#tree'])) {
       unset($slice['#tree']);
-    }
+    }*/
     unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
+
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
     if (!$len) {
       return false;
@@ -335,56 +324,63 @@ function _break_into_columns($parent_id, $id, $cnum, &$form) {
     foreach ($snippets as $key => $snippet) {
       $snippet['#type'] = 'container';
       $snippet['#attributes']['class'] = array('column column' . $key);
-      $form['advanced']['bibdk_custom_search_element_' . $parent_id]['column' . $key] = $snippet;
+      $form['advanced']['bibdk_custom_search_element_' . $parent_id]['id']['column' . $key] = $snippet;
     }
   }
 }
 
-function _break_into_columns_expand($group, $parent_id, $id, $cnum, &$form) {
+function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
+
   if (!$cnum) {
     return false;
   }
-  if (!empty($form['advanced']['expand'][$group][$parent_id][$id])) {
-    $slice = $form['advanced']['expand'][$group][$parent_id][$id];
-    if (isset($slice['#tree'])) {
-      unset($slice['#tree']);
-    }
-    unset($form['advanced']['expand'][$group][$parent_id][$id]);
 
-    foreach ($slice as $key => $val) {
-      if (preg_match('@-container@', $key)){
+  if (isset($form['advanced'][$region][$group]) && is_array($form['advanced'][$region][$group])) {
+    $parent_id = key($form['advanced'][$region][$group]);
+    if (!empty($form['advanced'][$region][$group][$parent_id][$type])){
+      $elements = &$form['advanced'][$region][$group][$parent_id][$type];
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+
+    $container = array();
+    foreach ($elements as $key => $val) {
+      if (preg_match('@container@', $key)){
         $container[$key] = $val;
-        unset($slice[$key]);
+        unset($elements[$key]);
       }
       if (preg_match('@#@', $key)){
-        unset($slice[$key]);
+        unset($elements[$key]);
       }
     }
-    $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
+    $len = round((sizeof($elements)) / $cnum); // $slice includes a #tree key
     if (!$len) {
       return false;
     }
     $n = $colkey = 0;
-    dpm($slice);
-    foreach ($slice as $key => $val) {
+
+    foreach ($elements as $key => $val) {
         $snippets[$colkey][$key] = $val;
         $n++;
         if (floor($n / $len) == ($n / $len)) {
           $colkey++;
         }
-
     }
     if (sizeof($snippets) > $cnum) {
       $snippets[$colkey - 1] = $snippets[$colkey - 1] + $snippets[$colkey];
       unset($snippets[$colkey]);
     }
-    dpm($snippets);
+    $snippets[0] += $container;
+    unset($elements);
     foreach ($snippets as $key => $snippet) {
       $snippet['#type'] = 'container';
       $snippet['#attributes']['class'] = array('column column' . $key);
-      $form['advanced']['expand'][$group][$parent_id][$id]['column' . $key] = $snippet;
+      $elements['column' . $key] = $snippet;
     }
-  }
+    $form['advanced'][$region][$group][$parent_id][$type] = $elements;
 }
 
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
