@@ -1,10 +1,10 @@
-/* line 648, sprites/*.png */
-.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after {
-  background-image: url('../img/sprites-s83727057ee.png');
-  background-repeat: no-repeat;
+@charset "UTF-8";
+/* line 642, sprites/*.png */
+.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
+  background: url('../img/sprites-s83727057ee.png') no-repeat;
 }
 
-/* line 10, ../sass/_normalize.scss */
+/* line 20, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -19,7 +19,7 @@ summary {
   display: block;
 }
 
-/* line 27, ../sass/_normalize.scss */
+/* line 29, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -44,7 +44,7 @@ a:focus {
   outline: thin dotted;
 }
 
-/* line 106, ../sass/_normalize.scss */
+/* line 107, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -66,13 +66,13 @@ mark {
   color: #000;
 }
 
-/* line 183, ../sass/_normalize.scss */
+/* line 184, ../sass/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
 }
 
-/* line 191, ../sass/_normalize.scss */
+/* line 194, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -94,7 +94,7 @@ q {
   quotes: none;
 }
 
-/* line 219, ../sass/_normalize.scss */
+/* line 220, ../sass/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -106,7 +106,7 @@ small {
   font-size: 80%;
 }
 
-/* line 235, ../sass/_normalize.scss */
+/* line 236, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -125,7 +125,7 @@ sub {
   bottom: -0.25em;
 }
 
-/* line 258, ../sass/_normalize.scss */
+/* line 261, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -138,14 +138,14 @@ dd {
   margin: 0 0 0 40px;
 }
 
-/* line 272, ../sass/_normalize.scss */
+/* line 274, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
   padding: 0 0 0 40px;
 }
 
-/* line 281, ../sass/_normalize.scss */
+/* line 282, ../sass/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -180,7 +180,7 @@ legend {
   *margin-left: -7px;
 }
 
-/* line 363, ../sass/_normalize.scss */
+/* line 366, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -191,13 +191,13 @@ textarea {
   *vertical-align: middle;
 }
 
-/* line 377, ../sass/_normalize.scss */
+/* line 378, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
 }
 
-/* line 391, ../sass/_normalize.scss */
+/* line 394, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -207,13 +207,13 @@ input[type="submit"] {
   *overflow: visible;
 }
 
-/* line 403, ../sass/_normalize.scss */
+/* line 404, ../sass/_normalize.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
 }
 
-/* line 414, ../sass/_normalize.scss */
+/* line 415, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -230,13 +230,13 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 438, ../sass/_normalize.scss */
+/* line 439, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 446, ../sass/_normalize.scss */
+/* line 447, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -298,7 +298,7 @@ div[class^="span"], span[class^="span"], article[class^="span"] {
   }
 }
 
-/* line 44, ../sass/_grid.scss */
+/* line 45, ../sass/_grid.scss */
 .container:before,
 .container:after {
   display: table;
@@ -306,7 +306,7 @@ div[class^="span"], span[class^="span"], article[class^="span"] {
   line-height: 0;
 }
 @media screen and (min-width: 960px) {
-  /* line 44, ../sass/_grid.scss */
+  /* line 45, ../sass/_grid.scss */
   .container:before,
   .container:after {
     display: table;
@@ -734,7 +734,7 @@ div[class^="span"], span[class^="span"], article[class^="span"] {
   *zoom: 1;
 }
 
-/* line 311, ../sass/_grid.scss */
+/* line 312, ../sass/_grid.scss */
 .row-fluid:before,
 .row-fluid:after {
   display: table;
@@ -1197,13 +1197,13 @@ div[class^="span"], span[class^="span"], article[class^="span"] {
   *margin-left: 4.105263157894737%;
 }
 
-/* line 622, ../sass/_grid.scss */
+/* line 623, ../sass/_grid.scss */
 [class*="span"].hide,
 .row-fluid [class*="span"].hide {
   display: none;
 }
 
-/* line 626, ../sass/_grid.scss */
+/* line 627, ../sass/_grid.scss */
 [class*="span"].pull-right,
 .row-fluid [class*="span"].pull-right {
   float: right;
@@ -1377,7 +1377,7 @@ tr .ajax-progress .throbber {
   width: 16em;
 }
 
-/* line 209, ../sass/drupal/_system.base.scss */
+/* line 210, ../sass/drupal/_system.base.scss */
 .container-inline div,
 .container-inline label {
   display: inline;
@@ -1410,7 +1410,7 @@ html.js .js-hide {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 274, ../sass/drupal/_system.base.scss */
+/* line 275, ../sass/drupal/_system.base.scss */
 .element-invisible.element-focusable:active,
 .element-invisible.element-focusable:focus {
   position: static !important;
@@ -1422,7 +1422,7 @@ td.menu-disabled {
   background: gainsboro;
 }
 
-/* line 54, ../sass/drupal/_system.menus.scss */
+/* line 55, ../sass/drupal/_system.menus.scss */
 ul.inline,
 ul.links.inline {
   display: inline;
@@ -1536,7 +1536,7 @@ td.active {
   padding: 0;
 }
 
-/* line 88, ../sass/drupal/_system.theme.scss */
+/* line 89, ../sass/drupal/_system.theme.scss */
 tr.odd .form-item,
 tr.even .form-item {
   margin-top: 0;
@@ -1544,7 +1544,7 @@ tr.even .form-item {
   white-space: nowrap;
 }
 
-/* line 118, ../sass/drupal/_system.theme.scss */
+/* line 119, ../sass/drupal/_system.theme.scss */
 .marker,
 .form-required {
   color: #f00;
@@ -1617,7 +1617,7 @@ tr.selected td {
   background: #ffc;
 }
 
-/* line 239, ../sass/drupal/_system.theme.scss */
+/* line 240, ../sass/drupal/_system.theme.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
@@ -1756,7 +1756,7 @@ div.password-suggestions ul {
   margin-bottom: 0;
 }
 
-/* line 87, ../sass/drupal/_user.scss */
+/* line 88, ../sass/drupal/_user.scss */
 .confirm-parent,
 .password-parent {
   clear: left;
@@ -1811,7 +1811,7 @@ body {
   color: #25292c;
 }
 
-/* line 19, ../sass/_typography.scss */
+/* line 23, ../sass/_typography.scss */
 html,
 button,
 input,
@@ -1826,7 +1826,7 @@ a {
   color: #178bad;
 }
 
-/* line 44, ../sass/_typography.scss */
+/* line 49, ../sass/_typography.scss */
 h1,
 h2,
 h3,
@@ -1896,7 +1896,7 @@ address {
   font-style: normal;
 }
 
-/* line 105, ../sass/_typography.scss */
+/* line 106, ../sass/_typography.scss */
 b,
 strong {
   font-weight: bold;
@@ -2004,7 +2004,7 @@ table.table-data td {
   padding: 20px;
   *zoom: 1;
 }
-/* line 9, ../sass/mixins/_clearfix.scss */
+/* line 10, ../sass/mixins/_clearfix.scss */
 .form-item:before, .form-item:after {
   content: "";
   display: table;
@@ -2099,14 +2099,14 @@ label.option {
   margin-top: 5px;
 }
 
-/* line 110, ../sass/_forms.scss */
+/* line 111, ../sass/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 5px;
   cursor: pointer;
 }
 
-/* line 115, ../sass/_forms.scss */
+/* line 116, ../sass/_forms.scss */
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: thin dotted #3c4043;
@@ -2114,7 +2114,7 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
-/* line 126, ../sass/_forms.scss */
+/* line 127, ../sass/_forms.scss */
 .form-checkboxes .form-type-checkbox,
 .form-radios .form-type-radio {
   float: left;
@@ -2123,13 +2123,14 @@ input[type="checkbox"]:focus {
 
 /* line 138, ../sass/_forms.scss */
 select {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #c3c3c3;
   background-color: white;
@@ -2145,31 +2146,32 @@ select:focus {
   outline-offset: -2px;
 }
 
-/* line 156, ../sass/_forms.scss */
+/* line 157, ../sass/_forms.scss */
 select[multiple],
 select[size] {
   height: auto;
 }
 
-/* line 167, ../sass/_forms.scss */
+/* line 169, ../sass/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"] {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-transition: border 0.2s box-shadow 0.2s;
-  -o-transition: border 0.2s box-shadow 0.2s;
-  -webkit-transition: border 0.2s box-shadow 0.2s;
-  transition: border 0.2s box-shadow 0.2s;
+  -webkit-transition: border 0.2s, box-shadow 0.2s;
+  -moz-transition: border 0.2s, box-shadow 0.2s;
+  -o-transition: border 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
   padding: 10px;
   color: #51565a;
   font-size: 14px;
@@ -2179,8 +2181,10 @@ input[type="password"] {
 
 /* line 183, ../sass/_forms.scss */
 textarea {
+  -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
   resize: vertical;
   height: auto;
@@ -2188,28 +2192,30 @@ textarea {
   padding: 10px;
 }
 
-/* line 191, ../sass/_forms.scss */
+/* line 192, ../sass/_forms.scss */
 input[type="text"],
 input[type="password"] {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   max-width: 100%;
 }
 
-/* line 197, ../sass/_forms.scss */
+/* line 199, ../sass/_forms.scss */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
   outline: thin dotted \9;
 }
 
-/* line 213, ../sass/_forms.scss */
+/* line 214, ../sass/_forms.scss */
 input.password-confirm,
 input.password-field {
   width: 45%;
@@ -2220,13 +2226,13 @@ input.password-field {
   margin-bottom: 15px;
 }
 
-/* line 220, ../sass/_forms.scss */
+/* line 221, ../sass/_forms.scss */
 .confirm-parent,
 .password-parent {
   width: 100%;
 }
 
-/* line 224, ../sass/_forms.scss */
+/* line 225, ../sass/_forms.scss */
 div.password-confirm,
 .password-strength {
   width: 50%;
@@ -2235,8 +2241,8 @@ div.password-confirm,
 
 /* line 229, ../sass/_forms.scss */
 .form-item .password-suggestions {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
   margin: 10px 0;
@@ -2267,7 +2273,7 @@ input[type="submit"] {
 .form-actions {
   text-align: right;
 }
-/* line 273, ../sass/_forms.scss */
+/* line 274, ../sass/_forms.scss */
 .form-actions input[type="submit"],
 .form-actions a {
   font-size: 14px;
@@ -2280,20 +2286,21 @@ input[type="submit"] {
 }
 /* line 281, ../sass/_forms.scss */
 .form-actions a {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   height: 30px;
   line-height: 30px;
   margin-left: 10px;
 }
 
-/* line 294, ../sass/_forms.scss */
+/* line 299, ../sass/_forms.scss */
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -2303,20 +2310,20 @@ textarea[readonly] {
   cursor: not-allowed;
 }
 
-/* line 303, ../sass/_forms.scss */
+/* line 306, ../sass/_forms.scss */
 textarea[disabled],
 textarea[readonly],
 input[type="text"][disabled],
 input[type="text"][readonly] {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   background-color: #f2f3f3;
   border-color: gainsboro;
   color: #6c7379;
 }
 
-/* line 317, ../sass/_forms.scss */
+/* line 319, ../sass/_forms.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
@@ -2328,19 +2335,19 @@ input[type="text"][readonly] {
   color: red;
 }
 
-/* line 333, ../sass/_forms.scss */
+/* line 334, ../sass/_forms.scss */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #6c7379;
 }
 
-/* line 337, ../sass/_forms.scss */
+/* line 338, ../sass/_forms.scss */
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #6c7379;
 }
 
-/* line 341, ../sass/_forms.scss */
+/* line 342, ../sass/_forms.scss */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #6c7379;
@@ -2371,7 +2378,7 @@ textarea::-webkit-input-placeholder {
 .form-wrapper-horizontal .form-checkboxes .form-checkbox {
   margin-left: 0;
 }
-/* line 377, ../sass/_forms.scss */
+/* line 378, ../sass/_forms.scss */
 .form-wrapper-horizontal input[type="text"],
 .form-wrapper-horizontal input[type="password"] {
   float: right;
@@ -2491,7 +2498,7 @@ textarea::-webkit-input-placeholder {
   padding-bottom: 20px;
 }
 
-/* line 508, ../sass/_forms.scss */
+/* line 509, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -2500,7 +2507,7 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 516, ../sass/_forms.scss */
+/* line 519, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
 .page-reservation input[type="text"],
@@ -2528,7 +2535,7 @@ select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 541, ../sass/_forms.scss */
+/* line 542, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
@@ -2594,7 +2601,7 @@ select#edit-favouriteselector {
   padding: 0 20px;
 }
 
-/* line 602, ../sass/_forms.scss */
+/* line 603, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
@@ -2637,13 +2644,13 @@ select#edit-favouriteselector {
 }
 
 /* line 7, ../sass/components/base/_helpers.scss */
-.apparent-link, .messages a {
+.apparent-link, .messages a, div.user-alert a {
   color: #161616;
   font-weight: bold;
   text-decoration: none;
 }
 /* line 12, ../sass/components/base/_helpers.scss */
-.apparent-link:hover, .messages a:hover {
+.apparent-link:hover, .messages a:hover, div.user-alert a:hover {
   text-decoration: underline;
 }
 
@@ -2670,7 +2677,7 @@ select#edit-favouriteselector {
 .form-radios, .ting-agency-library {
   *zoom: 1;
 }
-/* line 9, ../sass/mixins/_clearfix.scss */
+/* line 10, ../sass/mixins/_clearfix.scss */
 .clearfix:before, .row:before, .form-checkboxes:before,
 .form-radios:before, .ting-agency-library:before, .clearfix:after, .row:after, .form-checkboxes:after,
 .form-radios:after, .ting-agency-library:after {
@@ -2686,84 +2693,124 @@ select#edit-favouriteselector {
 /* line 7, ../sass/components/global/_messages.scss */
 #messages-wrapper {
   background-color: #f2f3f3;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-/* line 15, ../sass/components/global/_messages.scss */
+/* line 11, ../sass/components/global/_messages.scss */
+#messages {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 14, ../sass/components/global/_messages.scss */
 body.page-overlay #messages {
   margin: 20px;
 }
 
-/* line 20, ../sass/components/global/_messages.scss */
+/* line 19, ../sass/components/global/_messages.scss */
 .messages {
   position: relative;
   margin-bottom: 10px;
   padding: 15px 15px 15px 48px;
   border: 1px solid #3c4043;
 }
-/* line 26, ../sass/components/global/_messages.scss */
+/* line 25, ../sass/components/global/_messages.scss */
 .messages:last-child {
   margin-bottom: 0;
 }
-/* line 30, ../sass/components/global/_messages.scss */
+/* line 29, ../sass/components/global/_messages.scss */
 .messages:after {
   position: absolute;
   top: 12px;
   left: 12px;
   content: '';
 }
-/* line 37, ../sass/components/global/_messages.scss */
+/* line 36, ../sass/components/global/_messages.scss */
 .messages li {
   margin-bottom: 10px;
 }
-/* line 39, ../sass/components/global/_messages.scss */
+/* line 38, ../sass/components/global/_messages.scss */
 .messages li:last-child {
   margin-bottom: 0;
 }
 
-/* line 50, ../sass/components/global/_messages.scss */
+/* line 49, ../sass/components/global/_messages.scss */
 .messages.notice {
   background-color: #97b8e9;
 }
-/* line 52, ../sass/components/global/_messages.scss */
+/* line 51, ../sass/components/global/_messages.scss */
 .messages.notice:after {
   height: 24px;
   width: 24px;
   background-position: -858px 0;
 }
 
-/* line 56, ../sass/components/global/_messages.scss */
+/* line 55, ../sass/components/global/_messages.scss */
 .messages.status {
   background-color: #97e999;
 }
-/* line 58, ../sass/components/global/_messages.scss */
+/* line 57, ../sass/components/global/_messages.scss */
 .messages.status:after {
   height: 24px;
   width: 24px;
   background-position: -882px 0;
 }
 
-/* line 62, ../sass/components/global/_messages.scss */
+/* line 61, ../sass/components/global/_messages.scss */
 .messages.warning {
   background-color: #fafaa2;
 }
-/* line 64, ../sass/components/global/_messages.scss */
+/* line 63, ../sass/components/global/_messages.scss */
 .messages.warning:after {
   height: 24px;
   width: 24px;
   background-position: -906px 0;
 }
 
-/* line 68, ../sass/components/global/_messages.scss */
+/* line 67, ../sass/components/global/_messages.scss */
 .messages.error {
   background-color: #fba3a2;
 }
-/* line 70, ../sass/components/global/_messages.scss */
+/* line 69, ../sass/components/global/_messages.scss */
 .messages.error:after {
   height: 24px;
   width: 24px;
   background-position: -810px 0;
+}
+
+/* line 79, ../sass/components/global/_messages.scss */
+div.user-alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fba3a2;
+  position: relative;
+  padding: 0px;
+  border: 1px solid #3c4043;
+}
+/* line 88, ../sass/components/global/_messages.scss */
+div.user-alert:after {
+  position: absolute;
+  left: 12px;
+  content: '';
+}
+/* line 98, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-message {
+  margin-left: 12px;
+}
+/* line 102, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-close {
+  margin-top: 5px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+}
+/* line 107, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-close span.user-alert-close-image {
+  height: 24px;
+  width: 24px;
+  background-position: -810px 0;
+  background-position: -810px 0;
+  height: 24px;
+  width: 24px;
+  display: block;
 }
 
 /* line 7, ../sass/components/global/_global-login-menu.scss */
@@ -2794,12 +2841,12 @@ body.page-overlay #messages {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
   font-size: 1.08333em;
   font-weight: bold;
-  -moz-transition: background-color 200ms;
-  -o-transition: background-color 200ms;
-  -webkit-transition: background-color 200ms;
-  transition: background-color 200ms;
+  -webkit-transition: background-color, 200ms;
+  -moz-transition: background-color, 200ms;
+  -o-transition: background-color, 200ms;
+  transition: background-color, 200ms;
 }
-/* line 37, ../sass/components/global/_global-login-menu.scss */
+/* line 38, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu a.active, #block-menu-menu-global-login-menu a:hover {
   background-color: #009366;
 }
@@ -2819,10 +2866,11 @@ body.page-overlay #messages {
 
 /* line 7, ../sass/elements/_icons.scss */
 .icon {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   width: 15px;
   background: no-repeat 50% 50%;
@@ -3058,7 +3106,7 @@ input[type="submit"].button-as-link {
    * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
    */
 }
-/* line 21, ../sass/mixins/_button-as-link.scss */
+/* line 24, ../sass/mixins/_button-as-link.scss */
 input[type="submit"].button-as-link:hover, input[type="submit"].button-as-link:focus, input[type="submit"].button-as-link:disabled:hover, input[type="submit"].button-as-link.disabled:hover {
   background-color: transparent;
   background: transparent;
@@ -3067,9 +3115,9 @@ input[type="submit"].button-as-link:hover, input[type="submit"].button-as-link:f
   background: -webkit-linear-gradient(top, transparent 0%, transparent 100%);
   background: -o-linear-gradient(top, transparent 0%, transparent 100%);
   background: -ms-linear-gradient(top, transparent 0%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, transparent 0%, transparent 100%);
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
 }
 /* line 29, ../sass/mixins/_button-as-link.scss */
@@ -3081,7 +3129,7 @@ input[type="submit"].button-as-link:disabled {
   background: -webkit-linear-gradient(top, transparent 0%, transparent 100%);
   background: -o-linear-gradient(top, transparent 0%, transparent 100%);
   background: -ms-linear-gradient(top, transparent 0%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 100%);
 }
 /* line 37, ../sass/mixins/_button-as-link.scss */
 input[type="submit"].button-as-link::-moz-focus-inner {
@@ -3111,7 +3159,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background: -ms-linear-gradient(top, #1999bf 0%, #178bad 100%);
   background: linear-gradient(to bottom, #1999bf 0%, #178bad 100%);
 }
-/* line 12, ../sass/mixins/_btn-skin.scss */
+/* line 13, ../sass/mixins/_btn-skin.scss */
 .btn-blue.toggled, input.toggled[type="submit"], .btn-blue:active, input[type="submit"]:active {
   background: #178bad;
   background: -moz-linear-gradient(top, #178bad 0%, #157d9b 100%);
@@ -3121,7 +3169,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background: -ms-linear-gradient(top, #178bad 0%, #157d9b 100%);
   background: linear-gradient(to bottom, #178bad 0%, #157d9b 100%);
 }
-/* line 16, ../sass/mixins/_btn-skin.scss */
+/* line 17, ../sass/mixins/_btn-skin.scss */
 .btn-blue:disabled:hover, input[type="submit"]:disabled:hover, .btn-blue.disabled:hover, input.disabled[type="submit"]:hover {
   background: #1892b6;
   background: -moz-linear-gradient(top, #1892b6 0%, #1684a4 100%);
@@ -3154,7 +3202,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background: -ms-linear-gradient(top, #5b6065 0%, #51565a 100%);
   background: linear-gradient(to bottom, #5b6065 0%, #51565a 100%);
 }
-/* line 12, ../sass/mixins/_btn-skin.scss */
+/* line 13, ../sass/mixins/_btn-skin.scss */
 .btn-grey.toggled, input.toggled[type="submit"].btn-grey, .btn-grey:active, input[type="submit"].btn-grey:active {
   background: #51565a;
   background: -moz-linear-gradient(top, #51565a 0%, #474c4f 100%);
@@ -3164,7 +3212,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background: -ms-linear-gradient(top, #51565a 0%, #474c4f 100%);
   background: linear-gradient(to bottom, #51565a 0%, #474c4f 100%);
 }
-/* line 16, ../sass/mixins/_btn-skin.scss */
+/* line 17, ../sass/mixins/_btn-skin.scss */
 .btn-grey:disabled:hover, .btn-grey.disabled:hover {
   background: #565b5f;
   background: -moz-linear-gradient(top, #565b5f 0%, #4c5155 100%);
@@ -3177,20 +3225,23 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 
 /* line 30, ../sass/elements/_buttons.scss */
 .btn, input[type="submit"], .set-default-order-agency {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
-  -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   padding: 0 20px;
   height: 30px;
@@ -3199,17 +3250,17 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 /* line 40, ../sass/elements/_buttons.scss */
 .btn:hover, input[type="submit"]:hover, .set-default-order-agency:hover {
-  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 44, ../sass/elements/_buttons.scss */
+/* line 45, ../sass/elements/_buttons.scss */
 .btn.toggled, input.toggled[type="submit"], .toggled.set-default-order-agency, .btn:active, input[type="submit"]:active, .set-default-order-agency:active {
-  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 49, ../sass/elements/_buttons.scss */
+/* line 50, ../sass/elements/_buttons.scss */
 .btn:disabled, input[type="submit"]:disabled, .set-default-order-agency:disabled, .btn.disabled, input.disabled[type="submit"], .disabled.set-default-order-agency {
   cursor: default;
   background-color: #84c0d2;
@@ -3217,8 +3268,8 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 /* line 55, ../sass/elements/_buttons.scss */
 .btn:disabled:hover, input[type="submit"]:disabled:hover, .set-default-order-agency:disabled:hover, .btn.disabled:hover, input.disabled[type="submit"]:hover, .disabled.set-default-order-agency:hover {
-  -moz-box-shadow: 0 0 0;
   -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
 }
 
@@ -3240,9 +3291,9 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 
 /* line 75, ../sass/elements/_buttons.scss */
 .btn-add-library, input[type="submit"].btn-add-library {
+  -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
-  -webkit-transition: none;
   transition: none;
   border: solid 1px gainsboro;
   color: #178bad;
@@ -3261,14 +3312,14 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   /* IE10 */
   background-image: url(../img/library-favorite.png), -o-linear-gradient(top, white, #eeeeee);
   /* Opera 11.10+ */
-  background-image: url(../img/library-favorite.png), linear-gradient(to bottom, #ffffff, #eeeeee);
+  background-image: url(../img/library-favorite.png), linear-gradient(top, #ffffff, #eeeeee);
   background-repeat: no-repeat;
   background-position: 0%;
 }
 /* line 92, ../sass/elements/_buttons.scss */
 .btn-add-library:hover, input[type="submit"].btn-add-library:hover {
-  -moz-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   -webkit-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
+  -moz-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
 }
 
@@ -3289,21 +3340,21 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   /* IE10 */
   background-image: url(), -o-linear-gradient(top, white, #eeeeee);
   /* Opera 11.10+ */
-  background-image: url(), linear-gradient(to bottom, #ffffff, #eeeeee);
+  background-image: url(), linear-gradient(top, #ffffff, #eeeeee);
   background-repeat: no-repeat;
   background-position: 0%;
 }
 /* line 112, ../sass/elements/_buttons.scss */
 .set-default-order-agency:hover {
-  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* line 117, ../sass/elements/_buttons.scss */
 .order-agency .set-default-order-agency {
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -3392,7 +3443,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 .table tr {
   border-bottom: solid 1px gainsboro;
 }
-/* line 81, ../sass/elements/_basic_elements.scss */
+/* line 82, ../sass/elements/_basic_elements.scss */
 .table th,
 .table td {
   text-align: left;
@@ -3435,8 +3486,10 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background: -o-linear-gradient(top, white 0%, #f2f3f3 100%);
   background: -ms-linear-gradient(top, white 0%, #f2f3f3 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #f2f3f3 100%);
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   border: solid 1px gainsboro;
   padding: 6px 10px;
@@ -3486,13 +3539,16 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 /* line 160, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-nav-sub a {
   color: #51565a;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   padding: 5px 10px;
   background-color: white;
@@ -3612,7 +3668,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   border-top: dotted 1px gainsboro;
 }
 
-/* line 303, ../sass/elements/_basic_elements.scss */
+/* line 304, ../sass/elements/_basic_elements.scss */
 div.works-controls > div > div,
 .dropdown-wrapper {
   position: relative;
@@ -3631,11 +3687,13 @@ div.works-controls > div > div,
 
 /* line 317, ../sass/elements/_basic_elements.scss */
 .dropdown-menu {
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 100%;
@@ -3698,7 +3756,7 @@ form.bibdk-search-controls-form .form-item {
   *zoom: 1;
   padding: 0;
 }
-/* line 9, ../sass/mixins/_clearfix.scss */
+/* line 10, ../sass/mixins/_clearfix.scss */
 .search-form-horizontal:before, .search-form-horizontal:after {
   content: "";
   display: table;
@@ -3711,7 +3769,7 @@ form.bibdk-search-controls-form .form-item {
 .search-form-horizontal .form-wrapper {
   border: none;
 }
-/* line 386, ../sass/elements/_basic_elements.scss */
+/* line 387, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal .form-type-textfield,
 .search-form-horizontal .form-actions {
   float: left;
@@ -3745,15 +3803,17 @@ form.bibdk-search-controls-form .form-item {
   color: #178bad;
 }
 
-/* line 421, ../sass/elements/_basic_elements.scss */
+/* line 422, ../sass/elements/_basic_elements.scss */
 div.works-controls > div,
 .works-control-wrapper-left {
   float: left;
   line-height: 30px;
   height: 30px;
   background: white;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   border: solid 1px gainsboro;
   border-left-width: 0;
@@ -3766,8 +3826,10 @@ div.works-controls > div.panel-separator,
 /* line 433, ../sass/elements/_basic_elements.scss */
 div.works-controls > div .works-control.toggled,
 .works-control-wrapper-left .works-control.toggled {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -3780,10 +3842,10 @@ div.works-controls > div .works-control.toggled,
 .works-control {
   font-size: 14px;
 }
-/* line 445, ../sass/elements/_basic_elements.scss */
+/* line 446, ../sass/elements/_basic_elements.scss */
 .works-control:active, .works-control.toggled {
-  -moz-box-shadow: inset 0 0px 1px rgba(22, 22, 22, 0.8);
   -webkit-box-shadow: inset 0 0px 1px rgba(22, 22, 22, 0.8);
+  -moz-box-shadow: inset 0 0px 1px rgba(22, 22, 22, 0.8);
   box-shadow: inset 0 0px 1px rgba(22, 22, 22, 0.8);
   background-color: #edeeee;
 }
@@ -3794,13 +3856,14 @@ div.works-controls > div .works-control.toggled,
   float: left;
 }
 
-/* line 460, ../sass/elements/_basic_elements.scss */
+/* line 461, ../sass/elements/_basic_elements.scss */
 .works-toggle-collapse,
 .works-toggle-expand {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   width: 17px;
 }
@@ -3824,8 +3887,10 @@ div.works-controls > div .works-control.toggled,
 /* line 484, ../sass/elements/_basic_elements.scss */
 p.helptext {
   background-color: #178bad;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   width: auto;
   border: none;
@@ -3844,7 +3909,7 @@ p.helptext a {
   color: white;
 }
 
-/* line 506, ../sass/elements/_basic_elements.scss */
+/* line 512, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first,
 .page-overlay .pager-previous,
 .page-overlay .pager-item,
@@ -3855,7 +3920,7 @@ p.helptext a {
   float: left;
 }
 
-/* line 516, ../sass/elements/_basic_elements.scss */
+/* line 521, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first span,
 .page-overlay .pager-previous span,
 .page-overlay .pager-item span,
@@ -3865,7 +3930,7 @@ p.helptext a {
   display: none;
 }
 
-/* line 525, ../sass/elements/_basic_elements.scss */
+/* line 529, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back,
 .page-overlay .pager-previous,
 .page-overlay .pager-next,
@@ -3874,7 +3939,7 @@ p.helptext a {
   padding: 0 7px;
 }
 
-/* line 533, ../sass/elements/_basic_elements.scss */
+/* line 537, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back a,
 .page-overlay .pager-previous a,
 .page-overlay .pager-next a,
@@ -3903,7 +3968,7 @@ body {
   background: #3c4043;
 }
 
-/* line 11, ../sass/elements/_global_elements.scss */
+/* line 12, ../sass/elements/_global_elements.scss */
 body.page-overlay,
 body.page-reservation {
   background: #e8e8e8;
@@ -3992,7 +4057,7 @@ body.page-reservation #popup .region-content {
   text-align: center;
 }
 
-/* line 98, ../sass/elements/_global_elements.scss */
+/* line 99, ../sass/elements/_global_elements.scss */
 #lang-nav,
 #user-help-topbar-menu {
   float: left;
@@ -4050,13 +4115,16 @@ body.page-reservation #popup .region-content {
 
 /* line 163, ../sass/elements/_global_elements.scss */
 .header-action, .bibdk-favourite-vejviser-link {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   background: #3c4043;
   line-height: 30px;
@@ -4081,8 +4149,10 @@ body.page-reservation #popup .region-content {
   width: 26px;
   height: 26px;
   margin-right: 12px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -4213,7 +4283,7 @@ body.page-reservation #popup .region-content {
   line-height: 30px;
 }
 
-/* line 326, ../sass/elements/_global_elements.scss */
+/* line 327, ../sass/elements/_global_elements.scss */
 .page-laanerstatus .sidebar-header,
 .page-favoritbiblioteker .sidebar-header {
   background-image: url(../img/min-side-smiley.png);
@@ -4240,9 +4310,9 @@ body.page-reservation #popup .region-content {
   color: white;
   border-top: solid 1px #565b5f;
   border-bottom: solid 1px #45494d;
+  -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 /* line 353, ../sass/elements/_global_elements.scss */
@@ -4268,8 +4338,10 @@ body.page-reservation #popup .region-content {
 .sidebar-nav a.active,
 .sidebar-nav fieldset.active {
   border: none;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   background: #178bad;
   padding: 8px 18px;
@@ -4518,7 +4590,7 @@ h3.library-list-header {
   background-color: #f2f3f3;
 }
 
-/* line 165, ../sass/elements/_specific_elements.scss */
+/* line 166, ../sass/elements/_specific_elements.scss */
 .library-details-column-1,
 .library-details-column-2 {
   float: left;
@@ -4531,7 +4603,7 @@ h3.library-list-header {
   background: none;
 }
 
-/* line 175, ../sass/elements/_specific_elements.scss */
+/* line 176, ../sass/elements/_specific_elements.scss */
 .library-details-column-1 .subheader,
 .library-details-column-2 .subheader {
   margin-bottom: 0;
@@ -4545,10 +4617,11 @@ h3.library-list-header {
 /* line 184, ../sass/elements/_specific_elements.scss */
 .edit-personal-info {
   background: url(../img/icons/blue-edit.png) no-repeat 0%;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   padding-left: 20px;
   margin-bottom: 3px;
@@ -4558,10 +4631,11 @@ h3.library-list-header {
 /* line 192, ../sass/elements/_specific_elements.scss */
 .delete-favourite {
   background: url(../img/icons/red-x.png) no-repeat 0%;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   padding-left: 20px;
   color: #6c7379;
@@ -4644,9 +4718,9 @@ article.widget-biblioteksvagt {
 .widget, .article-widget {
   position: relative;
   margin-bottom: 10px;
+  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 /* line 282, ../sass/elements/_specific_elements.scss */
@@ -4785,7 +4859,7 @@ article.widget-biblioteksvagt {
   right: 0;
 }
 
-/* line 426, ../sass/elements/_specific_elements.scss */
+/* line 428, ../sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu,
 .pane-bibdk-help-bibdk-help-popup-menu-eng,
 .pane-bibdk-help {
@@ -4831,8 +4905,8 @@ article.widget-biblioteksvagt {
   left: 25em;
   z-index: 10;
   background-color: white;
-  -moz-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
   -webkit-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
+  -moz-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
   box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
 }
 /* line 470, ../sass/elements/_specific_elements.scss */
@@ -4885,7 +4959,7 @@ p.note-localisations {
   padding-bottom: 1em;
 }
 
-/* line 519, ../sass/elements/_specific_elements.scss */
+/* line 521, ../sass/elements/_specific_elements.scss */
 .localisation-agency p,
 .localisation-agency .holding-status,
 .localisation-agency .holding-status-load {
@@ -4898,7 +4972,7 @@ p.note-localisations {
   display: block;
 }
 
-/* line 530, ../sass/elements/_specific_elements.scss */
+/* line 531, ../sass/elements/_specific_elements.scss */
 .localisation-agency p.city,
 .localisation-agency p.postalCode {
   float: left;
@@ -4933,8 +5007,10 @@ p.note-localisations {
   display: inline-block;
   vertical-align: top;
   border: solid 1px #dcdcdc;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 /* line 560, ../sass/elements/_specific_elements.scss */
@@ -5425,8 +5501,8 @@ span.star.negative {
 body.html #search-panel-wrapper input[type="submit"]:hover, body.html #search-panel-wrapper input[type="submit"]:focus {
   color: white;
   background: #697075;
-  -moz-box-shadow: 0 2px 2px rgba(60, 64, 67, 0.2);
   -webkit-box-shadow: 0 2px 2px rgba(60, 64, 67, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(60, 64, 67, 0.2);
   box-shadow: 0 2px 2px rgba(60, 64, 67, 0.2);
 }
 
@@ -5479,9 +5555,9 @@ form#search-block-form fieldset#edit-advanced.toggled {
 #search-tabs li input[type=submit] {
   font-size: 12px;
   background: #51565a;
+  -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   margin-right: 1px;
   border-top: solid 1px #303336;
@@ -5489,8 +5565,10 @@ form#search-block-form fieldset#edit-advanced.toggled {
   height: 34px;
   line-height: 34px;
   border: solid 0px #d4d4d4;
-  -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
   border-radius: 0px;
   border-width: 1px 1px 1px 0px;
   box-shadow: none;
@@ -5500,8 +5578,10 @@ form#search-block-form fieldset#edit-advanced.toggled {
 #search-tabs li input[type=submit].active {
   color: #51565a;
   background: #f2f3f3;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
   height: 34px;
@@ -5519,27 +5599,35 @@ form#search-block-form fieldset#edit-advanced.toggled {
 /* line 126, ../sass/elements/_custom_search_elements.scss */
 #search-tabs li:first-child input[type=submit] {
   border-left: solid 1px #cfcfcf;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
 }
 /* line 129, ../sass/elements/_custom_search_elements.scss */
 #search-tabs li:first-child input[type=submit].active {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 /* line 133, ../sass/elements/_custom_search_elements.scss */
 #search-tabs li:last-child input[type=submit] {
   border-right: solid 1px #cfcfcf;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
 }
 /* line 136, ../sass/elements/_custom_search_elements.scss */
 #search-tabs li:last-child input[type=submit].active {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -5572,8 +5660,10 @@ div#search-advanced {
 }
 /* line 172, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced.toggled {
-  -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
   border-radius: 0px;
   background-color: #f2f3f3;
   padding: 0%;
@@ -5758,10 +5848,11 @@ div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item
 }
 /* line 335, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item .toggle-subgroup {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   width: 15px;
   background-position: 50% 50%;
@@ -5932,7 +6023,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   margin-left: 0;
 }
 
-/* line 475, ../sass/elements/_custom_search_elements.scss */
+/* line 478, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.tidsskrift_eller_avis,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artikel_titelord,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artiklens_forfatter,
@@ -6004,7 +6095,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   margin-left: 0;
 }
 
-/* line 526, ../sass/elements/_custom_search_elements.scss */
+/* line 527, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.filmens_titel,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.personer,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.filmens_titel,
@@ -6063,7 +6154,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   width: 50%;
   float: left;
 }
-/* line 564, ../sass/elements/_custom_search_elements.scss */
+/* line 565, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.aldersanbefaling,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.tilladt_for,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.aldersanbefaling,
@@ -6088,7 +6179,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   display: none;
 }
 
-/* line 583, ../sass/elements/_custom_search_elements.scss */
+/* line 585, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.materialetype,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.element-wrapper
 .element-wrapper.litterar_form,
@@ -6183,7 +6274,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   width: 33%;
   float: left;
 }
-/* line 650, ../sass/elements/_custom_search_elements.scss */
+/* line 651, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.medieradets_aldersanbefalinger,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.aldersanbefaling,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.medieradets_aldersanbefalinger,
@@ -6511,11 +6602,11 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
   color: #51565a;
   vertical-align: top;
   /*break long links*/
+  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   -webkit-hyphens: auto;
+  -moz-hyphens: auto;
   hyphens: auto;
   word-wrap: normal;
   word-break: normal;
@@ -6525,13 +6616,13 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
 .manifestation-data .field-label-hidden .field-items {
   margin-left: 112px;
 }
-/* line 173, ../sass/elements/_search_work_manifestations.scss */
+/* line 174, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items {
   margin-left: 0px;
   width: auto;
 }
-/* line 178, ../sass/elements/_search_work_manifestations.scss */
+/* line 179, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items .field-items {
   margin-left: 120px;
@@ -6812,8 +6903,10 @@ div.ctools-modal-content .modal-content {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
   height: 30px;
   line-height: 30px;
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
   float: left;
   padding: 0 10px 0 20px;
@@ -6947,10 +7040,11 @@ div.ctools-modal-content .modal-content {
 }
 /* line 96, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   font-size: 14px;
   margin-right: 3px;
@@ -6970,10 +7064,11 @@ div.ctools-modal-content .modal-content {
 
 /* line 119, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist li {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   width: 25%;
   margin-right: -4px;
