@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 642, sprites/*.png */
-.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after {
+.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
   background: url('../img/sprites-s83727057ee.png') no-repeat;
 }
 
@@ -1952,11 +1952,6 @@ hr {
   line-height: 1.8;
 }
 
-/* line 151, ../sass/_typography.scss */
-.text-small {
-  font-size: 0.916667em;
-}
-
 /* line 154, ../sass/_typography.scss */
 .text-white {
   color: white;
@@ -2650,13 +2645,13 @@ select#edit-favouriteselector {
 }
 
 /* line 7, ../sass/components/base/_helpers.scss */
-.apparent-link, .messages a {
+.apparent-link, .messages a, div.user-alert a {
   color: #161616;
   font-weight: bold;
   text-decoration: none;
 }
 /* line 12, ../sass/components/base/_helpers.scss */
-.apparent-link:hover, .messages a:hover {
+.apparent-link:hover, .messages a:hover, div.user-alert a:hover {
   text-decoration: underline;
 }
 
@@ -2699,84 +2694,124 @@ select#edit-favouriteselector {
 /* line 7, ../sass/components/global/_messages.scss */
 #messages-wrapper {
   background-color: #f2f3f3;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-/* line 15, ../sass/components/global/_messages.scss */
+/* line 11, ../sass/components/global/_messages.scss */
+#messages {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 14, ../sass/components/global/_messages.scss */
 body.page-overlay #messages {
   margin: 20px;
 }
 
-/* line 20, ../sass/components/global/_messages.scss */
+/* line 19, ../sass/components/global/_messages.scss */
 .messages {
   position: relative;
   margin-bottom: 10px;
   padding: 15px 15px 15px 48px;
   border: 1px solid #3c4043;
 }
-/* line 26, ../sass/components/global/_messages.scss */
+/* line 25, ../sass/components/global/_messages.scss */
 .messages:last-child {
   margin-bottom: 0;
 }
-/* line 30, ../sass/components/global/_messages.scss */
+/* line 29, ../sass/components/global/_messages.scss */
 .messages:after {
   position: absolute;
   top: 12px;
   left: 12px;
   content: '';
 }
-/* line 37, ../sass/components/global/_messages.scss */
+/* line 36, ../sass/components/global/_messages.scss */
 .messages li {
   margin-bottom: 10px;
 }
-/* line 39, ../sass/components/global/_messages.scss */
+/* line 38, ../sass/components/global/_messages.scss */
 .messages li:last-child {
   margin-bottom: 0;
 }
 
-/* line 50, ../sass/components/global/_messages.scss */
+/* line 49, ../sass/components/global/_messages.scss */
 .messages.notice {
   background-color: #97b8e9;
 }
-/* line 52, ../sass/components/global/_messages.scss */
+/* line 51, ../sass/components/global/_messages.scss */
 .messages.notice:after {
   height: 24px;
   width: 24px;
   background-position: -858px 0;
 }
 
-/* line 56, ../sass/components/global/_messages.scss */
+/* line 55, ../sass/components/global/_messages.scss */
 .messages.status {
   background-color: #97e999;
 }
-/* line 58, ../sass/components/global/_messages.scss */
+/* line 57, ../sass/components/global/_messages.scss */
 .messages.status:after {
   height: 24px;
   width: 24px;
   background-position: -882px 0;
 }
 
-/* line 62, ../sass/components/global/_messages.scss */
+/* line 61, ../sass/components/global/_messages.scss */
 .messages.warning {
   background-color: #fafaa2;
 }
-/* line 64, ../sass/components/global/_messages.scss */
+/* line 63, ../sass/components/global/_messages.scss */
 .messages.warning:after {
   height: 24px;
   width: 24px;
   background-position: -906px 0;
 }
 
-/* line 68, ../sass/components/global/_messages.scss */
+/* line 67, ../sass/components/global/_messages.scss */
 .messages.error {
   background-color: #fba3a2;
 }
-/* line 70, ../sass/components/global/_messages.scss */
+/* line 69, ../sass/components/global/_messages.scss */
 .messages.error:after {
   height: 24px;
   width: 24px;
   background-position: -810px 0;
+}
+
+/* line 79, ../sass/components/global/_messages.scss */
+div.user-alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fba3a2;
+  position: relative;
+  padding: 0px;
+  border: 1px solid #3c4043;
+}
+/* line 88, ../sass/components/global/_messages.scss */
+div.user-alert:after {
+  position: absolute;
+  left: 12px;
+  content: '';
+}
+/* line 98, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-message {
+  margin-left: 12px;
+}
+/* line 102, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-close {
+  margin-top: 5px;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+}
+/* line 107, ../sass/components/global/_messages.scss */
+div.user-alert div.user-alert-close span.user-alert-close-image {
+  height: 24px;
+  width: 24px;
+  background-position: -810px 0;
+  background-position: -810px 0;
+  height: 24px;
+  width: 24px;
+  display: block;
 }
 
 /* line 7, ../sass/components/global/_global-login-menu.scss */
@@ -2805,23 +2840,24 @@ body.page-overlay #messages {
   background-color: #00a271;
   color: white;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  font-size: 1.08333em;
   font-weight: bold;
   -webkit-transition: background-color, 200ms;
   -moz-transition: background-color, 200ms;
   -o-transition: background-color, 200ms;
   transition: background-color, 200ms;
 }
-/* line 37, ../sass/components/global/_global-login-menu.scss */
+/* line 38, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu a.active, #block-menu-menu-global-login-menu a:hover {
   background-color: #009366;
 }
-/* line 42, ../sass/components/global/_global-login-menu.scss */
+/* line 43, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu li:first-child a {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/* line 45, ../sass/components/global/_global-login-menu.scss */
+/* line 46, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu li:last-child a {
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px;

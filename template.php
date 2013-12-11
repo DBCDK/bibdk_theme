@@ -48,6 +48,12 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_openuserstatus_help_icon',
       'render element' => 'form',
     ),
+    'user_alert' => array(
+      'path' => $path . '/blocks',
+      'variables' => array('node' => NULL),
+      'template' => 'user-alert',
+      'render element' => 'elements',
+    ),
   );
 }
 
