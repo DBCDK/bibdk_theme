@@ -712,11 +712,15 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 
 div#search-advanced-panel .custom-search-options-list {
   @extend .modal--center-horizontally;
-  top: 150px;
+  @extend .modal--center-vertically;
   width: 600px;
+  height: 460px;
 
   .panel-select{
     @extend .two-panel-multi-select;
+    .form-type-select {
+      height: 350px;
+    }
   }
   .custom-search-list-save, .custom-search-list-close {
     margin: 20px;

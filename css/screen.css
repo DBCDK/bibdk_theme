@@ -2717,7 +2717,7 @@ select#edit-favouriteselector {
 }
 
 /* line 7, ../sass/components/base/_modal.scss */
-.modal, .modal--center-vertically, .modal--center-horizontally, div#search-advanced-panel .custom-search-options-list {
+.modal, .modal--center-vertically, div#search-advanced-panel .custom-search-options-list, .modal--center-horizontally {
   position: fixed;
   z-index: 200;
   padding: 30px 30px 15px;
@@ -2729,7 +2729,7 @@ select#edit-favouriteselector {
 }
 
 /* line 16, ../sass/components/base/_modal.scss */
-.modal--center-vertically {
+.modal--center-vertically, div#search-advanced-panel .custom-search-options-list {
   top: 0;
   bottom: 0;
   margin-top: auto;
@@ -6385,10 +6385,14 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
 
 /* line 713, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list {
-  top: 150px;
   width: 600px;
+  height: 460px;
 }
 /* line 721, ../sass/elements/_custom_search_elements.scss */
+div#search-advanced-panel .custom-search-options-list .panel-select .form-type-select {
+  height: 350px;
+}
+/* line 725, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list .custom-search-list-save, div#search-advanced-panel .custom-search-options-list .custom-search-list-close {
   margin: 20px;
   width: auto;
