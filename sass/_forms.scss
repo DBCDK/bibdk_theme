@@ -474,8 +474,6 @@ margin-right:0.5em;
     padding: 10px 0;
 }
 
-
-
 .page-reservation .form-step-guide {
   position:fixed;
   top:0px;
@@ -571,9 +569,21 @@ select#edit-favouriteselector {
     text-align: right;
 }
 
-.page-overlay-favourite-userdata label, .page-reservation label { 
-    text-align: left; 
-} 
+.page-overlay-favourite-userdata label, .page-reservation label {
+    text-align: left;
+}
+
+.page-reservation {
+    .messages {
+      margin: 35px 0 0;
+    }
+    .order-condition {
+        .fieldset-wrapper {
+            margin: 5px 10px 5px 45px;
+        }
+    }
+}
+
 
 // =============================================================================
 // Popup

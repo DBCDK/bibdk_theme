@@ -2469,7 +2469,7 @@ textarea::-webkit-input-placeholder {
   padding: 10px 0;
 }
 
-/* line 479, ../sass/_forms.scss */
+/* line 477, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
   position: fixed;
   top: 0px;
@@ -2480,7 +2480,7 @@ textarea::-webkit-input-placeholder {
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 490, ../sass/_forms.scss */
+/* line 488, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -2493,12 +2493,12 @@ textarea::-webkit-input-placeholder {
   border-top-width: 1px;
 }
 
-/* line 504, ../sass/_forms.scss */
+/* line 502, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 509, ../sass/_forms.scss */
+/* line 507, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -2507,7 +2507,7 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 520, ../sass/_forms.scss */
+/* line 518, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
 .page-reservation input[type="text"],
@@ -2520,65 +2520,74 @@ textarea::-webkit-input-placeholder {
   padding: 8px;
 }
 
-/* line 528, ../sass/_forms.scss */
+/* line 526, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
 
-/* line 533, ../sass/_forms.scss */
+/* line 531, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 537, ../sass/_forms.scss */
+/* line 535, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 543, ../sass/_forms.scss */
+/* line 541, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 547, ../sass/_forms.scss */
+/* line 545, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 551, ../sass/_forms.scss */
+/* line 549, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 555, ../sass/_forms.scss */
+/* line 553, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 561, ../sass/_forms.scss */
+/* line 559, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
 }
-/* line 564, ../sass/_forms.scss */
+/* line 562, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 570, ../sass/_forms.scss */
+/* line 568, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
 
-/* line 574, ../sass/_forms.scss */
+/* line 572, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 583, ../sass/_forms.scss */
+/* line 577, ../sass/_forms.scss */
+.page-reservation .messages {
+  margin: 35px 0 0;
+}
+/* line 581, ../sass/_forms.scss */
+.page-reservation .order-condition .fieldset-wrapper {
+  margin: 5px 10px 5px 45px;
+}
+
+/* line 593, ../sass/_forms.scss */
 #popup #title {
   margin: 20px 0 0 20px;
   line-height: 35px;
@@ -2586,62 +2595,62 @@ select#edit-favouriteselector {
   min-height: 73px;
 }
 
-/* line 590, ../sass/_forms.scss */
+/* line 600, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 594, ../sass/_forms.scss */
+/* line 604, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 598, ../sass/_forms.scss */
+/* line 608, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-right: 20px;
 }
 
-/* line 603, ../sass/_forms.scss */
+/* line 613, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 608, ../sass/_forms.scss */
+/* line 618, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 613, ../sass/_forms.scss */
+/* line 623, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 618, ../sass/_forms.scss */
+/* line 628, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 622, ../sass/_forms.scss */
+/* line 632, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 626, ../sass/_forms.scss */
+/* line 636, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 631, ../sass/_forms.scss */
+/* line 641, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 635, ../sass/_forms.scss */
+/* line 645, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
