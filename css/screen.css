@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 642, sprites/*.png */
 .sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
   background: url('../img/sprites-s83727057ee.png') no-repeat;
@@ -7046,20 +7047,24 @@ div.ctools-modal-content .modal-content {
   padding-bottom: 00px;
   padding-top: 30px;
 }
+/* line 12, ../sass/elements/_subject_hierachy.scss */
+#subjects-wrapper div[class^="span"] {
+  min-height: 0px;
+}
 
-/* line 16, ../sass/elements/_subject_hierachy.scss */
+/* line 21, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item {
   float: left;
   width: 25%;
   overflow: hidden;
 }
-/* line 20, ../sass/elements/_subject_hierachy.scss */
+/* line 25, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item p {
   margin: 0;
   height: 85px;
   position: relative;
 }
-/* line 25, ../sass/elements/_subject_hierachy.scss */
+/* line 30, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item .header {
   display: block;
   padding-right: 20px;
@@ -7067,13 +7072,13 @@ div.ctools-modal-content .modal-content {
   font-size: 14px;
   font-weight: bold;
 }
-/* line 32, ../sass/elements/_subject_hierachy.scss */
+/* line 37, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item .note {
   display: block;
   padding-bottom: 20px;
   padding-right: 20px;
 }
-/* line 38, ../sass/elements/_subject_hierachy.scss */
+/* line 43, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item--active > p:after {
   position: absolute;
   z-index: 100;
@@ -7088,7 +7093,7 @@ div.ctools-modal-content .modal-content {
   border-color: transparent transparent #d2eaf1 transparent;
   border-bottom-style: solid;
 }
-/* line 47, ../sass/elements/_subject_hierachy.scss */
+/* line 52, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .bibdk-subject-hierarchy-header {
   color: #3c4043;
   font-size: 15px;
@@ -7097,25 +7102,25 @@ div.ctools-modal-content .modal-content {
   margin-bottom: 12px;
   font-weight: bold;
 }
-/* line 55, ../sass/elements/_subject_hierachy.scss */
+/* line 60, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .icon-blue-x {
   background-image: url("../img/blue-x.png");
 }
 
-/* line 64, ../sass/elements/_subject_hierachy.scss */
+/* line 69, ../sass/elements/_subject_hierachy.scss */
 .themes {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 70, ../sass/elements/_subject_hierachy.scss */
+/* line 75, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists__wrapper {
   float: left;
   width: 100%;
   display: none;
 }
 
-/* line 75, ../sass/elements/_subject_hierachy.scss */
+/* line 80, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists {
   position: relative;
   padding: 15px;
@@ -7124,7 +7129,7 @@ div.ctools-modal-content .modal-content {
   margin-bottom: 30px;
 }
 
-/* line 84, ../sass/elements/_subject_hierachy.scss */
+/* line 89, ../sass/elements/_subject_hierachy.scss */
 .themes__close-button {
   position: absolute;
   top: 8px;
@@ -7132,11 +7137,11 @@ div.ctools-modal-content .modal-content {
   cursor: pointer;
 }
 
-/* line 93, ../sass/elements/_subject_hierachy.scss */
+/* line 98, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb {
   margin-bottom: 20px;
 }
-/* line 96, ../sass/elements/_subject_hierachy.scss */
+/* line 101, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -7147,20 +7152,20 @@ div.ctools-modal-content .modal-content {
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 101, ../sass/elements/_subject_hierachy.scss */
+/* line 106, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:after {
   content: " \203A  ";
 }
-/* line 106, ../sass/elements/_subject_hierachy.scss */
+/* line 111, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child {
   font-weight: bold;
 }
-/* line 109, ../sass/elements/_subject_hierachy.scss */
+/* line 114, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child:after {
   content: "";
 }
 
-/* line 119, ../sass/elements/_subject_hierachy.scss */
+/* line 124, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -7172,7 +7177,7 @@ div.ctools-modal-content .modal-content {
   margin-right: -4px;
   margin-bottom: 5px;
 }
-/* line 126, ../sass/elements/_subject_hierachy.scss */
+/* line 131, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a {
   display: block;
   padding-right: 20px;
