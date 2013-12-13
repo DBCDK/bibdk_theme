@@ -37,3 +37,23 @@
 .clearfix {
   @include clearfix();
 }
+
+
+.two-panel-multi-select{
+  @extend .clearfix;
+  .form-type-select {
+    width: 35%;
+    float: left;
+  }
+  select {
+    width: 100%;
+    height: inherit;
+  }
+  .list-actions {
+    margin-top: 50px;
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+    @include box-sizing(border-box);
+  }
+}

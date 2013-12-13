@@ -9,7 +9,12 @@
     padding-bottom: 00px;
     padding-top: 30px;
   }
+  div[class^="span"] {
+    min-height: 0px;
+  }
 }
+
+
 
 #bibdk-subject-hierarchy {
 

@@ -14,6 +14,9 @@
   background-color: $white;
   border: solid 10px $grey-6;
   margin-bottom: 10px;
+  input[type="checkbox"] {
+    border: none;
+  }
 }
 
 .element {
