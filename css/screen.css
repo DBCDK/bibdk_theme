@@ -7183,6 +7183,11 @@ div.ctools-modal-content .modal-content {
   padding-right: 20px;
 }
 
+/* line 7, ../sass/elements/_banner.scss */
+#banner-wrapper {
+  background-color: white;
+}
+
 /* line 4, ../sass/_extra.scss */
 .ir {
   display: block;
