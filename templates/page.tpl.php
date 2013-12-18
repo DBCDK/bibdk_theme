@@ -143,16 +143,10 @@
   <div class="container">
     <div class="row">
       <div class="span24">
-        <div id="banner">
-          <?php
-            if ( $variables['is_front'] == TRUE ) {
-              print render($page['banner']);
-            } else {
-              unset($page['banner']);
-            }
-          ?>
-        </div>
-        <!-- #banner -->
+        <?php
+          print render($page['banner']);
+        ?>
+        <!-- #banners -->
       </div>
     </div>
   </div>
