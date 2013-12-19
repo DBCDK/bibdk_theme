@@ -193,12 +193,14 @@ body.page-reservation {
   float: right;
   margin-top: -70px;
   width: 100%;
+  color: $grey-2;
   #bibdk-vejviser-count {
+    color: $grey-3;
     white-space: nowrap;
     font-size: large;
     line-height: 1.5;
     float: left;
-    padding: 0px 25%;
+    padding: 0px 20%;
   }
   .vejviser-raw {
     float: right;
@@ -402,7 +404,6 @@ body.page-reservation {
 // =============================================================================
 
 #title {
-  color: #3497be; // FIX
   height: 73px;
   line-height: 73px;
   margin-bottom: 10px;

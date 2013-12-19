@@ -615,7 +615,6 @@ p.note-localisations {
   }
   h2 {
     padding: 0 16px;
-    color: #3497be;
     height: 51px;
     line-height: 51px;
     margin-bottom: 0px;
@@ -921,7 +920,8 @@ body.page-ting-moreinfo {
 .page-user {
   #title {
     height: 58px;
-    line-height: 58px;
+    color: $blue;
+    margin-left: 27px;
   }
   &.lift-columns #columns {
     margin-top: -40px;

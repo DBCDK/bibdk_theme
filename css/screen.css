@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 642, sprites/*.png */
 .sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
   background: url('../img/sprites-s83727057ee.png') no-repeat;
@@ -1522,21 +1521,22 @@ td.active {
 /* line 66, ../sass/drupal/_system.theme.scss */
 .item-list .title {
   font-weight: bold;
+  color: #51565a;
 }
 
-/* line 69, ../sass/drupal/_system.theme.scss */
+/* line 70, ../sass/drupal/_system.theme.scss */
 .item-list ul {
   margin: 0 0 0.75em 0;
   padding: 0;
 }
 
-/* line 73, ../sass/drupal/_system.theme.scss */
+/* line 74, ../sass/drupal/_system.theme.scss */
 .item-list ul li {
   margin: 0 0 0.25em 1.5em;
   padding: 0;
 }
 
-/* line 89, ../sass/drupal/_system.theme.scss */
+/* line 90, ../sass/drupal/_system.theme.scss */
 tr.odd .form-item,
 tr.even .form-item {
   margin-top: 0;
@@ -1544,23 +1544,23 @@ tr.even .form-item {
   white-space: nowrap;
 }
 
-/* line 119, ../sass/drupal/_system.theme.scss */
+/* line 120, ../sass/drupal/_system.theme.scss */
 .marker,
 .form-required {
   color: #f00;
 }
 
-/* line 142, ../sass/drupal/_system.theme.scss */
+/* line 143, ../sass/drupal/_system.theme.scss */
 .more-link {
   text-align: right;
 }
 
-/* line 151, ../sass/drupal/_system.theme.scss */
+/* line 152, ../sass/drupal/_system.theme.scss */
 .more-help-link {
   text-align: right;
 }
 
-/* line 154, ../sass/drupal/_system.theme.scss */
+/* line 155, ../sass/drupal/_system.theme.scss */
 .more-help-link a {
   background: url(../img/drupal/help.png) 0 50% no-repeat;
   padding: 1px 0 1px 20px;
@@ -1579,56 +1579,56 @@ tr.even .form-item {
 .pager-current {
   font-weight: bold;
 }*/
-/* line 186, ../sass/drupal/_system.theme.scss */
+/* line 187, ../sass/drupal/_system.theme.scss */
 #autocomplete li.selected {
   background: #0072b9;
   color: #fff;
 }
 
-/* line 205, ../sass/drupal/_system.theme.scss */
+/* line 206, ../sass/drupal/_system.theme.scss */
 .fieldset-legend span.summary {
   color: #999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 217, ../sass/drupal/_system.theme.scss */
+/* line 218, ../sass/drupal/_system.theme.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 220, ../sass/drupal/_system.theme.scss */
+/* line 221, ../sass/drupal/_system.theme.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 223, ../sass/drupal/_system.theme.scss */
+/* line 224, ../sass/drupal/_system.theme.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 226, ../sass/drupal/_system.theme.scss */
+/* line 227, ../sass/drupal/_system.theme.scss */
 body div.tabledrag-changed-warning {
   margin-bottom: 0.5em;
 }
 
-/* line 236, ../sass/drupal/_system.theme.scss */
+/* line 237, ../sass/drupal/_system.theme.scss */
 tr.selected td {
   background: #ffc;
 }
 
-/* line 240, ../sass/drupal/_system.theme.scss */
+/* line 241, ../sass/drupal/_system.theme.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 250, ../sass/drupal/_system.theme.scss */
+/* line 251, ../sass/drupal/_system.theme.scss */
 .progress {
   font-weight: bold;
 }
 
-/* line 253, ../sass/drupal/_system.theme.scss */
+/* line 254, ../sass/drupal/_system.theme.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -1638,7 +1638,7 @@ th.checkbox {
   border-radius: 3px;
 }
 
-/* line 261, ../sass/drupal/_system.theme.scss */
+/* line 262, ../sass/drupal/_system.theme.scss */
 .progress .filled {
   background: #0072b9 url(../img/drupal/progress.gif);
 }
@@ -4237,79 +4237,81 @@ body.page-reservation #popup .region-content {
   float: right;
   margin-top: -70px;
   width: 100%;
+  color: #3c4043;
 }
-/* line 196, ../sass/elements/_global_elements.scss */
+/* line 197, ../sass/elements/_global_elements.scss */
 #bibdk-vejviser-header #bibdk-vejviser-count {
+  color: #51565a;
   white-space: nowrap;
   font-size: large;
   line-height: 1.5;
   float: left;
-  padding: 0px 25%;
+  padding: 0px 20%;
 }
-/* line 203, ../sass/elements/_global_elements.scss */
+/* line 205, ../sass/elements/_global_elements.scss */
 #bibdk-vejviser-header .vejviser-raw {
   float: right;
 }
 
-/* line 211, ../sass/elements/_global_elements.scss */
+/* line 213, ../sass/elements/_global_elements.scss */
 .header-action-vejviser.toggled, .vejviser-raw.toggled {
   padding: 0;
   background: transparent;
 }
-/* line 216, ../sass/elements/_global_elements.scss */
+/* line 218, ../sass/elements/_global_elements.scss */
 .header-action-vejviser .form-type-textfield, .vejviser-raw .form-type-textfield {
   width: 230px;
   margin-right: 5px;
 }
-/* line 220, ../sass/elements/_global_elements.scss */
+/* line 222, ../sass/elements/_global_elements.scss */
 .header-action-vejviser .form-actions, .vejviser-raw .form-actions {
   width: 85px;
 }
-/* line 224, ../sass/elements/_global_elements.scss */
+/* line 226, ../sass/elements/_global_elements.scss */
 .header-action-vejviser form, .vejviser-raw form {
   width: 320px;
 }
-/* line 227, ../sass/elements/_global_elements.scss */
+/* line 229, ../sass/elements/_global_elements.scss */
 .header-action-vejviser input, .vejviser-raw input {
   line-height: 30px;
   height: 30px;
 }
-/* line 231, ../sass/elements/_global_elements.scss */
+/* line 233, ../sass/elements/_global_elements.scss */
 .header-action-vejviser input[type=text], .vejviser-raw input[type=text] {
   padding: 0 5px;
   font-size: 12px;
 }
 
-/* line 239, ../sass/elements/_global_elements.scss */
+/* line 241, ../sass/elements/_global_elements.scss */
 .header-action-reservation .form-type-textfield {
   /*width:210px;*/
   margin-right: 5px;
 }
-/* line 243, ../sass/elements/_global_elements.scss */
+/* line 245, ../sass/elements/_global_elements.scss */
 .header-action-reservation .form-actions {
   width: 85px;
 }
-/* line 247, ../sass/elements/_global_elements.scss */
+/* line 249, ../sass/elements/_global_elements.scss */
 .header-action-reservation form {
   /*width:300px;*/
 }
-/* line 250, ../sass/elements/_global_elements.scss */
+/* line 252, ../sass/elements/_global_elements.scss */
 .header-action-reservation input {
   line-height: 30px;
   height: 30px;
 }
-/* line 254, ../sass/elements/_global_elements.scss */
+/* line 256, ../sass/elements/_global_elements.scss */
 .header-action-reservation input[type=text] {
   padding: 0 5px;
   font-size: 12px;
 }
 
-/* line 266, ../sass/elements/_global_elements.scss */
+/* line 268, ../sass/elements/_global_elements.scss */
 #subjects-nav li {
   float: left;
   width: 33%;
 }
-/* line 271, ../sass/elements/_global_elements.scss */
+/* line 273, ../sass/elements/_global_elements.scss */
 #subjects-nav a {
   display: block;
   margin-bottom: 20px;
@@ -4317,7 +4319,7 @@ body.page-reservation #popup .region-content {
   color: #3c4043;
 }
 
-/* line 283, ../sass/elements/_global_elements.scss */
+/* line 285, ../sass/elements/_global_elements.scss */
 .sidebar-header {
   height: 67px;
   line-height: 67px;
@@ -4328,12 +4330,12 @@ body.page-reservation #popup .region-content {
   text-align: center;
   color: white;
 }
-/* line 294, ../sass/elements/_global_elements.scss */
+/* line 296, ../sass/elements/_global_elements.scss */
 .sidebar-header a {
   color: white;
 }
 
-/* line 300, ../sass/elements/_global_elements.scss */
+/* line 302, ../sass/elements/_global_elements.scss */
 .page-search .sidebar-header {
   background-color: transparent;
   height: 34px;
@@ -4341,7 +4343,7 @@ body.page-reservation #popup .region-content {
   border-bottom-width: 0px;
 }
 
-/* line 307, ../sass/elements/_global_elements.scss */
+/* line 309, ../sass/elements/_global_elements.scss */
 .sidebar-header .ting-openformat-search-amount-block {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -4359,7 +4361,7 @@ body.page-reservation #popup .region-content {
   line-height: 30px;
 }
 
-/* line 327, ../sass/elements/_global_elements.scss */
+/* line 329, ../sass/elements/_global_elements.scss */
 .page-laanerstatus .sidebar-header,
 .page-favoritbiblioteker .sidebar-header {
   background-image: url(../img/min-side-smiley.png);
@@ -4367,14 +4369,14 @@ body.page-reservation #popup .region-content {
   background-position: 10%;
 }
 
-/* line 337, ../sass/elements/_global_elements.scss */
+/* line 339, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 h2.pane-title,
 #block-bibdk-frontend-tabs2 h2.pane-title,
 .sidebar-nav h2.pane-title {
   font-size: 1.4em;
   margin-top: 8px;
 }
-/* line 342, ../sass/elements/_global_elements.scss */
+/* line 344, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 a, #block-bibdk-frontend-tabs1 fieldset,
 #block-bibdk-frontend-tabs2 a,
 #block-bibdk-frontend-tabs2 fieldset,
@@ -4391,7 +4393,7 @@ body.page-reservation #popup .region-content {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-/* line 353, ../sass/elements/_global_elements.scss */
+/* line 355, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 a:hover, #block-bibdk-frontend-tabs1 fieldset:hover,
 #block-bibdk-frontend-tabs2 a:hover,
 #block-bibdk-frontend-tabs2 fieldset:hover,
@@ -4399,7 +4401,7 @@ body.page-reservation #popup .region-content {
 .sidebar-nav fieldset:hover {
   background: #565b5f;
 }
-/* line 357, ../sass/elements/_global_elements.scss */
+/* line 359, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 a:visited, #block-bibdk-frontend-tabs1 fieldset:visited,
 #block-bibdk-frontend-tabs2 a:visited,
 #block-bibdk-frontend-tabs2 fieldset:visited,
@@ -4407,7 +4409,7 @@ body.page-reservation #popup .region-content {
 .sidebar-nav fieldset:visited {
   color: white;
 }
-/* line 361, ../sass/elements/_global_elements.scss */
+/* line 363, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 a.active, #block-bibdk-frontend-tabs1 fieldset.active,
 #block-bibdk-frontend-tabs2 a.active,
 #block-bibdk-frontend-tabs2 fieldset.active,
@@ -4426,7 +4428,7 @@ body.page-reservation #popup .region-content {
   font-weight: bold;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
-/* line 371, ../sass/elements/_global_elements.scss */
+/* line 373, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 a.active:hover, #block-bibdk-frontend-tabs1 fieldset.active:hover,
 #block-bibdk-frontend-tabs2 a.active:hover,
 #block-bibdk-frontend-tabs2 fieldset.active:hover,
@@ -4434,7 +4436,7 @@ body.page-reservation #popup .region-content {
 .sidebar-nav fieldset.active:hover {
   background: #1892b6;
 }
-/* line 377, ../sass/elements/_global_elements.scss */
+/* line 379, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 legend,
 #block-bibdk-frontend-tabs2 legend,
 .sidebar-nav legend {
@@ -4444,7 +4446,7 @@ body.page-reservation #popup .region-content {
   font-weight: bold;
   width: auto;
 }
-/* line 385, ../sass/elements/_global_elements.scss */
+/* line 387, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 fieldset,
 #block-bibdk-frontend-tabs2 fieldset,
 .sidebar-nav fieldset {
@@ -4452,7 +4454,7 @@ body.page-reservation #popup .region-content {
   margin: 0px;
   padding: 0px;
 }
-/* line 390, ../sass/elements/_global_elements.scss */
+/* line 392, ../sass/elements/_global_elements.scss */
 #block-bibdk-frontend-tabs1 fieldset .form-checkboxes .form-item,
 #block-bibdk-frontend-tabs2 fieldset .form-checkboxes .form-item,
 .sidebar-nav fieldset .form-checkboxes .form-item {
@@ -4460,9 +4462,8 @@ body.page-reservation #popup .region-content {
   margin-top: 0;
 }
 
-/* line 404, ../sass/elements/_global_elements.scss */
+/* line 406, ../sass/elements/_global_elements.scss */
 #title {
-  color: #3497be;
   height: 73px;
   line-height: 73px;
   margin-bottom: 10px;
@@ -4472,49 +4473,49 @@ body.page-reservation #popup .region-content {
   font-family: "Dosis", sans-serif;
 }
 
-/* line 419, ../sass/elements/_global_elements.scss */
+/* line 420, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form {
   padding: 0 20px;
 }
-/* line 423, ../sass/elements/_global_elements.scss */
+/* line 424, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form fieldset.form-wrapper {
   padding: 0px;
 }
-/* line 427, ../sass/elements/_global_elements.scss */
+/* line 428, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form .form-type-textfield {
   width: 84%;
   margin-right: 1%;
 }
-/* line 432, ../sass/elements/_global_elements.scss */
+/* line 433, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form .form-actions {
   width: 15%;
 }
-/* line 436, ../sass/elements/_global_elements.scss */
+/* line 437, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input {
   height: 40px;
   line-height: 40px;
 }
-/* line 441, ../sass/elements/_global_elements.scss */
+/* line 442, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input[type=text] {
   padding: 0 10px;
   font-size: 1.166667em;
 }
-/* line 446, ../sass/elements/_global_elements.scss */
+/* line 447, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input[type=submit] {
   font-size: 1.333333em;
 }
 
-/* line 454, ../sass/elements/_global_elements.scss */
+/* line 455, ../sass/elements/_global_elements.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 458, ../sass/elements/_global_elements.scss */
+/* line 459, ../sass/elements/_global_elements.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 462, ../sass/elements/_global_elements.scss */
+/* line 463, ../sass/elements/_global_elements.scss */
 a.inactive, input[type="submit"].button-as-link:disabled {
   color: #51565a;
   cursor: default;
@@ -5155,7 +5156,6 @@ p.note-localisations {
 /* line 616, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper h2 {
   padding: 0 16px;
-  color: #3497be;
   height: 51px;
   line-height: 51px;
   margin-bottom: 0px;
@@ -5165,97 +5165,97 @@ p.note-localisations {
   text-transform: uppercase;
   font-family: "Dosis", sans-serif;
 }
-/* line 628, ../sass/elements/_specific_elements.scss */
+/* line 627, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div {
   padding: 0 16px;
   clear: both;
   border-top: 1px solid #dddddd;
   line-height: 41px;
 }
-/* line 634, ../sass/elements/_specific_elements.scss */
+/* line 633, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.bibdk-mypage-row, .bibdk-mypage-wrapper .bibdk-mypage-row item-row {
   max-width: 310px;
   overflow: hidden;
 }
-/* line 638, ../sass/elements/_specific_elements.scss */
+/* line 637, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p {
   margin: 0;
   max-height: 41px;
 }
-/* line 642, ../sass/elements/_specific_elements.scss */
+/* line 641, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.label-row {
   float: left;
   margin-right: 10px;
   max-width: 300px;
 }
-/* line 647, ../sass/elements/_specific_elements.scss */
+/* line 646, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.value-row {
   color: #3c4043;
   float: right;
   max-width: 115px;
 }
 
-/* line 654, ../sass/elements/_specific_elements.scss */
+/* line 653, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper:nth-child(even) {
   margin-left: 10px;
 }
 
-/* line 658, ../sass/elements/_specific_elements.scss */
+/* line 657, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper.form-wrapper {
   padding: 0;
 }
 
-/* line 663, ../sass/elements/_specific_elements.scss */
+/* line 662, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.label-row {
   float: left;
   width: 145px;
   margin-right: 0px;
 }
-/* line 668, ../sass/elements/_specific_elements.scss */
+/* line 667, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.value-row {
   float: left;
   width: 130px;
 }
 
-/* line 678, ../sass/elements/_specific_elements.scss */
+/* line 677, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields {
   width: 500px;
 }
-/* line 680, ../sass/elements/_specific_elements.scss */
+/* line 679, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#edit-submit {
   width: 70px;
   margin-left: 60px;
   margin-top: 10px;
 }
-/* line 685, ../sass/elements/_specific_elements.scss */
+/* line 684, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#button-close-popup {
   margin-left: 30px;
   margin-top: 10px;
 }
-/* line 689, ../sass/elements/_specific_elements.scss */
+/* line 688, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper {
   border-width: 0px;
 }
-/* line 692, ../sass/elements/_specific_elements.scss */
+/* line 691, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields fieldset#edit-buttons .fieldset-wrapper {
   text-align: right;
 }
-/* line 695, ../sass/elements/_specific_elements.scss */
+/* line 694, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper .form-submit {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-/* line 699, ../sass/elements/_specific_elements.scss */
+/* line 698, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper {
   margin-right: 30px;
   margin-bottom: 20px;
 }
-/* line 702, ../sass/elements/_specific_elements.scss */
+/* line 701, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper a {
   color: white;
 }
 
-/* line 712, ../sass/elements/_specific_elements.scss */
+/* line 711, ../sass/elements/_specific_elements.scss */
 .kravlenisse {
   background-image: url("../img/kravlenisse.png");
   z-index: 200;
@@ -5267,114 +5267,114 @@ p.note-localisations {
   left: 300px;
 }
 
-/* line 727, ../sass/elements/_specific_elements.scss */
+/* line 726, ../sass/elements/_specific_elements.scss */
 .cart-actions {
   float: left;
   padding-right: 20px;
 }
 
-/* line 733, ../sass/elements/_specific_elements.scss */
+/* line 732, ../sass/elements/_specific_elements.scss */
 .page-email input {
   margin: 20px;
 }
 
-/* line 737, ../sass/elements/_specific_elements.scss */
+/* line 736, ../sass/elements/_specific_elements.scss */
 .item-list .cart-actions ul li {
   margin: 0 0 0 0;
   padding: 0;
 }
 
-/* line 746, ../sass/elements/_specific_elements.scss */
+/* line 745, ../sass/elements/_specific_elements.scss */
 .search-history-table {
   width: 100%;
 }
-/* line 748, ../sass/elements/_specific_elements.scss */
+/* line 747, ../sass/elements/_specific_elements.scss */
 .search-history-table input {
   border: none;
 }
 
-/* line 753, ../sass/elements/_specific_elements.scss */
+/* line 752, ../sass/elements/_specific_elements.scss */
 .search-action-list {
   padding: 0px 20px;
   border: 0;
 }
-/* line 756, ../sass/elements/_specific_elements.scss */
+/* line 755, ../sass/elements/_specific_elements.scss */
 .search-action-list a, .search-action-list input {
   margin-right: 20px;
 }
 
-/* line 765, ../sass/elements/_specific_elements.scss */
+/* line 764, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 774, ../sass/elements/_specific_elements.scss */
+/* line 773, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-message {
   float: left;
   padding-left: 20px;
   width: 568px;
 }
 
-/* line 780, ../sass/elements/_specific_elements.scss */
+/* line 779, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action {
   float: left;
 }
-/* line 782, ../sass/elements/_specific_elements.scss */
+/* line 781, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper.form-actions {
   padding: 1em 10px;
 }
-/* line 785, ../sass/elements/_specific_elements.scss */
+/* line 784, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper {
   border-bottom-width: 0px;
 }
 
-/* line 795, ../sass/elements/_specific_elements.scss */
+/* line 794, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item {
   padding: 5px;
 }
-/* line 799, ../sass/elements/_specific_elements.scss */
+/* line 798, ../sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item.form-type-select {
   display: inline;
   padding: 0;
 }
-/* line 804, ../sass/elements/_specific_elements.scss */
+/* line 803, ../sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item:after {
   display: none;
 }
-/* line 808, ../sass/elements/_specific_elements.scss */
+/* line 807, ../sass/elements/_specific_elements.scss */
 .openuserstatus select {
   font-size: 12px;
 }
-/* line 812, ../sass/elements/_specific_elements.scss */
+/* line 811, ../sass/elements/_specific_elements.scss */
 .openuserstatus input[type="submit"] {
   margin: 10px 5px 0 0;
 }
-/* line 815, ../sass/elements/_specific_elements.scss */
+/* line 814, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item-select {
   float: left;
 }
-/* line 818, ../sass/elements/_specific_elements.scss */
+/* line 817, ../sass/elements/_specific_elements.scss */
 .openuserstatus .helptext {
   top: 0;
   margin: 0;
   position: inherit;
 }
 
-/* line 830, ../sass/elements/_specific_elements.scss */
+/* line 829, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo {
   background: none repeat scroll 0 0 #ffffff;
 }
-/* line 832, ../sass/elements/_specific_elements.scss */
+/* line 831, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element-wrapper {
   border: 0px solid #ffffff;
   margin-bottom: 0px;
 }
-/* line 836, ../sass/elements/_specific_elements.scss */
+/* line 835, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element {
   border-width: 0;
 }
-/* line 839, ../sass/elements/_specific_elements.scss */
+/* line 838, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo img {
   position: absolute;
   margin: auto;
@@ -5384,31 +5384,31 @@ body.page-ting-moreinfo img {
   right: 0;
 }
 
-/* line 849, ../sass/elements/_specific_elements.scss */
+/* line 848, ../sass/elements/_specific_elements.scss */
 #lightboxFrame {
   border-width: 0;
 }
 
-/* line 857, ../sass/elements/_specific_elements.scss */
+/* line 856, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings {
   padding-bottom: 20px;
 }
-/* line 859, ../sass/elements/_specific_elements.scss */
+/* line 858, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings .form-item {
   padding: 5px 0;
 }
-/* line 862, ../sass/elements/_specific_elements.scss */
+/* line 861, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings input[type=submit] {
   display: block;
   float: right;
 }
 
-/* line 873, ../sass/elements/_specific_elements.scss */
+/* line 872, ../sass/elements/_specific_elements.scss */
 .manifestation .primary-actions a {
   display: block;
 }
 
-/* line 881, ../sass/elements/_specific_elements.scss */
+/* line 880, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more {
   text-align: center;
   padding: 8px;
@@ -5422,12 +5422,12 @@ body.page-ting-moreinfo img {
   border-style: solid;
   border-width: 1px;
 }
-/* line 893, ../sass/elements/_specific_elements.scss */
+/* line 892, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more #link {
   font-size: 14px;
 }
 
-/* line 898, ../sass/elements/_specific_elements.scss */
+/* line 897, ../sass/elements/_specific_elements.scss */
 .load_more_res_splitter {
   background-color: #6c7379;
   height: 2px;
@@ -5435,21 +5435,22 @@ body.page-ting-moreinfo img {
   margin-bottom: 10px;
 }
 
-/* line 908, ../sass/elements/_specific_elements.scss */
+/* line 907, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container {
   width: 50%;
   background-color: #f2f3f3;
 }
 
-/* line 913, ../sass/elements/_specific_elements.scss */
+/* line 912, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
 }
 
-/* line 922, ../sass/elements/_specific_elements.scss */
+/* line 921, ../sass/elements/_specific_elements.scss */
 .page-user #title {
   height: 58px;
-  line-height: 58px;
+  color: #178bad;
+  margin-left: 27px;
 }
 /* line 926, ../sass/elements/_specific_elements.scss */
 .page-user.lift-columns #columns {
