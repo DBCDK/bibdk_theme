@@ -275,13 +275,15 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   if (!$page_id = $form['page_id']['#default_value']){
     return;
   }
+
   switch($page_id){
     case 'bibdk_frontpage':
-      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 3, $form);
+      _break_into_columns_expand('expand', 'sprog', 'term_language', 3, $form);
       break;
     case 'bibdk_frontpage/bog':
     case 'bibdk_frontpage/net':
-      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 2, $form);
+    case 'bibdk_frontpage/artikel':
+      _break_into_columns_expand('expand', 'sprog', 'term_language', 2, $form);
       break;
     case 'bibdk_frontpage/film':
       _break_into_columns_expand('main', 'nationalitet', 'term_nationality', 4, $form);
@@ -351,7 +353,6 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
   } else {
     return false;
   }
-
     $container = array();
     foreach ($elements as $key => $val) {
       if (preg_match('@container@', $key)){
