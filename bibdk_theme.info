@@ -18,6 +18,7 @@ regions[content] = Content
 regions[carousel] = Carousel
 regions[subjects] = Subjects
 regions[sidebar] = Sidebar
+regions[banner] = Banner
 regions[footer] = Footer
 
 plugins[panels][layouts] = templates/layouts
