@@ -2,7 +2,7 @@ name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
 screenshot = screenshot.png
 core = 7.x
-version = 7.x-0.40.1
+version = 7.x-0.40.1+banner
 
 stylesheets[all][] = css/screen.css
 scripts[] = js/modernizr-2.6.2.min.js
@@ -18,6 +18,7 @@ regions[content] = Content
 regions[carousel] = Carousel
 regions[subjects] = Subjects
 regions[sidebar] = Sidebar
+regions[banner] = Banner
 regions[footer] = Footer
 
 plugins[panels][layouts] = templates/layouts

@@ -139,6 +139,21 @@
 <!-- #columns-wrapper -->
 
 
+<section id="banner-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="span24">
+        <?php
+          print render($page['banner']);
+        ?>
+        <!-- #banners -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- #banner-wrapper -->
+
+
 <footer id="footer-wrapper">
   <div class="container">
     <div class="row">
