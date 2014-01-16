@@ -7130,6 +7130,53 @@ div.ctools-modal-content .modal-content {
   margin: 10px 0 0 0;
 }
 
+/* line 8, ../sass/elements/_sidebar_tabs.scss */
+.sidebar-tabs__link, .sidebar-tabs a, .tabs.primary a {
+  background: #51565a;
+  display: block;
+  padding: 8px 15px;
+  color: white;
+  border-top: solid 1px #565b5f;
+  border-bottom: solid 1px #45494d;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+/* line 18, ../sass/elements/_sidebar_tabs.scss */
+.sidebar-tabs__link:hover, .sidebar-tabs a:hover, .tabs.primary a:hover {
+  background: #565b5f;
+}
+/* line 22, ../sass/elements/_sidebar_tabs.scss */
+.sidebar-tabs__link:visited, .sidebar-tabs a:visited, .tabs.primary a:visited {
+  color: white;
+}
+
+/* line 28, ../sass/elements/_sidebar_tabs.scss */
+.sidebar-tabs__link--active, .sidebar-tabs a.active, .tabs.primary a.active {
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #178bad;
+  padding: 8px 18px;
+  margin-left: -3px;
+  margin-right: -3px;
+  font-weight: bold;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+/* line 37, ../sass/elements/_sidebar_tabs.scss */
+.sidebar-tabs__link--active:hover, .sidebar-tabs a.active:hover, .tabs.primary a.active:hover {
+  background: #1892b6;
+}
+
+/* line 55, ../sass/elements/_sidebar_tabs.scss */
+.tabs.primary {
+  margin-top: 68px;
+}
+
 /* line 4, ../sass/_extra.scss */
 .ir {
   display: block;
