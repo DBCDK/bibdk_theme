@@ -482,41 +482,6 @@ function bibdk_theme_preprocess_links(&$links){
   }
 }
 
-
-/** \brief set sidebar block for user pages
- *
- * @global type $user
- * @param type $variables
- */
-function _bibdk_theme_create_user_sidebar(&$variables) {
-  /*   * **** SIDEBAR ***** */
-  // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
-    unset($variables['page']['sidebar']);
-  }
-  else if (strpos(current_path(), 'user/reset') === 0) {
-    $tree = menu_build_tree('user-menu');
-    $data = array_shift($tree);
-    foreach ($data['below'] as $link) {
-      $item['#theme'] = 'menu_local_task';
-      $item['#link'] = $link['link'];
-      $user_menu[] = $item;
-    }
-    $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
-  }
-  else {
-    global $user;
-    if (!$user->uid && isset($variables['tabs']['#primary'])) {
-      $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
-    }
-    else {
-      if (isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
-        unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
-      }
-    }
-  }
-}
-
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   $variables['link_attributes']['class'][] = 'btn';
   $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
