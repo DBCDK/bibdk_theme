@@ -124,8 +124,6 @@ function bibdk_theme_preprocess_page(&$variables) {
       break;
   }
 
-  _bibdk_theme_create_user_sidebar($variables);
-
   // Create span# class for the content region
   if (!empty($variables['page']['sidebar'])) {
     $variables['content_span'] = "span19";
