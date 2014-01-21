@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 642, sprites/*.png */
 .sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
   background: url('../img/sprites-s83727057ee.png') no-repeat;
@@ -6897,18 +6896,28 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   height: 20px;
 }
 
-/* line 13, ../sass/elements/_ctools_modal.scss */
+/* line 9, ../sass/elements/_ctools_modal.scss */
 div.ctools-modal-content .modal-header {
   color: #6c7379;
   background-color: #3c4043;
 }
-/* line 17, ../sass/elements/_ctools_modal.scss */
+/* line 13, ../sass/elements/_ctools_modal.scss */
 div.ctools-modal-content .modal-header a.close img {
   margin-left: 0.5em;
 }
-/* line 23, ../sass/elements/_ctools_modal.scss */
+/* line 18, ../sass/elements/_ctools_modal.scss */
 div.ctools-modal-content .modal-content {
   text-align: center;
+  padding: 0;
+}
+/* line 23, ../sass/elements/_ctools_modal.scss */
+div.ctools-modal-content .element-wrapper {
+  margin-bottom: 0;
+  text-align: left;
+}
+/* line 29, ../sass/elements/_ctools_modal.scss */
+div.ctools-modal-content .form-item label {
+  width: 100%;
 }
 
 /* line 7, ../sass/elements/_carousel.scss */
