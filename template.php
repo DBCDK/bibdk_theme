@@ -192,6 +192,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
     case 'ding_wayf_accept_form':
+    case 'user_register_form':
       _wrap_in_element($form);
       break;
     case 'bibdk_cart_get_form':
