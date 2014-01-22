@@ -12,7 +12,13 @@ div.ctools-modal-content {
   margin: 0;
   padding: 0;
   text-align: left;
-  /*height: 100%;*/
+  height: 100%;
+
+  #bibdkcaptcha-controls {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
   .modal-title {
     font-size: 120%;
@@ -52,15 +58,25 @@ div.ctools-modal-content {
     ul {
       display: inline;
       li {
-        margin: 0 15px 0 0;
+        margin: 2px 15px 0 0;
         float: left;
         padding: 0;
+        a {
+          font-size: 1em;
+        }
       }
     }
   }
 
+  .form-item-captcha-response {
+    float: right;
+  }
+
   .form-item {
+    padding-bottom: 10px;
+
     label {
+      font-size: 1em;
       width: 100%;
     }
   }
