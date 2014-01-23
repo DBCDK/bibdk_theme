@@ -6995,9 +6995,9 @@ div.ctools-modal-content .modal-content {
 }
 /* line 52, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-creator {
-  margin-top: 2px;
-  line-height: 16px;
-  min-height: 16px;
+  margin-top: 0px;
+  line-height: 14px;
+  min-height: 14px;
 }
 /* line 56, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-creator a {
