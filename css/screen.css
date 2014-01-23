@@ -7203,6 +7203,43 @@ div.ctools-modal-content .modal-content {
   margin: 10px 0 0 0;
 }
 
+/* line 9, ../sass/elements/_infomedia.scss */
+#article-wrapper ul.article-tabs {
+  margin: 0;
+  padding: 0;
+}
+/* line 14, ../sass/elements/_infomedia.scss */
+#article-wrapper .article-tabs li {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+  border-left: 1px solid #FFFFFF;
+  color: #25292C;
+  display: block;
+  float: left;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+/* line 28, ../sass/elements/_infomedia.scss */
+#article-wrapper .article-tabs li.first {
+  border-left-width: 0;
+}
+/* line 32, ../sass/elements/_infomedia.scss */
+#article-wrapper .article-tabs li.active {
+  background-color: #d2eaf1;
+  border-bottom: 1px solid #d2eaf1;
+  font-weight: bold;
+  margin-bottom: -1px;
+}
+/* line 39, ../sass/elements/_infomedia.scss */
+#article-wrapper .article-list {
+  border: 8px solid #d2eaf1;
+  line-height: 1.5em;
+  padding: 1.5em 1.5em 0 0;
+}
+
 /* line 4, ../sass/_extra.scss */
 .ir {
   display: block;
