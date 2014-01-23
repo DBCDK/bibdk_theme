@@ -18,6 +18,7 @@
 
   <div id="popup-button-close" class="btn-wrapper">
     <button
+        id="selid-popup-button-close"
         type="button"
         title="<?php print t('label_close_popup', array(), array('context' => 'bibdk_popup')); ?>"
         class="btn btn-blue">
