@@ -310,6 +310,10 @@
 
       // ****************************  pop-ups **************************** //
 
+      $('#popup-button-close').click(function(e) {
+        window.close();
+      });
+
       $('.bibdk-popup-link').click(function(e) {
         $('.popover').addClass('visuallyhidden');
       });
