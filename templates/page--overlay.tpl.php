@@ -17,7 +17,12 @@
   </div>
 
   <div id="popup-button-close" class="btn-wrapper">
-    <button type="button" class="btn btn-blue"><?php print t("Close"); ?></button>
+    <button
+        type="button"
+        title="<?php print t('label_close_popup', array(), array('context' => 'bibdk_popup')); ?>"
+        class="btn btn-blue">
+            <?php print t('label_close_popup', array(), array('context' => 'bibdk_popup')); ?>
+    </button>
   </div>
 
 </div>

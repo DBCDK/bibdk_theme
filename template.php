@@ -214,6 +214,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
     '#tree'         => TRUE,
   );
   $form['wrapper']['buttons']['submit'] = $submit;
+/* bug16981: missing popup close button - put in template instead
   $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
   $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
     t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
@@ -227,6 +228,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
   );
   $form['wrapper']['buttons']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper btn btn-blue">';
   $form['wrapper']['buttons']['button_close_popup_link']['#suffix'] = '</div>';
+*/
 }
 
 function _alter_openuserstatus_tables(&$form) {
