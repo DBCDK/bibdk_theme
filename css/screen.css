@@ -6970,41 +6970,42 @@ div.ctools-modal-content .modal-content {
   background-color: inherit;
   float: left;
   max-width: 150px;
+  min-height: 270px;
   padding-right: 10px;
   text-align: center;
 }
-/* line 36, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 37, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-image {
   background-color: inherit;
   border-radius: 0;
 }
-/* line 39, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 40, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-image img {
   padding: 0;
 }
-/* line 43, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 44, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-title {
   margin-top: 5px;
   line-height: 14px;
   overflow: hidden;
 }
-/* line 47, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 48, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-title a {
   color: #25292c;
   font-weight: bold;
 }
-/* line 52, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 53, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-creator {
   margin-top: 0px;
   line-height: 14px;
   min-height: 14px;
 }
-/* line 56, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 57, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel .rs-carousel-inner .rs-carousel-mask .rs-carousel-item .rs-carousel-item-creator a {
   color: #51565a;
 }
 
-/* line 68, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 69, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-header {
   color: #3c4043;
   font-size: 15px;
@@ -7012,7 +7013,7 @@ div.ctools-modal-content .modal-content {
   line-height: 30px;
   float: left;
 }
-/* line 74, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 75, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-header .materialtype {
   display: inline-block;
   position: relative;
@@ -7020,17 +7021,17 @@ div.ctools-modal-content .modal-content {
   margin-right: 5px;
 }
 
-/* line 84, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 85, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-select {
   text-align: right;
   float: right;
 }
-/* line 87, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 88, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-select form {
   height: 30px;
   display: inline-block;
 }
-/* line 91, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 92, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-select .works-control {
   background-color: white;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.8) inset;
@@ -7045,7 +7046,7 @@ div.ctools-modal-content .modal-content {
   padding: 0 10px 0 20px;
   min-width: 200px;
 }
-/* line 101, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 102, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-select .dropdown-menu {
   display: inline-block;
   top: 60px;
@@ -7054,7 +7055,7 @@ div.ctools-modal-content .modal-content {
   min-width: 228px;
 }
 
-/* line 110, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 111, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-action-prev, .rs-carousel-action-next {
   background-image: url("../img/carousel-arrows.png");
   height: 41px;
@@ -7065,12 +7066,12 @@ div.ctools-modal-content .modal-content {
   width: 41px;
 }
 
-/* line 120, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 121, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-compact .rs-carousel-action-prev {
   left: -5%;
 }
 
-/* line 124, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
+/* line 125, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_carousel.scss */
 .rs-carousel-compact .rs-carousel-action-next {
   background-position: right 0;
   right: -5%;
