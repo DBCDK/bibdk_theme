@@ -5537,6 +5537,10 @@ span.star.negative {
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
+/* line 1010, ../sass/elements/_specific_elements.scss */
+.ding-wayf-logon-block .ding-wayf-logoninfo {
+  vertical-align: sub;
+}
 
 /* line 1015, ../sass/elements/_specific_elements.scss */
 #user-login .form-actions {
