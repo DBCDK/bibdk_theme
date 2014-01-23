@@ -261,8 +261,6 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 
 function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
   $form['#theme'] = 'bibdk_user_pass_reset';
-  // dpm(menu_build_tree('user-menu'));
-  // http://api.drupal.org/api/drupal/includes!menu.inc/group/menu/7
 }
 
 
@@ -289,7 +287,6 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
     case 'bibdk_frontpage/film':
       _break_into_columns_expand('main', 'nationalitet', 'term_nationality', 4, $form);
       _break_into_columns_expand('main', 'genre, type', 'term_genre', 5, $form);
-      //_break_into_columns_expand('expand', 'materialetype', 'term_type', 2, $form);
       break;
     case 'bibdk_frontpage/spil':
       _break_into_columns_expand('main', 'platform', 'term_type', 2, $form);
@@ -309,9 +306,6 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   }
   if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
-    /*if (isset($slice['#tree'])) {
-      unset($slice['#tree']);
-    }*/
     unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
 
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
