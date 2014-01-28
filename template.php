@@ -201,6 +201,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_favourite_user_form_fields':
       _alter_bibdk_favourite_user_form_fields($form);
       break;
+    case 'bibdk_usersettings_user_settings_form':
+      _wrap_in_element($form);
+      break;
   }
 }
 
