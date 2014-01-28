@@ -1,0 +1,12 @@
+// =============================================================================
+// Page sections
+// =============================================================================
+
+// Topbar
+.topbar {
+  @extend .container;
+}
+.topbar__wrapper {
+  @extend .container__wrapper;
+  background: $black;
+}
