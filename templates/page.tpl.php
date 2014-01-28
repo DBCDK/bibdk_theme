@@ -19,9 +19,7 @@
       <div class="span24">
         <div id="header">
           <div id="header-logo">
-            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-              <?php print render($logo); ?>
-            </a>
+            <div class="logo"><?php print render($logo_header_link); ?></div>
             <span id="seasonal"></span>
           </div>
           <?php print render($page['header_actions']); ?>
@@ -159,9 +157,7 @@
     <div class="row">
       <div class="span24">
         <div id="footer">
-          <div id="footer-logo">
-            <?php print render($logo_small); ?>
-          </div>
+          <div class="logo"><?php print render($logo_footer_link); ?></div>
           <?php print render($page['footer']); ?>
         </div>
         <!-- #footer -->
