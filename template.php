@@ -57,6 +57,25 @@ function bibdk_theme_theme() {
   );
 }
 
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function bibdk_theme_preprocess_block(&$vars) {
+  // Save module and delta as $block_id (unique identifier)
+  $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
+}
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Implements hook_page_alter().
  */
