@@ -126,5 +126,7 @@ input[type="submit"].button-as-link {
   float: right;
 }
 
-
+button[type="button"] {
+    border: medium none;
+}
 

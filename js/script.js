@@ -79,13 +79,13 @@
       $('.link-add-basket').toggle(function(e) {
         e.preventDefault();
 
-        $(this).html($(this).html().replace('TilfÃ¸j', 'Fjern'));
+        $(this).html($(this).html().replace('Tilføj', 'Fjern'));
         $(this).toggleClass('toggled');
 
       }, function(e) {
         e.preventDefault();
 
-        $(this).html($(this).html().replace('Fjern', 'TilfÃ¸j'));
+        $(this).html($(this).html().replace('Fjern', 'Tilføj'));
         $(this).toggleClass('toggled');
       });
 
@@ -123,7 +123,6 @@
           $(this).closest('.element-section').next().removeClass('visuallyhidden');
         }
       });
-
 
       $('.work-toggle-element', context).bind('hide-work', function(e) {
         var id = $(this).attr('href');
@@ -311,6 +310,10 @@
 
       // ****************************  pop-ups **************************** //
 
+      $('#popup-button-close').click(function(e) {
+        window.close();
+      });
+
       $('.bibdk-popup-link').click(function(e) {
         $('.popover').addClass('visuallyhidden');
       });
@@ -485,21 +488,6 @@
         this.select();
       });
 
-      // ****************************  TOGGLE 'EXPAND SEARCH'  **************************** //
-      // Toggle advanced search options
-      $('#search-advanced-toggle', context).click(function(e) {
-        e.preventDefault();
-        $(this).toggleClass('toggled');
-        $('#search-advanced').toggleClass('visuallyhidden');
-        // Move to first input field in expanded search, if activated.
-        if($('#search-advanced-toggle').hasClass('toggled') === true) {
-          $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-        }
-        else {
-          $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
-        }
-      });
-
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
       $('article.manifestation').filter(':visible').each(function() {
 
@@ -538,11 +526,40 @@
 
 
       // **************************** EMNEHIERARKI ********************************************** //
-
       // $('.themes').themes();
+
+
+      // **************************** CUSTOM SEARCH ********************************************** //
+      // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
+      // Toggle advanced search options
+      $('#search-advanced-toggle', context).click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('toggled');
+        $('#search-advanced').toggleClass('visuallyhidden');
+        // Move to first input field in expanded search, if activated.
+        if($('#search-advanced-toggle').hasClass('toggled') === true) {
+          $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
+        }
+        else {
+          $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
+        }
+      });
+
+      // *************************** SHEET MUSIC *********************************************** //
+      $('#search-advanced .form-type-checkbox input').change(function () {
+          // clear other checkboxes if top-level default is selected.
+          if ($(this).hasClass('default-value') && $(this).is(':checked') && $(this).val()=='mu') {
+              $(this).closest(".bibdk-custom-search-element").find("input").each(function (i) {
+                  if (!$(this).hasClass('default-value')) {
+                      $(this).attr('checked', false);
+                  }
+              })
+          }
+      });
 
       // NO CODE AFTER THIS!
     }
+
   };
 
 })(jQuery);

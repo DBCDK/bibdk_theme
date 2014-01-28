@@ -615,7 +615,6 @@ p.note-localisations {
   }
   h2 {
     padding: 0 16px;
-    color: #3497be;
     height: 51px;
     line-height: 51px;
     margin-bottom: 0px;
@@ -693,8 +692,9 @@ p.note-localisations {
     text-align: right;
   }
   .form-wrapper .form-submit {
-    margin-top: 10px;
     margin-bottom: 20px;
+    margin-right: 70px;
+    margin-top: 10px;
   }
   .close-link-wrapper {
     margin-right: 30px;
@@ -921,7 +921,8 @@ body.page-ting-moreinfo {
 .page-user {
   #title {
     height: 58px;
-    line-height: 58px;
+    color: $grey-3;
+    margin-left: 27px;
   }
   &.lift-columns #columns {
     margin-top: -40px;
