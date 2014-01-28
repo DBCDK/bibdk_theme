@@ -1,16 +1,12 @@
-<nav id="topbar-wrapper" data-role="navigation">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="topbar">
-          <?php print render($page['topbar']); ?>
-        </div>
-        <!-- #topbar -->
-      </div>
+<!-- topbar start -->
+<nav class="topbar__wrapper" data-role="navigation">
+  <div class="topbar">
+    <div class="container">
+      <?php print render($page['topbar']); ?>
     </div>
   </div>
 </nav>
-<!-- #topbar-wrapper -->
+<!-- topbar end -->
 
 
 <header id="header-wrapper">

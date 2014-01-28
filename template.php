@@ -511,6 +511,18 @@ function bibdk_theme_preprocess_links(&$links){
   }
 }
 
+/**
+ * Implements theme_links__locale_block().
+ *
+ * Remove active language from language switcher
+ */
+function bibdk_theme_links__locale_block($vars) {
+  global $language;
+  unset($vars['links'][$language->language]);
+  unset($vars['theme_hook_suggestion']);
+  return theme('links', $vars);
+}
+
 
 /** \brief set sidebar block for user pages
  *

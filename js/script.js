@@ -351,14 +351,6 @@
       });
 
 
-      // ************************ Top menu language menu fix ************************ //
-      //
-      $('#lang-nav a').each(function() {
-        if($(this).hasClass('active')) {
-          $(this).addClass('visuallyhidden');
-        }
-      });
-
       // pjo 08-01-13 bug in outcommented toggle function
       $('.toggle-next-section').click(function(e) {
         e.preventDefault();
