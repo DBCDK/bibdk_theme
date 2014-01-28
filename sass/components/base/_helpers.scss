@@ -1,6 +1,27 @@
 // =============================================================================
-// Text helpers
+// Helpers
 // =============================================================================
+
+.container {
+  @extend .clearfix;
+  position: relative;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+.container__wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .apparent-link {
   color: $black;
