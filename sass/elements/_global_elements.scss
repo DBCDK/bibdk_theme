@@ -62,121 +62,6 @@ body.page-reservation {
 
 
 // =============================================================================
-// Header actions
-// =============================================================================
-.region-header-actions {
-  position: absolute;
-  right: 0;
-  top: 30px;
-}
-
-.bibdk-favourite-vejviser-link {
-  color: $white;
-  float: right;
-  margin-top: -75px;
-}
-
-.header-action, .bibdk-favourite-vejviser-link {
-  @include inline-block(middle);
-  @include border-radius(3px);
-
-  background: $grey-2;
-  line-height: 30px;
-  padding: 0 10px;
-  margin-left: 2px;
-
-  a {
-    color: $white;
-  }
-}
-
-.header-action-helpdesk {
-  padding-left: 0;
-
-  img {
-    float: left;
-    position: relative;
-    top: 2px;
-    left: 2px;
-    width: 26px;
-    height: 26px;
-    margin-right: 12px;
-    @include border-radius(3px);
-  }
-}
-
-#bibdk-vejviser-header {
-  float: right;
-  margin-top: -70px;
-  width: 100%;
-  color: $grey-2;
-  #bibdk-vejviser-count {
-    color: $grey-3;
-    white-space: nowrap;
-    font-size: large;
-    line-height: 1.5;
-    float: left;
-    padding: 0px 20%;
-  }
-  .vejviser-raw {
-    float: right;
-  }
-}
-
-.header-action-vejviser, .vejviser-raw {
-
-  //.search-form-horizontal handles the floating
-  &.toggled {
-    padding: 0;
-    background: transparent;
-  }
-
-  .form-type-textfield {
-    width: 230px;
-    margin-right: 5px;
-  }
-  .form-actions {
-    width: 85px;
-  }
-
-  form {
-    width: 320px;
-  }
-  input {
-    line-height: 30px;
-    height: 30px;
-  }
-  input[type=text] {
-    padding: 0 5px;
-    font-size: 12px;
-  }
-}
-
-.header-action-reservation {
-
-  .form-type-textfield {
-    /*width:210px;*/
-    margin-right: 5px;
-  }
-  .form-actions {
-    width: 85px;
-  }
-
-  form {
-    /*width:300px;*/
-  }
-  input {
-    line-height: 30px;
-    height: 30px;
-  }
-  input[type=text] {
-    padding: 0 5px;
-    font-size: 12px;
-  }
-}
-
-
-// =============================================================================
 // Subjects navigation
 // =============================================================================
 #subjects-nav {
@@ -189,8 +74,7 @@ body.page-reservation {
   a {
     display: block;
     margin-bottom: 20px;
-    font-size: 1.16667em;
-    // 14px
+    font-size: 1.16667em; // 14px
     color: $grey-2;
   }
 }
@@ -204,8 +88,7 @@ body.page-reservation {
   background-color: $grey-2;
   border-bottom: solid 1px darken($grey-2, 5%);
 
-  font-size: 1.333em;
-  // 16px
+  font-size: 1.333em; // 16px
   font-weight: bold;
   text-align: center;
   color: $white;
