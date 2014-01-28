@@ -8,21 +8,25 @@
 }
 .topbar__wrapper {
   @extend .container__wrapper;
-  background: $black;
+  background-color: $black;
 }
 
 // Header
 .header {
-
+  @extend .container;
+  height: 80px;
 }
 .header__wrapper {
-
+  @extend .container__wrapper;
+  background-color: $grey-1;
 }
 
 // Footer
 .footer {
-
+  @extend .container;
+  padding: 40px 0 100px;
 }
 .footer__wrapper {
-
+  @extend .container__wrapper;
+  background-color: $grey-2;
 }

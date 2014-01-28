@@ -1,31 +1,20 @@
 <!-- topbar start -->
 <nav class="topbar__wrapper" data-role="navigation">
   <div class="topbar">
-    <div class="container">
-      <?php print render($page['topbar']); ?>
-    </div>
+    <?php print render($page['topbar']); ?>
   </div>
 </nav>
 <!-- topbar end -->
 
 
-<header id="header-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="header">
-          <div id="header-logo">
-            <div class="logo"><?php print render($logo_header_link); ?></div>
-            <span id="seasonal"></span>
-          </div>
-          <?php print render($page['header_actions']); ?>
-        </div>
-        <!-- #header -->
-      </div>
-    </div>
+<!-- header end -->
+<header class="header__wrapper">
+  <div class="header">
+    <div class="logo"><?php print render($logo_header_link); ?></div>
+    <?php print render($page['header_actions']); ?>
   </div>
 </header>
-<!-- #header-wrapper -->
+<!-- header end -->
 
 
 <nav id="search-panel-wrapper" data-role="search">
@@ -148,17 +137,11 @@
 <!-- #banner-wrapper -->
 
 
-<footer id="footer-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="footer">
-          <div class="logo"><?php print render($logo_footer_link); ?></div>
-          <?php print render($page['footer']); ?>
-        </div>
-        <!-- #footer -->
-      </div>
-    </div>
+<!-- footer start -->
+<footer class="footer__wrapper">
+  <div class="footer">
+    <div class="logo"><?php print render($logo_footer_link); ?></div>
+    <?php print render($page['footer']); ?>
   </div>
 </footer>
-<!-- #footer-wrapper -->
+<!-- footer end -->
