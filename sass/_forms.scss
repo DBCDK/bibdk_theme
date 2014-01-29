@@ -447,7 +447,7 @@ margin-right:0.5em;
   }
 
   #edit-actions{
-    padding-bottom:3em;
+    padding-bottom:1.5em;
   }
 }
 
@@ -511,16 +511,29 @@ margin-right:0.5em;
     line-height: 1.3em;
 }
 
-.page-overlay-favourite-userdata input[type="text"],
-.page-overlay-favourite-userdata input[type="password"],
-.page-reservation input[type="text"],
-.page-reservation #edit-subdivision,
-.page-reservation input[type="password"] {
+.page-reservation #modalContent form {
+  margin: 0 10px;
+
+  .bibdk-provider-form-inputs {
+    margin-bottom: 75px;
+  }
+}
+
+.page-overlay-favourite-userdata,
+.page-reservation #bibdk-reservation-create-wizard-form {
+  input[type="text"],
+  input[type="password"],
+  #edit-subdivision {
     float: left;
     margin-right: 20px;
     width: 260px;
     font-size: 12px;
     padding: 8px;
+  }
+
+  #edit-anyfield {
+    width: 100%;
+  }
 }
 
 .form-item.form-item-favouriteselector {
