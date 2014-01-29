@@ -1,0 +1,43 @@
+// =============================================================================
+// Infomedia articles
+// =============================================================================
+
+#article-wrapper {
+
+    ul.article-tabs {
+        margin: 0;
+        padding: 0;
+    }
+
+    .article-tabs li {
+        margin: 0;
+        padding: 10px 20px;
+        background-color: #E8E8E8;
+        border-bottom: 1px solid #E8E8E8;
+        border-left: 1px solid #FFFFFF;
+        color: #25292C;
+        display: block;
+        float: left;
+        position: relative;
+        top: 1px;
+        cursor: pointer;
+    }
+
+    .article-tabs li.first {
+        border-left-width: 0;
+    }
+
+    .article-tabs li.active {
+        background-color: $blue-lighter;
+        border-bottom: 1px solid $blue-lighter;
+        font-weight: bold;
+        margin-bottom: -1px;
+    }
+
+    .article-list {
+      border: 8px solid $blue-lighter;
+      line-height: 1.5em;
+      padding: 1.5em 1.5em 0 0;
+    }
+
+}

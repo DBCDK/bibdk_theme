@@ -1,0 +1,43 @@
+// =============================================================================
+// Topbar menu
+// =============================================================================
+
+#block-bibdk-help-bibdk-help-topbar-menu,
+#block-bibdk-help-bibdk-help-topbar-menu-eng,
+#block-locale-language {
+  float: left;
+
+  li {
+    @include inline-block();
+  }
+
+  a {
+    @include inline-block();
+    padding: 0.5em 1em;
+    border-right: solid 1px $grey-1;
+    color: $grey-5;
+
+    &:hover {
+      color: $grey-7;
+    }
+
+  }
+
+}
+
+#block-bibdk-help-bibdk-help-topbar-menu,
+#block-bibdk-help-bibdk-help-topbar-menu-eng {
+
+  li:first-child a {
+    padding-left: 0;
+  }
+
+}
+
+#block-locale-language {
+
+  li:last-child a {
+    border-right: none;
+  }
+
+}

@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // =============================================================================
 // Grid system
 // (Stolen with love from Twitter Bootstrap)
@@ -22,40 +20,6 @@ div[class^="span"], span[class^="span"], article[class^="span"] {
   }
 }
 
-.container {
-  width: 98%;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0;
-  padding-left: 0;
-  @media screen and (min-width: $break-max) {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-    width: $break-max;
-    *zoom: 1;
-  }
-  *width: 99.94736842105263%;
-  *zoom: 1;
-}
-
-.container:before,
-.container:after {
-  display: table;
-  content: "";
-  line-height: 0;
-  @media screen and (min-width: $break-max) {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-}
-
-.container:after {
-  clear: both;
-}
 
 .span24 {
   width: 99.9%;

@@ -310,6 +310,10 @@
 
       // ****************************  pop-ups **************************** //
 
+      $('#popup-button-close').click(function(e) {
+        window.close();
+      });
+
       $('.bibdk-popup-link').click(function(e) {
         $('.popover').addClass('visuallyhidden');
       });
@@ -346,14 +350,6 @@
         return false;
       });
 
-
-      // ************************ Top menu language menu fix ************************ //
-      //
-      $('#lang-nav a').each(function() {
-        if($(this).hasClass('active')) {
-          $(this).addClass('visuallyhidden');
-        }
-      });
 
       // pjo 08-01-13 bug in outcommented toggle function
       $('.toggle-next-section').click(function(e) {

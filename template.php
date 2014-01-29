@@ -97,41 +97,68 @@ function bibdk_theme_preprocess_html(&$variables) {
 /**
  * Implements template_preprocess_page().
  */
-function bibdk_theme_preprocess_page(&$variables) {
+function bibdk_theme_preprocess_page(&$vars) {
 
-  // Add $logo and $logo_small to page.tpl
-  $variables['logo'] = array(
+  $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
+
+  $vars['logo_header'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header.png',
+    '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
-  $variables['logo_small'] = array(
+
+  $vars['logo_header_link'] = array(
+    '#theme' => 'link',
+    '#text' => drupal_render($vars['logo_header']),
+    '#path' => '<front>',
+    '#options' => array(
+      'attributes' => array(
+        'title' => t('Home'),
+      ),
+      'html' => TRUE,
+    ),
+  );
+
+  $vars['logo_footer'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png',
+    '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-footer.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
+
+  $vars['logo_footer_link'] = array(
+    '#theme' => 'link',
+    '#text' => drupal_render($vars['logo_footer']),
+    '#path' => '<front>',
+    '#options' => array(
+      'attributes' => array(
+        'title' => t('Home'),
+      ),
+      'html' => TRUE,
+    ),
+  );
+
 
   switch (arg(0)) {
     case 'reservation':
     case 'email':
-      $variables['theme_hook_suggestions'][] = 'page__overlay';
+      $vars['theme_hook_suggestions'][] = 'page__overlay';
       break;
 
     case 'vejviser':
-      $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
-      $variables['page']['content']['#suffix'] = '</div></div>';
-      drupal_alter('vejviser_page_content', $variables['page']['content']);
+      $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+      $vars['page']['content']['#suffix'] = '</div></div>';
+      drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
 
-  _bibdk_theme_create_user_sidebar($variables);
+  _bibdk_theme_create_user_sidebar($vars);
 
   // Create span# class for the content region
-  if (!empty($variables['page']['sidebar'])) {
-    $variables['content_span'] = "span19";
+  if (!empty($vars['page']['sidebar'])) {
+    $vars['content_span'] = "span19";
   }
   else {
-    $variables['content_span'] = "span24";
+    $vars['content_span'] = "span24";
   }
 }
 
@@ -215,6 +242,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
     '#tree'         => TRUE,
   );
   $form['wrapper']['buttons']['submit'] = $submit;
+/* bug16981: missing popup close button - put in template instead
   $form['wrapper']['buttons']['button_close_popup_link']['#type'] = 'markup';
   $form['wrapper']['buttons']['button_close_popup_link']['#markup'] = l(
     t('label_close_popup', array(), array('context' => 'bibdk_favorite')),
@@ -228,6 +256,7 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
   );
   $form['wrapper']['buttons']['button_close_popup_link']['#prefix'] = '<div class="close-link-wrapper btn btn-blue">';
   $form['wrapper']['buttons']['button_close_popup_link']['#suffix'] = '</div>';
+*/
 }
 
 function _alter_openuserstatus_tables(&$form) {
@@ -475,6 +504,18 @@ function bibdk_theme_preprocess_links(&$links){
       $links['links'][$key] = $link;
     }
   }
+}
+
+/**
+ * Implements theme_links__locale_block().
+ *
+ * Remove active language from language switcher
+ */
+function bibdk_theme_links__locale_block($vars) {
+  global $language;
+  unset($vars['links'][$language->language]);
+  unset($vars['theme_hook_suggestion']);
+  return theme('links', $vars);
 }
 
 
