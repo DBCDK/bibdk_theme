@@ -34,7 +34,11 @@
 // =============================================================================
 // Import reset
 // =============================================================================
-@import "normalize";
+// @import "normalize";
+@import "components/base/normalize";
+@import "components/base/html";
+@import "components/base/text-helpers";
+
 @import "grid";
 
 
@@ -58,7 +62,6 @@
 // =============================================================================
 // Import default styling
 // =============================================================================
-@import "typography";
 @import "forms";
 
 
