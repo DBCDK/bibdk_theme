@@ -7427,8 +7427,9 @@ div.ctools-modal-content tbody {
 /* line 128, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a {
   display: block;
+  padding-right: 20px;
 }
-/* line 131, ../sass/elements/_subject_hierachy.scss */
+/* line 132, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a.nesting:after {
   content: '';
   height: 9px;

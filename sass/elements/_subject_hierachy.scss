@@ -127,6 +127,7 @@
 
   a {
     display: block;
+    padding-right: 20px;
 
     &.nesting:after {
       content: '';
