@@ -1,5 +1,5 @@
 /* line 648, sprites/*.png */
-.sprites-sprite, .messages.notice:after, .messages.status:after, .messages.warning:after, .messages.error:after, div.user-alert div.user-alert-close span.user-alert-close-image {
+.sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert .user-alert-close span.user-alert-close-image {
   background-image: url('../img/sprites-s83727057ee.png');
   background-repeat: no-repeat;
 }
@@ -2738,31 +2738,31 @@ select#edit-favouriteselector {
 
 /* line 5, ../sass/components/base/_helpers.scss */
 .clearfix, .row, .form-checkboxes,
-.form-radios, .container, .topbar, .header, .footer, #block-menu-menu-global-login-menu > .content, .nav--horizontal, #block-menu-menu-global-login-menu ul, .two-panel-multi-select, div#search-advanced-panel .custom-search-options-list .panel-select, .ting-agency-library {
+.form-radios, .container, .topbar, .header, .footer, .messages, .user-alerts, #block-menu-menu-global-login-menu > .content, .nav--horizontal, #block-menu-menu-global-login-menu ul, .two-panel-multi-select, div#search-advanced-panel .custom-search-options-list .panel-select, .ting-agency-library {
   *zoom: 1;
 }
 /* line 7, ../sass/mixins/_clearfix.scss */
 .clearfix:before, .row:before, .form-checkboxes:before,
-.form-radios:before, .container:before, .topbar:before, .header:before, .footer:before, #block-menu-menu-global-login-menu > .content:before, .nav--horizontal:before, #block-menu-menu-global-login-menu ul:before, .two-panel-multi-select:before, div#search-advanced-panel .custom-search-options-list .panel-select:before, .ting-agency-library:before, .clearfix:after, .row:after, .form-checkboxes:after,
-.form-radios:after, .container:after, .topbar:after, .header:after, .footer:after, #block-menu-menu-global-login-menu > .content:after, .nav--horizontal:after, #block-menu-menu-global-login-menu ul:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
+.form-radios:before, .container:before, .topbar:before, .header:before, .footer:before, .messages:before, .user-alerts:before, #block-menu-menu-global-login-menu > .content:before, .nav--horizontal:before, #block-menu-menu-global-login-menu ul:before, .two-panel-multi-select:before, div#search-advanced-panel .custom-search-options-list .panel-select:before, .ting-agency-library:before, .clearfix:after, .row:after, .form-checkboxes:after,
+.form-radios:after, .container:after, .topbar:after, .header:after, .footer:after, .messages:after, .user-alerts:after, #block-menu-menu-global-login-menu > .content:after, .nav--horizontal:after, #block-menu-menu-global-login-menu ul:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
   content: "";
   display: table;
 }
 /* line 12, ../sass/mixins/_clearfix.scss */
 .clearfix:after, .row:after, .form-checkboxes:after,
-.form-radios:after, .container:after, .topbar:after, .header:after, .footer:after, #block-menu-menu-global-login-menu > .content:after, .nav--horizontal:after, #block-menu-menu-global-login-menu ul:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
+.form-radios:after, .container:after, .topbar:after, .header:after, .footer:after, .messages:after, .user-alerts:after, #block-menu-menu-global-login-menu > .content:after, .nav--horizontal:after, #block-menu-menu-global-login-menu ul:after, .two-panel-multi-select:after, div#search-advanced-panel .custom-search-options-list .panel-select:after, .ting-agency-library:after {
   clear: both;
 }
 
 /* line 9, ../sass/components/base/_helpers.scss */
-.container, .topbar, .header, .footer, #block-menu-menu-global-login-menu > .content {
+.container, .topbar, .header, .footer, .messages, .user-alerts, #block-menu-menu-global-login-menu > .content {
   position: relative;
   margin: 0 auto;
   max-width: 960px;
 }
 
 /* line 15, ../sass/components/base/_helpers.scss */
-.container__wrapper, .topbar__wrapper, .header__wrapper, .footer__wrapper, #block-menu-menu-global-login-menu {
+.container__wrapper, .topbar__wrapper, .header__wrapper, .footer__wrapper, .messages__wrapper, .user-alerts__wrapper, #block-menu-menu-global-login-menu {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -2786,13 +2786,13 @@ select#edit-favouriteselector {
 }
 
 /* line 49, ../sass/components/base/_helpers.scss */
-.apparent-link, .messages a, div.user-alert a {
+.apparent-link, .message a, .user-alert a {
   color: #161616;
   font-weight: bold;
   text-decoration: none;
 }
 /* line 54, ../sass/components/base/_helpers.scss */
-.apparent-link:hover, .messages a:hover, div.user-alert a:hover {
+.apparent-link:hover, .message a:hover, .user-alert a:hover {
   text-decoration: underline;
 }
 
@@ -2879,119 +2879,118 @@ select#edit-favouriteselector {
 }
 
 /* line 5, ../sass/components/global/_messages.scss */
-#messages-wrapper {
+.messages__wrapper {
   background-color: #f2f3f3;
 }
 
 /* line 9, ../sass/components/global/_messages.scss */
-#messages {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-/* line 12, ../sass/components/global/_messages.scss */
-body.page-overlay #messages {
-  margin: 20px;
+.messages {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* line 17, ../sass/components/global/_messages.scss */
-.messages {
+/* line 16, ../sass/components/global/_messages.scss */
+.message {
   position: relative;
-  margin-bottom: 10px;
   padding: 15px 15px 15px 48px;
-  border: 1px solid #3c4043;
+  border: 1px solid #999;
+  border-bottom: none;
 }
-/* line 23, ../sass/components/global/_messages.scss */
-.messages:last-child {
-  margin-bottom: 0;
+/* line 22, ../sass/components/global/_messages.scss */
+.message:last-child {
+  border-bottom: 1px solid #6c7379;
 }
-/* line 27, ../sass/components/global/_messages.scss */
-.messages:after {
+/* line 26, ../sass/components/global/_messages.scss */
+.message:after {
   position: absolute;
   top: 12px;
   left: 12px;
   content: '';
 }
-/* line 34, ../sass/components/global/_messages.scss */
-.messages li {
-  margin-bottom: 10px;
-}
-/* line 36, ../sass/components/global/_messages.scss */
-.messages li:last-child {
-  margin-bottom: 0;
-}
 
-/* line 47, ../sass/components/global/_messages.scss */
-.messages.notice {
-  background-color: #97b8e9;
+/* line 40, ../sass/components/global/_messages.scss */
+.message--notice {
+  background-color: #5cd6f2;
 }
-/* line 49, ../sass/components/global/_messages.scss */
-.messages.notice:after {
+/* line 42, ../sass/components/global/_messages.scss */
+.message--notice:after {
   height: 24px;
   width: 24px;
   background-position: -858px 0;
 }
 
-/* line 53, ../sass/components/global/_messages.scss */
-.messages.status {
-  background-color: #97e999;
+/* line 46, ../sass/components/global/_messages.scss */
+.message--status {
+  background-color: #93ffde;
 }
-/* line 55, ../sass/components/global/_messages.scss */
-.messages.status:after {
+/* line 48, ../sass/components/global/_messages.scss */
+.message--status:after {
   height: 24px;
   width: 24px;
   background-position: -882px 0;
 }
 
-/* line 59, ../sass/components/global/_messages.scss */
-.messages.warning {
-  background-color: #fafaa2;
+/* line 52, ../sass/components/global/_messages.scss */
+.message--warning {
+  background-color: #f5fcbe;
 }
-/* line 61, ../sass/components/global/_messages.scss */
-.messages.warning:after {
+/* line 54, ../sass/components/global/_messages.scss */
+.message--warning:after {
   height: 24px;
   width: 24px;
   background-position: -906px 0;
 }
 
-/* line 65, ../sass/components/global/_messages.scss */
-.messages.error {
-  background-color: #fba3a2;
+/* line 58, ../sass/components/global/_messages.scss */
+.message--error {
+  background-color: #efcccc;
 }
-/* line 67, ../sass/components/global/_messages.scss */
-.messages.error:after {
+/* line 60, ../sass/components/global/_messages.scss */
+.message--error:after {
   height: 24px;
   width: 24px;
   background-position: -810px 0;
 }
 
-/* line 77, ../sass/components/global/_messages.scss */
-div.user-alert {
+/* line 5, ../sass/components/global/_user-alerts.scss */
+.user-alerts__wrapper {
+  background-color: #f2f3f3;
+}
+
+/* line 9, ../sass/components/global/_user-alerts.scss */
+.user-alerts {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 16, ../sass/components/global/_user-alerts.scss */
+.user-alert {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #fba3a2;
+  background-color: #efcccc;
   position: relative;
   padding: 0px;
   border: 1px solid #3c4043;
 }
-/* line 86, ../sass/components/global/_messages.scss */
-div.user-alert:after {
+/* line 24, ../sass/components/global/_user-alerts.scss */
+.user-alert:after {
   position: absolute;
   left: 12px;
   content: '';
 }
-/* line 96, ../sass/components/global/_messages.scss */
-div.user-alert div.user-alert-message {
+/* line 34, ../sass/components/global/_user-alerts.scss */
+.user-alert .user-alert-message {
   margin-left: 12px;
 }
-/* line 100, ../sass/components/global/_messages.scss */
-div.user-alert div.user-alert-close {
+/* line 38, ../sass/components/global/_user-alerts.scss */
+.user-alert .user-alert-close {
   margin-top: 5px;
   height: 24px;
   width: 24px;
   line-height: 24px;
 }
-/* line 105, ../sass/components/global/_messages.scss */
-div.user-alert div.user-alert-close span.user-alert-close-image {
+/* line 43, ../sass/components/global/_user-alerts.scss */
+.user-alert .user-alert-close span.user-alert-close-image {
   height: 24px;
   width: 24px;
   background-position: -810px 0;

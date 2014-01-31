@@ -34,7 +34,6 @@
 // =============================================================================
 // Import reset
 // =============================================================================
-// @import "normalize";
 @import "components/base/normalize";
 @import "components/base/html";
 @import "components/base/text-helpers";
@@ -75,6 +74,7 @@
 @import "components/base/modal";
 @import "components/global/page-sections";
 @import "components/global/messages";
+@import "components/global/user-alerts";
 @import "components/global/global-login-menu";
 @import "components/global/logo";
 @import "components/global/topbar-menu";

@@ -631,3 +631,25 @@ function bibdk_theme_preprocess_link(&$links){
   }
 
 }
+
+
+
+/**
+ * theme_status_messages().
+ *
+ * Return HTML for status messages.
+ */
+function bibdk_theme_status_messages($vars) {
+  $display = $vars['display'];
+  $output = '';
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    foreach ($messages as $message) {
+      $output .= "<div class=\"message message--$type\">";
+      $output .= $message;
+      $output .= "</div>";
+    }
+  }
+
+  return $output;
+}

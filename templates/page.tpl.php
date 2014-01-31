@@ -17,59 +17,50 @@
 <!-- header end -->
 
 
-<nav id="search-panel-wrapper" data-role="search">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="search-panel">
-          <?php print render($page['search_panel']); ?>
-        </div>
-        <!-- #search-panel -->
-      </div>
-    </div>
+<!-- search-panel start -->
+<nav id="search-panel-wrapper" data-role="search" class="container__wrapper">
+  <div id="search-panel" class="container">
+    <?php print render($page['search_panel']); ?>
   </div>
 </nav>
-<!-- #search-panel-wrapper -->
+<!-- search-panel end -->
 
-<?php if ( !empty($messages) || !empty($page['content']['user_alert_user_alert']) ): ?>
-  <section id="messages-wrapper" data-role="alert">
-    <div class="container">
-      <div class="row">
-        <div class="span24 clearfix">
-<?php if ( !empty($messages) ): ?>
-          <div id="messages"><?php print $messages; ?></div>
-<?php endif; ?>
-          <!-- #messages -->
-<?php if ( !empty($page['content']['user_alert_user_alert']) && $variables['is_front'] == TRUE ): ?>
-          <div id="user-alerts"><?php print drupal_render($page['content']['user_alert_user_alert']); else: unset($page['content']['user_alert_user_alert']); ?></div>
-<?php endif; ?>
-          <!-- #user-alerts -->
-        </div>
-      </div>
+
+<!-- messages start -->
+<?php if (!empty($messages)): ?>
+  <section class="messages__wrapper" data-role="alert">
+    <div class="messages">
+      <?php print $messages; ?>
     </div>
   </section>
-  <!-- #messages-wrapper -->
 <?php endif; ?>
+<!-- messages end -->
 
-<section id="carousel-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="carousel">
-          <?php
-            if ( $variables['is_front'] == TRUE ) {
-              print render($page['carousel']);
-            } else {
-              unset($page['carousel']);
-            }
-          ?>
-        </div>
-        <!-- #carousel -->
-      </div>
+
+<!-- user alerts start -->
+<?php if (!empty($page['user_alerts']) && $is_front): ?>
+  <section class="user-alerts__wrapper">
+    <div class="user-alerts">
+      <?php print render($page['content']['user_alert_user_alert']); ?>
     </div>
+  </section>
+<?php endif; ?>
+<!-- user alerts end -->
+
+
+<!-- carousel start -->
+<section id="carousel-wrapper" class="container__wrapper">
+  <div id="carousel" class="container">
+    <?php
+      if ($is_front) {
+        print render($page['carousel']);
+      } else {
+        unset($page['carousel']);
+      }
+    ?>
   </div>
 </section>
-<!-- #carousel-wrapper -->
+<!-- carousel end -->
 
 
 <section id="subjects-wrapper">
