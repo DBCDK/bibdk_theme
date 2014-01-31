@@ -57,6 +57,25 @@ function bibdk_theme_theme() {
   );
 }
 
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function bibdk_theme_preprocess_block(&$vars) {
+  // Save module and delta as $block_id (unique identifier)
+  $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
+}
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Implements hook_page_alter().
  */
@@ -75,21 +94,21 @@ function bibdk_theme_page_alter(&$page) {
 /**
  * Implements template_preprocess_html().
  */
-function bibdk_theme_preprocess_html(&$variables) {
+function bibdk_theme_preprocess_html(&$vars) {
 
   switch (arg(0)) {
     case 'search':
     case 'user':
     case 'vejviser':
-      $variables['classes_array'][] = 'lift-columns';
+      $vars['classes_array'][] = 'lift-columns';
       break;
 
     case 'email':
-      $variables['classes_array'][] = 'page-overlay';
+      $vars['classes_array'][] = 'page-overlay';
       break;
   }
   if (arg(0) == 'wayf') {
-    $variables['classes_array'][] = 'lift-columns';
+    $vars['classes_array'][] = 'lift-columns';
   }
 
 }
@@ -165,23 +184,23 @@ function bibdk_theme_preprocess_page(&$vars) {
 /**
  * Implements template_process_field
  */
-function bibdk_theme_process_field(&$variables) {
+function bibdk_theme_process_field(&$vars) {
   //Make field labels translatable the right way!
-  $variables['label'] = isset($variables['label']) ? t($variables['label']) : NULL;
+  $vars['label'] = isset($vars['label']) ? t($vars['label']) : NULL;
 }
 
 /**
  * Implements template_process_page().
  */
-function bibdk_theme_process_page(&$variables) {
+function bibdk_theme_process_page(&$vars) {
   if (arg(0) == 'search') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
   if (arg(0) == 'bibdk_frontpage') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
   if (arg(0) == 'node' && arg(1) == '') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
 }
 
@@ -452,11 +471,11 @@ function _alter_bibdk_cart_form(&$form) {
 
 /** \brief Theme links given from agency
  *
- * @param array $variables
+ * @param array $vars
  * @return string (html unordered list)
  */
-function bibdk_theme_ting_agency_tools($variables) {
-  $branch = $variables['branch'];
+function bibdk_theme_ting_agency_tools($vars) {
+  $branch = $vars['branch'];
   if (empty($branch)) {
     return;
   }
@@ -475,11 +494,11 @@ function bibdk_theme_ting_agency_tools($variables) {
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
  *
- * @param array $variables
+ * @param array $vars
  * @return string
  */
-function bibdk_theme_menu_link(array$variables) {
-  $element = $variables['element'];
+function bibdk_theme_menu_link(array$vars) {
+  $element = $vars['element'];
   $sub_menu = '';
 
   if ($element['#below']) {
@@ -527,13 +546,13 @@ function bibdk_theme_links__locale_block($vars) {
 /** \brief set sidebar block for user pages
  *
  * @global type $user
- * @param type $variables
+ * @param type $vars
  */
-function _bibdk_theme_create_user_sidebar(&$variables) {
+function _bibdk_theme_create_user_sidebar(&$vars) {
   /*   * **** SIDEBAR ***** */
   // only set sidebar on user pages
   if (strpos(current_path(), 'user') !== 0) {
-    unset($variables['page']['sidebar']);
+    unset($vars['page']['sidebar']);
   }
   else if (strpos(current_path(), 'user/reset') === 0) {
     $tree = menu_build_tree('user-menu');
@@ -543,31 +562,31 @@ function _bibdk_theme_create_user_sidebar(&$variables) {
       $item['#link'] = $link['link'];
       $user_menu[] = $item;
     }
-    $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
+    $vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
   }
   else {
     global $user;
-    if (!$user->uid && isset($variables['tabs']['#primary'])) {
-      $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
+    if (!$user->uid && isset($vars['tabs']['#primary'])) {
+      $vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $vars['tabs']['#primary'];
     }
     else {
-      if (isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
-        unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
+      if (isset($vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
+        unset($vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
       }
     }
   }
 }
 
-function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
-  $variables['link_attributes']['class'][] = 'btn';
-  $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
-  return $variables;
+function bibdk_theme_preprocess_bibdk_reservation_button(&$vars) {
+  $vars['link_attributes']['class'][] = 'btn';
+  $vars['link_attributes']['class'][] = (isset($vars['entity_type']) && $vars['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
+  return $vars;
 }
 
-function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
+function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
 
-  $variables['secondary_actions'] = array();
-  if ($actions = $variables['actions']){
+  $vars['secondary_actions'] = array();
+  if ($actions = $vars['actions']){
     foreach($actions as $key => $action){
       switch ($key){
         case 'reservation' :
@@ -575,21 +594,21 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
           $actions[$key]['#suffix'] = '</div>';
           break;
         case 'linkme' :
-          $variables['secondary_actions'][$key] = $action;
+          $vars['secondary_actions'][$key] = $action;
           unset($actions[$key]);
           break;
         }
       }
 
-  $variables['actions'] = $actions;
+  $vars['actions'] = $actions;
   }
 }
 
 /**
  * Override theme function for a CAPTCHA element.
  */
-function bibdk_theme_captcha($variables) {
-  $element = $variables['element'];
+function bibdk_theme_captcha($vars) {
+  $element = $vars['element'];
   if (!empty($element['#description']) && isset($element['captcha_widgets'])) {
     $element['captcha_widgets']['captcha_response']['#description'] = FALSE;
     $fieldset = array(
@@ -611,4 +630,26 @@ function bibdk_theme_preprocess_link(&$links){
     $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
   }
 
+}
+
+
+
+/**
+ * theme_status_messages().
+ *
+ * Return HTML for status messages.
+ */
+function bibdk_theme_status_messages($vars) {
+  $display = $vars['display'];
+  $output = '';
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    foreach ($messages as $message) {
+      $output .= "<div class=\"message message--$type\">";
+      $output .= $message;
+      $output .= "</div>";
+    }
+  }
+
+  return $output;
 }

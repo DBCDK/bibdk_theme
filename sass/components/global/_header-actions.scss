@@ -1,0 +1,66 @@
+// =============================================================================
+// Header actions
+// =============================================================================
+
+.region-header-actions {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+
+.header-action {
+  position: relative;
+  @include inline-block(middle);
+  @include border-radius($border-radius);
+  cursor: pointer;
+  background: $grey-2;
+  line-height: 30px;
+  padding: 0 10px;
+  margin-left: 2px;
+
+  a {
+    color: $white;
+  }
+}
+
+.header-action-helpdesk {
+  padding-left: 38px; // image width + space left of image + 10px
+
+  img {
+    position: absolute;
+    left: 2px;
+    @include border-radius($border-radius);
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+}
+
+.header-action-vejviser {
+
+  &.toggled {
+    padding: 0;
+    background: transparent;
+  }
+
+  .form-type-textfield {
+    width: 230px;
+    margin-right: 5px;
+  }
+  .form-actions {
+    width: 85px;
+  }
+
+  input {
+    display: block;
+    line-height: 30px;
+    height: 30px;
+  }
+  input[type=text] {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
+

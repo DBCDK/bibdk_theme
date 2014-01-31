@@ -2,11 +2,16 @@
 // Logo
 // =============================================================================
 
-#header .logo {
-  position: absolute;
-  top: 20px;
-}
+.logo {
 
-#footer .logo {
-  text-align: center;
+  .header & {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+  }
+
+  .footer & {
+    text-align: center;
+  }
+
 }

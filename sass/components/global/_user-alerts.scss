@@ -1,0 +1,51 @@
+// =============================================================================
+// User alerts
+// =============================================================================
+
+.user-alerts__wrapper {
+  @extend .container__wrapper;
+  background-color: $grey-7;
+}
+.user-alerts {
+  @extend .container;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.user-alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $error;
+  position: relative;
+  padding: 0px;
+  border: 1px solid $grey-2;
+
+  &:after {
+    position: absolute;
+    left: 12px;
+    content: '';
+  }
+
+  a {
+    @extend .apparent-link;
+  }
+
+  .user-alert-message {
+    margin-left: 12px;
+  }
+
+  .user-alert-close {
+    margin-top: 5px;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    span.user-alert-close-image {
+      @include add-sprite(messages--error);
+      background-position: -810px 0;
+      height: 24px;
+      width: 24px;
+      display: block;
+    }
+  }
+}
