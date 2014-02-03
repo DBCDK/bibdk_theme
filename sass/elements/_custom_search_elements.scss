@@ -89,7 +89,9 @@ form#search-block-form {
       padding-right: 0px;
     }
 
-    input[type=submit] {
+    a {
+      @extend .link-as-box;
+      font-weight: bold;
       font-size: 12px;
       background: $grey-3;
       @include transition(background-color .5s);
@@ -121,14 +123,14 @@ form#search-block-form {
         }
       }
     }
-    &:first-child input[type=submit] {
+    &:first-child a {
       border-left: solid 1px darken($grey-5, 5%);
       @include border-radius(0);
       &.active {
         @include border-radius(3px);
       }
     }
-    &:last-child input[type=submit] {
+    &:last-child a {
       border-right: solid 1px darken($grey-5, 5%);
       @include border-radius(0);
       &.active {

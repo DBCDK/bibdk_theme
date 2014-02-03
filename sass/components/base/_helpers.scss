@@ -57,8 +57,16 @@
 }
 
 
-
-
+// Helper for styling links as tabs after refactoring custom_search tabs from buttons to links
+.link-as-box {
+  @include box-sizing(border-box);
+  vertical-align: middle;
+  padding: 0 20px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+}
 
 
 
