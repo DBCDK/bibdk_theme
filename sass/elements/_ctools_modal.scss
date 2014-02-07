@@ -2,11 +2,24 @@
 // CTools modal window
 // =============================================================================
 
-div#modalContent {
-
-}
-
 div.ctools-modal-content {
+
+  background: none;
+  border: 0;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  height: 100%;
+
+  .modal-content {
+    text-align: left;
+    padding: 0;
+
+    .modal-throbber-wrapper img {
+      margin-top: 100px;
+    }
+  }
 
   .modal-header {
     color: $grey-4;
@@ -15,11 +28,116 @@ div.ctools-modal-content {
     a.close img {
       margin-left: 0.5em;
     }
-
   }
 
-  .modal-content {
-    text-align: center;
+  div.popups-title {
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-radius-topleft: 0px;
+    margin-bottom: 0px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    padding: 4px 10px 5px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
   }
 
+  .modal-scroll {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .popups-body {
+    background-color: $white;
+  }
+
+  .modal-loading-wrapper {
+    width: 220px;
+    height: 19px;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+
+  .popups-close {
+    font-size: 120%;
+    float: right;
+    text-align: right;
+  }
+
+
+  .modal-title {
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .popups-container {
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  .popups-title a.close {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .element-wrapper {
+    margin-bottom: 0;
+  }
+
+  .bibdk-provider-form-inputs {
+    margin-bottom: 55px;
+  }
+
+  #bibdkcaptcha-controls {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  #user-login .form-actions .form-item-remember-me {
+    margin-top: 5px;
+  }
+
+  .item-list {
+    margin-top: -40px;
+    margin-bottom: 50px;
+    text-align: left;
+    ul {
+      display: inline;
+      li {
+        margin: 2px 15px 0 0;
+        float: left;
+        padding: 0;
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .form-item-captcha-response {
+    float: right;
+  }
+
+  .form-item {
+    padding-bottom: 10px;
+
+    label {
+      font-size: 1em;
+      width: 100%;
+    }
+  }
+
+  .messages {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  tbody {
+    border: none;
+  }
 }
