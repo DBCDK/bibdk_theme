@@ -1,10 +1,9 @@
-@charset "UTF-8";
 /* line 650, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert .user-alert-close span.user-alert-close-image, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s42e4d5caf8.png') no-repeat;
 }
 
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -2466,25 +2465,29 @@ textarea::-webkit-input-placeholder {
 .page-reservation .element {
   padding-top: 10px;
 }
+/* line 458, ../sass/_forms.scss */
+.page-reservation .element #messages {
+  padding: 30px 10px 0 10px;
+}
 
-/* line 459, ../sass/_forms.scss */
+/* line 463, ../sass/_forms.scss */
 .page-reservation #popup #title {
   min-height: 40px;
   margin-top: 10px;
 }
 
-/* line 464, ../sass/_forms.scss */
+/* line 468, ../sass/_forms.scss */
 .page-reservation .form-step-guide.form-wrapper {
   padding: 0;
   border-bottom: none;
 }
 
-/* line 469, ../sass/_forms.scss */
+/* line 473, ../sass/_forms.scss */
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
   padding: 10px 0;
 }
 
-/* line 473, ../sass/_forms.scss */
+/* line 477, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
   position: fixed;
   top: 0px;
@@ -2495,7 +2498,7 @@ textarea::-webkit-input-placeholder {
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 484, ../sass/_forms.scss */
+/* line 488, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -2508,12 +2511,12 @@ textarea::-webkit-input-placeholder {
   border-top-width: 1px;
 }
 
-/* line 498, ../sass/_forms.scss */
+/* line 502, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 503, ../sass/_forms.scss */
+/* line 507, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -2522,16 +2525,16 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 510, ../sass/_forms.scss */
+/* line 514, ../sass/_forms.scss */
 .page-reservation #modalContent form {
   margin: 0 10px;
 }
-/* line 513, ../sass/_forms.scss */
+/* line 517, ../sass/_forms.scss */
 .page-reservation #modalContent form .bibdk-provider-form-inputs {
   margin-bottom: 75px;
 }
 
-/* line 522, ../sass/_forms.scss */
+/* line 526, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
 .page-overlay-favourite-userdata #edit-subdivision,
@@ -2544,80 +2547,80 @@ textarea::-webkit-input-placeholder {
   font-size: 12px;
   padding: 8px;
 }
-/* line 530, ../sass/_forms.scss */
+/* line 534, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #edit-anyfield,
 .page-reservation #bibdk-reservation-create-wizard-form #edit-anyfield {
   width: 100%;
 }
 
-/* line 535, ../sass/_forms.scss */
+/* line 539, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
 
-/* line 540, ../sass/_forms.scss */
+/* line 544, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 544, ../sass/_forms.scss */
+/* line 548, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 550, ../sass/_forms.scss */
+/* line 554, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 554, ../sass/_forms.scss */
+/* line 558, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 558, ../sass/_forms.scss */
+/* line 562, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 562, ../sass/_forms.scss */
+/* line 566, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 568, ../sass/_forms.scss */
+/* line 572, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
 }
-/* line 571, ../sass/_forms.scss */
+/* line 575, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 577, ../sass/_forms.scss */
+/* line 581, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
 
-/* line 581, ../sass/_forms.scss */
+/* line 585, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 586, ../sass/_forms.scss */
+/* line 590, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 590, ../sass/_forms.scss */
+/* line 594, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 602, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 #popup #title {
   margin: 20px 0 0 20px;
   line-height: 35px;
@@ -2625,62 +2628,62 @@ select#edit-favouriteselector {
   min-height: 73px;
 }
 
-/* line 609, ../sass/_forms.scss */
+/* line 613, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 613, ../sass/_forms.scss */
+/* line 617, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 617, ../sass/_forms.scss */
+/* line 621, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-right: 20px;
 }
 
-/* line 622, ../sass/_forms.scss */
+/* line 626, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 627, ../sass/_forms.scss */
+/* line 631, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 632, ../sass/_forms.scss */
+/* line 636, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 637, ../sass/_forms.scss */
+/* line 641, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 641, ../sass/_forms.scss */
+/* line 645, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 645, ../sass/_forms.scss */
+/* line 649, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 650, ../sass/_forms.scss */
+/* line 654, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 654, ../sass/_forms.scss */
+/* line 658, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
