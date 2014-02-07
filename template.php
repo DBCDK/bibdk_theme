@@ -170,8 +170,6 @@ function bibdk_theme_preprocess_page(&$vars) {
       break;
   }
 
-  _bibdk_theme_create_user_sidebar($vars);
-
   // Create span# class for the content region
   if (!empty($vars['page']['sidebar'])) {
     $vars['content_span'] = "span19";
@@ -249,6 +247,9 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_favourite_user_form_fields':
       _alter_bibdk_favourite_user_form_fields($form);
+      break;
+    case 'bibdk_usersettings_user_settings_form':
+      _wrap_in_element($form);
       break;
   }
 }
@@ -537,45 +538,10 @@ function bibdk_theme_links__locale_block($vars) {
   return theme('links', $vars);
 }
 
-
-/** \brief set sidebar block for user pages
- *
- * @global type $user
- * @param type $vars
- */
-function _bibdk_theme_create_user_sidebar(&$vars) {
-  /*   * **** SIDEBAR ***** */
-  // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
-    unset($vars['page']['sidebar']);
-  }
-  else if (strpos(current_path(), 'user/reset') === 0) {
-    $tree = menu_build_tree('user-menu');
-    $data = array_shift($tree);
-    foreach ($data['below'] as $link) {
-      $item['#theme'] = 'menu_local_task';
-      $item['#link'] = $link['link'];
-      $user_menu[] = $item;
-    }
-    $vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
-  }
-  else {
-    global $user;
-    if (!$user->uid && isset($vars['tabs']['#primary'])) {
-      $vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $vars['tabs']['#primary'];
-    }
-    else {
-      if (isset($vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
-        unset($vars['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
-      }
-    }
-  }
-}
-
-function bibdk_theme_preprocess_bibdk_reservation_button(&$vars) {
-  $vars['link_attributes']['class'][] = 'btn';
-  $vars['link_attributes']['class'][] = (isset($vars['entity_type']) && $vars['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
-  return $vars;
+function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
+  $variables['link_attributes']['class'][] = 'btn';
+  $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
+  return $variables;
 }
 
 function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {

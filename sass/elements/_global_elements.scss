@@ -60,6 +60,184 @@ body.page-reservation {
   clear: both;
 }
 
+// =============================================================================
+// Identity
+// =============================================================================
+#header-logo {
+  position: absolute;
+  top: 20px;
+}
+
+#footer-logo {
+  text-align: center;
+}
+
+// =============================================================================
+// Language navigation
+// =============================================================================
+#lang-nav,
+#user-help-topbar-menu {
+  float: left;
+}
+
+#lang-nav {
+  li {
+    float: left;
+    display: block;
+  }
+  a {
+    float: left;
+    display: block;
+  }
+
+  li:last-child a {
+    border-right: none;
+  }
+}
+
+#user-help-topbar-menu {
+  li:first-child a {
+    padding-left: 0;
+  }
+  a {
+    border-right: solid 1px $grey-1;
+  }
+}
+
+// =============================================================================
+// Service navigation
+// =============================================================================
+#user-help-topbar-menu,
+#lang-nav {
+
+  li {
+
+    a {
+      padding: 0.5em 1em;
+      color: $grey-5;
+
+      &:hover {
+        color: $grey-7;
+      }
+    }
+  }
+}
+
+
+
+// =============================================================================
+// Header actions
+// =============================================================================
+.region-header-actions {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+
+.bibdk-favourite-vejviser-link {
+  color: $white;
+  float: right;
+  margin-top: -54px;
+}
+
+.header-action, .bibdk-favourite-vejviser-link {
+  @include inline-block(middle);
+  @include border-radius(3px);
+
+  background: $grey-2;
+  line-height: 30px;
+  padding: 0 10px;
+  margin-left: 2px;
+
+  a {
+    color: $white;
+  }
+}
+
+.header-action-helpdesk {
+  padding-left: 0;
+
+  img {
+    float: left;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+    @include border-radius(3px);
+  }
+}
+
+#bibdk-vejviser-header {
+  float: right;
+  margin-top: -70px;
+  width: 100%;
+  color: $grey-2;
+  #bibdk-vejviser-count {
+    color: $grey-3;
+    white-space: nowrap;
+    font-size: large;
+    line-height: 1.5;
+    float: left;
+    padding: 0px 20%;
+  }
+  .vejviser-raw {
+    float: right;
+  }
+}
+
+.header-action-vejviser, .vejviser-raw {
+
+  //.search-form-horizontal handles the floating
+  &.toggled {
+    padding: 0;
+    background: transparent;
+  }
+
+  .form-type-textfield {
+    width: 230px;
+    margin-right: 5px;
+  }
+  .form-actions {
+    width: 85px;
+  }
+
+  form {
+    width: 320px;
+  }
+  input {
+    line-height: 30px;
+    height: 30px;
+  }
+  input[type=text] {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
+
+.header-action-reservation {
+
+  .form-type-textfield {
+    /*width:210px;*/
+    margin-right: 5px;
+  }
+  .form-actions {
+    width: 85px;
+  }
+
+  form {
+    /*width:300px;*/
+  }
+  input {
+    line-height: 30px;
+    height: 30px;
+  }
+  input[type=text] {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
 
 // =============================================================================
 // Subjects navigation
