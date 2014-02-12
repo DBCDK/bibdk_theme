@@ -2,16 +2,6 @@
 // User alerts
 // =============================================================================
 
-.user-alerts__wrapper {
-  @extend .container__wrapper;
-  background-color: $grey-7;
-}
-.user-alerts {
-  @extend .container;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 
 .user-alert {
   margin-top: 10px;

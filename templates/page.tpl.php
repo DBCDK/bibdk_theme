@@ -1,6 +1,6 @@
 <!-- topbar start -->
-<nav class="topbar__wrapper" data-role="navigation">
-  <div class="topbar">
+<nav id="topbar__wrapper" data-role="navigation">
+  <div id="topbar">
     <?php print render($page['topbar']); ?>
   </div>
 </nav>
@@ -8,8 +8,8 @@
 
 
 <!-- header end -->
-<header class="header__wrapper">
-  <div class="header">
+<header id="header__wrapper">
+  <div id="header">
     <div class="logo"><?php print render($logo_header_link); ?></div>
     <?php print render($page['header_actions']); ?>
   </div>
@@ -18,66 +18,56 @@
 
 
 <!-- search-panel start -->
-<nav class="search-panel__wrapper" data-role="search">
-  <div class="search-panel">
+<nav id="search-panel__wrapper" data-role="search">
+  <div id="search-panel">
     <?php print render($page['search_panel']); ?>
   </div>
 </nav>
 <!-- search-panel end -->
 
 
-<!-- messages start -->
 <?php if (!empty($messages)): ?>
-  <section class="messages__wrapper" data-role="alert">
-    <div class="messages">
+  <!-- messages start -->
+  <section id="messages__wrapper" data-role="alert">
+    <div id="messages">
       <?php print $messages; ?>
     </div>
   </section>
+  <!-- messages end -->
 <?php endif; ?>
-<!-- messages end -->
 
 
-<!-- user alerts start -->
 <?php if (!empty($page['user_alerts']) && $is_front): ?>
-  <section class="user-alerts__wrapper">
-    <div class="user-alerts">
+  <!-- user alerts start -->
+  <section id="user-alerts__wrapper">
+    <div id="user-alerts">
       <?php print render($page['content']['user_alert_user_alert']); ?>
     </div>
   </section>
+  <!-- user alerts end -->
 <?php endif; ?>
-<!-- user alerts end -->
 
 
-<!-- carousel start -->
 <?php if (!empty($page['carousel']) && $is_front): ?>
-<section class="carousel__wrapper">
-  <div class="carousel">
-    <?php print render($page['carousel']); ?>
-  </div>
-</section>
-<?php endif; ?>
-<!-- carousel end -->
-
-
-<section id="subjects-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24 clearfix">
-        <div id="subjects">
-          <?php
-            if ( $variables['is_front'] == TRUE && $variables['language']->language == 'da' ) {
-              print render($page['subjects']);
-            } else {
-              unset($page['subjects']);
-            }
-          ?>
-        </div>
-        <!-- #subjects -->
-      </div>
+  <!-- carousel start -->
+  <section id="carousel__wrapper">
+    <div id="carousel">
+      <?php print render($page['carousel']); ?>
     </div>
-  </div>
-</section>
-<!-- #subjects-wrapper -->
+  </section>
+  <!-- carousel end -->
+<?php endif; ?>
+
+
+<?php if ($language->language == 'da' && $is_front): ?>
+  <!-- subjects start -->
+  <section id="subjects__wrapper">
+    <div id="subjects">
+      <?php print render($page['subjects']); ?>
+    </div>
+  </section>
+  <!-- subjects end -->
+<?php endif; ?>
 
 
 <section id="columns-wrapper">
@@ -109,24 +99,20 @@
 <!-- #columns-wrapper -->
 
 
-<section id="banner-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <?php
-          print render($page['banner']);
-        ?>
-        <!-- #banners -->
-      </div>
+<?php if (!empty($page['banner'])): ?>
+  <!-- banner start -->
+  <section id="banner__wrapper">
+    <div id="banner">
+        <?php print render($page['banner']); ?>
     </div>
-  </div>
-</section>
-<!-- #banner-wrapper -->
+  </section>
+  <!-- banner end -->
+<?php endif; ?>
 
 
 <!-- footer start -->
-<footer class="footer__wrapper">
-  <div class="footer">
+<footer id="footer__wrapper">
+  <div id="footer">
     <div class="logo"><?php print render($logo_footer_link); ?></div>
     <?php print render($page['footer']); ?>
   </div>

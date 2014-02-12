@@ -3,53 +3,95 @@
 // =============================================================================
 
 // Topbar
-.topbar {
+#topbar {
   @extend .container;
 }
-.topbar__wrapper {
+#topbar__wrapper {
   @extend .container__wrapper;
   background-color: $black;
 }
 
 // Header
-.header {
+#header {
   @extend .container;
   @include rem('height', 80px);
 }
-.header__wrapper {
+#header__wrapper {
   @extend .container__wrapper;
   background-color: $grey-1;
 }
 
 // Search panel
-.search-panel {
+#search-panel {
   @extend .container;
   @include rem('padding-top', 20px);
   @include rem('padding-bottom', 20px);
 }
-.search-panel__wrapper {
+#search-panel__wrapper {
   @extend .container__wrapper;
   background-color: $grey-6;
 }
 
-
-// Carousel
-.carousel {
+// Messages
+#messages {
   @extend .container;
   @include rem('padding-top', 20px);
   @include rem('padding-bottom', 20px);
 }
-.carousel__wrapper {
+#messages__wrapper {
+  @extend .container__wrapper;
+  background-color: $grey-7;
+}
+
+// User alerts
+#user-alerts {
+  @extend .container;
+  @include rem('padding-top', 20px);
+  @include rem('padding-bottom', 20px);
+}
+#user-alerts__wrapper {
+  @extend .container__wrapper;
+  background-color: $grey-7;
+}
+
+// Carousel
+#carousel {
+  @extend .container;
+  @include rem('padding-top', 20px);
+  @include rem('padding-bottom', 20px);
+}
+#carousel__wrapper {
+  @extend .container__wrapper;
+  background-color: $white;
+}
+
+
+// Subjects
+#subjects {
+  @extend .container;
+  @include rem('padding-top', 20px);
+  @include rem('padding-bottom', 20px);
+}
+#subjects__wrapper {
+  @extend .container__wrapper;
+  background-color: $grey-7;
+}
+
+// Banner
+#banner {
+  @extend .container;
+}
+#banner__wrapper {
   @extend .container__wrapper;
   background-color: $white;
 }
 
 // Footer
-.footer {
+#footer {
   @extend .container;
   @include rem('padding', 40px 0 100px);
 }
-.footer__wrapper {
+#footer__wrapper {
   @extend .container__wrapper;
   background-color: $grey-2;
 }

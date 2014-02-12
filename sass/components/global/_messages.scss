@@ -2,16 +2,6 @@
 // Messages
 // =============================================================================
 
-.messages__wrapper {
-  @extend .container__wrapper;
-  background-color: $grey-7;
-}
-.messages {
-  @extend .container;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 // Single message
 .message {
   position: relative;
