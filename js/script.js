@@ -511,9 +511,8 @@
       // Add click event to carousel tabs.
       $('.rs-carousel-tabs li').once().click(function(e) {
         e.preventDefault();
-        $('.rs-carousel-tabs').addClass('visuallyhidden');
+        $(this).closest('.rs-carousel-tabs').addClass('visuallyhidden');
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
-        return false;
       });
 
 

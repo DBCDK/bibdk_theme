@@ -18,8 +18,8 @@
 
 
 <!-- search-panel start -->
-<nav id="search-panel-wrapper" data-role="search" class="container__wrapper">
-  <div id="search-panel" class="container">
+<nav class="search-panel__wrapper" data-role="search">
+  <div class="search-panel">
     <?php print render($page['search_panel']); ?>
   </div>
 </nav>
@@ -49,17 +49,13 @@
 
 
 <!-- carousel start -->
-<section id="carousel-wrapper" class="container__wrapper">
-  <div id="carousel" class="container">
-    <?php
-      if ($is_front) {
-        print render($page['carousel']);
-      } else {
-        unset($page['carousel']);
-      }
-    ?>
+<?php if (!empty($page['carousel']) && $is_front): ?>
+<section class="carousel__wrapper">
+  <div class="carousel">
+    <?php print render($page['carousel']); ?>
   </div>
 </section>
+<?php endif; ?>
 <!-- carousel end -->
 
 

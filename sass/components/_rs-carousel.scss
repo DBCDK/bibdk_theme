@@ -1,0 +1,191 @@
+// =============================================================================
+// RS Carousel
+// =============================================================================
+
+.rs-carousel {
+  position: relative;
+
+  .ajax-loader {
+    background: transparent url('../img/ajax-loader.gif') no-repeat 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.rs-carousel-mask,
+.rs-carousel-runner {
+  position: relative;
+  overflow: hidden;
+}
+
+.rs-carousel-inner {
+  position: relative;
+  min-height: 300px
+}
+
+
+
+// =============================================================================
+// Carousel header (title and dropdown)
+// =============================================================================
+
+.rs-carousel-header {
+  @extend .clearfix;
+  @include rem('margin-bottom', 10px);
+}
+
+.rs-carousel-header-title {
+  float: left;
+  margin-left: 5px; // To secure margin with carousel items
+
+  h2 {
+    float: left;
+    color: $grey-2;
+    @include rem('font-size', 15px);
+    @include rem('height', 30px);
+    @include rem('line-height', 30px);
+  }
+}
+
+.rs-carousel-header-select {
+  float: right;
+  position: relative;
+  margin-right: 5px; // To secure margin with carousel items
+
+  .dropdown-toggle {
+    background-color: $white;
+    display: block;
+    position: relative;
+    @include box-sizing(border-box);
+    @include rem('height', 32px);
+    @include rem('line-height', 30px);
+    border: solid 1px $grey-5;
+    @include border-radius(6px);
+    @include rem('padding', 0 35px 0 10px);
+
+    &:after {
+      content: "";
+      display: block;
+      @include add-sprite("angle--down--blue");
+      position: absolute;
+      right: 10px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &.toggled {
+
+      &:after {
+        @include add-sprite("angle--up--blue");
+      }
+    }
+  }
+
+
+  .dropdown-menu {
+    min-width: 0;
+    top: 100%;
+
+    li {
+      white-space: nowrap;
+    }
+  }
+}
+
+
+
+// =============================================================================
+// Pagination and Prev/Next buttons
+// =============================================================================
+
+.rs-carousel-pagination {
+  display: none;
+}
+
+.rs-carousel-action-prev,
+.rs-carousel-action-next {
+  @extend .hide-text;
+  position: absolute;
+  top: 0;
+  bottom: 40px;
+  display: block;
+  width: 18px;
+
+  &.rs-carousel-action-disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.rs-carousel-action-prev {
+  left: -38px;
+  &:after {
+    @include add-sprite("carousel-arrow--left");
+  }
+}
+
+.rs-carousel-action-next {
+  right: -38px;
+  &:after {
+    @include add-sprite("carousel-arrow--right");
+  }
+}
+
+
+
+// =============================================================================
+// Single carousel item
+// =============================================================================
+
+.rs-carousel-item {
+  width: 160px;
+  float: left;
+  @include box-sizing(border-box);
+  @include rem('padding-left', 5px);
+  @include rem('padding-right', 5px);
+}
+
+.rs-carousel-item-image {
+  @include rem('margin-bottom', 10px);
+
+  img {
+    width: 100%;
+  }
+}
+
+.rs-carousel-item-title {
+  text-align: center;
+  line-height: 1.2;
+  @include rem('margin-bottom', 5px);
+
+  a {
+    color: $grey-1;
+    font-weight: bold;
+  }
+}
+
+.rs-carousel-item-creator {
+  text-align: center;
+  line-height: 1.2;
+
+  a {
+    color: $grey-3;
+  }
+}
+
+
+

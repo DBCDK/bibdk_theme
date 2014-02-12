@@ -13,6 +13,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
   unset($css[drupal_get_path('module', 'user') . '/user.css']);
   unset($css[drupal_get_path('module', 'ding_facetbrowser') . '/css/facetbrowser.css']);
+  unset($css[drupal_get_path('module', 'ting_search_carousel') . '/css/ting_search_carousel.css']);
   unset($css['misc/vertical-tabs.css']);
 }
 
@@ -58,6 +59,7 @@ function bibdk_theme_theme() {
 }
 
 
+
 /**
  * Implements hook_preprocess_block().
  */
@@ -65,14 +67,6 @@ function bibdk_theme_preprocess_block(&$vars) {
   // Save module and delta as $block_id (unique identifier)
   $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -90,6 +84,8 @@ function bibdk_theme_page_alter(&$page) {
     unset($page['content']['system_main']['search_form']);
   }
 }
+
+
 
 /**
  * Implements template_preprocess_html().
