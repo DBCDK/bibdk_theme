@@ -2464,24 +2464,18 @@ textarea::-webkit-input-placeholder {
   padding: 30px 10px 0 10px;
 }
 
-/* line 463, ../sass/_forms.scss */
-.page-reservation #popup #title {
-  min-height: 40px;
-  margin-top: 10px;
-}
-
-/* line 468, ../sass/_forms.scss */
+/* line 465, ../sass/_forms.scss */
 .page-reservation .form-step-guide.form-wrapper {
   padding: 0;
   border-bottom: none;
 }
 
-/* line 473, ../sass/_forms.scss */
+/* line 470, ../sass/_forms.scss */
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
   padding: 10px 0;
 }
 
-/* line 477, ../sass/_forms.scss */
+/* line 474, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
   position: fixed;
   top: 0px;
@@ -2492,7 +2486,7 @@ textarea::-webkit-input-placeholder {
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 488, ../sass/_forms.scss */
+/* line 485, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -2505,12 +2499,12 @@ textarea::-webkit-input-placeholder {
   border-top-width: 1px;
 }
 
-/* line 502, ../sass/_forms.scss */
+/* line 499, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 506, ../sass/_forms.scss */
+/* line 503, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -2519,16 +2513,16 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 514, ../sass/_forms.scss */
+/* line 511, ../sass/_forms.scss */
 .page-reservation #modalContent form {
   margin: 0 10px;
 }
-/* line 517, ../sass/_forms.scss */
+/* line 514, ../sass/_forms.scss */
 .page-reservation #modalContent form .bibdk-provider-form-inputs {
   margin-bottom: 75px;
 }
 
-/* line 524, ../sass/_forms.scss */
+/* line 521, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
 .page-overlay-favourite-userdata #edit-subdivision,
@@ -2541,143 +2535,135 @@ textarea::-webkit-input-placeholder {
   font-size: 12px;
   padding: 8px;
 }
-/* line 534, ../sass/_forms.scss */
+/* line 531, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #edit-anyfield,
 .page-reservation #bibdk-reservation-create-wizard-form #edit-anyfield {
   width: 100%;
 }
 
-/* line 539, ../sass/_forms.scss */
+/* line 536, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
 
-/* line 544, ../sass/_forms.scss */
+/* line 541, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 548, ../sass/_forms.scss */
+/* line 545, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 553, ../sass/_forms.scss */
+/* line 550, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 558, ../sass/_forms.scss */
+/* line 555, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 562, ../sass/_forms.scss */
+/* line 559, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 566, ../sass/_forms.scss */
+/* line 563, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 572, ../sass/_forms.scss */
+/* line 569, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
 }
-/* line 575, ../sass/_forms.scss */
+/* line 572, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 581, ../sass/_forms.scss */
+/* line 578, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
 
-/* line 585, ../sass/_forms.scss */
+/* line 582, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 590, ../sass/_forms.scss */
+/* line 587, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 594, ../sass/_forms.scss */
+/* line 591, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 606, ../sass/_forms.scss */
-#popup #title {
-  margin: 20px 0 0 20px;
-  line-height: 35px;
-  height: auto;
-  min-height: 73px;
-}
-
-/* line 613, ../sass/_forms.scss */
+/* line 602, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 617, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 621, ../sass/_forms.scss */
+/* line 610, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-right: 20px;
 }
 
-/* line 626, ../sass/_forms.scss */
+/* line 615, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 630, ../sass/_forms.scss */
+/* line 619, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 636, ../sass/_forms.scss */
+/* line 625, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 641, ../sass/_forms.scss */
+/* line 630, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 645, ../sass/_forms.scss */
+/* line 634, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 649, ../sass/_forms.scss */
+/* line 638, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 654, ../sass/_forms.scss */
+/* line 643, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 658, ../sass/_forms.scss */
+/* line 647, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
@@ -3439,6 +3425,39 @@ div.works-controls > div > div,
 /* line 185, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-creator a {
   color: #51565a;
+}
+
+/* line 5, ../sass/components/_page-title.scss */
+#title {
+  font-size: 2em;
+  height: 73px;
+  line-height: 73px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "Dosis", sans-serif;
+}
+
+/* line 16, ../sass/components/_page-title.scss */
+.page-reservation #popup #title {
+  min-height: 40px;
+  margin-top: 10px;
+}
+
+/* line 21, ../sass/components/_page-title.scss */
+#popup #title {
+  margin: 20px 0 0 20px;
+  line-height: 35px;
+  height: auto;
+  min-height: 73px;
+}
+
+/* line 28, ../sass/components/_page-title.scss */
+.page-user #title {
+  height: 58px;
+  color: #51565a;
+  margin-left: 27px;
 }
 
 /* line 5, ../sass/elements/_icons.scss */
@@ -4862,87 +4881,76 @@ body.page-reservation .fieldset-legend {
   margin-top: 0;
 }
 
-/* line 383, ../sass/elements/_global_elements.scss */
-#title {
-  height: 73px;
-  line-height: 73px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-family: "Dosis", sans-serif;
-}
-
-/* line 397, ../sass/elements/_global_elements.scss */
+/* line 385, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form {
   padding: 0 20px;
 }
-/* line 401, ../sass/elements/_global_elements.scss */
+/* line 389, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form fieldset.form-wrapper {
   padding: 0px;
 }
-/* line 405, ../sass/elements/_global_elements.scss */
+/* line 393, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form .form-type-textfield {
   width: 84%;
   margin-right: 1%;
 }
-/* line 410, ../sass/elements/_global_elements.scss */
+/* line 398, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form .form-actions {
   width: 15%;
 }
-/* line 414, ../sass/elements/_global_elements.scss */
+/* line 402, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input {
   height: 40px;
   line-height: 40px;
 }
-/* line 419, ../sass/elements/_global_elements.scss */
+/* line 407, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input[type=text] {
   padding: 0 10px;
   font-size: 1.166667em;
 }
-/* line 424, ../sass/elements/_global_elements.scss */
+/* line 412, ../sass/elements/_global_elements.scss */
 #bibdk-help-search-form input[type=submit] {
   font-size: 1.333333em;
 }
 
-/* line 432, ../sass/elements/_global_elements.scss */
+/* line 420, ../sass/elements/_global_elements.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 436, ../sass/elements/_global_elements.scss */
+/* line 424, ../sass/elements/_global_elements.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 440, ../sass/elements/_global_elements.scss */
+/* line 428, ../sass/elements/_global_elements.scss */
 a.inactive, input[type="submit"].button-as-link:disabled {
   color: #51565a;
   cursor: default;
 }
 
-/* line 450, ../sass/elements/_global_elements.scss */
+/* line 438, ../sass/elements/_global_elements.scss */
 #popup .region-content {
   margin: 15px 20px;
 }
 
-/* line 454, ../sass/elements/_global_elements.scss */
+/* line 442, ../sass/elements/_global_elements.scss */
 #popup .element-wrapper {
   margin-bottom: 0;
 }
 
-/* line 458, ../sass/elements/_global_elements.scss */
+/* line 446, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 462, ../sass/elements/_global_elements.scss */
+/* line 450, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper:last-child {
   border-bottom-width: 0px;
   margin-bottom: 0px;
 }
 
-/* line 467, ../sass/elements/_global_elements.scss */
+/* line 455, ../sass/elements/_global_elements.scss */
 #popup-button-close {
   float: right;
   margin-right: 10px;
@@ -5530,42 +5538,38 @@ p.note-localisations {
 .page-user-edit-bibdk-mypage {
   color: #51565a;
 }
-/* line 576, ../sass/elements/_specific_elements.scss */
-.page-user-edit-bibdk-mypage #title {
-  /* visibility: hidden; */
-}
-/* line 580, ../sass/elements/_specific_elements.scss */
+/* line 578, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper {
   border-style: none;
 }
-/* line 581, ../sass/elements/_specific_elements.scss */
+/* line 579, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element {
   border-style: none;
 }
-/* line 585, ../sass/elements/_specific_elements.scss */
+/* line 583, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper {
   border: 10px solid #EBEBEB;
 }
-/* line 586, ../sass/elements/_specific_elements.scss */
+/* line 584, ../sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper .element {
   border-style: solid solid none;
 }
 
-/* line 594, ../sass/elements/_specific_elements.scss */
+/* line 592, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-link {
   text-align: right;
 }
-/* line 596, ../sass/elements/_specific_elements.scss */
+/* line 594, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-link a {
   margin: 0 10px;
 }
 
-/* line 601, ../sass/elements/_specific_elements.scss */
+/* line 599, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper {
   width: 46%;
   float: left;
 }
-/* line 604, ../sass/elements/_specific_elements.scss */
+/* line 602, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.fieldset-wrapper {
   border-color: #DCDCDC #DCDCDC;
   border-image: none;
@@ -5576,7 +5580,7 @@ p.note-localisations {
   max-height: 218px;
   overflow: hidden;
 }
-/* line 614, ../sass/elements/_specific_elements.scss */
+/* line 612, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper h2 {
   padding: 0 16px;
   height: 51px;
@@ -5588,98 +5592,98 @@ p.note-localisations {
   text-transform: uppercase;
   font-family: "Dosis", sans-serif;
 }
-/* line 625, ../sass/elements/_specific_elements.scss */
+/* line 623, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div {
   padding: 0 16px;
   clear: both;
   border-top: 1px solid #dddddd;
   line-height: 41px;
 }
-/* line 631, ../sass/elements/_specific_elements.scss */
+/* line 629, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.bibdk-mypage-row, .bibdk-mypage-wrapper .bibdk-mypage-row item-row {
   max-width: 310px;
   overflow: hidden;
 }
-/* line 635, ../sass/elements/_specific_elements.scss */
+/* line 633, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p {
   margin: 0;
   max-height: 41px;
 }
-/* line 639, ../sass/elements/_specific_elements.scss */
+/* line 637, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.label-row {
   float: left;
   margin-right: 10px;
   max-width: 300px;
 }
-/* line 644, ../sass/elements/_specific_elements.scss */
+/* line 642, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.value-row {
   color: #3c4043;
   float: right;
   max-width: 115px;
 }
 
-/* line 651, ../sass/elements/_specific_elements.scss */
+/* line 649, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper:nth-child(even) {
   margin-left: 10px;
 }
 
-/* line 655, ../sass/elements/_specific_elements.scss */
+/* line 653, ../sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper.form-wrapper {
   padding: 0;
 }
 
-/* line 660, ../sass/elements/_specific_elements.scss */
+/* line 658, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.label-row {
   float: left;
   width: 145px;
   margin-right: 0px;
 }
-/* line 665, ../sass/elements/_specific_elements.scss */
+/* line 663, ../sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.value-row {
   float: left;
   width: 130px;
 }
 
-/* line 675, ../sass/elements/_specific_elements.scss */
+/* line 673, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields {
   width: 500px;
 }
-/* line 677, ../sass/elements/_specific_elements.scss */
+/* line 675, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#edit-submit {
   width: 70px;
   margin-left: 60px;
   margin-top: 10px;
 }
-/* line 682, ../sass/elements/_specific_elements.scss */
+/* line 680, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#button-close-popup {
   margin-left: 30px;
   margin-top: 10px;
 }
-/* line 686, ../sass/elements/_specific_elements.scss */
+/* line 684, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper {
   border-width: 0px;
 }
-/* line 689, ../sass/elements/_specific_elements.scss */
+/* line 687, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields fieldset#edit-buttons .fieldset-wrapper {
   text-align: right;
 }
-/* line 692, ../sass/elements/_specific_elements.scss */
+/* line 690, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper .form-submit {
   margin-bottom: 20px;
   margin-right: 70px;
   margin-top: 10px;
 }
-/* line 697, ../sass/elements/_specific_elements.scss */
+/* line 695, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper {
   margin-right: 30px;
   margin-bottom: 20px;
 }
-/* line 700, ../sass/elements/_specific_elements.scss */
+/* line 698, ../sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper a {
   color: white;
 }
 
-/* line 710, ../sass/elements/_specific_elements.scss */
+/* line 708, ../sass/elements/_specific_elements.scss */
 .kravlenisse {
   background-image: url("../img/kravlenisse.png");
   z-index: 200;
@@ -5691,114 +5695,114 @@ p.note-localisations {
   left: 300px;
 }
 
-/* line 725, ../sass/elements/_specific_elements.scss */
+/* line 723, ../sass/elements/_specific_elements.scss */
 .cart-actions {
   float: left;
   padding-right: 20px;
 }
 
-/* line 731, ../sass/elements/_specific_elements.scss */
+/* line 729, ../sass/elements/_specific_elements.scss */
 .page-email input {
   margin: 20px;
 }
 
-/* line 735, ../sass/elements/_specific_elements.scss */
+/* line 733, ../sass/elements/_specific_elements.scss */
 .item-list .cart-actions ul li {
   margin: 0 0 0 0;
   padding: 0;
 }
 
-/* line 744, ../sass/elements/_specific_elements.scss */
+/* line 742, ../sass/elements/_specific_elements.scss */
 .search-history-table {
   width: 100%;
 }
-/* line 746, ../sass/elements/_specific_elements.scss */
+/* line 744, ../sass/elements/_specific_elements.scss */
 .search-history-table input {
   border: none;
 }
 
-/* line 751, ../sass/elements/_specific_elements.scss */
+/* line 749, ../sass/elements/_specific_elements.scss */
 .search-action-list {
   padding: 0px 20px;
   border: 0;
 }
-/* line 754, ../sass/elements/_specific_elements.scss */
+/* line 752, ../sass/elements/_specific_elements.scss */
 .search-action-list a, .search-action-list input {
   margin-right: 20px;
 }
 
-/* line 763, ../sass/elements/_specific_elements.scss */
+/* line 761, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 772, ../sass/elements/_specific_elements.scss */
+/* line 770, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-message {
   float: left;
   padding-left: 20px;
   width: 568px;
 }
 
-/* line 778, ../sass/elements/_specific_elements.scss */
+/* line 776, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action {
   float: left;
 }
-/* line 780, ../sass/elements/_specific_elements.scss */
+/* line 778, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper.form-actions {
   padding: 1em 10px;
 }
-/* line 783, ../sass/elements/_specific_elements.scss */
+/* line 781, ../sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper {
   border-bottom-width: 0px;
 }
 
-/* line 793, ../sass/elements/_specific_elements.scss */
+/* line 791, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item {
   padding: 5px;
 }
-/* line 797, ../sass/elements/_specific_elements.scss */
+/* line 795, ../sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item.form-type-select {
   display: inline;
   padding: 0;
 }
-/* line 802, ../sass/elements/_specific_elements.scss */
+/* line 800, ../sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item:after {
   display: none;
 }
-/* line 806, ../sass/elements/_specific_elements.scss */
+/* line 804, ../sass/elements/_specific_elements.scss */
 .openuserstatus select {
   font-size: 12px;
 }
-/* line 810, ../sass/elements/_specific_elements.scss */
+/* line 808, ../sass/elements/_specific_elements.scss */
 .openuserstatus input[type="submit"] {
   margin: 10px 5px 0 0;
 }
-/* line 813, ../sass/elements/_specific_elements.scss */
+/* line 811, ../sass/elements/_specific_elements.scss */
 .openuserstatus .form-item-select {
   float: left;
 }
-/* line 816, ../sass/elements/_specific_elements.scss */
+/* line 814, ../sass/elements/_specific_elements.scss */
 .openuserstatus .helptext {
   top: 0;
   margin: 0;
   position: inherit;
 }
 
-/* line 828, ../sass/elements/_specific_elements.scss */
+/* line 826, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo {
   background: none repeat scroll 0 0 #ffffff;
 }
-/* line 830, ../sass/elements/_specific_elements.scss */
+/* line 828, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element-wrapper {
   border: 0px solid #ffffff;
   margin-bottom: 0px;
 }
-/* line 834, ../sass/elements/_specific_elements.scss */
+/* line 832, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element {
   border-width: 0;
 }
-/* line 837, ../sass/elements/_specific_elements.scss */
+/* line 835, ../sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo img {
   position: absolute;
   margin: auto;
@@ -5808,31 +5812,31 @@ body.page-ting-moreinfo img {
   right: 0;
 }
 
-/* line 847, ../sass/elements/_specific_elements.scss */
+/* line 845, ../sass/elements/_specific_elements.scss */
 #lightboxFrame {
   border-width: 0;
 }
 
-/* line 855, ../sass/elements/_specific_elements.scss */
+/* line 853, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings {
   padding-bottom: 20px;
 }
-/* line 857, ../sass/elements/_specific_elements.scss */
+/* line 855, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings .form-item {
   padding: 5px 0;
 }
-/* line 860, ../sass/elements/_specific_elements.scss */
+/* line 858, ../sass/elements/_specific_elements.scss */
 .bibdk-usersettings input[type=submit] {
   display: block;
   float: right;
 }
 
-/* line 871, ../sass/elements/_specific_elements.scss */
+/* line 869, ../sass/elements/_specific_elements.scss */
 .manifestation .primary-actions a {
   display: block;
 }
 
-/* line 879, ../sass/elements/_specific_elements.scss */
+/* line 877, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more {
   text-align: center;
   padding: 8px;
@@ -5846,12 +5850,12 @@ body.page-ting-moreinfo img {
   border-style: solid;
   border-width: 1px;
 }
-/* line 891, ../sass/elements/_specific_elements.scss */
+/* line 889, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more #link {
   font-size: 14px;
 }
 
-/* line 896, ../sass/elements/_specific_elements.scss */
+/* line 894, ../sass/elements/_specific_elements.scss */
 .load_more_res_splitter {
   background-color: #6c7379;
   height: 2px;
@@ -5859,35 +5863,29 @@ body.page-ting-moreinfo img {
   margin-bottom: 10px;
 }
 
-/* line 906, ../sass/elements/_specific_elements.scss */
+/* line 904, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container {
   width: 50%;
   background-color: #f3f3f3;
 }
 
-/* line 911, ../sass/elements/_specific_elements.scss */
+/* line 909, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
 }
 
-/* line 920, ../sass/elements/_specific_elements.scss */
-.page-user #title {
-  height: 58px;
-  color: #51565a;
-  margin-left: 27px;
-}
-/* line 925, ../sass/elements/_specific_elements.scss */
+/* line 919, ../sass/elements/_specific_elements.scss */
 .page-user.lift-columns #columns {
   margin-top: -40px;
 }
 
-/* line 934, ../sass/elements/_specific_elements.scss */
+/* line 928, ../sass/elements/_specific_elements.scss */
 .bibdk-vejviser-help-text {
   clear: both;
   padding-left: 20px;
 }
 
-/* line 943, ../sass/elements/_specific_elements.scss */
+/* line 937, ../sass/elements/_specific_elements.scss */
 .alert {
   background: url(../img/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
@@ -5895,44 +5893,44 @@ body.page-ting-moreinfo img {
   height: 22px;
 }
 
-/* line 950, ../sass/elements/_specific_elements.scss */
+/* line 944, ../sass/elements/_specific_elements.scss */
 .blue-alert {
   background-position: 0 0;
 }
 
-/* line 954, ../sass/elements/_specific_elements.scss */
+/* line 948, ../sass/elements/_specific_elements.scss */
 .green-alert {
   background-position: -18px 0;
 }
 
-/* line 958, ../sass/elements/_specific_elements.scss */
+/* line 952, ../sass/elements/_specific_elements.scss */
 .yellow-alert {
   background-position: -36px 0;
 }
 
-/* line 962, ../sass/elements/_specific_elements.scss */
+/* line 956, ../sass/elements/_specific_elements.scss */
 .red-alert {
   background-position: -54px 0;
 }
 
-/* line 966, ../sass/elements/_specific_elements.scss */
+/* line 960, ../sass/elements/_specific_elements.scss */
 .no-alert {
   background-image: none;
 }
 
-/* line 973, ../sass/elements/_specific_elements.scss */
+/* line 967, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 }
-/* line 978, ../sass/elements/_specific_elements.scss */
+/* line 972, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review .openformat-info {
   float: left;
   clear: left;
   width: 280px;
 }
 
-/* line 985, ../sass/elements/_specific_elements.scss */
+/* line 979, ../sass/elements/_specific_elements.scss */
 span.star {
   display: inline-block;
   background: url("../img/rating-stars.png");
@@ -5940,33 +5938,33 @@ span.star {
   height: 17px;
 }
 
-/* line 992, ../sass/elements/_specific_elements.scss */
+/* line 986, ../sass/elements/_specific_elements.scss */
 span.star.positive {
   color: transparent;
   background-position: 0 17px;
 }
 
-/* line 998, ../sass/elements/_specific_elements.scss */
+/* line 992, ../sass/elements/_specific_elements.scss */
 span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
 
-/* line 1006, ../sass/elements/_specific_elements.scss */
+/* line 1000, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
-/* line 1009, ../sass/elements/_specific_elements.scss */
+/* line 1003, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block .ding-wayf-logoninfo {
   vertical-align: sub;
 }
 
-/* line 1014, ../sass/elements/_specific_elements.scss */
+/* line 1008, ../sass/elements/_specific_elements.scss */
 #user-login .form-actions {
   margin-top: -5.999em;
 }
 
-/* line 1021, ../sass/elements/_specific_elements.scss */
+/* line 1015, ../sass/elements/_specific_elements.scss */
 div.works-controls > div.pane-ting-openformat-feeds {
   background: none;
   border: none;

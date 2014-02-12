@@ -573,9 +573,7 @@ p.note-localisations {
 // =============================================================================
 
 .page-user-edit-bibdk-mypage {
-  #title {
-    /* visibility: hidden; */
-  }
+
   color: $grey-3;
   .element-wrapper {
     .element {
@@ -917,11 +915,7 @@ body.page-ting-moreinfo {
 // My page
 // =============================================================================
 .page-user {
-  #title {
-    height: 58px;
-    color: $grey-3;
-    margin-left: 27px;
-  }
+
   &.lift-columns #columns {
     margin-top: -40px;
   }
