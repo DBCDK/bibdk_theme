@@ -7466,19 +7466,20 @@ div.ctools-modal-content tbody {
 }
 /* line 28, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item .header {
+  height: auto;
   display: block;
   padding-right: 20px;
   padding-bottom: 5px;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 35, ../sass/elements/_subject_hierachy.scss */
+/* line 36, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item .note {
   display: block;
   padding-bottom: 20px;
   padding-right: 20px;
 }
-/* line 41, ../sass/elements/_subject_hierachy.scss */
+/* line 42, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item--active > p:after {
   position: absolute;
   z-index: 100;
@@ -7493,7 +7494,7 @@ div.ctools-modal-content tbody {
   border-color: transparent transparent #d2eaf1 transparent;
   border-bottom-style: solid;
 }
-/* line 50, ../sass/elements/_subject_hierachy.scss */
+/* line 51, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .bibdk-subject-hierarchy-header {
   color: #3c4043;
   font-size: 15px;
@@ -7502,25 +7503,25 @@ div.ctools-modal-content tbody {
   margin-bottom: 12px;
   font-weight: bold;
 }
-/* line 58, ../sass/elements/_subject_hierachy.scss */
+/* line 59, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .icon-blue-x {
   background-image: url("../img/blue-x.png");
 }
 
-/* line 67, ../sass/elements/_subject_hierachy.scss */
+/* line 68, ../sass/elements/_subject_hierachy.scss */
 .themes {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 73, ../sass/elements/_subject_hierachy.scss */
+/* line 74, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists__wrapper {
   float: left;
   width: 100%;
   display: none;
 }
 
-/* line 78, ../sass/elements/_subject_hierachy.scss */
+/* line 79, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists {
   position: relative;
   padding: 15px;
@@ -7529,7 +7530,7 @@ div.ctools-modal-content tbody {
   margin-bottom: 30px;
 }
 
-/* line 87, ../sass/elements/_subject_hierachy.scss */
+/* line 88, ../sass/elements/_subject_hierachy.scss */
 .themes__close-button {
   position: absolute;
   top: 8px;
@@ -7537,11 +7538,11 @@ div.ctools-modal-content tbody {
   cursor: pointer;
 }
 
-/* line 96, ../sass/elements/_subject_hierachy.scss */
+/* line 97, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb {
   margin-bottom: 20px;
 }
-/* line 99, ../sass/elements/_subject_hierachy.scss */
+/* line 100, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a {
   display: inline-block;
   vertical-align: middle;
@@ -7551,20 +7552,20 @@ div.ctools-modal-content tbody {
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 104, ../sass/elements/_subject_hierachy.scss */
+/* line 105, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:after {
   content: " \203A  ";
 }
-/* line 109, ../sass/elements/_subject_hierachy.scss */
+/* line 110, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child {
   font-weight: bold;
 }
-/* line 112, ../sass/elements/_subject_hierachy.scss */
+/* line 113, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child:after {
   content: "";
 }
 
-/* line 121, ../sass/elements/_subject_hierachy.scss */
+/* line 122, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist li {
   display: inline-block;
   vertical-align: top;
@@ -7575,12 +7576,12 @@ div.ctools-modal-content tbody {
   margin-right: -4px;
   margin-bottom: 5px;
 }
-/* line 128, ../sass/elements/_subject_hierachy.scss */
+/* line 129, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a {
   display: block;
   padding-right: 20px;
 }
-/* line 132, ../sass/elements/_subject_hierachy.scss */
+/* line 133, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a.nesting:after {
   content: '';
   height: 9px;
