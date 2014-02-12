@@ -3,7 +3,6 @@
  * @file
  *
  */
- // dpm($collection);
 ?>
 <li class="rs-carousel-item">
   <div class="rs-carousel-item-image"><a href="search/work/rec.id=<?php echo urlencode($collection->pid); ?>" title="<?php print check_plain($collection->title); ?>"><img src="<?php echo $collection->image; ?>" alt=""/></a></div>
