@@ -527,6 +527,14 @@ margin-right:0.5em;
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
+
+  &.ajax-progress {
+    display: inherit;
+  }
+
+  .throbber {
+    position: absolute;
+  }
 }
 
 .form-item-favouriteselector label {
