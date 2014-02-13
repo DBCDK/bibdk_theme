@@ -94,6 +94,69 @@ a.inactive {
 // Library
 // =============================================================================
 
+.bibdk-favourite-vejviser-link {
+  @include rem('padding-top', 10px);
+  @include rem('padding-bottom', 10px);
+  text-align: right;
+
+  a {
+    @include rem('padding', 10px 15px);
+    @include inline-block();
+    @include border-radius($border-radius);
+    color: $white;
+    background-color: $grey-2;
+  }
+
+}
+
+#bibdk-vejviser-header {
+  float: right;
+  margin-top: -70px;
+  width: 100%;
+  color: $grey-2;
+  #bibdk-vejviser-count {
+    color: $grey-3;
+    white-space: nowrap;
+    font-size: large;
+    line-height: 1.5;
+    float: left;
+    padding: 0px 20%;
+  }
+  .vejviser-raw {
+    float: right;
+  }
+}
+
+.vejviser-raw {
+
+  //.search-form-horizontal handles the floating
+  &.toggled {
+    padding: 0;
+    background: transparent;
+  }
+
+  .form-type-textfield {
+    width: 230px;
+    margin-right: 5px;
+  }
+  .form-actions {
+    width: 85px;
+  }
+
+  form {
+    width: 320px;
+  }
+  input {
+    line-height: 30px;
+    height: 30px;
+  }
+  input[type=text] {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
+
+
 .ting-agency-library {
   @extend .clearfix;
 
@@ -193,6 +256,13 @@ h3.library-list-header{
   padding-left: 20px;
   color: $grey-4;
 }
+
+
+
+
+
+
+
 
 // =============================================================================
 // Frontpage Teaser blocks

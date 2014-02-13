@@ -38,10 +38,10 @@
   }
 
   li:first-child a {
-    @include border-bottom-left-radius(5px);
+    @include border-bottom-left-radius($border-radius * 2);
   }
   li:last-child a {
-    @include border-bottom-right-radius(5px);
+    @include border-bottom-right-radius($border-radius * 2);
     border-right: none;
   }
 
