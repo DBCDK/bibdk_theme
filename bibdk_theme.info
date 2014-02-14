@@ -10,6 +10,7 @@ scripts[] = js/selectivizr-min.js
 scripts[] = js/jquery.popupwindow.js
 scripts[] = js/script.js
 scripts[] = js/visuallyhidden_hack.js
+scripts[] = js/onload.js
 
 regions[topbar] = Top bar
 regions[header_actions] = Header actions
