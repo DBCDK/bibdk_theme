@@ -4,8 +4,8 @@
 
 .region-header-actions {
   position: absolute;
-  right: 0;
-  bottom: 20px;
+  right: $column-gutter / 2;
+  bottom: 0;
 }
 
 .header-action {

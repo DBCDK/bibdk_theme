@@ -109,7 +109,7 @@
 }
 
 .table-actions button {
-  @include gradient($white, $grey-7);
+  @include background-image(linear-gradient($white, $grey-7));
   @include border-radius(3px);
   border: solid 1px $grey-5;
   padding: 6px 10px;

@@ -3,7 +3,7 @@
 // =============================================================================
 
 #block-menu-menu-global-login-menu {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,9 @@
   z-index: 99;
 
   > .content {
-    @extend .container;
+    max-width: $row-width - $column-gutter;
+    margin-left: auto;
+    margin-right: auto;
     height: 0;
   }
 

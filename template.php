@@ -93,18 +93,9 @@ function bibdk_theme_page_alter(&$page) {
 function bibdk_theme_preprocess_html(&$vars) {
 
   switch (arg(0)) {
-    case 'search':
-    case 'user':
-    case 'vejviser':
-      $vars['classes_array'][] = 'lift-columns';
-      break;
-
     case 'email':
       $vars['classes_array'][] = 'page-overlay';
       break;
-  }
-  if (arg(0) == 'wayf') {
-    $vars['classes_array'][] = 'lift-columns';
   }
 
 }
@@ -166,13 +157,6 @@ function bibdk_theme_preprocess_page(&$vars) {
       break;
   }
 
-  // Create span# class for the content region
-  if (!empty($vars['page']['sidebar'])) {
-    $vars['content_span'] = "span19";
-  }
-  else {
-    $vars['content_span'] = "span24";
-  }
 }
 
 /**

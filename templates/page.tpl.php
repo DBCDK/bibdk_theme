@@ -1,26 +1,32 @@
 <!-- topbar start -->
-<nav id="topbar__wrapper" data-role="navigation">
-  <div id="topbar">
-    <?php print render($page['topbar']); ?>
+<nav id="topbar" data-role="navigation">
+  <div class="row">
+    <div class="small-24 columns">
+      <?php print render($page['topbar']); ?>
+    </div>
   </div>
 </nav>
 <!-- topbar end -->
 
 
 <!-- header end -->
-<header id="header__wrapper">
-  <div id="header">
-    <div class="logo"><?php print render($logo_header_link); ?></div>
-    <?php print render($page['header_actions']); ?>
+<header id="header">
+  <div class="row">
+    <div class="small-24 columns">
+      <div class="logo"><?php print render($logo_header_link); ?></div>
+      <?php print render($page['header_actions']); ?>
+    </div>
   </div>
 </header>
 <!-- header end -->
 
 
 <!-- search-panel start -->
-<nav id="search-panel__wrapper" data-role="search">
-  <div id="search-panel">
-    <?php print render($page['search_panel']); ?>
+<nav id="search-panel" data-role="search">
+  <div class="row">
+    <div class="small-24 columns">
+      <?php print render($page['search_panel']); ?>
+    </div>
   </div>
 </nav>
 <!-- search-panel end -->
@@ -28,9 +34,11 @@
 
 <?php if (!empty($messages)): ?>
   <!-- messages start -->
-  <section id="messages__wrapper" data-role="alert">
-    <div id="messages">
-      <?php print $messages; ?>
+  <section id="messages" data-role="alert">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print $messages; ?>
+      </div>
     </div>
   </section>
   <!-- messages end -->
@@ -39,9 +47,11 @@
 
 <?php if (!empty($page['user_alerts']) && $is_front): ?>
   <!-- user alerts start -->
-  <section id="user-alerts__wrapper">
-    <div id="user-alerts">
-      <?php print render($page['content']['user_alert_user_alert']); ?>
+  <section id="user-alerts">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print render($page['content']['user_alert_user_alert']); ?>
+      </div>
     </div>
   </section>
   <!-- user alerts end -->
@@ -50,9 +60,11 @@
 
 <?php if (!empty($page['carousel']) && $is_front): ?>
   <!-- carousel start -->
-  <section id="carousel__wrapper">
-    <div id="carousel">
-      <?php print render($page['carousel']); ?>
+  <section id="carousel">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print render($page['carousel']); ?>
+      </div>
     </div>
   </section>
   <!-- carousel end -->
@@ -61,49 +73,59 @@
 
 <?php if ($language->language == 'da' && $is_front): ?>
   <!-- subjects start -->
-  <section id="subjects__wrapper">
-    <div id="subjects">
-      <?php print render($page['subjects']); ?>
+  <section id="subjects">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print render($page['subjects']); ?>
+      </div>
     </div>
   </section>
   <!-- subjects end -->
 <?php endif; ?>
 
 
-<section id="columns-wrapper">
-  <div class="container">
+<!-- columns start -->
+<section id="columns">
+
+  <a name="content"></a> <!-- used for scrolling -->
+
+  <?php if (!empty($title)): ?>
     <div class="row">
-      <div id="columns">
-        <a name="content"></a>
-
-        <?php if (!empty($page['sidebar'])): ?>
-          <div class="span5">
-            <?php print render($page['sidebar']); ?>
-          </div>
-        <?php endif; ?>
-
-        <?php if (!empty($page['content'])): ?>
-          <div class="<?php print $content_span; ?>">
-            <?php if (!empty($title)): ?>
-              <h1 id="title"><?php print $title; ?></h1>
-            <?php endif; ?>
-            <?php print render($page['content']); ?>
-          </div>
-        <?php endif; ?>
-
+      <div class="small-18 columns">
+        <h1 id="title"><?php print $title; ?></h1>
       </div>
-      <!-- #columns -->
     </div>
+  <?php endif; ?>
+
+
+  <div class="row">
+
+    <?php if (!empty($page['sidebar'])): ?>
+      <div class="small-6 columns">
+        <?php print render($page['sidebar']); ?>
+      </div>
+      <div class="small-18 columns">
+        <?php print render($page['content']); ?>
+      </div>
+    <?php else: ?>
+      <div class="small-24 columns">
+        <?php print render($page['content']); ?>
+      </div>
+    <?php endif; ?>
+
   </div>
+
 </section>
-<!-- #columns-wrapper -->
+<!-- columns end -->
 
 
 <?php if (!empty($page['banner'])): ?>
   <!-- banner start -->
-  <section id="banner__wrapper">
-    <div id="banner">
+  <section id="banner">
+    <div class="row">
+      <div class="small-24 columns">
         <?php print render($page['banner']); ?>
+      </div>
     </div>
   </section>
   <!-- banner end -->
@@ -111,10 +133,12 @@
 
 
 <!-- footer start -->
-<footer id="footer__wrapper">
-  <div id="footer">
-    <div class="logo"><?php print render($logo_footer_link); ?></div>
-    <?php print render($page['footer']); ?>
+<footer id="footer">
+  <div class="row">
+    <div class="small-24 columns">
+      <div class="logo"><?php print render($logo_footer_link); ?></div>
+      <?php print render($page['footer']); ?>
+    </div>
   </div>
 </footer>
 <!-- footer end -->

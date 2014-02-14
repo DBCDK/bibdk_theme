@@ -2,20 +2,19 @@
 // Helpers
 // =============================================================================
 
-.clearfix {
-  @include clearfix();
+.padded--horizontal {
+  @include rem('padding-left', $spacing);
+  @include rem('padding-right', $spacing);
+}
+.padded--vertical {
+  @include rem('padding-top', $spacing);
+  @include rem('padding-bottom', $spacing);
+}
+.padded {
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
 }
 
-.container {
-  @extend .clearfix;
-  position: relative;
-  margin: 0 auto;
-  max-width: $max-width;
-}
-.container__wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 .nav {
   list-style: none;

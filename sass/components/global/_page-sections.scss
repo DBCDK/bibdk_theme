@@ -4,94 +4,70 @@
 
 // Topbar
 #topbar {
-  @extend .container;
-}
-#topbar__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
   background-color: $black;
 }
 
 // Header
 #header {
-  @extend .container;
-  @include rem('height', 80px);
-}
-#header__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $grey-1;
 }
 
 // Search panel
 #search-panel {
-  @extend .container;
-  @include rem('padding-top', 20px);
-  @include rem('padding-bottom', 20px);
-}
-#search-panel__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $grey-6;
 }
 
 // Messages
 #messages {
-  @extend .container;
-  @include rem('padding-top', 20px);
-  @include rem('padding-bottom', 20px);
-}
-#messages__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $grey-7;
 }
 
 // User alerts
 #user-alerts {
-  @extend .container;
-  @include rem('padding-top', 20px);
-  @include rem('padding-bottom', 20px);
-}
-#user-alerts__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $grey-7;
 }
 
 // Carousel
 #carousel {
-  @extend .container;
-  @include rem('padding-top', 20px);
-  @include rem('padding-bottom', 20px);
-}
-#carousel__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $white;
 }
 
-
 // Subjects
 #subjects {
-  @extend .container;
-  @include rem('padding-top', 20px);
-  @include rem('padding-bottom', 20px);
-}
-#subjects__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $grey-7;
+}
+
+// Columns
+#columns {
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
+  background-color: $white;
 }
 
 // Banner
 #banner {
-  @extend .container;
-}
-#banner__wrapper {
-  @extend .container__wrapper;
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
   background-color: $white;
 }
 
 // Footer
 #footer {
-  @extend .container;
+  @extend .padded--horizontal;
   @include rem('padding', 40px 0 100px);
-}
-#footer__wrapper {
-  @extend .container__wrapper;
+  text-align: center;
   background-color: $grey-2;
 }

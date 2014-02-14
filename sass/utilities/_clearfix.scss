@@ -1,17 +1,19 @@
 // =============================================================================
-// Logo
+// Clearfix
 // =============================================================================
 
-.logo {
-
-  #header & {
-    position: absolute;
-    left: 0;
-    bottom: 20px;
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
   }
-
-  #footer & {
-    text-align: center;
+  &:after {
+    clear:both;
   }
+}
 
+.clearfix {
+  @include clearfix();
 }

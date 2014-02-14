@@ -1,12 +1,11 @@
 // =============================================================================
 // REM converter
+// Calculation based on $rem-base variable
 // =============================================================================
-
-$baseline-px: 16px !default;
 
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems
-  $baseline-rem: $baseline-px / 1rem;
+  $baseline-rem: $rem-base / 1rem;
   // Print the first line in pixel values
   #{$property}: $px-values;
   // If there is only one (numeric) value, return the property/value line for it.

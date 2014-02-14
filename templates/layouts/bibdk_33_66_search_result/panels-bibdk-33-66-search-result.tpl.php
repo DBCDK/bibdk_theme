@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="span24">
+  <div class="small-24 columns">
     <div class="panel panel-top">
       <?php print $content['top']; ?>
     </div>
@@ -7,12 +7,12 @@
 </div>
 
 <div class="row">
-  <div class="span5">
+  <div class="small-6 columns">
     <div class="panel panel-left">
       <?php print $content['facets']; ?>
     </div>
   </div>
-  <div class="span19">
+  <div class="small-18 columns">
     <section class="works">
       <div class="works-controls clearfix">
         <?php print $content['works_controls_top']; ?>
@@ -28,7 +28,7 @@
 </div>
 
 <div class="row">
-  <div class="span24">
+  <div class="small-24 columns">
     <div class="panel panel-bottom">
       <?php print $content['bottom']; ?>
     </div>

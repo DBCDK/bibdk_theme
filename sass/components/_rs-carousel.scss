@@ -23,7 +23,7 @@
 
 .rs-carousel-inner {
   position: relative;
-  min-height: 300px
+  min-height: (($row-width - $column-gutter) / $carousel-items) * 1.8;
 }
 
 
@@ -152,7 +152,7 @@
 // =============================================================================
 
 .rs-carousel-item {
-  width: 160px;
+  width: ($row-width - $column-gutter) / $carousel-items;
   float: left;
   @include box-sizing(border-box);
   @include rem('padding-left', 5px);
