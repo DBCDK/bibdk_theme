@@ -3,7 +3,7 @@
   background: url('../img/sprites-s42e4d5caf8.png') no-repeat;
 }
 
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -6942,185 +6942,184 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   vertical-align: top;
   /*break long links*/
   -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
+  word-break: normal;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
-/* line 169, ../sass/elements/_search_work_manifestations.scss */
+/* line 168, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-label-hidden .field-items {
   margin-left: 112px;
 }
-/* line 174, ../sass/elements/_search_work_manifestations.scss */
+/* line 173, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items {
   margin-left: 0px;
   width: auto;
 }
-/* line 179, ../sass/elements/_search_work_manifestations.scss */
+/* line 178, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items .field-items {
   margin-left: 120px;
   width: 340px;
 }
 
-/* line 187, ../sass/elements/_search_work_manifestations.scss */
+/* line 186, ../sass/elements/_search_work_manifestations.scss */
 .cart-item-checkbox .manifestation-data .field-label-hidden .field-items {
   margin-left: 0;
 }
 
-/* line 194, ../sass/elements/_search_work_manifestations.scss */
+/* line 193, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list {
   right: 0;
   width: 300px;
 }
-/* line 198, ../sass/elements/_search_work_manifestations.scss */
+/* line 197, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list h3 {
   color: #178bad;
   font-size: 1em;
   padding: 0 5px 0 10px;
   text-align: left;
 }
-/* line 203, ../sass/elements/_search_work_manifestations.scss */
+/* line 202, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list h3 .icon {
   height: 15px;
   padding-top: 8px;
 }
-/* line 208, ../sass/elements/_search_work_manifestations.scss */
+/* line 207, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list .to-cart-list li {
   margin: 1px 1px 1px 1px;
   line-height: 20px;
   padding: 5px 0 5px 20px;
 }
 
-/* line 215, ../sass/elements/_search_work_manifestations.scss */
+/* line 214, ../sass/elements/_search_work_manifestations.scss */
 .col1 {
   float: left;
   width: 170px;
 }
-/* line 219, ../sass/elements/_search_work_manifestations.scss */
+/* line 218, ../sass/elements/_search_work_manifestations.scss */
 .col1 .bibdk-popup-order-work .bibdk-popup-order-checkbox {
   float: left;
   padding: 8px 0 0 11px;
 }
-/* line 223, ../sass/elements/_search_work_manifestations.scss */
+/* line 222, ../sass/elements/_search_work_manifestations.scss */
 .col1 .bibdk-popup-order-work a {
   padding: 6px 0 5px 20px;
 }
 
-/* line 229, ../sass/elements/_search_work_manifestations.scss */
+/* line 228, ../sass/elements/_search_work_manifestations.scss */
 .col2 {
   width: 115px;
   float: left;
   text-align: right;
 }
-/* line 233, ../sass/elements/_search_work_manifestations.scss */
+/* line 232, ../sass/elements/_search_work_manifestations.scss */
 .col2 h3 {
   text-align: right;
   padding: 0 5px;
 }
-/* line 237, ../sass/elements/_search_work_manifestations.scss */
+/* line 236, ../sass/elements/_search_work_manifestations.scss */
 .col2 a {
   display: block;
   float: none;
   margin-left: 30px;
   padding: 5px 0 5px 0;
 }
-/* line 243, ../sass/elements/_search_work_manifestations.scss */
+/* line 242, ../sass/elements/_search_work_manifestations.scss */
 .col2 input[type=submit] {
   margin-left: 20px;
 }
 
-/* line 249, ../sass/elements/_search_work_manifestations.scss */
+/* line 248, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list {
   display: block;
   float: right;
   padding: 3px 0px 3px 0;
 }
-/* line 255, ../sass/elements/_search_work_manifestations.scss */
+/* line 254, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li {
   float: left;
   padding-right: 5px;
 }
-/* line 259, ../sass/elements/_search_work_manifestations.scss */
+/* line 258, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .materialtype {
   background: url(../img/icons/material-sprites.png) no-repeat top left;
   display: block;
 }
-/* line 264, ../sass/elements/_search_work_manifestations.scss */
+/* line 263, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .other-icon-small {
   background-position: 0 0;
   width: 22px;
   height: 22px;
 }
-/* line 269, ../sass/elements/_search_work_manifestations.scss */
+/* line 268, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .article-icon-small {
   background-position: -24px 0;
   width: 17px;
   height: 19px;
 }
-/* line 274, ../sass/elements/_search_work_manifestations.scss */
+/* line 273, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .bog-store-bogstaver-icon-small {
   background-position: -43px 0;
   width: 25px;
   height: 22px;
 }
-/* line 279, ../sass/elements/_search_work_manifestations.scss */
+/* line 278, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .book-icon-small {
   background-position: -70px 0;
   width: 16px;
   height: 22px;
 }
-/* line 284, ../sass/elements/_search_work_manifestations.scss */
+/* line 283, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .movie-icon-small {
   background-position: -88px 0;
   width: 17px;
   height: 20px;
 }
-/* line 289, ../sass/elements/_search_work_manifestations.scss */
+/* line 288, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .lyd-icon-small {
   background-position: -107px 0;
   width: 19px;
   height: 19px;
 }
-/* line 294, ../sass/elements/_search_work_manifestations.scss */
+/* line 293, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .audiobook-icon-small {
   background-position: -128px 0;
   width: 25px;
   height: 22px;
 }
-/* line 299, ../sass/elements/_search_work_manifestations.scss */
+/* line 298, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .music-icon-small {
   background-position: -155px 0;
   width: 19px;
   height: 15px;
 }
-/* line 304, ../sass/elements/_search_work_manifestations.scss */
+/* line 303, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .online-icon-small {
   background-position: -176px 0;
   width: 19px;
   height: 21px;
 }
-/* line 309, ../sass/elements/_search_work_manifestations.scss */
+/* line 308, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .sheetmusic-icon-small {
   background-position: -197px 0;
   width: 19px;
   height: 20px;
 }
-/* line 314, ../sass/elements/_search_work_manifestations.scss */
+/* line 313, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .punktskrift-icon-small {
   background-position: -218px 0;
   width: 17px;
   height: 20px;
 }
-/* line 319, ../sass/elements/_search_work_manifestations.scss */
+/* line 318, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .game-icon-small {
   background-position: -237px 0;
   width: 21px;
   height: 12px;
 }
-/* line 324, ../sass/elements/_search_work_manifestations.scss */
+/* line 323, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .tidsskrifter-icon-small {
   background-position: -260px 0;
   width: 17px;
