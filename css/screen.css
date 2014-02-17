@@ -1,6 +1,6 @@
-/* line 650, sprites/*.png */
+/* line 754, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert .user-alert-close span.user-alert-close-image, .themes__sublist a.nesting:after {
-  background: url('../img/sprites-s42e4d5caf8.png') no-repeat;
+  background: url('../img/sprites-s5ec886ec72.png') no-repeat;
 }
 
 /* normalize.css v3.0.0 | MIT License | git.io/normalize */
@@ -2884,7 +2884,7 @@ select#edit-favouriteselector {
 .message--notice:after {
   height: 24px;
   width: 24px;
-  background-position: -858px 0;
+  background-position: -1136px 0;
 }
 
 /* line 46, ../sass/components/global/_messages.scss */
@@ -2895,7 +2895,7 @@ select#edit-favouriteselector {
 .message--status:after {
   height: 24px;
   width: 24px;
-  background-position: -882px 0;
+  background-position: -1160px 0;
 }
 
 /* line 52, ../sass/components/global/_messages.scss */
@@ -2906,7 +2906,7 @@ select#edit-favouriteselector {
 .message--warning:after {
   height: 24px;
   width: 24px;
-  background-position: -906px 0;
+  background-position: -1184px 0;
 }
 
 /* line 58, ../sass/components/global/_messages.scss */
@@ -2917,7 +2917,7 @@ select#edit-favouriteselector {
 .message--error:after {
   height: 24px;
   width: 24px;
-  background-position: -810px 0;
+  background-position: -1088px 0;
 }
 
 /* line 5, ../sass/components/global/_user-alerts.scss */
@@ -2961,7 +2961,7 @@ select#edit-favouriteselector {
 .user-alert .user-alert-close span.user-alert-close-image {
   height: 24px;
   width: 24px;
-  background-position: -810px 0;
+  background-position: -1088px 0;
   background-position: -810px 0;
   height: 24px;
   width: 24px;
@@ -7552,7 +7552,7 @@ div.ctools-modal-content tbody {
   content: '';
   height: 9px;
   width: 9px;
-  background-position: -1095px 0;
+  background-position: -1373px 0;
   position: relative;
   left: 0.5em;
   display: inline-block;
