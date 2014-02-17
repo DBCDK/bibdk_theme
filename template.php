@@ -223,14 +223,23 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_bibdk_cart_form($form);
       break;
     case 'bibdk_openuserstatus_form':
+      drupal_set_title(t('Userstatus'));
       _alter_openuserstatus_tables($form);
       break;
     case 'bibdk_favourite_user_form_fields':
       _alter_bibdk_favourite_user_form_fields($form);
       break;
     case 'bibdk_usersettings_user_settings_form':
+      drupal_set_title('Settings');
       _wrap_in_element($form);
       break;
+    case 'bibdk_favourite_get_favourites_form':
+      drupal_set_title(t('Favourites'));
+      break;
+    case 'bibdk_mypage_form':
+      drupal_set_title(t('My page'));
+      break;
+
   }
 }
 
