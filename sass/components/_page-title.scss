@@ -1,0 +1,29 @@
+// =============================================================================
+// Page title
+// =============================================================================
+
+#title {
+  font-size: 2em;
+  line-height: 1.2;
+  color: $grey-3;
+  margin-bottom: $spacing;
+  text-transform: uppercase;
+}
+
+.page-reservation #popup #title {
+  // min-height: 40px;
+  // margin-top : 10px;
+}
+
+#popup #title {
+  // margin: 20px 0 0 20px;
+  // line-height: 35px;
+  // height: auto;
+  // min-height: 73px;
+}
+
+.page-user #title {
+  // height: 58px;
+  // color: $grey-3;
+  // margin-left: 27px;
+}

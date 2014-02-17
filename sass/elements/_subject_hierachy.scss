@@ -1,20 +1,6 @@
-@charset "UTF-8";
-
 // =============================================================================
 // Bibliotek.dk Subject hierachy
 // =============================================================================
-
-#subjects-wrapper {
-  .region-subjects {
-    padding-bottom: 00px;
-    padding-top: 30px;
-  }
-  div[class^="span"] {
-    min-height: 0px;
-  }
-}
-
-
 
 #bibdk-subject-hierarchy {
 
@@ -120,7 +106,6 @@
 
 // Each sublist
 .themes__sublist {
-
   li {
     @include inline-block(top);
     width: 25%;
@@ -129,8 +114,15 @@
   }
 
   a {
-    display:block;
-    padding-right:20px;
-  }
+    display: block;
+    padding-right: 20px;
 
+    &.nesting:after {
+      content: '';
+      @include add-sprite('plus--small--blue');
+      position: relative;
+      left: 0.5em;
+      display: inline-block;
+    }
+  }
 }

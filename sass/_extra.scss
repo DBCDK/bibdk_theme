@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // For image replacement
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }
@@ -21,9 +19,7 @@
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-}
-
-// An easy way to add padding to elements!
-.padded {
-	padding: 20px;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
 }

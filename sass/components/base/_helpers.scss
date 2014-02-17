@@ -1,8 +1,49 @@
-@charset "UTF-8";
+// =============================================================================
+// Helpers
+// =============================================================================
 
-// =============================================================================
-// Text helpers
-// =============================================================================
+.padded--horizontal {
+  @include rem('padding-left', $spacing);
+  @include rem('padding-right', $spacing);
+}
+.padded--vertical {
+  @include rem('padding-top', $spacing);
+  @include rem('padding-bottom', $spacing);
+}
+.padded {
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
+}
+
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav--horizontal {
+  @extend .nav;
+  @extend .clearfix;
+
+  li {
+    float:left;
+    display:block;
+  }
+  a {
+    float:left;
+    display:block;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 .apparent-link {
   color: $black;
@@ -15,28 +56,18 @@
 }
 
 
-.nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+// Helper for styling links as tabs after refactoring custom_search tabs from buttons to links
+.link-as-box {
+  @include box-sizing(border-box);
+  vertical-align: middle;
+  padding: 0 20px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
 }
 
 
-.horizontal-nav {
-  li {
-    float:left;
-    display:block;
-  }
-  a {
-    float:left;
-    display:block;
-  }
-}
-
-
-.clearfix {
-  @include clearfix();
-}
 
 
 .two-panel-multi-select{

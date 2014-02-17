@@ -1,0 +1,35 @@
+// =============================================================================
+// Text helpers
+// =============================================================================
+
+.field-name-body ul, .field-name-body ol {
+  padding: 0 0 0 20px;
+  list-style: disc outside none;
+}
+
+
+.text {
+
+  p {
+    margin: 0 0 0.8333em 0;
+  }
+  li {
+    list-style: none;
+    background: url(../img/list-style-image.gif) no-repeat 0% center;
+    padding-left: 10px;
+    line-height: 1.8;
+  }
+}
+
+// .text-small {
+//   font-size: 0.916667em; // 11px;
+// }
+.text-white {
+  color: $white;
+}
+.text-darkgrey {
+  color: $grey-3;
+}
+.text-lightgrey {
+  color: $grey-4;
+}

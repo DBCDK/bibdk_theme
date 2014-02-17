@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // =============================================================================
 // Import: Basic elements
 // =============================================================================
@@ -111,7 +109,7 @@
 }
 
 .table-actions button {
-  @include gradient($white, $grey-7);
+  @include background-image(linear-gradient($white, $grey-7));
   @include border-radius(3px);
   border: solid 1px $grey-5;
   padding: 6px 10px;
@@ -304,68 +302,6 @@
   border-top: dotted 1px $grey-5;
 }
 
-// =============================================================================
-// Dropdown menu
-// =============================================================================
-
-div.works-controls > div > div,
-.dropdown-wrapper {
-  position: relative;
-  float: left;
-}
-
-.dropdown-leftalign {
-  left: 0;
-}
-
-.dropdown-rightalign {
-  right: 0;
-}
-
-.dropdown-menu {
-  @include border-radius(6px);
-  @include box-shadow(0 5px 10px rgba(black, 0.2));
-
-  position: absolute;
-  top: 100%;
-  z-index: 5;
-  min-width: 100%;
-  padding: 6px 0;
-  margin: 2px 0 0;
-
-  border: 1px solid rgba(black, 0.2);
-  background-color: $white;
-  font-size: 12px;
-
-  .divider {
-    border-bottom: solid 1px $grey-5;
-  }
-
-  a {
-    display: block;
-    float: none;
-    margin: 0;
-    padding: 5px 20px;
-    line-height: 20px;
-
-    &:hover {
-      background: $grey-7;
-    }
-
-    &.current {
-      background: $grey-6;
-    }
-  }
-  li.pager-current a {
-    background: $grey-6;
-  }
-  li a {
-    border-width: 0;
-  }
-  li a span {
-    display: none;
-  }
-}
 
 form.bibdk-search-controls-form {
   .form-type-select > label, .form-type-radios > label, .form-type-checkboxes > label {

@@ -1,0 +1,9 @@
+// =============================================================================
+// Add sprite
+// $filename is the filename without .png
+// =============================================================================
+@mixin add-sprite($filename) {
+  height: sprites-sprite-height($filename);
+  width: sprites-sprite-width($filename);
+  @include sprites-sprite($filename);
+}

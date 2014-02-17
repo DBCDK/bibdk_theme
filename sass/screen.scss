@@ -7,35 +7,44 @@
 // Import Compass (http://compass-style.org/)
 @import "compass";
 
-// Import settings
-@import "settings/colors";
-@import "settings/fonts";
-@import "settings/mediaqueries";
-@import "settings/misc";
-
-// Import sprites
+// Generate sprite (http://compass-style.org/help/tutorials/spriting/)
 @import "sprites/*.png";
 
-// Import mixins
-@import "mixins/button-as-link";
-@import "mixins/clearfix";
-@import "mixins/add-sprite";
-@import "mixins/gradient";
-@import "mixins/btn-skin"; // Must be imported after gradient
-@import "mixins/rem";
-@import "mixins/rgba-background";
-@import "mixins/triangle";
+// Import global settings and functions
+@import "settings";
 
-
-
+// Import utilities (sass mixins and functions)
+@import "utilities/functions";
+@import "utilities/button-as-link";
+@import "utilities/clearfix";
+@import "utilities/add-sprite";
+@import "utilities/btn-skin";
+@import "utilities/rem";
+@import "utilities/triangle";
+@import "utilities/grid";
 
 
 
 // =============================================================================
-// Import reset
+// Import components
 // =============================================================================
-@import "normalize";
-@import "grid";
+
+@import "components/base/normalize";
+@import "components/base/html";
+@import "components/base/text-helpers";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,7 +67,6 @@
 // =============================================================================
 // Import default styling
 // =============================================================================
-@import "typography";
 @import "forms";
 
 
@@ -70,9 +78,18 @@
 // =============================================================================
 @import "components/base/helpers";
 @import "components/base/modal";
+@import "components/global/page-sections";
 @import "components/global/messages";
+@import "components/global/user-alerts";
 @import "components/global/global-login-menu";
-
+@import "components/global/topbar-menu";
+@import "components/global/header-actions";
+@import "components/dropdown";
+@import "components/rs-carousel";
+@import "components/page-title";
+@import "components/search-block-form";
+@import "components/tabs";
+@import "components/facet-browser";
 
 
 
@@ -88,10 +105,8 @@
 @import "elements/global_elements";
 @import "elements/specific_elements";
 @import "elements/custom_search_elements";
-@import "elements/facet_browser";
 @import "elements/search_work_manifestations";
 @import "elements/ctools_modal";
-@import "elements/carousel";
 @import "elements/subject_hierachy";
 @import "elements/banner";
 @import "elements/infomedia";

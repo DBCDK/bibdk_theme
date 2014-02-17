@@ -1,0 +1,19 @@
+// =============================================================================
+// Generate button skins based on a color
+// =============================================================================
+
+@mixin btn-skin($color) {
+  @include background-image(linear-gradient(lighten($color, 2%), darken($color, 2%)));
+
+  &:hover {
+    @include background-image(linear-gradient(lighten($color, 4%), $color));
+  }
+  &.toggled,
+  &:active {
+    @include background-image(linear-gradient($color, darken($color, 4%)));
+  }
+  &:disabled:hover,
+  &.disabled:hover {
+    @include background-image(linear-gradient(lighten($color, 2%), darken($color, 2%)));
+  }
+}

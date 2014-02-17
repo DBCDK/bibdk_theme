@@ -1,172 +1,144 @@
-<nav id="topbar-wrapper" data-role="navigation">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="topbar">
-          <?php print render($page['topbar']); ?>
-        </div>
-        <!-- #topbar -->
-      </div>
+<!-- topbar start -->
+<nav id="topbar" data-role="navigation">
+  <div class="row">
+    <div class="small-24 columns">
+      <?php print render($page['topbar']); ?>
     </div>
   </div>
 </nav>
-<!-- #topbar-wrapper -->
+<!-- topbar end -->
 
 
-<header id="header-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="header">
-          <div id="header-logo">
-            <a href="<?php print $base_path; ?>" title="<?php print t('Home'); ?>">
-              <?php print render($logo); ?>
-            </a>
-            <span id="seasonal"></span>
-          </div>
-          <?php print render($page['header_actions']); ?>
-        </div>
-        <!-- #header -->
-      </div>
+<!-- header end -->
+<header id="header">
+  <div class="row">
+    <div class="small-24 columns">
+      <div class="logo"><?php print render($logo_header_link); ?></div>
+      <?php print render($page['header_actions']); ?>
     </div>
   </div>
 </header>
-<!-- #header-wrapper -->
+<!-- header end -->
 
 
-<nav id="search-panel-wrapper" data-role="search">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <div id="search-panel">
-          <?php print render($page['search_panel']); ?>
-        </div>
-        <!-- #search-panel -->
-      </div>
+<!-- search-panel start -->
+<nav id="search-panel" data-role="search">
+  <div class="row">
+    <div class="small-24 columns">
+      <?php print render($page['search_panel']); ?>
     </div>
   </div>
 </nav>
-<!-- #search-panel-wrapper -->
+<!-- search-panel end -->
 
-<?php if ( !empty($messages) || !empty($page['content']['user_alert_user_alert']) ): ?>
-  <section id="messages-wrapper" data-role="alert">
-    <div class="container">
-      <div class="row">
-        <div class="span24 clearfix">
-<?php if ( !empty($messages) ): ?>
-          <div id="messages"><?php print $messages; ?></div>
-<?php endif; ?>
-          <!-- #messages -->
-<?php if ( !empty($page['content']['user_alert_user_alert']) && $variables['is_front'] == TRUE ): ?>
-          <div id="user-alerts"><?php print drupal_render($page['content']['user_alert_user_alert']); else: unset($page['content']['user_alert_user_alert']); ?></div>
-<?php endif; ?>
-          <!-- #user-alerts -->
-        </div>
+
+<?php if (!empty($messages)): ?>
+  <!-- messages start -->
+  <section id="messages" data-role="alert">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print $messages; ?>
       </div>
     </div>
   </section>
-  <!-- #messages-wrapper -->
+  <!-- messages end -->
 <?php endif; ?>
 
-<section id="carousel-wrapper">
-  <div class="container">
+
+<?php if (!empty($page['user_alerts']) && $is_front): ?>
+  <!-- user alerts start -->
+  <section id="user-alerts">
     <div class="row">
-      <div class="span24">
-        <div id="carousel">
-          <?php
-            if ( $variables['is_front'] == TRUE ) {
-              print render($page['carousel']);
-            } else {
-              unset($page['carousel']);
-            }
-          ?>
-        </div>
-        <!-- #carousel -->
+      <div class="small-24 columns">
+        <?php print render($page['content']['user_alert_user_alert']); ?>
       </div>
     </div>
-  </div>
-</section>
-<!-- #carousel-wrapper -->
+  </section>
+  <!-- user alerts end -->
+<?php endif; ?>
 
 
-<section id="subjects-wrapper">
-  <div class="container">
+<?php if (!empty($page['carousel']) && $is_front): ?>
+  <!-- carousel start -->
+  <section id="carousel">
     <div class="row">
-      <div class="span24 clearfix">
-        <div id="subjects">
-          <?php
-            if ( $variables['is_front'] == TRUE && $variables['language']->language == 'da' ) {
-              print render($page['subjects']);
-            } else {
-              unset($page['subjects']);
-            }
-          ?>
-        </div>
-        <!-- #subjects -->
+      <div class="small-24 columns">
+        <?php print render($page['carousel']); ?>
       </div>
     </div>
-  </div>
-</section>
-<!-- #subjects-wrapper -->
+  </section>
+  <!-- carousel end -->
+<?php endif; ?>
 
 
-<section id="columns-wrapper">
-  <div class="container">
+<?php if ($language->language == 'da' && $is_front): ?>
+  <!-- subjects start -->
+  <section id="subjects">
     <div class="row">
-      <div id="columns">
-        <a name="content"></a>
-
-        <?php if (!empty($page['sidebar'])): ?>
-          <div class="span5">
-            <?php print render($page['sidebar']); ?>
-          </div>
-        <?php endif; ?>
-
-        <?php if (!empty($page['content'])): ?>
-          <div class="<?php print $content_span; ?>">
-            <?php if (!empty($title)): ?>
-              <h1 id="title"><?php print $title; ?></h1>
-            <?php endif; ?>
-            <?php print render($page['content']); ?>
-          </div>
-        <?php endif; ?>
-
-      </div>
-      <!-- #columns -->
-    </div>
-  </div>
-</section>
-<!-- #columns-wrapper -->
-
-
-<section id="banner-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="span24">
-        <?php
-          print render($page['banner']);
-        ?>
-        <!-- #banners -->
+      <div class="small-24 columns">
+        <?php print render($page['subjects']); ?>
       </div>
     </div>
-  </div>
-</section>
-<!-- #banner-wrapper -->
+  </section>
+  <!-- subjects end -->
+<?php endif; ?>
 
 
-<footer id="footer-wrapper">
-  <div class="container">
+<!-- columns start -->
+<section id="columns">
+
+  <a name="content"></a> <!-- used for scrolling -->
+
+  <?php if (!empty($title)): ?>
     <div class="row">
-      <div class="span24">
-        <div id="footer">
-          <div id="footer-logo">
-            <?php print render($logo_small); ?>
-          </div>
-          <?php print render($page['footer']); ?>
-        </div>
-        <!-- #footer -->
+      <div class="small-18 columns">
+        <h1 id="title"><?php print $title; ?></h1>
       </div>
+    </div>
+  <?php endif; ?>
+
+
+  <div class="row">
+
+    <?php if (!empty($page['sidebar'])): ?>
+      <div class="small-6 columns">
+        <?php print render($page['sidebar']); ?>
+      </div>
+      <div class="small-18 columns">
+        <?php print render($page['content']); ?>
+      </div>
+    <?php else: ?>
+      <div class="small-24 columns">
+        <?php print render($page['content']); ?>
+      </div>
+    <?php endif; ?>
+
+  </div>
+
+</section>
+<!-- columns end -->
+
+
+<?php if (!empty($page['banner'])): ?>
+  <!-- banner start -->
+  <section id="banner">
+    <div class="row">
+      <div class="small-24 columns">
+        <?php print render($page['banner']); ?>
+      </div>
+    </div>
+  </section>
+  <!-- banner end -->
+<?php endif; ?>
+
+
+<!-- footer start -->
+<footer id="footer">
+  <div class="row">
+    <div class="small-24 columns">
+      <div class="logo"><?php print render($logo_footer_link); ?></div>
+      <?php print render($page['footer']); ?>
     </div>
   </div>
 </footer>
-<!-- #footer-wrapper -->
+<!-- footer end -->

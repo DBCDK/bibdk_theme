@@ -1,29 +1,16 @@
-@charset "UTF-8";
-
 // =============================================================================
 // Messages
 // =============================================================================
 
-#messages-wrapper {
-  background-color: $grey-7;
-}
-
-#messages {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  body.page-overlay & {
-    margin: 20px;
-  }
-}
-
-.messages {
+// Single message
+.message {
   position: relative;
-  margin-bottom: 10px;
   padding: 15px 15px 15px 48px;
-  border: 1px solid $grey-2;
+  border: 1px solid #999;
+  border-bottom: none;
 
   &:last-child {
-    margin-bottom: 0;
+    border-bottom: 1px solid $grey-4;
   }
 
   &:after {
@@ -33,84 +20,34 @@
     content: '';
   }
 
-  li {
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   a {
     @extend .apparent-link;
   }
 }
 
 
-.messages.notice {
-  background-color: $messages-blue;
+// Message types
+.message--notice {
+  background-color: $notice;
   &:after {
     @include add-sprite(messages--notice);
   }
 }
-.messages.status {
-  background-color: $messages-green;
+.message--status {
+  background-color: $status;
   &:after {
     @include add-sprite(messages--status);
   }
 }
-.messages.warning {
-  background-color: $messages-yellow;
+.message--warning {
+  background-color: $warning;
   &:after {
     @include add-sprite(messages--warning);
   }
 }
-.messages.error {
-  background-color: $messages-red;
+.message--error {
+  background-color: $error;
   &:after {
     @include add-sprite(messages--error);
   }
 }
-
-
-// =============================================================================
-// User alerts
-// =============================================================================
-
-div.user-alert {
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: $messages-red;
-  position: relative;
-  padding: 0px;
-  border: 1px solid $grey-2;
-
-  &:after {
-    position: absolute;
-    left: 12px;
-    content: '';
-  }
-
-  a {
-    @extend .apparent-link;
-  }
-
-  div.user-alert-message {
-    margin-left: 12px;
-  }
-
-  div.user-alert-close {
-    margin-top: 5px;
-    height: 24px;
-    width: 24px;
-    line-height: 24px;
-    span.user-alert-close-image {
-      @include add-sprite(messages--error);
-      background-position: -810px 0;
-      height: 24px;
-      width: 24px;
-      display: block;
-    }
-  }
-}
-

@@ -13,6 +13,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
   unset($css[drupal_get_path('module', 'user') . '/user.css']);
   unset($css[drupal_get_path('module', 'ding_facetbrowser') . '/css/facetbrowser.css']);
+  unset($css[drupal_get_path('module', 'ting_search_carousel') . '/css/ting_search_carousel.css']);
   unset($css['misc/vertical-tabs.css']);
 }
 
@@ -57,6 +58,18 @@ function bibdk_theme_theme() {
   );
 }
 
+
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function bibdk_theme_preprocess_block(&$vars) {
+  // Save module and delta as $block_id (unique identifier)
+  $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
+}
+
+
+
 /**
  * Implements hook_page_alter().
  */
@@ -72,24 +85,17 @@ function bibdk_theme_page_alter(&$page) {
   }
 }
 
+
+
 /**
  * Implements template_preprocess_html().
  */
-function bibdk_theme_preprocess_html(&$variables) {
+function bibdk_theme_preprocess_html(&$vars) {
 
   switch (arg(0)) {
-    case 'search':
-    case 'user':
-    case 'vejviser':
-      $variables['classes_array'][] = 'lift-columns';
-      break;
-
     case 'email':
-      $variables['classes_array'][] = 'page-overlay';
+      $vars['classes_array'][] = 'page-overlay';
       break;
-  }
-  if (arg(0) == 'wayf') {
-    $variables['classes_array'][] = 'lift-columns';
   }
 
 }
@@ -97,64 +103,82 @@ function bibdk_theme_preprocess_html(&$variables) {
 /**
  * Implements template_preprocess_page().
  */
-function bibdk_theme_preprocess_page(&$variables) {
+function bibdk_theme_preprocess_page(&$vars) {
 
-  // Add $logo and $logo_small to page.tpl
-  $variables['logo'] = array(
+  $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
+
+  $vars['logo_header'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header.png',
+    '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
-  $variables['logo_small'] = array(
+
+  $vars['logo_header_link'] = array(
+    '#theme' => 'link',
+    '#text' => drupal_render($vars['logo_header']),
+    '#path' => '<front>',
+    '#options' => array(
+      'attributes' => array(
+        'title' => t('Home'),
+      ),
+      'html' => TRUE,
+    ),
+  );
+
+  $vars['logo_footer'] = array(
     '#theme' => 'image',
-    '#path' => drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png',
+    '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-footer.png',
     '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
   );
+
+  $vars['logo_footer_link'] = array(
+    '#theme' => 'link',
+    '#text' => drupal_render($vars['logo_footer']),
+    '#path' => '<front>',
+    '#options' => array(
+      'attributes' => array(
+        'title' => t('Home'),
+      ),
+      'html' => TRUE,
+    ),
+  );
+
 
   switch (arg(0)) {
     case 'reservation':
     case 'email':
-      $variables['theme_hook_suggestions'][] = 'page__overlay';
+      $vars['theme_hook_suggestions'][] = 'page__overlay';
       break;
 
     case 'vejviser':
-      $variables['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
-      $variables['page']['content']['#suffix'] = '</div></div>';
-      drupal_alter('vejviser_page_content', $variables['page']['content']);
+      $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
+      $vars['page']['content']['#suffix'] = '</div></div>';
+      drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
 
-  _bibdk_theme_create_user_sidebar($variables);
-
-  // Create span# class for the content region
-  if (!empty($variables['page']['sidebar'])) {
-    $variables['content_span'] = "span19";
-  }
-  else {
-    $variables['content_span'] = "span24";
-  }
 }
 
 /**
  * Implements template_process_field
  */
-function bibdk_theme_process_field(&$variables) {
+function bibdk_theme_process_field(&$vars) {
   //Make field labels translatable the right way!
-  $variables['label'] = isset($variables['label']) ? t($variables['label']) : NULL;
+  $vars['label'] = isset($vars['label']) ? t($vars['label']) : NULL;
 }
 
 /**
  * Implements template_process_page().
  */
-function bibdk_theme_process_page(&$variables) {
+function bibdk_theme_process_page(&$vars) {
   if (arg(0) == 'search') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
   if (arg(0) == 'bibdk_frontpage') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
   if (arg(0) == 'node' && arg(1) == '') {
-    unset($variables['title']);
+    unset($vars['title']);
   }
 }
 
@@ -192,17 +216,30 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
     case 'ding_wayf_accept_form':
+    case 'user_register_form':
       _wrap_in_element($form);
       break;
     case 'bibdk_cart_get_form':
       _alter_bibdk_cart_form($form);
       break;
     case 'bibdk_openuserstatus_form':
+      drupal_set_title(t('Userstatus'));
       _alter_openuserstatus_tables($form);
       break;
     case 'bibdk_favourite_user_form_fields':
       _alter_bibdk_favourite_user_form_fields($form);
       break;
+    case 'bibdk_usersettings_user_settings_form':
+      drupal_set_title('Settings');
+      _wrap_in_element($form);
+      break;
+    case 'bibdk_favourite_get_favourites_form':
+      drupal_set_title(t('Favourites'));
+      break;
+    case 'bibdk_mypage_form':
+      drupal_set_title(t('My page'));
+      break;
+
   }
 }
 
@@ -262,8 +299,6 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
 
 function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
   $form['#theme'] = 'bibdk_user_pass_reset';
-  // dpm(menu_build_tree('user-menu'));
-  // http://api.drupal.org/api/drupal/includes!menu.inc/group/menu/7
 }
 
 
@@ -280,7 +315,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 
   switch($page_id){
     case 'bibdk_frontpage':
-      _break_into_columns_expand('expand', 'sprog', 'term_language', 3, $form);
+      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 3, $form);
       break;
     case 'bibdk_frontpage/bog':
     case 'bibdk_frontpage/net':
@@ -290,7 +325,6 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
     case 'bibdk_frontpage/film':
       _break_into_columns_expand('main', 'nationalitet', 'term_nationality', 4, $form);
       _break_into_columns_expand('main', 'genre, type', 'term_genre', 5, $form);
-      //_break_into_columns_expand('expand', 'materialetype', 'term_type', 2, $form);
       break;
     case 'bibdk_frontpage/spil':
       _break_into_columns_expand('main', 'platform', 'term_type', 2, $form);
@@ -310,9 +344,6 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   }
   if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
-    /*if (isset($slice['#tree'])) {
-      unset($slice['#tree']);
-    }*/
     unset($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id]);
 
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
@@ -425,11 +456,11 @@ function _alter_bibdk_cart_form(&$form) {
 
 /** \brief Theme links given from agency
  *
- * @param array $variables
+ * @param array $vars
  * @return string (html unordered list)
  */
-function bibdk_theme_ting_agency_tools($variables) {
-  $branch = $variables['branch'];
+function bibdk_theme_ting_agency_tools($vars) {
+  $branch = $vars['branch'];
   if (empty($branch)) {
     return;
   }
@@ -448,11 +479,11 @@ function bibdk_theme_ting_agency_tools($variables) {
 /**
  * Overrides them_menu_link in order to add counter span to the cart menu item
  *
- * @param array $variables
+ * @param array $vars
  * @return string
  */
-function bibdk_theme_menu_link(array$variables) {
-  $element = $variables['element'];
+function bibdk_theme_menu_link(array$vars) {
+  $element = $vars['element'];
   $sub_menu = '';
 
   if ($element['#below']) {
@@ -484,39 +515,16 @@ function bibdk_theme_preprocess_links(&$links){
   }
 }
 
-
-/** \brief set sidebar block for user pages
+/**
+ * Implements theme_links__locale_block().
  *
- * @global type $user
- * @param type $variables
+ * Remove active language from language switcher
  */
-function _bibdk_theme_create_user_sidebar(&$variables) {
-  /*   * **** SIDEBAR ***** */
-  // only set sidebar on user pages
-  if (strpos(current_path(), 'user') !== 0) {
-    unset($variables['page']['sidebar']);
-  }
-  else if (strpos(current_path(), 'user/reset') === 0) {
-    $tree = menu_build_tree('user-menu');
-    $data = array_shift($tree);
-    foreach ($data['below'] as $link) {
-      $item['#theme'] = 'menu_local_task';
-      $item['#link'] = $link['link'];
-      $user_menu[] = $item;
-    }
-    $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $user_menu;
-  }
-  else {
-    global $user;
-    if (!$user->uid && isset($variables['tabs']['#primary'])) {
-      $variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'] = $variables['tabs']['#primary'];
-    }
-    else {
-      if (isset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary'])) {
-        unset($variables['page']['sidebar']['bibdk_frontend_bibdk_tabs']['#primary']);
-      }
-    }
-  }
+function bibdk_theme_links__locale_block($vars) {
+  global $language;
+  unset($vars['links'][$language->language]);
+  unset($vars['theme_hook_suggestion']);
+  return theme('links', $vars);
 }
 
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
@@ -525,10 +533,10 @@ function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   return $variables;
 }
 
-function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
+function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
 
-  $variables['secondary_actions'] = array();
-  if ($actions = $variables['actions']){
+  $vars['secondary_actions'] = array();
+  if ($actions = $vars['actions']){
     foreach($actions as $key => $action){
       switch ($key){
         case 'reservation' :
@@ -536,21 +544,21 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$variables) {
           $actions[$key]['#suffix'] = '</div>';
           break;
         case 'linkme' :
-          $variables['secondary_actions'][$key] = $action;
+          $vars['secondary_actions'][$key] = $action;
           unset($actions[$key]);
           break;
         }
       }
 
-  $variables['actions'] = $actions;
+  $vars['actions'] = $actions;
   }
 }
 
 /**
  * Override theme function for a CAPTCHA element.
  */
-function bibdk_theme_captcha($variables) {
-  $element = $variables['element'];
+function bibdk_theme_captcha($vars) {
+  $element = $vars['element'];
   if (!empty($element['#description']) && isset($element['captcha_widgets'])) {
     $element['captcha_widgets']['captcha_response']['#description'] = FALSE;
     $fieldset = array(
@@ -572,4 +580,26 @@ function bibdk_theme_preprocess_link(&$links){
     $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
   }
 
+}
+
+
+
+/**
+ * theme_status_messages().
+ *
+ * Return HTML for status messages.
+ */
+function bibdk_theme_status_messages($vars) {
+  $display = $vars['display'];
+  $output = '';
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    foreach ($messages as $message) {
+      $output .= "<div class=\"message message--$type\">";
+      $output .= $message;
+      $output .= "</div>";
+    }
+  }
+
+  return $output;
 }
