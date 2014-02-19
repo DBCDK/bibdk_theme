@@ -309,19 +309,19 @@ h3.library-list-header{
 //
 // Settings box heights
 //
-.widget-height-1 {
+.widget-height-1 .inner {
   height: 100px;
 }
 
-.widget-height-2 {
+.widget-height-2 .inner {
   height: 210px;
 }
 
-.widget-height-3 {
+.widget-height-3 .inner {
   height: 320px;
 }
 
-.widget-height-4 {
+.widget-height-4 .inner {
   height: 430px;
 }
 
@@ -345,12 +345,12 @@ left:-10px;
 // Common widget styling
 //
 .widget, .article-widget{
-  position: relative;
   margin-bottom: 10px;
   @include transition(background-color 0.3s);
 
   .inner {
     padding: 15px;
+    box-sizing: border-box;
   }
   footer {
     position: absolute;
@@ -369,7 +369,7 @@ left:-10px;
 //
 // Dark grey widget
 //
-.widget-dark-grey {
+.widget-dark-grey .inner {
   background: $grey-2;
   color: $white;
   font-size: 0.91666em;
@@ -405,7 +405,7 @@ left:-10px;
 //
 // Light grey widget
 //
-.widget-light-grey {
+.widget-light-grey .inner{
   background: $grey-6;
   color: $black;
 
@@ -432,7 +432,7 @@ left:-10px;
 //
 // Custom Biblioteksvagt widget
 //
-.widget-biblioteksvagt {
+.widget-biblioteksvagt .inner {
   background: #217F9B; // FIX
   color: $white;
   .field-title {
@@ -483,6 +483,7 @@ left:-10px;
     bottom: 0;
     left: 0;
     right: 0;
+    margin: 0 7px;
   }
 
 }
