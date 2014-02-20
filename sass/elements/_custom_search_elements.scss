@@ -2,6 +2,8 @@
 // Bib.dk search pages
 // =============================================================================
 
+
+
 div#search-advanced-toggle {
   text-align: right;
   a {
@@ -57,9 +59,11 @@ div#search-advanced-panel {
 
   input {
     margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
   }
 
-  input.form-checkbox {
+  input.form-checkbox, input.form-radio {
     height: 20px;
     line-height: 20px;
     margin-top: 1px;
@@ -200,7 +204,7 @@ div#search-advanced-panel {
           background-image: url(../img/icons/blue-minus.png);
         }
       }
-      div.form-type-checkbox {
+      div.form-type-checkbox, div.form-type-radio {
         float: none;
         label {
           display: block;
