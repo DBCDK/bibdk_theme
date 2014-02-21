@@ -1,6 +1,6 @@
-/* line 792, sprites/*.png */
-.sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .themes__sublist a.nesting:after {
-  background-image: url('../img/sprites-s22e86f87af.png');
+/* line 800, sprites/*.png */
+.sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
+  background-image: url('../img/sprites-sa74e090a9b.png');
   background-repeat: no-repeat;
 }
 
@@ -5471,52 +5471,56 @@ select#edit-favouriteselector {
 #header {
   background-color: #25292c;
 }
+/* line 17, ../sass/components/global/_page-sections.scss */
+.infomedia-article #header {
+  background-color: white;
+}
 
-/* line 19, ../sass/components/global/_page-sections.scss */
+/* line 23, ../sass/components/global/_page-sections.scss */
 #search-panel {
   background-color: #e8e8e8;
 }
-/* line 24, ../sass/components/global/_page-sections.scss */
+/* line 28, ../sass/components/global/_page-sections.scss */
 .lift-columns #search-panel {
   padding-bottom: 0;
 }
 
-/* line 30, ../sass/components/global/_page-sections.scss */
+/* line 34, ../sass/components/global/_page-sections.scss */
 #messages {
   background-color: #f3f3f3;
 }
 
-/* line 37, ../sass/components/global/_page-sections.scss */
+/* line 41, ../sass/components/global/_page-sections.scss */
 #user-alerts {
   background-color: #f3f3f3;
 }
 
-/* line 44, ../sass/components/global/_page-sections.scss */
+/* line 48, ../sass/components/global/_page-sections.scss */
 #carousel {
   background-color: white;
 }
 
-/* line 51, ../sass/components/global/_page-sections.scss */
+/* line 55, ../sass/components/global/_page-sections.scss */
 #subjects {
   background-color: #f3f3f3;
 }
 
-/* line 58, ../sass/components/global/_page-sections.scss */
+/* line 62, ../sass/components/global/_page-sections.scss */
 #columns {
   background-color: white;
 }
-/* line 63, ../sass/components/global/_page-sections.scss */
+/* line 67, ../sass/components/global/_page-sections.scss */
 .lift-columns #columns {
   padding-top: 10px;
   background-color: #e8e8e8;
 }
 
-/* line 70, ../sass/components/global/_page-sections.scss */
+/* line 74, ../sass/components/global/_page-sections.scss */
 #banner {
   background-color: white;
 }
 
-/* line 77, ../sass/components/global/_page-sections.scss */
+/* line 81, ../sass/components/global/_page-sections.scss */
 #footer {
   padding: 40px 0 100px;
   padding:  2.5rem 0 6.25rem;
@@ -5549,9 +5553,10 @@ select#edit-favouriteselector {
 }
 /* line 32, ../sass/components/global/_messages.scss */
 .message--notice:after {
+  content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -688px;
+  background-position: 0 -703px;
 }
 
 /* line 36, ../sass/components/global/_messages.scss */
@@ -5560,9 +5565,10 @@ select#edit-favouriteselector {
 }
 /* line 38, ../sass/components/global/_messages.scss */
 .message--status:after {
+  content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -712px;
+  background-position: 0 -727px;
 }
 
 /* line 42, ../sass/components/global/_messages.scss */
@@ -5571,9 +5577,10 @@ select#edit-favouriteselector {
 }
 /* line 44, ../sass/components/global/_messages.scss */
 .message--warning:after {
+  content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -736px;
+  background-position: 0 -751px;
 }
 
 /* line 48, ../sass/components/global/_messages.scss */
@@ -5582,9 +5589,10 @@ select#edit-favouriteselector {
 }
 /* line 50, ../sass/components/global/_messages.scss */
 .message--error:after {
+  content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -640px;
+  background-position: 0 -655px;
 }
 
 /* line 6, ../sass/components/global/_user-alerts.scss */
@@ -5615,9 +5623,10 @@ select#edit-favouriteselector {
 }
 /* line 33, ../sass/components/global/_user-alerts.scss */
 .user-alert .user-alert-close span.user-alert-close-image {
+  content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -640px;
+  background-position: 0 -655px;
   background-position: -810px 0;
   height: 24px;
   width: 24px;
@@ -5941,9 +5950,10 @@ select#edit-favouriteselector {
 .rs-carousel-header-select .dropdown-toggle:after {
   content: "";
   display: block;
+  content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -388px;
+  background-position: 0 -433px;
   position: absolute;
   right: 10px;
   top: 0;
@@ -5952,9 +5962,10 @@ select#edit-favouriteselector {
 }
 /* line 82, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-toggle.toggled:after {
+  content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -148px;
+  background-position: -15px -553px;
 }
 /* line 89, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu {
@@ -6004,9 +6015,10 @@ select#edit-favouriteselector {
 }
 /* line 136, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after {
+  content: "";
   height: 36px;
   width: 18px;
-  background-position: 0 -604px;
+  background-position: -14px -602px;
 }
 
 /* line 141, ../sass/components/_rs-carousel.scss */
@@ -6015,9 +6027,10 @@ select#edit-favouriteselector {
 }
 /* line 143, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next:after {
+  content: "";
   height: 36px;
   width: 18px;
-  background-position: -18px -604px;
+  background-position: 0 -955px;
 }
 
 /* line 154, ../sass/components/_rs-carousel.scss */
@@ -6362,11 +6375,11 @@ select#edit-favouriteselector {
 }
 /* line 33, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .dropdown-toggle:after {
+  content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -388px;
+  background-position: 0 -433px;
   position: absolute;
-  content: '';
   display: block;
   margin-top: auto;
   margin-bottom: auto;
@@ -6376,9 +6389,10 @@ select#edit-favouriteselector {
 }
 /* line 38, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .dropdown-toggle.toggled:after {
+  content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -148px;
+  background-position: -15px -553px;
 }
 
 /* line 47, ../sass/components/_works-controls.scss */
@@ -6395,7 +6409,6 @@ select#edit-favouriteselector {
 #ting-openformat-full-view-button-closed:after,
 #ting-openformat-full-view-button-expanded:after {
   position: absolute;
-  content: '';
   display: block;
   margin-top: auto;
   margin-bottom: auto;
@@ -6406,12 +6419,14 @@ select#edit-favouriteselector {
 
 /* line 71, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed:after {
+  content: "";
   height: 14px;
   width: 15px;
   background-position: -15px -14px;
 }
 /* line 74, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed.inactive:after {
+  content: "";
   height: 14px;
   width: 15px;
   background-position: 0 0;
@@ -6419,12 +6434,14 @@ select#edit-favouriteselector {
 
 /* line 82, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-expanded:after {
+  content: "";
   height: 14px;
   width: 15px;
   background-position: 0 -14px;
 }
 /* line 85, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-expanded.inactive:after {
+  content: "";
   height: 14px;
   width: 15px;
   background-position: -15px 0;
@@ -6433,6 +6450,134 @@ select#edit-favouriteselector {
 /* line 146, ../sass/components/_works-controls.scss */
 .pane-ting-openformat-feeds {
   float: right;
+}
+
+/* line 5, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content {
+  height: 100%;
+  position: relative;
+}
+/* line 11, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .element-wrapper {
+  margin-bottom: 0;
+}
+/* line 14, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .bibdk-provider-form-inputs {
+  margin-bottom: 55px;
+}
+/* line 17, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content #bibdkcaptcha-controls {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* line 22, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content #user-login .form-actions .form-item-remember-me {
+  margin-top: 5px;
+}
+/* line 25, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .item-list {
+  margin-top: -40px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+/* line 29, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .item-list ul {
+  display: inline;
+}
+/* line 31, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .item-list ul li {
+  margin: 2px 15px 0 0;
+  float: left;
+  padding: 0;
+}
+/* line 35, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .item-list ul li a {
+  font-size: 1em;
+}
+/* line 41, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .form-item-captcha-response {
+  float: right;
+}
+/* line 44, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .form-item {
+  padding-bottom: 10px;
+}
+/* line 47, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .form-item label {
+  font-size: 1em;
+  width: 100%;
+}
+/* line 52, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content .messages {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+/* line 56, ../sass/components/_ctools-modal.scss */
+.ctools-modal-content tbody {
+  border: none;
+}
+
+/* line 68, ../sass/components/_ctools-modal.scss */
+.modal-header {
+  padding: 10px;
+  padding: 0.625rem;
+  background-color: #178bad;
+  position: relative;
+}
+
+/* line 74, ../sass/components/_ctools-modal.scss */
+.modal-title {
+  color: white;
+  font-size: 18px;
+}
+
+/* line 79, ../sass/components/_ctools-modal.scss */
+.modal-close {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-position: -15px -253px;
+  position: absolute;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+}
+
+/* line 86, ../sass/components/_ctools-modal.scss */
+.modal-scroll {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* line 91, ../sass/components/_ctools-modal.scss */
+.modal-content {
+  position: relative;
+  background-color: white;
+}
+
+/* line 96, ../sass/components/_ctools-modal.scss */
+.popups-container {
+  overflow: hidden;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* line 102, ../sass/components/_ctools-modal.scss */
+.modal-throbber-wrapper img {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* line 5, ../sass/elements/_icons.scss */
@@ -9658,9 +9803,10 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 /* line 120, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a.nesting:after {
   content: '';
+  content: "";
   height: 9px;
   width: 9px;
-  background-position: -24px -640px;
+  background-position: 0 -638px;
   position: relative;
   left: 0.5em;
   display: inline-block;
@@ -9765,7 +9911,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 
 /* line 18, ../sass/_extra.scss */
 .hide-text, .rs-carousel-action-prev,
-.rs-carousel-action-next {
+.rs-carousel-action-next, .modal-close {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;

@@ -13,6 +13,10 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-1;
+
+  .infomedia-article & {
+    background-color: $white;
+  }
 }
 
 // Search panel
