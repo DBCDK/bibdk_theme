@@ -6070,7 +6070,7 @@ select#edit-favouriteselector {
 /* line 5, ../sass/components/_search-block-form.scss */
 #search-block-wrapper {
   background-color: #f3f3f3;
-  padding: 30px 30px 20px;
+  padding: 20px 20px 15px;
   border: solid 1px #cfcfcf;
 }
 /* line 10, ../sass/components/_search-block-form.scss */
@@ -6108,12 +6108,12 @@ select#edit-favouriteselector {
 
 /* line 48, ../sass/components/_search-block-form.scss */
 #search-advanced-toggle {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* line 52, ../sass/components/_search-block-form.scss */
 #search-advanced {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* line 62, ../sass/components/_search-block-form.scss */
