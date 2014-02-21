@@ -3,6 +3,7 @@
 // $filename is the filename without .png
 // =============================================================================
 @mixin add-sprite($filename) {
+  content: "";
   height: sprites-sprite-height($filename);
   width: sprites-sprite-width($filename);
   @include sprites-sprite($filename);
