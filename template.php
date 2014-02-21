@@ -230,7 +230,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_bibdk_favourite_user_form_fields($form);
       break;
     case 'bibdk_usersettings_user_settings_form':
-      drupal_set_title('Settings');
+      drupal_set_title(t('Settings'));
       _wrap_in_element($form);
       break;
     case 'bibdk_favourite_get_favourites_form':
@@ -285,8 +285,13 @@ function _wrap_in_element(&$form) {
 }
 
 function _alter_user_login(&$form, &$form_state, $form_id) {
-  unset($form['inputs']['name']['#description']);
-  unset($form['inputs']['pass']['#description']);
+  // Add placeholders
+  $form['name']['#attributes']['placeholder'] = t('Username');
+  $form['pass']['#attributes']['placeholder'] = t('Password');
+
+  // Remove descriptions
+  unset($form['name']['#description']);
+  unset($form['pass']['#description']);
 
   // move persistent login checkbox to actions
   if (isset($form['persistent_login'])) {
