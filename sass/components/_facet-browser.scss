@@ -5,16 +5,10 @@
 .lift-columns .panel-left {
   border: $border-default;
   border-top: none;
-  @include rem('padding', 21px 10px 10px 10px);
-  margin-top: -21px;
+  @include rem('padding', 11px 10px 10px 10px);
+  @include rem('margin-top', -11px);
   background-color: $grey-7;
 }
-
-.lift-columns #columns {
-  padding-top: 0;
-  background-color: $grey-6;
-}
-
 
 .pane-ting-openformat-search-text {
   border: $border-default;
@@ -26,36 +20,43 @@
   @include rem('font-size', 16px);
   font-weight: bold;
   color: $grey-3;
-  margin-bottom: 10px;
+  @include rem('margin-bottom', 10px);
 }
 
 .pane-ding-facetbrowser {
 
   .pane-title {
     @include rem('font-size', 20px);
-    margin-bottom: $spacing;
+    @include rem('margin-bottom', 15px);
   }
 
-
-
   .form-wrapper {
-    padding: 0 0 $spacing 0;
+    @include rem('padding', 0 0 10px 0);
+    @include rem('margin-bottom', 10px);
     border-bottom: $border-default;
-    margin-bottom: 20px;
 
     &:last-child {
-      border: none;
       margin-bottom: 0;
+      border: none;
     }
   }
 
+  legend {
+    padding: 0;
+    @include rem('margin-bottom', 5px);
+  }
+
   .fieldset-legend {
-    padding: 0 0 10px;
+    padding: 0;
   }
 
   .expand {
-    margin-top: 5px;
+    @include rem('margin-top', 5px);
     cursor: pointer;
+  }
+
+  label {
+    @include rem('font-size', 12px);
   }
 
   .form-item {
@@ -66,6 +67,7 @@
     a {
       color: $grey-3;
     }
+
   }
 
 }

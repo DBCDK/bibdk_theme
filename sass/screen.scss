@@ -8,6 +8,7 @@
 @import "compass";
 
 // Generate sprite (http://compass-style.org/help/tutorials/spriting/)
+$sprites-layout: smart;
 @import "sprites/*.png";
 
 // Import global settings and functions
@@ -22,6 +23,7 @@
 @import "utilities/rem";
 @import "utilities/triangle";
 @import "utilities/grid";
+@import "utilities/align";
 
 
 
@@ -90,6 +92,7 @@
 @import "components/search-block-form";
 @import "components/tabs";
 @import "components/facet-browser";
+@import "components/works-controls";
 
 
 

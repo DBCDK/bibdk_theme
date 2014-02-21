@@ -20,6 +20,10 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-6;
+
+  .lift-columns & {
+    padding-bottom: 0;
+  }
 }
 
 // Messages
@@ -55,6 +59,11 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $white;
+
+  .lift-columns & {
+    padding-top: 10px;
+    background-color: $grey-6;
+  }
 }
 
 // Banner

@@ -13,17 +13,19 @@
     </div>
   </div>
   <div class="small-18 columns">
-    <section class="works">
-      <div class="works-controls clearfix">
-        <?php print $content['works_controls_top']; ?>
-      </div>
-      <div>
-        <?php print $content['works']; ?>
-      </div>
-      <div class="works-controls clearfix">
-        <?php print $content['works_controls_bottom']; ?>
-      </div>
-    </section>
+    <div class="panel panel-middle">
+      <section class="works">
+        <div class="works-controls clearfix">
+          <?php print $content['works_controls_top']; ?>
+        </div>
+        <div>
+          <?php print $content['works']; ?>
+        </div>
+        <div class="works-controls clearfix">
+          <?php print $content['works_controls_bottom']; ?>
+        </div>
+      </section>
+    </div>
   </div>
 </div>
 
