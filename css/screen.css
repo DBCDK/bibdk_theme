@@ -7995,19 +7995,16 @@ article.widget-biblioteksvagt {
 
 /* line 353, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner {
-  background: #217F9B;
+  background: #178bad;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: white;
 }
-/* line 356, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 358, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .inner {
   padding: 0px;
 }
-/* line 358, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
-.widget-biblioteksvagt .inner .inner .field-title {
-  padding: 8px;
-  background: none repeat scroll 0 0 #217F9B;
-}
-/* line 363, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 361, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-title {
   margin: 0 7px;
   padding: 0px 7px;
@@ -8018,21 +8015,21 @@ article.widget-biblioteksvagt {
   z-index: 3;
   background: #147996;
 }
-/* line 372, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 370, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-title h3 {
   font-size: 1.1666em;
   font-weight: bold;
   line-height: 2;
 }
-/* line 376, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 374, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-title h3 a {
   color: white;
 }
-/* line 381, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 379, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-body {
   display: none;
 }
-/* line 384, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 382, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-vagt-image {
   position: absolute;
   text-align: center;
@@ -8041,8 +8038,9 @@ article.widget-biblioteksvagt {
   left: 0;
   right: 0;
   max-width: 100%;
+  display: none;
 }
-/* line 393, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 392, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner footer {
   top: 0px;
   bottom: 0px;
@@ -8050,7 +8048,7 @@ article.widget-biblioteksvagt {
   right: 0px;
   z-index: 3;
 }
-/* line 400, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 399, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .widget-biblioteksvagt .inner .field-link {
   z-index: 2;
   background: #147996;
@@ -8062,19 +8060,19 @@ article.widget-biblioteksvagt {
   margin: 0 7px;
 }
 
-/* line 420, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 419, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu,
 .pane-bibdk-help-bibdk-help-popup-menu-eng,
 .pane-bibdk-help {
   padding: 20px;
 }
-/* line 422, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 421, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu .menu .menu,
 .pane-bibdk-help-bibdk-help-popup-menu-eng .menu .menu,
 .pane-bibdk-help .menu .menu {
   margin-bottom: 10px;
 }
-/* line 425, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 424, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu li a,
 .pane-bibdk-help-bibdk-help-popup-menu-eng li a,
 .pane-bibdk-help li a {
@@ -8085,14 +8083,14 @@ article.widget-biblioteksvagt {
   padding: 10px 20px;
   margin-bottom: 1px;
 }
-/* line 433, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 432, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-bibdk-help-bibdk-help-popup-menu li li a,
 .pane-bibdk-help-bibdk-help-popup-menu-eng li li a,
 .pane-bibdk-help li li a {
   margin-left: 10px;
 }
 
-/* line 444, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 443, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .linkme-wrapper, .infomedia-wrapper {
   position: absolute;
   width: 30em;
@@ -8101,7 +8099,7 @@ article.widget-biblioteksvagt {
   min-height: 3.5em;
 }
 
-/* line 456, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 455, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .popover {
   position: absolute;
   width: 300px;
@@ -8112,18 +8110,18 @@ article.widget-biblioteksvagt {
   -moz-box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
   box-shadow: 0 3px 10px rgba(136, 136, 136, 0.75);
 }
-/* line 464, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 463, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .popover ul {
   list-style: square;
   margin-left: 1em;
 }
-/* line 469, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 468, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .popover .form-item {
   width: 25em;
   float: left;
   padding: 10px;
 }
-/* line 474, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 473, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .popover .user-msg {
   min-height: 3.5em;
   width: 250px;
@@ -8131,7 +8129,7 @@ article.widget-biblioteksvagt {
   margin: 10px;
   float: left;
 }
-/* line 481, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 480, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .popover .close {
   height: 16px;
   width: 16px;
@@ -8139,30 +8137,30 @@ article.widget-biblioteksvagt {
   float: right;
 }
 
-/* line 489, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 488, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 div#search-advanced-panel .popover.element-wrapper {
   background-color: white;
 }
 
-/* line 498, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 497, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .count-localisations {
   margin: 0 0 1em 0;
   font-weight: bold;
 }
 
-/* line 503, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 502, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 p.note-localisations {
   margin: 0 0 0.5em 0;
 }
 
-/* line 507, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 506, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency {
   border-top: 1px solid #6c7379;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-/* line 515, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 514, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency p,
 .localisation-agency .holding-status,
 .localisation-agency .holding-status-load {
@@ -8170,40 +8168,40 @@ p.note-localisations {
   clear: both;
 }
 
-/* line 520, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 519, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency .holding-status-load.ajax-progress {
   display: block;
 }
 
-/* line 525, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 524, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency p.city,
 .localisation-agency p.postalCode {
   float: left;
   clear: none;
 }
 
-/* line 530, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 529, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency p.postalCode {
   margin: 0 0.3em 0.2em 0;
 }
 
-/* line 534, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 533, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .localisation-agency p.postalCode {
   margin: 0 0.3em 0.2em 0;
 }
 
-/* line 538, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 537, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .lookup-url + span {
   margin: 0 0 0 1em;
 }
 
 /* LIGHTSIGNAL */
-/* line 543, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 542, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .holding-status {
   padding: 0;
   border: none;
 }
-/* line 546, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 545, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .holding-status .status {
   width: 15px;
   height: 15px;
@@ -8216,55 +8214,55 @@ p.note-localisations {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 554, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 553, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .holding-status .red {
   background-color: #ff0000;
 }
-/* line 557, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 556, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .holding-status .green {
   background-color: #008000;
 }
-/* line 560, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 559, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .holding-status .yellow {
   background-color: #ffff00;
 }
 
-/* line 569, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 568, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage {
   color: #51565a;
 }
-/* line 572, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 571, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper {
   border-style: none;
 }
-/* line 573, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 572, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element {
   border-style: none;
 }
-/* line 577, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 576, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper {
   border: 10px solid #EBEBEB;
 }
-/* line 578, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 577, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-user-edit-bibdk-mypage .element-wrapper .element-wrapper .element {
   border-style: solid solid none;
 }
 
-/* line 586, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 585, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-link {
   text-align: right;
 }
-/* line 588, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 587, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-link a {
   margin: 0 10px;
 }
 
-/* line 593, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 592, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper {
   width: 46%;
   float: left;
 }
-/* line 596, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 595, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.fieldset-wrapper {
   border-color: #DCDCDC #DCDCDC;
   border-image: none;
@@ -8275,7 +8273,7 @@ p.note-localisations {
   max-height: 218px;
   overflow: hidden;
 }
-/* line 606, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 605, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper h2 {
   padding: 0 16px;
   height: 51px;
@@ -8287,98 +8285,98 @@ p.note-localisations {
   text-transform: uppercase;
   font-family: "Dosis", sans-serif;
 }
-/* line 617, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 616, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div {
   padding: 0 16px;
   clear: both;
   border-top: 1px solid #dddddd;
   line-height: 41px;
 }
-/* line 623, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 622, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper div.bibdk-mypage-row, .bibdk-mypage-wrapper .bibdk-mypage-row item-row {
   max-width: 310px;
   overflow: hidden;
 }
-/* line 627, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 626, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p {
   margin: 0;
   max-height: 41px;
 }
-/* line 631, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 630, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.label-row {
   float: left;
   margin-right: 10px;
   max-width: 300px;
 }
-/* line 636, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 635, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper p.value-row {
   color: #3c4043;
   float: right;
   max-width: 115px;
 }
 
-/* line 643, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 642, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper:nth-child(even) {
   margin-left: 10px;
 }
 
-/* line 647, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 646, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-mypage-wrapper.form-wrapper {
   padding: 0;
 }
 
-/* line 652, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 651, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.label-row {
   float: left;
   width: 145px;
   margin-right: 0px;
 }
-/* line 657, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 656, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #edit-bibdk-mypage p.value-row {
   float: left;
   width: 130px;
 }
 
-/* line 667, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 666, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields {
   width: 500px;
 }
-/* line 669, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 668, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#edit-submit {
   width: 70px;
   margin-left: 60px;
   margin-top: 10px;
 }
-/* line 674, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 673, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields input#button-close-popup {
   margin-left: 30px;
   margin-top: 10px;
 }
-/* line 678, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 677, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper {
   border-width: 0px;
 }
-/* line 681, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 680, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields fieldset#edit-buttons .fieldset-wrapper {
   text-align: right;
 }
-/* line 684, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 683, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .form-wrapper .form-submit {
   margin-bottom: 20px;
   margin-right: 70px;
   margin-top: 10px;
 }
-/* line 689, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 688, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper {
   margin-right: 30px;
   margin-bottom: 20px;
 }
-/* line 692, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 691, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #bibdk-favourite-user-form-fields .close-link-wrapper a {
   color: white;
 }
 
-/* line 702, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 701, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .kravlenisse {
   background-image: url("../img/kravlenisse.png");
   z-index: 200;
@@ -8390,114 +8388,114 @@ p.note-localisations {
   left: 300px;
 }
 
-/* line 717, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 716, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .cart-actions {
   float: left;
   padding-right: 20px;
 }
 
-/* line 723, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 722, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .page-email input {
   margin: 20px;
 }
 
-/* line 727, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 726, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .item-list .cart-actions ul li {
   margin: 0 0 0 0;
   padding: 0;
 }
 
-/* line 736, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 735, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .search-history-table {
   width: 100%;
 }
-/* line 738, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 737, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .search-history-table input {
   border: none;
 }
 
-/* line 743, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 742, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .search-action-list {
   padding: 0px 20px;
   border: 0;
 }
-/* line 746, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 745, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .search-action-list a, .search-action-list input {
   margin-right: 20px;
 }
 
-/* line 755, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 754, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 764, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 763, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .user-pass-reset-message {
   float: left;
   padding-left: 20px;
   width: 568px;
 }
 
-/* line 770, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 769, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .user-pass-reset-action {
   float: left;
 }
-/* line 772, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 771, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper.form-actions {
   padding: 1em 10px;
 }
-/* line 775, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 774, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .user-pass-reset-action .form-wrapper {
   border-bottom-width: 0px;
 }
 
-/* line 785, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 784, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus .form-item {
   padding: 5px;
 }
-/* line 789, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 788, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item.form-type-select {
   display: inline;
   padding: 0;
 }
-/* line 794, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 793, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus div.form-item:after {
   display: none;
 }
-/* line 798, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 797, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus select {
   font-size: 12px;
 }
-/* line 802, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 801, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus input[type="submit"] {
   margin: 10px 5px 0 0;
 }
-/* line 805, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 804, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus .form-item-select {
   float: left;
 }
-/* line 808, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 807, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .openuserstatus .helptext {
   top: 0;
   margin: 0;
   position: inherit;
 }
 
-/* line 820, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 819, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo {
   background: none repeat scroll 0 0 #ffffff;
 }
-/* line 822, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 821, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element-wrapper {
   border: 0px solid #ffffff;
   margin-bottom: 0px;
 }
-/* line 826, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 825, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo .element {
   border-width: 0;
 }
-/* line 829, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 828, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 body.page-ting-moreinfo img {
   position: absolute;
   margin: auto;
@@ -8507,31 +8505,31 @@ body.page-ting-moreinfo img {
   right: 0;
 }
 
-/* line 839, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 838, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #lightboxFrame {
   border-width: 0;
 }
 
-/* line 847, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 846, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-usersettings {
   padding-bottom: 20px;
 }
-/* line 849, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 848, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-usersettings .form-item {
   padding: 5px 0;
 }
-/* line 852, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 851, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-usersettings input[type=submit] {
   display: block;
   float: right;
 }
 
-/* line 863, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 862, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .manifestation .primary-actions a {
   display: block;
 }
 
-/* line 871, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 870, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more {
   text-align: center;
   padding: 8px;
@@ -8545,12 +8543,12 @@ body.page-ting-moreinfo img {
   border-style: solid;
   border-width: 1px;
 }
-/* line 883, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 882, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more #link {
   font-size: 14px;
 }
 
-/* line 888, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 887, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .load_more_res_splitter {
   background-color: #6c7379;
   height: 2px;
@@ -8558,24 +8556,24 @@ body.page-ting-moreinfo img {
   margin-bottom: 10px;
 }
 
-/* line 898, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 897, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .sbkopi-description-container {
   width: 50%;
   background-color: #f3f3f3;
 }
 
-/* line 903, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 902, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
 }
 
-/* line 913, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 912, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-vejviser-help-text {
   clear: both;
   padding-left: 20px;
 }
 
-/* line 922, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 921, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .alert {
   background: url(../img/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
@@ -8583,44 +8581,44 @@ body.page-ting-moreinfo img {
   height: 22px;
 }
 
-/* line 929, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 928, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .blue-alert {
   background-position: 0 0;
 }
 
-/* line 933, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 932, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .green-alert {
   background-position: -18px 0;
 }
 
-/* line 937, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 936, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .yellow-alert {
   background-position: -36px 0;
 }
 
-/* line 941, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 940, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .red-alert {
   background-position: -54px 0;
 }
 
-/* line 945, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 944, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .no-alert {
   background-image: none;
 }
 
-/* line 952, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 951, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-article-review {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 }
-/* line 957, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 956, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .bibdk-article-review .openformat-info {
   float: left;
   clear: left;
   width: 280px;
 }
 
-/* line 964, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 963, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 span.star {
   display: inline-block;
   background: url("../img/rating-stars.png");
@@ -8628,28 +8626,28 @@ span.star {
   height: 17px;
 }
 
-/* line 971, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 970, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 span.star.positive {
   color: transparent;
   background-position: 0 17px;
 }
 
-/* line 977, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 976, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
 
-/* line 985, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 984, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
-/* line 988, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 987, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block .ding-wayf-logoninfo {
   vertical-align: sub;
 }
 
-/* line 993, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
+/* line 992, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
 #user-login .form-actions {
   margin-top: -5.999em;
 }

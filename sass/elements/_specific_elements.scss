@@ -351,17 +351,15 @@ left:-10px;
 // Custom Biblioteksvagt widget
 //
 .widget-biblioteksvagt .inner {
-  background: #217F9B; // FIX
+  background: $blue;
+  background-repeat:no-repeat;
+  background-position: center center;
   color: $white;
   .inner {
     padding: 0px;
-    .field-title {
-      padding: 8px;
-      background: none repeat scroll 0 0 #217F9B; // FIX
-    }
   }
   .field-title {
-    margin: 0 7px;
+    margin: 0 5px;
     padding: 0px 7px;
     position: absolute;
     top: 0;
@@ -389,6 +387,7 @@ left:-10px;
     left: 0;
     right: 0;
     max-width: 100%;
+    display: none;
   }
   footer {
     top: 0px;
@@ -405,7 +404,7 @@ left:-10px;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0 7px;
+    margin: 0 5px;
   }
 }
 

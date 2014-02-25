@@ -1,7 +1,7 @@
 
   <article class="widget widget-biblioteksvagt widget-height-2 small-6 columns">
 
-    <div class="inner">
+    <div class="inner" style="background-image: url(<?php print $image_data['path']; ?>)">
 
       <div class="field-title">
         <h3><?php print $title;?></h3>
