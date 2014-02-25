@@ -7,88 +7,6 @@
 }
 
 
-// =============================================================================
-// FULL VIEW BUTTONS
-// =============================================================================
-
-.icon.full-view {
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  background: url(../img/full-short-view-icon.gif) no-repeat;
-}
-
-a {
-  .icon.full-view.closed {
-    background-position: 0 -18px;
-  }
-  .icon.full-view.expanded {
-    background-position: -17px -18px;
-  }
-}
-
-a.inactive {
-  .icon.full-view.closed {
-    background-position: 0 0;
-  }
-  .icon.full-view.expanded {
-    background-position: -17px 0;
-  }
-}
-
-.panel-separator {
-  margin: 0 10px;
-}
-
-
-// =============================================================================
-// FULL VIEW BUTTONS
-// =============================================================================
-
-.icon.full-view {
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  vertical-align: middle;
-  background: url(../img/full-short-view-icon.gif) no-repeat;
-}
-
-a {
-  .icon.full-view.closed {
-    background-position: 0 -18px;
-  }
-  .icon.full-view.expanded {
-    background-position: -17px -18px;
-  }
-}
-
-a.inactive {
-  .icon.full-view.closed {
-    background-position: 0 0;
-  }
-  .icon.full-view.expanded {
-    background-position: -17px 0;
-  }
-}
-
-.full-view-links {
-  padding: 0 10px;
-
-  a {
-    padding: 0 10px;
-  }
-
-  .ajax-progress .throbber{
-    float: right;
-    margin: 7px 0 0 5px;
-  }
-}
-
-.panel-separator {
-  margin: 0 10px;
-}
-
 
 // =============================================================================
 // Library
@@ -314,7 +232,7 @@ h3.library-list-header{
 }
 
 .widget-height-2 .inner {
-  height: 210px;
+  height: 195px;
 }
 
 .widget-height-3 .inner {
@@ -1071,13 +989,4 @@ span.star.negative{
 
 #user-login .form-actions {
    margin-top: -5.999em;
-}
-
-//**************************************************
-// feeds
-// ================================================
-div.works-controls > div.pane-ting-openformat-feeds{
-  background:none;
-  border:none;
-  float:right;
 }

@@ -3,35 +3,41 @@
 // =============================================================================
 
 .form-wrapper {
-  padding:0 20px;
-  border-bottom:solid 1px $grey-5;
+  padding: 0 20px;
+  border-bottom: solid 1px $grey-5;
 }
 .form-wrapper .form-wrapper {
-  padding:0;
-  border-bottom:none;
+  padding: 0;
+  border-bottom: none;
 }
 .form-wrapper.form-actions {
-  padding:20px;
+  padding: 20px;
 }
 .form-item {
-  padding:20px;
-  @include clearfix();
+  @extend .clearfix;
+  padding: 20px;
 }
 .form-wrapper .form-item {
-  padding:20px 0;
+  padding: 20px 0;
 }
 .form-item .form-item {
-  padding:0;
+  padding: 0;
 }
 
 .vertical-tabs .form-wrapper {
-  padding:0 20px;
+  padding: 0 20px;
 }
 .vertical-tabs .form-item {
-  padding:20px 0;
+  padding: 20px 0;
 }
-
-
+.fieldset-legend {
+  font-size: 16px;
+  display: block;
+  padding: 20px 0;
+}
+.form-item .description {
+  margin-top: 5px;
+}
 
 
 // =============================================================================
@@ -46,11 +52,7 @@ fieldset {
 .sidebar-nav .fieldset-wrapper {
   padding:0;
 }
-.fieldset-legend {
-  font-size: 16px;
-  display:block;
-  padding:20px 0;
-}
+
 
 // =============================================================================
 // a specific fieldset ? bibdk_reservation_user_parameters
@@ -87,16 +89,6 @@ label.option {
 }
 .form-type-password-confirm > label {
   margin-bottom:15px;
-}
-
-
-
-// =============================================================================
-// Descriptions
-// =============================================================================
-
-.form-item .description {
-  margin-top:5px;
 }
 
 
@@ -535,6 +527,14 @@ margin-right:0.5em;
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
+
+  &.ajax-progress {
+    display: inherit;
+  }
+
+  .throbber {
+    position: absolute;
+  }
 }
 
 .form-item-favouriteselector label {

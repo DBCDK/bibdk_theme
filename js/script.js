@@ -39,20 +39,20 @@
           input.removeClass('placeholder');
         }
       }).blur(function() {
+        var input = $(this);
+        if(input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+        }
+      }).blur().parents('form').submit(function() {
+        $(this).find('[placeholder]').each(function() {
           var input = $(this);
-          if(input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
-            input.val(input.attr('placeholder'));
-          }
-        }).blur().parents('form').submit(function() {
-          $(this).find('[placeholder]').each(function() {
-            var input = $(this);
-            if(input.val() == input.attr('placeholder')) {
-              input.val('');
+          if(input.val() == input.attr('placeholder')) {
+            input.val('');
 
-            }
-          })
-        });
+          }
+        })
+      });
 
       // Toggle dropdown menus
       $('.dropdown-toggle').once().click(function(e) {
@@ -400,10 +400,14 @@
       });
 
       // Favourite selector
-      $('.reservation-favourite-selector').change(function(e) {
+      $('.reservation-favourite-selector', context).change(function(e) {
+        /* Add throbber*/
+        $(this, context).parent().addClass('ajax-progress');
+        $(this, context).parent().append('<span class="throbber">&nbsp;</span>');
+
         var selector = $('.hidden_selector');
         selector.val(1);
-        $(this).closest('form').submit();
+        $(selector).closest('form').submit();
       });
 
       // ****************************  popovers **************************** //
@@ -446,20 +450,6 @@
           $(this).addClass('kravlenisse');
         });
       }
-
-      // ****************************  CURSOR POSITIONS **************************** //
-      // Default in search block form - unless it's a search result.
-      $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-      // Helpdesk popup
-      $('.page-overlay-helpdesk').find('input[type=text], textarea').filter(':visible:first').focus();
-      // User login form
-      $('form#user-login').find('input[type=text], textarea').filter(':visible:first').focus();
-      // Create new account
-      $('form#user-register-form').find('input[type=text], textarea').filter(':visible:first').focus();
-      // Request new password
-      $('form#user-pass').find('input[type=text], textarea').filter(':visible:first').focus();
-      // User help popup
-      $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
 
       // ****************************  popovers **************************** //
       // SEARCH SORT DROPDOWN
@@ -537,15 +527,15 @@
       });
 
       // *************************** SHEET MUSIC *********************************************** //
-      $('#search-advanced .form-type-checkbox input').change(function () {
-          // clear other checkboxes if top-level default is selected.
-          if ($(this).hasClass('default-value') && $(this).is(':checked') && $(this).val()=='mu') {
-              $(this).closest(".bibdk-custom-search-element").find("input").each(function (i) {
-                  if (!$(this).hasClass('default-value')) {
-                      $(this).attr('checked', false);
-                  }
-              })
-          }
+      $('#search-advanced .form-type-checkbox input').change(function() {
+        // clear other checkboxes if top-level default is selected.
+        if($(this).hasClass('default-value') && $(this).is(':checked') && $(this).val() == 'mu') {
+          $(this).closest(".bibdk-custom-search-element").find("input").each(function(i) {
+            if(!$(this).hasClass('default-value')) {
+              $(this).attr('checked', false);
+            }
+          })
+        }
       });
 
       // NO CODE AFTER THIS!

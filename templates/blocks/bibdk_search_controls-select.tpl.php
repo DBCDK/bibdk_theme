@@ -28,7 +28,6 @@ if (count($action) > 1){
 
 <a class="works-control works-sort dropdown-toggle" href="#">
   <span class="selected-text"<?php print $tabindex; ?><?php print $accesskey; ?>><?php print t($selected_label); ?></span>
-  <span class="icon icon-right icon-blue-down">?</span>
 </a>
 
 <ul class="dropdown-menu dropdown-leftalign visuallyhidden">
