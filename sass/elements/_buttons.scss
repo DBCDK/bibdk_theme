@@ -11,12 +11,14 @@ input[type="submit"].button-as-link {
 // Define color variations of buttons
 // =============================================================================
 .btn-blue {
+  background-color: $blue; // IE9 fix: background-image mixin fails in IE9
   @include btn-skin($blue);
   color: $white;
   text-shadow: $text-shadow;
 }
 
 .btn-grey {
+  background-color: $grey-3; // IE9 fix: background-image mixin fails in IE9
   @include btn-skin($grey-3);
   color: $white;
   text-shadow: $text-shadow;
