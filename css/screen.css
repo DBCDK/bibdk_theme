@@ -4858,7 +4858,7 @@ input[type="password"] {
   -o-transition: border 0.2s, box-shadow 0.2s;
   transition: border 0.2s, box-shadow 0.2s;
   max-width: 100%;
-  padding: 5px;
+  padding: 0 5px;
   color: #51565a;
   font-size: 14px;
   background-color: white;
@@ -9945,21 +9945,23 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   max-width: 2em;
 }
 /* line 19, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
+.page-user-cart .table th:nth-child(2),
+.page-user-cart .table td:nth-child(2) {
+  min-width: 20em;
+}
+/* line 23, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
+.page-user-cart .table th:nth-child(3),
+.page-user-cart .table td:nth-child(3) {
+  min-width: 10em;
+  max-width: 14em;
+}
+/* line 28, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
 .page-user-cart .table th:last-child,
 .page-user-cart .table td:last-child {
   min-width: 10em;
   max-width: 14em;
 }
-/* line 23, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
-.page-user-cart .table td:nth-child(2) {
-  min-width: 20em;
-}
-/* line 26, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
-.page-user-cart .table td:nth-child(3) {
-  min-width: 10em;
-  max-width: 14em;
-}
-/* line 30, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
+/* line 32, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_cart.scss */
 .page-user-cart .table .form-item {
   padding: 3px 10px;
 }
