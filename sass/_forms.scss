@@ -567,6 +567,7 @@ select#edit-favouriteselector {
 .page-reservation #edit-branchdata {
     .branch-data {
         float: left;
+        margin-right: 20px;
     }
     input {
         float: right;
@@ -579,6 +580,12 @@ select#edit-favouriteselector {
 }
 
 .page-reservation {
+
+    .form-actions {
+        input[type="submit"]:first-child {
+            margin-left: 20px;
+        }
+    }
 
     #edit-navigation {
         text-align: right;
