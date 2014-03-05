@@ -580,7 +580,10 @@ select#edit-favouriteselector {
 }
 
 .page-reservation {
-
+    #edit-infotext-wrapper {
+      clear:both; 
+    }   
+ 
     .form-actions {
         input[type="submit"]:first-child {
             margin-left: 20px;
