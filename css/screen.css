@@ -5370,7 +5370,7 @@ select#edit-favouriteselector {
 }
 
 /* line 5, ../sass/components/base/_helpers.scss */
-.padded--horizontal, .padded, #topbar, #header, #search-panel, #messages, #user-alerts, #carousel, #subjects, #columns, #banner, #footer, #block-menu-menu-global-login-menu {
+.padded--horizontal, .padded, #topbar, #header, #search-panel, #messages, #user-alerts, #carousel, #subjectshierarchy, #columns, #banner, #footer, #block-menu-menu-global-login-menu {
   padding-left: 20px;
   padding-left: 1.25rem;
   padding-right: 20px;
@@ -5378,7 +5378,7 @@ select#edit-favouriteselector {
 }
 
 /* line 9, ../sass/components/base/_helpers.scss */
-.padded--vertical, .padded, #header, #search-panel, #messages, #user-alerts, #carousel, #subjects, #columns, #banner {
+.padded--vertical, .padded, #header, #search-panel, #messages, #user-alerts, #carousel, #subjectshierarchy, #columns, #banner {
   padding-top: 20px;
   padding-top: 1.25rem;
   padding-bottom: 20px;
@@ -5523,7 +5523,7 @@ select#edit-favouriteselector {
 }
 
 /* line 55, ../sass/components/global/_page-sections.scss */
-#subjects {
+#subjectshierarchy {
   background-color: #f3f3f3;
 }
 

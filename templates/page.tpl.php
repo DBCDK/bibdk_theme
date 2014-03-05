@@ -76,7 +76,7 @@
   <section id="subjects">
     <div class="row">
       <div class="small-24 columns">
-        <?php print render($page['subjects']); ?>
+        <?php print render($page['subjectshierarchy']); ?>
       </div>
     </div>
   </section>
