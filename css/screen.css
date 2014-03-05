@@ -5264,88 +5264,104 @@ select#edit-favouriteselector {
 /* line 568, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
+  margin-right: 20px;
 }
-/* line 571, ../sass/_forms.scss */
+/* line 572, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 577, ../sass/_forms.scss */
-.page-reservation #edit-navigation {
-  text-align: right;
-}
-
-/* line 581, ../sass/_forms.scss */
+/* line 578, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 586, ../sass/_forms.scss */
+/* line 583, ../sass/_forms.scss */
+.page-reservation #edit-infotext-wrapper {
+  clear: both;
+}
+/* line 588, ../sass/_forms.scss */
+.page-reservation .form-actions input[type="submit"]:first-child {
+  margin-left: 20px;
+}
+/* line 593, ../sass/_forms.scss */
+.page-reservation #edit-navigation {
+  text-align: right;
+}
+/* line 595, ../sass/_forms.scss */
+.page-reservation #edit-navigation input {
+  display: inline-block;
+}
+/* line 600, ../sass/_forms.scss */
+.page-reservation #edit-next.form-submit {
+  float: right;
+}
+/* line 605, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 590, ../sass/_forms.scss */
+/* line 610, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 601, ../sass/_forms.scss */
+/* line 621, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 605, ../sass/_forms.scss */
+/* line 625, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 609, ../sass/_forms.scss */
+/* line 629, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-/* line 614, ../sass/_forms.scss */
+/* line 634, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 619, ../sass/_forms.scss */
+/* line 639, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 624, ../sass/_forms.scss */
+/* line 644, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 629, ../sass/_forms.scss */
+/* line 649, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 633, ../sass/_forms.scss */
+/* line 653, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 637, ../sass/_forms.scss */
+/* line 657, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 642, ../sass/_forms.scss */
+/* line 662, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 646, ../sass/_forms.scss */
+/* line 666, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
