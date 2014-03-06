@@ -366,7 +366,7 @@ left:-10px;
     left: 0;
     right: 0;
     z-index: 3;
-    background: darken($blue, 5%);
+    background: $blue;
     h3 {
       font-size: 1.1666em; // 14px
       font-weight: bold;
@@ -398,7 +398,7 @@ left:-10px;
   }
   .field-link {
     z-index: 2;
-    background: darken($blue, 5%);
+    background: $blue;
     padding: 8px;
     position: absolute;
     bottom: 0;
@@ -990,5 +990,5 @@ span.star.negative{
 }
 
 #user-login .form-actions {
-   margin-top: -5.999em;
+   margin-top: -5em;
 }
