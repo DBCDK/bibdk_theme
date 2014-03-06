@@ -73,10 +73,10 @@
 
 <?php if ($language->language == 'da' && $is_front): ?>
   <!-- subjects start -->
-  <section id="subjects">
+  <section id="subjectshierarchy">
     <div class="row">
       <div class="small-24 columns">
-        <?php print render($page['subjectshierarchy']); ?>
+        <?php print render($page['subjects']); ?>
       </div>
     </div>
   </section>
