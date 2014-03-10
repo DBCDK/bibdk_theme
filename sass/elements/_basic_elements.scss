@@ -206,16 +206,10 @@
       padding: 0 0 0 10px;
     }
   }
-  .tabs-sections {
-    .tabs-sections-wrapper {
+  .tabs-sections-wrapper {
+    .tabs-sections {
       border: solid 8px $blue-lighter;
       line-height: 1.5em;
-    }
-    .subwork {
-      background: $blue-lighter;
-      .padded {
-        line-height: 2;
-      }
     }
     a {
       font-weight: bold;
@@ -224,6 +218,14 @@
     .btn-wrapper, .field-type-bibdk-mani-reservation-button {
       a {
         color: $white;
+      }
+    }
+  }
+  .tabs-sections {
+    .subwork {
+      background: $blue-lighter;
+      .padded {
+        line-height: 2;
       }
     }
   }
