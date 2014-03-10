@@ -3,7 +3,7 @@
   <!-- tabs-nav -->
   <div class="tabs-nav clearfix">
     <?php foreach ($tabs as $type => $tab) : ?>
-    <a href="#<?php print $type . $pid; ?>" id='<?php print drupal_html_id($type); ?>' class="<?php print $type; ?> <?php print $tab['class']; ?>"><?php print $tab['title']; ?></a>
+    <a href="#<?php print $type . $pid; ?>" id='<?php print drupal_html_id($type); ?>' class="<?php print $type; ?> <?php print $tab['class']; ?>"><?php print render($tab['title']); ?></a>
     <?php endforeach; ?>
   </div>
   <!-- tabs-nav -->
@@ -12,7 +12,7 @@
       <?php foreach ($tabs as $type => $tab) : ?>
         <div id="<?php print $type . $pid; ?>" class="tabs-section <?php print $tab['active']; ?>">
           <div class="text clearfix">
-            <?php print $tab['content']; ?>
+            <?php print render($tab['content']); ?>
           </div>
         </div>
       <?php endforeach; ?>
