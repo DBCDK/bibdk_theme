@@ -567,6 +567,7 @@ select#edit-favouriteselector {
 .page-reservation #edit-branchdata {
     .branch-data {
         float: left;
+        margin-right: 20px;
     }
     input {
         float: right;
@@ -574,18 +575,37 @@ select#edit-favouriteselector {
     }
 }
 
-.page-reservation #edit-navigation {
-    text-align: right;
-}
-
 .page-overlay-favourite-userdata label, .page-reservation label {
     text-align: left;
 }
 
 .page-reservation {
+    #edit-infotext-wrapper {
+      clear:both; 
+    }   
+ 
+    .form-actions {
+        input[type="submit"]:first-child {
+            margin-left: 20px;
+        }
+    }
+
+    #edit-navigation {
+        text-align: right;
+        input {
+            display: inline-block;
+        }
+    }
+
+    #edit-next.form-submit {
+        float: right;
+    }
+
+
     .messages {
       margin: 35px 0 0;
     }
+
     .order-condition {
         .fieldset-wrapper {
             margin: 5px 10px 5px 45px;
@@ -608,7 +628,7 @@ select#edit-favouriteselector {
 
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #popup article.manifestation {

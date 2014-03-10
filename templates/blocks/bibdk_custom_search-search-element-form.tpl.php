@@ -6,7 +6,7 @@
 ?>
 <div class='fieldset-legend'><?php print $title; ?></div>
 <div class="fieldset-description"><?php print $description;?></div>
-<p class="helptext popover-button" title="<?php print $help; ?>"><a href="#">?</a></p>
+<p class="helptext popover-button" title="<?php print strip_tags($help); ?>"><a href="#">?</a></p>
 <div class="popover element-wrapper linkme-wrapper visuallyhidden">
   <p class="user-msg">
     <?php print $help; ?>
