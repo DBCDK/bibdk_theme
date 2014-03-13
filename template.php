@@ -165,9 +165,11 @@ function bibdk_theme_preprocess_page(&$vars) {
  * Implements template_preprocess_hook().
  */
 function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
+  $key   = $variables['form']['#data_toggle_key'];
   $first = $variables['form']['#data_toggle_value'][0];
   $last  = end($variables['form']['#data_toggle_value']);
-  $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $variables['form']['#data_toggle_key'] . '" class="sub-elements form-wrapper" data-child="' . $variables['form']['#data_toggle_key'] . '" style="display: block;">';
+  $variables['form'][$key]['#title'] = '<span data-child="' . drupal_html_id($key) . '" class="toggle-subgroup"> + </span>' . $key;
+  $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $key . '" style="display: block;">';
   $variables['form'][$last]['#suffix'] = '</fieldset>';
 }
 
