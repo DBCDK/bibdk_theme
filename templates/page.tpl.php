@@ -45,7 +45,7 @@
 <?php endif; ?>
 
 
-<?php if (!empty($page['user_alerts']) && $is_front): ?>
+<?php if (!empty($page['content']['user_alert_user_alert']) && $is_front): ?>
   <!-- user alerts start -->
   <section id="user-alerts">
     <div class="row">
@@ -54,6 +54,8 @@
       </div>
     </div>
   </section>
+<?php else:
+  unset($page['content']['user_alert_user_alert']); ?>
   <!-- user alerts end -->
 <?php endif; ?>
 
