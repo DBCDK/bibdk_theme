@@ -165,12 +165,20 @@ function bibdk_theme_preprocess_page(&$vars) {
  * Implements template_preprocess_hook().
  */
 function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
-  $key   = $variables['form']['#data_toggle_key'];
-  $first = $variables['form']['#data_toggle_value'][0];
-  $last  = end($variables['form']['#data_toggle_value']);
-  $variables['form'][$key]['#title'] = '<span data-child="' . drupal_html_id($key) . '" class="toggle-subgroup"> + </span>' . $key;
-  $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $key . '" style="display: block;">';
-  $variables['form'][$last]['#suffix'] = '</fieldset>';
+
+  if ( !empty($variables['form']['#data_toggle']) ) {
+    foreach ( $variables['form']['#data_toggle'] as $n => $toggle ){
+      $key   = $toggle['key'];
+      $first = $toggle['options']['first']['value'];
+      $last  = $toggle['options']['last']['value'];
+      print_r($key .' : '. $first_key . '|' . $first . ' : ' . $last_key . '|' . $last . '<br>');
+      $variables['form'][$key]['#title'] = '<span data-child="' . drupal_html_id($key) . '" class="toggle-subgroup"> + </span>' . $key;
+      $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $key . '" style="display: block;">';
+      $variables['form'][$last]['#suffix'] = '</fieldset>';
+    }
+    unset($variables['form']['#data_toggle']);
+  }
+
 }
 
 
@@ -181,6 +189,7 @@ function bibdk_theme_process_field(&$vars) {
   //Make field labels translatable the right way!
   $vars['label'] = isset($vars['label']) ? t($vars['label']) : NULL;
 }
+
 
 /**
  * Implements template_process_page().
@@ -196,6 +205,7 @@ function bibdk_theme_process_page(&$vars) {
     unset($vars['title']);
   }
 }
+
 
 /**
  * Implements hook_form_alter().
