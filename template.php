@@ -169,10 +169,11 @@ function template_preprocess_bibdk_custom_search_radio_buttons(&$variables) {
   if ( !empty($variables['form']['#data_toggle']) ) {
     foreach ( $variables['form']['#data_toggle'] as $n => $toggle ){
       $key   = $toggle['key'];
+      $u_key = drupal_html_id($toggle['key']);
       $first = $toggle['options']['first']['value'];
       $last  = $toggle['options']['last']['value'];
-      $variables['form'][$key]['#title']    = '<span data-child="' . drupal_html_id($key) . '" class="toggle-subgroup"> + </span>' . $key;
-      $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $key . '" style="display: block;">';
+      $variables['form'][$key]['#title']    = '<span data-child="' . $u_key . '" class="toggle-subgroup"> + </span>' . $variables['form'][$key]['#title'];
+      $variables['form'][$first]['#prefix'] = '<fieldset id="edit-term-' . $key . '" class="sub-elements form-wrapper" data-child="' . $u_key . '" style="display: block;">';
       $variables['form'][$last]['#suffix']  = '</fieldset>';
     }
     unset($variables['form']['#data_toggle']);
