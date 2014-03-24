@@ -298,7 +298,7 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
   if (isset($form['persistent_login'])) {
     // show checkbox BEFORE submit button
     $form['persistent_login']['#weight'] = -1;
-    $form['actions']['remember_me'] = $form['persistent_login'];
+    $form['actions']['persistent_login'] = $form['persistent_login'];
     unset($form['persistent_login']);
   }
 }
