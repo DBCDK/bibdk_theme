@@ -4466,50 +4466,55 @@ tr.even .form-item {
   color: #fff;
 }
 
-/* line 204, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 190, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+#autocomplete li {
+  padding: 1px 5px;
+}
+
+/* line 207, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 .fieldset-legend span.summary {
   color: #999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 216, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 219, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 219, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 222, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 222, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 225, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 225, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 228, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 body div.tabledrag-changed-warning {
   margin-bottom: 0.5em;
 }
 
-/* line 235, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 238, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 tr.selected td {
   background: #ffc;
 }
 
-/* line 239, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 242, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 249, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 252, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 .progress {
   font-weight: bold;
 }
 
-/* line 252, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 255, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -4519,7 +4524,7 @@ th.checkbox {
   border-radius: 3px;
 }
 
-/* line 260, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
+/* line 263, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.theme.scss */
 .progress .filled {
   background: #0072b9 url(../img/drupal/progress.gif);
 }
