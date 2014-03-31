@@ -7314,135 +7314,136 @@ button[type="button"] {
 .bibdk-tabs .tabs-nav-sub a.active {
   font-weight: bold;
   border-color: #c3c3c3;
+  border-color: #51565a;
 }
-/* line 176, ../sass/elements/_basic_elements.scss */
+/* line 177, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item {
   padding: 10px 10px 10px 0;
   border-bottom: solid 1px #d2eaf1;
 }
-/* line 180, ../sass/elements/_basic_elements.scss */
+/* line 181, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item:last-child {
   border-bottom: none;
 }
-/* line 184, ../sass/elements/_basic_elements.scss */
+/* line 185, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item .tab-title {
   float: left;
   color: #3c4043;
   padding: 0 0 0 30px;
 }
-/* line 189, ../sass/elements/_basic_elements.scss */
+/* line 190, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item .tab-title.active {
   color: #161616;
   font-weight: bold;
 }
-/* line 195, ../sass/elements/_basic_elements.scss */
+/* line 196, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item .tab-link {
   float: right;
   padding: 0 30px 0 0;
 }
-/* line 200, ../sass/elements/_basic_elements.scss */
+/* line 201, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item .tab-content {
   padding: 20px 30px 10px 30px;
 }
-/* line 204, ../sass/elements/_basic_elements.scss */
+/* line 205, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item .item-list ul li {
   margin: 0;
   padding: 0 0 0 10px;
 }
-/* line 210, ../sass/elements/_basic_elements.scss */
+/* line 211, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-sections .tabs-sections-wrapper {
   border: solid 8px #d2eaf1;
   line-height: 1.5em;
 }
-/* line 214, ../sass/elements/_basic_elements.scss */
+/* line 215, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-sections .subwork {
   background: #d2eaf1;
 }
-/* line 216, ../sass/elements/_basic_elements.scss */
+/* line 217, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-sections .subwork .padded {
   line-height: 2;
 }
-/* line 220, ../sass/elements/_basic_elements.scss */
+/* line 221, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-sections a {
   font-weight: bold;
   color: #178bad;
 }
-/* line 225, ../sass/elements/_basic_elements.scss */
+/* line 226, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-sections .btn-wrapper a, .bibdk-tabs .tabs-sections .field-type-bibdk-mani-reservation-button a {
   color: white;
 }
 
-/* line 235, ../sass/elements/_basic_elements.scss */
+/* line 236, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs-light {
   margin-bottom: 10px;
   font-size: 0.91666em;
 }
-/* line 241, ../sass/elements/_basic_elements.scss */
+/* line 242, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs-light .tabs-nav a {
   padding: 10px 20px;
 }
 
-/* line 254, ../sass/elements/_basic_elements.scss */
+/* line 255, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs-heavy .tabs-nav a {
   padding: 12px 20px;
 }
 
-/* line 264, ../sass/elements/_basic_elements.scss */
+/* line 265, ../sass/elements/_basic_elements.scss */
 .zebra-toggle {
   background: #c7e1e8;
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 268, ../sass/elements/_basic_elements.scss */
+/* line 269, ../sass/elements/_basic_elements.scss */
 .zebra-toggle a {
   color: #147996;
 }
 
-/* line 273, ../sass/elements/_basic_elements.scss */
+/* line 274, ../sass/elements/_basic_elements.scss */
 .zebra {
   padding: 20px 20px 20px 10px;
   border-left: solid 10px #c7e1e8;
   border-bottom: solid 1px gainsboro;
   background-color: #f3f3f3;
 }
-/* line 279, ../sass/elements/_basic_elements.scss */
+/* line 280, ../sass/elements/_basic_elements.scss */
 .zebra:nth-child(even) {
   border-left: solid 10px #ebf4f7;
   background-color: white;
 }
-/* line 284, ../sass/elements/_basic_elements.scss */
+/* line 285, ../sass/elements/_basic_elements.scss */
 .zebra:last-child {
   border-bottom: none;
 }
 
-/* line 293, ../sass/elements/_basic_elements.scss */
+/* line 294, ../sass/elements/_basic_elements.scss */
 .actions {
   float: right;
   padding-left: 15px;
   border-left: dotted 1px gainsboro;
 }
 
-/* line 299, ../sass/elements/_basic_elements.scss */
+/* line 300, ../sass/elements/_basic_elements.scss */
 .secondary-actions {
   padding: 10px 0 0 0;
   margin: 10px 0 0 0;
   border-top: dotted 1px gainsboro;
 }
 
-/* line 307, ../sass/elements/_basic_elements.scss */
+/* line 308, ../sass/elements/_basic_elements.scss */
 form.bibdk-search-controls-form .form-type-select > label, form.bibdk-search-controls-form .form-type-radios > label, form.bibdk-search-controls-form .form-type-checkboxes > label {
   display: none;
 }
-/* line 310, ../sass/elements/_basic_elements.scss */
+/* line 311, ../sass/elements/_basic_elements.scss */
 form.bibdk-search-controls-form .form-type-select > .description, form.bibdk-search-controls-form .form-type-radios > .description, form.bibdk-search-controls-form .form-type-checkboxes > .description {
   display: none;
 }
-/* line 313, ../sass/elements/_basic_elements.scss */
+/* line 314, ../sass/elements/_basic_elements.scss */
 form.bibdk-search-controls-form .form-item {
   padding: 0;
 }
 
-/* line 322, ../sass/elements/_basic_elements.scss */
+/* line 323, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal {
   *zoom: 1;
   padding: 0;
@@ -7456,31 +7457,31 @@ form.bibdk-search-controls-form .form-item {
 .search-form-horizontal:after {
   clear: both;
 }
-/* line 326, ../sass/elements/_basic_elements.scss */
+/* line 327, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal .form-wrapper {
   border: none;
 }
-/* line 331, ../sass/elements/_basic_elements.scss */
+/* line 332, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal .form-type-textfield,
 .search-form-horizontal .form-actions {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 337, ../sass/elements/_basic_elements.scss */
+/* line 338, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input {
   display: block;
 }
-/* line 340, ../sass/elements/_basic_elements.scss */
+/* line 341, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input[type=text] {
   width: 100%;
 }
-/* line 343, ../sass/elements/_basic_elements.scss */
+/* line 344, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input[type=submit] {
   width: 100%;
 }
 
-/* line 351, ../sass/elements/_basic_elements.scss */
+/* line 352, ../sass/elements/_basic_elements.scss */
 p.helptext {
   background-color: #178bad;
   -webkit-border-radius: 3px;
@@ -7500,12 +7501,12 @@ p.helptext {
   position: relative;
   top: 3px;
 }
-/* line 365, ../sass/elements/_basic_elements.scss */
+/* line 366, ../sass/elements/_basic_elements.scss */
 p.helptext a {
   color: white;
 }
 
-/* line 379, ../sass/elements/_basic_elements.scss */
+/* line 380, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first,
 .page-overlay .pager-previous,
 .page-overlay .pager-item,
@@ -7516,7 +7517,7 @@ p.helptext a {
   float: left;
 }
 
-/* line 388, ../sass/elements/_basic_elements.scss */
+/* line 389, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first span,
 .page-overlay .pager-previous span,
 .page-overlay .pager-item span,
@@ -7526,7 +7527,7 @@ p.helptext a {
   display: none;
 }
 
-/* line 396, ../sass/elements/_basic_elements.scss */
+/* line 397, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back,
 .page-overlay .pager-previous,
 .page-overlay .pager-next,
@@ -7535,7 +7536,7 @@ p.helptext a {
   padding: 0 7px;
 }
 
-/* line 404, ../sass/elements/_basic_elements.scss */
+/* line 405, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back a,
 .page-overlay .pager-previous a,
 .page-overlay .pager-next a,
@@ -7544,7 +7545,7 @@ p.helptext a {
   padding: 0;
 }
 
-/* line 408, ../sass/elements/_basic_elements.scss */
+/* line 409, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-current {
   padding: 0 7px;
   margin: 0 7px;
@@ -7552,7 +7553,7 @@ p.helptext a {
   border-right: solid 1px gainsboro;
 }
 
-/* line 415, ../sass/elements/_basic_elements.scss */
+/* line 416, ../sass/elements/_basic_elements.scss */
 .page-overlay .works-pager-select {
   padding: 0 10px;
   border-left: solid 0px gainsboro;
