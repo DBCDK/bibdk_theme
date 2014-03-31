@@ -7313,8 +7313,8 @@ button[type="button"] {
 /* line 169, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tabs-nav-sub a.active {
   font-weight: bold;
-  border-color: #c3c3c3;
   border-color: #51565a;
+  border-width: 1.5px;
 }
 /* line 177, ../sass/elements/_basic_elements.scss */
 .bibdk-tabs .tab-item {

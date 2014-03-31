@@ -168,8 +168,8 @@
 
       &.active {
         font-weight: bold;
-        border-color: darken($grey-5, 10%);
         border-color: $grey-3;
+        border-width: 1.5px;
       }
     }
   }
