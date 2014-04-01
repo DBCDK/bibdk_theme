@@ -9868,7 +9868,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 }
 /* line 92, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:after {
-  content: " \203A ";
+  content: " \203A  ";
 }
 /* line 97, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child {
