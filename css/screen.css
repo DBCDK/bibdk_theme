@@ -8670,6 +8670,11 @@ span.star.negative {
   margin-top: -0.5em;
 }
 
+/* line 999, ../sass/elements/_specific_elements.scss */
+#admin-menu {
+  font-size: 13px;
+}
+
 /* line 7, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-toggle {
   text-align: right;
