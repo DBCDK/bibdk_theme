@@ -4,17 +4,14 @@
 
 
 .user-alert {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: $error;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: $notice;
   position: relative;
-  padding: 0px;
+  padding: 0.5rem;
   border: 1px solid $grey-2;
-
   &:after {
-    position: absolute;
-    left: 12px;
-    content: '';
+    @include add-sprite(messages--notice);
   }
 
   a {
@@ -26,16 +23,23 @@
   }
 
   .user-alert-close {
-    margin-top: 5px;
     height: 24px;
     width: 24px;
+    float: right;
+    margin: 5px 0 0px 10px;
     line-height: 24px;
+    text-align: right;
+    overflow: visible;
+    text-decoration: none;
+
     span.user-alert-close-image {
       @include add-sprite(messages--error);
-      background-position: -810px 0;
-      height: 24px;
-      width: 24px;
+      background-position: -15px -298px;
+      content: "";
       display: block;
+      height: 15px;
+      width: 15px;
     }
   }
 }
+
