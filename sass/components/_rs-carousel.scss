@@ -65,6 +65,8 @@
     border: solid 1px $grey-5;
     @include border-radius(6px);
     @include rem('padding', 0 35px 0 10px);
+    font-size: 1.5em;
+    font-weight: bold;
 
     &:after {
       content: "";

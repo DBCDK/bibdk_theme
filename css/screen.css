@@ -5985,8 +5985,10 @@ select#edit-favouriteselector {
   border-radius: 6px;
   padding: 0 35px 0 10px;
   padding:  0 2.1875rem 0 0.625rem;
+  font-size: 1.5em;
+  font-weight: bold;
 }
-/* line 69, ../sass/components/_rs-carousel.scss */
+/* line 71, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-toggle:after {
   content: "";
   display: block;
@@ -6000,29 +6002,29 @@ select#edit-favouriteselector {
   bottom: 0;
   margin: auto;
 }
-/* line 82, ../sass/components/_rs-carousel.scss */
+/* line 84, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-toggle.toggled:after {
   content: "";
   height: 15px;
   width: 15px;
   background-position: -15px -553px;
 }
-/* line 89, ../sass/components/_rs-carousel.scss */
+/* line 91, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu {
   min-width: 0;
   top: 100%;
 }
-/* line 93, ../sass/components/_rs-carousel.scss */
+/* line 95, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu li {
   white-space: nowrap;
 }
 
-/* line 105, ../sass/components/_rs-carousel.scss */
+/* line 107, ../sass/components/_rs-carousel.scss */
 .rs-carousel-pagination {
   display: none;
 }
 
-/* line 110, ../sass/components/_rs-carousel.scss */
+/* line 112, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev,
 .rs-carousel-action-next {
   position: absolute;
@@ -6031,13 +6033,13 @@ select#edit-favouriteselector {
   display: block;
   width: 18px;
 }
-/* line 118, ../sass/components/_rs-carousel.scss */
+/* line 120, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev.rs-carousel-action-disabled,
 .rs-carousel-action-next.rs-carousel-action-disabled {
   opacity: 0.3;
   cursor: default;
 }
-/* line 123, ../sass/components/_rs-carousel.scss */
+/* line 125, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after,
 .rs-carousel-action-next:after {
   content: "";
@@ -6049,11 +6051,11 @@ select#edit-favouriteselector {
   margin: auto;
 }
 
-/* line 134, ../sass/components/_rs-carousel.scss */
+/* line 136, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev {
   left: -38px;
 }
-/* line 136, ../sass/components/_rs-carousel.scss */
+/* line 138, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after {
   content: "";
   height: 36px;
@@ -6061,11 +6063,11 @@ select#edit-favouriteselector {
   background-position: -14px -602px;
 }
 
-/* line 141, ../sass/components/_rs-carousel.scss */
+/* line 143, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next {
   right: -38px;
 }
-/* line 143, ../sass/components/_rs-carousel.scss */
+/* line 145, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next:after {
   content: "";
   height: 36px;
@@ -6073,7 +6075,7 @@ select#edit-favouriteselector {
   background-position: 0 -955px;
 }
 
-/* line 154, ../sass/components/_rs-carousel.scss */
+/* line 156, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item {
   width: 165px;
   float: left;
@@ -6086,35 +6088,35 @@ select#edit-favouriteselector {
   padding-right: 0.3125rem;
 }
 
-/* line 162, ../sass/components/_rs-carousel.scss */
+/* line 164, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-image {
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
 }
-/* line 165, ../sass/components/_rs-carousel.scss */
+/* line 167, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-image img {
   width: 100%;
 }
 
-/* line 170, ../sass/components/_rs-carousel.scss */
+/* line 172, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-title {
   text-align: center;
   line-height: 1.2;
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
 }
-/* line 175, ../sass/components/_rs-carousel.scss */
+/* line 177, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-title a {
   color: #25292c;
   font-weight: bold;
 }
 
-/* line 181, ../sass/components/_rs-carousel.scss */
+/* line 183, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-creator {
   text-align: center;
   line-height: 1.2;
 }
-/* line 185, ../sass/components/_rs-carousel.scss */
+/* line 187, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-creator a {
   color: #51565a;
 }
