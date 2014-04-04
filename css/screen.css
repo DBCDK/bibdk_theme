@@ -5370,6 +5370,14 @@ select#edit-favouriteselector {
   text-align: center;
 }
 
+/* line 5, ../sass/_typography.scss */
+h1 {
+  font-family: "Dosis", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 /* line 5, ../sass/components/base/_helpers.scss */
 .padded--horizontal, .padded, #topbar, #header, #search-panel, #messages, #user-alerts, #carousel, #subjectshierarchy, #columns, #banner, #footer, #block-menu-menu-global-login-menu {
   padding-left: 20px;
@@ -9996,6 +10004,11 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 /* line 32, ../sass/elements/_cart.scss */
 .page-user-cart .table .form-item {
   padding: 3px 10px;
+}
+
+/* line 2, ../sass/elements/_toplist.scss */
+.bibdk-adhl-toplist p {
+  margin: 1em 0;
 }
 
 /* line 2, ../sass/_extra.scss */

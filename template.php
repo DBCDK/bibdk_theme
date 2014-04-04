@@ -145,20 +145,18 @@ function bibdk_theme_preprocess_page(&$vars) {
     ),
   );
 
-
   switch (arg(0)) {
     case 'reservation':
     case 'email':
+    case 'adhl':
       $vars['theme_hook_suggestions'][] = 'page__overlay';
       break;
-
     case 'vejviser':
       $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
       $vars['page']['content']['#suffix'] = '</div></div>';
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
-
 }
 
 /**

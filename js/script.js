@@ -538,6 +538,12 @@
         }
       });
 
+      // *********************** ADHL TOP LIST ********************************************* //
+
+        $('.adhl-toplist .adhl-link').click(function(event) {
+            event.preventDefault();
+            window.opener.location.href = $(event.currentTarget).attr('href');
+        });
       // NO CODE AFTER THIS!
     }
 
