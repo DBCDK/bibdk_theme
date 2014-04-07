@@ -8734,9 +8734,9 @@ div#search-advanced-panel .btn-submit {
   background-color: #178bad;
 }
 /* line 46, ../sass/elements/_custom_search_elements.scss */
-div#search-advanced-panel .sub-elements {
+div#search-advanced-panel .bibdk-custom-search-element .sub-elements {
   display: block;
-  margin-left: 20px;
+  margin-left: 24px;
   width: 100%;
 }
 /* line 52, ../sass/elements/_custom_search_elements.scss */
