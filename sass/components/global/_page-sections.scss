@@ -39,9 +39,9 @@
 
 // User alerts
 #user-alerts {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
   background-color: $grey-7;
+  @extend .padded--horizontal;
+  // we only want padding if there's an alert.
 }
 
 // Carousel
