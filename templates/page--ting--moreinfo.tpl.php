@@ -1,3 +1,7 @@
+<header id="header">
+  <div class="logo"><?php print render($logo_header); ?></div>
+</header>
+
 <div id="moreinfo">
 
   <div class="element-wrapper">

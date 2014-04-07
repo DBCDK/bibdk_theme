@@ -151,9 +151,15 @@ function bibdk_theme_preprocess_page(&$vars) {
 
 
   switch (arg(0)) {
+    case 'overlay':
     case 'reservation':
     case 'email':
       $vars['theme_hook_suggestions'][] = 'page__overlay';
+      $vars['logo_header'] = array(
+        '#theme' => 'image',
+        '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header-nopayoff.png',
+        '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+      );
       break;
 
     case 'vejviser':
@@ -162,7 +168,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
-dpm($vars);
+
 }
 
 
