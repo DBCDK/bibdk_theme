@@ -107,6 +107,10 @@ function bibdk_theme_preprocess_html(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
+  if ( !$vars['is_front'] && !empty($vars['page']['content']['user_alert_user_alert']) ) {
+    unset($vars['page']['content']['user_alert_user_alert']);
+  }
+
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
   $vars['logo_header'] = array(
@@ -158,7 +162,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
-
+dpm($vars);
 }
 
 

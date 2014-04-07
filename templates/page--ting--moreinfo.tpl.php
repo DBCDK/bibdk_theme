@@ -1,8 +1,3 @@
-<?php
-if ( !empty($page['content']['user_alert_user_alert']) ) {
-  unset($page['content']['user_alert_user_alert']);
-}
-?>
 <div id="moreinfo">
 
   <div class="element-wrapper">
