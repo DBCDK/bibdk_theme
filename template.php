@@ -160,6 +160,12 @@ function bibdk_theme_preprocess_page(&$vars) {
         '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header-nopayoff.png',
         '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
       );
+      switch (arg(1)) {
+        case 'infomedia':
+          // infomedia articles has bibliotek.dk logo in body
+          unset($vars['logo_header']);
+          break;
+      }
       break;
 
     case 'vejviser':
