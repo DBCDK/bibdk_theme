@@ -9942,7 +9942,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 }
 /* line 9, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_userhelp.scss */
 #bibdk-help-search-form fieldset.form-wrapper {
-  width: 65%;
+  width: 70%;
   padding: 0px;
   float: right;
 }
@@ -10004,7 +10004,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-repeat: no-repeat;
   background-position: 100%;
   display: block;
-  padding: 5px 20px;
+  padding: 0px 20px 5px;
   margin-bottom: 1px;
 }
 /* line 73, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_userhelp.scss */
@@ -10012,6 +10012,14 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 .pane-bibdk-help-bibdk-help-popup-menu-eng li li a,
 .pane-bibdk-help li li a {
   margin-left: 10px;
+}
+/* line 76, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_userhelp.scss */
+.pane-bibdk-help-bibdk-help-popup-menu h2,
+.pane-bibdk-help-bibdk-help-popup-menu-eng h2,
+.pane-bibdk-help h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 /* line 2, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_extra.scss */
