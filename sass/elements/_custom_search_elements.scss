@@ -565,6 +565,31 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 }
 
 
+.page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'],
+.page-bibdk-frontpage-noder div#search-advanced-panel {
+  .materiale {
+    width: 85%;
+    margin-left: 1%;
+    div.fieldset-wrapper {
+      text-align: left;
+    }
+    .fieldset-description {
+      display: none;
+    }
+    .bibdk-custom-search-element .column {
+      width: 38%;
+      float: left;
+    }
+    .bibdk-custom-search-element .column0 {
+      width: 24%;
+    }
+  }
+
+  .btn-submit {
+    margin-top: 50px;
+  }
+}
+
 div#search-advanced-panel .custom-search-options-list {
   @extend .modal--center-horizontally;
   @extend .modal--center-vertically;

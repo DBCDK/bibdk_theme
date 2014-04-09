@@ -538,6 +538,29 @@
         }
       });
 
+      // ***** Split radio elements in columns ***** //
+      var count = 0;
+      var column = 0;
+      var columns = [];
+      $('fieldset.noder #search-advanced .form-radios').children().each(function() {
+        if ( $(this).hasClass('form-type-radio')  ) {
+          count++;
+          column = Math.ceil(count/5) - 1;
+        }
+        if ( !columns[column] ) {
+          columns[column] = document.createElement( "div" );
+          $(columns[column]).addClass('column');
+          $(columns[column]).addClass('column' + column);
+          $(columns[column]).addClass('form-wrapper');
+        }
+        $(columns[column]).append( $(this) );
+      });
+      columns.forEach(appendColumn);
+      
+      function appendColumn( elem ) {
+        $('fieldset.noder #search-advanced .form-radios').append( elem );
+      }
+
       // NO CODE AFTER THIS!
     }
 
