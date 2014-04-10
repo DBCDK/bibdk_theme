@@ -9410,7 +9410,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
 /* line 562, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .btn-submit,
 .page-bibdk-frontpage-musik div#search-advanced-panel .btn-submit {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 /* line 570, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_custom_search_elements.scss */
@@ -9443,7 +9443,7 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-
 /* line 588, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .btn-submit,
 .page-bibdk-frontpage-noder div#search-advanced-panel .btn-submit {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 /* line 593, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_custom_search_elements.scss */
