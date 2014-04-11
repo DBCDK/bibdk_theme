@@ -9612,22 +9612,22 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 /* line 184, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-distinction .field-items .field-item {
   display: inline;
-  background-color: lightyellow;
+  background-color: yellow;
 }
 /* line 188, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-access-information .field-items .field-item {
   display: inline;
-  background-color: lightyellow;
+  background-color: yellow;
 }
 /* line 192, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-marked-audience .field-items .field-item {
   display: inline;
-  background-color: lightyellow;
+  background-color: yellow;
 }
 /* line 196, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-recommended-audience .field-items .field-item {
   display: inline;
-  background-color: lightyellow;
+  background-color: yellow;
 }
 
 /* line 204, ../sass/elements/_search_work_manifestations.scss */
@@ -10077,4 +10077,4 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-} 
+}
