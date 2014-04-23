@@ -5302,67 +5302,71 @@ select#edit-favouriteselector {
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 610, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 609, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+.page-reservation .order-condition {
+  border-bottom: 1px solid #6c7379;
+}
+/* line 611, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 621, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 622, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 625, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 626, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 629, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 630, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 634, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 635, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 639, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 640, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 644, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 645, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 649, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 650, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 653, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 654, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 657, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 658, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 662, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 663, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 666, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
+/* line 667, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
