@@ -18,17 +18,20 @@
 //
 #autocomplete {
   border: 1px solid;
-  overflow: hidden;
+  overflow-y: scroll;
   position: absolute;
   z-index: 100;
+  background-color: $white;
 }
 #autocomplete ul {
+  background: $white;
   list-style: none;
   list-style-image: none;
   margin: 0;
-  padding: 0;
+  padding: 0px;
 }
 #autocomplete li {
+  padding: 0 5px;
   background: $white;
   color: $black;
   cursor: default;
@@ -41,11 +44,11 @@
 //
 html.js input.form-autocomplete {
   background-image: url(../img/drupal/throbber.gif);
-  background-position: 100% 2px; // LTR
+  background-position: 100% 8px; // LTR
   background-repeat: no-repeat;
 }
 html.js input.throbbing {
-  background-position: 100% -18px; // LTR
+  background-position: 100% -12px; // LTR
 }
 
 
