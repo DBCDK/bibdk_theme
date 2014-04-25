@@ -5824,7 +5824,7 @@ select#edit-favouriteselector {
 }
 /* line 48, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser .form-type-textfield {
-  width: 230px;
+  width: 400px;
   margin-right: 5px;
 }
 /* line 52, ../sass/components/global/_header-actions.scss */
