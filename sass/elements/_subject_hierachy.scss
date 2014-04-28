@@ -42,6 +42,7 @@
         line-height: 30px;
         margin-bottom: 12px;
         font-weight: bold;
+        float: left;
     }
     .icon-blue-x {
         background-image: url("../img/blue-x.png");
@@ -125,4 +126,42 @@
       display: inline-block;
     }
   }
+}
+
+.bibdk-subject-hierarchy-searchresult {
+  .header {
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .themes__breadcrumb {
+    margin-bottom: 0;
+    a {
+      color: $grey-2;
+    }
+     a:last-child {
+      font-weight: normal;
+    }
+  }
+  .item-list {
+    margin-bottom: 20px;
+  }
+}
+
+#bibdk-subject-hierachy-searchfield-form {
+  float: right;
+
+  .form-item{
+    float: left;
+    padding: 0;
+  }
+
+  .searchfield-input {
+    line-height: 30px;
+  }
+
 }

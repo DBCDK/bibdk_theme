@@ -9862,26 +9862,27 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   line-height: 30px;
   margin-bottom: 12px;
   font-weight: bold;
+  float: left;
 }
-/* line 46, ../sass/elements/_subject_hierachy.scss */
+/* line 47, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .icon-blue-x {
   background-image: url("../img/blue-x.png");
 }
 
-/* line 55, ../sass/elements/_subject_hierachy.scss */
+/* line 56, ../sass/elements/_subject_hierachy.scss */
 .themes {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 61, ../sass/elements/_subject_hierachy.scss */
+/* line 62, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists__wrapper {
   float: left;
   width: 100%;
   display: none;
 }
 
-/* line 66, ../sass/elements/_subject_hierachy.scss */
+/* line 67, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists {
   position: relative;
   padding: 15px;
@@ -9890,7 +9891,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-bottom: 30px;
 }
 
-/* line 75, ../sass/elements/_subject_hierachy.scss */
+/* line 76, ../sass/elements/_subject_hierachy.scss */
 .themes__close-button {
   position: absolute;
   top: 8px;
@@ -9898,11 +9899,11 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   cursor: pointer;
 }
 
-/* line 84, ../sass/elements/_subject_hierachy.scss */
+/* line 85, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb {
   margin-bottom: 20px;
 }
-/* line 87, ../sass/elements/_subject_hierachy.scss */
+/* line 88, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9913,20 +9914,20 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 92, ../sass/elements/_subject_hierachy.scss */
+/* line 93, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:after {
   content: " \203A  ";
 }
-/* line 97, ../sass/elements/_subject_hierachy.scss */
+/* line 98, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child {
   font-weight: bold;
 }
-/* line 100, ../sass/elements/_subject_hierachy.scss */
+/* line 101, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child:after {
   content: "";
 }
 
-/* line 109, ../sass/elements/_subject_hierachy.scss */
+/* line 110, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9938,12 +9939,12 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-right: -4px;
   margin-bottom: 5px;
 }
-/* line 116, ../sass/elements/_subject_hierachy.scss */
+/* line 117, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a {
   display: block;
   padding-right: 20px;
 }
-/* line 120, ../sass/elements/_subject_hierachy.scss */
+/* line 121, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a.nesting:after {
   content: '';
   content: "";
@@ -9953,6 +9954,49 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   position: relative;
   left: 0.5em;
   display: inline-block;
+}
+
+/* line 132, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult .header {
+  padding-bottom: 20px;
+}
+/* line 135, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult h1 {
+  font-size: 1.5em;
+}
+/* line 138, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult h2 {
+  font-weight: bold;
+}
+/* line 141, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult .themes__breadcrumb {
+  margin-bottom: 0;
+}
+/* line 143, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult .themes__breadcrumb a {
+  color: #3c4043;
+}
+/* line 146, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult .themes__breadcrumb a:last-child {
+  font-weight: normal;
+}
+/* line 150, ../sass/elements/_subject_hierachy.scss */
+.bibdk-subject-hierarchy-searchresult .item-list {
+  margin-bottom: 20px;
+}
+
+/* line 155, ../sass/elements/_subject_hierachy.scss */
+#bibdk-subject-hierachy-searchfield-form {
+  float: right;
+}
+/* line 158, ../sass/elements/_subject_hierachy.scss */
+#bibdk-subject-hierachy-searchfield-form .form-item {
+  float: left;
+  padding: 0;
+}
+/* line 163, ../sass/elements/_subject_hierachy.scss */
+#bibdk-subject-hierachy-searchfield-form .searchfield-input {
+  line-height: 30px;
 }
 
 /* line 7, ../sass/elements/_banner.scss */
