@@ -37,19 +37,6 @@ $sprites-layout: smart;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // =============================================================================
 // Dominate drupal!
 // See template.php (hook_css_alter())
@@ -70,6 +57,7 @@ $sprites-layout: smart;
 // Import default styling
 // =============================================================================
 @import "forms";
+@import "typography";
 
 
 
@@ -113,6 +101,7 @@ $sprites-layout: smart;
 @import "elements/banner";
 @import "elements/infomedia";
 @import "elements/cart";
+@import "elements/toplist";
 
 // =============================================================================
 // Import extra styling which needs to be added last

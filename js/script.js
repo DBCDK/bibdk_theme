@@ -556,11 +556,17 @@
         $(columns[column]).append( $(this) );
       });
       columns.forEach(appendColumn);
-      
+
       function appendColumn( elem ) {
         $('fieldset.noder #search-advanced .form-radios').append( elem );
       }
 
+      // *********************** ADHL TOP LIST ********************************************* //
+
+        $('.adhl-toplist .adhl-link').click(function(event) {
+            event.preventDefault();
+            window.opener.location.href = $(event.currentTarget).attr('href');
+        });
       // NO CODE AFTER THIS!
     }
 
