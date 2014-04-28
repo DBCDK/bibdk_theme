@@ -543,6 +543,10 @@
       var column = 0;
       var columns = [];
       $('fieldset.noder #search-advanced .form-radios').children().each(function() {
+        if ( $(this).hasClass('column')  ) {
+          // means it's called a second time
+          return false;
+        }
         if ( $(this).hasClass('form-type-radio')  ) {
           count++;
           column = Math.ceil(count/5) - 1;
