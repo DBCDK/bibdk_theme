@@ -106,6 +106,15 @@ function bibdk_theme_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
+  global $language;
+  $language_default = language_default();
+  $lang_obj = $language;
+
+  // Remove language prefix on logo link if default language
+  if ($language_default->language == $language->language) {
+    $lang_obj = $language_default;
+    unset($lang_obj->prefix);
+  }
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
@@ -123,6 +132,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       'attributes' => array(
         'title' => t('Home'),
       ),
+      'language' => $lang_obj,
       'html' => TRUE,
     ),
   );
@@ -141,6 +151,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       'attributes' => array(
         'title' => t('Home'),
       ),
+      'language' => $lang_obj,
       'html' => TRUE,
     ),
   );
