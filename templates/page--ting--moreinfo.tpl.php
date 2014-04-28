@@ -1,8 +1,9 @@
-<?php
-if ( !empty($page['content']['user_alert_user_alert']) ) {
-  unset($page['content']['user_alert_user_alert']);
-}
-?>
+<?php if (!empty($logo_header)): ?>
+<header id="header">
+  <div class="logo"><?php print render($logo_header); ?></div>
+</header>
+<?php endif; ?>
+
 <div id="moreinfo">
 
   <div class="element-wrapper">

@@ -5156,7 +5156,7 @@ textarea::-webkit-input-placeholder {
 /* line 465, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
   position: fixed;
-  top: 0px;
+  top: 68px;
   left: 11px;
   right: 11px;
   border-top-width: 10px;

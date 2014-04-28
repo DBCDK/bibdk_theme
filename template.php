@@ -116,6 +116,10 @@ function bibdk_theme_preprocess_page(&$vars) {
     unset($lang_obj->prefix);
   }
 
+  if ( !$vars['is_front'] && !empty($vars['page']['content']['user_alert_user_alert']) ) {
+    unset($vars['page']['content']['user_alert_user_alert']);
+  }
+
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
   $vars['logo_header'] = array(
@@ -157,10 +161,22 @@ function bibdk_theme_preprocess_page(&$vars) {
   );
 
   switch (arg(0)) {
+    case 'overlay':
     case 'reservation':
     case 'email':
     case 'adhl':
       $vars['theme_hook_suggestions'][] = 'page__overlay';
+      $vars['logo_header'] = array(
+        '#theme' => 'image',
+        '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header-nopayoff.png',
+        '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+      );
+      switch (arg(1)) {
+        case 'infomedia':
+          // infomedia articles has bibliotek.dk logo in body
+          unset($vars['logo_header']);
+          break;
+      }
       break;
     case 'vejviser':
       $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
