@@ -7571,61 +7571,69 @@ body.page-overlay,
 body.page-reservation {
   background: #e8e8e8;
 }
-/* line 9, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 10, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+body.page-overlay h2, body.page-overlay .help-menu-subheader,
+body.page-reservation h2,
+body.page-reservation .help-menu-subheader {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.4em;
+}
+/* line 16, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 body.page-overlay .bottom-space,
 body.page-reservation .bottom-space {
   padding-bottom: 10px;
 }
-/* line 13, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 20, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 body.page-overlay .form-wrapper, body.page-overlay .form-item,
 body.page-reservation .form-wrapper,
 body.page-reservation .form-item {
   padding: 3px 0px 4px 0px;
 }
-/* line 17, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 24, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 body.page-overlay .fieldset-legend,
 body.page-reservation .fieldset-legend {
   padding: 10px 0 10px;
 }
 
-/* line 168, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 175, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 172, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 179, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 176, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 183, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 a.inactive, input[type="submit"].button-as-link:disabled {
   color: #51565a;
   cursor: default;
 }
 
-/* line 186, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 193, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 #popup .region-content {
   margin: 15px 20px;
 }
 
-/* line 190, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 197, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 #popup .element-wrapper {
   margin-bottom: 0;
 }
 
-/* line 194, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 201, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 #popup .form-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 198, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 205, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 #popup .form-wrapper:last-child {
   border-bottom-width: 0px;
   margin-bottom: 0px;
 }
 
-/* line 203, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
+/* line 210, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_global_elements.scss */
 #popup-button-close {
   float: right;
   margin-right: 10px;

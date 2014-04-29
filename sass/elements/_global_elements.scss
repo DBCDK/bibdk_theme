@@ -4,7 +4,14 @@
 
 body.page-overlay,
 body.page-reservation {
+
   background: $grey-6;
+
+  h2, .help-menu-subheader {
+    font-weight: bold; 
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+  }
 
   .bottom-space {
     padding-bottom: 10px;
