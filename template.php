@@ -15,6 +15,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'ding_facetbrowser') . '/css/facetbrowser.css']);
   unset($css[drupal_get_path('module', 'ting_search_carousel') . '/css/ting_search_carousel.css']);
   unset($css[drupal_get_path('module', 'user_alert') . '/css/user-alert.css']);
+  unset($css[drupal_get_path('module', 'bibdk_help') . '/css/bibdk_help.css']);
   unset($css[drupal_get_path('module', 'ctools') . '/css/modal.css']);
   unset($css['misc/vertical-tabs.css']);
 }
@@ -184,6 +185,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
+
 }
 
 

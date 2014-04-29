@@ -85,8 +85,6 @@ $sprites-layout: smart;
 
 
 
-
-
 // =============================================================================
 // Import styling for custom elements
 // =============================================================================
@@ -102,6 +100,9 @@ $sprites-layout: smart;
 @import "elements/infomedia";
 @import "elements/cart";
 @import "elements/toplist";
+@import "elements/userhelp";
+
+
 
 // =============================================================================
 // Import extra styling which needs to be added last
