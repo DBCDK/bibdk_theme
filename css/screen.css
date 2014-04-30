@@ -6000,8 +6000,9 @@ h1 {
   border-radius: 6px;
   padding: 0 35px 0 10px;
   padding:  0 2.1875rem 0 0.625rem;
+  font-weight: bold;
 }
-/* line 69, ../sass/components/_rs-carousel.scss */
+/* line 70, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-toggle:after {
   content: "";
   display: block;
@@ -6015,29 +6016,29 @@ h1 {
   bottom: 0;
   margin: auto;
 }
-/* line 82, ../sass/components/_rs-carousel.scss */
+/* line 83, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-toggle.toggled:after {
   content: "";
   height: 15px;
   width: 15px;
   background-position: -15px -553px;
 }
-/* line 89, ../sass/components/_rs-carousel.scss */
+/* line 90, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu {
   min-width: 0;
   top: 100%;
 }
-/* line 93, ../sass/components/_rs-carousel.scss */
+/* line 94, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu li {
   white-space: nowrap;
 }
 
-/* line 105, ../sass/components/_rs-carousel.scss */
+/* line 106, ../sass/components/_rs-carousel.scss */
 .rs-carousel-pagination {
   display: none;
 }
 
-/* line 110, ../sass/components/_rs-carousel.scss */
+/* line 111, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev,
 .rs-carousel-action-next {
   position: absolute;
@@ -6046,13 +6047,13 @@ h1 {
   display: block;
   width: 18px;
 }
-/* line 118, ../sass/components/_rs-carousel.scss */
+/* line 119, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev.rs-carousel-action-disabled,
 .rs-carousel-action-next.rs-carousel-action-disabled {
   opacity: 0.3;
   cursor: default;
 }
-/* line 123, ../sass/components/_rs-carousel.scss */
+/* line 124, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after,
 .rs-carousel-action-next:after {
   content: "";
@@ -6064,11 +6065,11 @@ h1 {
   margin: auto;
 }
 
-/* line 134, ../sass/components/_rs-carousel.scss */
+/* line 135, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev {
   left: -38px;
 }
-/* line 136, ../sass/components/_rs-carousel.scss */
+/* line 137, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after {
   content: "";
   height: 36px;
@@ -6076,11 +6077,11 @@ h1 {
   background-position: -14px -602px;
 }
 
-/* line 141, ../sass/components/_rs-carousel.scss */
+/* line 142, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next {
   right: -38px;
 }
-/* line 143, ../sass/components/_rs-carousel.scss */
+/* line 144, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next:after {
   content: "";
   height: 36px;
@@ -6088,7 +6089,7 @@ h1 {
   background-position: 0 -955px;
 }
 
-/* line 154, ../sass/components/_rs-carousel.scss */
+/* line 155, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item {
   width: 165px;
   float: left;
@@ -6101,35 +6102,35 @@ h1 {
   padding-right: 0.3125rem;
 }
 
-/* line 162, ../sass/components/_rs-carousel.scss */
+/* line 163, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-image {
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
 }
-/* line 165, ../sass/components/_rs-carousel.scss */
+/* line 166, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-image img {
   width: 100%;
 }
 
-/* line 170, ../sass/components/_rs-carousel.scss */
+/* line 171, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-title {
   text-align: center;
   line-height: 1.2;
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
 }
-/* line 175, ../sass/components/_rs-carousel.scss */
+/* line 176, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-title a {
   color: #25292c;
   font-weight: bold;
 }
 
-/* line 181, ../sass/components/_rs-carousel.scss */
+/* line 182, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-creator {
   text-align: center;
   line-height: 1.2;
 }
-/* line 185, ../sass/components/_rs-carousel.scss */
+/* line 186, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item-creator a {
   color: #51565a;
 }
