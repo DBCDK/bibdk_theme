@@ -410,31 +410,6 @@ left:-10px;
 
 
 
-// =============================================================================
-// Help menu
-// =============================================================================
-
-.pane-bibdk-help-bibdk-help-popup-menu,
-.pane-bibdk-help-bibdk-help-popup-menu-eng,
-.pane-bibdk-help {
-  padding: 20px;
-  .menu .menu {
-    margin-bottom: 10px;
-  }
-  li a {
-    border: solid 1px $grey-5;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    display: block;
-    padding: 10px 20px;
-    margin-bottom: 1px;
-  }
-  li li a {
-    margin-left: 10px;
-  }
-}
-
-
 
 // =============================================================================
 // Linkme, Infomedia

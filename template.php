@@ -15,6 +15,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'ding_facetbrowser') . '/css/facetbrowser.css']);
   unset($css[drupal_get_path('module', 'ting_search_carousel') . '/css/ting_search_carousel.css']);
   unset($css[drupal_get_path('module', 'user_alert') . '/css/user-alert.css']);
+  unset($css[drupal_get_path('module', 'bibdk_help') . '/css/bibdk_help.css']);
   unset($css[drupal_get_path('module', 'ctools') . '/css/modal.css']);
   unset($css['misc/vertical-tabs.css']);
 }
@@ -106,6 +107,19 @@ function bibdk_theme_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
+  global $language;
+  $language_default = language_default();
+  $lang_obj = $language;
+
+  // Remove language prefix on logo link if default language
+  if ($language_default->language == $language->language) {
+    $lang_obj = $language_default;
+    unset($lang_obj->prefix);
+  }
+
+  if ( !$vars['is_front'] && !empty($vars['page']['content']['user_alert_user_alert']) ) {
+    unset($vars['page']['content']['user_alert_user_alert']);
+  }
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
@@ -123,6 +137,7 @@ function bibdk_theme_preprocess_page(&$vars) {
       'attributes' => array(
         'title' => t('Home'),
       ),
+      'language' => $lang_obj,
       'html' => TRUE,
     ),
   );
@@ -141,17 +156,29 @@ function bibdk_theme_preprocess_page(&$vars) {
       'attributes' => array(
         'title' => t('Home'),
       ),
+      'language' => $lang_obj,
       'html' => TRUE,
     ),
   );
 
-
   switch (arg(0)) {
+    case 'overlay':
     case 'reservation':
     case 'email':
+    case 'adhl':
       $vars['theme_hook_suggestions'][] = 'page__overlay';
+      $vars['logo_header'] = array(
+        '#theme' => 'image',
+        '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-header-nopayoff.png',
+        '#alt' => t('Bibliotek.dk - loan of books, music, and films'),
+      );
+      switch (arg(1)) {
+        case 'infomedia':
+          // infomedia articles has bibliotek.dk logo in body
+          unset($vars['logo_header']);
+          break;
+      }
       break;
-
     case 'vejviser':
       $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
       $vars['page']['content']['#suffix'] = '</div></div>';
