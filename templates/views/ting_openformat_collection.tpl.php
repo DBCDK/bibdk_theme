@@ -7,7 +7,7 @@
 
       <div class="element-title">
         <div>
-          <h2><?php print $title; ?></h2>
+          <h2><?php print ( !empty($titleFull)) ? $titleFull : $title; ?></h2>
 
           <h3><?php print $author; ?></h3>
           <?php if (isset($partOf)) : ?>
