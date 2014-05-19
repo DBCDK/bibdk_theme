@@ -10,6 +10,21 @@
     border: none;
     // Remove left border from actions in work header
   }
+
+  .element-title {
+    float: left;
+  }
+
+  .element-actions {
+    float: right;
+    .field-type-bibdk-coll-reservation-button {
+    }
+  }
+
+  .element-types {
+    float: right;
+  }
+ 
 }
 
 // Work body
@@ -37,7 +52,7 @@
   &.element-section {
     padding: 0;
   }
-
+  
 }
 
 // Work cover
