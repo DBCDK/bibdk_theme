@@ -346,7 +346,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   $form['actions']['#weight'] = -1;
 
   // break elements into columns
-  if (!$page_id = $form['page_id']['#default_value']){
+  if (!$page_id = $form['page_id']['#value']){
     return;
   }
 
