@@ -101,8 +101,9 @@
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
           if(!Drupal.settings.full_view) {
+            // scrolTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
             $('html, body').animate({
-              scrollTop: $(this).closest('.work').offset().top
+              scrollTop: $(this).closest('.work').offset().top - 30
             }, 500);
           }
         }
