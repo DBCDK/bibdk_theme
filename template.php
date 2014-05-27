@@ -61,6 +61,17 @@ function bibdk_theme_theme() {
   );
 }
 
+function bibdk_theme_preprocess_pager_next(&$vars){
+  $vars['text'] = t('pager_next >',array(),array('context'=>'bibdk_theme'));
+}
+
+function bibdk_theme_preprocess_pager_previous(&$vars){
+  $vars['text'] = t('< pager_previous ',array(),array('context'=>'bibdk_theme'));
+}
+
+function bibdk_theme_preprocess_pager_first(&$vars){
+  $vars['text'] = t('pager_first',array(),array('context'=>'bibdk_theme'));
+}
 
 
 /**
