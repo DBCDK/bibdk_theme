@@ -114,7 +114,7 @@
   top: 0;
   bottom: 40px;
   display: block;
-  width: 18px;
+  width: 54px;
 
   &.rs-carousel-action-disabled {
     opacity: 0.3;
@@ -133,14 +133,14 @@
 }
 
 .rs-carousel-action-prev {
-  left: -38px;
+  left: -34px;
   &:after {
     @include add-sprite("carousel-arrow--left");
   }
 }
 
 .rs-carousel-action-next {
-  right: -38px;
+  right: -34px;
   &:after {
     @include add-sprite("carousel-arrow--right");
   }

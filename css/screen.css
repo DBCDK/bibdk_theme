@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle:after, .pane-bibdk-search-controls-search-control-sort .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
-  background: url('../img/sprites-sa74e090a9b.png') no-repeat;
+  background: url('../img/sprites-s08d4f81a67.png') no-repeat;
 }
 
 /* line 17, ../sass/utilities/_clearfix.scss */
@@ -5594,7 +5594,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -703px;
+  background-position: 0 -466px;
 }
 
 /* line 36, ../sass/components/global/_messages.scss */
@@ -5606,7 +5606,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -727px;
+  background-position: 0 -442px;
 }
 
 /* line 42, ../sass/components/global/_messages.scss */
@@ -5618,7 +5618,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -751px;
+  background-position: -24px -442px;
 }
 
 /* line 48, ../sass/components/global/_messages.scss */
@@ -5630,7 +5630,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -655px;
+  background-position: -14px -394px;
 }
 
 /* line 6, ../sass/components/global/_user-alerts.scss */
@@ -5647,7 +5647,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -703px;
+  background-position: 0 -466px;
 }
 /* line 21, ../sass/components/global/_user-alerts.scss */
 .user-alert .user-alert-message {
@@ -5669,7 +5669,7 @@ h1 {
   content: "";
   height: 24px;
   width: 24px;
-  background-position: 0 -655px;
+  background-position: -14px -394px;
   background-position: -15px -298px;
   content: "";
   display: block;
@@ -6009,7 +6009,7 @@ h1 {
   content: "";
   height: 15px;
   width: 15px;
-  background-position: 0 -433px;
+  background-position: -15px -285px;
   position: absolute;
   right: 10px;
   top: 0;
@@ -6021,7 +6021,7 @@ h1 {
   content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -553px;
+  background-position: 0 -360px;
 }
 /* line 90, ../sass/components/_rs-carousel.scss */
 .rs-carousel-header-select .dropdown-menu {
@@ -6045,7 +6045,7 @@ h1 {
   top: 0;
   bottom: 40px;
   display: block;
-  width: 18px;
+  width: 54px;
 }
 /* line 119, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev.rs-carousel-action-disabled,
@@ -6067,26 +6067,26 @@ h1 {
 
 /* line 135, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev {
-  left: -38px;
+  left: -34px;
 }
 /* line 137, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-prev:after {
   content: "";
-  height: 36px;
-  width: 18px;
-  background-position: -14px -602px;
+  height: 54px;
+  width: 54px;
+  background-position: 0 -670px;
 }
 
 /* line 142, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next {
-  right: -38px;
+  right: -34px;
 }
 /* line 144, ../sass/components/_rs-carousel.scss */
 .rs-carousel-action-next:after {
   content: "";
-  height: 36px;
-  width: 18px;
-  background-position: 0 -955px;
+  height: 54px;
+  width: 54px;
+  background-position: 0 -724px;
 }
 
 /* line 155, ../sass/components/_rs-carousel.scss */
@@ -6459,7 +6459,7 @@ h1 {
   content: "";
   height: 15px;
   width: 15px;
-  background-position: 0 -433px;
+  background-position: -15px -285px;
   position: absolute;
   display: block;
   margin-top: auto;
@@ -6473,7 +6473,7 @@ h1 {
   content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -553px;
+  background-position: 0 -360px;
 }
 
 /* line 51, ../sass/components/_works-controls.scss */
@@ -6508,14 +6508,14 @@ h1 {
   content: "";
   height: 14px;
   width: 15px;
-  background-position: -15px -14px;
+  background-position: 0 0;
 }
 /* line 84, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed.inactive:after {
   content: "";
   height: 14px;
   width: 15px;
-  background-position: 0 0;
+  background-position: -9px -15px;
 }
 
 /* line 92, ../sass/components/_works-controls.scss */
@@ -6523,14 +6523,14 @@ h1 {
   content: "";
   height: 14px;
   width: 15px;
-  background-position: 0 -14px;
+  background-position: 0 -418px;
 }
 /* line 95, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-expanded.inactive:after {
   content: "";
   height: 14px;
   width: 15px;
-  background-position: -15px 0;
+  background-position: -24px -15px;
 }
 
 /* line 156, ../sass/components/_works-controls.scss */
@@ -6623,7 +6623,7 @@ h1 {
   content: "";
   height: 15px;
   width: 15px;
-  background-position: -15px -253px;
+  background-position: -30px -150px;
   position: absolute;
   display: block;
   margin-top: auto;
@@ -9938,7 +9938,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   content: "";
   height: 9px;
   width: 9px;
-  background-position: 0 -638px;
+  background-position: 0 -15px;
   position: relative;
   left: 0.5em;
   display: inline-block;
