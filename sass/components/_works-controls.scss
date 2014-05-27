@@ -6,8 +6,14 @@
   margin-bottom: 10px;
 }
 
+.works-controls:last-child .pane-ting-openformat-pager{
+  float:right;
+  margin:0;
+}
+
 .pane-bibdk-search-controls-search-control-sort,
-.pane-ting-openformat-full-view {
+.pane-ting-openformat-full-view,
+.pane-ting-openformat-pager {
   float: left;
   position: relative;
   @include inline-block();
@@ -41,9 +47,13 @@
 
 }
 
+.pane-ting-openformat-pager {
+  .pane-content a {
+    padding: 0 10px 0 10px;
+  }
+}
 
 .pane-ting-openformat-full-view {
-
   .pane-content a {
     padding: 0 10px 0 30px;
   }
