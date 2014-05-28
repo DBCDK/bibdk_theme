@@ -9,11 +9,14 @@
     <?php print $search['actions']; ?>
   </div>
 
+  <?php if (isset($search['search_controls_sort'])): ?>
+    <?php print $search['search_controls_sort']; ?>
+  <?php endif; ?>
+
   <?php if (isset($search['advanced'])): ?>
     <?php print $search['advanced']; ?>
   <?php endif; ?>
 
 </div>
-
 
 <?php print $search['hidden']; ?>
