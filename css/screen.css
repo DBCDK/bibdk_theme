@@ -8944,7 +8944,7 @@ form#search-block-form fieldset#edit-advanced {
 }
 
 /* line 241, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_custom_search_elements.scss */
-form#search-block-form fieldset#edit-advanced.is-visible {
+.page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
   position: relative;
   top: -43px;
 }
