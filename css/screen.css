@@ -5580,7 +5580,7 @@ h1 {
 /* line 16, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/components/global/_messages.scss */
 .message:after {
   position: absolute;
-  top: 12px;
+  top: 4px;
   left: 12px;
   content: '';
 }
