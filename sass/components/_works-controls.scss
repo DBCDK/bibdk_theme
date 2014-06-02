@@ -36,6 +36,10 @@
     padding: 0 35px 0 10px;
   }
 
+  .dropdown-menu a {
+    white-space: nowrap;
+  }
+
   .dropdown-toggle:after {
     @include add-sprite("angle--down--blue");
     @include align("vcenter");
