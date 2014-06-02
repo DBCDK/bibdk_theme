@@ -408,7 +408,8 @@
 
         var selector = $('.hidden_selector');
         selector.val(1);
-        $(selector).closest('form').submit();
+        var but = $('#edit-next');
+        but.click();
       });
 
       // ****************************  popovers **************************** //
