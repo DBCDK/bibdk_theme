@@ -3,7 +3,6 @@
  * @file
  * Theme implementation for bib.dk custom search elements.
  */
-dpm($form);
 ?>
 <div class='fieldset-legend'><label for="<?php print $element_id; ?>"><?php print $title; ?></label></div>
 <div class="fieldset-description"><?php print $description;?></div>
