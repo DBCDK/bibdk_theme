@@ -262,7 +262,7 @@ left:-10px;
 //
 // Common widget styling
 //
-.widget, .article-widget{
+.widget, .article-widget {
   margin-bottom: 10px;
   @include transition(background-color 0.3s);
 
@@ -310,6 +310,10 @@ left:-10px;
         color: $white;
       }
     }
+  }
+  
+  a {
+    color: $blue-lighter;
   }
 
   .field-taxonomy,
