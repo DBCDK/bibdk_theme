@@ -3,8 +3,9 @@
  * @file
  * Theme implementation for bib.dk custom search elements.
  */
+dpm($form);
 ?>
-<div class='fieldset-legend'><?php print $title; ?></div>
+<div class='fieldset-legend'><label for="<?php print $element_id; ?>"><?php print $title; ?></label></div>
 <div class="fieldset-description"><?php print $description;?></div>
 <p class="helptext popover-button" title="<?php print strip_tags($help); ?>"><a href="#">?</a></p>
 <div class="popover element-wrapper linkme-wrapper visuallyhidden">
