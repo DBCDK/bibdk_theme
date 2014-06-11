@@ -101,7 +101,7 @@
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
           if(!Drupal.settings.full_view) {
-            // scrolTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
+            // scrollTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
             $('html, body').animate({
               scrollTop: $(this).closest('.work').offset().top - 30
             }, 500);
@@ -353,7 +353,7 @@
 
 
       // pjo 08-01-13 bug in outcommented toggle function
-      $('.toggle-next-section').click(function(e) {
+      $('.toggle-next-section', context).click(function(e) {
         e.preventDefault();
         var section = $(this).closest('.element-section').next('.element-section');
         if(section.hasClass('visuallyhidden')) {
