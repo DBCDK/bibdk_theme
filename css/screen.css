@@ -6458,20 +6458,15 @@ h1 {
   line-height: 1.875rem;
 }
 
-/* line 39, ../sass/components/_works-controls.scss */
-.ting-openformat-feeds {
-  background-color: none;
-}
-
-/* line 45, ../sass/components/_works-controls.scss */
+/* line 41, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .pane-content a {
   padding: 0 35px 0 10px;
 }
-/* line 49, ../sass/components/_works-controls.scss */
+/* line 45, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .dropdown-menu a {
   white-space: nowrap;
 }
-/* line 53, ../sass/components/_works-controls.scss */
+/* line 49, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .dropdown-toggle:after {
   content: "";
   height: 15px;
@@ -6485,7 +6480,7 @@ h1 {
   bottom: 0;
   right: 10px;
 }
-/* line 58, ../sass/components/_works-controls.scss */
+/* line 54, ../sass/components/_works-controls.scss */
 .pane-bibdk-search-controls-search-control-sort .dropdown-toggle.toggled:after {
   content: "";
   height: 15px;
@@ -6493,22 +6488,22 @@ h1 {
   background-position: 0 -360px;
 }
 
-/* line 65, ../sass/components/_works-controls.scss */
+/* line 61, ../sass/components/_works-controls.scss */
 .pane-ting-openformat-pager .pane-content a {
   padding: 0 10px 0 10px;
 }
 
-/* line 71, ../sass/components/_works-controls.scss */
+/* line 67, ../sass/components/_works-controls.scss */
 .pane-ting-openformat-full-view .pane-content a {
   padding: 0 10px 0 30px;
 }
-/* line 74, ../sass/components/_works-controls.scss */
+/* line 70, ../sass/components/_works-controls.scss */
 .pane-ting-openformat-full-view .ajax-progress .throbber {
   float: right;
   margin: 7px 0 0 5px;
 }
 
-/* line 85, ../sass/components/_works-controls.scss */
+/* line 81, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed:after,
 #ting-openformat-full-view-button-expanded:after {
   position: absolute;
@@ -6520,14 +6515,14 @@ h1 {
   left: 10px;
 }
 
-/* line 95, ../sass/components/_works-controls.scss */
+/* line 91, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed:after {
   content: "";
   height: 14px;
   width: 15px;
   background-position: 0 0;
 }
-/* line 98, ../sass/components/_works-controls.scss */
+/* line 94, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-closed.inactive:after {
   content: "";
   height: 14px;
@@ -6535,14 +6530,14 @@ h1 {
   background-position: -9px -15px;
 }
 
-/* line 106, ../sass/components/_works-controls.scss */
+/* line 102, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-expanded:after {
   content: "";
   height: 14px;
   width: 15px;
   background-position: 0 -418px;
 }
-/* line 109, ../sass/components/_works-controls.scss */
+/* line 105, ../sass/components/_works-controls.scss */
 #ting-openformat-full-view-button-expanded.inactive:after {
   content: "";
   height: 14px;
