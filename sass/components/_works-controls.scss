@@ -17,6 +17,7 @@
 }
 
 .pane-bibdk-search-controls-search-control-sort,
+#edit-search-controls-sort,
 .pane-ting-openformat-full-view,
 .pane-ting-openformat-pager,
 .pane-ting-openformat-feeds {
@@ -29,16 +30,20 @@
   background-color: $white;
   margin-right: 10px;
 
-  .pane-content a {
+  div > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
   }
 }
 
-.pane-bibdk-search-controls-search-control-sort {
+#edit-search-controls-sort {
+  margin-top: 5px;
+}
 
-  .pane-content a {
+.bibdk-search-controls-form {
+
+  a {
     padding: 0 35px 0 10px;
   }
 

@@ -2,7 +2,9 @@
 // Bib.dk search pages
 // =============================================================================
 
-
+#edit-advanced {
+  float: right;
+}
 
 div#search-advanced-toggle {
   text-align: right;
@@ -230,6 +232,15 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 
 .container-inline div#search-advanced-panel {
   display: block;
+}
+
+form#search-block-form fieldset#edit-advanced {
+  clear: right;
+}
+
+.page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
+  position: relative;
+  top: -43px;
 }
 
 .allematerialer div#search-advanced-panel {
