@@ -9883,7 +9883,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   padding-bottom: 20px;
   padding-right: 20px;
 }
-/* line 29, ../sass/elements/_subject_hierachy.scss */
+/* line 30, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .themes__item--active > p:after {
   position: absolute;
   z-index: 100;
@@ -9898,7 +9898,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   border-color: transparent transparent #d2eaf1 transparent;
   border-bottom-style: solid;
 }
-/* line 38, ../sass/elements/_subject_hierachy.scss */
+/* line 39, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .bibdk-subject-hierarchy-header {
   color: #3c4043;
   font-size: 15px;
@@ -9908,25 +9908,29 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-weight: bold;
   float: left;
 }
-/* line 47, ../sass/elements/_subject_hierachy.scss */
+/* line 49, ../sass/elements/_subject_hierachy.scss */
+#bibdk-subject-hierarchy .bibdk-subject-hierarchy-helptext {
+  float: left;
+}
+/* line 53, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierarchy .icon-blue-x {
   background-image: url("../img/blue-x.png");
 }
 
-/* line 56, ../sass/elements/_subject_hierachy.scss */
+/* line 62, ../sass/elements/_subject_hierachy.scss */
 .themes {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-/* line 62, ../sass/elements/_subject_hierachy.scss */
+/* line 68, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists__wrapper {
   float: left;
   width: 100%;
   display: none;
 }
 
-/* line 67, ../sass/elements/_subject_hierachy.scss */
+/* line 73, ../sass/elements/_subject_hierachy.scss */
 .themes__sublists {
   position: relative;
   padding: 15px;
@@ -9935,7 +9939,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-bottom: 30px;
 }
 
-/* line 76, ../sass/elements/_subject_hierachy.scss */
+/* line 82, ../sass/elements/_subject_hierachy.scss */
 .themes__close-button {
   position: absolute;
   top: 8px;
@@ -9943,11 +9947,11 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   cursor: pointer;
 }
 
-/* line 85, ../sass/elements/_subject_hierachy.scss */
+/* line 91, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb {
   margin-bottom: 20px;
 }
-/* line 88, ../sass/elements/_subject_hierachy.scss */
+/* line 94, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9958,20 +9962,20 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 93, ../sass/elements/_subject_hierachy.scss */
+/* line 99, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:after {
   content: " \203A  ";
 }
-/* line 98, ../sass/elements/_subject_hierachy.scss */
+/* line 104, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child {
   font-weight: bold;
 }
-/* line 101, ../sass/elements/_subject_hierachy.scss */
+/* line 107, ../sass/elements/_subject_hierachy.scss */
 .themes__breadcrumb a:last-child:after {
   content: "";
 }
 
-/* line 110, ../sass/elements/_subject_hierachy.scss */
+/* line 116, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9983,12 +9987,12 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-right: -4px;
   margin-bottom: 5px;
 }
-/* line 117, ../sass/elements/_subject_hierachy.scss */
+/* line 123, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a {
   display: block;
   padding-right: 20px;
 }
-/* line 121, ../sass/elements/_subject_hierachy.scss */
+/* line 127, ../sass/elements/_subject_hierachy.scss */
 .themes__sublist a.nesting:after {
   content: '';
   content: "";
@@ -10000,51 +10004,51 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   display: inline-block;
 }
 
-/* line 132, ../sass/elements/_subject_hierachy.scss */
+/* line 138, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult .header {
   padding-bottom: 20px;
 }
-/* line 135, ../sass/elements/_subject_hierachy.scss */
+/* line 141, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult h1 {
   font-size: 1.5em;
 }
-/* line 138, ../sass/elements/_subject_hierachy.scss */
+/* line 144, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult h2 {
   font-weight: bold;
 }
-/* line 141, ../sass/elements/_subject_hierachy.scss */
+/* line 147, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult .themes__breadcrumb {
   margin-bottom: 0;
 }
-/* line 143, ../sass/elements/_subject_hierachy.scss */
+/* line 149, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult .themes__breadcrumb a {
   color: #3c4043;
 }
-/* line 146, ../sass/elements/_subject_hierachy.scss */
+/* line 152, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult .themes__breadcrumb a:last-child {
   font-weight: normal;
 }
-/* line 150, ../sass/elements/_subject_hierachy.scss */
+/* line 156, ../sass/elements/_subject_hierachy.scss */
 .bibdk-subject-hierarchy-searchresult .item-list {
   margin-bottom: 20px;
 }
 
-/* line 155, ../sass/elements/_subject_hierachy.scss */
+/* line 161, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierachy-searchfield-form {
   float: right;
 }
-/* line 158, ../sass/elements/_subject_hierachy.scss */
+/* line 164, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierachy-searchfield-form .form-item {
   float: left;
   padding: 0;
 }
-/* line 163, ../sass/elements/_subject_hierachy.scss */
+/* line 169, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierachy-searchfield-form .searchfield-input {
   line-height: 30px;
   height: 30px;
   margin-right: 10px;
 }
-/* line 168, ../sass/elements/_subject_hierachy.scss */
+/* line 174, ../sass/elements/_subject_hierachy.scss */
 #bibdk-subject-hierachy-searchfield-form .ajax-progress .message {
   display: none;
 }
