@@ -30,7 +30,7 @@
   background-color: $white;
   margin-right: 10px;
 
-  div > a {
+  div, span > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
@@ -64,7 +64,7 @@
 
 .pane-ting-openformat-pager {
   .pane-content a {
-    padding: 0 10px 0 10px;
+   padding: 0 10px 0 10px;
   }
 }
 
