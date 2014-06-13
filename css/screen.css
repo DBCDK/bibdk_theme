@@ -6448,11 +6448,15 @@ h1 {
   margin-right: 10px;
 }
 /* line 33, ../sass/components/_works-controls.scss */
-.pane-bibdk-search-controls-search-control-sort div > a,
-#edit-search-controls-sort div > a,
-.pane-ting-openformat-full-view div > a,
-.pane-ting-openformat-pager div > a,
-.pane-ting-openformat-feeds div > a {
+.pane-bibdk-search-controls-search-control-sort div, .pane-bibdk-search-controls-search-control-sort span > a,
+#edit-search-controls-sort div,
+#edit-search-controls-sort span > a,
+.pane-ting-openformat-full-view div,
+.pane-ting-openformat-full-view span > a,
+.pane-ting-openformat-pager div,
+.pane-ting-openformat-pager span > a,
+.pane-ting-openformat-feeds div,
+.pane-ting-openformat-feeds span > a {
   position: relative;
   height: 30px;
   height: 1.875rem;
