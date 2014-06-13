@@ -375,7 +375,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   }
 
   // break elements into columns
-  if ( empty($form['page_id']['#default_value']) || !$page_id = $form['page_id']['#default_value'] ){
+  if ( empty($form['page_id']['#value']) || !$page_id = $form['page_id']['#value'] ){
     return;
   }
 
