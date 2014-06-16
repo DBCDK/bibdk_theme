@@ -1,0 +1,178 @@
+// =============================================================================
+// Bibliotek.dk Subject hierarchy
+// =============================================================================
+
+#bibdk-subject-hierarchy {
+
+    .themes__item {
+        float: left;
+        width: 25%;
+        overflow: hidden;
+        p {
+            margin: 0;
+            height: 85px;
+            position: relative;
+        }
+        .header {
+            display: block;
+            padding-right: 20px;
+            padding-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .note {
+            display: block;
+            padding-bottom: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .themes__item--active > p:after {
+        position: absolute;
+        z-index: 100;
+        bottom: 0;
+        left: 50%;
+        margin-left: -8px;
+        @include css-triangle(8px, $blue-lighter, bottom);
+    }
+
+    .bibdk-subject-hierarchy-header {
+        color: $grey-2;
+        font-size: 15px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        font-weight: bold;
+        float: left;
+    }
+
+    .bibdk-subject-hierarchy-helptext {
+        float: left;
+    }
+
+    .icon-blue-x {
+        background-image: url("../img/blue-x.png");
+    }
+}
+
+// =============================================================================
+// Temaindgange
+// =============================================================================
+
+.themes {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+// Container of the sublists
+.themes__sublists__wrapper {
+  float: left;
+  width: 100%;
+  display:none;
+}
+.themes__sublists {
+  position:relative;
+  padding:15px;
+  border:solid 5px $blue-lighter;
+  background-color: $white;
+  margin-bottom:30px;
+}
+
+// Close button
+.themes__close-button {
+  position:absolute;
+  top:8px;
+  right:10px;
+  cursor: pointer;
+}
+
+
+// Breadcrumb
+.themes__breadcrumb {
+  margin-bottom:20px;
+
+  a {
+    @include inline-block();
+    font-size:14px;
+    margin-right: 3px;
+
+    &:after {
+      content: " \203A  ";
+    }
+  }
+
+  a:last-child {
+    font-weight:bold;
+
+    &:after {
+      content: "";
+    }
+  }
+
+}
+
+// Each sublist
+.themes__sublist {
+  li {
+    @include inline-block(top);
+    width: 25%;
+    margin-right: -4px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: block;
+    padding-right: 20px;
+
+    &.nesting:after {
+      content: '';
+      @include add-sprite('plus--small--blue');
+      position: relative;
+      left: 0.5em;
+      display: inline-block;
+    }
+  }
+}
+
+.bibdk-subject-hierarchy-searchresult {
+  .header {
+    padding-bottom: 20px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .themes__breadcrumb {
+    margin-bottom: 0;
+    a {
+      color: $grey-2;
+    }
+     a:last-child {
+      font-weight: normal;
+    }
+  }
+  .item-list {
+    margin-bottom: 20px;
+  }
+}
+
+#bibdk-subject-hierarchy-searchfield-form {
+  float: right;
+
+  .form-item{
+    float: left;
+    padding: 0;
+  }
+
+  .searchfield-input {
+    line-height: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .ajax-progress .message {
+    display:none;
+  }
+
+}
