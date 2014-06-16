@@ -6,8 +6,21 @@
   margin-bottom: 10px;
 }
 
+.works-controls .pane-ting-openformat-pager{
+  float:right;
+  margin:0;
+}
+
+.works-controls .pane-ting-openformat-feeds{
+  background-color: $grey-6;
+  border: none;
+}
+
 .pane-bibdk-search-controls-search-control-sort,
-.pane-ting-openformat-full-view {
+#edit-search-controls-sort,
+.pane-ting-openformat-full-view,
+.pane-ting-openformat-pager,
+.pane-ting-openformat-feeds {
   float: left;
   position: relative;
   @include inline-block();
@@ -17,17 +30,25 @@
   background-color: $white;
   margin-right: 10px;
 
-  .pane-content a {
+  div, span > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
   }
 }
 
-.pane-bibdk-search-controls-search-control-sort {
+#edit-search-controls-sort {
+  margin-top: 5px;
+}
 
-  .pane-content a {
+.bibdk-search-controls-form {
+
+  a {
     padding: 0 35px 0 10px;
+  }
+
+  .dropdown-menu a {
+    white-space: nowrap;
   }
 
   .dropdown-toggle:after {
@@ -41,9 +62,13 @@
 
 }
 
+.pane-ting-openformat-pager {
+  .pane-content a {
+   padding: 0 10px 0 10px;
+  }
+}
 
 .pane-ting-openformat-full-view {
-
   .pane-content a {
     padding: 0 10px 0 30px;
   }
@@ -88,36 +113,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.pane-ting-openformat-feeds {
-
-}
-
-
-
-
-
-
-
-
-
-
-
 .works-control {
 
 }
@@ -143,9 +138,9 @@
 }
 
 
-.pane-ting-openformat-feeds {
-  float: right;
-}
+//.pane-ting-openformat-feeds {
+//  float: right;
+//}
 
 
 

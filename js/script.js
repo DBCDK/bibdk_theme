@@ -101,8 +101,9 @@
           $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
 
           if(!Drupal.settings.full_view) {
+            // scrollTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
             $('html, body').animate({
-              scrollTop: $(this).closest('.work').offset().top
+              scrollTop: $(this).closest('.work').offset().top - 30
             }, 500);
           }
         }
@@ -352,7 +353,7 @@
 
 
       // pjo 08-01-13 bug in outcommented toggle function
-      $('.toggle-next-section').click(function(e) {
+      $('.toggle-next-section', context).click(function(e) {
         e.preventDefault();
         var section = $(this).closest('.element-section').next('.element-section');
         if(section.hasClass('visuallyhidden')) {
@@ -407,7 +408,8 @@
 
         var selector = $('.hidden_selector');
         selector.val(1);
-        $(selector).closest('form').submit();
+        var but = $('#edit-next');
+        but.click();
       });
 
       // ****************************  popovers **************************** //
@@ -453,16 +455,19 @@
 
       // ****************************  popovers **************************** //
       // SEARCH SORT DROPDOWN
-      $('.bibdk-search-controls-form .dropdown-menu li a').click(function() {
+      $('.bibdk-search-controls-form .dropdown-menu li a').click(function(e) {
+        // set hidden field in search form to selected value
+        if ( $("body.page-bibdk-frontpage")[0] ) {
+          e.preventDefault();
+        }
         var value = "";
         var textString = $(this).text();
-        var idHidden = $(this).parents(".bibdk-search-controls-form").attr('data');
-        if(selectValue = $(this).attr('data')) {
+        var idHidden = $(this).parents(".bibdk-search-controls-form").attr('data-control-name');
+        if ( selectValue = $(this).attr('data-value') ) {
           value = selectValue;
         }
         $("#" + idHidden).val(value);
         $(this).parents(".bibdk-search-controls-form").find(".selected-text").text(textString);
-        // $("#search-block-form").submit();
       });
 
       // ************************** SELECT SEARCH INPUT ON CLICK  ************************* //
@@ -518,10 +523,12 @@
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
         // Move to first input field in expanded search, if activated.
-        if($('#search-advanced-toggle').hasClass('toggled') === true) {
+        if ( $('#search-advanced-toggle').hasClass('toggled') === true ) {
+          $('#edit-advanced').removeClass('is-visible');
           $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
         }
         else {
+          $('#edit-advanced').addClass('is-visible');
           $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
         }
       });

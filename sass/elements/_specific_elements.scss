@@ -1,12 +1,21 @@
 // =============================================================================
+// Exportlinks
+// =============================================================================
+
+.action_element_refexportlinks {
+  padding: 0px; 
+  .element-section {
+    padding: 0px;
+  }
+}
+
+// =============================================================================
 // Search
 // =============================================================================
 /* Override drupal style for lists in search result*/
 .search-results li {
   margin-bottom: inherit;
 }
-
-
 
 // =============================================================================
 // Library
@@ -78,8 +87,12 @@
 .ting-agency-library {
   @extend .clearfix;
 
-  hgroup {
+  .hgroup {
     margin-bottom: 10px;
+    float: left;
+  }
+  .hgroup.has-action {
+    max-width: 250px;
   }
   h3 {
     font-weight: normal;
@@ -125,6 +138,12 @@ h3.library-list-header{
   .element-section{
     padding:2px 5px 2px 10px;
   }
+  .hgroup {
+    margin-bottom: 0px;
+    float: left;
+  }
+  // hgroup is deprecated in html5
+  // to do: check if infomedia list use ting_agency_library.tpl.php
   hgroup {
     margin-bottom: 0px;
   }
@@ -262,7 +281,7 @@ left:-10px;
 //
 // Common widget styling
 //
-.widget, .article-widget{
+.widget, .article-widget {
   margin-bottom: 10px;
   @include transition(background-color 0.3s);
 
@@ -310,6 +329,10 @@ left:-10px;
         color: $white;
       }
     }
+  }
+  
+  a {
+    color: $blue-lighter;
   }
 
   .field-taxonomy,

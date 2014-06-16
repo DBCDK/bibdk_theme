@@ -61,6 +61,17 @@ function bibdk_theme_theme() {
   );
 }
 
+function bibdk_theme_preprocess_pager_next(&$vars){
+  $vars['text'] = t('pager_next >',array(),array('context'=>'bibdk_theme'));
+}
+
+function bibdk_theme_preprocess_pager_previous(&$vars){
+  $vars['text'] = t('< pager_previous ',array(),array('context'=>'bibdk_theme'));
+}
+
+function bibdk_theme_preprocess_pager_first(&$vars){
+  $vars['text'] = t('pager_first',array(),array('context'=>'bibdk_theme'));
+}
 
 
 /**
@@ -340,13 +351,31 @@ function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
 
 
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
+
   $form['search_block_form']['#maxlength'] = 1000;
   $form['#attributes']['class'] = array('search-form-horizontal');
   $form['search_block_form']['#weight'] = -2;
   $form['actions']['#weight'] = -1;
 
+  // search result ranking contron on front page
+  $path = current_path();
+  if ( strpos($path,'bibdk_frontpage') === 0 ) {
+    $form['search_controls_sort'] = array(
+      'fieldset' => array(
+        '#type' => 'fieldset',
+        '#attributes' => array(
+          'id' => drupal_html_id('edit-search-controls-sort'),
+          'class' => array('bibdk-search-controls-form bibdk-search-controls-sort-front'),
+          'data-control-name' => 'controls_search_sort',
+          'data-control-path' => $path,
+        ),
+        'sort_form' => drupal_get_form('bibdk_search_controls_form', 'sort'),
+      ),
+    );
+  }
+
   // break elements into columns
-  if (!$page_id = $form['page_id']['#value']){
+  if ( empty($form['page_id']['#value']) || !$page_id = $form['page_id']['#value'] ){
     return;
   }
 
@@ -372,6 +401,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
       _break_into_columns_expand('expand', 'materiale', 'n/amateriale', 2, $form);
       break;
   }
+
 }
 
 
