@@ -143,6 +143,7 @@
   }
   h2 {
     font-weight: bold;
+    margin-bottom: 5px;
   }
   .themes__breadcrumb {
     margin-bottom: 0;
@@ -156,6 +157,43 @@
   .item-list {
     margin-bottom: 20px;
   }
+
+  .subject-hierarchy-suggestion-form {
+    margin-top: 10px;
+    padding-top: 10px;
+
+    .header {
+      padding: 0;
+    }
+    .form-wrapper {
+      border-bottom: 0px;
+    }
+    .form-wrapper.fieldset-hierarchy-suggestion, 
+    .form-wrapper.captcha {
+      float: left;
+    }
+    .form-item {
+      padding: 10px 0;
+      float: left;
+    }
+    .searchfield-input {
+      line-height: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .searchfield-submit {
+      margin: 10px 0;
+    }
+    .ajax-progress .message {
+      display:none;
+    }
+
+  }
+
+  .subject-hierarchy-suggestion-form.send-suggestion {
+    border-top: 1px solid $blue-lighter;
+  }
+
 }
 
 #bibdk-subject-hierarchy-searchfield-form {
@@ -176,3 +214,4 @@
   }
 
 }
+
