@@ -9501,7 +9501,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 /* line 14, ../sass/elements/_search_work_manifestations.scss */
 .work-header .element-title {
   float: left;
-  width: 75%;
+  max-width: 60%;
 }
 /* line 19, ../sass/elements/_search_work_manifestations.scss */
 .work-header .element-actions {
