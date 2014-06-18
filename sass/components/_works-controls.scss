@@ -30,7 +30,7 @@
   background-color: $white;
   margin-right: 10px;
 
-  div, span > a {
+  div > a, span > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
