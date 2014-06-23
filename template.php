@@ -274,7 +274,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_usersettings_user_settings_form':
       drupal_set_title(t('Settings'));
-      _wrap_in_element($form);
+      //_wrap_in_element($form);
       break;
     case 'bibdk_favourite_get_favourites_form':
       drupal_set_title(t('Favourites'));

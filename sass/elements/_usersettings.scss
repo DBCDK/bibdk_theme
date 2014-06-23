@@ -1,0 +1,24 @@
+// =============================================================================
+// Bibliotek.dk usersettings
+// =============================================================================
+
+#bibdk-usersettings-user-settings-form {
+  .usersettings-sub--wrapper {
+    margin-left: 4em;
+  }
+
+
+  .tab-sections .form-wrapper {
+    border: solid 8px $blue-lighter;
+  }
+
+  .bibdk-tabs .bibdk-usersettings {
+    border: solid 8px $blue-lighter;
+    padding: 20px;
+  }
+
+  .bibdk-tabs-light {
+    border: none;
+    padding: 0;
+  }
+}

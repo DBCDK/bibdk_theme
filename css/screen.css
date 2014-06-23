@@ -10241,6 +10241,25 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-bottom: 0.5em;
 }
 
+/* line 6, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .usersettings-sub--wrapper {
+  margin-left: 4em;
+}
+/* line 11, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .tab-sections .form-wrapper {
+  border: solid 8px #d2eaf1;
+}
+/* line 15, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .bibdk-tabs .bibdk-usersettings {
+  border: solid 8px #d2eaf1;
+  padding: 20px;
+}
+/* line 20, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .bibdk-tabs-light {
+  border: none;
+  padding: 0;
+}
+
 /* line 2, ../sass/_extra.scss */
 .ir {
   display: block;
