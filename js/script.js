@@ -408,7 +408,7 @@
 
         var selector = $('.hidden_selector');
         selector.val(1);
-        var but = $('#edit-next');
+        var but = $('#edit-2');
         but.click();
       });
 
