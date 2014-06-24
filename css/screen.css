@@ -10241,23 +10241,48 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   margin-bottom: 0.5em;
 }
 
-/* line 6, ../sass/elements/_usersettings.scss */
-#bibdk-usersettings-user-settings-form .usersettings-sub--wrapper {
-  margin-left: 4em;
-}
-/* line 11, ../sass/elements/_usersettings.scss */
+/* line 10, ../sass/elements/_usersettings.scss */
 #bibdk-usersettings-user-settings-form .tab-sections .form-wrapper {
   border: solid 8px #d2eaf1;
 }
-/* line 15, ../sass/elements/_usersettings.scss */
+/* line 14, ../sass/elements/_usersettings.scss */
 #bibdk-usersettings-user-settings-form .bibdk-tabs .bibdk-usersettings {
   border: solid 8px #d2eaf1;
   padding: 20px;
 }
-/* line 20, ../sass/elements/_usersettings.scss */
+/* line 19, ../sass/elements/_usersettings.scss */
 #bibdk-usersettings-user-settings-form .bibdk-tabs-light {
   border: none;
   padding: 0;
+}
+/* line 24, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .form-type-radio, #bibdk-usersettings-user-settings-form .form-type-radios {
+  padding: 0;
+  float: none;
+}
+/* line 29, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .form-type-radios > label {
+  font-weight: bold;
+  background-color: #d2eaf1;
+}
+/* line 35, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .usersettings-group-wrapper {
+  border: solid 1px #ddd;
+  margin: 1em 0;
+}
+/* line 40, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .group-main {
+  padding-left: 1em;
+}
+/* line 43, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .group-sub {
+  padding-left: 4em;
+}
+/* line 47, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .usersettings-sub--wrapper .form-type-radios > label {
+  padding-left: 3em;
+  border-top: solid 1px gainsboro;
+  background-color: gainsboro;
 }
 
 /* line 2, ../sass/_extra.scss */

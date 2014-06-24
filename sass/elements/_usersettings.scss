@@ -4,9 +4,8 @@
 
 #bibdk-usersettings-user-settings-form {
   .usersettings-sub--wrapper {
-    margin-left: 4em;
+    //margin-left: 4em;
   }
-
 
   .tab-sections .form-wrapper {
     border: solid 8px $blue-lighter;
@@ -21,4 +20,34 @@
     border: none;
     padding: 0;
   }
+
+  .form-type-radio, .form-type-radios {
+    padding: 0;
+    float: none;
+  }
+
+  .form-type-radios > label {
+    font-weight: bold;
+    background-color: $blue-lighter;
+
+  }
+
+  .usersettings-group-wrapper {
+    border: solid 1px #ddd;
+    margin: 1em 0;
+  }
+
+  .group-main {
+    padding-left: 1em;
+  }
+  .group-sub {
+    padding-left: 4em;
+  }
+
+  .usersettings-sub--wrapper .form-type-radios > label {
+    padding-left: 3em;
+    border-top: solid 1px $grey-5;
+    background-color: $grey-5;
+  }
+
 }
