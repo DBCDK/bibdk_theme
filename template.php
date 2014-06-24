@@ -118,6 +118,12 @@ function bibdk_theme_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
+  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page','<front>');
+
+  if(drupal_is_front_page() && ($front !== '<front>' && $front !== 'bibdk_frontpage' )) {
+    drupal_goto($front);
+  }
+
   global $language;
   $language_default = language_default();
   $lang_obj = $language;
@@ -143,7 +149,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   $vars['logo_header_link'] = array(
     '#theme' => 'link',
     '#text' => drupal_render($vars['logo_header']),
-    '#path' => '<front>',
+    '#path' => $front,
     '#options' => array(
       'attributes' => array(
         'title' => t('Home'),
