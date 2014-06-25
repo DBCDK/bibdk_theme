@@ -359,6 +359,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 
   // search result ranking contron on front page
   $path = current_path();
+  $form_state['build_info']['args'] = array('sort');
   if ( strpos($path,'bibdk_frontpage') === 0 ) {
     $form['search_controls_sort'] = array(
       'fieldset' => array(
@@ -369,7 +370,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
           'data-control-name' => 'controls_search_sort',
           'data-control-path' => $path,
         ),
-        'sort_form' => drupal_get_form('bibdk_search_controls_form', 'sort'),
+        'sort_form' => drupal_retrieve_form('bibdk_search_controls_form', $form_state),
       ),
     );
   }
