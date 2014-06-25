@@ -120,7 +120,7 @@ function bibdk_theme_preprocess_html(&$vars) {
 function bibdk_theme_preprocess_page(&$vars) {
   $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page','<front>');
 
-  if(drupal_is_front_page() && ($front !== '<front>' && $front !== 'bibdk_frontpage' )) {
+  if(drupal_is_front_page() && ($front !== '<front>' && $front !== 'bibdk_frontpage' ) && strpos($_SERVER['REQUEST_URI'], 'bibdk_frontpage') === false) {
     drupal_goto($front);
   }
 
