@@ -17,7 +17,7 @@ foreach ( $variables['form'] as $key => $elem ) {
   }
 }
 
-$action = array();
+$action[0] = '';
 if ( !empty($variables['form']['#action']) ) {
   $action = explode('?', $variables['form']['#action']);
   if (count($action) > 1){
