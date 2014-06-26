@@ -118,11 +118,13 @@ function bibdk_theme_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page','<front>');
 
-  if(drupal_is_front_page() && ($front !== '<front>' && $front !== 'bibdk_frontpage' ) && strpos($_SERVER['REQUEST_URI'], 'bibdk_frontpage') === false) {
-    drupal_goto($front);
+  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', null);
+
+  if(!$front) {
+    $front = '<front>';
   }
+
 
   global $language;
   $language_default = language_default();
@@ -168,7 +170,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   $vars['logo_footer_link'] = array(
     '#theme' => 'link',
     '#text' => drupal_render($vars['logo_footer']),
-    '#path' => '<front>',
+    '#path' => $front,
     '#options' => array(
       'attributes' => array(
         'title' => t('Home'),
