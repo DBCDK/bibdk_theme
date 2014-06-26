@@ -17,11 +17,14 @@ foreach ( $variables['form'] as $key => $elem ) {
   }
 }
 
-$action = explode('?', $variables['form']['#action']);
-if (count($action) > 1){
-  parse_str($action[1], $query);
-  if ( isset($query['page']) ) {
-    unset($query['page']);
+$action = array();
+if ( !empty($variables['form']['#action']) ) {
+  $action = explode('?', $variables['form']['#action']);
+  if (count($action) > 1){
+    parse_str($action[1], $query);
+    if ( isset($query['page']) ) {
+      unset($query['page']);
+    }
   }
 }
 ?>
