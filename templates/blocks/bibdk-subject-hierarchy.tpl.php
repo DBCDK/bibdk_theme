@@ -21,7 +21,7 @@
           <a class="close icon icon-left icon-red-x" href="#" tabindex="0"> </a>
         </div>
       </div>
-      <div class="subject-hierachy-searchfield">
+      <div class="subject-hierarchy-searchfield">
         <?php print drupal_render($searchfield); ?>
       </div>
     </div>
