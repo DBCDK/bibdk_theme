@@ -476,6 +476,7 @@
       });
 
       // *************** MOVE SECONDARY ACTIONS IN SEARCH RESULT TO BOTTOM RIGHT  *************** //
+      /* COMMENT OUT - will now be showed in weight order - US1399 ana
       $('article.manifestation').filter(':visible').each(function() {
 
         var wAction = $(this).find('.actions').width();
@@ -491,6 +492,7 @@
         var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
         $(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin + 15);
       });
+      */
 
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
