@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -10282,6 +10283,57 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 0.5em;
+}
+
+/* line 10, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .tab-sections .form-wrapper {
+  border: solid 8px #d2eaf1;
+}
+/* line 14, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .bibdk-tabs .bibdk-usersettings {
+  border: solid 8px #d2eaf1;
+  padding: 20px;
+}
+/* line 19, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .bibdk-tabs-light {
+  border: none;
+  padding: 0;
+}
+/* line 24, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .form-type-radio, #bibdk-usersettings-user-settings-form .form-type-radios {
+  padding: 0;
+  float: none;
+}
+/* line 29, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .form-type-radios > label {
+  font-weight: bold;
+  background-color: #d2eaf1;
+}
+/* line 35, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .usersettings-group-wrapper {
+  border: solid 1px #ddd;
+  margin: 1em 0;
+}
+/* line 40, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .group-main {
+  padding-left: 1em;
+}
+/* line 43, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .group-sub {
+  padding-left: 4em;
+}
+/* line 47, ../sass/elements/_usersettings.scss */
+#bibdk-usersettings-user-settings-form .usersettings-sub--wrapper .form-type-radios > label {
+  padding-left: 3em;
+  border-top: solid 1px gainsboro;
+  background-color: gainsboro;
+}
+
+/* line 55, ../sass/elements/_usersettings.scss */
+.pane-ting-openformat-filters h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #51565a;
 }
 
 /* line 2, ../sass/_extra.scss */

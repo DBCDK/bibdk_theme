@@ -118,6 +118,14 @@ function bibdk_theme_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
+
+  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', null);
+
+  if(!$front) {
+    $front = '<front>';
+  }
+
+
   global $language;
   $language_default = language_default();
   $lang_obj = $language;
@@ -143,7 +151,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   $vars['logo_header_link'] = array(
     '#theme' => 'link',
     '#text' => drupal_render($vars['logo_header']),
-    '#path' => '<front>',
+    '#path' => $front,
     '#options' => array(
       'attributes' => array(
         'title' => t('Home'),
@@ -162,7 +170,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   $vars['logo_footer_link'] = array(
     '#theme' => 'link',
     '#text' => drupal_render($vars['logo_footer']),
-    '#path' => '<front>',
+    '#path' => $front,
     '#options' => array(
       'attributes' => array(
         'title' => t('Home'),
@@ -274,7 +282,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_usersettings_user_settings_form':
       drupal_set_title(t('Settings'));
-      _wrap_in_element($form);
+      //_wrap_in_element($form);
       break;
     case 'bibdk_favourite_get_favourites_form':
       drupal_set_title(t('Favourites'));
