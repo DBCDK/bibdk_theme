@@ -1,0 +1,59 @@
+// =============================================================================
+// Bibliotek.dk usersettings
+// =============================================================================
+
+#bibdk-usersettings-user-settings-form {
+  .usersettings-sub--wrapper {
+    //margin-left: 4em;
+  }
+
+  .tab-sections .form-wrapper {
+    border: solid 8px $blue-lighter;
+  }
+
+  .bibdk-tabs .bibdk-usersettings {
+    border: solid 8px $blue-lighter;
+    padding: 20px;
+  }
+
+  .bibdk-tabs-light {
+    border: none;
+    padding: 0;
+  }
+
+  .form-type-radio, .form-type-radios {
+    padding: 0;
+    float: none;
+  }
+
+  .form-type-radios > label {
+    font-weight: bold;
+    background-color: $blue-lighter;
+
+  }
+
+  .usersettings-group-wrapper {
+    border: solid 1px #ddd;
+    margin: 1em 0;
+  }
+
+  .group-main {
+    padding-left: 1em;
+  }
+  .group-sub {
+    padding-left: 4em;
+  }
+
+  .usersettings-sub--wrapper .form-type-radios > label {
+    padding-left: 3em;
+    border-top: solid 1px $grey-5;
+    background-color: $grey-5;
+  }
+
+}
+
+.pane-ting-openformat-filters h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: $grey-3; 
+}
