@@ -484,13 +484,8 @@
         var hAction = $(this).find('.actions').height();
         var hData = $(this).find('.manifestation-data').height();
         var highestCol = Math.max(hAction, hData);
-        $(this).find('.actions').height(highestCol);
-        var hSecondaryAction = highestCol - $(this).find('.primary-actions').height() - 20;
-        $(this).find('.secondary-actions').height(hSecondaryAction);
-        // US1399 moved 
-        $(this).find('.actions').css('min-height', hSecondaryAction);
-        //var hSecondaryActionContentMargin = hSecondaryAction - $(this).find('.secondary-actions > ul').height();
-        //$(this).find('.secondary-actions > ul').css('margin-top', hSecondaryActionContentMargin + 15);
+        $(this).find('.actions').css('min-height', highestCol);
+
       });
 
 
