@@ -475,19 +475,15 @@
         this.select();
       });
 
-      // *************** MOVE SECONDARY ACTIONS COLL IN SEARCH RESULT TO MAX HIEGHT  *************** //
-
+      // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
       $('article.manifestation').filter(':visible').each(function() {
-
         var wAction = $(this).find('.actions').width();
         $(this).find('.manifestation-data').css('margin-right', wAction);
         var hAction = $(this).find('.actions').height();
         var hData = $(this).find('.manifestation-data').height();
         var highestCol = Math.max(hAction, hData);
         $(this).find('.actions').css('min-height', highestCol);
-
       });
-
 
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
