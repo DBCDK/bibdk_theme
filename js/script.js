@@ -36,10 +36,10 @@
         e.stopPropagation();
         e.preventDefault();
 
-        $(this).addClass('visuallyhidden');
+        $(this).addClass('hidden');
         $(this).closest('.header-action').addClass('toggled');
-        $(this).closest('.header-action').find('form').removeClass('visuallyhidden');
-        // $(this).closest('.header-action').find('input[type=text]').focus();
+        $(this).closest('.header-action').find('form').removeClass('hidden');
+        $(this).closest('.header-action').find('input[type=text]').focus();
 
       });
 
