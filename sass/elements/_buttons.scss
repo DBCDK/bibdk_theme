@@ -58,11 +58,6 @@ input[type="submit"].button-as-link {
   }
 }
 
-.btn-small {
-  @extend .btn;
-  line-height: 20px;
-}
-
 .btn-add-library {
   @include transition(none);
   border: solid 1px $grey-5;
