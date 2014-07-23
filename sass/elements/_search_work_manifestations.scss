@@ -242,6 +242,7 @@
   a {
     @include btn-skin($blue);
     padding: 5px 0px;
+    color: white;
   }
 
   table {
@@ -256,7 +257,6 @@
     tr  {
       text-align:center;
       td {
-        padding: 2px;
         vertical-align: middle;
       }
 

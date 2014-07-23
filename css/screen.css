@@ -9732,6 +9732,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-image: -o-linear-gradient(#1892b6, #1684a4);
   background-image: linear-gradient(#1892b6, #1684a4);
   padding: 5px 0px;
+  color: white;
 }
 /* line 8, ../sass/utilities/_btn-skin.scss */
 .order-any-btn-list a:hover {
@@ -9757,23 +9758,22 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-image: -o-linear-gradient(#1892b6, #1684a4);
   background-image: linear-gradient(#1892b6, #1684a4);
 }
-/* line 247, ../sass/elements/_search_work_manifestations.scss */
+/* line 248, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table {
   border-collapse: separate;
   border-spacing: 2px 2px;
 }
-/* line 251, ../sass/elements/_search_work_manifestations.scss */
+/* line 252, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table th {
   text-align: center;
   padding-left: 10px;
 }
-/* line 256, ../sass/elements/_search_work_manifestations.scss */
+/* line 257, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr {
   text-align: center;
 }
-/* line 258, ../sass/elements/_search_work_manifestations.scss */
+/* line 259, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr td {
-  padding: 2px;
   vertical-align: middle;
 }
 /* line 263, ../sass/elements/_search_work_manifestations.scss */
