@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -3590,7 +3589,7 @@
     box-sizing: border-box;
   }
 }
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -7031,7 +7030,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 
 /* line 30, ../sass/elements/_buttons.scss */
-.btn, input[type="submit"], .set-default-order-agency {
+.btn, input[type="submit"], .btn-small, .set-default-order-agency {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -7056,47 +7055,36 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   white-space: nowrap;
 }
 /* line 40, ../sass/elements/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, .set-default-order-agency:hover {
+.btn:hover, input[type="submit"]:hover, .btn-small:hover, .set-default-order-agency:hover {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 /* line 45, ../sass/elements/_buttons.scss */
-.btn.toggled, input.toggled[type="submit"], .toggled.set-default-order-agency, .btn:active, input[type="submit"]:active, .set-default-order-agency:active {
+.btn.toggled, input.toggled[type="submit"], .toggled.btn-small, .toggled.set-default-order-agency, .btn:active, input[type="submit"]:active, .btn-small:active, .set-default-order-agency:active {
   -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 /* line 50, ../sass/elements/_buttons.scss */
-.btn:disabled, input[type="submit"]:disabled, .set-default-order-agency:disabled, .btn.disabled, input.disabled[type="submit"], .disabled.set-default-order-agency {
+.btn:disabled, input[type="submit"]:disabled, .btn-small:disabled, .set-default-order-agency:disabled, .btn.disabled, input.disabled[type="submit"], .disabled.btn-small, .disabled.set-default-order-agency {
   cursor: default;
   background-color: #84c0d2;
   background-image: none;
 }
 /* line 55, ../sass/elements/_buttons.scss */
-.btn:disabled:hover, input[type="submit"]:disabled:hover, .set-default-order-agency:disabled:hover, .btn.disabled:hover, input.disabled[type="submit"]:hover, .disabled.set-default-order-agency:hover {
+.btn:disabled:hover, input[type="submit"]:disabled:hover, .btn-small:disabled:hover, .set-default-order-agency:disabled:hover, .btn.disabled:hover, input.disabled[type="submit"]:hover, .disabled.btn-small:hover, .disabled.set-default-order-agency:hover {
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
 }
 
 /* line 61, ../sass/elements/_buttons.scss */
-.btn-fixed-size {
-  padding: 0;
-  text-align: center;
+.btn-small {
+  line-height: 20px;
 }
 
 /* line 66, ../sass/elements/_buttons.scss */
-.btn-wrapper {
-  margin-bottom: 10px;
-  text-align: center;
-}
-/* line 70, ../sass/elements/_buttons.scss */
-.btn-wrapper .btn, .btn-wrapper input[type="submit"], .btn-wrapper .set-default-order-agency {
-  display: block;
-}
-
-/* line 75, ../sass/elements/_buttons.scss */
 .btn-add-library, input[type="submit"].btn-add-library {
   -webkit-transition: none;
   -moz-transition: none;
@@ -7123,14 +7111,14 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-repeat: no-repeat;
   background-position: 0%;
 }
-/* line 92, ../sass/elements/_buttons.scss */
+/* line 83, ../sass/elements/_buttons.scss */
 .btn-add-library:hover, input[type="submit"].btn-add-library:hover {
   -webkit-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
 }
 
-/* line 97, ../sass/elements/_buttons.scss */
+/* line 88, ../sass/elements/_buttons.scss */
 .set-default-order-agency {
   border: solid 1px gainsboro;
   margin-bottom: 10px;
@@ -7151,31 +7139,31 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-repeat: no-repeat;
   background-position: 0%;
 }
-/* line 112, ../sass/elements/_buttons.scss */
+/* line 103, ../sass/elements/_buttons.scss */
 .set-default-order-agency:hover {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 117, ../sass/elements/_buttons.scss */
+/* line 108, ../sass/elements/_buttons.scss */
 .order-agency .set-default-order-agency {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* line 121, ../sass/elements/_buttons.scss */
+/* line 112, ../sass/elements/_buttons.scss */
 .selected-agency {
   font-weight: bold;
 }
 
-/* line 125, ../sass/elements/_buttons.scss */
+/* line 116, ../sass/elements/_buttons.scss */
 .further-search-btn {
   float: right;
 }
 
-/* line 129, ../sass/elements/_buttons.scss */
+/* line 120, ../sass/elements/_buttons.scss */
 button[type="button"] {
   border: medium none;
 }
@@ -9741,140 +9729,152 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   height: 15px;
   padding-top: 8px;
 }
-/* line 241, ../sass/elements/_search_work_manifestations.scss */
-.order-any-btn-list .to-cart-list li {
-  margin: 1px 1px 1px 1px;
-  line-height: 20px;
-  padding: 5px 0 5px 20px;
+/* line 242, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list a {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1892b6), color-stop(100%, #1684a4));
+  background-image: -webkit-linear-gradient(#1892b6, #1684a4);
+  background-image: -moz-linear-gradient(#1892b6, #1684a4);
+  background-image: -o-linear-gradient(#1892b6, #1684a4);
+  background-image: linear-gradient(#1892b6, #1684a4);
+  padding: 5px 0px;
 }
-
-/* line 248, ../sass/elements/_search_work_manifestations.scss */
-.col1 {
-  float: left;
-  width: 170px;
+/* line 8, ../sass/utilities/_btn-skin.scss */
+.order-any-btn-list a:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1999bf), color-stop(100%, #178bad));
+  background-image: -webkit-linear-gradient(#1999bf, #178bad);
+  background-image: -moz-linear-gradient(#1999bf, #178bad);
+  background-image: -o-linear-gradient(#1999bf, #178bad);
+  background-image: linear-gradient(#1999bf, #178bad);
+}
+/* line 12, ../sass/utilities/_btn-skin.scss */
+.order-any-btn-list a.toggled, .order-any-btn-list a:active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #178bad), color-stop(100%, #157d9b));
+  background-image: -webkit-linear-gradient(#178bad, #157d9b);
+  background-image: -moz-linear-gradient(#178bad, #157d9b);
+  background-image: -o-linear-gradient(#178bad, #157d9b);
+  background-image: linear-gradient(#178bad, #157d9b);
+}
+/* line 16, ../sass/utilities/_btn-skin.scss */
+.order-any-btn-list a:disabled:hover, .order-any-btn-list a.disabled:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1892b6), color-stop(100%, #1684a4));
+  background-image: -webkit-linear-gradient(#1892b6, #1684a4);
+  background-image: -moz-linear-gradient(#1892b6, #1684a4);
+  background-image: -o-linear-gradient(#1892b6, #1684a4);
+  background-image: linear-gradient(#1892b6, #1684a4);
+}
+/* line 247, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table {
+  border-collapse: separate;
+  border-spacing: 2px 2px;
+  text-align: center;
 }
 /* line 252, ../sass/elements/_search_work_manifestations.scss */
-.col1 .bibdk-popup-order-work .bibdk-popup-order-checkbox {
-  float: left;
-  padding: 8px 0 0 11px;
+.order-any-btn-list table th {
+  padding-left: 10px;
 }
-/* line 256, ../sass/elements/_search_work_manifestations.scss */
-.col1 .bibdk-popup-order-work a {
-  padding: 6px 0 5px 20px;
+/* line 257, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr td {
+  padding: 2px;
+  vertical-align: middle;
 }
-
 /* line 262, ../sass/elements/_search_work_manifestations.scss */
-.col2 {
-  width: 115px;
-  float: left;
-  text-align: right;
+.order-any-btn-list table tr.odd {
+  background-color: #c7e1e8;
 }
-/* line 266, ../sass/elements/_search_work_manifestations.scss */
-.col2 h3 {
-  text-align: right;
-  padding: 0 5px;
-}
-/* line 270, ../sass/elements/_search_work_manifestations.scss */
-.col2 a {
-  display: block;
-  float: none;
-  margin-left: 30px;
-  padding: 5px 0 5px 0;
-}
-/* line 276, ../sass/elements/_search_work_manifestations.scss */
-.col2 input[type=submit] {
-  margin-left: 20px;
+/* line 265, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr.even {
+  background-color: #ebf4f7;
 }
 
-/* line 282, ../sass/elements/_search_work_manifestations.scss */
+/* line 273, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list {
   display: block;
   float: right;
   padding: 3px 0px 3px 0;
 }
-/* line 288, ../sass/elements/_search_work_manifestations.scss */
+/* line 279, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li {
   float: left;
   padding-right: 5px;
 }
-/* line 292, ../sass/elements/_search_work_manifestations.scss */
+/* line 283, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .materialtype {
   background: url(../img/icons/material-sprites.png) no-repeat top left;
   display: block;
 }
-/* line 297, ../sass/elements/_search_work_manifestations.scss */
+/* line 288, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .other-icon-small {
   background-position: 0 0;
   width: 22px;
   height: 22px;
 }
-/* line 302, ../sass/elements/_search_work_manifestations.scss */
+/* line 293, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .article-icon-small {
   background-position: -24px 0;
   width: 17px;
   height: 19px;
 }
-/* line 307, ../sass/elements/_search_work_manifestations.scss */
+/* line 298, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .bog-store-bogstaver-icon-small {
   background-position: -43px 0;
   width: 25px;
   height: 22px;
 }
-/* line 312, ../sass/elements/_search_work_manifestations.scss */
+/* line 303, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .book-icon-small {
   background-position: -70px 0;
   width: 16px;
   height: 22px;
 }
-/* line 317, ../sass/elements/_search_work_manifestations.scss */
+/* line 308, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .movie-icon-small {
   background-position: -88px 0;
   width: 17px;
   height: 20px;
 }
-/* line 322, ../sass/elements/_search_work_manifestations.scss */
+/* line 313, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .lyd-icon-small {
   background-position: -107px 0;
   width: 19px;
   height: 19px;
 }
-/* line 327, ../sass/elements/_search_work_manifestations.scss */
+/* line 318, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .audiobook-icon-small {
   background-position: -128px 0;
   width: 25px;
   height: 22px;
 }
-/* line 332, ../sass/elements/_search_work_manifestations.scss */
+/* line 323, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .music-icon-small {
   background-position: -155px 0;
   width: 19px;
   height: 15px;
 }
-/* line 337, ../sass/elements/_search_work_manifestations.scss */
+/* line 328, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .online-icon-small {
   background-position: -176px 0;
   width: 19px;
   height: 21px;
 }
-/* line 342, ../sass/elements/_search_work_manifestations.scss */
+/* line 333, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .sheetmusic-icon-small {
   background-position: -197px 0;
   width: 19px;
   height: 20px;
 }
-/* line 347, ../sass/elements/_search_work_manifestations.scss */
+/* line 338, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .punktskrift-icon-small {
   background-position: -218px 0;
   width: 17px;
   height: 20px;
 }
-/* line 352, ../sass/elements/_search_work_manifestations.scss */
+/* line 343, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .game-icon-small {
   background-position: -237px 0;
   width: 21px;
   height: 12px;
 }
-/* line 357, ../sass/elements/_search_work_manifestations.scss */
+/* line 348, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .tidsskrifter-icon-small {
   background-position: -260px 0;
   width: 17px;
@@ -9988,7 +9988,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 }
 /* line 99, ../sass/elements/_subject_hierarchy.scss */
 .themes__breadcrumb a:after {
-  content: " \203A ";
+  content: " \203A  ";
 }
 /* line 104, ../sass/elements/_subject_hierarchy.scss */
 .themes__breadcrumb a:last-child {

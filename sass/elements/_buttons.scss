@@ -58,18 +58,9 @@ input[type="submit"].button-as-link {
   }
 }
 
-.btn-fixed-size {
-  padding: 0;
-  text-align: center;
-}
-
-.btn-wrapper {
-  margin-bottom: 10px;
-  text-align: center;
-
-  .btn {
-    display: block;
-  }
+.btn-small {
+  @extend .btn;
+  line-height: 20px;
 }
 
 .btn-add-library {

@@ -25,7 +25,7 @@
   .element-types {
     float: right;
   }
- 
+
 }
 
 // Work body
@@ -53,7 +53,7 @@
   &.element-section {
     padding: 0;
   }
-  
+
 }
 
 // Work cover
@@ -238,10 +238,34 @@
       padding-top: 8px;
     }
   }
-  .to-cart-list li {
-    margin: 1px 1px 1px 1px;
-    line-height: 20px;
-    padding: 5px 0 5px 20px;
+
+  a {
+    @include btn-skin($blue);
+    padding: 5px 0px;
+  }
+
+  table {
+    border-collapse:separate;
+    border-spacing:2px 2px;
+    text-align:center;
+
+    th {
+      padding-left: 10px;
+    }
+
+    tr  {
+      td {
+        padding: 2px;
+        vertical-align: middle;
+      }
+
+      &.odd{
+        background-color: $zebra-odd;
+      }
+      &.even{
+        background-color: $zebra-even;
+      }
+    }
   }
 }
 
