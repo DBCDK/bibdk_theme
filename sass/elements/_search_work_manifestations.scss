@@ -247,13 +247,14 @@
   table {
     border-collapse:separate;
     border-spacing:2px 2px;
-    text-align:center;
 
     th {
+      text-align:center;
       padding-left: 10px;
     }
 
     tr  {
+      text-align:center;
       td {
         padding: 2px;
         vertical-align: middle;
