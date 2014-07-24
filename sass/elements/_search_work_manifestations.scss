@@ -240,9 +240,14 @@
   }
 
   a {
-    @include btn-skin($blue);
     padding: 5px 0px;
     color: white;
+    &.btn-blue {
+      @extend .btn-blue;
+    }
+    &.btn-grey {
+      @extend .btn-grey;
+    }
   }
 
   table {
