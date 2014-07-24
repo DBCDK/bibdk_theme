@@ -256,8 +256,12 @@
 
     tr  {
       text-align:center;
+
       td {
         vertical-align: middle;
+        &:first-child {
+          font-weight: bold;
+        }
       }
 
       &.odd{
