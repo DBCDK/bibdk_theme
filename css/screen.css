@@ -9760,95 +9760,101 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-color: #ebf4f7;
 }
 
-/* line 283, ../sass/elements/_search_work_manifestations.scss */
+/* line 282, ../sass/elements/_search_work_manifestations.scss */
+.reservation-btn-infotext {
+  font-size: 11px;
+  padding: 2px 4px;
+}
+
+/* line 288, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list {
   display: block;
   float: right;
   padding: 3px 0px 3px 0;
 }
-/* line 289, ../sass/elements/_search_work_manifestations.scss */
+/* line 294, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li {
   float: left;
   padding-right: 5px;
 }
-/* line 293, ../sass/elements/_search_work_manifestations.scss */
+/* line 298, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .materialtype {
   background: url(../img/icons/material-sprites.png) no-repeat top left;
   display: block;
 }
-/* line 298, ../sass/elements/_search_work_manifestations.scss */
+/* line 303, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .other-icon-small {
   background-position: 0 0;
   width: 22px;
   height: 22px;
 }
-/* line 303, ../sass/elements/_search_work_manifestations.scss */
+/* line 308, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .article-icon-small {
   background-position: -24px 0;
   width: 17px;
   height: 19px;
 }
-/* line 308, ../sass/elements/_search_work_manifestations.scss */
+/* line 313, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .bog-store-bogstaver-icon-small {
   background-position: -43px 0;
   width: 25px;
   height: 22px;
 }
-/* line 313, ../sass/elements/_search_work_manifestations.scss */
+/* line 318, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .book-icon-small {
   background-position: -70px 0;
   width: 16px;
   height: 22px;
 }
-/* line 318, ../sass/elements/_search_work_manifestations.scss */
+/* line 323, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .movie-icon-small {
   background-position: -88px 0;
   width: 17px;
   height: 20px;
 }
-/* line 323, ../sass/elements/_search_work_manifestations.scss */
+/* line 328, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .lyd-icon-small {
   background-position: -107px 0;
   width: 19px;
   height: 19px;
 }
-/* line 328, ../sass/elements/_search_work_manifestations.scss */
+/* line 333, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .audiobook-icon-small {
   background-position: -128px 0;
   width: 25px;
   height: 22px;
 }
-/* line 333, ../sass/elements/_search_work_manifestations.scss */
+/* line 338, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .music-icon-small {
   background-position: -155px 0;
   width: 19px;
   height: 15px;
 }
-/* line 338, ../sass/elements/_search_work_manifestations.scss */
+/* line 343, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .online-icon-small {
   background-position: -176px 0;
   width: 19px;
   height: 21px;
 }
-/* line 343, ../sass/elements/_search_work_manifestations.scss */
+/* line 348, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .sheetmusic-icon-small {
   background-position: -197px 0;
   width: 19px;
   height: 20px;
 }
-/* line 348, ../sass/elements/_search_work_manifestations.scss */
+/* line 353, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .punktskrift-icon-small {
   background-position: -218px 0;
   width: 17px;
   height: 20px;
 }
-/* line 353, ../sass/elements/_search_work_manifestations.scss */
+/* line 358, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .game-icon-small {
   background-position: -237px 0;
   width: 21px;
   height: 12px;
 }
-/* line 358, ../sass/elements/_search_work_manifestations.scss */
+/* line 363, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .tidsskrifter-icon-small {
   background-position: -260px 0;
   width: 17px;
