@@ -2,6 +2,18 @@
   Drupal.behaviors.bibdk_theme = {
 
     attach: function(context, settings) {
+      /**
+       * This ensures that the console object always is present even in
+       * browsers that doesn't support console.
+       */
+      if(typeof console === "undefined") {
+        console = {
+          log: function() {
+          },
+          debug: function() {
+          }
+        };
+      }
 
       // Toggle cart-checkbox
       $('.cart-checkbox').click(function(e) {
@@ -67,7 +79,6 @@
           $(this).next().toggleClass('visuallyhidden');
         }
       });
-
 
       // Handle random html clicks
       $('html').click(function() {
@@ -337,7 +348,6 @@
         }
       });
 
-
       // **********************  "ORDER ANY EDITION" POPUP CHECKBOXES  ************************ //
       $('.bibdk-reservation-item input').click(function(e) {
         e.preventDefault();
@@ -350,7 +360,6 @@
         $(this).parent().find('input').attr('checked', 'checked');
         return false;
       });
-
 
       // pjo 08-01-13 bug in outcommented toggle function
       $('.toggle-next-section', context).click(function(e) {
@@ -500,7 +509,6 @@
         return false;
       });
 
-
       // **************************** CAROUSEL ********************************************** //
 
       // Add click event to carousel tabs.
@@ -510,10 +518,8 @@
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
       });
 
-
       // **************************** EMNEHIERARKI ********************************************** //
       // $('.themes').themes();
-
 
       // **************************** CUSTOM SEARCH ********************************************** //
       // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
@@ -523,7 +529,7 @@
         $(this).toggleClass('toggled');
         $('#search-advanced').toggleClass('visuallyhidden');
         // Move to first input field in expanded search, if activated.
-        if ( $('#search-advanced-toggle').hasClass('toggled') === true ) {
+        if($('#search-advanced-toggle').hasClass('toggled') === true) {
           $('#edit-advanced').removeClass('is-visible');
           $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
         }
@@ -550,34 +556,34 @@
       var column = 0;
       var columns = [];
       $('fieldset.noder #search-advanced .form-radios').children().each(function() {
-        if ( $(this).hasClass('column')  ) {
+        if($(this).hasClass('column')) {
           // means it's called a second time
           return false;
         }
-        if ( $(this).hasClass('form-type-radio')  ) {
+        if($(this).hasClass('form-type-radio')) {
           count++;
-          column = Math.ceil(count/5) - 1;
+          column = Math.ceil(count / 5) - 1;
         }
-        if ( !columns[column] ) {
-          columns[column] = document.createElement( "div" );
+        if(!columns[column]) {
+          columns[column] = document.createElement("div");
           $(columns[column]).addClass('column');
           $(columns[column]).addClass('column' + column);
           $(columns[column]).addClass('form-wrapper');
         }
-        $(columns[column]).append( $(this) );
+        $(columns[column]).append($(this));
       });
       columns.forEach(appendColumn);
 
-      function appendColumn( elem ) {
-        $('fieldset.noder #search-advanced .form-radios').append( elem );
+      function appendColumn(elem) {
+        $('fieldset.noder #search-advanced .form-radios').append(elem);
       }
 
       // *********************** ADHL TOP LIST ********************************************* //
 
-        $('.adhl-toplist .adhl-link').click(function(event) {
-            event.preventDefault();
-            window.opener.location.href = $(event.currentTarget).attr('href');
-        });
+      $('.adhl-toplist .adhl-link').click(function(event) {
+        event.preventDefault();
+        window.opener.location.href = $(event.currentTarget).attr('href');
+      });
       // NO CODE AFTER THIS!
     }
 
