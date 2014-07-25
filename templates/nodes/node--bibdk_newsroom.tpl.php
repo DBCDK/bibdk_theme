@@ -6,6 +6,9 @@
  * Copy this file to the active theme's '/templates' folder
  */
 ?>
+
+<!-- Fubar -->
+
 <div<?php print $content; ?>>
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>

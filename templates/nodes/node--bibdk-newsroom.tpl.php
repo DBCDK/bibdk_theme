@@ -7,6 +7,7 @@
  */
 ?>
 <div<?php print $content; ?>>
+<h1>Fubar</h1>
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>
       <?php print $title; ?>
