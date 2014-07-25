@@ -3589,7 +3589,7 @@
     box-sizing: border-box;
   }
 }
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -6958,7 +6958,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 
 /* line 13, ../sass/elements/_buttons.scss */
-.btn-blue, input[type="submit"] {
+.btn-blue, input[type="submit"], .order-any-btn-list a.btn-blue {
   background-color: #178bad;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1892b6), color-stop(100%, #1684a4));
   background-image: -webkit-linear-gradient(#1892b6, #1684a4);
@@ -6969,7 +6969,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 /* line 8, ../sass/utilities/_btn-skin.scss */
-.btn-blue:hover, input[type="submit"]:hover {
+.btn-blue:hover, input[type="submit"]:hover, .order-any-btn-list a.btn-blue:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1999bf), color-stop(100%, #178bad));
   background-image: -webkit-linear-gradient(#1999bf, #178bad);
   background-image: -moz-linear-gradient(#1999bf, #178bad);
@@ -6977,7 +6977,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#1999bf, #178bad);
 }
 /* line 12, ../sass/utilities/_btn-skin.scss */
-.btn-blue.toggled, input.toggled[type="submit"], .btn-blue:active, input[type="submit"]:active {
+.btn-blue.toggled, input.toggled[type="submit"], .order-any-btn-list a.toggled.btn-blue, .btn-blue:active, input[type="submit"]:active, .order-any-btn-list a.btn-blue:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #178bad), color-stop(100%, #157d9b));
   background-image: -webkit-linear-gradient(#178bad, #157d9b);
   background-image: -moz-linear-gradient(#178bad, #157d9b);
@@ -6994,7 +6994,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 
 /* line 20, ../sass/elements/_buttons.scss */
-.btn-grey, input[type="submit"].btn-grey {
+.btn-grey, input[type="submit"].btn-grey, .order-any-btn-list a.btn-grey {
   background-color: #51565a;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #565b5f), color-stop(100%, #4c5155));
   background-image: -webkit-linear-gradient(#565b5f, #4c5155);
@@ -7005,7 +7005,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
 /* line 8, ../sass/utilities/_btn-skin.scss */
-.btn-grey:hover, input[type="submit"].btn-grey:hover {
+.btn-grey:hover, input[type="submit"].btn-grey:hover, .order-any-btn-list a.btn-grey:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5b6065), color-stop(100%, #51565a));
   background-image: -webkit-linear-gradient(#5b6065, #51565a);
   background-image: -moz-linear-gradient(#5b6065, #51565a);
@@ -7013,7 +7013,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#5b6065, #51565a);
 }
 /* line 12, ../sass/utilities/_btn-skin.scss */
-.btn-grey.toggled, input.toggled[type="submit"].btn-grey, .btn-grey:active, input[type="submit"].btn-grey:active {
+.btn-grey.toggled, input.toggled[type="submit"].btn-grey, .order-any-btn-list a.toggled.btn-grey, .btn-grey:active, input[type="submit"].btn-grey:active, .order-any-btn-list a.btn-grey:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #51565a), color-stop(100%, #474c4f));
   background-image: -webkit-linear-gradient(#51565a, #474c4f);
   background-image: -moz-linear-gradient(#51565a, #474c4f);
@@ -7080,22 +7080,6 @@ input[type="submit"].button-as-link::-moz-focus-inner {
 }
 
 /* line 61, ../sass/elements/_buttons.scss */
-.btn-fixed-size {
-  padding: 0;
-  text-align: center;
-}
-
-/* line 66, ../sass/elements/_buttons.scss */
-.btn-wrapper {
-  margin-bottom: 10px;
-  text-align: center;
-}
-/* line 70, ../sass/elements/_buttons.scss */
-.btn-wrapper .btn, .btn-wrapper input[type="submit"], .btn-wrapper .set-default-order-agency {
-  display: block;
-}
-
-/* line 75, ../sass/elements/_buttons.scss */
 .btn-add-library, input[type="submit"].btn-add-library {
   -webkit-transition: none;
   -moz-transition: none;
@@ -7122,14 +7106,14 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-repeat: no-repeat;
   background-position: 0%;
 }
-/* line 92, ../sass/elements/_buttons.scss */
+/* line 78, ../sass/elements/_buttons.scss */
 .btn-add-library:hover, input[type="submit"].btn-add-library:hover {
   -webkit-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
   box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
 }
 
-/* line 97, ../sass/elements/_buttons.scss */
+/* line 83, ../sass/elements/_buttons.scss */
 .set-default-order-agency {
   border: solid 1px gainsboro;
   margin-bottom: 10px;
@@ -7150,31 +7134,31 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-repeat: no-repeat;
   background-position: 0%;
 }
-/* line 112, ../sass/elements/_buttons.scss */
+/* line 98, ../sass/elements/_buttons.scss */
 .set-default-order-agency:hover {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 117, ../sass/elements/_buttons.scss */
+/* line 103, ../sass/elements/_buttons.scss */
 .order-agency .set-default-order-agency {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* line 121, ../sass/elements/_buttons.scss */
+/* line 107, ../sass/elements/_buttons.scss */
 .selected-agency {
   font-weight: bold;
 }
 
-/* line 125, ../sass/elements/_buttons.scss */
+/* line 111, ../sass/elements/_buttons.scss */
 .further-search-btn {
   float: right;
 }
 
-/* line 129, ../sass/elements/_buttons.scss */
+/* line 115, ../sass/elements/_buttons.scss */
 button[type="button"] {
   border: medium none;
 }
@@ -9746,140 +9730,137 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   height: 15px;
   padding-top: 8px;
 }
-/* line 246, ../sass/elements/_search_work_manifestations.scss */
-.order-any-btn-list .to-cart-list li {
-  margin: 1px 1px 1px 1px;
-  line-height: 20px;
-  padding: 5px 0 5px 20px;
+/* line 247, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list a {
+  padding: 5px 0px;
+  color: white;
 }
-
-/* line 253, ../sass/elements/_search_work_manifestations.scss */
-.col1 {
-  float: left;
-  width: 170px;
+/* line 258, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table {
+  border-collapse: separate;
+  border-spacing: 2px 2px;
 }
-/* line 257, ../sass/elements/_search_work_manifestations.scss */
-.col1 .bibdk-popup-order-work .bibdk-popup-order-checkbox {
-  float: left;
-  padding: 8px 0 0 11px;
+/* line 262, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table th {
+  text-align: center;
+  padding-left: 10px;
 }
-/* line 261, ../sass/elements/_search_work_manifestations.scss */
-.col1 .bibdk-popup-order-work a {
-  padding: 6px 0 5px 20px;
-}
-
 /* line 267, ../sass/elements/_search_work_manifestations.scss */
-.col2 {
-  width: 115px;
-  float: left;
-  text-align: right;
+.order-any-btn-list table tr {
+  text-align: center;
 }
-/* line 271, ../sass/elements/_search_work_manifestations.scss */
-.col2 h3 {
-  text-align: right;
-  padding: 0 5px;
+/* line 270, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr td {
+  vertical-align: middle;
 }
-/* line 275, ../sass/elements/_search_work_manifestations.scss */
-.col2 a {
-  display: block;
-  float: none;
-  margin-left: 30px;
-  padding: 5px 0 5px 0;
+/* line 272, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr td:first-child {
+  font-weight: bold;
 }
-/* line 281, ../sass/elements/_search_work_manifestations.scss */
-.col2 input[type=submit] {
-  margin-left: 20px;
+/* line 277, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr.odd {
+  background-color: #c7e1e8;
+}
+/* line 280, ../sass/elements/_search_work_manifestations.scss */
+.order-any-btn-list table tr.even {
+  background-color: #ebf4f7;
 }
 
 /* line 287, ../sass/elements/_search_work_manifestations.scss */
+.reservation-btn-infotext {
+  font-size: 11px;
+  padding: 2px 4px;
+}
+
+/* line 293, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list {
   display: block;
   float: right;
   padding: 3px 0px 3px 0;
 }
-/* line 293, ../sass/elements/_search_work_manifestations.scss */
+/* line 299, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li {
   float: left;
   padding-right: 5px;
 }
-/* line 297, ../sass/elements/_search_work_manifestations.scss */
+/* line 303, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .materialtype {
   background: url(../img/icons/material-sprites.png) no-repeat top left;
   display: block;
 }
-/* line 302, ../sass/elements/_search_work_manifestations.scss */
+/* line 308, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .other-icon-small {
   background-position: 0 0;
   width: 22px;
   height: 22px;
 }
-/* line 307, ../sass/elements/_search_work_manifestations.scss */
+/* line 313, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .article-icon-small {
   background-position: -24px 0;
   width: 17px;
   height: 19px;
 }
-/* line 312, ../sass/elements/_search_work_manifestations.scss */
+/* line 318, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .bog-store-bogstaver-icon-small {
   background-position: -43px 0;
   width: 25px;
   height: 22px;
 }
-/* line 317, ../sass/elements/_search_work_manifestations.scss */
+/* line 323, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .book-icon-small {
   background-position: -70px 0;
   width: 16px;
   height: 22px;
 }
-/* line 322, ../sass/elements/_search_work_manifestations.scss */
+/* line 328, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .movie-icon-small {
   background-position: -88px 0;
   width: 17px;
   height: 20px;
 }
-/* line 327, ../sass/elements/_search_work_manifestations.scss */
+/* line 333, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .lyd-icon-small {
   background-position: -107px 0;
   width: 19px;
   height: 19px;
 }
-/* line 332, ../sass/elements/_search_work_manifestations.scss */
+/* line 338, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .audiobook-icon-small {
   background-position: -128px 0;
   width: 25px;
   height: 22px;
 }
-/* line 337, ../sass/elements/_search_work_manifestations.scss */
+/* line 343, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .music-icon-small {
   background-position: -155px 0;
   width: 19px;
   height: 15px;
 }
-/* line 342, ../sass/elements/_search_work_manifestations.scss */
+/* line 348, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .online-icon-small {
   background-position: -176px 0;
   width: 19px;
   height: 21px;
 }
-/* line 347, ../sass/elements/_search_work_manifestations.scss */
+/* line 353, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .sheetmusic-icon-small {
   background-position: -197px 0;
   width: 19px;
   height: 20px;
 }
-/* line 352, ../sass/elements/_search_work_manifestations.scss */
+/* line 358, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .punktskrift-icon-small {
   background-position: -218px 0;
   width: 17px;
   height: 20px;
 }
-/* line 357, ../sass/elements/_search_work_manifestations.scss */
+/* line 363, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .game-icon-small {
   background-position: -237px 0;
   width: 21px;
   height: 12px;
 }
-/* line 362, ../sass/elements/_search_work_manifestations.scss */
+/* line 368, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .tidsskrifter-icon-small {
   background-position: -260px 0;
   width: 17px;
@@ -10410,4 +10391,3 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   text-shadow: none;
   color: transparent;
 }
-

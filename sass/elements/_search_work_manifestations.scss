@@ -25,7 +25,7 @@
   .element-types {
     float: right;
   }
- 
+
 }
 
 // Work body
@@ -53,7 +53,7 @@
   &.element-section {
     padding: 0;
   }
-  
+
 }
 
 // Work cover
@@ -243,44 +243,50 @@
       padding-top: 8px;
     }
   }
-  .to-cart-list li {
-    margin: 1px 1px 1px 1px;
-    line-height: 20px;
-    padding: 5px 0 5px 20px;
-  }
-}
 
-.col1 {
-  float: left;
-  width: 170px;
-  .bibdk-popup-order-work {
-    .bibdk-popup-order-checkbox {
-      float: left;
-      padding: 8px 0 0 11px;
-    }
-    a {
-      padding: 6px 0 5px 20px;
-    }
-  }
-}
-
-.col2 {
-  width: 115px;
-  float: left;
-  text-align: right;
-  h3 {
-    text-align: right;
-    padding: 0 5px;
-  }
   a {
-    display: block;
-    float: none;
-    margin-left: 30px;
-    padding: 5px 0 5px 0;
+    padding: 5px 0px;
+    color: white;
+    &.btn-blue {
+      @extend .btn-blue;
+    }
+    &.btn-grey {
+      @extend .btn-grey;
+    }
   }
-  input[type=submit] {
-    margin-left: 20px;
+
+  table {
+    border-collapse:separate;
+    border-spacing:2px 2px;
+
+    th {
+      text-align:center;
+      padding-left: 10px;
+    }
+
+    tr  {
+      text-align:center;
+
+      td {
+        vertical-align: middle;
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+
+      &.odd{
+        background-color: $zebra-odd;
+      }
+      &.even{
+        background-color: $zebra-even;
+      }
+    }
   }
+}
+
+.reservation-btn-infotext {
+  font-size: 11px;
+  padding: 2px 4px;
 }
 
 .item-list {
