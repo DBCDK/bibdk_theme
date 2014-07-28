@@ -58,20 +58,6 @@ input[type="submit"].button-as-link {
   }
 }
 
-.btn-fixed-size {
-  padding: 0;
-  text-align: center;
-}
-
-.btn-wrapper {
-  margin-bottom: 10px;
-  text-align: center;
-
-  .btn {
-    display: block;
-  }
-}
-
 .btn-add-library {
   @include transition(none);
   border: solid 1px $grey-5;
