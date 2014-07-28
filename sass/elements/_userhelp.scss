@@ -9,7 +9,6 @@
 
   > div {
     text-align: right;
-    border-bottom: 1px solid $grey-6;
   }
   
   #query-result {
@@ -77,8 +76,8 @@
 .pane-bibdk-newsroom-bibdk-newsroom-popup-menu,
 .pane-bibdk-newsroom-bibdk-newsroom-popup-menu-eng,
 .pane-bibdk-help,
-.pane-bibdk-newsroom {
-  padding: 20px;
+.pane-bibdk-newsroom,
+.bibdk_help-results {
   .menu .menu {
     margin-bottom: 10px;
   }
@@ -100,3 +99,21 @@
   }
 }
 
+// =============================================================================
+// Blocks
+// =============================================================================
+
+#popup {
+
+  .pane-block, .pane-bibdk-help, .pane-bibdk-newsroom {
+    padding: 20px 0;
+    border-top: 1px solid $grey-6;
+  }
+  
+  // top pane is the search form
+  .pane-block:nth-child(1) {
+    padding: 0;
+    border-top-width: 0px;
+  }
+
+}

@@ -6,7 +6,7 @@
  * Copy this file to the active theme's '/templates' folder
  */
 ?>
-<div<?php print $content; ?>>
+<div class="<?php print implode(' ', $classes_array); ?>">
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>
       <?php print $title; ?>
