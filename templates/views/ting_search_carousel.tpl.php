@@ -24,7 +24,7 @@
         <a class="works-control dropdown-toggle" href="#">
           <span class="selected-text" tabindex="" accesskey=""><?php print $searches[0]['title'] ?></span>
         </a>
-        <ul class="dropdown-menu dropdown-rightalign rs-carousel-tabs visuallyhidden">
+        <ul class="dropdown-menu dropdown-rightalign rs-carousel-tabs hidden">
         <?php foreach ($searches as $i => $search): ?>
           <li><a class="foo<?php print $i; ?>" href="#<?php print $i; ?>" data-value="<?php print $i; ?>"><?php print $searches[$i]['title'] ?></a></li>
         <?php endforeach; ?>

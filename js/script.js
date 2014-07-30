@@ -72,17 +72,17 @@
         e.stopPropagation();
 
         $('.dropdown-toggle').not($(this)).removeClass('toggled');
-        $('.dropdown-toggle').not($(this)).next().addClass('visuallyhidden');
+        $('.dropdown-toggle').not($(this)).next().addClass('hidden');
 
         if(!$(this).hasClass('disabled')) {
           $(this).toggleClass('toggled');
-          $(this).next().toggleClass('visuallyhidden');
+          $(this).next().toggleClass('hidden');
         }
       });
 
       // Handle random html clicks
       $('html').click(function() {
-        $('.dropdown-menu').addClass('visuallyhidden');
+        $('.dropdown-menu').addClass('hidden');
         $('.dropdown-toggle').removeClass('toggled');
       });
 
@@ -507,7 +507,7 @@
       // Add click event to carousel tabs.
       $('.rs-carousel-tabs li').once().click(function(e) {
         e.preventDefault();
-        $(this).closest('.rs-carousel-tabs').addClass('visuallyhidden');
+        $(this).closest('.rs-carousel-tabs').addClass('hidden');
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
       });
 
