@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -3589,7 +3590,7 @@
     box-sizing: border-box;
   }
 }
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -4186,22 +4187,21 @@ blockquote {
 
 /* line 45, ../sass/drupal/_system.base.scss */
 html.js input.form-autocomplete {
-  background-image: url(../img/drupal/throbber.gif);
-  background-position: 100% 8px;
-  background-repeat: no-repeat;
+  background-image: none;
 }
 
-/* line 50, ../sass/drupal/_system.base.scss */
+/* line 49, ../sass/drupal/_system.base.scss */
 html.js input.throbbing {
-  background-position: 100% -12px;
+  background-image: url(../img/drupal/throbber.gif);
+  background-position: 99% 7px;
 }
 
-/* line 67, ../sass/drupal/_system.base.scss */
+/* line 76, ../sass/drupal/_system.base.scss */
 html.js fieldset.collapsed .fieldset-wrapper {
   display: none;
 }
 
-/* line 91, ../sass/drupal/_system.base.scss */
+/* line 100, ../sass/drupal/_system.base.scss */
 .resizable-textarea .grippie {
   background: #eeeeee url(../img/drupal/grippie.png) no-repeat center 2px;
   border: 1px solid #ddd;
@@ -4211,12 +4211,12 @@ html.js fieldset.collapsed .fieldset-wrapper {
   overflow: hidden;
 }
 
-/* line 106, ../sass/drupal/_system.base.scss */
+/* line 115, ../sass/drupal/_system.base.scss */
 body.drag {
   cursor: move;
 }
 
-/* line 109, ../sass/drupal/_system.base.scss */
+/* line 118, ../sass/drupal/_system.base.scss */
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left;
@@ -4226,12 +4226,12 @@ body.drag {
   text-decoration: none;
 }
 
-/* line 117, ../sass/drupal/_system.base.scss */
+/* line 126, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle:hover {
   text-decoration: none;
 }
 
-/* line 120, ../sass/drupal/_system.base.scss */
+/* line 129, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle .handle {
   background: url(../img/drupal/draggable.png) no-repeat 6px 9px;
   height: 13px;
@@ -4240,12 +4240,12 @@ a.tabledrag-handle .handle {
   width: 13px;
 }
 
-/* line 127, ../sass/drupal/_system.base.scss */
+/* line 136, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle-hover .handle {
   background-position: 6px -11px;
 }
 
-/* line 130, ../sass/drupal/_system.base.scss */
+/* line 139, ../sass/drupal/_system.base.scss */
 div.indentation {
   float: left;
   height: 1.7em;
@@ -4254,56 +4254,56 @@ div.indentation {
   width: 20px;
 }
 
-/* line 137, ../sass/drupal/_system.base.scss */
+/* line 146, ../sass/drupal/_system.base.scss */
 div.tree-child {
   background: url(../img/drupal/tree.png) no-repeat 11px center;
 }
 
-/* line 140, ../sass/drupal/_system.base.scss */
+/* line 149, ../sass/drupal/_system.base.scss */
 div.tree-child-last {
   background: url(../img/drupal/tree-bottom.png) no-repeat 11px center;
 }
 
-/* line 143, ../sass/drupal/_system.base.scss */
+/* line 152, ../sass/drupal/_system.base.scss */
 div.tree-child-horizontal {
   background: url(../img/drupal/tree.png) no-repeat -11px center;
 }
 
-/* line 146, ../sass/drupal/_system.base.scss */
+/* line 155, ../sass/drupal/_system.base.scss */
 .tabledrag-toggle-weight-wrapper {
   text-align: right;
 }
 
-/* line 156, ../sass/drupal/_system.base.scss */
+/* line 165, ../sass/drupal/_system.base.scss */
 table.sticky-header {
   background-color: white;
   margin-top: 0;
 }
 
-/* line 169, ../sass/drupal/_system.base.scss */
+/* line 178, ../sass/drupal/_system.base.scss */
 .progress .bar {
   background-color: white;
   border: 1px solid;
 }
 
-/* line 173, ../sass/drupal/_system.base.scss */
+/* line 182, ../sass/drupal/_system.base.scss */
 .progress .filled {
   background-color: #161616;
   height: 1.5em;
   width: 5px;
 }
 
-/* line 178, ../sass/drupal/_system.base.scss */
+/* line 187, ../sass/drupal/_system.base.scss */
 .progress .percentage {
   float: right;
 }
 
-/* line 185, ../sass/drupal/_system.base.scss */
+/* line 194, ../sass/drupal/_system.base.scss */
 .ajax-progress {
   display: inline-block;
 }
 
-/* line 188, ../sass/drupal/_system.base.scss */
+/* line 197, ../sass/drupal/_system.base.scss */
 .ajax-progress .throbber {
   background: transparent url(../img/drupal/throbber.gif) no-repeat 0px -18px;
   float: left;
@@ -4312,55 +4312,55 @@ table.sticky-header {
   width: 15px;
 }
 
-/* line 195, ../sass/drupal/_system.base.scss */
+/* line 204, ../sass/drupal/_system.base.scss */
 .ajax-progress .message {
   padding-left: 20px;
 }
 
-/* line 198, ../sass/drupal/_system.base.scss */
+/* line 207, ../sass/drupal/_system.base.scss */
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
 
-/* line 201, ../sass/drupal/_system.base.scss */
+/* line 210, ../sass/drupal/_system.base.scss */
 .ajax-progress-bar {
   width: 16em;
 }
 
-/* line 211, ../sass/drupal/_system.base.scss */
+/* line 220, ../sass/drupal/_system.base.scss */
 .container-inline div,
 .container-inline label {
   display: inline;
 }
 
-/* line 218, ../sass/drupal/_system.base.scss */
+/* line 227, ../sass/drupal/_system.base.scss */
 .container-inline .fieldset-wrapper {
   display: block;
 }
 
-/* line 227, ../sass/drupal/_system.base.scss */
+/* line 236, ../sass/drupal/_system.base.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 237, ../sass/drupal/_system.base.scss */
+/* line 246, ../sass/drupal/_system.base.scss */
 html.js .js-hide {
   display: none;
 }
 
-/* line 251, ../sass/drupal/_system.base.scss */
+/* line 260, ../sass/drupal/_system.base.scss */
 .element-hidden {
   display: none;
 }
 
-/* line 265, ../sass/drupal/_system.base.scss */
+/* line 274, ../sass/drupal/_system.base.scss */
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 276, ../sass/drupal/_system.base.scss */
+/* line 285, ../sass/drupal/_system.base.scss */
 .element-invisible.element-focusable:active,
 .element-invisible.element-focusable:focus {
   position: static !important;
@@ -4954,22 +4954,22 @@ input[type="submit"] {
   border: none;
 }
 
-/* line 257, ../sass/_forms.scss */
+/* line 263, ../sass/_forms.scss */
 .form-actions {
   text-align: right;
 }
-/* line 261, ../sass/_forms.scss */
+/* line 267, ../sass/_forms.scss */
 .form-actions input[type="submit"],
 .form-actions a {
   font-size: 14px;
   margin-left: 5px;
 }
-/* line 264, ../sass/_forms.scss */
+/* line 270, ../sass/_forms.scss */
 .form-actions input[type="submit"]:first-child,
 .form-actions a:first-child {
   margin-left: 0;
 }
-/* line 268, ../sass/_forms.scss */
+/* line 274, ../sass/_forms.scss */
 .form-actions a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4985,7 +4985,7 @@ input[type="submit"] {
   margin-left: 10px;
 }
 
-/* line 286, ../sass/_forms.scss */
+/* line 292, ../sass/_forms.scss */
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -4995,7 +4995,7 @@ textarea[readonly] {
   cursor: not-allowed;
 }
 
-/* line 293, ../sass/_forms.scss */
+/* line 299, ../sass/_forms.scss */
 textarea[disabled],
 textarea[readonly],
 input[type="text"][disabled],
@@ -5008,151 +5008,151 @@ input[type="text"][readonly] {
   color: #6c7379;
 }
 
-/* line 306, ../sass/_forms.scss */
+/* line 312, ../sass/_forms.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 2px solid red;
 }
 
-/* line 310, ../sass/_forms.scss */
+/* line 316, ../sass/_forms.scss */
 .form-required {
   color: red;
 }
 
-/* line 321, ../sass/_forms.scss */
+/* line 327, ../sass/_forms.scss */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #6c7379;
 }
 
-/* line 325, ../sass/_forms.scss */
+/* line 331, ../sass/_forms.scss */
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #6c7379;
 }
 
-/* line 329, ../sass/_forms.scss */
+/* line 335, ../sass/_forms.scss */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #6c7379;
 }
 
-/* line 341, ../sass/_forms.scss */
+/* line 347, ../sass/_forms.scss */
 .form-wrapper-horizontal label {
   float: left;
   width: 39%;
 }
-/* line 345, ../sass/_forms.scss */
+/* line 351, ../sass/_forms.scss */
 .form-wrapper-horizontal label.option {
   float: none;
 }
-/* line 350, ../sass/_forms.scss */
+/* line 356, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-radio {
   margin-left: 39%;
 }
-/* line 353, ../sass/_forms.scss */
+/* line 359, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-radios .form-radio {
   margin-left: 0;
 }
-/* line 357, ../sass/_forms.scss */
+/* line 363, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-checkbox {
   margin-left: 39%;
 }
-/* line 360, ../sass/_forms.scss */
+/* line 366, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-checkboxes .form-checkbox {
   margin-left: 0;
 }
-/* line 365, ../sass/_forms.scss */
+/* line 371, ../sass/_forms.scss */
 .form-wrapper-horizontal input[type="text"],
 .form-wrapper-horizontal input[type="password"] {
   float: right;
 }
-/* line 369, ../sass/_forms.scss */
+/* line 375, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-item .description {
   margin-top: 5px;
   float: right;
   width: 60%;
 }
-/* line 375, ../sass/_forms.scss */
+/* line 381, ../sass/_forms.scss */
 .form-wrapper-horizontal .form-textarea-wrapper {
   width: 60%;
   float: right;
 }
 
-/* line 387, ../sass/_forms.scss */
+/* line 393, ../sass/_forms.scss */
 .input-20 {
   width: 20%;
 }
 
-/* line 390, ../sass/_forms.scss */
+/* line 396, ../sass/_forms.scss */
 .input-40 {
   width: 40%;
 }
 
-/* line 393, ../sass/_forms.scss */
+/* line 399, ../sass/_forms.scss */
 .input-60 {
   width: 60%;
 }
 
-/* line 396, ../sass/_forms.scss */
+/* line 402, ../sass/_forms.scss */
 .input-80 {
   width: 80%;
 }
 
-/* line 399, ../sass/_forms.scss */
+/* line 405, ../sass/_forms.scss */
 .input-100 {
   width: 100%;
 }
 
-/* line 406, ../sass/_forms.scss */
+/* line 412, ../sass/_forms.scss */
 .wayf-accept-form {
   padding: 0.5em;
 }
 
-/* line 410, ../sass/_forms.scss */
+/* line 416, ../sass/_forms.scss */
 .wayf-accept-form input {
   margin-right: 0.5em;
 }
 
-/* line 419, ../sass/_forms.scss */
+/* line 425, ../sass/_forms.scss */
 .form-item-persistent-login {
   padding-top: 0;
   text-align: right;
 }
 
-/* line 430, ../sass/_forms.scss */
+/* line 436, ../sass/_forms.scss */
 #user-login .form-item.form-item-remember-me {
   float: right;
   margin: 0 0 0 10px;
   padding: 0;
 }
-/* line 436, ../sass/_forms.scss */
+/* line 442, ../sass/_forms.scss */
 #user-login #edit-actions {
   padding-bottom: 1.5em;
 }
 
-/* line 446, ../sass/_forms.scss */
+/* line 452, ../sass/_forms.scss */
 .page-reservation .element {
   padding-top: 10px;
 }
-/* line 449, ../sass/_forms.scss */
+/* line 455, ../sass/_forms.scss */
 .page-reservation .element #messages {
   padding: 30px 10px 0 10px;
 }
 
-/* line 456, ../sass/_forms.scss */
+/* line 462, ../sass/_forms.scss */
 .page-reservation .form-step-guide.form-wrapper {
   padding: 0;
   border-bottom: none;
 }
 
-/* line 461, ../sass/_forms.scss */
+/* line 467, ../sass/_forms.scss */
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
   padding: 10px 0;
 }
 
-/* line 465, ../sass/_forms.scss */
+/* line 471, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
   position: fixed;
   top: 68px;
@@ -5163,7 +5163,7 @@ textarea::-webkit-input-placeholder {
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 476, ../sass/_forms.scss */
+/* line 482, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -5176,12 +5176,12 @@ textarea::-webkit-input-placeholder {
   border-top-width: 1px;
 }
 
-/* line 490, ../sass/_forms.scss */
+/* line 496, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 495, ../sass/_forms.scss */
+/* line 501, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -5190,16 +5190,16 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 502, ../sass/_forms.scss */
+/* line 508, ../sass/_forms.scss */
 .page-reservation #modalContent form {
   margin: 0 10px;
 }
-/* line 505, ../sass/_forms.scss */
+/* line 511, ../sass/_forms.scss */
 .page-reservation #modalContent form .bibdk-provider-form-inputs {
   margin-bottom: 75px;
 }
 
-/* line 514, ../sass/_forms.scss */
+/* line 520, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
 .page-overlay-favourite-userdata #edit-subdivision,
@@ -5212,163 +5212,163 @@ textarea::-webkit-input-placeholder {
   font-size: 12px;
   padding: 8px;
 }
-/* line 522, ../sass/_forms.scss */
+/* line 528, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #edit-anyfield,
 .page-reservation #bibdk-reservation-create-wizard-form #edit-anyfield {
   width: 100%;
 }
 
-/* line 527, ../sass/_forms.scss */
+/* line 533, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
-/* line 531, ../sass/_forms.scss */
+/* line 537, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector.ajax-progress {
   display: inherit;
 }
-/* line 535, ../sass/_forms.scss */
+/* line 541, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector .throbber {
   position: absolute;
 }
 
-/* line 540, ../sass/_forms.scss */
+/* line 546, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 544, ../sass/_forms.scss */
+/* line 550, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 550, ../sass/_forms.scss */
+/* line 556, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 554, ../sass/_forms.scss */
+/* line 560, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 558, ../sass/_forms.scss */
+/* line 564, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 562, ../sass/_forms.scss */
+/* line 568, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 568, ../sass/_forms.scss */
+/* line 574, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
   margin-right: 20px;
 }
-/* line 572, ../sass/_forms.scss */
+/* line 578, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 578, ../sass/_forms.scss */
+/* line 584, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 583, ../sass/_forms.scss */
+/* line 589, ../sass/_forms.scss */
 .page-reservation #edit-infotext-wrapper {
   clear: both;
 }
-/* line 588, ../sass/_forms.scss */
+/* line 594, ../sass/_forms.scss */
 .page-reservation .form-actions input[type="submit"]:first-child {
   margin-left: 20px;
 }
-/* line 593, ../sass/_forms.scss */
+/* line 599, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
-/* line 595, ../sass/_forms.scss */
+/* line 601, ../sass/_forms.scss */
 .page-reservation #edit-navigation input {
   display: inline-block;
 }
-/* line 600, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 .page-reservation #edit-next.form-submit {
   float: right;
 }
-/* line 605, ../sass/_forms.scss */
+/* line 611, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 609, ../sass/_forms.scss */
+/* line 615, ../sass/_forms.scss */
 .page-reservation .order-condition {
   border-bottom: 1px solid #6c7379;
 }
-/* line 611, ../sass/_forms.scss */
+/* line 617, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 622, ../sass/_forms.scss */
+/* line 628, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 626, ../sass/_forms.scss */
+/* line 632, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 630, ../sass/_forms.scss */
+/* line 636, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 635, ../sass/_forms.scss */
+/* line 641, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 640, ../sass/_forms.scss */
+/* line 646, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 645, ../sass/_forms.scss */
+/* line 651, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 650, ../sass/_forms.scss */
+/* line 656, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 654, ../sass/_forms.scss */
+/* line 660, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 658, ../sass/_forms.scss */
+/* line 664, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 663, ../sass/_forms.scss */
+/* line 669, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 667, ../sass/_forms.scss */
+/* line 673, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
@@ -7021,7 +7021,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#51565a, #474c4f);
 }
 /* line 16, ../sass/utilities/_btn-skin.scss */
-.btn-grey:disabled:hover, .btn-grey.disabled:hover {
+.btn-grey:disabled:hover, .order-any-btn-list a.btn-grey:disabled:hover, .btn-grey.disabled:hover, .order-any-btn-list a.disabled.btn-grey:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #565b5f), color-stop(100%, #4c5155));
   background-image: -webkit-linear-gradient(#565b5f, #4c5155);
   background-image: -moz-linear-gradient(#565b5f, #4c5155);
