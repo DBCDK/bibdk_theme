@@ -4187,21 +4187,22 @@ blockquote {
 
 /* line 45, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 html.js input.form-autocomplete {
-  background-image: none;
-}
-
-/* line 49, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
-html.js input.throbbing {
   background-image: url(../img/drupal/throbber.gif);
-  background-position: 99% 7px;
+  background-position: 100% 8px;
+  background-repeat: no-repeat;
 }
 
-/* line 76, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 50, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+html.js input.throbbing {
+  background-position: 100% -12px;
+}
+
+/* line 67, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 html.js fieldset.collapsed .fieldset-wrapper {
   display: none;
 }
 
-/* line 100, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 91, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .resizable-textarea .grippie {
   background: #eeeeee url(../img/drupal/grippie.png) no-repeat center 2px;
   border: 1px solid #ddd;
@@ -4211,12 +4212,12 @@ html.js fieldset.collapsed .fieldset-wrapper {
   overflow: hidden;
 }
 
-/* line 115, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 106, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 body.drag {
   cursor: move;
 }
 
-/* line 118, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 109, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left;
@@ -4226,12 +4227,12 @@ body.drag {
   text-decoration: none;
 }
 
-/* line 126, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 117, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 a.tabledrag-handle:hover {
   text-decoration: none;
 }
 
-/* line 129, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 120, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 a.tabledrag-handle .handle {
   background: url(../img/drupal/draggable.png) no-repeat 6px 9px;
   height: 13px;
@@ -4240,12 +4241,12 @@ a.tabledrag-handle .handle {
   width: 13px;
 }
 
-/* line 136, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 127, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 a.tabledrag-handle-hover .handle {
   background-position: 6px -11px;
 }
 
-/* line 139, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 130, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 div.indentation {
   float: left;
   height: 1.7em;
@@ -4254,56 +4255,56 @@ div.indentation {
   width: 20px;
 }
 
-/* line 146, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 137, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 div.tree-child {
   background: url(../img/drupal/tree.png) no-repeat 11px center;
 }
 
-/* line 149, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 140, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 div.tree-child-last {
   background: url(../img/drupal/tree-bottom.png) no-repeat 11px center;
 }
 
-/* line 152, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 143, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 div.tree-child-horizontal {
   background: url(../img/drupal/tree.png) no-repeat -11px center;
 }
 
-/* line 155, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 146, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .tabledrag-toggle-weight-wrapper {
   text-align: right;
 }
 
-/* line 165, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 156, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 table.sticky-header {
   background-color: white;
   margin-top: 0;
 }
 
-/* line 178, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 169, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .progress .bar {
   background-color: white;
   border: 1px solid;
 }
 
-/* line 182, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 173, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .progress .filled {
   background-color: #161616;
   height: 1.5em;
   width: 5px;
 }
 
-/* line 187, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 178, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .progress .percentage {
   float: right;
 }
 
-/* line 194, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 185, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .ajax-progress {
   display: inline-block;
 }
 
-/* line 197, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 188, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .ajax-progress .throbber {
   background: transparent url(../img/drupal/throbber.gif) no-repeat 0px -18px;
   float: left;
@@ -4312,55 +4313,55 @@ table.sticky-header {
   width: 15px;
 }
 
-/* line 204, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 195, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .ajax-progress .message {
   padding-left: 20px;
 }
 
-/* line 207, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 198, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
 
-/* line 210, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 201, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .ajax-progress-bar {
   width: 16em;
 }
 
-/* line 220, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 211, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .container-inline div,
 .container-inline label {
   display: inline;
 }
 
-/* line 227, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 218, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .container-inline .fieldset-wrapper {
   display: block;
 }
 
-/* line 236, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 227, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 246, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 237, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 html.js .js-hide {
   display: none;
 }
 
-/* line 260, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 251, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .element-hidden {
   display: none;
 }
 
-/* line 274, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 265, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 285, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
+/* line 276, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/drupal/_system.base.scss */
 .element-invisible.element-focusable:active,
 .element-invisible.element-focusable:focus {
   position: static !important;
