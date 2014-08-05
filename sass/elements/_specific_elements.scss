@@ -748,15 +748,6 @@ p.note-localisations {
 }
 
 // =============================================================================
-// Reviews
-// =============================================================================
-
-.bibdk-review {
-  padding: 10px 0;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-// =============================================================================
 // User password reset
 // =============================================================================
 
@@ -946,9 +937,19 @@ body.page-ting-moreinfo {
 }
 
 // =============================================================================
+// Reviews
+// =============================================================================
+
+.bibdk-review {
+  padding: 10px 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+
+// =============================================================================
 // Bibdk reviews
 // =============================================================================
-.bibdk-article-review{
+.bibdk-article-review {
 
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
@@ -961,20 +962,29 @@ body.page-ting-moreinfo {
   }
 }
 
-span.star{
+.bibdk-review-link {
+  left: 25px;
+  position: relative;
+  a {
+    margin-left: -25px;
+    text-indent: 25px;
+  }
+}
+
+span.star {
   display: inline-block;
   background: url('../img/rating-stars.png');
   width: 17px;
   height: 17px;
 }
 
-span.star.positive{
+span.star.positive {
   color: transparent;
   background-position: 0 17px;
 
 }
 
-span.star.negative{
+span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
