@@ -8660,7 +8660,7 @@ body.page-ting-moreinfo img {
   position: relative;
 }
 /* line 968, /data/www/jgn.ding/profiles/bibdk/themes/bibdk_theme/sass/elements/_specific_elements.scss */
-.bibdk-review-link a {
+.bibdk-review-link > a {
   margin-left: -25px;
   text-indent: 25px;
 }

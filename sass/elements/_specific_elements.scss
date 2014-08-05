@@ -965,7 +965,7 @@ body.page-ting-moreinfo {
 .bibdk-review-link {
   left: 25px;
   position: relative;
-  a {
+  > a {
     margin-left: -25px;
     text-indent: 25px;
   }
