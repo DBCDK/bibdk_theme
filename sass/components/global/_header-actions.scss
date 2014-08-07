@@ -62,5 +62,15 @@
     padding: 0 5px;
     font-size: 12px;
   }
+
+  a {
+    padding: 8px 20px 8px 0;
+  }
+
+  a:after {
+    @include add-sprite("angle--down--lightgrey");
+    @include align("vcenter");
+    right: 10px;
+  }
 }
 
