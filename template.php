@@ -500,7 +500,7 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
 }
 
 function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
-  $form['#attributes']['class'] = array('visuallyhidden', 'search-form-horizontal');
+  $form['#attributes']['class'] = array('hidden', 'search-form-horizontal');
 }
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
