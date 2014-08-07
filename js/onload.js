@@ -12,6 +12,8 @@
     // Request new password
     $('form#user-pass').find('input[type=text], textarea').filter(':visible:first').focus();
     // User help popup
-    $('#bibdk-help-search-form #edit-search-help').filter(':visible').focus();
+    $('.page-overlay-help').find('input[type=text], textarea').filter(':visible:first').focus();
+    // Newsroom popup
+    $('.page-overlay-newsroom').find('input[type=text], textarea').filter(':visible:first').focus();
   });
 })(jQuery);
