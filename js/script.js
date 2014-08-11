@@ -36,10 +36,10 @@
         e.stopPropagation();
         e.preventDefault();
 
-        $(this).addClass('visuallyhidden');
+        $(this).addClass('hidden');
         $(this).closest('.header-action').addClass('toggled');
-        $(this).closest('.header-action').find('form').removeClass('visuallyhidden');
-        // $(this).closest('.header-action').find('input[type=text]').focus();
+        $(this).closest('.header-action').find('form').removeClass('hidden');
+        $(this).closest('.header-action').find('input[type=text]').focus();
 
       });
 
@@ -72,17 +72,17 @@
         e.stopPropagation();
 
         $('.dropdown-toggle').not($(this)).removeClass('toggled');
-        $('.dropdown-toggle').not($(this)).next().addClass('visuallyhidden');
+        $('.dropdown-toggle').not($(this)).next().addClass('hidden');
 
         if(!$(this).hasClass('disabled')) {
           $(this).toggleClass('toggled');
-          $(this).next().toggleClass('visuallyhidden');
+          $(this).next().toggleClass('hidden');
         }
       });
 
       // Handle random html clicks
       $('html').click(function() {
-        $('.dropdown-menu').addClass('visuallyhidden');
+        $('.dropdown-menu').addClass('hidden');
         $('.dropdown-toggle').removeClass('toggled');
       });
 
@@ -109,7 +109,7 @@
           // pjo comment out disabled class to allow 'order any edition' always
           // $(this).closest('.work-header').find('.btn').addClass('disabled');
           $(this).closest('.work-header').find('.btn').removeClass('toggled');
-          $(this).closest('.work-header').find('.dropdown-menu').addClass('visuallyhidden');
+          $(this).closest('.work-header').find('.dropdown-menu').addClass('hidden');
 
           if(!Drupal.settings.full_view) {
             // scrollTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
@@ -507,7 +507,7 @@
       // Add click event to carousel tabs.
       $('.rs-carousel-tabs li').once().click(function(e) {
         e.preventDefault();
-        $(this).closest('.rs-carousel-tabs').addClass('visuallyhidden');
+        $(this).closest('.rs-carousel-tabs').addClass('hidden');
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
       });
 
@@ -520,7 +520,7 @@
       $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
-        $('#search-advanced').toggleClass('visuallyhidden');
+        $('#search-advanced').toggleClass('hidden');
         // Move to first input field in expanded search, if activated.
         if($('#search-advanced-toggle').hasClass('toggled') === true) {
           $('#edit-advanced').removeClass('is-visible');

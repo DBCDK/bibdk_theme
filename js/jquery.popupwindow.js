@@ -77,6 +77,9 @@ jQuery.fn.popupwindow = function(p)
         myWindow.close();
       }
       myWindow = window.open(this.href, name, parameters);
+      if ( myWindow == null || typeof(myWindow)=='undefined' ) {
+        alert(Drupal.t("It looks like you have a pop-up blocker. Please push the button again."));
+      }
       myWindow.focus();
       jQuery(this).unbind(event);
       return false;

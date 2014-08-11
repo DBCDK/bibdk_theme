@@ -245,10 +245,16 @@ input[type="file"]:focus {
 input[type="submit"] {
   border:none;
   @extend .btn;
-  @extend .btn-blue;
+  @extend .btn-blue !optional;
+  // WARNING : "input[type="submit"]" failed to @extend ".btn-blue".
+  // No selectors matching ".btn-blue" could be unified with "input[type="submit"]".
+
 }
 input[type="submit"].btn-grey {
-  @extend .btn-grey;
+  @extend .btn-grey !optional;
+  // WARNING : "input[type="submit"].btn-grey" failed to @extend ".btn-grey".
+  // No selectors matching ".btn-grey" could be unified with "input[type="submit"].btn-grey".
+
 }
 input[type="submit"].btn-add-library {
   @extend .btn-add-library;

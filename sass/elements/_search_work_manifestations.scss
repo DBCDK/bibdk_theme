@@ -14,6 +14,9 @@
   .element-title {
     float: left;
     max-width: 60%;
+    .page-work & { // parent element selector
+      float: none;
+    }
   }
 
   .element-actions {
@@ -24,6 +27,13 @@
 
   .element-types {
     float: right;
+  }
+  
+  &.element-section {
+    .page-work & { // parent element selector
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
   }
 
 }
