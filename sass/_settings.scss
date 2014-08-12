@@ -64,7 +64,6 @@ $xxlarge-up:    "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !def
 $xxlarge-only:  "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
 
-
 // =============================================================================
 // Colors
 // =============================================================================

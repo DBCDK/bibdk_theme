@@ -56,7 +56,7 @@
   }
 
   &.work-body-has-cover .wrapper {
-    width: 540px;
+    width: 75%;
     float: left;
   }
 
@@ -66,10 +66,13 @@
 
 }
 
+.cover {
+  width: 25%;
+  float: right;
+}
+
 // Work cover
 .work-cover {
-  width: 140px;
-  float: right;
   margin: 0 0 10px 20px;
   img {
     width: 100%;
