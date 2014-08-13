@@ -10196,6 +10196,12 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   padding: 1.5em 1.5em 0 0;
 }
 
+/* line 45, ../sass/elements/_infomedia.scss */
+.link-infomedia {
+  color: red;
+  font-weight: bold;
+}
+
 /* line 7, ../sass/elements/_cart.scss */
 .page-user-cart .table {
   width: 100%;
