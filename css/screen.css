@@ -7505,7 +7505,13 @@ button[type="button"] {
   padding: 0;
 }
 
-/* line 328, ../sass/elements/_basic_elements.scss */
+/* line 324, ../sass/elements/_basic_elements.scss */
+.strong-link, .bibdk-sb_kopi-replaceme, .link-infomedia {
+  color: #da5050;
+  font-weight: bold;
+}
+
+/* line 333, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal {
   *zoom: 1;
   padding: 0;
@@ -7519,31 +7525,31 @@ button[type="button"] {
 .search-form-horizontal:after {
   clear: both;
 }
-/* line 332, ../sass/elements/_basic_elements.scss */
+/* line 337, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal .form-wrapper {
   border: none;
 }
-/* line 337, ../sass/elements/_basic_elements.scss */
+/* line 342, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal .form-type-textfield,
 .search-form-horizontal .form-actions {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 343, ../sass/elements/_basic_elements.scss */
+/* line 348, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input {
   display: block;
 }
-/* line 346, ../sass/elements/_basic_elements.scss */
+/* line 351, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input[type=text] {
   width: 100%;
 }
-/* line 349, ../sass/elements/_basic_elements.scss */
+/* line 354, ../sass/elements/_basic_elements.scss */
 .search-form-horizontal input[type=submit] {
   width: 100%;
 }
 
-/* line 357, ../sass/elements/_basic_elements.scss */
+/* line 362, ../sass/elements/_basic_elements.scss */
 p.helptext {
   background-color: #178bad;
   -webkit-border-radius: 3px;
@@ -7563,12 +7569,12 @@ p.helptext {
   position: relative;
   top: 3px;
 }
-/* line 371, ../sass/elements/_basic_elements.scss */
+/* line 376, ../sass/elements/_basic_elements.scss */
 p.helptext a {
   color: white;
 }
 
-/* line 385, ../sass/elements/_basic_elements.scss */
+/* line 390, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first,
 .page-overlay .pager-previous,
 .page-overlay .pager-item,
@@ -7579,7 +7585,7 @@ p.helptext a {
   float: left;
 }
 
-/* line 394, ../sass/elements/_basic_elements.scss */
+/* line 399, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-first span,
 .page-overlay .pager-previous span,
 .page-overlay .pager-item span,
@@ -7589,7 +7595,7 @@ p.helptext a {
   display: none;
 }
 
-/* line 402, ../sass/elements/_basic_elements.scss */
+/* line 407, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back,
 .page-overlay .pager-previous,
 .page-overlay .pager-next,
@@ -7598,7 +7604,7 @@ p.helptext a {
   padding: 0 7px;
 }
 
-/* line 410, ../sass/elements/_basic_elements.scss */
+/* line 415, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-back a,
 .page-overlay .pager-previous a,
 .page-overlay .pager-next a,
@@ -7607,7 +7613,7 @@ p.helptext a {
   padding: 0;
 }
 
-/* line 414, ../sass/elements/_basic_elements.scss */
+/* line 419, ../sass/elements/_basic_elements.scss */
 .page-overlay .pager-current {
   padding: 0 7px;
   margin: 0 7px;
@@ -7615,7 +7621,7 @@ p.helptext a {
   border-right: solid 1px gainsboro;
 }
 
-/* line 421, ../sass/elements/_basic_elements.scss */
+/* line 426, ../sass/elements/_basic_elements.scss */
 .page-overlay .works-pager-select {
   padding: 0 10px;
   border-left: solid 0px gainsboro;
@@ -8614,13 +8620,13 @@ body.page-ting-moreinfo img {
   padding: 0 1em 0;
 }
 
-/* line 903, ../sass/elements/_specific_elements.scss */
+/* line 907, ../sass/elements/_specific_elements.scss */
 .bibdk-vejviser-help-text {
   clear: both;
   padding-left: 20px;
 }
 
-/* line 912, ../sass/elements/_specific_elements.scss */
+/* line 916, ../sass/elements/_specific_elements.scss */
 .alert {
   background: url(../img/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
@@ -8628,43 +8634,43 @@ body.page-ting-moreinfo img {
   height: 22px;
 }
 
-/* line 919, ../sass/elements/_specific_elements.scss */
+/* line 923, ../sass/elements/_specific_elements.scss */
 .blue-alert {
   background-position: 0 0;
 }
 
-/* line 923, ../sass/elements/_specific_elements.scss */
+/* line 927, ../sass/elements/_specific_elements.scss */
 .green-alert {
   background-position: -18px 0;
 }
 
-/* line 927, ../sass/elements/_specific_elements.scss */
+/* line 931, ../sass/elements/_specific_elements.scss */
 .yellow-alert {
   background-position: -36px 0;
 }
 
-/* line 931, ../sass/elements/_specific_elements.scss */
+/* line 935, ../sass/elements/_specific_elements.scss */
 .red-alert {
   background-position: -54px 0;
 }
 
-/* line 935, ../sass/elements/_specific_elements.scss */
+/* line 939, ../sass/elements/_specific_elements.scss */
 .no-alert {
   background-image: none;
 }
 
-/* line 943, ../sass/elements/_specific_elements.scss */
+/* line 947, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 952, ../sass/elements/_specific_elements.scss */
+/* line 956, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 }
-/* line 957, ../sass/elements/_specific_elements.scss */
+/* line 961, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review .openformat-info {
   float: left;
   clear: left;
@@ -8672,18 +8678,18 @@ body.page-ting-moreinfo img {
   padding-right: 20px;
 }
 
-/* line 965, ../sass/elements/_specific_elements.scss */
+/* line 969, ../sass/elements/_specific_elements.scss */
 .bibdk-review-link {
   left: 25px;
   position: relative;
 }
-/* line 968, ../sass/elements/_specific_elements.scss */
+/* line 972, ../sass/elements/_specific_elements.scss */
 .bibdk-review-link > a {
   margin-left: -25px;
   text-indent: 25px;
 }
 
-/* line 974, ../sass/elements/_specific_elements.scss */
+/* line 978, ../sass/elements/_specific_elements.scss */
 span.star {
   display: inline-block;
   background: url("../img/rating-stars.png");
@@ -8691,33 +8697,33 @@ span.star {
   height: 17px;
 }
 
-/* line 981, ../sass/elements/_specific_elements.scss */
+/* line 985, ../sass/elements/_specific_elements.scss */
 span.star.positive {
   color: transparent;
   background-position: 0 17px;
 }
 
-/* line 987, ../sass/elements/_specific_elements.scss */
+/* line 991, ../sass/elements/_specific_elements.scss */
 span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
 
-/* line 995, ../sass/elements/_specific_elements.scss */
+/* line 999, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
-/* line 998, ../sass/elements/_specific_elements.scss */
+/* line 1002, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block .ding-wayf-logoninfo {
   vertical-align: sub;
 }
 
-/* line 1003, ../sass/elements/_specific_elements.scss */
+/* line 1007, ../sass/elements/_specific_elements.scss */
 #user-login .form-actions {
   margin-top: -0.5em;
 }
 
-/* line 1010, ../sass/elements/_specific_elements.scss */
+/* line 1014, ../sass/elements/_specific_elements.scss */
 #admin-menu {
   font-size: 13px;
 }
@@ -10194,12 +10200,6 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   border: 8px solid #d2eaf1;
   line-height: 1.5em;
   padding: 1.5em 1.5em 0 0;
-}
-
-/* line 45, ../sass/elements/_infomedia.scss */
-.link-infomedia {
-  color: red;
-  font-weight: bold;
 }
 
 /* line 7, ../sass/elements/_cart.scss */
