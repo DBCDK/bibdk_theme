@@ -43,6 +43,5 @@
 }
 
 .link-infomedia {
-  color: $red-pure;
-  font-weight: bold;
+  @extend .strong-link;
 }
