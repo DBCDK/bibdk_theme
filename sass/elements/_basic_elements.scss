@@ -297,6 +297,12 @@
 // =============================================================================
 
 .actions {
+
+  .bibdk-sb_kopi-replaceme,
+  .link-infomedia {
+    @extend .strong-link; // defined in _basic_elements.scss
+  }
+
   float: right;
   padding-left: 15px;
   border-left: dotted 1px $grey-5;
@@ -321,7 +327,7 @@
   }
 }
 
-.strong-link {
+.strong-link{
   color: $red-link;
   font-weight: bold;
 }

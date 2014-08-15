@@ -144,9 +144,6 @@
       .actions {
         max-width: 175px;
       }
-      a {
-        font-weight: normal;
-      }
       .primary-actions {
         > a {
           display: block;
@@ -171,6 +168,10 @@
 //
 .manifestation-data {
   line-height: 180%;
+
+  a {
+    font-weight: normal;
+  }
 
   .field {
     clear: left;
