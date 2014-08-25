@@ -485,7 +485,7 @@
       });
 
       // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
-      $('article.manifestation').filter(':visible').each(function() {
+      $('article.manifestation', context).filter(':visible').each(function() {
         var wAction = $(this).find('.actions').width();
         $(this).find('.manifestation-data').css('margin-right', wAction);
         var hAction = $(this).find('.actions').height();

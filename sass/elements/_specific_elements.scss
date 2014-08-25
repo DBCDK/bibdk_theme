@@ -3,7 +3,7 @@
 // =============================================================================
 
 .action_element_refexportlinks {
-  padding: 0px; 
+  padding: 0px;
   .element-section {
     padding: 0px;
   }
@@ -125,6 +125,15 @@
 
   &.order-agency {
 
+  }
+}
+
+.node .ting-agency-library {
+  background-color: none;
+  border: solid 1px $grey-5;
+  .element-section .element-section {
+    padding: 0;
+    border: none;
   }
 }
 
@@ -330,7 +339,7 @@ left:-10px;
       }
     }
   }
-  
+
   a {
     color: $blue-lighter;
   }
@@ -659,6 +668,10 @@ p.note-localisations {
   }
 }
 
+.popover.element-wrapper.linkme-wrapper.form-wrapper {
+    border: 10px solid $grey-6;
+}
+
 // =============================================================================
 // Favorites data popup
 // =============================================================================
@@ -958,7 +971,7 @@ body.page-ting-moreinfo {
     float: left;
     clear: left;
     width: 280px;
-    padding-right: 20px; 
+    padding-right: 20px;
   }
 }
 
