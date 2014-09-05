@@ -10257,14 +10257,28 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
 }
 
 /* line 37, ../sass/elements/_cart.scss */
+#edit-cartactions {
+  padding: 0 0 0 20px;
+}
+/* line 40, ../sass/elements/_cart.scss */
+#edit-cartactions .item-list ul li {
+  margin: 0;
+}
+
+/* line 45, ../sass/elements/_cart.scss */
+.bibdk-cart-helptext {
+  padding: 0 0 10px 20px;
+}
+
+/* line 49, ../sass/elements/_cart.scss */
 #bibdk-cart-pager {
   text-align: center;
 }
-/* line 39, ../sass/elements/_cart.scss */
+/* line 51, ../sass/elements/_cart.scss */
 #bibdk-cart-pager a {
   padding: 0 5px;
 }
-/* line 43, ../sass/elements/_cart.scss */
+/* line 55, ../sass/elements/_cart.scss */
 #bibdk-cart-pager .bold {
   font-weight: bold;
 }
