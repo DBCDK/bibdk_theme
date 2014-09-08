@@ -3,7 +3,6 @@
 // =============================================================================
 
 .page-user-cart {
-
     .table {
         width: 100%;
         th, td {
@@ -33,4 +32,27 @@
             padding: 3px 10px;
         }
     }
+}
+
+#edit-cartactions {
+  padding: 0 0 0 20px;
+
+  .item-list ul li {
+    margin: 0;
+  }
+}
+
+.bibdk-cart-helptext {
+  padding: 0 0 10px 20px;
+}
+
+#bibdk-cart-pager {
+  text-align: center;
+  a {
+    padding: 0 5px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
 }
