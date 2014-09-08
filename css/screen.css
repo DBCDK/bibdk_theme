@@ -10225,41 +10225,68 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   padding: 1.5em 1.5em 0 0;
 }
 
-/* line 7, ../sass/elements/_cart.scss */
+/* line 6, ../sass/elements/_cart.scss */
 .page-user-cart .table {
   width: 100%;
 }
-/* line 9, ../sass/elements/_cart.scss */
+/* line 8, ../sass/elements/_cart.scss */
 .page-user-cart .table th, .page-user-cart .table td {
   padding: 5px;
   vertical-align: top;
 }
-/* line 14, ../sass/elements/_cart.scss */
+/* line 13, ../sass/elements/_cart.scss */
 .page-user-cart .table th:first-child,
 .page-user-cart .table td:first-child {
   min-width: 1.5em;
   max-width: 2em;
 }
-/* line 19, ../sass/elements/_cart.scss */
+/* line 18, ../sass/elements/_cart.scss */
 .page-user-cart .table th:nth-child(2),
 .page-user-cart .table td:nth-child(2) {
   min-width: 20em;
 }
-/* line 23, ../sass/elements/_cart.scss */
+/* line 22, ../sass/elements/_cart.scss */
 .page-user-cart .table th:nth-child(3),
 .page-user-cart .table td:nth-child(3) {
   min-width: 10em;
   max-width: 14em;
 }
-/* line 28, ../sass/elements/_cart.scss */
+/* line 27, ../sass/elements/_cart.scss */
 .page-user-cart .table th:last-child,
 .page-user-cart .table td:last-child {
   min-width: 10em;
   max-width: 14em;
 }
-/* line 32, ../sass/elements/_cart.scss */
+/* line 31, ../sass/elements/_cart.scss */
 .page-user-cart .table .form-item {
   padding: 3px 10px;
+}
+
+/* line 37, ../sass/elements/_cart.scss */
+#edit-cartactions {
+  padding: 0 0 0 20px;
+}
+/* line 40, ../sass/elements/_cart.scss */
+#edit-cartactions .item-list ul li {
+  margin: 0;
+}
+
+/* line 45, ../sass/elements/_cart.scss */
+.bibdk-cart-helptext {
+  padding: 0 0 10px 20px;
+}
+
+/* line 49, ../sass/elements/_cart.scss */
+#bibdk-cart-pager {
+  text-align: center;
+}
+/* line 51, ../sass/elements/_cart.scss */
+#bibdk-cart-pager a {
+  padding: 0 5px;
+}
+/* line 55, ../sass/elements/_cart.scss */
+#bibdk-cart-pager .bold {
+  font-weight: bold;
 }
 
 /* line 2, ../sass/elements/_toplist.scss */
