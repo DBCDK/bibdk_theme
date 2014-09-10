@@ -58,8 +58,8 @@
 /* line 202, ../sass/utilities/_grid.scss */
 .row .row {
   width: auto;
-  margin-left: -1.75px;
-  margin-right: -1.75px;
+  margin-left: -3px;
+  margin-right: -3px;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none;
@@ -94,8 +94,8 @@
 /* line 208, ../sass/utilities/_grid.scss */
 .column,
 .columns {
-  padding-left: 1.75px;
-  padding-right: 1.75px;
+  padding-left: 3px;
+  padding-right: 3px;
   width: 100%;
   float: left;
   -webkit-box-sizing: border-box;
@@ -565,8 +565,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 1.75px;
-    padding-right: 1.75px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1439,8 +1439,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 1.75px;
-    padding-right: 1.75px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2745,8 +2745,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 1.75px;
-    padding-right: 1.75px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -5392,18 +5392,18 @@ h1 {
 
 /* line 5, ../sass/components/base/_helpers.scss */
 .padded--horizontal, .padded, #topbar, #header, #search-panel, #messages, #user-alerts, #carousel, #subjectshierarchy, #columns, #banner, #footer, #block-menu-menu-global-login-menu {
-  padding-left: 7px;
-  padding-left: 0.4375rem;
-  padding-right: 7px;
-  padding-right: 0.4375rem;
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem;
 }
 
 /* line 9, ../sass/components/base/_helpers.scss */
 .padded--vertical, .padded, #header, #search-panel, #messages, #carousel, #subjectshierarchy, #columns, #banner {
-  padding-top: 7px;
-  padding-top: 0.4375rem;
-  padding-bottom: 7px;
-  padding-bottom: 0.4375rem;
+  padding-top: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
 }
 
 /* line 19, ../sass/components/base/_helpers.scss */
@@ -5693,7 +5693,7 @@ h1 {
 }
 /* line 14, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu > .content {
-  max-width: 996.5px;
+  max-width: 994px;
   margin-left: auto;
   margin-right: auto;
   height: 0;
@@ -5786,7 +5786,7 @@ h1 {
 /* line 5, ../sass/components/global/_header-actions.scss */
 .region-header-actions {
   position: absolute;
-  right: 1.75px;
+  right: 3px;
   bottom: 0;
 }
 
@@ -5971,7 +5971,7 @@ h1 {
 /* line 24, ../sass/components/_rs-carousel.scss */
 .rs-carousel-inner {
   position: relative;
-  min-height: 298.95px;
+  min-height: 298.2px;
 }
 
 /* line 35, ../sass/components/_rs-carousel.scss */
@@ -6114,7 +6114,7 @@ h1 {
 
 /* line 155, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item {
-  width: 166.08333px;
+  width: 165.66667px;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6163,7 +6163,7 @@ h1 {
   font-size: 2em;
   line-height: 1.2;
   color: #51565a;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
@@ -6173,12 +6173,12 @@ h1 {
   padding: 7px 20px 7px;
   border: solid 1px #cfcfcf;
 }
-/* line 10, ../sass/components/_search-block-form.scss */
+/* line 11, ../sass/components/_search-block-form.scss */
 #search-block-wrapper .form-wrapper {
   padding: 0;
 }
 
-/* line 20, ../sass/components/_search-block-form.scss */
+/* line 21, ../sass/components/_search-block-form.scss */
 #search-block-primary .form-type-textfield {
   width: 80%;
   padding-right: 20px;
@@ -6186,11 +6186,11 @@ h1 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 26, ../sass/components/_search-block-form.scss */
+/* line 27, ../sass/components/_search-block-form.scss */
 #search-block-primary .form-actions {
   width: 20%;
 }
-/* line 30, ../sass/components/_search-block-form.scss */
+/* line 31, ../sass/components/_search-block-form.scss */
 #search-block-primary input[type=text] {
   height: 40px;
   line-height: 40px;
@@ -6198,7 +6198,7 @@ h1 {
   font-size: 1.166667em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
 }
-/* line 38, ../sass/components/_search-block-form.scss */
+/* line 39, ../sass/components/_search-block-form.scss */
 #search-block-primary input[type=submit] {
   height: 40px;
   line-height: 40px;
@@ -6206,29 +6206,29 @@ h1 {
   font-weight: bold;
 }
 
-/* line 48, ../sass/components/_search-block-form.scss */
+/* line 49, ../sass/components/_search-block-form.scss */
 #search-advanced-toggle {
   margin-top: 15px;
 }
 
-/* line 52, ../sass/components/_search-block-form.scss */
+/* line 53, ../sass/components/_search-block-form.scss */
 #search-advanced {
   margin-top: 15px;
 }
 
-/* line 62, ../sass/components/_search-block-form.scss */
+/* line 63, ../sass/components/_search-block-form.scss */
 #search-tabs {
   margin-bottom: -1px;
 }
-/* line 65, ../sass/components/_search-block-form.scss */
+/* line 66, ../sass/components/_search-block-form.scss */
 #search-tabs li {
   padding-right: 1px;
 }
-/* line 67, ../sass/components/_search-block-form.scss */
+/* line 68, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child {
   padding-right: 0px;
 }
-/* line 71, ../sass/components/_search-block-form.scss */
+/* line 72, ../sass/components/_search-block-form.scss */
 #search-tabs li a {
   font-weight: bold;
   font-size: 12px;
@@ -6252,7 +6252,7 @@ h1 {
   box-shadow: none;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
-/* line 88, ../sass/components/_search-block-form.scss */
+/* line 89, ../sass/components/_search-block-form.scss */
 #search-tabs li a.active {
   color: #51565a;
   background: #f3f3f3;
@@ -6269,12 +6269,12 @@ h1 {
   position: relative;
   margin-top: 0px;
 }
-/* line 99, ../sass/components/_search-block-form.scss */
+/* line 100, ../sass/components/_search-block-form.scss */
 #search-tabs li a.active:hover {
   color: #51565a;
   background: #f3f3f3;
 }
-/* line 105, ../sass/components/_search-block-form.scss */
+/* line 106, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child a {
   border-left: solid 1px #cfcfcf;
   -webkit-border-radius: 0;
@@ -6283,7 +6283,7 @@ h1 {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 108, ../sass/components/_search-block-form.scss */
+/* line 109, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child a.active {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -6291,7 +6291,7 @@ h1 {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 112, ../sass/components/_search-block-form.scss */
+/* line 113, ../sass/components/_search-block-form.scss */
 #search-tabs li:last-child a {
   border-right: solid 1px #cfcfcf;
   -webkit-border-radius: 0;
@@ -6300,7 +6300,7 @@ h1 {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 115, ../sass/components/_search-block-form.scss */
+/* line 116, ../sass/components/_search-block-form.scss */
 #search-tabs li:last-child a.active {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
