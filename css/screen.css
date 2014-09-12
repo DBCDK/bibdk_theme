@@ -3589,7 +3589,7 @@
     box-sizing: border-box;
   }
 }
-/* normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -4187,7 +4187,7 @@ blockquote {
 /* line 45, ../sass/drupal/_system.base.scss */
 html.js input.form-autocomplete {
   background-image: url(../img/drupal/throbber.gif);
-  background-position: 100% 8px;
+  background-position: 100% 15px;
   background-repeat: no-repeat;
 }
 
@@ -5249,126 +5249,132 @@ select#edit-favouriteselector {
 }
 
 /* line 560, ../sass/_forms.scss */
+.page-reservation #popup .form-wrapper .form-submit {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+/* line 565, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 564, ../sass/_forms.scss */
+/* line 569, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 568, ../sass/_forms.scss */
+/* line 573, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 574, ../sass/_forms.scss */
+/* line 579, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
   margin-right: 20px;
 }
-/* line 578, ../sass/_forms.scss */
+/* line 583, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 584, ../sass/_forms.scss */
+/* line 589, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 589, ../sass/_forms.scss */
+/* line 594, ../sass/_forms.scss */
 .page-reservation #edit-infotext-wrapper {
   clear: both;
 }
-/* line 594, ../sass/_forms.scss */
+/* line 599, ../sass/_forms.scss */
 .page-reservation .form-actions input[type="submit"]:first-child {
   margin-left: 20px;
 }
-/* line 599, ../sass/_forms.scss */
+/* line 604, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
-/* line 601, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 .page-reservation #edit-navigation input {
   display: inline-block;
 }
-/* line 606, ../sass/_forms.scss */
+/* line 611, ../sass/_forms.scss */
 .page-reservation #edit-next.form-submit {
   float: right;
 }
-/* line 611, ../sass/_forms.scss */
+/* line 616, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 615, ../sass/_forms.scss */
+/* line 620, ../sass/_forms.scss */
 .page-reservation .order-condition {
   border-bottom: 1px solid #6c7379;
 }
-/* line 617, ../sass/_forms.scss */
+/* line 622, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 628, ../sass/_forms.scss */
+/* line 633, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 632, ../sass/_forms.scss */
+/* line 637, ../sass/_forms.scss */
 #popup .form-wrapper .form-submit {
   margin-bottom: 20px;
 }
 
-/* line 636, ../sass/_forms.scss */
+/* line 641, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 641, ../sass/_forms.scss */
+/* line 646, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 646, ../sass/_forms.scss */
+/* line 651, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 651, ../sass/_forms.scss */
+/* line 656, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 656, ../sass/_forms.scss */
+/* line 661, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 660, ../sass/_forms.scss */
+/* line 665, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 664, ../sass/_forms.scss */
+/* line 669, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 669, ../sass/_forms.scss */
+/* line 674, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 673, ../sass/_forms.scss */
+/* line 678, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
@@ -10219,41 +10225,68 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   padding: 1.5em 1.5em 0 0;
 }
 
-/* line 7, ../sass/elements/_cart.scss */
+/* line 6, ../sass/elements/_cart.scss */
 .page-user-cart .table {
   width: 100%;
 }
-/* line 9, ../sass/elements/_cart.scss */
+/* line 8, ../sass/elements/_cart.scss */
 .page-user-cart .table th, .page-user-cart .table td {
   padding: 5px;
   vertical-align: top;
 }
-/* line 14, ../sass/elements/_cart.scss */
+/* line 13, ../sass/elements/_cart.scss */
 .page-user-cart .table th:first-child,
 .page-user-cart .table td:first-child {
   min-width: 1.5em;
   max-width: 2em;
 }
-/* line 19, ../sass/elements/_cart.scss */
+/* line 18, ../sass/elements/_cart.scss */
 .page-user-cart .table th:nth-child(2),
 .page-user-cart .table td:nth-child(2) {
   min-width: 20em;
 }
-/* line 23, ../sass/elements/_cart.scss */
+/* line 22, ../sass/elements/_cart.scss */
 .page-user-cart .table th:nth-child(3),
 .page-user-cart .table td:nth-child(3) {
   min-width: 10em;
   max-width: 14em;
 }
-/* line 28, ../sass/elements/_cart.scss */
+/* line 27, ../sass/elements/_cart.scss */
 .page-user-cart .table th:last-child,
 .page-user-cart .table td:last-child {
   min-width: 10em;
   max-width: 14em;
 }
-/* line 32, ../sass/elements/_cart.scss */
+/* line 31, ../sass/elements/_cart.scss */
 .page-user-cart .table .form-item {
   padding: 3px 10px;
+}
+
+/* line 37, ../sass/elements/_cart.scss */
+#edit-cartactions {
+  padding: 0 0 0 20px;
+}
+/* line 40, ../sass/elements/_cart.scss */
+#edit-cartactions .item-list ul li {
+  margin: 0;
+}
+
+/* line 45, ../sass/elements/_cart.scss */
+.bibdk-cart-helptext {
+  padding: 0 0 10px 20px;
+}
+
+/* line 49, ../sass/elements/_cart.scss */
+#bibdk-cart-pager {
+  text-align: center;
+}
+/* line 51, ../sass/elements/_cart.scss */
+#bibdk-cart-pager a {
+  padding: 0 5px;
+}
+/* line 55, ../sass/elements/_cart.scss */
+#bibdk-cart-pager .bold {
+  font-weight: bold;
 }
 
 /* line 2, ../sass/elements/_toplist.scss */
