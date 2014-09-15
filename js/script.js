@@ -101,7 +101,7 @@
       });
 
       // Disable button and dropdown when toggling details of a work
-      $('.work-toggle-element', context).click(function(e) {
+      $('.work-toggle-element', context).once().click(function(e) {
         e.preventDefault();
         $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
