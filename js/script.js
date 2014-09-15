@@ -362,7 +362,7 @@
       });
 
       // pjo 08-01-13 bug in outcommented toggle function
-      $('.toggle-next-section', context).click(function(e) {
+      $('.toggle-next-section', context).once().click(function(e) {
         e.preventDefault();
         var section = $(this).closest('.element-section').next('.element-section');
         if(section.hasClass('visuallyhidden')) {
