@@ -630,6 +630,9 @@ select#edit-favouriteselector {
   p {
     margin: 1em 0;
   }
+  .icon {
+    display: none;
+  }
   //@extend .message--status;
 }
 
@@ -642,7 +645,7 @@ select#edit-favouriteselector {
 }
 
 #popup .form-wrapper .form-submit {
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
 }
 
 #popup #edit-navigation .form-submit {
