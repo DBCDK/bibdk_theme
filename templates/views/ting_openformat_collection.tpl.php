@@ -14,13 +14,16 @@
         </div>
       </div>
 
-      <div class="element-actions">
-        <?php print drupal_render($actions); ?>
-      </div>
+      <div class="element-types-actions">
+        <div class="element-types">
+          <?php print $types; ?>
+        </div>
+      
+        <div class="element-actions">
+          <?php print drupal_render($actions); ?>
+        </div>
+      </div>  
 
-      <div class="element-types">
-        <?php print $types; ?>
-      </div>
 
       <div class="msg-<?php print $uid; ?> collection-msg clearfix"></div>
 

@@ -19,16 +19,18 @@
     }
   }
 
-  .element-actions {
+  .element-types-actions {
     float: right;
-    .field-type-bibdk-coll-reservation-button {
-    }
   }
 
   .element-types {
+    float: left;
+  }
+
+  .element-actions {
     float: right;
   }
-  
+
   &.element-section {
     .page-work & { // parent element selector
       padding-bottom: 10px;
@@ -307,8 +309,6 @@
   .material-types-list {
 
     display: block;
-    float: right;
-    padding: 3px 0px 3px 0;
 
     li {
       float: left;
@@ -323,66 +323,92 @@
         background-position: 0 0;
         width: 22px;
         height: 22px;
+        overflow: hidden;
+        text-indent: 22px;
       }
       .article-icon-small {
         background-position: -24px 0;
         width: 17px;
         height: 19px;
+        overflow: hidden;
+        text-indent: 17px;
       }
       .bog-store-bogstaver-icon-small {
         background-position: -43px 0;
         width: 25px;
         height: 22px;
+        overflow: hidden;
+        text-indent: 25px;
       }
       .book-icon-small {
         background-position: -70px 0;
         width: 16px;
         height: 22px;
+        overflow: hidden;
+        text-indent: 16px;
       }
       .movie-icon-small {
         background-position: -88px 0;
         width: 17px;
         height: 20px;
+        overflow: hidden;
+        text-indent: 17px;
       }
       .lyd-icon-small {
         background-position: -107px 0;
         width: 19px;
         height: 19px;
+        overflow: hidden;
+        text-indent: 19px;
       }
       .audiobook-icon-small {
         background-position: -128px 0;
         width: 25px;
         height: 22px;
+        overflow: hidden;
+        text-indent: 25px;
       }
       .music-icon-small {
         background-position: -155px 0;
         width: 19px;
         height: 15px;
+        overflow: hidden;
+        text-indent: 19px;
       }
       .online-icon-small {
         background-position: -176px 0;
         width: 19px;
         height: 21px;
+        overflow: hidden;
+        text-indent: 19px;
       }
       .sheetmusic-icon-small {
         background-position: -197px 0;
         width: 19px;
         height: 20px;
+        overflow: hidden;
+        text-indent: 19px;
       }
       .punktskrift-icon-small {
         background-position: -218px 0;
         width: 17px;
         height: 20px;
+        overflow: hidden;
+        text-indent: 17px;
       }
       .game-icon-small {
         background-position: -237px 0;
         width: 21px;
         height: 12px;
+        overflow: hidden;
+        text-indent: 21px;
       }
       .tidsskrifter-icon-small {
         background-position: -260px 0;
         width: 17px;
         height: 20px;
+        overflow: hidden;
+        text-indent: 17px;
       }
     }
   }

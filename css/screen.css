@@ -3589,7 +3589,7 @@
     box-sizing: border-box;
   }
 }
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -9562,64 +9562,68 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   float: none;
 }
 /* line 22, ../sass/elements/_search_work_manifestations.scss */
+.work-header .element-types-actions {
+  float: right;
+}
+/* line 26, ../sass/elements/_search_work_manifestations.scss */
+.work-header .element-types {
+  float: left;
+}
+/* line 30, ../sass/elements/_search_work_manifestations.scss */
 .work-header .element-actions {
   float: right;
 }
-/* line 28, ../sass/elements/_search_work_manifestations.scss */
-.work-header .element-types {
-  float: right;
-}
-/* line 33, ../sass/elements/_search_work_manifestations.scss */
+/* line 35, ../sass/elements/_search_work_manifestations.scss */
 .page-work .work-header.element-section {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 
-/* line 44, ../sass/elements/_search_work_manifestations.scss */
+/* line 46, ../sass/elements/_search_work_manifestations.scss */
 .work-body .field-tags {
   margin-bottom: 20px;
   color: #6c7379;
 }
-/* line 48, ../sass/elements/_search_work_manifestations.scss */
+/* line 50, ../sass/elements/_search_work_manifestations.scss */
 .work-body .field-tags a {
   color: #178bad;
 }
-/* line 53, ../sass/elements/_search_work_manifestations.scss */
+/* line 55, ../sass/elements/_search_work_manifestations.scss */
 .work-body .field-summary {
   color: #51565a;
   margin-bottom: 10px;
 }
-/* line 58, ../sass/elements/_search_work_manifestations.scss */
+/* line 60, ../sass/elements/_search_work_manifestations.scss */
 .work-body.work-body-has-cover .wrapper {
   width: 75%;
   float: left;
 }
-/* line 63, ../sass/elements/_search_work_manifestations.scss */
+/* line 65, ../sass/elements/_search_work_manifestations.scss */
 .work-body.element-section {
   padding: 0;
 }
 
-/* line 69, ../sass/elements/_search_work_manifestations.scss */
+/* line 71, ../sass/elements/_search_work_manifestations.scss */
 .cover {
   width: 25%;
   float: right;
 }
 
-/* line 75, ../sass/elements/_search_work_manifestations.scss */
+/* line 77, ../sass/elements/_search_work_manifestations.scss */
 .work-cover {
   margin: 0 0 10px 20px;
 }
-/* line 77, ../sass/elements/_search_work_manifestations.scss */
+/* line 79, ../sass/elements/_search_work_manifestations.scss */
 .work-cover img {
   width: 100%;
 }
 
-/* line 82, ../sass/elements/_search_work_manifestations.scss */
+/* line 84, ../sass/elements/_search_work_manifestations.scss */
 .work-cover-image {
   margin-bottom: 10px;
 }
 
-/* line 88, ../sass/elements/_search_work_manifestations.scss */
+/* line 90, ../sass/elements/_search_work_manifestations.scss */
 .work-cover-selector a {
   float: left;
   display: block;
@@ -9627,55 +9631,55 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   height: 17px;
   margin-right: 5px;
 }
-/* line 95, ../sass/elements/_search_work_manifestations.scss */
+/* line 97, ../sass/elements/_search_work_manifestations.scss */
 .work-cover-selector a.work-cover-front {
   background: url(../img/cover-front.png);
 }
-/* line 98, ../sass/elements/_search_work_manifestations.scss */
+/* line 100, ../sass/elements/_search_work_manifestations.scss */
 .work-cover-selector a.work-cover-back {
   background: url(../img/cover-back.png);
 }
 
-/* line 105, ../sass/elements/_search_work_manifestations.scss */
+/* line 107, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper {
   border-width: 0;
   background: white;
 }
-/* line 108, ../sass/elements/_search_work_manifestations.scss */
+/* line 110, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper > .element {
   border-width: 0;
 }
-/* line 110, ../sass/elements/_search_work_manifestations.scss */
+/* line 112, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper > .element .element-section {
   border-color: white;
   border-bottom-width: 0;
 }
-/* line 115, ../sass/elements/_search_work_manifestations.scss */
+/* line 117, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper > .element.toggled-element {
   border-width: 3px;
   border-style: solid;
   border-color: gainsboro;
 }
-/* line 119, ../sass/elements/_search_work_manifestations.scss */
+/* line 121, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper > .element.toggled-element .element-section {
   padding: 17px;
   margin: 0px;
 }
-/* line 122, ../sass/elements/_search_work_manifestations.scss */
+/* line 124, ../sass/elements/_search_work_manifestations.scss */
 .search-results .work.element-wrapper > .element.toggled-element .element-section.work-body {
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
 }
-/* line 130, ../sass/elements/_search_work_manifestations.scss */
+/* line 132, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper {
   margin-left: 20px;
 }
-/* line 132, ../sass/elements/_search_work_manifestations.scss */
+/* line 134, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation {
   background: white;
 }
-/* line 134, ../sass/elements/_search_work_manifestations.scss */
+/* line 136, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation.zebra {
   background: white;
   border-color: #f3f3f3;
@@ -9683,44 +9687,44 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   border-top-width: 1px;
   border-top-style: solid;
 }
-/* line 140, ../sass/elements/_search_work_manifestations.scss */
+/* line 142, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation.zebra .article {
   width: 100%;
 }
-/* line 144, ../sass/elements/_search_work_manifestations.scss */
+/* line 146, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation .actions {
   max-width: 175px;
 }
-/* line 148, ../sass/elements/_search_work_manifestations.scss */
+/* line 150, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation .primary-actions > a {
   display: block;
 }
-/* line 151, ../sass/elements/_search_work_manifestations.scss */
+/* line 153, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation .primary-actions > a, .search-results .manifestations.zebra-wrapper .manifestation .primary-actions ul li {
   margin-left: 24px;
   text-indent: -24px;
   list-style: none;
 }
-/* line 157, ../sass/elements/_search_work_manifestations.scss */
+/* line 159, ../sass/elements/_search_work_manifestations.scss */
 .search-results .manifestations.zebra-wrapper .manifestation .show-more {
   margin-left: 24px;
   text-indent: -24px;
   list-style: none;
 }
 
-/* line 169, ../sass/elements/_search_work_manifestations.scss */
+/* line 171, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data {
   line-height: 180%;
 }
-/* line 172, ../sass/elements/_search_work_manifestations.scss */
+/* line 174, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data a {
   font-weight: normal;
 }
-/* line 176, ../sass/elements/_search_work_manifestations.scss */
+/* line 178, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field {
   clear: left;
 }
-/* line 180, ../sass/elements/_search_work_manifestations.scss */
+/* line 182, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-label {
   display: block;
   float: left;
@@ -9731,7 +9735,7 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-weight: normal;
   width: 100px;
 }
-/* line 190, ../sass/elements/_search_work_manifestations.scss */
+/* line 192, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-items {
   /*width: auto;*/
   margin-left: 120px;
@@ -9745,112 +9749,110 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   -webkit-hyphens: auto;
   hyphens: auto;
 }
-/* line 204, ../sass/elements/_search_work_manifestations.scss */
+/* line 206, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-label-hidden .field-items {
   margin-left: 120px;
 }
-/* line 209, ../sass/elements/_search_work_manifestations.scss */
+/* line 211, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items {
   margin-left: 0px;
   width: auto;
 }
-/* line 214, ../sass/elements/_search_work_manifestations.scss */
+/* line 216, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-volume .field-items .field-items,
 .manifestation-data .field-name-bibdk-mani-section .field-items .field-items {
   margin-left: 120px;
   width: 340px;
 }
-/* line 219, ../sass/elements/_search_work_manifestations.scss */
+/* line 221, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-distinction .field-items .field-item {
   display: inline;
   background-color: yellow;
 }
-/* line 223, ../sass/elements/_search_work_manifestations.scss */
+/* line 225, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-access-information .field-items .field-item {
   display: inline;
   background-color: yellow;
 }
-/* line 227, ../sass/elements/_search_work_manifestations.scss */
+/* line 229, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-marked-audience .field-items .field-item {
   display: inline;
   background-color: yellow;
 }
-/* line 231, ../sass/elements/_search_work_manifestations.scss */
+/* line 233, ../sass/elements/_search_work_manifestations.scss */
 .manifestation-data .field-name-bibdk-mani-recommended-audience .field-items .field-item {
   display: inline;
   background-color: yellow;
 }
 
-/* line 239, ../sass/elements/_search_work_manifestations.scss */
+/* line 241, ../sass/elements/_search_work_manifestations.scss */
 .cart-item-checkbox .manifestation-data .field-label-hidden .field-items {
   margin-left: 0;
 }
 
-/* line 246, ../sass/elements/_search_work_manifestations.scss */
+/* line 248, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list {
   right: 0;
   width: 300px;
 }
-/* line 250, ../sass/elements/_search_work_manifestations.scss */
+/* line 252, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list h3 {
   color: #178bad;
   font-size: 1em;
   padding: 0 5px 0 10px;
   text-align: left;
 }
-/* line 255, ../sass/elements/_search_work_manifestations.scss */
+/* line 257, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list h3 .icon {
   height: 15px;
   padding-top: 8px;
 }
-/* line 261, ../sass/elements/_search_work_manifestations.scss */
+/* line 263, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list a {
   padding: 5px 0px;
   color: white;
 }
-/* line 272, ../sass/elements/_search_work_manifestations.scss */
+/* line 274, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table {
   border-collapse: separate;
   border-spacing: 2px 2px;
 }
-/* line 276, ../sass/elements/_search_work_manifestations.scss */
+/* line 278, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table th {
   text-align: center;
   padding-left: 10px;
 }
-/* line 281, ../sass/elements/_search_work_manifestations.scss */
+/* line 283, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr {
   text-align: center;
 }
-/* line 284, ../sass/elements/_search_work_manifestations.scss */
+/* line 286, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr td {
   vertical-align: middle;
 }
-/* line 286, ../sass/elements/_search_work_manifestations.scss */
+/* line 288, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr td:first-child {
   font-weight: bold;
 }
-/* line 291, ../sass/elements/_search_work_manifestations.scss */
+/* line 293, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr.odd {
   background-color: #c7e1e8;
 }
-/* line 294, ../sass/elements/_search_work_manifestations.scss */
+/* line 296, ../sass/elements/_search_work_manifestations.scss */
 .order-any-btn-list table tr.even {
   background-color: #ebf4f7;
 }
 
-/* line 301, ../sass/elements/_search_work_manifestations.scss */
+/* line 303, ../sass/elements/_search_work_manifestations.scss */
 .reservation-btn-infotext {
   font-size: 11px;
   padding: 2px 4px;
 }
 
-/* line 307, ../sass/elements/_search_work_manifestations.scss */
+/* line 309, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list {
   display: block;
-  float: right;
-  padding: 3px 0px 3px 0;
 }
 /* line 313, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li {
@@ -9867,78 +9869,104 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-position: 0 0;
   width: 22px;
   height: 22px;
+  overflow: hidden;
+  text-indent: 22px;
 }
-/* line 327, ../sass/elements/_search_work_manifestations.scss */
+/* line 329, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .article-icon-small {
   background-position: -24px 0;
   width: 17px;
   height: 19px;
+  overflow: hidden;
+  text-indent: 17px;
 }
-/* line 332, ../sass/elements/_search_work_manifestations.scss */
+/* line 336, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .bog-store-bogstaver-icon-small {
   background-position: -43px 0;
   width: 25px;
   height: 22px;
+  overflow: hidden;
+  text-indent: 25px;
 }
-/* line 337, ../sass/elements/_search_work_manifestations.scss */
+/* line 343, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .book-icon-small {
   background-position: -70px 0;
   width: 16px;
   height: 22px;
+  overflow: hidden;
+  text-indent: 16px;
 }
-/* line 342, ../sass/elements/_search_work_manifestations.scss */
+/* line 350, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .movie-icon-small {
   background-position: -88px 0;
   width: 17px;
   height: 20px;
+  overflow: hidden;
+  text-indent: 17px;
 }
-/* line 347, ../sass/elements/_search_work_manifestations.scss */
+/* line 357, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .lyd-icon-small {
   background-position: -107px 0;
   width: 19px;
   height: 19px;
+  overflow: hidden;
+  text-indent: 19px;
 }
-/* line 352, ../sass/elements/_search_work_manifestations.scss */
+/* line 364, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .audiobook-icon-small {
   background-position: -128px 0;
   width: 25px;
   height: 22px;
+  overflow: hidden;
+  text-indent: 25px;
 }
-/* line 357, ../sass/elements/_search_work_manifestations.scss */
+/* line 371, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .music-icon-small {
   background-position: -155px 0;
   width: 19px;
   height: 15px;
+  overflow: hidden;
+  text-indent: 19px;
 }
-/* line 362, ../sass/elements/_search_work_manifestations.scss */
+/* line 378, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .online-icon-small {
   background-position: -176px 0;
   width: 19px;
   height: 21px;
+  overflow: hidden;
+  text-indent: 19px;
 }
-/* line 367, ../sass/elements/_search_work_manifestations.scss */
+/* line 385, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .sheetmusic-icon-small {
   background-position: -197px 0;
   width: 19px;
   height: 20px;
+  overflow: hidden;
+  text-indent: 19px;
 }
-/* line 372, ../sass/elements/_search_work_manifestations.scss */
+/* line 392, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .punktskrift-icon-small {
   background-position: -218px 0;
   width: 17px;
   height: 20px;
+  overflow: hidden;
+  text-indent: 17px;
 }
-/* line 377, ../sass/elements/_search_work_manifestations.scss */
+/* line 399, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .game-icon-small {
   background-position: -237px 0;
   width: 21px;
   height: 12px;
+  overflow: hidden;
+  text-indent: 21px;
 }
-/* line 382, ../sass/elements/_search_work_manifestations.scss */
+/* line 406, ../sass/elements/_search_work_manifestations.scss */
 .item-list .material-types-list li .tidsskrifter-icon-small {
   background-position: -260px 0;
   width: 17px;
   height: 20px;
+  overflow: hidden;
+  text-indent: 17px;
 }
 
 /* line 7, ../sass/elements/_subject_hierarchy.scss */
