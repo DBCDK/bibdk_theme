@@ -6173,12 +6173,12 @@ h1 {
   padding: 7px 20px 7px;
   border: solid 1px #cfcfcf;
 }
-/* line 11, ../sass/components/_search-block-form.scss */
+/* line 10, ../sass/components/_search-block-form.scss */
 #search-block-wrapper .form-wrapper {
   padding: 0;
 }
 
-/* line 21, ../sass/components/_search-block-form.scss */
+/* line 20, ../sass/components/_search-block-form.scss */
 #search-block-primary .form-type-textfield {
   width: 80%;
   padding-right: 20px;
@@ -6186,11 +6186,11 @@ h1 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 27, ../sass/components/_search-block-form.scss */
+/* line 26, ../sass/components/_search-block-form.scss */
 #search-block-primary .form-actions {
   width: 20%;
 }
-/* line 31, ../sass/components/_search-block-form.scss */
+/* line 30, ../sass/components/_search-block-form.scss */
 #search-block-primary input[type=text] {
   height: 40px;
   line-height: 40px;
@@ -6198,7 +6198,7 @@ h1 {
   font-size: 1.166667em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
 }
-/* line 39, ../sass/components/_search-block-form.scss */
+/* line 38, ../sass/components/_search-block-form.scss */
 #search-block-primary input[type=submit] {
   height: 40px;
   line-height: 40px;
@@ -6206,29 +6206,29 @@ h1 {
   font-weight: bold;
 }
 
-/* line 49, ../sass/components/_search-block-form.scss */
+/* line 48, ../sass/components/_search-block-form.scss */
 #search-advanced-toggle {
   margin-top: 15px;
 }
 
-/* line 53, ../sass/components/_search-block-form.scss */
+/* line 52, ../sass/components/_search-block-form.scss */
 #search-advanced {
   margin-top: 15px;
 }
 
-/* line 63, ../sass/components/_search-block-form.scss */
+/* line 62, ../sass/components/_search-block-form.scss */
 #search-tabs {
   margin-bottom: -1px;
 }
-/* line 66, ../sass/components/_search-block-form.scss */
+/* line 65, ../sass/components/_search-block-form.scss */
 #search-tabs li {
   padding-right: 1px;
 }
-/* line 68, ../sass/components/_search-block-form.scss */
+/* line 67, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child {
   padding-right: 0px;
 }
-/* line 72, ../sass/components/_search-block-form.scss */
+/* line 71, ../sass/components/_search-block-form.scss */
 #search-tabs li a {
   font-weight: bold;
   font-size: 12px;
@@ -6252,7 +6252,7 @@ h1 {
   box-shadow: none;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
-/* line 89, ../sass/components/_search-block-form.scss */
+/* line 88, ../sass/components/_search-block-form.scss */
 #search-tabs li a.active {
   color: #51565a;
   background: #f3f3f3;
@@ -6269,12 +6269,12 @@ h1 {
   position: relative;
   margin-top: 0px;
 }
-/* line 100, ../sass/components/_search-block-form.scss */
+/* line 99, ../sass/components/_search-block-form.scss */
 #search-tabs li a.active:hover {
   color: #51565a;
   background: #f3f3f3;
 }
-/* line 106, ../sass/components/_search-block-form.scss */
+/* line 105, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child a {
   border-left: solid 1px #cfcfcf;
   -webkit-border-radius: 0;
@@ -6283,7 +6283,7 @@ h1 {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 109, ../sass/components/_search-block-form.scss */
+/* line 108, ../sass/components/_search-block-form.scss */
 #search-tabs li:first-child a.active {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -6291,7 +6291,7 @@ h1 {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 113, ../sass/components/_search-block-form.scss */
+/* line 112, ../sass/components/_search-block-form.scss */
 #search-tabs li:last-child a {
   border-right: solid 1px #cfcfcf;
   -webkit-border-radius: 0;
@@ -6300,7 +6300,7 @@ h1 {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 116, ../sass/components/_search-block-form.scss */
+/* line 115, ../sass/components/_search-block-form.scss */
 #search-tabs li:last-child a.active {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -9013,7 +9013,7 @@ div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type
 
 /* line 226, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .btn-submit {
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 /* line 230, ../sass/elements/_custom_search_elements.scss */
@@ -9442,7 +9442,7 @@ form#search-block-form fieldset#edit-advanced {
 /* line 537, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .btn-submit,
 .page-bibdk-frontpage-spil div#search-advanced-panel .btn-submit {
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 /* line 544, ../sass/elements/_custom_search_elements.scss */
@@ -9502,7 +9502,7 @@ form#search-block-form fieldset#edit-advanced {
 /* line 579, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .btn-submit,
 .page-bibdk-frontpage-musik div#search-advanced-panel .btn-submit {
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 /* line 587, ../sass/elements/_custom_search_elements.scss */
@@ -9535,7 +9535,7 @@ form#search-block-form fieldset#edit-advanced {
 /* line 605, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .btn-submit,
 .page-bibdk-frontpage-noder div#search-advanced-panel .btn-submit {
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 /* line 610, ../sass/elements/_custom_search_elements.scss */
@@ -9945,6 +9945,11 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-position: -260px 0;
   width: 17px;
   height: 20px;
+}
+
+/* line 391, ../sass/elements/_search_work_manifestations.scss */
+.panel {
+  padding-left: 3px;
 }
 
 /* line 7, ../sass/elements/_subject_hierarchy.scss */
