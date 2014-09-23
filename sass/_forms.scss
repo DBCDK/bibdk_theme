@@ -620,7 +620,8 @@ select#edit-favouriteselector {
     }
 }
 
-.reservation-online-links {
+// TODO: Needs to be refaktored
+.page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
   background: $grey-7;
   border: solid 1px $grey-5;

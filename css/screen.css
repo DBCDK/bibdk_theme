@@ -5317,76 +5317,76 @@ select#edit-favouriteselector {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 623, ../sass/_forms.scss */
-.reservation-online-links {
+/* line 624, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
   background: #f3f3f3;
   border: solid 1px gainsboro;
 }
-/* line 627, ../sass/_forms.scss */
-.reservation-online-links a {
+/* line 628, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper a {
   display: block;
 }
-/* line 630, ../sass/_forms.scss */
-.reservation-online-links p {
+/* line 631, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper p {
   margin: 1em 0;
 }
-/* line 633, ../sass/_forms.scss */
-.reservation-online-links .icon {
+/* line 634, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper .icon {
   display: none;
 }
 
-/* line 643, ../sass/_forms.scss */
+/* line 644, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 651, ../sass/_forms.scss */
+/* line 652, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 656, ../sass/_forms.scss */
+/* line 657, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 661, ../sass/_forms.scss */
+/* line 662, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 666, ../sass/_forms.scss */
+/* line 667, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 671, ../sass/_forms.scss */
+/* line 672, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 675, ../sass/_forms.scss */
+/* line 676, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 679, ../sass/_forms.scss */
+/* line 680, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 684, ../sass/_forms.scss */
+/* line 685, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 688, ../sass/_forms.scss */
+/* line 689, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
@@ -5394,29 +5394,29 @@ select#edit-favouriteselector {
   text-align: center;
 }
 
-/* line 697, ../sass/_forms.scss */
+/* line 698, ../sass/_forms.scss */
 .inline-search-group .search-input-field, #popup .infomedia-search-group .search-input-field {
   width: 100%;
 }
-/* line 700, ../sass/_forms.scss */
+/* line 701, ../sass/_forms.scss */
 .inline-search-group .search-actions, #popup .infomedia-search-group .search-actions {
   width: 3em;
 }
-/* line 703, ../sass/_forms.scss */
+/* line 704, ../sass/_forms.scss */
 .inline-search-group .form-item, #popup .infomedia-search-group .form-item, .inline-search-group .form-wrapper, #popup .infomedia-search-group .form-wrapper {
   display: table-cell;
 }
 
-/* line 711, ../sass/_forms.scss */
+/* line 712, ../sass/_forms.scss */
 #popup .infomedia-search-group .search-input-field {
   padding: 8px;
 }
-/* line 713, ../sass/_forms.scss */
+/* line 714, ../sass/_forms.scss */
 #popup .infomedia-search-group .search-input-field input {
   margin-bottom: 20px;
 }
 
-/* line 716, ../sass/_forms.scss */
+/* line 717, ../sass/_forms.scss */
 .infomedia-article input {
   padding: 8px;
 }
@@ -7694,7 +7694,8 @@ p.helptext a {
   padding-bottom: 10px;
 }
 /* line 20, ../sass/elements/_global_elements.scss */
-.page-overlay .form-item,
+.page-overlay .form-wrapper, .page-overlay .form-item,
+.page-reservation .form-wrapper,
 .page-reservation .form-item {
   padding: 3px 0px 4px 0px;
 }
