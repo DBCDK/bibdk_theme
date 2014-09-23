@@ -7529,7 +7529,7 @@ button[type="button"] {
   border-bottom: none;
 }
 
-/* line 299, ../sass/elements/_basic_elements.scss */
+/* line 304, ../sass/elements/_basic_elements.scss */
 .actions {
   float: right;
   padding-left: 15px;
@@ -7557,8 +7557,8 @@ button[type="button"] {
 }
 
 /* line 330, ../sass/elements/_basic_elements.scss */
-.strong-link, .actions .bibdk-sb_kopi-replaceme,
-.actions .link-infomedia {
+.strong-link, .link-sbkopi,
+.link-infomedia {
   color: #da5050;
   font-weight: bold;
 }
