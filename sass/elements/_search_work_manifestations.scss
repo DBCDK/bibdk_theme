@@ -28,7 +28,7 @@
   .element-types {
     float: right;
   }
-  
+
   &.element-section {
     .page-work & { // parent element selector
       padding-bottom: 10px;
@@ -158,7 +158,7 @@
         margin-left: 24px;
         text-indent: -24px;
         list-style: none;
-      } 
+      }
     }
   }
 }
@@ -386,4 +386,8 @@
       }
     }
   }
+}
+
+.panel {
+  padding-left: 3px;
 }

@@ -60,7 +60,7 @@ div#search-advanced-panel {
   }
 
   input {
-    margin-top: 5px;
+    margin-top: 2px;
     height: 30px;
     line-height: 30px;
   }
@@ -99,6 +99,8 @@ div#search-advanced-panel {
       display: block;
       width: auto;
       padding-left: 0;
+      margin-bottom: -16px;
+      margin-top: -16px;
       a {
         background-image: url("../img/icons/blue-minus.png");
         padding-left: 20px;
@@ -115,7 +117,7 @@ div#search-advanced-panel {
     }
     .element-wrapper {
       float: left;
-      margin-left: 1%;
+      margin-left: 3%;
       clear: none;
     }
     fieldset:first-child {
@@ -221,6 +223,10 @@ div#search-advanced-panel {
   }
 }
 
+div#search-advanced-panel .btn-submit {
+  margin-top: -20px;
+}
+
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
   .form-type-textfield {
@@ -239,8 +245,7 @@ form#search-block-form fieldset#edit-advanced {
 }
 
 .page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
-  position: relative;
-  top: -43px;
+  margin-top: -43px;
   width: 100%;
 }
 
@@ -530,7 +535,7 @@ form#search-block-form fieldset#edit-advanced {
     }
   }
   .btn-submit {
-    margin-top: 30px;
+    margin-top: -20px;
   }
 }
 
@@ -572,7 +577,7 @@ form#search-block-form fieldset#edit-advanced {
   }
 
   .btn-submit {
-    margin-top: 0px;
+    margin-top: -20px;
   }
 }
 
@@ -598,7 +603,7 @@ form#search-block-form fieldset#edit-advanced {
   }
 
   .btn-submit {
-    margin-top: 0px;
+    margin-top: -20px;
   }
 }
 
