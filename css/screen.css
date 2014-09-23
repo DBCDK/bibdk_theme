@@ -5145,32 +5145,32 @@ textarea::-webkit-input-placeholder {
 }
 /* line 455, ../sass/_forms.scss */
 .page-reservation .element #messages {
-  padding: 30px 10px 0 10px;
+  background-color: inherit;
 }
 
-/* line 462, ../sass/_forms.scss */
+/* line 460, ../sass/_forms.scss */
 .page-reservation .form-step-guide.form-wrapper {
   padding: 0;
   border-bottom: none;
 }
 
-/* line 467, ../sass/_forms.scss */
+/* line 465, ../sass/_forms.scss */
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
   padding: 10px 0;
 }
 
-/* line 471, ../sass/_forms.scss */
+/* line 469, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
-  position: fixed;
+  position: absolute;
   top: 68px;
-  left: 11px;
-  right: 11px;
+  left: 10px;
+  right: 10px;
   border-top-width: 10px;
   border-top-style: solid;
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 482, ../sass/_forms.scss */
+/* line 480, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -5178,17 +5178,14 @@ textarea::-webkit-input-placeholder {
   font-size: 14px;
   border-radius: 0;
   text-shadow: none;
-  border-top-color: white;
-  border-top-style: solid;
-  border-top-width: 1px;
 }
 
-/* line 496, ../sass/_forms.scss */
+/* line 491, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 501, ../sass/_forms.scss */
+/* line 496, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -5197,196 +5194,237 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 508, ../sass/_forms.scss */
+/* line 503, ../sass/_forms.scss */
 .page-reservation #modalContent form {
   margin: 0 10px;
 }
-/* line 511, ../sass/_forms.scss */
+/* line 506, ../sass/_forms.scss */
 .page-reservation #modalContent form .bibdk-provider-form-inputs {
   margin-bottom: 75px;
 }
 
-/* line 520, ../sass/_forms.scss */
+/* line 515, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
-.page-overlay-favourite-userdata #edit-subdivision,
+.page-overlay-favourite-userdata #edi t-subdivision,
 .page-reservation #bibdk-reservation-create-wizard-form input[type="text"],
 .page-reservation #bibdk-reservation-create-wizard-form input[type="password"],
-.page-reservation #bibdk-reservation-create-wizard-form #edit-subdivision {
+.page-reservation #bibdk-reservation-create-wizard-form #edi t-subdivision {
   float: left;
   margin-right: 20px;
   width: 260px;
   font-size: 12px;
   padding: 8px;
 }
-/* line 528, ../sass/_forms.scss */
+/* line 523, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #edit-anyfield,
 .page-reservation #bibdk-reservation-create-wizard-form #edit-anyfield {
   width: 100%;
 }
 
-/* line 533, ../sass/_forms.scss */
+/* line 528, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
-/* line 537, ../sass/_forms.scss */
+/* line 532, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector.ajax-progress {
   display: inherit;
 }
-/* line 541, ../sass/_forms.scss */
+/* line 536, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector .throbber {
   position: absolute;
 }
 
-/* line 546, ../sass/_forms.scss */
+/* line 541, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 550, ../sass/_forms.scss */
+/* line 545, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 556, ../sass/_forms.scss */
+/* line 551, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 560, ../sass/_forms.scss */
+/* line 555, ../sass/_forms.scss */
 .page-reservation #popup .form-wrapper .form-submit {
   margin-bottom: 0px;
   margin-left: 0px;
 }
 
-/* line 565, ../sass/_forms.scss */
+/* line 560, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 569, ../sass/_forms.scss */
+/* line 564, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 573, ../sass/_forms.scss */
+/* line 568, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 579, ../sass/_forms.scss */
+/* line 574, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
   margin-right: 20px;
 }
-/* line 583, ../sass/_forms.scss */
+/* line 578, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 589, ../sass/_forms.scss */
+/* line 584, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 594, ../sass/_forms.scss */
+/* line 589, ../sass/_forms.scss */
 .page-reservation #edit-infotext-wrapper {
   clear: both;
 }
-/* line 599, ../sass/_forms.scss */
+/* line 594, ../sass/_forms.scss */
 .page-reservation .form-actions input[type="submit"]:first-child {
   margin-left: 20px;
 }
-/* line 604, ../sass/_forms.scss */
+/* line 599, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
-/* line 606, ../sass/_forms.scss */
+/* line 601, ../sass/_forms.scss */
 .page-reservation #edit-navigation input {
   display: inline-block;
 }
-/* line 611, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 .page-reservation #edit-next.form-submit {
   float: right;
 }
-/* line 616, ../sass/_forms.scss */
+/* line 611, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 620, ../sass/_forms.scss */
+/* line 615, ../sass/_forms.scss */
 .page-reservation .order-condition {
   border-bottom: 1px solid #6c7379;
 }
-/* line 622, ../sass/_forms.scss */
+/* line 617, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 633, ../sass/_forms.scss */
+/* line 624, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper {
+  padding: 1em 2em;
+  background: #f3f3f3;
+  border: solid 1px gainsboro;
+}
+/* line 628, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper a {
+  display: block;
+}
+/* line 631, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper p {
+  margin: 1em 0;
+}
+/* line 634, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper .icon {
+  display: none;
+}
+
+/* line 644, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 637, ../sass/_forms.scss */
-#popup .form-wrapper .form-submit {
-  margin-bottom: 20px;
-}
-
-/* line 641, ../sass/_forms.scss */
+/* line 652, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 646, ../sass/_forms.scss */
+/* line 657, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 651, ../sass/_forms.scss */
+/* line 662, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 656, ../sass/_forms.scss */
+/* line 667, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 661, ../sass/_forms.scss */
+/* line 672, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 665, ../sass/_forms.scss */
+/* line 676, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 669, ../sass/_forms.scss */
+/* line 680, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 674, ../sass/_forms.scss */
+/* line 685, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 678, ../sass/_forms.scss */
+/* line 689, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0px;
   text-align: center;
+}
+
+/* line 698, ../sass/_forms.scss */
+.inline-search-group .search-input-field, #popup .infomedia-search-group .search-input-field {
+  width: 100%;
+}
+/* line 701, ../sass/_forms.scss */
+.inline-search-group .search-actions, #popup .infomedia-search-group .search-actions {
+  width: 3em;
+}
+/* line 704, ../sass/_forms.scss */
+.inline-search-group .form-item, #popup .infomedia-search-group .form-item, .inline-search-group .form-wrapper, #popup .infomedia-search-group .form-wrapper {
+  display: table-cell;
+}
+
+/* line 712, ../sass/_forms.scss */
+#popup .infomedia-search-group .search-input-field {
+  padding: 8px;
+}
+/* line 714, ../sass/_forms.scss */
+#popup .infomedia-search-group .search-input-field input {
+  margin-bottom: 20px;
+}
+
+/* line 717, ../sass/_forms.scss */
+.infomedia-article input {
+  padding: 8px;
 }
 
 /* line 5, ../sass/_typography.scss */
@@ -7643,74 +7681,79 @@ p.helptext a {
 }
 
 /* line 6, ../sass/elements/_global_elements.scss */
-body.page-overlay,
-body.page-reservation {
+.page-overlay,
+.page-reservation {
   background: #e8e8e8;
 }
 /* line 10, ../sass/elements/_global_elements.scss */
-body.page-overlay h2, body.page-overlay .help-menu-subheader, body.page-overlay .newsroom-subheader,
-body.page-reservation h2,
-body.page-reservation .help-menu-subheader,
-body.page-reservation .newsroom-subheader {
+.page-overlay h2, .page-overlay .help-menu-subheader, .page-overlay .newsroom-subheader,
+.page-reservation h2,
+.page-reservation .help-menu-subheader,
+.page-reservation .newsroom-subheader {
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: 0.4em;
 }
 /* line 16, ../sass/elements/_global_elements.scss */
-body.page-overlay .bottom-space,
-body.page-reservation .bottom-space {
+.page-overlay .bottom-space,
+.page-reservation .bottom-space {
   padding-bottom: 10px;
 }
 /* line 20, ../sass/elements/_global_elements.scss */
-body.page-overlay .form-wrapper, body.page-overlay .form-item,
-body.page-reservation .form-wrapper,
-body.page-reservation .form-item {
+.page-overlay .form-wrapper, .page-overlay .form-item,
+.page-reservation .form-wrapper,
+.page-reservation .form-item {
   padding: 3px 0px 4px 0px;
 }
 /* line 24, ../sass/elements/_global_elements.scss */
-body.page-overlay .fieldset-legend,
-body.page-reservation .fieldset-legend {
+.page-overlay .fieldset-legend,
+.page-reservation .fieldset-legend {
   padding: 10px 0 10px;
 }
 
-/* line 175, ../sass/elements/_global_elements.scss */
+/* line 29, ../sass/elements/_global_elements.scss */
+.page-reservation #popup {
+  margin-top: 2em;
+}
+
+/* line 176, ../sass/elements/_global_elements.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 179, ../sass/elements/_global_elements.scss */
+/* line 180, ../sass/elements/_global_elements.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 183, ../sass/elements/_global_elements.scss */
+/* line 184, ../sass/elements/_global_elements.scss */
 a.inactive, input[type="submit"].button-as-link:disabled {
   color: #51565a;
   cursor: default;
 }
 
-/* line 193, ../sass/elements/_global_elements.scss */
+/* line 194, ../sass/elements/_global_elements.scss */
 #popup .region-content {
   margin: 15px 20px;
 }
 
-/* line 197, ../sass/elements/_global_elements.scss */
+/* line 198, ../sass/elements/_global_elements.scss */
 #popup .element-wrapper {
   margin-bottom: 0;
 }
 
-/* line 201, ../sass/elements/_global_elements.scss */
+/* line 202, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 205, ../sass/elements/_global_elements.scss */
+/* line 206, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper:last-child {
   border-bottom-width: 0px;
   margin-bottom: 0px;
 }
 
-/* line 210, ../sass/elements/_global_elements.scss */
+/* line 211, ../sass/elements/_global_elements.scss */
 #popup-button-close {
   float: right;
   margin-right: 10px;
