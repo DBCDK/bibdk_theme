@@ -1,4 +1,7 @@
 <!-- topbar start -->
+<!-- blind user tag start -->
+<h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
+<!-- blind user tag slut -->
 <nav id="topbar" data-role="navigation">
   <div class="row">
     <div class="small-24 columns">
@@ -90,8 +93,8 @@
 <section id="columns">
 
   <a name="content"></a> <!-- used for scrolling -->
-
   <?php if (!empty($title)): ?>
+
     <div class="row">
       <div class="small-18 columns">
         <h1 id="title"><?php print $title; ?></h1>
