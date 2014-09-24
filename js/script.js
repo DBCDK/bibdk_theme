@@ -101,7 +101,7 @@
       });
 
       // Disable button and dropdown when toggling details of a work
-      $('.work-toggle-element', context).click(function(e) {
+      $('.work-toggle-element', context).once().click(function(e) {
         e.preventDefault();
         $(this).trigger('load-work');
         if(!$(this).hasClass('toggled')) {
@@ -362,7 +362,7 @@
       });
 
       // pjo 08-01-13 bug in outcommented toggle function
-      $('.toggle-next-section', context).click(function(e) {
+      $('.toggle-next-section', context).once().click(function(e) {
         e.preventDefault();
         var section = $(this).closest('.element-section').next('.element-section');
         if(section.hasClass('visuallyhidden')) {

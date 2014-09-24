@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .header-action-vejviser a:after, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -58,8 +59,8 @@
 /* line 202, ../sass/utilities/_grid.scss */
 .row .row {
   width: auto;
-  margin-left: -5px;
-  margin-right: -5px;
+  margin-left: -3px;
+  margin-right: -3px;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none;
@@ -94,8 +95,8 @@
 /* line 208, ../sass/utilities/_grid.scss */
 .column,
 .columns {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
   width: 100%;
   float: left;
   -webkit-box-sizing: border-box;
@@ -565,8 +566,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1439,8 +1440,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -2745,8 +2746,8 @@
   .column,
   .columns {
     position: relative;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3589,7 +3590,7 @@
     box-sizing: border-box;
   }
 }
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -4180,28 +4181,29 @@ blockquote {
   background: white;
   color: #161616;
   cursor: default;
+  text-align: left;
   white-space: pre;
   zoom: 1;
 }
 
-/* line 45, ../sass/drupal/_system.base.scss */
+/* line 46, ../sass/drupal/_system.base.scss */
 html.js input.form-autocomplete {
   background-image: url(../img/drupal/throbber.gif);
   background-position: 100% 15px;
   background-repeat: no-repeat;
 }
 
-/* line 50, ../sass/drupal/_system.base.scss */
+/* line 51, ../sass/drupal/_system.base.scss */
 html.js input.throbbing {
   background-position: 100% -12px;
 }
 
-/* line 67, ../sass/drupal/_system.base.scss */
+/* line 68, ../sass/drupal/_system.base.scss */
 html.js fieldset.collapsed .fieldset-wrapper {
   display: none;
 }
 
-/* line 91, ../sass/drupal/_system.base.scss */
+/* line 92, ../sass/drupal/_system.base.scss */
 .resizable-textarea .grippie {
   background: #eeeeee url(../img/drupal/grippie.png) no-repeat center 2px;
   border: 1px solid #ddd;
@@ -4211,12 +4213,12 @@ html.js fieldset.collapsed .fieldset-wrapper {
   overflow: hidden;
 }
 
-/* line 106, ../sass/drupal/_system.base.scss */
+/* line 107, ../sass/drupal/_system.base.scss */
 body.drag {
   cursor: move;
 }
 
-/* line 109, ../sass/drupal/_system.base.scss */
+/* line 110, ../sass/drupal/_system.base.scss */
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left;
@@ -4226,12 +4228,12 @@ body.drag {
   text-decoration: none;
 }
 
-/* line 117, ../sass/drupal/_system.base.scss */
+/* line 118, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle:hover {
   text-decoration: none;
 }
 
-/* line 120, ../sass/drupal/_system.base.scss */
+/* line 121, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle .handle {
   background: url(../img/drupal/draggable.png) no-repeat 6px 9px;
   height: 13px;
@@ -4240,12 +4242,12 @@ a.tabledrag-handle .handle {
   width: 13px;
 }
 
-/* line 127, ../sass/drupal/_system.base.scss */
+/* line 128, ../sass/drupal/_system.base.scss */
 a.tabledrag-handle-hover .handle {
   background-position: 6px -11px;
 }
 
-/* line 130, ../sass/drupal/_system.base.scss */
+/* line 131, ../sass/drupal/_system.base.scss */
 div.indentation {
   float: left;
   height: 1.7em;
@@ -4254,56 +4256,56 @@ div.indentation {
   width: 20px;
 }
 
-/* line 137, ../sass/drupal/_system.base.scss */
+/* line 138, ../sass/drupal/_system.base.scss */
 div.tree-child {
   background: url(../img/drupal/tree.png) no-repeat 11px center;
 }
 
-/* line 140, ../sass/drupal/_system.base.scss */
+/* line 141, ../sass/drupal/_system.base.scss */
 div.tree-child-last {
   background: url(../img/drupal/tree-bottom.png) no-repeat 11px center;
 }
 
-/* line 143, ../sass/drupal/_system.base.scss */
+/* line 144, ../sass/drupal/_system.base.scss */
 div.tree-child-horizontal {
   background: url(../img/drupal/tree.png) no-repeat -11px center;
 }
 
-/* line 146, ../sass/drupal/_system.base.scss */
+/* line 147, ../sass/drupal/_system.base.scss */
 .tabledrag-toggle-weight-wrapper {
   text-align: right;
 }
 
-/* line 156, ../sass/drupal/_system.base.scss */
+/* line 157, ../sass/drupal/_system.base.scss */
 table.sticky-header {
   background-color: white;
   margin-top: 0;
 }
 
-/* line 169, ../sass/drupal/_system.base.scss */
+/* line 170, ../sass/drupal/_system.base.scss */
 .progress .bar {
   background-color: white;
   border: 1px solid;
 }
 
-/* line 173, ../sass/drupal/_system.base.scss */
+/* line 174, ../sass/drupal/_system.base.scss */
 .progress .filled {
   background-color: #161616;
   height: 1.5em;
   width: 5px;
 }
 
-/* line 178, ../sass/drupal/_system.base.scss */
+/* line 179, ../sass/drupal/_system.base.scss */
 .progress .percentage {
   float: right;
 }
 
-/* line 185, ../sass/drupal/_system.base.scss */
+/* line 186, ../sass/drupal/_system.base.scss */
 .ajax-progress {
   display: inline-block;
 }
 
-/* line 188, ../sass/drupal/_system.base.scss */
+/* line 189, ../sass/drupal/_system.base.scss */
 .ajax-progress .throbber {
   background: transparent url(../img/drupal/throbber.gif) no-repeat 0px -18px;
   float: left;
@@ -4312,55 +4314,55 @@ table.sticky-header {
   width: 15px;
 }
 
-/* line 195, ../sass/drupal/_system.base.scss */
+/* line 196, ../sass/drupal/_system.base.scss */
 .ajax-progress .message {
   padding-left: 20px;
 }
 
-/* line 198, ../sass/drupal/_system.base.scss */
+/* line 199, ../sass/drupal/_system.base.scss */
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
 
-/* line 201, ../sass/drupal/_system.base.scss */
+/* line 202, ../sass/drupal/_system.base.scss */
 .ajax-progress-bar {
   width: 16em;
 }
 
-/* line 211, ../sass/drupal/_system.base.scss */
+/* line 212, ../sass/drupal/_system.base.scss */
 .container-inline div,
 .container-inline label {
   display: inline;
 }
 
-/* line 218, ../sass/drupal/_system.base.scss */
+/* line 219, ../sass/drupal/_system.base.scss */
 .container-inline .fieldset-wrapper {
   display: block;
 }
 
-/* line 227, ../sass/drupal/_system.base.scss */
+/* line 228, ../sass/drupal/_system.base.scss */
 .nowrap {
   white-space: nowrap;
 }
 
-/* line 237, ../sass/drupal/_system.base.scss */
+/* line 238, ../sass/drupal/_system.base.scss */
 html.js .js-hide {
   display: none;
 }
 
-/* line 251, ../sass/drupal/_system.base.scss */
+/* line 252, ../sass/drupal/_system.base.scss */
 .element-hidden {
   display: none;
 }
 
-/* line 265, ../sass/drupal/_system.base.scss */
+/* line 266, ../sass/drupal/_system.base.scss */
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 276, ../sass/drupal/_system.base.scss */
+/* line 277, ../sass/drupal/_system.base.scss */
 .element-invisible.element-focusable:active,
 .element-invisible.element-focusable:focus {
   position: static !important;
@@ -4468,50 +4470,55 @@ tr.even .form-item {
   color: #fff;
 }
 
-/* line 204, ../sass/drupal/_system.theme.scss */
+/* line 190, ../sass/drupal/_system.theme.scss */
+#autocomplete li {
+  padding: 1px 5px;
+}
+
+/* line 207, ../sass/drupal/_system.theme.scss */
 .fieldset-legend span.summary {
   color: #999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
-/* line 216, ../sass/drupal/_system.theme.scss */
+/* line 219, ../sass/drupal/_system.theme.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 219, ../sass/drupal/_system.theme.scss */
+/* line 222, ../sass/drupal/_system.theme.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 222, ../sass/drupal/_system.theme.scss */
+/* line 225, ../sass/drupal/_system.theme.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
 
-/* line 225, ../sass/drupal/_system.theme.scss */
+/* line 228, ../sass/drupal/_system.theme.scss */
 body div.tabledrag-changed-warning {
   margin-bottom: 0.5em;
 }
 
-/* line 235, ../sass/drupal/_system.theme.scss */
+/* line 238, ../sass/drupal/_system.theme.scss */
 tr.selected td {
   background: #ffc;
 }
 
-/* line 239, ../sass/drupal/_system.theme.scss */
+/* line 242, ../sass/drupal/_system.theme.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
-/* line 249, ../sass/drupal/_system.theme.scss */
+/* line 252, ../sass/drupal/_system.theme.scss */
 .progress {
   font-weight: bold;
 }
 
-/* line 252, ../sass/drupal/_system.theme.scss */
+/* line 255, ../sass/drupal/_system.theme.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -4521,7 +4528,7 @@ th.checkbox {
   border-radius: 3px;
 }
 
-/* line 260, ../sass/drupal/_system.theme.scss */
+/* line 263, ../sass/drupal/_system.theme.scss */
 .progress .filled {
   background: #0072b9 url(../img/drupal/progress.gif);
 }
@@ -5138,32 +5145,32 @@ textarea::-webkit-input-placeholder {
 }
 /* line 455, ../sass/_forms.scss */
 .page-reservation .element #messages {
-  padding: 30px 10px 0 10px;
+  background-color: inherit;
 }
 
-/* line 462, ../sass/_forms.scss */
+/* line 460, ../sass/_forms.scss */
 .page-reservation .form-step-guide.form-wrapper {
   padding: 0;
   border-bottom: none;
 }
 
-/* line 467, ../sass/_forms.scss */
+/* line 465, ../sass/_forms.scss */
 .page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
   padding: 10px 0;
 }
 
-/* line 471, ../sass/_forms.scss */
+/* line 469, ../sass/_forms.scss */
 .page-reservation .form-step-guide {
-  position: fixed;
+  position: absolute;
   top: 68px;
-  left: 11px;
-  right: 11px;
+  left: 10px;
+  right: 10px;
   border-top-width: 10px;
   border-top-style: solid;
   border-top-color: #e8e8e8;
   margin: 0 1px;
 }
-/* line 482, ../sass/_forms.scss */
+/* line 480, ../sass/_forms.scss */
 .page-reservation .form-step-guide input[type="submit"] {
   width: 25%;
   height: 30px;
@@ -5171,17 +5178,14 @@ textarea::-webkit-input-placeholder {
   font-size: 14px;
   border-radius: 0;
   text-shadow: none;
-  border-top-color: white;
-  border-top-style: solid;
-  border-top-width: 1px;
 }
 
-/* line 496, ../sass/_forms.scss */
+/* line 491, ../sass/_forms.scss */
 .page-reservation .bottom-space {
   padding-bottom: 20px;
 }
 
-/* line 501, ../sass/_forms.scss */
+/* line 496, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label,
 .page-reservation label {
   margin-bottom: 2px;
@@ -5190,196 +5194,237 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-/* line 508, ../sass/_forms.scss */
+/* line 503, ../sass/_forms.scss */
 .page-reservation #modalContent form {
   margin: 0 10px;
 }
-/* line 511, ../sass/_forms.scss */
+/* line 506, ../sass/_forms.scss */
 .page-reservation #modalContent form .bibdk-provider-form-inputs {
   margin-bottom: 75px;
 }
 
-/* line 520, ../sass/_forms.scss */
+/* line 515, ../sass/_forms.scss */
 .page-overlay-favourite-userdata input[type="text"],
 .page-overlay-favourite-userdata input[type="password"],
-.page-overlay-favourite-userdata #edit-subdivision,
+.page-overlay-favourite-userdata #edi t-subdivision,
 .page-reservation #bibdk-reservation-create-wizard-form input[type="text"],
 .page-reservation #bibdk-reservation-create-wizard-form input[type="password"],
-.page-reservation #bibdk-reservation-create-wizard-form #edit-subdivision {
+.page-reservation #bibdk-reservation-create-wizard-form #edi t-subdivision {
   float: left;
   margin-right: 20px;
   width: 260px;
   font-size: 12px;
   padding: 8px;
 }
-/* line 528, ../sass/_forms.scss */
+/* line 523, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #edit-anyfield,
 .page-reservation #bibdk-reservation-create-wizard-form #edit-anyfield {
   width: 100%;
 }
 
-/* line 533, ../sass/_forms.scss */
+/* line 528, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
 }
-/* line 537, ../sass/_forms.scss */
+/* line 532, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector.ajax-progress {
   display: inherit;
 }
-/* line 541, ../sass/_forms.scss */
+/* line 536, ../sass/_forms.scss */
 .form-item.form-item-favouriteselector .throbber {
   position: absolute;
 }
 
-/* line 546, ../sass/_forms.scss */
+/* line 541, ../sass/_forms.scss */
 .form-item-favouriteselector label {
   width: auto;
 }
 
-/* line 550, ../sass/_forms.scss */
+/* line 545, ../sass/_forms.scss */
 select#edit-favouriteselector {
   max-width: 430px;
 }
 
-/* line 556, ../sass/_forms.scss */
+/* line 551, ../sass/_forms.scss */
 .page-overlay-favourite-userdata #popup .form-wrapper .form-item,
 .page-reservation #popup #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-/* line 560, ../sass/_forms.scss */
+/* line 555, ../sass/_forms.scss */
 .page-reservation #popup .form-wrapper .form-submit {
   margin-bottom: 0px;
   margin-left: 0px;
 }
 
-/* line 565, ../sass/_forms.scss */
+/* line 560, ../sass/_forms.scss */
 .page-reservation .fieldset-legend {
   padding: 20px 0 10px;
 }
 
-/* line 569, ../sass/_forms.scss */
+/* line 564, ../sass/_forms.scss */
 .page-reservation #edit-manifestation .fieldset-legend {
   padding: 10px 0;
 }
 
-/* line 573, ../sass/_forms.scss */
+/* line 568, ../sass/_forms.scss */
 .page-reservation .container-inline-date .date-padding {
   float: left;
   padding: 5px 10px;
 }
 
-/* line 579, ../sass/_forms.scss */
+/* line 574, ../sass/_forms.scss */
 .page-reservation #edit-branchdata .branch-data {
   float: left;
   margin-right: 20px;
 }
-/* line 583, ../sass/_forms.scss */
+/* line 578, ../sass/_forms.scss */
 .page-reservation #edit-branchdata input {
   float: right;
   margin-right: 20px;
 }
 
-/* line 589, ../sass/_forms.scss */
+/* line 584, ../sass/_forms.scss */
 .page-overlay-favourite-userdata label, .page-reservation label {
   text-align: left;
 }
 
-/* line 594, ../sass/_forms.scss */
+/* line 589, ../sass/_forms.scss */
 .page-reservation #edit-infotext-wrapper {
   clear: both;
 }
-/* line 599, ../sass/_forms.scss */
+/* line 594, ../sass/_forms.scss */
 .page-reservation .form-actions input[type="submit"]:first-child {
   margin-left: 20px;
 }
-/* line 604, ../sass/_forms.scss */
+/* line 599, ../sass/_forms.scss */
 .page-reservation #edit-navigation {
   text-align: right;
 }
-/* line 606, ../sass/_forms.scss */
+/* line 601, ../sass/_forms.scss */
 .page-reservation #edit-navigation input {
   display: inline-block;
 }
-/* line 611, ../sass/_forms.scss */
+/* line 606, ../sass/_forms.scss */
 .page-reservation #edit-next.form-submit {
   float: right;
 }
-/* line 616, ../sass/_forms.scss */
+/* line 611, ../sass/_forms.scss */
 .page-reservation .messages {
   margin: 35px 0 0;
 }
-/* line 620, ../sass/_forms.scss */
+/* line 615, ../sass/_forms.scss */
 .page-reservation .order-condition {
   border-bottom: 1px solid #6c7379;
 }
-/* line 622, ../sass/_forms.scss */
+/* line 617, ../sass/_forms.scss */
 .page-reservation .order-condition .fieldset-wrapper {
   margin: 5px 10px 5px 45px;
 }
 
-/* line 633, ../sass/_forms.scss */
+/* line 624, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper {
+  padding: 1em 2em;
+  background: #f3f3f3;
+  border: solid 1px gainsboro;
+}
+/* line 628, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper a {
+  display: block;
+}
+/* line 631, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper p {
+  margin: 1em 0;
+}
+/* line 634, ../sass/_forms.scss */
+.page-reservation .reservation-online-links.form-wrapper .icon {
+  display: none;
+}
+
+/* line 644, ../sass/_forms.scss */
 #popup .region-content {
   margin: 10px 20px;
 }
 
-/* line 637, ../sass/_forms.scss */
-#popup .form-wrapper .form-submit {
-  margin-bottom: 20px;
-}
-
-/* line 641, ../sass/_forms.scss */
+/* line 652, ../sass/_forms.scss */
 #popup #edit-navigation .form-submit {
   margin-top: 20px;
   margin-left: 20px;
 }
 
-/* line 646, ../sass/_forms.scss */
+/* line 657, ../sass/_forms.scss */
 #popup article.manifestation {
   padding: 0 20px;
 }
 
-/* line 651, ../sass/_forms.scss */
+/* line 662, ../sass/_forms.scss */
 #popup #edit-needbeforedate div.form-item-needBeforeDate-month,
 #popup #edit-needbeforedate div.form-item-needBeforeDate-day {
   float: left;
   margin-right: 20px;
 }
 
-/* line 656, ../sass/_forms.scss */
+/* line 667, ../sass/_forms.scss */
 #popup article.selected_branch .element-section {
   border-bottom-width: 0;
   padding: 0 0 20px 20px;
 }
 
-/* line 661, ../sass/_forms.scss */
+/* line 672, ../sass/_forms.scss */
 #popup article.selected_branch h3 {
   font-size: 1.2em;
 }
 
-/* line 665, ../sass/_forms.scss */
+/* line 676, ../sass/_forms.scss */
 #popup article.manifestation {
   padding-top: 20px;
 }
 
-/* line 669, ../sass/_forms.scss */
+/* line 680, ../sass/_forms.scss */
 #popup #edit-userparameters {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 674, ../sass/_forms.scss */
+/* line 685, ../sass/_forms.scss */
 #popup #edit-userparameters .form-item {
   padding: 20px 0 0 0;
 }
 
-/* line 678, ../sass/_forms.scss */
+/* line 689, ../sass/_forms.scss */
 #popup .close-link-wrapper {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0px;
   text-align: center;
+}
+
+/* line 698, ../sass/_forms.scss */
+.inline-search-group .search-input-field, #popup .infomedia-search-group .search-input-field {
+  width: 100%;
+}
+/* line 701, ../sass/_forms.scss */
+.inline-search-group .search-actions, #popup .infomedia-search-group .search-actions {
+  width: 3em;
+}
+/* line 704, ../sass/_forms.scss */
+.inline-search-group .form-item, #popup .infomedia-search-group .form-item, .inline-search-group .form-wrapper, #popup .infomedia-search-group .form-wrapper {
+  display: table-cell;
+}
+
+/* line 712, ../sass/_forms.scss */
+#popup .infomedia-search-group .search-input-field {
+  padding: 8px;
+}
+/* line 714, ../sass/_forms.scss */
+#popup .infomedia-search-group .search-input-field input {
+  margin-bottom: 20px;
+}
+
+/* line 717, ../sass/_forms.scss */
+.infomedia-article input {
+  padding: 8px;
 }
 
 /* line 5, ../sass/_typography.scss */
@@ -5392,18 +5437,18 @@ h1 {
 
 /* line 5, ../sass/components/base/_helpers.scss */
 .padded--horizontal, .padded, #topbar, #header, #search-panel, #messages, #user-alerts, #carousel, #subjectshierarchy, #columns, #banner, #footer, #block-menu-menu-global-login-menu {
-  padding-left: 20px;
-  padding-left: 1.25rem;
-  padding-right: 20px;
-  padding-right: 1.25rem;
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem;
 }
 
 /* line 9, ../sass/components/base/_helpers.scss */
 .padded--vertical, .padded, #header, #search-panel, #messages, #carousel, #subjectshierarchy, #columns, #banner {
-  padding-top: 20px;
-  padding-top: 1.25rem;
-  padding-bottom: 20px;
-  padding-bottom: 1.25rem;
+  padding-top: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
 }
 
 /* line 19, ../sass/components/base/_helpers.scss */
@@ -5693,7 +5738,7 @@ h1 {
 }
 /* line 14, ../sass/components/global/_global-login-menu.scss */
 #block-menu-menu-global-login-menu > .content {
-  max-width: 990px;
+  max-width: 994px;
   margin-left: auto;
   margin-right: auto;
   height: 0;
@@ -5786,7 +5831,7 @@ h1 {
 /* line 5, ../sass/components/global/_header-actions.scss */
 .region-header-actions {
   position: absolute;
-  right: 5px;
+  right: 3px;
   bottom: 0;
 }
 
@@ -5971,7 +6016,7 @@ h1 {
 /* line 24, ../sass/components/_rs-carousel.scss */
 .rs-carousel-inner {
   position: relative;
-  min-height: 297px;
+  min-height: 298.2px;
 }
 
 /* line 35, ../sass/components/_rs-carousel.scss */
@@ -6114,7 +6159,7 @@ h1 {
 
 /* line 155, ../sass/components/_rs-carousel.scss */
 .rs-carousel-item {
-  width: 165px;
+  width: 165.66667px;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6163,14 +6208,14 @@ h1 {
   font-size: 2em;
   line-height: 1.2;
   color: #51565a;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 /* line 5, ../sass/components/_search-block-form.scss */
 #search-block-wrapper {
   background-color: #f3f3f3;
-  padding: 20px 20px 15px;
+  padding: 7px 20px 7px;
   border: solid 1px #cfcfcf;
 }
 /* line 10, ../sass/components/_search-block-form.scss */
@@ -7045,7 +7090,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#51565a, #474c4f);
 }
 /* line 16, ../sass/utilities/_btn-skin.scss */
-.btn-grey:disabled:hover, .btn-grey.disabled:hover {
+.btn-grey:disabled:hover, .order-any-btn-list a.btn-grey:disabled:hover, .btn-grey.disabled:hover, .order-any-btn-list a.disabled.btn-grey:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #565b5f), color-stop(100%, #4c5155));
   background-image: -webkit-linear-gradient(#565b5f, #4c5155);
   background-image: -moz-linear-gradient(#565b5f, #4c5155);
@@ -7484,7 +7529,7 @@ button[type="button"] {
   border-bottom: none;
 }
 
-/* line 299, ../sass/elements/_basic_elements.scss */
+/* line 304, ../sass/elements/_basic_elements.scss */
 .actions {
   float: right;
   padding-left: 15px;
@@ -7512,8 +7557,8 @@ button[type="button"] {
 }
 
 /* line 330, ../sass/elements/_basic_elements.scss */
-.strong-link, .actions .bibdk-sb_kopi-replaceme,
-.actions .link-infomedia {
+.strong-link, .link-sbkopi,
+.link-infomedia {
   color: #da5050;
   font-weight: bold;
 }
@@ -7636,74 +7681,79 @@ p.helptext a {
 }
 
 /* line 6, ../sass/elements/_global_elements.scss */
-body.page-overlay,
-body.page-reservation {
+.page-overlay,
+.page-reservation {
   background: #e8e8e8;
 }
 /* line 10, ../sass/elements/_global_elements.scss */
-body.page-overlay h2, body.page-overlay .help-menu-subheader, body.page-overlay .newsroom-subheader,
-body.page-reservation h2,
-body.page-reservation .help-menu-subheader,
-body.page-reservation .newsroom-subheader {
+.page-overlay h2, .page-overlay .help-menu-subheader, .page-overlay .newsroom-subheader,
+.page-reservation h2,
+.page-reservation .help-menu-subheader,
+.page-reservation .newsroom-subheader {
   font-weight: bold;
   font-size: 1.2em;
   margin-bottom: 0.4em;
 }
 /* line 16, ../sass/elements/_global_elements.scss */
-body.page-overlay .bottom-space,
-body.page-reservation .bottom-space {
+.page-overlay .bottom-space,
+.page-reservation .bottom-space {
   padding-bottom: 10px;
 }
 /* line 20, ../sass/elements/_global_elements.scss */
-body.page-overlay .form-wrapper, body.page-overlay .form-item,
-body.page-reservation .form-wrapper,
-body.page-reservation .form-item {
+.page-overlay .form-wrapper, .page-overlay .form-item,
+.page-reservation .form-wrapper,
+.page-reservation .form-item {
   padding: 3px 0px 4px 0px;
 }
 /* line 24, ../sass/elements/_global_elements.scss */
-body.page-overlay .fieldset-legend,
-body.page-reservation .fieldset-legend {
+.page-overlay .fieldset-legend,
+.page-reservation .fieldset-legend {
   padding: 10px 0 10px;
 }
 
-/* line 175, ../sass/elements/_global_elements.scss */
+/* line 29, ../sass/elements/_global_elements.scss */
+.page-reservation #popup {
+  margin-top: 2em;
+}
+
+/* line 176, ../sass/elements/_global_elements.scss */
 .normal {
   font-weight: normal;
 }
 
-/* line 179, ../sass/elements/_global_elements.scss */
+/* line 180, ../sass/elements/_global_elements.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 183, ../sass/elements/_global_elements.scss */
+/* line 184, ../sass/elements/_global_elements.scss */
 a.inactive, input[type="submit"].button-as-link:disabled {
   color: #51565a;
   cursor: default;
 }
 
-/* line 193, ../sass/elements/_global_elements.scss */
+/* line 194, ../sass/elements/_global_elements.scss */
 #popup .region-content {
   margin: 15px 20px;
 }
 
-/* line 197, ../sass/elements/_global_elements.scss */
+/* line 198, ../sass/elements/_global_elements.scss */
 #popup .element-wrapper {
   margin-bottom: 0;
 }
 
-/* line 201, ../sass/elements/_global_elements.scss */
+/* line 202, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper {
   margin-bottom: 5px;
 }
 
-/* line 205, ../sass/elements/_global_elements.scss */
+/* line 206, ../sass/elements/_global_elements.scss */
 #popup .form-wrapper:last-child {
   border-bottom-width: 0px;
   margin-bottom: 0px;
 }
 
-/* line 210, ../sass/elements/_global_elements.scss */
+/* line 211, ../sass/elements/_global_elements.scss */
 #popup-button-close {
   float: right;
   margin-right: 10px;
@@ -8824,7 +8874,7 @@ div#search-advanced-panel .popover .user-msg {
 }
 /* line 62, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel input {
-  margin-top: 5px;
+  margin-top: 2px;
   height: 30px;
   line-height: 30px;
 }
@@ -8865,66 +8915,68 @@ div#search-advanced-panel fieldset#edit-expand > legend {
   display: block;
   width: auto;
   padding-left: 0;
+  margin-bottom: -16px;
+  margin-top: -16px;
 }
-/* line 102, ../sass/elements/_custom_search_elements.scss */
+/* line 104, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand > legend a {
   background-image: url("../img/icons/blue-minus.png");
   padding-left: 20px;
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 109, ../sass/elements/_custom_search_elements.scss */
+/* line 111, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .fieldset-wrapper {
   text-align: left;
   padding: 10px 0;
 }
-/* line 113, ../sass/elements/_custom_search_elements.scss */
+/* line 115, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .fieldset-description {
   display: none;
 }
-/* line 116, ../sass/elements/_custom_search_elements.scss */
+/* line 118, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .element-wrapper {
   float: left;
-  margin-left: 1%;
+  margin-left: 3%;
   clear: none;
 }
-/* line 121, ../sass/elements/_custom_search_elements.scss */
+/* line 123, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand fieldset:first-child {
   margin-left: 0%;
 }
-/* line 124, ../sass/elements/_custom_search_elements.scss */
+/* line 126, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .sub-elements {
   display: block;
   margin-left: 20px;
   width: 100%;
 }
-/* line 131, ../sass/elements/_custom_search_elements.scss */
+/* line 133, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed {
   width: 100%;
 }
-/* line 133, ../sass/elements/_custom_search_elements.scss */
+/* line 135, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed > legend {
   background-color: inherit;
   border: none;
   display: block;
   width: auto;
 }
-/* line 138, ../sass/elements/_custom_search_elements.scss */
+/* line 140, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed > legend a {
   padding-left: 20px;
   background-image: url("../img/icons/blue-plus.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 148, ../sass/elements/_custom_search_elements.scss */
+/* line 150, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset:first-child {
   margin-left: 0%;
 }
-/* line 151, ../sass/elements/_custom_search_elements.scss */
+/* line 153, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset:last-child {
   margin-left: 0%;
 }
-/* line 154, ../sass/elements/_custom_search_elements.scss */
+/* line 156, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset {
   margin-bottom: 1em;
   width: 32.4%;
@@ -8932,46 +8984,46 @@ div#search-advanced-panel fieldset {
   display: inline;
   vertical-align: top;
 }
-/* line 160, ../sass/elements/_custom_search_elements.scss */
+/* line 162, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset .fieldset-legend {
   font-size: 16px;
   padding: 0;
 }
-/* line 164, ../sass/elements/_custom_search_elements.scss */
+/* line 166, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper {
   clear: both;
   text-align: right;
 }
-/* line 167, ../sass/elements/_custom_search_elements.scss */
+/* line 169, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .fieldset-legend {
   float: left;
   max-width: inherit;
 }
-/* line 171, ../sass/elements/_custom_search_elements.scss */
+/* line 173, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .form-type-textfield {
   margin-bottom: 0;
   margin-right: 1%;
   width: 100%;
 }
-/* line 176, ../sass/elements/_custom_search_elements.scss */
+/* line 178, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .fieldset-description {
   white-space: nowrap;
   display: inline-block;
 }
-/* line 182, ../sass/elements/_custom_search_elements.scss */
+/* line 184, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element {
   display: block;
   clear: both;
   margin: 2px 0 0 0;
   padding: 0 5px 0 0;
 }
-/* line 188, ../sass/elements/_custom_search_elements.scss */
+/* line 190, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item {
   margin: 0;
   padding: 0;
   display: block;
 }
-/* line 192, ../sass/elements/_custom_search_elements.scss */
+/* line 194, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item .toggle-subgroup {
   display: -moz-inline-stack;
   display: inline-block;
@@ -8990,177 +9042,181 @@ div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item
   position: relative;
   margin-right: 5px;
 }
-/* line 205, ../sass/elements/_custom_search_elements.scss */
+/* line 207, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item .toggle-subgroup.toggled {
   background-image: url(../img/icons/blue-minus.png);
 }
-/* line 209, ../sass/elements/_custom_search_elements.scss */
+/* line 211, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio {
   float: none;
 }
-/* line 211, ../sass/elements/_custom_search_elements.scss */
+/* line 213, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox label, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio label {
   display: block;
   float: left;
 }
-/* line 215, ../sass/elements/_custom_search_elements.scss */
+/* line 217, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox input, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio input {
   display: block;
   float: left;
 }
 
-/* line 224, ../sass/elements/_custom_search_elements.scss */
+/* line 226, ../sass/elements/_custom_search_elements.scss */
+div#search-advanced-panel .btn-submit {
+  margin-top: -20px;
+}
+
+/* line 230, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
 }
-/* line 226, ../sass/elements/_custom_search_elements.scss */
+/* line 232, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-type-textfield {
   margin-bottom: 0;
   margin-right: 1%;
   width: 100%;
 }
 
-/* line 233, ../sass/elements/_custom_search_elements.scss */
+/* line 239, ../sass/elements/_custom_search_elements.scss */
 .container-inline div#search-advanced-panel {
   display: block;
 }
 
-/* line 237, ../sass/elements/_custom_search_elements.scss */
+/* line 243, ../sass/elements/_custom_search_elements.scss */
 form#search-block-form fieldset#edit-advanced {
   clear: right;
 }
 
-/* line 241, ../sass/elements/_custom_search_elements.scss */
+/* line 247, ../sass/elements/_custom_search_elements.scss */
 .page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
-  position: relative;
-  top: -43px;
+  margin-top: -43px;
   width: 100%;
 }
 
-/* line 248, ../sass/elements/_custom_search_elements.scss */
+/* line 253, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype {
   width: 23%;
   margin-left: 0;
 }
-/* line 251, ../sass/elements/_custom_search_elements.scss */
+/* line 256, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype div.fieldset-wrapper {
   text-align: left;
 }
-/* line 254, ../sass/elements/_custom_search_elements.scss */
+/* line 259, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype .fieldset-description {
   display: none;
 }
-/* line 258, ../sass/elements/_custom_search_elements.scss */
+/* line 263, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog {
   width: 38%;
   padding-left: 3%;
 }
-/* line 261, ../sass/elements/_custom_search_elements.scss */
+/* line 266, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog .bibdk-custom-search-element .column {
   width: 33%;
   float: left;
 }
-/* line 265, ../sass/elements/_custom_search_elements.scss */
+/* line 270, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog div.fieldset-wrapper {
   text-align: left;
 }
-/* line 268, ../sass/elements/_custom_search_elements.scss */
+/* line 273, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog .fieldset-description {
   display: none;
 }
-/* line 272, ../sass/elements/_custom_search_elements.scss */
+/* line 277, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar {
   width: 26%;
 }
-/* line 274, ../sass/elements/_custom_search_elements.scss */
+/* line 279, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .form-type-select {
   float: left;
 }
-/* line 277, ../sass/elements/_custom_search_elements.scss */
+/* line 282, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .form-type-select:last-child {
   float: right;
 }
-/* line 280, ../sass/elements/_custom_search_elements.scss */
+/* line 285, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar div.fieldset-wrapper {
   text-align: left;
 }
-/* line 283, ../sass/elements/_custom_search_elements.scss */
+/* line 288, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .fieldset-description {
   display: none;
 }
 
 /* boeger:sprog */
-/* line 292, ../sass/elements/_custom_search_elements.scss */
+/* line 297, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.materialetype {
   width: 16%;
 }
-/* line 295, ../sass/elements/_custom_search_elements.scss */
+/* line 300, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.litterar_form,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.litterar_form {
   width: 17%;
 }
-/* line 298, ../sass/elements/_custom_search_elements.scss */
+/* line 303, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.malgruppe,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.malgruppe {
   width: 13%;
 }
-/* line 301, ../sass/elements/_custom_search_elements.scss */
+/* line 306, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.sprog,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.sprog {
   width: 22%;
 }
-/* line 305, ../sass/elements/_custom_search_elements.scss */
+/* line 310, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 310, ../sass/elements/_custom_search_elements.scss */
+/* line 315, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.udgivelsesar,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.udgivelsesar {
   margin: 0 1% 0 1%;
   width: 26%;
 }
-/* line 314, ../sass/elements/_custom_search_elements.scss */
+/* line 319, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper {
   margin-left: 0;
 }
-/* line 316, ../sass/elements/_custom_search_elements.scss */
+/* line 321, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 319, ../sass/elements/_custom_search_elements.scss */
+/* line 324, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 322, ../sass/elements/_custom_search_elements.scss */
+/* line 327, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 325, ../sass/elements/_custom_search_elements.scss */
+/* line 330, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
-/* line 328, ../sass/elements/_custom_search_elements.scss */
+/* line 333, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper div.form-item,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 335, ../sass/elements/_custom_search_elements.scss */
+/* line 340, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] div#search-advanced-panel fieldset.artiklens_emne,
 .page-bibdk-frontpage-bog div#search-advanced-panel div#search-advanced-panel fieldset.artiklens_emne {
   margin-left: 0;
 }
 
-/* line 345, ../sass/elements/_custom_search_elements.scss */
+/* line 350, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.tidsskrift_eller_avis,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artikel_titelord,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artiklens_forfatter,
@@ -9171,152 +9227,152 @@ form#search-block-form fieldset#edit-advanced {
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.artiklens_emne {
   width: 49%;
 }
-/* line 348, ../sass/elements/_custom_search_elements.scss */
+/* line 353, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.materialetype {
   width: 20%;
 }
-/* line 351, ../sass/elements/_custom_search_elements.scss */
+/* line 356, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.sprog,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.sprog {
   width: 23%;
   margin: 0 0 0 8%;
 }
-/* line 354, ../sass/elements/_custom_search_elements.scss */
+/* line 359, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 50%;
   float: left;
 }
-/* line 359, ../sass/elements/_custom_search_elements.scss */
+/* line 364, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.udgivelsesar,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.udgivelsesar {
   width: 26%;
   margin: 0 1% 0 3%;
 }
-/* line 362, ../sass/elements/_custom_search_elements.scss */
+/* line 367, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.udgivelsesar div.form-item,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.udgivelsesar div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 369, ../sass/elements/_custom_search_elements.scss */
+/* line 374, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 372, ../sass/elements/_custom_search_elements.scss */
+/* line 377, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 375, ../sass/elements/_custom_search_elements.scss */
+/* line 380, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 378, ../sass/elements/_custom_search_elements.scss */
+/* line 383, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
-/* line 382, ../sass/elements/_custom_search_elements.scss */
+/* line 387, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .btn-submit,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .btn-submit {
   margin-bottom: 1em;
 }
-/* line 385, ../sass/elements/_custom_search_elements.scss */
+/* line 390, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] fieldset.artiklens_forfatter,
 .page-bibdk-frontpage-artikel div#search-advanced-panel fieldset.artiklens_forfatter {
   margin-left: 0;
 }
 
-/* line 394, ../sass/elements/_custom_search_elements.scss */
+/* line 399, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.filmens_titel,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.personer,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.filmens_titel,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.personer {
   width: 48.5%;
 }
-/* line 397, ../sass/elements/_custom_search_elements.scss */
+/* line 402, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet {
   width: 98%;
   margin-left: 0;
 }
-/* line 400, ../sass/elements/_custom_search_elements.scss */
+/* line 405, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column {
   width: 22%;
   float: left;
 }
-/* line 404, ../sass/elements/_custom_search_elements.scss */
+/* line 409, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column2,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column2 {
   width: 26%;
 }
-/* line 407, ../sass/elements/_custom_search_elements.scss */
+/* line 412, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column3,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column3 {
   width: 30%;
 }
-/* line 411, ../sass/elements/_custom_search_elements.scss */
+/* line 416, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type {
   width: 98%;
   margin-left: 0;
 }
-/* line 414, ../sass/elements/_custom_search_elements.scss */
+/* line 419, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type .bibdk-custom-search-element .column {
   width: 20.5%;
   float: left;
 }
-/* line 418, ../sass/elements/_custom_search_elements.scss */
+/* line 423, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type .bibdk-custom-search-element .column2,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type .bibdk-custom-search-element .column2 {
   width: 17%;
   float: left;
 }
-/* line 423, ../sass/elements/_custom_search_elements.scss */
+/* line 428, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.materialetype {
   width: 20%;
   margin-left: 0;
 }
-/* line 426, ../sass/elements/_custom_search_elements.scss */
+/* line 431, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.materialetype .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.materialetype .bibdk-custom-search-element .column {
   width: 50%;
   float: left;
 }
-/* line 432, ../sass/elements/_custom_search_elements.scss */
+/* line 437, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.aldersanbefaling,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.tilladt_for,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.aldersanbefaling,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.tilladt_for {
   width: 32%;
 }
-/* line 434, ../sass/elements/_custom_search_elements.scss */
+/* line 439, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.aldersanbefaling select,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.tilladt_for select,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.aldersanbefaling select,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.tilladt_for select {
   width: 95%;
 }
-/* line 439, ../sass/elements/_custom_search_elements.scss */
+/* line 444, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 442, ../sass/elements/_custom_search_elements.scss */
+/* line 447, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
 
-/* line 452, ../sass/elements/_custom_search_elements.scss */
+/* line 457, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.materialetype,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.element-wrapper
 .element-wrapper.litterar_form,
@@ -9326,222 +9382,222 @@ form#search-block-form fieldset#edit-advanced {
   width: 34%;
   margin-left: 0;
 }
-/* line 456, ../sass/elements/_custom_search_elements.scss */
+/* line 461, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.sprog,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper.sprog {
   width: 32%;
   margin-left: 0;
 }
-/* line 459, ../sass/elements/_custom_search_elements.scss */
+/* line 464, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 464, ../sass/elements/_custom_search_elements.scss */
+/* line 469, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar {
   margin: 0 1% 0 1%;
   width: 26%;
 }
-/* line 467, ../sass/elements/_custom_search_elements.scss */
+/* line 472, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar .form-type-select,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar .form-type-select {
   float: left;
 }
-/* line 470, ../sass/elements/_custom_search_elements.scss */
+/* line 475, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar .form-type-select:last-child,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar .form-type-select:last-child {
   float: right;
 }
-/* line 473, ../sass/elements/_custom_search_elements.scss */
+/* line 478, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar div.form-item,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 480, ../sass/elements/_custom_search_elements.scss */
+/* line 485, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 483, ../sass/elements/_custom_search_elements.scss */
+/* line 488, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 486, ../sass/elements/_custom_search_elements.scss */
+/* line 491, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 489, ../sass/elements/_custom_search_elements.scss */
+/* line 494, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
 
-/* line 498, ../sass/elements/_custom_search_elements.scss */
+/* line 503, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] select,
 .page-bibdk-frontpage-spil div#search-advanced-panel select {
   width: 100%;
 }
-/* line 501, ../sass/elements/_custom_search_elements.scss */
+/* line 506, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.platform,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.platform {
   width: 40%;
 }
-/* line 503, ../sass/elements/_custom_search_elements.scss */
+/* line 508, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.platform .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.platform .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 508, ../sass/elements/_custom_search_elements.scss */
+/* line 513, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.spilgenre_type,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.spilgenre_type {
   width: 59%;
   margin-left: 0;
   margin-top: 8px;
 }
-/* line 512, ../sass/elements/_custom_search_elements.scss */
+/* line 517, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.spilgenre_type .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.spilgenre_type .bibdk-custom-search-element .column {
   width: 33%;
   float: left;
 }
-/* line 518, ../sass/elements/_custom_search_elements.scss */
+/* line 523, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.medieradets_aldersanbefalinger,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.aldersanbefaling,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.medieradets_aldersanbefalinger,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.aldersanbefaling {
   width: 40%;
 }
-/* line 521, ../sass/elements/_custom_search_elements.scss */
+/* line 526, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .medieradets_aldersanbefalinger,
 .page-bibdk-frontpage-spil div#search-advanced-panel .medieradets_aldersanbefalinger {
   margin-left: 0;
 }
-/* line 525, ../sass/elements/_custom_search_elements.scss */
+/* line 530, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 528, ../sass/elements/_custom_search_elements.scss */
+/* line 533, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 532, ../sass/elements/_custom_search_elements.scss */
+/* line 537, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .btn-submit,
 .page-bibdk-frontpage-spil div#search-advanced-panel .btn-submit {
-  margin-top: 30px;
+  margin-top: -20px;
 }
 
-/* line 539, ../sass/elements/_custom_search_elements.scss */
+/* line 544, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .alle_titler,
 .page-bibdk-frontpage-musik div#search-advanced-panel .alle_titler {
   margin-left: 0;
 }
-/* line 542, ../sass/elements/_custom_search_elements.scss */
+/* line 547, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre {
   width: 98%;
   margin-left: 1%;
 }
-/* line 545, ../sass/elements/_custom_search_elements.scss */
+/* line 550, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre div.fieldset-wrapper,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre div.fieldset-wrapper {
   text-align: left;
 }
-/* line 548, ../sass/elements/_custom_search_elements.scss */
+/* line 553, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .fieldset-description,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .fieldset-description {
   display: none;
 }
-/* line 551, ../sass/elements/_custom_search_elements.scss */
+/* line 556, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .bibdk-custom-search-element .column {
   width: 25%;
   float: left;
 }
-/* line 555, ../sass/elements/_custom_search_elements.scss */
+/* line 560, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .bibdk-custom-search-element .column3,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .bibdk-custom-search-element .column3 {
   width: 22%;
 }
-/* line 559, ../sass/elements/_custom_search_elements.scss */
+/* line 564, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale {
   width: 75%;
   margin-left: 0;
 }
-/* line 562, ../sass/elements/_custom_search_elements.scss */
+/* line 567, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale div.fieldset-wrapper,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale div.fieldset-wrapper {
   text-align: left;
 }
-/* line 565, ../sass/elements/_custom_search_elements.scss */
+/* line 570, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale .fieldset-description,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale .fieldset-description {
   display: none;
 }
-/* line 568, ../sass/elements/_custom_search_elements.scss */
+/* line 573, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale .bibdk-custom-search-element .column {
   width: 25%;
   float: left;
 }
-/* line 574, ../sass/elements/_custom_search_elements.scss */
+/* line 579, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .btn-submit,
 .page-bibdk-frontpage-musik div#search-advanced-panel .btn-submit {
-  margin-top: 0px;
+  margin-top: -20px;
 }
 
-/* line 582, ../sass/elements/_custom_search_elements.scss */
+/* line 587, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale {
   width: 85%;
   margin-left: 1%;
 }
-/* line 585, ../sass/elements/_custom_search_elements.scss */
+/* line 590, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale div.fieldset-wrapper,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale div.fieldset-wrapper {
   text-align: left;
 }
-/* line 588, ../sass/elements/_custom_search_elements.scss */
+/* line 593, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .fieldset-description,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .fieldset-description {
   display: none;
 }
-/* line 591, ../sass/elements/_custom_search_elements.scss */
+/* line 596, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .bibdk-custom-search-element .column {
   width: 38%;
   float: left;
 }
-/* line 595, ../sass/elements/_custom_search_elements.scss */
+/* line 600, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .bibdk-custom-search-element .column0,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .bibdk-custom-search-element .column0 {
   width: 24%;
 }
-/* line 600, ../sass/elements/_custom_search_elements.scss */
+/* line 605, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .btn-submit,
 .page-bibdk-frontpage-noder div#search-advanced-panel .btn-submit {
-  margin-top: 0px;
+  margin-top: -20px;
 }
 
-/* line 605, ../sass/elements/_custom_search_elements.scss */
+/* line 610, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list {
   width: 600px;
   height: 460px;
 }
-/* line 613, ../sass/elements/_custom_search_elements.scss */
+/* line 618, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list .panel-select .form-type-select {
   height: 350px;
 }
-/* line 617, ../sass/elements/_custom_search_elements.scss */
+/* line 622, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list .custom-search-list-save, div#search-advanced-panel .custom-search-options-list .custom-search-list-close {
   margin: 20px;
   width: auto;
@@ -9939,6 +9995,11 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   background-position: -260px 0;
   width: 17px;
   height: 20px;
+}
+
+/* line 391, ../sass/elements/_search_work_manifestations.scss */
+.panel {
+  padding-left: 3px;
 }
 
 /* line 7, ../sass/elements/_subject_hierarchy.scss */

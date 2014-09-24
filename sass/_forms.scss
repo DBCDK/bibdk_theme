@@ -453,11 +453,9 @@ margin-right:0.5em;
     padding-top:10px;
 
   #messages {
-    padding: 30px 10px 0 10px;
+    background-color: inherit;
   }
 }
-
-
 
 .page-reservation .form-step-guide.form-wrapper {
     padding:0;
@@ -469,10 +467,10 @@ margin-right:0.5em;
 }
 
 .page-reservation .form-step-guide {
-  position:fixed;
+  position:absolute;
   top:68px;
-  left:11px;
-  right:11px;
+  left:10px;
+  right:10px;
 
   border-top-width: 10px;
   border-top-style: solid;
@@ -487,9 +485,6 @@ margin-right:0.5em;
     border-radius:0;
     text-shadow: none;
 
-    border-top-color: $white;
-    border-top-style: solid;
-    border-top-width: 1px;
   }
 }
 
@@ -517,7 +512,7 @@ margin-right:0.5em;
 .page-reservation #bibdk-reservation-create-wizard-form {
   input[type="text"],
   input[type="password"],
-  #edit-subdivision {
+  #edi t-subdivision {
     float: left;
     margin-right: 20px;
     width: 260px;
@@ -592,9 +587,9 @@ select#edit-favouriteselector {
 
 .page-reservation {
     #edit-infotext-wrapper {
-      clear:both; 
-    }   
- 
+      clear:both;
+    }
+
     .form-actions {
         input[type="submit"]:first-child {
             margin-left: 20px;
@@ -625,6 +620,22 @@ select#edit-favouriteselector {
     }
 }
 
+// TODO: Needs to be refaktored
+.page-reservation .reservation-online-links.form-wrapper {
+  padding: 1em 2em;
+  background: $grey-7;
+  border: solid 1px $grey-5;
+  a {
+    display: block;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .icon {
+    display: none;
+  }
+  //@extend .message--status;
+}
 
 // =============================================================================
 // Popup
@@ -635,7 +646,7 @@ select#edit-favouriteselector {
 }
 
 #popup .form-wrapper .form-submit {
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
 }
 
 #popup #edit-navigation .form-submit {
@@ -682,3 +693,27 @@ select#edit-favouriteselector {
     text-align: center;
 }
 
+
+.inline-search-group {
+  .search-input-field {
+    width: 100%;
+  }
+  .search-actions {
+    width: 3em;
+  }
+  .form-item, .form-wrapper {
+    display: table-cell;
+  }
+}
+
+
+#popup .infomedia-search-group {
+  @extend .inline-search-group;
+  .search-input-field {
+    padding: 8px;
+    input {margin-bottom: 20px;}
+  }
+}
+.infomedia-article input {
+  padding: 8px;
+}

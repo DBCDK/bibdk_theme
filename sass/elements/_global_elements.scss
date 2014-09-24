@@ -2,13 +2,13 @@
 // Import: Global elements
 // =============================================================================
 
-body.page-overlay,
-body.page-reservation {
+.page-overlay,
+.page-reservation {
 
   background: $grey-6;
 
   h2, .help-menu-subheader, .newsroom-subheader {
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 0.4em;
   }
@@ -24,10 +24,11 @@ body.page-reservation {
   .fieldset-legend {
     padding: 10px 0 10px;
   }
-
 }
 
-
+.page-reservation #popup {
+  margin-top: 2em;
+}
 
 
 

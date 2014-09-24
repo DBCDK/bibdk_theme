@@ -395,7 +395,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
     case 'bibdk_frontpage/bog':
     case 'bibdk_frontpage/net':
     case 'bibdk_frontpage/artikel':
-      _break_into_columns_expand('expand', 'sprog', 'term_language', 2, $form);
+      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 2, $form);             
       break;
     case 'bibdk_frontpage/film':
       _break_into_columns_expand('main', 'nationalitet', 'term_nationality', 4, $form);
@@ -403,7 +403,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_frontpage/spil':
       _break_into_columns_expand('main', 'platform', 'term_type', 2, $form);
-      _break_into_columns_expand('main', 'spilgenre, type', 'dkcclphrase_lem', 3, $form);
+      _break_into_columns_expand('main', 'spilgenre, type', 'dkcclterm_em', 3, $form);
       break;
     case 'bibdk_frontpage/musik':
       _break_into_columns_expand('main', 'musikgenre', 'term_genre', 4, $form);
@@ -509,7 +509,7 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
 
 /**
  * Adding prefix and suffix to bibdk_cart_view form
- *
+ *  
  * @param $form
  */
 function _alter_bibdk_cart_form(&$form) {
@@ -566,7 +566,7 @@ function bibdk_theme_menu_link(array$vars) {
     $sub_menu = drupal_render($element['#below']);
   }
   if ($element['#original_link']['menu_name'] == 'menu-global-login-menu' && ($element['#title'] == t('items in cart', array(), array('context' => 'bibdk_frontend'))) && module_exists('bibdk_cart')) {
-    $count = BibdkCart::getCartCount();
+    $count = count(BibdkCart::getAll());
     $linkText = '<span class="cartcount">'.format_plural($count, '1 item in cart', '@count items in cart').'</span>';
     $element['#localized_options']['html'] = TRUE;
   }

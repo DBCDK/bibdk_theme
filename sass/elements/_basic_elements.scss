@@ -296,12 +296,12 @@
 // Actions
 // =============================================================================
 
-.actions {
+.link-sbkopi,
+.link-infomedia {
+  @extend .strong-link; // defined in _basic_elements.scss
+}
 
-  .bibdk-sb_kopi-replaceme,
-  .link-infomedia {
-    @extend .strong-link; // defined in _basic_elements.scss
-  }
+.actions {
 
   float: right;
   padding-left: 15px;
