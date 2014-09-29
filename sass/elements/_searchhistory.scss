@@ -1,0 +1,9 @@
+.searchhistory-cql {
+  color:  $grey-3;
+}
+
+.searchhistory-searchstring {
+  table & {
+    min-width: 400px;
+  }
+}
