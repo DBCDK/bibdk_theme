@@ -150,7 +150,7 @@
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
-      $('.element-clickable').click(function() {
+      $('.element-clickable').click(function(e) {
         e.preventDefault();
         $(this).find(".element-target").trigger('click');
       });
