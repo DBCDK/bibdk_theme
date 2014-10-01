@@ -1,7 +1,4 @@
 <!-- topbar start -->
-<!-- blind user tag start -->
-<h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
-<!-- blind user tag slut -->
 <nav id="topbar" data-role="navigation">
   <div class="row">
     <div class="small-24 columns">
@@ -26,6 +23,9 @@
 
 <!-- search-panel start -->
 <nav id="search-panel" data-role="search">
+  <!-- blind user tag start -->
+  <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
+  <!-- blind user tag slut -->
   <div class="row">
     <div class="small-24 columns">
       <?php print render($page['search_panel']); ?>
