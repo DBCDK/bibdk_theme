@@ -969,19 +969,12 @@ body.page-ting-moreinfo {
 
   .openformat-info{
     float: left;
-    clear: left;
-    width: 280px;
-    padding-right: 20px;
+    width: 63%;
   }
 }
 
 .bibdk-review-link {
-  left: 25px;
-  position: relative;
-  > a {
-    margin-left: -25px;
-    text-indent: 25px;
-  }
+  float: right;
 }
 
 span.star {
