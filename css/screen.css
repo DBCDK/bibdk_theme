@@ -8649,12 +8649,16 @@ body.page-ting-moreinfo img {
   float: right;
 }
 
-/* line 866, ../sass/elements/_specific_elements.scss */
+/* line 865, ../sass/elements/_specific_elements.scss */
 .manifestation .primary-actions a {
   display: block;
 }
+/* line 868, ../sass/elements/_specific_elements.scss */
+.manifestation .primary-actions a.btn, .manifestation .primary-actions a.set-default-order-agency {
+  text-align: center;
+}
 
-/* line 874, ../sass/elements/_specific_elements.scss */
+/* line 877, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more {
   text-align: center;
   padding: 8px;
@@ -8668,12 +8672,12 @@ body.page-ting-moreinfo img {
   border-style: solid;
   border-width: 1px;
 }
-/* line 886, ../sass/elements/_specific_elements.scss */
+/* line 889, ../sass/elements/_specific_elements.scss */
 .pane-ting-openformat-load-more #link {
   font-size: 14px;
 }
 
-/* line 891, ../sass/elements/_specific_elements.scss */
+/* line 894, ../sass/elements/_specific_elements.scss */
 .load_more_res_splitter {
   background-color: #6c7379;
   height: 2px;
@@ -8681,24 +8685,24 @@ body.page-ting-moreinfo img {
   margin-bottom: 10px;
 }
 
-/* line 901, ../sass/elements/_specific_elements.scss */
+/* line 904, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container {
   width: 50%;
   background-color: #f3f3f3;
 }
 
-/* line 906, ../sass/elements/_specific_elements.scss */
+/* line 909, ../sass/elements/_specific_elements.scss */
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
 }
 
-/* line 916, ../sass/elements/_specific_elements.scss */
+/* line 919, ../sass/elements/_specific_elements.scss */
 .bibdk-vejviser-help-text {
   clear: both;
   padding-left: 20px;
 }
 
-/* line 925, ../sass/elements/_specific_elements.scss */
+/* line 928, ../sass/elements/_specific_elements.scss */
 .alert {
   background: url(../img/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
@@ -8706,54 +8710,54 @@ body.page-ting-moreinfo img {
   height: 22px;
 }
 
-/* line 932, ../sass/elements/_specific_elements.scss */
+/* line 935, ../sass/elements/_specific_elements.scss */
 .blue-alert {
   background-position: 0 0;
 }
 
-/* line 936, ../sass/elements/_specific_elements.scss */
+/* line 939, ../sass/elements/_specific_elements.scss */
 .green-alert {
   background-position: -18px 0;
 }
 
-/* line 940, ../sass/elements/_specific_elements.scss */
+/* line 943, ../sass/elements/_specific_elements.scss */
 .yellow-alert {
   background-position: -36px 0;
 }
 
-/* line 944, ../sass/elements/_specific_elements.scss */
+/* line 947, ../sass/elements/_specific_elements.scss */
 .red-alert {
   background-position: -54px 0;
 }
 
-/* line 948, ../sass/elements/_specific_elements.scss */
+/* line 951, ../sass/elements/_specific_elements.scss */
 .no-alert {
   background-image: none;
 }
 
-/* line 956, ../sass/elements/_specific_elements.scss */
+/* line 959, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 965, ../sass/elements/_specific_elements.scss */
+/* line 968, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 }
-/* line 970, ../sass/elements/_specific_elements.scss */
+/* line 973, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review .openformat-info {
   float: left;
   width: 63%;
 }
 
-/* line 976, ../sass/elements/_specific_elements.scss */
+/* line 979, ../sass/elements/_specific_elements.scss */
 .bibdk-review-link {
   float: right;
 }
 
-/* line 980, ../sass/elements/_specific_elements.scss */
+/* line 983, ../sass/elements/_specific_elements.scss */
 span.star {
   display: inline-block;
   background: url("../img/rating-stars.png");
@@ -8761,33 +8765,33 @@ span.star {
   height: 17px;
 }
 
-/* line 987, ../sass/elements/_specific_elements.scss */
+/* line 990, ../sass/elements/_specific_elements.scss */
 span.star.positive {
   color: transparent;
   background-position: 0 17px;
 }
 
-/* line 993, ../sass/elements/_specific_elements.scss */
+/* line 996, ../sass/elements/_specific_elements.scss */
 span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
 
-/* line 1001, ../sass/elements/_specific_elements.scss */
+/* line 1004, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
-/* line 1004, ../sass/elements/_specific_elements.scss */
+/* line 1007, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block .ding-wayf-logoninfo {
   vertical-align: sub;
 }
 
-/* line 1009, ../sass/elements/_specific_elements.scss */
+/* line 1012, ../sass/elements/_specific_elements.scss */
 #user-login .form-actions {
   margin-top: -0.5em;
 }
 
-/* line 1016, ../sass/elements/_specific_elements.scss */
+/* line 1019, ../sass/elements/_specific_elements.scss */
 #admin-menu {
   font-size: 13px;
 }

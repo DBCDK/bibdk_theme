@@ -862,9 +862,12 @@ body.page-ting-moreinfo {
 // Manifestation actions
 // =============================================================================
 .manifestation .primary-actions {
-
   a {
     display: block;
+
+    &.btn {
+      text-align: center;
+    }
   }
 }
 
