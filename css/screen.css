@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .header-action-vejviser a:after, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -7089,7 +7090,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#51565a, #474c4f);
 }
 /* line 16, ../sass/utilities/_btn-skin.scss */
-.btn-grey:disabled:hover, .btn-grey.disabled:hover {
+.btn-grey:disabled:hover, .order-any-btn-list a.btn-grey:disabled:hover, .btn-grey.disabled:hover, .order-any-btn-list a.disabled.btn-grey:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #565b5f), color-stop(100%, #4c5155));
   background-image: -webkit-linear-gradient(#565b5f, #4c5155);
   background-image: -moz-linear-gradient(#565b5f, #4c5155);
@@ -10554,6 +10555,16 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   font-size: 1.3em;
   font-weight: bold;
   color: #51565a;
+}
+
+/* line 1, ../sass/elements/_searchhistory.scss */
+.searchhistory-cql {
+  color: #51565a;
+}
+
+/* line 6, ../sass/elements/_searchhistory.scss */
+table .searchhistory-searchstring {
+  min-width: 400px;
 }
 
 /* line 2, ../sass/_extra.scss */
