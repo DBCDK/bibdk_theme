@@ -112,7 +112,7 @@
           $(this).closest('.work-header').find('.dropdown-menu').addClass('hidden');
 
           if(!Drupal.settings.full_view) {
-            // scrollTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab  
+            // scrollTop ofsett set at top - 30 px, so the order button not will be hidden behind the 'Log in' tab
             $('html, body').animate({
               scrollTop: $(this).closest('.work').offset().top - 30
             }, 500);
@@ -150,10 +150,6 @@
       // Add .element-clickable to parent
       // Add .element-target to destination link
       $('.element-clickable').css('cursor', 'pointer');
-      $('.element-clickable').click(function() {
-        e.preventDefault();
-        $(this).find(".element-target").trigger('click');
-      });
 
       // Adjust margin-left on widgets with image
       $('.widget-wrapper').each(function() {

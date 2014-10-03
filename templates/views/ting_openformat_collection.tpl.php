@@ -6,7 +6,7 @@
 
       <div class="element-title">
         <div>
-          <h2><?php print ( !empty($title_full)) ? $title_full : $title; ?></h2>
+          <h2><?php print ( !empty($title_full)) ? $title_full : $title; ?> <?php print ( !empty($language)) ? "($language)" : ''; ?></h2>
           <h3><?php print $author; ?></h3>
           <?php if (isset($partOf)) : ?>
             <span>I: <?php print $partOf; ?></span>
@@ -14,13 +14,16 @@
         </div>
       </div>
 
-      <div class="element-actions">
-        <?php print drupal_render($actions); ?>
-      </div>
+      <div class="element-types-actions">
+        <div class="element-types">
+          <?php print $types; ?>
+        </div>
+      
+        <div class="element-actions">
+          <?php print drupal_render($actions); ?>
+        </div>
+      </div>  
 
-      <div class="element-types">
-        <?php print $types; ?>
-      </div>
 
       <div class="msg-<?php print $uid; ?> collection-msg clearfix"></div>
 
