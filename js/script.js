@@ -422,11 +422,13 @@
         e.preventDefault();
         $('.popover').addClass('visuallyhidden');
         $(this).siblings().removeClass('visuallyhidden').find('input').select();
+        $(this).siblings().removeClass('hide-text').find('input').select();
         $(this).siblings().find('.close').focus();
       });
       $('.popover .close').click(function(e) {
         e.preventDefault();
         $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+        $(this).closest('.linkme-wrapper').addClass('hide-text');
         $(this).parent().prev('.popover-button').find('a').focus();
       });
 
