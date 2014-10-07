@@ -7156,7 +7156,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   border: solid 1px gainsboro;
   color: #178bad;
   text-shadow: none;
-  padding-left: 40px;
+  padding: 6px 20px 6px 40px;
   background: white;
   background-image: url(../img/library-favorite.png);
   /* fallback */
