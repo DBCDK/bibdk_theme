@@ -7865,7 +7865,7 @@ a.inactive, input[type="submit"].button-as-link:disabled {
 }
 /* line 94, ../sass/elements/_specific_elements.scss */
 .ting-agency-library .hgroup.has-action {
-  max-width: 250px;
+  max-width: 500px;
 }
 /* line 97, ../sass/elements/_specific_elements.scss */
 .ting-agency-library h3 {
@@ -8705,12 +8705,16 @@ body.page-ting-moreinfo img {
 }
 
 /* line 919, ../sass/elements/_specific_elements.scss */
-.bibdk-vejviser-help-text {
-  clear: both;
-  padding-left: 20px;
+.vejviser-search-result {
+  margin-top: 20px;
 }
 
-/* line 928, ../sass/elements/_specific_elements.scss */
+/* line 923, ../sass/elements/_specific_elements.scss */
+.bibdk-vejviser-help-text {
+  clear: both;
+}
+
+/* line 932, ../sass/elements/_specific_elements.scss */
 .alert {
   background: url(../img/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
@@ -8718,54 +8722,54 @@ body.page-ting-moreinfo img {
   height: 22px;
 }
 
-/* line 935, ../sass/elements/_specific_elements.scss */
+/* line 939, ../sass/elements/_specific_elements.scss */
 .blue-alert {
   background-position: 0 0;
 }
 
-/* line 939, ../sass/elements/_specific_elements.scss */
+/* line 943, ../sass/elements/_specific_elements.scss */
 .green-alert {
   background-position: -18px 0;
 }
 
-/* line 943, ../sass/elements/_specific_elements.scss */
+/* line 947, ../sass/elements/_specific_elements.scss */
 .yellow-alert {
   background-position: -36px 0;
 }
 
-/* line 947, ../sass/elements/_specific_elements.scss */
+/* line 951, ../sass/elements/_specific_elements.scss */
 .red-alert {
   background-position: -54px 0;
 }
 
-/* line 951, ../sass/elements/_specific_elements.scss */
+/* line 955, ../sass/elements/_specific_elements.scss */
 .no-alert {
   background-image: none;
 }
 
-/* line 959, ../sass/elements/_specific_elements.scss */
+/* line 963, ../sass/elements/_specific_elements.scss */
 .bibdk-review {
   padding: 10px 0;
   border-bottom: 1px solid #dcdcdc;
 }
 
-/* line 968, ../sass/elements/_specific_elements.scss */
+/* line 972, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 }
-/* line 973, ../sass/elements/_specific_elements.scss */
+/* line 977, ../sass/elements/_specific_elements.scss */
 .bibdk-article-review .openformat-info {
   float: left;
   width: 63%;
 }
 
-/* line 979, ../sass/elements/_specific_elements.scss */
+/* line 983, ../sass/elements/_specific_elements.scss */
 .bibdk-review-link {
   float: right;
 }
 
-/* line 983, ../sass/elements/_specific_elements.scss */
+/* line 987, ../sass/elements/_specific_elements.scss */
 span.star {
   display: inline-block;
   background: url("../img/rating-stars.png");
@@ -8773,33 +8777,33 @@ span.star {
   height: 17px;
 }
 
-/* line 990, ../sass/elements/_specific_elements.scss */
+/* line 994, ../sass/elements/_specific_elements.scss */
 span.star.positive {
   color: transparent;
   background-position: 0 17px;
 }
 
-/* line 996, ../sass/elements/_specific_elements.scss */
+/* line 1000, ../sass/elements/_specific_elements.scss */
 span.star.negative {
   color: transparent;
   background-position: 0 0;
 }
 
-/* line 1004, ../sass/elements/_specific_elements.scss */
+/* line 1008, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block {
   margin-top: 20px;
 }
-/* line 1007, ../sass/elements/_specific_elements.scss */
+/* line 1011, ../sass/elements/_specific_elements.scss */
 .ding-wayf-logon-block .ding-wayf-logoninfo {
   vertical-align: sub;
 }
 
-/* line 1012, ../sass/elements/_specific_elements.scss */
+/* line 1016, ../sass/elements/_specific_elements.scss */
 #user-login .form-actions {
   margin-top: -0.5em;
 }
 
-/* line 1019, ../sass/elements/_specific_elements.scss */
+/* line 1023, ../sass/elements/_specific_elements.scss */
 #admin-menu {
   font-size: 13px;
 }

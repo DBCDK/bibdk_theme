@@ -92,7 +92,7 @@
     float: left;
   }
   .hgroup.has-action {
-    max-width: 250px;
+    max-width: 500px;
   }
   h3 {
     font-weight: normal;
@@ -916,10 +916,14 @@ body.page-ting-moreinfo {
 // vejviser
 // =============================================================================
 
+.vejviser-search-result {
+  margin-top: 20px;
+}
+
 .bibdk-vejviser-help-text{
   clear: both;
-  padding-left: 20px;
 }
+
 
 //
 // alerts
