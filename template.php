@@ -80,6 +80,7 @@ function bibdk_theme_preprocess_pager_first(&$vars){
 function bibdk_theme_preprocess_block(&$vars) {
   // Save module and delta as $block_id (unique identifier)
   $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
+
 }
 
 
@@ -199,8 +200,8 @@ function bibdk_theme_preprocess_page(&$vars) {
       }
       break;
     case 'vejviser':
-      $vars['page']['content']['#prefix'] = '<div class="element-wrapper"><div class="element">';
-      $vars['page']['content']['#suffix'] = '</div></div>';
+      $vars['page']['content']['#prefix'] = '<div class="vejviser-search-result">';
+      $vars['page']['content']['#suffix'] = '</div>';
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
