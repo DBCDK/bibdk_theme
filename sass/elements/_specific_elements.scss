@@ -18,11 +18,10 @@
 }
 
 // =============================================================================
-// Library
+// Library // vejviser
 // =============================================================================
 
 .bibdk-favourite-vejviser-link {
-  @include rem('padding-top', 10px);
   @include rem('padding-bottom', 10px);
   text-align: right;
 
@@ -33,6 +32,10 @@
     color: $white;
     background-color: $grey-2;
   }
+}
+
+#edit-favorites {
+  padding: 0;
 
 }
 
@@ -53,6 +56,14 @@
   .vejviser-raw {
     float: right;
   }
+}
+
+.vejviser-search-result {
+  margin-top: 21px;
+}
+
+.bibdk-vejviser-help-text{
+  clear: both;
 }
 
 .vejviser-raw {
@@ -138,7 +149,9 @@
   }
 }
 
-//======== INFOMEDIA AGENCY LIST ===========//
+// =============================================================================
+// INFOMEDIA AGENCY LIST
+// =============================================================================
 h3.library-list-header{
   margin-bottom:10px;
 }
@@ -909,20 +922,6 @@ body.page-ting-moreinfo {
 
 .sbkopi-description-container.form-wrapper {
   padding: 0 1em 0;
-}
-
-
-
-// =============================================================================
-// vejviser
-// =============================================================================
-
-.vejviser-search-result {
-  margin-top: 21px;
-}
-
-.bibdk-vejviser-help-text{
-  clear: both;
 }
 
 
