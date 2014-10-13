@@ -58,16 +58,21 @@
     border: none;
   }
 
-  #bibdk-favourite-user-form-fields {
-    padding: 10px;
+  #bibdk-favourite-user-form {
+    padding: 0;
     width: 100%;
 
+    p {
+      padding: 10px 0 0 10px;
+      font-size: 16px;
+    }
+
     .form-wrapper {
-      padding-left: 0;
+      padding: 0 10px 0 0;
     }
 
     .form-item {
-      padding: 10px 0 0 0;
+      padding: 10px 0px 0px 10px;
 
       label {
         @extend label;
@@ -111,12 +116,14 @@
           float: left;
           width: 135px;
           margin: 0;
+          color: $grey-3;
         }
       }
     }
 
     .form-submit {
-      margin: 20px 0 10px 0;
+      float: right;
+      margin: 20px 0;
     }
   }
 }
