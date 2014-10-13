@@ -5591,11 +5591,16 @@ h1 {
 .favourite-user-data-form #bibdk-favourite-user-form .form-item, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item, .page-user .modal-content #bibdk-favourite-user-form .form-item {
   padding: 10px 0px 0px 10px;
 }
-/* line 81, ../sass/components/base/_modal.scss */
+/* line 77, ../sass/components/base/_modal.scss */
+.favourite-user-data-form #bibdk-favourite-user-form .form-item label, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item label, .page-user .modal-content #bibdk-favourite-user-form .form-item label {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+/* line 83, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item .form-item-fake-password, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item .form-item-fake-password, .page-user .modal-content #bibdk-favourite-user-form .form-item .form-item-fake-password {
   padding: 0;
 }
-/* line 86, ../sass/components/base/_modal.scss */
+/* line 88, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item input[type="text"], .page-vejviser .modal-content #bibdk-favourite-user-form .form-item input[type="text"], .page-user .modal-content #bibdk-favourite-user-form .form-item input[type="text"],
 .favourite-user-data-form #bibdk-favourite-user-form .form-item input[type="password"],
 .page-vejviser .modal-content #bibdk-favourite-user-form .form-item input[type="password"],
@@ -5629,7 +5634,7 @@ h1 {
   background-color: white;
   border: 1px solid gainsboro;
 }
-/* line 103, ../sass/components/base/_modal.scss */
+/* line 105, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item input[type="text"]:focus, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item input[type="text"]:focus, .page-user .modal-content #bibdk-favourite-user-form .form-item input[type="text"]:focus,
 .favourite-user-data-form #bibdk-favourite-user-form .form-item input[type="password"]:focus,
 .page-vejviser .modal-content #bibdk-favourite-user-form .form-item input[type="password"]:focus,
@@ -5639,22 +5644,22 @@ h1 {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   border-color: rgba(82, 168, 236, 0.8);
 }
-/* line 108, ../sass/components/base/_modal.scss */
+/* line 110, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item.form-type-checkbox, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox, .page-user .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox {
   margin-top: 10px;
 }
-/* line 111, ../sass/components/base/_modal.scss */
+/* line 113, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item.form-type-checkbox input[type="checkbox"], .page-vejviser .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox input[type="checkbox"], .page-user .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox input[type="checkbox"] {
   vertical-align: middle;
 }
-/* line 115, ../sass/components/base/_modal.scss */
+/* line 117, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-item.form-type-checkbox label, .page-vejviser .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox label, .page-user .modal-content #bibdk-favourite-user-form .form-item.form-type-checkbox label {
   float: left;
   width: 135px;
   margin: 0;
   color: #51565a;
 }
-/* line 124, ../sass/components/base/_modal.scss */
+/* line 126, ../sass/components/base/_modal.scss */
 .favourite-user-data-form #bibdk-favourite-user-form .form-submit, .page-vejviser .modal-content #bibdk-favourite-user-form .form-submit, .page-user .modal-content #bibdk-favourite-user-form .form-submit {
   float: right;
   margin: 20px 0;
