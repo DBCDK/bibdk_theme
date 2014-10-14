@@ -48,25 +48,43 @@
 #carousel {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $white;
+  
+  display: none;
+  
+  @media #{$medium-up} {
+    display: block;
+    background-color: $white; 
+  }
 }
 
 // Subjects
 #subjectshierarchy {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $grey-7;
+  
+  display: none;
+  
+  @media #{$medium-up} {
+    display: block;
+    background-color: $grey-7;
+  }
 }
 
 // Columns
 #columns {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $white;
-
-  .lift-columns & {
-    padding-top: 10px;
-    background-color: $grey-6;
+  
+  display: none;
+  
+  @media #{$medium-up} {
+    display: block;
+    background-color: $white; 
+    
+    .lift-columns & {
+      padding-top: 10px;
+      background-color: $grey-6;
+    }
   }
 }
 

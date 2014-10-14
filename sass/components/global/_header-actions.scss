@@ -2,10 +2,14 @@
 // Header actions
 // =============================================================================
 
+.logo {
+  float: left;
+}
+
 .region-header-actions {
-  position: absolute;
+  float: right;
   right: $column-gutter / 2;
-  bottom: 0;
+  margin-top: 12px;
 }
 
 .header-action {
