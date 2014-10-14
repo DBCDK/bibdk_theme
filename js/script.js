@@ -124,6 +124,12 @@
         }
       });
 
+      // Trigger a click on 'more info' from 'order any edition' button
+      $('.infotext-order-any-edition-link', context).once().click(function(e) {
+        e.preventDefault();
+        $(this).closest('.work').find('.work-toggle-element').trigger('click');
+      });
+      
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).bind('show-work', function(e) {
         var id = $(this).attr('href');
