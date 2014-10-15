@@ -7758,6 +7758,12 @@ a.inactive, input[type="submit"].button-as-link:disabled {
   margin-right: 10px;
 }
 
+/* line 220, ../sass/elements/_global_elements.scss */
+#ie6nomore-wrapper {
+  width: 990px;
+  color: black;
+}
+
 /* line 5, ../sass/elements/_specific_elements.scss */
 .action_element_refexportlinks {
   padding: 0px;
