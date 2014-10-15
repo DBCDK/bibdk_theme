@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 794, sprites/*.png */
 .sprites-sprite, .message--notice:after, .message--status:after, .message--warning:after, .message--error:after, .user-alert:after, .user-alert .user-alert-close span.user-alert-close-image, .header-action-vejviser a:after, .rs-carousel-header-select .dropdown-toggle:after, .rs-carousel-header-select .dropdown-toggle.toggled:after, .rs-carousel-action-prev:after, .rs-carousel-action-next:after, .bibdk-search-controls-form .dropdown-toggle:after, .bibdk-search-controls-form .dropdown-toggle.toggled:after, #ting-openformat-full-view-button-closed:after, #ting-openformat-full-view-button-closed.inactive:after, #ting-openformat-full-view-button-expanded:after, #ting-openformat-full-view-button-expanded.inactive:after, .modal-close, .themes__sublist a.nesting:after {
   background: url('../img/sprites-s08d4f81a67.png') no-repeat;
@@ -7089,7 +7090,7 @@ input[type="submit"].button-as-link::-moz-focus-inner {
   background-image: linear-gradient(#51565a, #474c4f);
 }
 /* line 16, ../sass/utilities/_btn-skin.scss */
-.btn-grey:disabled:hover, .btn-grey.disabled:hover {
+.btn-grey:disabled:hover, .order-any-btn-list a.btn-grey:disabled:hover, .btn-grey.disabled:hover, .order-any-btn-list a.disabled.btn-grey:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #565b5f), color-stop(100%, #4c5155));
   background-image: -webkit-linear-gradient(#565b5f, #4c5155);
   background-image: -moz-linear-gradient(#565b5f, #4c5155);
@@ -8923,55 +8924,54 @@ div#search-advanced-panel fieldset#edit-expand > legend a {
 /* line 111, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .fieldset-wrapper {
   text-align: left;
-  padding: 10px 0;
 }
-/* line 115, ../sass/elements/_custom_search_elements.scss */
+/* line 114, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .fieldset-description {
   display: none;
 }
-/* line 118, ../sass/elements/_custom_search_elements.scss */
+/* line 117, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .element-wrapper {
   float: left;
   margin-left: 3%;
   clear: none;
 }
-/* line 123, ../sass/elements/_custom_search_elements.scss */
+/* line 122, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand fieldset:first-child {
   margin-left: 0%;
 }
-/* line 126, ../sass/elements/_custom_search_elements.scss */
+/* line 125, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand .sub-elements {
   display: block;
   margin-left: 20px;
   width: 100%;
 }
-/* line 133, ../sass/elements/_custom_search_elements.scss */
+/* line 132, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed {
   width: 100%;
 }
-/* line 135, ../sass/elements/_custom_search_elements.scss */
+/* line 134, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed > legend {
   background-color: inherit;
   border: none;
   display: block;
   width: auto;
 }
-/* line 140, ../sass/elements/_custom_search_elements.scss */
+/* line 139, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset#edit-expand.collapsed > legend a {
   padding-left: 20px;
   background-image: url("../img/icons/blue-plus.png");
   background-repeat: no-repeat;
   background-position: left center;
 }
-/* line 150, ../sass/elements/_custom_search_elements.scss */
+/* line 149, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset:first-child {
   margin-left: 0%;
 }
-/* line 153, ../sass/elements/_custom_search_elements.scss */
+/* line 152, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset:last-child {
   margin-left: 0%;
 }
-/* line 156, ../sass/elements/_custom_search_elements.scss */
+/* line 155, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset {
   margin-bottom: 1em;
   width: 32.4%;
@@ -8979,46 +8979,46 @@ div#search-advanced-panel fieldset {
   display: inline;
   vertical-align: top;
 }
-/* line 162, ../sass/elements/_custom_search_elements.scss */
+/* line 161, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset .fieldset-legend {
   font-size: 16px;
   padding: 0;
 }
-/* line 166, ../sass/elements/_custom_search_elements.scss */
+/* line 165, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper {
   clear: both;
   text-align: right;
 }
-/* line 169, ../sass/elements/_custom_search_elements.scss */
+/* line 168, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .fieldset-legend {
   float: left;
   max-width: inherit;
 }
-/* line 173, ../sass/elements/_custom_search_elements.scss */
+/* line 172, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .form-type-textfield {
   margin-bottom: 0;
   margin-right: 1%;
   width: 100%;
 }
-/* line 178, ../sass/elements/_custom_search_elements.scss */
+/* line 177, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.fieldset-wrapper .fieldset-description {
   white-space: nowrap;
   display: inline-block;
 }
-/* line 184, ../sass/elements/_custom_search_elements.scss */
+/* line 183, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element {
   display: block;
   clear: both;
   margin: 2px 0 0 0;
   padding: 0 5px 0 0;
 }
-/* line 190, ../sass/elements/_custom_search_elements.scss */
+/* line 189, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item {
   margin: 0;
   padding: 0;
   display: block;
 }
-/* line 194, ../sass/elements/_custom_search_elements.scss */
+/* line 193, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item .toggle-subgroup {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9037,181 +9037,181 @@ div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item
   position: relative;
   margin-right: 5px;
 }
-/* line 207, ../sass/elements/_custom_search_elements.scss */
+/* line 206, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-item .toggle-subgroup.toggled {
   background-image: url(../img/icons/blue-minus.png);
 }
-/* line 211, ../sass/elements/_custom_search_elements.scss */
+/* line 210, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio {
   float: none;
 }
-/* line 213, ../sass/elements/_custom_search_elements.scss */
+/* line 212, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox label, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio label {
   display: block;
   float: left;
 }
-/* line 217, ../sass/elements/_custom_search_elements.scss */
+/* line 216, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-checkbox input, div#search-advanced-panel fieldset div.bibdk-custom-search-element div.form-type-radio input {
   display: block;
   float: left;
 }
 
-/* line 226, ../sass/elements/_custom_search_elements.scss */
+/* line 225, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .btn-submit {
   margin-top: -20px;
 }
 
-/* line 230, ../sass/elements/_custom_search_elements.scss */
+/* line 229, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
   position: relative;
 }
-/* line 232, ../sass/elements/_custom_search_elements.scss */
+/* line 231, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper .form-type-textfield {
   margin-bottom: 0;
   margin-right: 1%;
   width: 100%;
 }
 
-/* line 239, ../sass/elements/_custom_search_elements.scss */
+/* line 238, ../sass/elements/_custom_search_elements.scss */
 .container-inline div#search-advanced-panel {
   display: block;
 }
 
-/* line 243, ../sass/elements/_custom_search_elements.scss */
+/* line 242, ../sass/elements/_custom_search_elements.scss */
 form#search-block-form fieldset#edit-advanced {
   clear: right;
 }
 
-/* line 247, ../sass/elements/_custom_search_elements.scss */
+/* line 246, ../sass/elements/_custom_search_elements.scss */
 .page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
   margin-top: -43px;
   width: 100%;
 }
 
-/* line 253, ../sass/elements/_custom_search_elements.scss */
+/* line 252, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype {
   width: 23%;
   margin-left: 0;
 }
-/* line 256, ../sass/elements/_custom_search_elements.scss */
+/* line 255, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype div.fieldset-wrapper {
   text-align: left;
 }
-/* line 259, ../sass/elements/_custom_search_elements.scss */
+/* line 258, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .materialetype .fieldset-description {
   display: none;
 }
-/* line 263, ../sass/elements/_custom_search_elements.scss */
+/* line 262, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog {
   width: 38%;
   padding-left: 3%;
 }
-/* line 266, ../sass/elements/_custom_search_elements.scss */
+/* line 265, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog .bibdk-custom-search-element .column {
   width: 33%;
   float: left;
 }
-/* line 270, ../sass/elements/_custom_search_elements.scss */
+/* line 269, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog div.fieldset-wrapper {
   text-align: left;
 }
-/* line 273, ../sass/elements/_custom_search_elements.scss */
+/* line 272, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .sprog .fieldset-description {
   display: none;
 }
-/* line 277, ../sass/elements/_custom_search_elements.scss */
+/* line 276, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar {
   width: 26%;
 }
-/* line 279, ../sass/elements/_custom_search_elements.scss */
+/* line 278, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .form-type-select {
   float: left;
 }
-/* line 282, ../sass/elements/_custom_search_elements.scss */
+/* line 281, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .form-type-select:last-child {
   float: right;
 }
-/* line 285, ../sass/elements/_custom_search_elements.scss */
+/* line 284, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar div.fieldset-wrapper {
   text-align: left;
 }
-/* line 288, ../sass/elements/_custom_search_elements.scss */
+/* line 287, ../sass/elements/_custom_search_elements.scss */
 .allematerialer div#search-advanced-panel .udgivelsesar .fieldset-description {
   display: none;
 }
 
 /* boeger:sprog */
-/* line 297, ../sass/elements/_custom_search_elements.scss */
+/* line 296, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.materialetype {
   width: 16%;
 }
-/* line 300, ../sass/elements/_custom_search_elements.scss */
+/* line 299, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.litterar_form,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.litterar_form {
   width: 17%;
 }
-/* line 303, ../sass/elements/_custom_search_elements.scss */
+/* line 302, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.malgruppe,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.malgruppe {
   width: 13%;
 }
-/* line 306, ../sass/elements/_custom_search_elements.scss */
+/* line 305, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.sprog,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.sprog {
   width: 22%;
 }
-/* line 310, ../sass/elements/_custom_search_elements.scss */
+/* line 309, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 315, ../sass/elements/_custom_search_elements.scss */
+/* line 314, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper.udgivelsesar,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper.udgivelsesar {
   margin: 0 1% 0 1%;
   width: 26%;
 }
-/* line 319, ../sass/elements/_custom_search_elements.scss */
+/* line 318, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper {
   margin-left: 0;
 }
-/* line 321, ../sass/elements/_custom_search_elements.scss */
+/* line 320, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 324, ../sass/elements/_custom_search_elements.scss */
+/* line 323, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 327, ../sass/elements/_custom_search_elements.scss */
+/* line 326, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 330, ../sass/elements/_custom_search_elements.scss */
+/* line 329, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
-/* line 333, ../sass/elements/_custom_search_elements.scss */
+/* line 332, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] .element-wrapper div.form-item,
 .page-bibdk-frontpage-bog div#search-advanced-panel .element-wrapper div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 340, ../sass/elements/_custom_search_elements.scss */
+/* line 339, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/bog'] div#search-advanced-panel fieldset.artiklens_emne,
 .page-bibdk-frontpage-bog div#search-advanced-panel div#search-advanced-panel fieldset.artiklens_emne {
   margin-left: 0;
 }
 
-/* line 350, ../sass/elements/_custom_search_elements.scss */
+/* line 349, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.tidsskrift_eller_avis,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artikel_titelord,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.artiklens_forfatter,
@@ -9222,152 +9222,152 @@ form#search-block-form fieldset#edit-advanced {
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.artiklens_emne {
   width: 49%;
 }
-/* line 353, ../sass/elements/_custom_search_elements.scss */
+/* line 352, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.materialetype {
   width: 20%;
 }
-/* line 356, ../sass/elements/_custom_search_elements.scss */
+/* line 355, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.sprog,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.sprog {
   width: 23%;
   margin: 0 0 0 8%;
 }
-/* line 359, ../sass/elements/_custom_search_elements.scss */
+/* line 358, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 50%;
   float: left;
 }
-/* line 364, ../sass/elements/_custom_search_elements.scss */
+/* line 363, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.udgivelsesar,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.udgivelsesar {
   width: 26%;
   margin: 0 1% 0 3%;
 }
-/* line 367, ../sass/elements/_custom_search_elements.scss */
+/* line 366, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper.udgivelsesar div.form-item,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper.udgivelsesar div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 374, ../sass/elements/_custom_search_elements.scss */
+/* line 373, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 377, ../sass/elements/_custom_search_elements.scss */
+/* line 376, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 380, ../sass/elements/_custom_search_elements.scss */
+/* line 379, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 383, ../sass/elements/_custom_search_elements.scss */
+/* line 382, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
-/* line 387, ../sass/elements/_custom_search_elements.scss */
+/* line 386, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] .btn-submit,
 .page-bibdk-frontpage-artikel div#search-advanced-panel .btn-submit {
   margin-bottom: 1em;
 }
-/* line 390, ../sass/elements/_custom_search_elements.scss */
+/* line 389, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/artikel'] fieldset.artiklens_forfatter,
 .page-bibdk-frontpage-artikel div#search-advanced-panel fieldset.artiklens_forfatter {
   margin-left: 0;
 }
 
-/* line 399, ../sass/elements/_custom_search_elements.scss */
+/* line 398, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.filmens_titel,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.personer,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.filmens_titel,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.personer {
   width: 48.5%;
 }
-/* line 402, ../sass/elements/_custom_search_elements.scss */
+/* line 401, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet {
   width: 98%;
   margin-left: 0;
 }
-/* line 405, ../sass/elements/_custom_search_elements.scss */
+/* line 404, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column {
   width: 22%;
   float: left;
 }
-/* line 409, ../sass/elements/_custom_search_elements.scss */
+/* line 408, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column2,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column2 {
   width: 26%;
 }
-/* line 412, ../sass/elements/_custom_search_elements.scss */
+/* line 411, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.nationalitet .bibdk-custom-search-element .column3,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.nationalitet .bibdk-custom-search-element .column3 {
   width: 30%;
 }
-/* line 416, ../sass/elements/_custom_search_elements.scss */
+/* line 415, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type {
   width: 98%;
   margin-left: 0;
 }
-/* line 419, ../sass/elements/_custom_search_elements.scss */
+/* line 418, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type .bibdk-custom-search-element .column {
   width: 20.5%;
   float: left;
 }
-/* line 423, ../sass/elements/_custom_search_elements.scss */
+/* line 422, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.genre_type .bibdk-custom-search-element .column2,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.genre_type .bibdk-custom-search-element .column2 {
   width: 17%;
   float: left;
 }
-/* line 428, ../sass/elements/_custom_search_elements.scss */
+/* line 427, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.materialetype,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.materialetype {
   width: 20%;
   margin-left: 0;
 }
-/* line 431, ../sass/elements/_custom_search_elements.scss */
+/* line 430, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.materialetype .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.materialetype .bibdk-custom-search-element .column {
   width: 50%;
   float: left;
 }
-/* line 437, ../sass/elements/_custom_search_elements.scss */
+/* line 436, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.aldersanbefaling,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.tilladt_for,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.aldersanbefaling,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.tilladt_for {
   width: 32%;
 }
-/* line 439, ../sass/elements/_custom_search_elements.scss */
+/* line 438, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.aldersanbefaling select,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper.tilladt_for select,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.aldersanbefaling select,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper.tilladt_for select {
   width: 95%;
 }
-/* line 444, ../sass/elements/_custom_search_elements.scss */
+/* line 443, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 447, ../sass/elements/_custom_search_elements.scss */
+/* line 446, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-film div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
 
-/* line 457, ../sass/elements/_custom_search_elements.scss */
+/* line 456, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.materialetype,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.element-wrapper
 .element-wrapper.litterar_form,
@@ -9377,222 +9377,222 @@ form#search-block-form fieldset#edit-advanced {
   width: 34%;
   margin-left: 0;
 }
-/* line 461, ../sass/elements/_custom_search_elements.scss */
+/* line 460, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.sprog,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper.sprog {
   width: 32%;
   margin-left: 0;
 }
-/* line 464, ../sass/elements/_custom_search_elements.scss */
+/* line 463, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper.sprog .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper.sprog .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 469, ../sass/elements/_custom_search_elements.scss */
+/* line 468, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar {
   margin: 0 1% 0 1%;
   width: 26%;
 }
-/* line 472, ../sass/elements/_custom_search_elements.scss */
+/* line 471, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar .form-type-select,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar .form-type-select {
   float: left;
 }
-/* line 475, ../sass/elements/_custom_search_elements.scss */
+/* line 474, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar .form-type-select:last-child,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar .form-type-select:last-child {
   float: right;
 }
-/* line 478, ../sass/elements/_custom_search_elements.scss */
+/* line 477, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .udgivelsesar div.form-item,
 .page-bibdk-frontpage-net div#search-advanced-panel .udgivelsesar div.form-item {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 485, ../sass/elements/_custom_search_elements.scss */
+/* line 484, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 488, ../sass/elements/_custom_search_elements.scss */
+/* line 487, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 491, ../sass/elements/_custom_search_elements.scss */
+/* line 490, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .form-type-select,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .form-type-select {
   float: left;
 }
-/* line 494, ../sass/elements/_custom_search_elements.scss */
+/* line 493, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/net'] .element-wrapper .form-type-select:last-child,
 .page-bibdk-frontpage-net div#search-advanced-panel .element-wrapper .form-type-select:last-child {
   float: right;
 }
 
-/* line 503, ../sass/elements/_custom_search_elements.scss */
+/* line 502, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] select,
 .page-bibdk-frontpage-spil div#search-advanced-panel select {
   width: 100%;
 }
-/* line 506, ../sass/elements/_custom_search_elements.scss */
+/* line 505, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.platform,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.platform {
   width: 40%;
 }
-/* line 508, ../sass/elements/_custom_search_elements.scss */
+/* line 507, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.platform .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.platform .bibdk-custom-search-element .column {
   width: 49%;
   float: left;
 }
-/* line 513, ../sass/elements/_custom_search_elements.scss */
+/* line 512, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.spilgenre_type,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.spilgenre_type {
   width: 59%;
   margin-left: 0;
   margin-top: 8px;
 }
-/* line 517, ../sass/elements/_custom_search_elements.scss */
+/* line 516, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.spilgenre_type .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.spilgenre_type .bibdk-custom-search-element .column {
   width: 33%;
   float: left;
 }
-/* line 523, ../sass/elements/_custom_search_elements.scss */
+/* line 522, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.medieradets_aldersanbefalinger,
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper.aldersanbefaling,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.medieradets_aldersanbefalinger,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper.aldersanbefaling {
   width: 40%;
 }
-/* line 526, ../sass/elements/_custom_search_elements.scss */
+/* line 525, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .medieradets_aldersanbefalinger,
 .page-bibdk-frontpage-spil div#search-advanced-panel .medieradets_aldersanbefalinger {
   margin-left: 0;
 }
-/* line 530, ../sass/elements/_custom_search_elements.scss */
+/* line 529, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper div.fieldset-wrapper,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper div.fieldset-wrapper {
   text-align: left;
 }
-/* line 533, ../sass/elements/_custom_search_elements.scss */
+/* line 532, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .element-wrapper .fieldset-description,
 .page-bibdk-frontpage-spil div#search-advanced-panel .element-wrapper .fieldset-description {
   display: none;
 }
-/* line 537, ../sass/elements/_custom_search_elements.scss */
+/* line 536, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'] .btn-submit,
 .page-bibdk-frontpage-spil div#search-advanced-panel .btn-submit {
   margin-top: -20px;
 }
 
-/* line 544, ../sass/elements/_custom_search_elements.scss */
+/* line 543, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .alle_titler,
 .page-bibdk-frontpage-musik div#search-advanced-panel .alle_titler {
   margin-left: 0;
 }
-/* line 547, ../sass/elements/_custom_search_elements.scss */
+/* line 546, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre {
   width: 98%;
   margin-left: 1%;
 }
-/* line 550, ../sass/elements/_custom_search_elements.scss */
+/* line 549, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre div.fieldset-wrapper,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre div.fieldset-wrapper {
   text-align: left;
 }
-/* line 553, ../sass/elements/_custom_search_elements.scss */
+/* line 552, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .fieldset-description,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .fieldset-description {
   display: none;
 }
-/* line 556, ../sass/elements/_custom_search_elements.scss */
+/* line 555, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .bibdk-custom-search-element .column {
   width: 25%;
   float: left;
 }
-/* line 560, ../sass/elements/_custom_search_elements.scss */
+/* line 559, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .musikgenre .bibdk-custom-search-element .column3,
 .page-bibdk-frontpage-musik div#search-advanced-panel .musikgenre .bibdk-custom-search-element .column3 {
   width: 22%;
 }
-/* line 564, ../sass/elements/_custom_search_elements.scss */
+/* line 563, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale {
   width: 75%;
   margin-left: 0;
 }
-/* line 567, ../sass/elements/_custom_search_elements.scss */
+/* line 566, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale div.fieldset-wrapper,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale div.fieldset-wrapper {
   text-align: left;
 }
-/* line 570, ../sass/elements/_custom_search_elements.scss */
+/* line 569, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale .fieldset-description,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale .fieldset-description {
   display: none;
 }
-/* line 573, ../sass/elements/_custom_search_elements.scss */
+/* line 572, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .materiale .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-musik div#search-advanced-panel .materiale .bibdk-custom-search-element .column {
   width: 25%;
   float: left;
 }
-/* line 579, ../sass/elements/_custom_search_elements.scss */
+/* line 578, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'] .btn-submit,
 .page-bibdk-frontpage-musik div#search-advanced-panel .btn-submit {
   margin-top: -20px;
 }
 
-/* line 587, ../sass/elements/_custom_search_elements.scss */
+/* line 586, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale {
   width: 85%;
   margin-left: 1%;
 }
-/* line 590, ../sass/elements/_custom_search_elements.scss */
+/* line 589, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale div.fieldset-wrapper,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale div.fieldset-wrapper {
   text-align: left;
 }
-/* line 593, ../sass/elements/_custom_search_elements.scss */
+/* line 592, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .fieldset-description,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .fieldset-description {
   display: none;
 }
-/* line 596, ../sass/elements/_custom_search_elements.scss */
+/* line 595, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .bibdk-custom-search-element .column,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .bibdk-custom-search-element .column {
   width: 38%;
   float: left;
 }
-/* line 600, ../sass/elements/_custom_search_elements.scss */
+/* line 599, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .materiale .bibdk-custom-search-element .column0,
 .page-bibdk-frontpage-noder div#search-advanced-panel .materiale .bibdk-custom-search-element .column0 {
   width: 24%;
 }
-/* line 605, ../sass/elements/_custom_search_elements.scss */
+/* line 604, ../sass/elements/_custom_search_elements.scss */
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'] .btn-submit,
 .page-bibdk-frontpage-noder div#search-advanced-panel .btn-submit {
   margin-top: -20px;
 }
 
-/* line 610, ../sass/elements/_custom_search_elements.scss */
+/* line 609, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list {
   width: 600px;
   height: 460px;
 }
-/* line 618, ../sass/elements/_custom_search_elements.scss */
+/* line 617, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list .panel-select .form-type-select {
   height: 350px;
 }
-/* line 622, ../sass/elements/_custom_search_elements.scss */
+/* line 621, ../sass/elements/_custom_search_elements.scss */
 div#search-advanced-panel .custom-search-options-list .custom-search-list-save, div#search-advanced-panel .custom-search-options-list .custom-search-list-close {
   margin: 20px;
   width: auto;
