@@ -5556,73 +5556,77 @@ h1 {
 .infomedia-article #header {
   background-color: #ffffff;
 }
+/* line 21, ../sass/components/global/_page-sections.scss */
+#header .logo {
+  float: left;
+}
 
-/* line 23, ../sass/components/global/_page-sections.scss */
+/* line 27, ../sass/components/global/_page-sections.scss */
 #search-panel {
   background-color: #e8e8e8;
 }
-/* line 28, ../sass/components/global/_page-sections.scss */
+/* line 32, ../sass/components/global/_page-sections.scss */
 .lift-columns #search-panel {
   padding-bottom: 0;
 }
 
-/* line 34, ../sass/components/global/_page-sections.scss */
+/* line 38, ../sass/components/global/_page-sections.scss */
 #messages {
   background-color: #f3f3f3;
 }
 
-/* line 41, ../sass/components/global/_page-sections.scss */
+/* line 45, ../sass/components/global/_page-sections.scss */
 #user-alerts {
   background-color: #f3f3f3;
 }
 
-/* line 48, ../sass/components/global/_page-sections.scss */
+/* line 52, ../sass/components/global/_page-sections.scss */
 #carousel {
   display: none;
 }
 @media only screen and (min-width: 35.7em) {
-  /* line 48, ../sass/components/global/_page-sections.scss */
+  /* line 52, ../sass/components/global/_page-sections.scss */
   #carousel {
     display: block;
     background-color: #ffffff;
   }
 }
 
-/* line 61, ../sass/components/global/_page-sections.scss */
+/* line 65, ../sass/components/global/_page-sections.scss */
 #subjectshierarchy {
   display: none;
 }
 @media only screen and (min-width: 35.7em) {
-  /* line 61, ../sass/components/global/_page-sections.scss */
+  /* line 65, ../sass/components/global/_page-sections.scss */
   #subjectshierarchy {
     display: block;
     background-color: #f3f3f3;
   }
 }
 
-/* line 74, ../sass/components/global/_page-sections.scss */
+/* line 78, ../sass/components/global/_page-sections.scss */
 #columns {
   display: none;
 }
 @media only screen and (min-width: 35.7em) {
-  /* line 74, ../sass/components/global/_page-sections.scss */
+  /* line 78, ../sass/components/global/_page-sections.scss */
   #columns {
     display: block;
     background-color: #ffffff;
   }
-  /* line 84, ../sass/components/global/_page-sections.scss */
+  /* line 88, ../sass/components/global/_page-sections.scss */
   .lift-columns #columns {
     padding-top: 10px;
     background-color: #e8e8e8;
   }
 }
 
-/* line 92, ../sass/components/global/_page-sections.scss */
+/* line 96, ../sass/components/global/_page-sections.scss */
 #banner {
   background-color: #ffffff;
 }
 
-/* line 99, ../sass/components/global/_page-sections.scss */
+/* line 103, ../sass/components/global/_page-sections.scss */
 #footer {
   padding: 40px 0 100px;
   padding:  2.5rem 0 6.25rem;
@@ -5850,18 +5854,13 @@ h1 {
 }
 
 /* line 5, ../sass/components/global/_header-actions.scss */
-.logo {
-  float: left;
-}
-
-/* line 9, ../sass/components/global/_header-actions.scss */
 .region-header-actions {
   float: right;
   right: 3px;
   margin-top: 12px;
 }
 
-/* line 15, ../sass/components/global/_header-actions.scss */
+/* line 11, ../sass/components/global/_header-actions.scss */
 .header-action {
   position: relative;
   display: inline-block;
@@ -5878,16 +5877,16 @@ h1 {
   padding: 0 10px;
   margin-left: 2px;
 }
-/* line 25, ../sass/components/global/_header-actions.scss */
+/* line 21, ../sass/components/global/_header-actions.scss */
 .header-action a {
   color: #ffffff;
 }
 
-/* line 30, ../sass/components/global/_header-actions.scss */
+/* line 26, ../sass/components/global/_header-actions.scss */
 .header-action-helpdesk {
   padding-left: 38px;
 }
-/* line 33, ../sass/components/global/_header-actions.scss */
+/* line 29, ../sass/components/global/_header-actions.scss */
 .header-action-helpdesk img {
   position: absolute;
   left: 2px;
@@ -5900,36 +5899,36 @@ h1 {
   margin-bottom: auto;
 }
 
-/* line 47, ../sass/components/global/_header-actions.scss */
+/* line 43, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser.toggled {
   padding: 0;
   background: transparent;
 }
-/* line 52, ../sass/components/global/_header-actions.scss */
+/* line 48, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser .form-type-textfield {
   width: 400px;
   margin-right: 5px;
 }
-/* line 56, ../sass/components/global/_header-actions.scss */
+/* line 52, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser .form-actions {
   width: 85px;
 }
-/* line 60, ../sass/components/global/_header-actions.scss */
+/* line 56, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser input {
   display: block;
   line-height: 30px;
   height: 30px;
 }
-/* line 65, ../sass/components/global/_header-actions.scss */
+/* line 61, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser input[type=text] {
   padding: 0 5px;
   font-size: 12px;
 }
-/* line 70, ../sass/components/global/_header-actions.scss */
+/* line 66, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser a {
   padding: 8px 20px 8px 0;
 }
-/* line 74, ../sass/components/global/_header-actions.scss */
+/* line 70, ../sass/components/global/_header-actions.scss */
 .header-action-vejviser a:after {
   content: "";
   height: 15px;
