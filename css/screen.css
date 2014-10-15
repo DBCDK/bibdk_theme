@@ -3589,7 +3589,7 @@
     box-sizing: border-box;
   }
 }
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -10019,8 +10019,16 @@ div#search-advanced-panel .custom-search-options-list .custom-search-list-save, 
   overflow: hidden;
   text-indent: 17px;
 }
+/* line 413, ../sass/elements/_search_work_manifestations.scss */
+.item-list .material-types-list li .periodica-icon-small {
+  background-position: -260px 0;
+  width: 17px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: 17px;
+}
 
-/* line 417, ../sass/elements/_search_work_manifestations.scss */
+/* line 424, ../sass/elements/_search_work_manifestations.scss */
 .panel {
   padding-left: 3px;
 }
