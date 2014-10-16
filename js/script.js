@@ -428,32 +428,15 @@
         e.preventDefault();
         $('.popover').addClass('visuallyhidden');
         $(this).siblings().removeClass('visuallyhidden').find('input').select();
+        $(this).siblings().removeClass('hide-text').find('input').select();
         $(this).siblings().find('.close').focus();
       });
       $('.popover .close').click(function(e) {
         e.preventDefault();
         $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
+        $(this).closest('.linkme-wrapper').addClass('hide-text');
         $(this).parent().prev('.popover-button').find('a').focus();
       });
-
-      /* /begin TODO: delete after sprint 32 */
-      // Linkme field
-      $('.linkme-button').click(function(e) {
-        $('.popover').addClass('visuallyhidden');
-        $(this).siblings().removeClass('visuallyhidden').find('input').select();
-      });
-      $('.linkme-wrapper .close').click(function(e) {
-        $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
-      });
-      // Infomedia field
-      $('.infomedia-button').click(function(e) {
-        $('.popover').addClass('visuallyhidden');
-        $(this).siblings().removeClass('visuallyhidden');
-      });
-      $('.infomedia-wrapper .close').click(function(e) {
-        $(this).closest('.infomedia-wrapper').addClass('visuallyhidden');
-      });
-      /* /end TODO: delete after sprint 32 */
 
       // ****************************  Seasonal images **************************** //
       var today = new Date();
