@@ -5,6 +5,8 @@
 #block-bibdk-help-bibdk-help-topbar-menu,
 #block-bibdk-help-bibdk-help-topbar-menu-eng,
 #block-locale-language {
+  
+  margin-top: 60px;  
   float: left;
 
   li {
@@ -13,16 +15,18 @@
 
   a {
     @include inline-block();
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     border-right: solid 1px $grey-1;
     color: $grey-5;
 
     &:hover {
       color: $grey-7;
     }
-
   }
 
+  @media #{$medium-up} {
+    margin-top: 0;
+  }
 }
 
 #block-bibdk-help-bibdk-help-topbar-menu,

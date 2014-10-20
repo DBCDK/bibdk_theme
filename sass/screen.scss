@@ -11,11 +11,13 @@
 $sprites-layout: smart;
 @import "sprites/*.png";
 
+@import "utilities/functions";
+
 // Import global settings and functions
 @import "settings";
 
 // Import utilities (sass mixins and functions)
-@import "utilities/functions";
+
 @import "utilities/button-as-link";
 @import "utilities/clearfix";
 @import "utilities/add-sprite";
@@ -24,8 +26,6 @@ $sprites-layout: smart;
 @import "utilities/triangle";
 @import "utilities/grid";
 @import "utilities/align";
-
-
 
 // =============================================================================
 // Import components
@@ -77,6 +77,7 @@ $sprites-layout: smart;
 @import "components/dropdown";
 @import "components/rs-carousel";
 @import "components/page-title";
+@import "components/popup";
 @import "components/search-block-form";
 @import "components/tabs";
 @import "components/facet-browser";

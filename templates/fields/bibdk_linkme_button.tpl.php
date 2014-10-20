@@ -4,7 +4,7 @@
     <?php print $link_text; ?>
   </a>
 
-  <div class='popover element-wrapper visuallyhidden linkme-wrapper'>
+  <div class='popover element-wrapper visuallyhidden linkme-wrapper hide-text'>
     <div class=''><?php print drupal_render_children($link_form) ?><span
         class="close icon icon-left icon-red-x">&nbsp;</span></div>
   </div>
