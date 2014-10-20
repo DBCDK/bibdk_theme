@@ -1,0 +1,61 @@
+/**
+ * @file
+ *
+ * General markup of the module.
+ */
+
+#bibdk-voxb-offensive-form input{
+float:right;
+}
+    
+
+.user-rate .ajax-progress, .tags-container .message, .add-review-container .message {
+    display: none;
+}
+
+.record-tag-highlight div, .record-tag-highlight .tag {
+    float: left;
+}
+
+span.star.negative.star-hover,
+span.star.positive.star-hover{
+    background-position: 0 17px;
+    /*color: transparent;*/
+    /*border: medium none;*/
+    /*border-color:red;*/
+    /*border-width:1px;*/
+    box-shadow: 0 0 0 1px red inset;
+}
+
+.bibdk-voxb-review {
+    margin-top: 5px;
+    border:1px solid #dcdcdc;
+    padding: 5px;
+}
+
+
+.bibdk-voxb-review .element-section {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.toggle-next-section {
+    float: left;
+}
+
+.bibdk-edit-review-link {
+    float:right;
+}
+
+.bibdk-voxb-login-to-handle{
+    float:right;
+}
+
+/* remove the 'More information about text formats' link on blog_node_form*/
+#blog-node-form .filter-help{
+  display:none;
+}
+
+
+
