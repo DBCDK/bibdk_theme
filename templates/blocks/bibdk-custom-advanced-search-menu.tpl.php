@@ -8,8 +8,8 @@
 <div id="search-advanced-toggle" data-toggle-state-hidden="<?php echo $form['#visuallyhidden'];?>" class="clearfix<?php echo $search_advanced_toggle; ?>">
   <a id="selid_custom_search_expand" class="text-darkgrey <?php $search_advanced_toggle ? print "toggled" : print ""; ?>" href="#">
     <span class="icon icon-left icon-blue-minus">&nbsp;</span>
-    <span class="toggle-text <?php !$search_advanced_toggle ? print "hidden" : print ""; ?>"><?php print t('Expand search options'); ?></span>
-    <span class="toggle-text <?php $search_advanced_toggle ? print "hidden" : print ""; ?>"><?php print t('Collapse search options'); ?></span>
+    <span class="toggle-text<?php !$search_advanced_toggle ? print " hidden" : print ""; ?>"><?php print t('Expand search options'); ?></span>
+    <span class="toggle-text<?php $search_advanced_toggle ? print " hidden" : print ""; ?>"><?php print t('Collapse search options'); ?></span>
   </a>
 </div>
 <div id="search-advanced" class="clearfix<?php echo $search_advanced_visuallyhidden; ?>">
