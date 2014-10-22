@@ -86,20 +86,6 @@
         $('.dropdown-toggle').removeClass('toggled');
       });
 
-      // Add to basket
-      $('.link-add-basket').toggle(function(e) {
-        e.preventDefault();
-
-        $(this).html($(this).html().replace('Tilføj', 'Fjern'));
-        $(this).toggleClass('toggled');
-
-      }, function(e) {
-        e.preventDefault();
-
-        $(this).html($(this).html().replace('Fjern', 'Tilføj'));
-        $(this).toggleClass('toggled');
-      });
-
       // Disable button and dropdown when toggling details of a work
       $('.work-toggle-element', context).once().click(function(e) {
         e.preventDefault();
