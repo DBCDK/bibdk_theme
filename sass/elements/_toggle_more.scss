@@ -1,0 +1,24 @@
+// Toggle functionality
+
+// Elements with class .hide is hidden by default and .show is visible
+// If the parent element with class .toggle-more is given class .toggled
+// the qualities of the .hide/.show classes are inverted
+
+.toggle-more {
+  .hide {
+    display: none;
+  }
+  &.toggled {
+    .hide {
+      display: initial;
+    }
+    .show {
+      display: none;
+    }
+  }
+}
+
+// Move toggle links to own line
+.toggle-link {
+  display: block;
+}
