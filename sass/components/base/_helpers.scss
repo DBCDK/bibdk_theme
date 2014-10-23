@@ -6,15 +6,16 @@
   @include rem('padding-left', $spacing);
   @include rem('padding-right', $spacing);
 }
+
 .padded--vertical {
   @include rem('padding-top', $spacing);
   @include rem('padding-bottom', $spacing);
 }
+
 .padded {
   @extend .padded--horizontal;
   @extend .padded--vertical;
 }
-
 
 .nav {
   list-style: none;
@@ -27,23 +28,15 @@
   @extend .clearfix;
 
   li {
-    float:left;
-    display:block;
+    float: left;
+    display: block;
   }
   a {
-    float:left;
-    display:block;
+    float: left;
+    display: block;
   }
 
 }
-
-
-
-
-
-
-
-
 
 .apparent-link {
   color: $black;
@@ -54,7 +47,6 @@
     text-decoration: underline;
   }
 }
-
 
 // Helper for styling links as tabs after refactoring custom_search tabs from buttons to links
 .link-as-box {
@@ -67,10 +59,7 @@
   padding: 0 20px;
 }
 
-
-
-
-.two-panel-multi-select{
+.two-panel-multi-select {
   @extend .clearfix;
   .form-type-select {
     width: 35%;

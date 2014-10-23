@@ -6,6 +6,10 @@
 //      Default: false. Options: nest, collapse, nest-collapse, false.
 // =============================================================================
 
+// =============================================================================
+// Currently unused due to use of Foundation -- remove this file!
+// =============================================================================
+
 @mixin grid-row($behavior: false) {
 
   // use @include grid-row(nest); to include a nested row
