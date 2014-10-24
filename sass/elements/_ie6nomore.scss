@@ -2,10 +2,14 @@
 // ie6nomore module corrections
 // =============================================================================
 
+#ie6nomore {
+  border: 1px solid #F7941D;
+  background: $red-pure;
+}
+
 #ie6nomore-wrapper {
     width: 990px;
     color: black;
-    background: $red-pure;
 }
 
 #ie6nomore .close-button a {
