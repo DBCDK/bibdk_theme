@@ -5,5 +5,9 @@
 #ie6nomore-wrapper {
     width: 990px;
     color: black;
-    background-color: $red-pure;
+    background: $red-pure;
+}
+
+#ie6nomore .close-button a {
+  color: #F7941D;
 }
