@@ -838,7 +838,7 @@ p.note-localisations {
 // Overlay
 // =============================================================================
 
-body.page-ting-moreinfo {
+body.page-ting-moreinfo  {
   background: none repeat scroll 0 0 #ffffff;
   .element-wrapper {
     border: 0px solid #ffffff;
@@ -847,15 +847,17 @@ body.page-ting-moreinfo {
   .element {
     border-width: 0;
   }
-  img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 }
+
+div#moreinfo img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 
 #lightboxFrame {
   border-width: 0;
