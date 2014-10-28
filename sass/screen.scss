@@ -11,17 +11,19 @@
 $sprites-layout: smart;
 @import "sprites/*.png";
 
-// Import global functions and settings
-@import "utilities/functions";
+
+// =============================================================================
+// Initial stuff
+// =============================================================================
+@import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
 @import "settings";
 
 
 // =============================================================================
 // Foundation -- behold, here are all the Foundation components.
 // =============================================================================
-//  @import "foundation/settings"; -- FOR REFERENCE ONLY -- SHOULD NEVER BE INCLUDED
-//  @import "foundation/functions"; -- FOR REFERENCE ONLY -- SHOULD NEVER BE INCLUDED
-//
+//  @import "foundation/settings"; -- FOR REFERENCE ONLY -- should never be included as we're defining our own settings above
+
 @import "normalize";
 @import "foundation/components/grid";
 //  @import "foundation/components/accordion";
@@ -71,7 +73,6 @@ $sprites-layout: smart;
 @import "utilities/btn-skin";
 @import "utilities/rem";
 @import "utilities/triangle";
-// @import "utilities/grid";
 @import "utilities/align";
 
 
