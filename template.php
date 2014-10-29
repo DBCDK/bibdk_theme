@@ -300,6 +300,12 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @see bibdk_theme_form_alter()
+ */
 function _alter_bibdk_favourite_user_form_fields(&$form) {
   $submit = $form['wrapper']['submit'];
   unset($form['wrapper']['submit']);
@@ -310,6 +316,12 @@ function _alter_bibdk_favourite_user_form_fields(&$form) {
   $form['wrapper']['buttons']['submit'] = $submit;
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @see bibdk_theme_form_alter()
+ */
 function _alter_openuserstatus_tables(&$form) {
   $keys = array('loans', 'readyforpickup', 'reservations', 'fiscal');
   foreach ($keys as $key) {
@@ -321,11 +333,25 @@ function _alter_openuserstatus_tables(&$form) {
   $form['#suffix'] = '</div>';
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @see bibdk_theme_form_alter()
+ */
 function _wrap_in_element(&$form) {
   $form['#prefix'] = '<div class="element-wrapper"><div class="element">';
   $form['#suffix'] = '</div></div>';
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ * @see bibdk_theme_form_alter()
+ */
 function _alter_user_login(&$form, &$form_state, $form_id) {
   // Add placeholders
   $form['name']['#attributes']['placeholder'] = t('Username');
@@ -344,10 +370,26 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
   }
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $form_id
+ * @see bibdk_theme_form_alter()
+ */
 function _alter_user_pass_reset(&$form, &$form_state, $form_id) {
   $form['#theme'] = 'bibdk_user_pass_reset';
 }
 
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param array $form_id
+ * @see bibdk_theme_form_alter()
+ */
 function _alter_search_block_form(&$form, &$form_state, $form_id) {
 
   $form['search_block_form']['#maxlength'] = 1000;
