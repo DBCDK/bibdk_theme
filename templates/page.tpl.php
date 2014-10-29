@@ -57,8 +57,8 @@
       </div>
     </div>
   </section>
-<?php else:
-  unset($page['content']['user_alert_user_alert']); ?>
+<?php else: ?>
+  <?php unset($page['content']['user_alert_user_alert']); ?>
   <!-- user alerts end -->
 <?php endif; ?>
 
