@@ -61,14 +61,23 @@ function bibdk_theme_theme() {
   );
 }
 
+/**
+ * @param array $vars
+ */
 function bibdk_theme_preprocess_pager_next(&$vars) {
   $vars['text'] = t('pager_next >', array(), array('context' => 'bibdk_theme'));
 }
 
+/**
+ * @param array $vars
+ */
 function bibdk_theme_preprocess_pager_previous(&$vars) {
   $vars['text'] = t('< pager_previous ', array(), array('context' => 'bibdk_theme'));
 }
 
+/**
+ * @param array $vars
+ */
 function bibdk_theme_preprocess_pager_first(&$vars) {
   $vars['text'] = t('pager_first', array(), array('context' => 'bibdk_theme'));
 }
@@ -409,6 +418,14 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
 
 }
 
+/**
+ * @param $group
+ * @param $parent_id
+ * @param $id
+ * @param $cnum
+ * @param $form
+ * @return bool
+ */
 function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   if (!$cnum) {
     return false;
@@ -441,6 +458,14 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   }
 }
 
+/**
+ * @param $region
+ * @param $group
+ * @param $type
+ * @param $cnum
+ * @param $form
+ * @return bool
+ */
 function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
 
   if (!$cnum) {
@@ -526,7 +551,8 @@ function _alter_bibdk_cart_form(&$form) {
 
 /* HOOK_FORM_ALTER END */
 
-/** \brief Theme links given from agency
+/**
+ * Theme links given from agency
  *
  * @param array $vars
  * @return string (html unordered list)
@@ -574,6 +600,11 @@ function bibdk_theme_menu_link(array$vars) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $links
+ */
 function bibdk_theme_preprocess_links(&$links) {
 
   if ($links['heading'] == t('export links')) {
@@ -588,8 +619,10 @@ function bibdk_theme_preprocess_links(&$links) {
 
 /**
  * Implements theme_links__locale_block().
- *
  * Remove active language from language switcher
+ *
+ * @param array $vars
+ * @return string
  */
 function bibdk_theme_links__locale_block($vars) {
   global $language;
@@ -598,12 +631,22 @@ function bibdk_theme_links__locale_block($vars) {
   return theme('links', $vars);
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $variables
+ * @return mixed
+ */
 function bibdk_theme_preprocess_bibdk_reservation_button(&$variables) {
   $variables['link_attributes']['class'][] = 'btn';
   $variables['link_attributes']['class'][] = (isset($variables['entity_type']) && $variables['entity_type'] == 'bibdkManifestation') ? 'btn-grey' : 'btn-blue';
-  return $variables;
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $vars
+ */
 function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
 
   $vars['secondary_actions'] = array();
@@ -627,6 +670,9 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
 
 /**
  * Override theme function for a CAPTCHA element.
+ *
+ * @param array $vars
+ * @return string
  */
 function bibdk_theme_captcha($vars) {
   $element = $vars['element'];
@@ -646,6 +692,11 @@ function bibdk_theme_captcha($vars) {
   }
 }
 
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $links
+ */
 function bibdk_theme_preprocess_link(&$links) {
   if ($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
     $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
@@ -656,7 +707,8 @@ function bibdk_theme_preprocess_link(&$links) {
 /**
  * theme_status_messages().
  *
- * Return HTML for status messages.
+ * @param array $vars
+ * @return string HTML for status messages.
  */
 function bibdk_theme_status_messages($vars) {
   $display = $vars['display'];
