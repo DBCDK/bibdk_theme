@@ -102,9 +102,7 @@
     </div>
   <?php endif; ?>
 
-
   <div class="row">
-
     <?php if (!empty($page['sidebar'])): ?>
       <div class="small-6 columns">
         <?php print render($page['sidebar']); ?>
@@ -117,9 +115,7 @@
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
-
   </div>
-
 </section>
 <!-- columns end -->
 
