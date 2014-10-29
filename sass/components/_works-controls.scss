@@ -76,167 +76,32 @@
     float: right;
     margin: 7px 0 0 5px;
   }
-
 }
 
 
 #ting-openformat-full-view-button-closed,
 #ting-openformat-full-view-button-expanded {
-
   &:after {
     @include align("vcenter");
     left: 10px;
   }
-
 }
 
 
 #ting-openformat-full-view-button-closed {
-
   &:after {
     @include add-sprite("viewmode--list--blue");
   }
   &.inactive:after {
     @include add-sprite("viewmode--list--grey");
   }
-
 }
 
 #ting-openformat-full-view-button-expanded {
-
   &:after {
     @include add-sprite("viewmode--details--blue");
   }
   &.inactive:after {
     @include add-sprite("viewmode--details--grey");
   }
-
 }
-
-.works-control {
-
-}
-
-
-.works-sort {
-
-
-}
-
-
-
-.full-view-links {
-
-}
-
-#ting-openformat-full-view-button-closed {
-
-}
-
-#ting-openformat-full-view-button-expanded {
-
-}
-
-
-//.pane-ting-openformat-feeds {
-//  float: right;
-//}
-
-
-
-// div.works-controls > div > div {
-//   position: relative;
-//   float: left;
-// }
-
-
-
-// /*.pager,*/
-// .works-controls {
-//   display: block;
-//   margin-bottom: 10px;
-//   // padding: 0 0 9px 0;
-
-//   h1 {
-//     margin-left: 20px;
-//     font-size: 18px;
-//     color: $blue;
-//   }
-// }
-
-// .works-controls > div,
-// .works-control-wrapper-left {
-//   float: left;
-//   line-height: 30px;
-//   height: 30px;
-//   background: $white;
-//   @include border-radius(3px);
-//   border: solid 1px $grey-5;
-//   border-left-width: 0;
-//   &.panel-separator {
-//     border-width: 0;
-//   }
-//   .works-control.toggled {
-//     @include border-radius(3px);
-//   }
-// }
-
-
-
-
-
-
-
-// .works-control-wrapper-right {
-//   float: right;
-// }
-
-// .works-control {
-//   font-size: 14px;
-
-//   &:active,
-//   &.toggled {
-//     @include box-shadow(inset 0 0px 1px rgba($black, .8));
-//     background-color: darken($grey-7, 2%);
-//   }
-// }
-
-//
-// Toggle collapsed/expanded
-//
-// .works-toggle {
-//   padding: 0 20px;
-//   float: left;
-// }
-
-// .works-toggle-collapse,
-// .works-toggle-expand {
-//   @include inline-block(middle);
-//   width: 17px;
-// }
-
-// .works-toggle-collapse {
-//   background: url(../img/works-collapse.png) no-repeat 50% 50%;
-// }
-
-// .works-toggle-expand {
-//   background: url(../img/works-expand.png) no-repeat 50% 50%;
-// }
-
-//
-// Sorting
-//
-// .works-sort {
-//   padding: 0 20px;
-//   float: left;
-// }
-
-
-//**************************************************
-// feeds
-// ================================================
-// div.works-controls > div.pane-ting-openformat-feeds{
-//   background:none;
-//   border:none;
-//   float:right;
-// }
