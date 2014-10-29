@@ -6,7 +6,6 @@ input[type="submit"].button-as-link {
   @include button-as-link($blue);
 }
 
-
 // =============================================================================
 // Define color variations of buttons
 // =============================================================================
@@ -113,6 +112,6 @@ input[type="submit"].button-as-link {
 }
 
 button[type="button"] {
-    border: medium none;
+  border: medium none;
 }
 

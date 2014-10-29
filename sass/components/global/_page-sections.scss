@@ -79,8 +79,6 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   
-  display: none;
-  
   @media #{$medium-up} {
     display: block;
     background-color: $white; 
