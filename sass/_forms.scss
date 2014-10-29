@@ -484,8 +484,15 @@ margin-right:0.5em;
     font-size:14px;
     border-radius:0;
     text-shadow: none;
-
   }
+
+  input[type="submit"].inactive {
+    &:hover {
+      @include background-image(none);
+      @include box-shadow(none);
+    }
+  }
+
 }
 
 .page-reservation .bottom-space {
