@@ -5,14 +5,14 @@
 // the qualities of the .hide/.show classes are inverted
 
 .toggle-more {
-  .hide {
+  .toggle-hide {
     display: none;
   }
   &.toggled {
-    .hide {
+    .toggle-hide {
       display: inline;
     }
-    .show {
+    .toggle-show {
       display: none;
     }
   }
