@@ -18,11 +18,4 @@
 
 <aside class="right-off-canvas-menu">
   <?php print $menu; ?>
-  <!--
-  <ul class="off-canvas-list">
-    <li><label>Users</label></li>
-    <li><a href="#">Hari Seldon</a></li>
-    <li><a href="#">...</a></li>
-  </ul>
-  -->
 </aside>
