@@ -1,15 +1,20 @@
+<!-- TODO mmj cleanup this file (and regions) when new topbar is completed -->
 <!-- topbar start -->
+<!--
 <nav id="topbar" data-role="navigation">
   <div class="row">
     <div class="small-24 columns">
-      <?php print render($page['topbar']); ?>
+      <?php #print render($page['topbar']); ?>
     </div>
   </div>
+
 </nav>
+-->
 <!-- topbar end -->
 
 
 <!-- header end -->
+<!--
 <header id="header">
   <div class="row">
     <div class="small-24 columns">
@@ -18,6 +23,7 @@
     </div>
   </div>
 </header>
+-->
 <!-- header end -->
 
 
