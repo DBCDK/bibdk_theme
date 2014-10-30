@@ -1,0 +1,15 @@
+// =============================================================================
+// Visibility dependening on devicesize
+// =============================================================================
+
+.devicesize_small_hidden {
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+.devicesize_large_hidden {
+  @media #{$large-up} {
+    display: none;
+  }
+}
