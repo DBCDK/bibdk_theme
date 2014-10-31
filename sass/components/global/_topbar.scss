@@ -6,7 +6,6 @@ $topbar_height: rem-calc(45px);
 }
 
 .right-small {
-
   @media #{$medium-up} {
     right: rem-calc(35px);
   }
