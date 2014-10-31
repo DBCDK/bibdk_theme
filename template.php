@@ -27,36 +27,51 @@ function bibdk_theme_theme() {
   $path = drupal_get_path('theme', 'bibdk_theme') . '/templates/';
   return array(
     'bibdk_theme_work_info_tabs' => array(
-      'path' => $path . '/views',
+      'path' => $path . 'views',
       'variables' => array('tabs' => ''),
       'template' => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
     'bibdk_search_controls-select' => array(
-      'path' => $path . '/blocks',
+      'path' => $path . 'blocks',
       'template' => 'bibdk_search_controls-select',
       'render element' => 'form',
     ),
     'bibdk_user_pass_reset' => array(
-      'path' => $path . '/blocks',
+      'path' => $path . 'blocks',
       'template' => 'bibdk_user_pass_reset',
       'render element' => 'form',
     ),
     'bibdk_search_element' => array(
-      'path' => $path . '/blocks',
+      'path' => $path . 'blocks',
       'template' => 'bibdk_custom_search-search-element-form',
       'render element' => 'form',
     ),
     'bibdk_openuserstatus_help_icon' => array(
-      'path' => $path . '/blocks',
+      'path' => $path . 'blocks',
       'template' => 'bibdk_openuserstatus_help_icon',
       'render element' => 'form',
     ),
     'user_alert' => array(
-      'path' => $path . '/blocks',
+      'path' => $path . 'blocks',
       'variables' => array('node' => NULL),
       'template' => 'user-alert',
       'render element' => 'elements',
+    ),
+    'bibdk_topbar' => array(
+      'path' => $path . 'topbar',
+      'template' => 'bibdk-topbar',
+      'variables' => array(
+        'menu' => array(),
+      ),
+    ),
+    'bibdk_links_list' => array(
+      'path' => $path . 'topbar',
+      'template' => 'bibdk-links-list',
+      'variables' => array(
+        'attributes' => array(),
+        'items' => array(),
+      ),
     ),
   );
 }
@@ -117,6 +132,67 @@ function bibdk_theme_preprocess_html(&$vars) {
       break;
   }
 
+  //add the topbar
+  $vars['page_topbar'] = _bibdk_theme_get_bibdk_topbar();
+}
+
+/**
+ * Rendering of the bibdk topbar including the offcanvas menu.
+ *
+ * @return string rendered HTML based on the bibdk-topbar.tpl.php
+ *
+ * @see bibdk-topbar.tpl.php
+ */
+function _bibdk_theme_get_bibdk_topbar() {
+  global $user;
+  if ($user->uid) {
+    //TODO mmj genereate 'min side' menu (US #1516)
+  }
+
+  $menu_links = menu_navigation_links('menu-bibliotek-dk---off-canvas-m');
+
+  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links);
+
+  $rendered = theme('bibdk_topbar', array('menu' => $menu));
+  return $rendered;
+}
+
+function _bibdk_theme_get_offcanvas_menu_list($links) {
+  $items = array();
+
+  foreach ($links as $key => $link) {
+    $item['link'] = l($link['title'], $link['href'], array('attributes' => $link['attributes']));
+    $item['li_attributes'] = _bibdk_theme_offcanvas_set_li_attributes($link);
+    $items[] = $item;
+  }
+
+  $attributes = array(
+    'class' => array('off-canvas-list'),
+  );
+
+  return theme('bibdk_links_list', array(
+    'attributes' => $attributes,
+    'items' => $items
+  ));
+}
+
+/**
+ * @param $link
+ * @return array
+ */
+function _bibdk_theme_offcanvas_set_li_attributes($link){
+  $attributes = array();
+  $devicetypes = isset($link['devicetypes']) ? $link['devicetypes'] : array();
+
+  if(!empty($devicetypes)){
+    foreach($devicetypes as   $type => $value) {
+      if($value === 0){
+        $attributes['class'][] = $type . '_hidden';
+      }
+    }
+  }
+
+  return $attributes;
 }
 
 /**
@@ -628,23 +704,6 @@ function bibdk_theme_menu_link(array$vars) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * @param array $links
- */
-function bibdk_theme_preprocess_links(&$links) {
-
-  if ($links['heading'] == t('export links')) {
-    $links['heading'] = '';
-    foreach ($links['links'] as $key => $link) {
-      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
-      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
-      $links['links'][$key] = $link;
-    }
-  }
-}
-
-/**
  * Implements theme_links__locale_block().
  * Remove active language from language switcher
  *
@@ -695,6 +754,34 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
   }
 }
 
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array $links
+ */
+function bibdk_theme_preprocess_links(&$links) {
+  if ($links['heading'] == t('export links')) {
+    $links['heading'] = '';
+    foreach ($links['links'] as $key => $link) {
+      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
+      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
+      $links['links'][$key] = $link;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $links
+ */
+function bibdk_theme_preprocess_link(&$links) {
+  if ($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
+    $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
+  }
+}
+
 /**
  * Override theme function for a CAPTCHA element.
  *
@@ -717,18 +804,6 @@ function bibdk_theme_captcha($vars) {
   else {
     return '<div class="captcha">' . drupal_render_children($element) . '</div>';
   }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- *
- * @param $links
- */
-function bibdk_theme_preprocess_link(&$links) {
-  if ($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
-    $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
-  }
-
 }
 
 /**
