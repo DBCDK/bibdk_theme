@@ -6,6 +6,7 @@
  *
  * Available variables:
  * - $menu: rendered menu
+ * - $footer_menu: rendered footer menu - displayed below main items
  *
  */
 ?>
@@ -21,4 +22,5 @@
 
 <aside class="right-off-canvas-menu">
   <?php print $menu; ?>
+  <?php print $footer_menu; ?>
 </aside>

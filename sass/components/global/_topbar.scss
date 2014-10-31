@@ -43,3 +43,21 @@ ul.off-canvas-list {
     }
   }
 }
+
+ul.off-canvas-footer-menu {
+  border-bottom: 1px solid $grey-5;
+  padding: rem-calc(20px) 0 rem-calc(10px) 0;
+
+  li {
+    padding: 0 0 rem-calc(8px) rem-calc(20px);
+    a {
+      color: $grey-1;
+      font-size: rem-calc(12px);
+      &.active {
+      }
+
+      &:hover{
+      }
+    }
+  }
+}

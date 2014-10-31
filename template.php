@@ -62,7 +62,8 @@ function bibdk_theme_theme() {
       'path' => $path . 'topbar',
       'template' => 'bibdk-topbar',
       'variables' => array(
-        'menu' => array(),
+        'menu' => 'string',
+        'footer_menu' => 'string',
       ),
     ),
     'bibdk_links_list' => array(
@@ -152,19 +153,48 @@ function _bibdk_theme_get_bibdk_topbar() {
 
   $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $menu_links = menu_navigation_links($menu_name);
+  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
 
-  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links);
+  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_links = menu_navigation_links($footer_menu_name);
+  $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
+  $footer_menu = _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('off-canvas-footer-menu')));
 
-  $rendered = theme('bibdk_topbar', array('menu' => $menu));
+  $rendered = theme('bibdk_topbar', array('menu' => $menu, 'footer_menu' => $footer_menu));
   return $rendered;
 }
 
 /**
- * TODO mmj add docs
- * @param $links
- * @return string
+ * Rewrite the links to point to an actual langugage.
+ *
+ * @param array $links
+ * @return array mixed
  */
-function _bibdk_theme_get_offcanvas_menu_list($links) {
+function _bibdk_theme_preprocess_footer_menu_language_links($links){
+  global $base_url;
+  foreach ($links as &$link) {
+    if($link['title'] == 'English'){
+      $link['href'] = $base_url . '/eng';
+    }
+
+    if($link['title'] == 'Dansk'){
+      $link['href'] = $base_url . '/da';
+    }
+  }
+  return $links;
+}
+
+/**
+ * Render a unordered list with menu items. The list will be based on the
+ * bibdk-links-list.tpl.
+ *
+ * @param $links
+ * @param array $ul_attributes attributes for the containing <ul> element.
+ *
+ * @return string
+ * @see bibdk-links-list.tpl.php
+ */
+function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
   $items = array();
 
   foreach ($links as $key => $link) {
@@ -173,12 +203,8 @@ function _bibdk_theme_get_offcanvas_menu_list($links) {
     $items[] = $item;
   }
 
-  $attributes = array(
-    'class' => array('off-canvas-list'),
-  );
-
   return theme('bibdk_links_list', array(
-    'attributes' => $attributes,
+    'attributes' => $ul_attributes,
     'items' => $items
   ));
 }
