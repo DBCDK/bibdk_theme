@@ -1,0 +1,46 @@
+$topbar_height: rem-calc(45px);
+
+.tab-bar {
+  height: $topbar_height;
+  background-color: $black;
+}
+
+.right-small {
+
+  @media #{$medium-up} {
+    right: rem-calc(35px);
+  }
+
+  .menu-text {
+    display: none;
+    @media #{$medium-up} {
+      padding-left: rem-calc(5px);
+      display: inline;
+    }
+  }
+}
+
+.right-off-canvas-menu {
+  margin-top: $topbar_height;
+  background-color: $grey-7;
+}
+
+ul.off-canvas-list {
+  li {
+    a {
+      color: $black;
+      font-weight: bold;
+      font-size: rem-calc(14px);
+      border-bottom: 1px solid $grey-5;
+      padding: rem-calc(13px 0 13px 20px);
+
+      &.active {
+        background-color: $white;
+      }
+
+      &:hover{
+        background-color: $grey-6;
+      }
+    }
+  }
+}
