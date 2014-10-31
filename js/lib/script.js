@@ -491,6 +491,7 @@
       $('#search-advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
+        $('.toggle-text', this).toggleClass('hidden');
         $('#search-advanced').toggleClass('hidden');
         // Move to first input field in expanded search, if activated.
         if($('#search-advanced-toggle').hasClass('toggled') === true) {
