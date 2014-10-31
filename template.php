@@ -144,12 +144,14 @@ function bibdk_theme_preprocess_html(&$vars) {
  * @see bibdk-topbar.tpl.php
  */
 function _bibdk_theme_get_bibdk_topbar() {
-  global $user;
+  global $user, $language;
+
   if ($user->uid) {
     //TODO mmj genereate 'min side' menu (US #1516)
   }
 
-  $menu_links = menu_navigation_links('menu-bibliotek-dk---off-canvas-m');
+  $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
+  $menu_links = menu_navigation_links($menu_name);
 
   $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links);
 
@@ -157,6 +159,11 @@ function _bibdk_theme_get_bibdk_topbar() {
   return $rendered;
 }
 
+/**
+ * TODO mmj add docs
+ * @param $links
+ * @return string
+ */
 function _bibdk_theme_get_offcanvas_menu_list($links) {
   $items = array();
 
