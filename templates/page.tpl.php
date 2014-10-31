@@ -1,32 +1,3 @@
-<!-- TODO mmj cleanup this file (and regions) when new topbar is completed -->
-<!-- topbar start -->
-<!--
-<nav id="topbar" data-role="navigation">
-  <div class="row">
-    <div class="small-24 columns">
-      <?php #print render($page['topbar']); ?>
-    </div>
-  </div>
-
-</nav>
--->
-<!-- topbar end -->
-
-
-<!-- header end -->
-<!--
-<header id="header">
-  <div class="row">
-    <div class="small-24 columns">
-      <div class="logo"><?php print render($logo_header_link); ?></div>
-      <?php print render($page['header_actions']); ?>
-    </div>
-  </div>
-</header>
--->
-<!-- header end -->
-
-
 <!-- search-panel start -->
 <nav id="search-panel" data-role="search">
   <!-- blind user tag start -->

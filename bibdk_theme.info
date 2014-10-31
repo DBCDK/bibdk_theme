@@ -40,8 +40,6 @@ scripts[] = foundation/js/foundation/foundation.offcanvas.js
 ;==================================
 ;        REGIONS
 ;==================================
-regions[topbar] = Top bar
-regions[header_actions] = Header actions
 regions[search_panel] = Search panel
 regions[content] = Content
 regions[carousel] = Carousel
