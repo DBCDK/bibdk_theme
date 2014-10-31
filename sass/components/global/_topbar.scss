@@ -5,16 +5,34 @@ $topbar_height: rem-calc(45px);
   background-color: $black;
 }
 
+.topbar-logo {
+  display: inline;
+  margin-left: rem-calc(20px);
+}
+
+.topbar-links {
+  @media #{$large-up} {
+    display: inline;
+    margin-right: rem-calc(85px);
+    a {
+      margin: 0 10px;
+    }
+  }
+}
+
 .right-small {
+  border: none;
+
   @media #{$medium-up} {
-    right: rem-calc(35px);
+    right: rem-calc(45px);
   }
 
   .menu-text {
     display: none;
+
     @media #{$medium-up} {
-      padding-left: rem-calc(5px);
       display: inline;
+      padding-left: rem-calc(5px);
     }
   }
 }

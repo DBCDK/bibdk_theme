@@ -3,7 +3,7 @@
 // =============================================================================
 
 .devicesize_small_hidden {
-  @media #{$small-only} {
+  @media #{$small-up} {
     display: none;
   }
 }

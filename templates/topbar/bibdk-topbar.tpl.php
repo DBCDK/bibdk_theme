@@ -12,6 +12,13 @@
 ?>
 
 <nav class="tab-bar">
+  <section class="topbar-logo left"><a><span>LOGO</span></a></section>
+
+  <section class="topbar-links right devicesize_small_hidden">
+    <a><span>Spørg biblioteksvagten</span></a>
+    <a><span>Log ind</span></a>
+  </section>
+
   <section class="right-small">
     <a class="right-off-canvas-toggle menu-icon">
       <span></span>
@@ -23,4 +30,10 @@
 <aside class="right-off-canvas-menu">
   <?php print $menu; ?>
   <?php print $footer_menu; ?>
+
+  <div class="social-links">
+    <span>Twitter</span>
+    <span>Fjæsen</span>
+    <span>Youtbue</span>
+  </div>
 </aside>
