@@ -1,22 +1,25 @@
 <?php
-//TODO mmj logo should be added here -- and removed from bibdk_theme_preprocess_page() in template.php
 /**
  * @file
- * Bibdk topbar including offcanvas menu
+ * Bibdk_theme topbar
  *
  * Available variables:
- * - $menu: rendered menu
- * - $footer_menu: rendered footer menu - displayed below main items
+ * - $menu: Rendered menu
+ * - $footer_menu: Rendered footer menu - displayed below main items
+ * - $home_path: Frontpage path
+ * - $logo_path: Path to logo image file
+ * - $links: Links that should be showed left of the offcanvas menu (burger icon)
  *
  */
 ?>
 
 <nav class="tab-bar">
-  <section class="topbar-logo left"><a><span>LOGO</span></a></section>
+  <section class="topbar-logo left"><a href="<?php print $home_path; ?>"><img src="<?php print $logo_path; ?>" /> </a></section>
 
   <section class="topbar-links right devicesize_small_hidden">
-    <a><span>Spørg biblioteksvagten</span></a>
-    <a><span>Log ind</span></a>
+    <?php foreach($links as $link): ?>
+      <?php print $link; ?>
+    <?php endforeach; ?>
   </section>
 
   <section class="right-small">

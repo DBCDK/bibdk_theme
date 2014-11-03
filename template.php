@@ -64,6 +64,9 @@ function bibdk_theme_theme() {
       'variables' => array(
         'menu' => 'string',
         'footer_menu' => 'string',
+        'home_path' => 'string',
+        'logo_path' => 'string',
+        'links' => array(),
       ),
     ),
     'bibdk_links_list' => array(
@@ -145,7 +148,7 @@ function bibdk_theme_preprocess_html(&$vars) {
  * @see bibdk-topbar.tpl.php
  */
 function _bibdk_theme_get_bibdk_topbar() {
-  global $user, $language;
+  global $user, $language, $base_url;
 
   if ($user->uid) {
     //TODO mmj genereate 'min side' menu (US #1516)
@@ -155,13 +158,55 @@ function _bibdk_theme_get_bibdk_topbar() {
   $menu_links = menu_navigation_links($menu_name);
   $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
 
+  $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
+
+  $home_path = url('<front>');
+  $logo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header-nopayoff.png';
+
+  $links = _bibdk_theme_get_topbar_links();
+
+  $rendered = theme('bibdk_topbar', array(
+    'menu' => $menu,
+    'footer_menu' => $footer_menu,
+    'home_path' => $home_path,
+    'logo_path' => $logo_path,
+    'links' => $links
+  ));
+  return $rendered;
+}
+
+function _bibdk_theme_get_topbar_links() {
+  global $user;
+  $links = array();
+  $links[] = l(t('Spørg Biblioteksvagten'), 'overlay/helpdesk', array(
+    'attributes' => array(
+      'class' => array('bibdk-popup-link'),
+      'data-rel' => array('helpdesk'),
+    )
+  ));
+
+  if($user->uid){
+    $links[] = l(t('My page', array(), array('context' => 'bibdk_frontend')), 'user');
+  } else {
+    $links[] = l(t('Log ind'), 'user/login');
+  }
+
+  return $links;
+}
+
+/**
+ * Returns the footer menu styled in a un-ordered list ready for display within
+ * the offcanvas menu
+ *
+ * @return string
+ */
+function _bibdk_theme_get_footer_menu_for_offcanvas() {
+  global $language;
+
   $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
-  $footer_menu = _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('off-canvas-footer-menu')));
-
-  $rendered = theme('bibdk_topbar', array('menu' => $menu, 'footer_menu' => $footer_menu));
-  return $rendered;
+  return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('off-canvas-footer-menu')));
 }
 
 /**
@@ -170,14 +215,13 @@ function _bibdk_theme_get_bibdk_topbar() {
  * @param array $links
  * @return array mixed
  */
-function _bibdk_theme_preprocess_footer_menu_language_links($links){
+function _bibdk_theme_preprocess_footer_menu_language_links($links) {
   global $base_url;
   foreach ($links as &$link) {
-    if($link['title'] == 'English'){
+    if ($link['title'] == 'English') {
       $link['href'] = $base_url . '/eng';
     }
-
-    if($link['title'] == 'Dansk'){
+    if ($link['title'] == 'Dansk') {
       $link['href'] = $base_url . '/da';
     }
   }
@@ -185,7 +229,7 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links){
 }
 
 /**
- * Render a unordered list with menu items. The list will be based on the
+ * Render an unordered list with menu items. The list will be based on the
  * bibdk-links-list.tpl.
  *
  * @param $links
@@ -198,6 +242,9 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
   $items = array();
 
   foreach ($links as $key => $link) {
+    if(strpos($link['href'], 'overlay') !== FALSE){
+      $link['attributes']['class'][] = 'bibdk-popup-link';
+    }
     $item['link'] = l($link['title'], $link['href'], array('attributes' => $link['attributes']));
     $item['li_attributes'] = _bibdk_theme_offcanvas_set_li_attributes($link);
     $items[] = $item;
@@ -210,16 +257,18 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
 }
 
 /**
+ * Set attributes on a list item (<li>) that contains a link.
+ *
  * @param $link
  * @return array
  */
-function _bibdk_theme_offcanvas_set_li_attributes($link){
+function _bibdk_theme_offcanvas_set_li_attributes($link) {
   $attributes = array();
   $devicetypes = isset($link['devicetypes']) ? $link['devicetypes'] : array();
 
-  if(!empty($devicetypes)){
-    foreach($devicetypes as   $type => $value) {
-      if($value === 0){
+  if (!empty($devicetypes)) {
+    foreach ($devicetypes as $type => $value) {
+      if ($value === 0) {
         $attributes['class'][] = $type . '_hidden';
       }
     }
@@ -786,7 +835,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
     $vars['actions'] = $actions;
   }
 }
-
 
 /**
  * Implements hook_preprocess_HOOK().
