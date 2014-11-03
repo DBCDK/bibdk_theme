@@ -12,3 +12,8 @@ Thumbs.db
 .sass-cache/
 *.map
 *.css
+
+# Gulp
+.npm/npm-debug.log
+.npm/node_modules
+build
