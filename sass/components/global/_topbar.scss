@@ -8,14 +8,21 @@ $topbar_height: rem-calc(45px);
 .topbar-logo {
   display: inline;
   margin-left: rem-calc(20px);
+
+  img {
+    height: rem-calc(21px);
+  }
 }
 
 .topbar-links {
   @media #{$large-up} {
     display: inline;
     margin-right: rem-calc(85px);
+
     a {
       margin: 0 10px;
+      color: $white;
+      font-size: rem-calc(12px);
     }
   }
 }
@@ -71,11 +78,6 @@ ul.off-canvas-footer-menu {
     a {
       color: $grey-1;
       font-size: rem-calc(12px);
-      &.active {
-      }
-
-      &:hover{
-      }
     }
   }
 }
