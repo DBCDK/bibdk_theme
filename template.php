@@ -180,14 +180,21 @@ function _bibdk_theme_get_topbar_links() {
   $links = array();
   $links[] = l(t('Spørg Biblioteksvagten'), 'overlay/helpdesk', array(
     'attributes' => array(
-      'class' => array('bibdk-popup-link'),
-      'data-rel' => array('helpdesk'),
+      'class' => array('bibdk-popup-link',),
+      'data-rel' => array('helpdesk',),
     )
   ));
 
-  if($user->uid){
-    $links[] = l(t('My page', array(), array('context' => 'bibdk_frontend')), 'user');
-  } else {
+  if ($user->uid) {
+    $links[] = l(t('My page'), 'user', array(
+      'attributes' => array(
+        'id' => array('topbar-my-page-link'),
+      ),
+    ), array(
+      'context' => 'bibdk_frontend'
+    ));
+  }
+  else {
     $links[] = l(t('Log ind'), 'user/login');
   }
 
@@ -242,7 +249,7 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
   $items = array();
 
   foreach ($links as $key => $link) {
-    if(strpos($link['href'], 'overlay') !== FALSE){
+    if (strpos($link['href'], 'overlay') !== FALSE) {
       $link['attributes']['class'][] = 'bibdk-popup-link';
     }
     $item['link'] = l($link['title'], $link['href'], array('attributes' => $link['attributes']));
