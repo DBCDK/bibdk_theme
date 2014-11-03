@@ -183,8 +183,8 @@ function _bibdk_theme_get_topbar_links() {
   $links = array();
   $links[] = l(t('Spørg Biblioteksvagten'), 'overlay/helpdesk', array(
     'attributes' => array(
-      'class' => array('bibdk-popup-link',),
-      'data-rel' => array('helpdesk',),
+      'class' => array('bibdk-popup-link'),
+      'data-rel' => array('helpdesk'),
     )
   ));
 

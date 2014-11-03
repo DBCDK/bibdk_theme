@@ -49,6 +49,15 @@ $topbar_height: rem-calc(45px);
   background-color: $grey-7;
 }
 
+.right-off-canvas-toggle {
+  svg {
+    //  @include align(center);
+    width: 20px;
+    height: 15px;
+    fill: $white;
+  }
+}
+
 ul.off-canvas-list {
   li {
     a {
