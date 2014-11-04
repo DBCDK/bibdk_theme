@@ -1,6 +1,6 @@
 var myWindow = myWindow ? myWindow : false;
 
-jQuery.fn.popupwindow = function(p) {
+jQuery.fn.popupwindow = function(p, spawn) {
 
   var profiles = p || {};
 
@@ -55,9 +55,9 @@ jQuery.fn.popupwindow = function(p) {
 
     parameters = "location=" + settings.location + ",menubar=" + settings.menubar + ",height=" + settings.height + ",width=" + settings.width + ",toolbar=" + settings.toolbar + ",scrollbars=" + settings.scrollbars + ",status=" + settings.status + ",resizable=" + settings.resizable + ",left=" + settings.left + ",screenX=" + settings.left + ",top=" + settings.top + ",screenY=" + settings.top;
 
-    orderedonce = jQuery(this).hasClass('orderedOnceWork');
+    var orderedonce = $(this).hasClass('orderedOnceWork');
 
-    jQuery(this).bind("click.orderPopup", function(event) {
+    $(this).one('click.orderPopup', function(event) {
       if(orderedonce) {
         var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
         if(test == false) {
@@ -69,14 +69,20 @@ jQuery.fn.popupwindow = function(p) {
       if(myWindow && settings.createnew) { // close other popups, if it opens in a new window
         myWindow.close();
       }
+
       myWindow = window.open(this.href, name, parameters);
+
       if(myWindow == null || typeof(myWindow) == 'undefined') {
         alert(Drupal.t("It looks like you have a pop-up blocker. Please push the button again."));
       }
+
       myWindow.focus();
-      jQuery(this).unbind(event);
+      $(this).unbind(event);
       return false;
     });
-  });
 
+    if(spawn){
+      $(this).triggerHandler('click.orderPopup', profiles);
+    }
+  });
 };
