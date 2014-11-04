@@ -129,6 +129,7 @@ function bibdk_theme_page_alter(&$page) {
  * Implements template_preprocess_html().
  */
 function bibdk_theme_preprocess_html(&$vars) {
+  global $base_url;
 
   switch (arg(0)) {
     case 'email':
@@ -140,7 +141,7 @@ function bibdk_theme_preprocess_html(&$vars) {
   $vars['page_topbar'] = _bibdk_theme_get_bibdk_topbar();
 
   // Provide path to theme
-  $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
+  $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
 }
 
 /**
