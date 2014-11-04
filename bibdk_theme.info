@@ -19,7 +19,6 @@ stylesheets[all][] = css/screen.css
 scripts[] = js/lib/modernizr-2.8.3.min.js
 scripts[] = js/lib/selectivizr-min.js
 scripts[] = js/lib/jquery.popupwindow.js
-scripts[] = js/lib/script.js
 scripts[] = js/lib/onload.js
 
 
@@ -27,6 +26,7 @@ scripts[] = js/lib/onload.js
 ;        JS BIBDK
 ;==================================
 scripts[] = js/bibdk/visuallyhidden_hack.js
+scripts[] = js/bibdk/script.js
 
 
 ;==================================

@@ -49,6 +49,10 @@
           close_on_click: true
         }
       });
+
+      if(jQuery.prototype.once == undefined){
+        jQuery.prototype.once = jQuery.prototype.one
+      }
     </script>
 
     <!-- Load combined svg file (with symbols) into body-->
