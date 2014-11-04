@@ -310,29 +310,25 @@
 
       // ****************************  pop-ups **************************** //
 
-      $('#popup-button-close').click(function(e) {
+      $('#popup-button-close', context).click(function(e) {
         window.close();
       });
 
-      $('.bibdk-popup-link').click(function(e) {
-        $('.popover').addClass('visuallyhidden');
-      });
-
-      $('.bibdk-popup-link').once().click(function(e) {
+      $('.bibdk-popup-link', context).click(function(e) {
         e.preventDefault();
+        $('.popover').addClass('visuallyhidden');
+
         if($(this).hasClass('orderedonce')) {
           var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
           if(test == true) {
-            $(this).popupwindow(profiles);
-            $(this).triggerHandler('click.orderPopup', profiles);
+            $(this).popupwindow(profiles, true);
           }
           else {
             return false;
           }
         }
         else {
-          $(this).popupwindow(profiles);
-          $(this).triggerHandler('click.orderPopup', profiles);
+          $(this).popupwindow(profiles, true);
         }
       });
 
