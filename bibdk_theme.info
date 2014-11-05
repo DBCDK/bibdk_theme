@@ -32,9 +32,9 @@ scripts[] = js/bibdk/script.js
 ;==================================
 ;      JS FOUNDATION
 ;==================================
-scripts[] = foundation/js/vendor/jquery.js
-scripts[] = foundation/js/foundation.js
-scripts[] = foundation/js/foundation/foundation.offcanvas.js
+scripts[] = libs/foundation/js/vendor/jquery.js
+scripts[] = libs/foundation/js/foundation.js
+scripts[] = libs/foundation/js/foundation/foundation.offcanvas.js
 
 
 ;==================================
