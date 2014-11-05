@@ -1,37 +1,40 @@
+// =============================================================================
+// Gulpfile
+// This is where we define our gulp tasks
+// =============================================================================
+
 var cfg          = require('./gulpconfig.js');
 var del          = require('del');
 var gulp         = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
 var compass      = require('gulp-compass');
 var concat       = require('gulp-concat');
 var jshint       = require('gulp-jshint');
 var plumber      = require('gulp-plumber');
+var sourcemaps   = require('gulp-sourcemaps');
 var svgmin       = require('gulp-svgmin');
 var svgstore     = require('gulp-svgstore');
 var uglify       = require('gulp-uglify');
 var gutil        = require('gulp-util');
 var watch        = require('gulp-watch');
+var path         = require('path');
 var runSequence  = require('run-sequence');
 
 
-
-
+// Build CSS with compass
+gulp.task('css', function() {
+  return gulp.src(cfg.paths.css.src)
+    .pipe(plumber())
+    .pipe(compass(cfg.settings.compass));
+});
 
 // Compile SVG files
 gulp.task('svg', function () {
   return gulp.src(cfg.paths.svg.src)
     .pipe(plumber())
     .pipe(svgmin())
-    .pipe(svgstore({
-      fileName: 'images.svg',
-      prefix: 'svg-',
-      inlineSvg: true
-    }))
+    .pipe(svgstore(cfg.settings.svgstore))
     .pipe(gulp.dest(cfg.paths.svg.dest));
 });
-
-
-
 
 // Clean up the build directory
 gulp.task('clean', function () {
@@ -42,12 +45,13 @@ gulp.task('clean', function () {
 
 // Watch
 gulp.task('watch', ['build'], function () {
+  gulp.watch(cfg.paths.css.src, ['css']);
   gulp.watch(cfg.paths.svg.src, ['svg']);
 });
 
 // Build
 gulp.task('build', function () {
-  runSequence('clean', 'svg');
+  runSequence('clean', ['svg', 'css']);
 });
 
 // Default

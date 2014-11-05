@@ -1,18 +1,45 @@
+// =============================================================================
+// Gulpconfig
+// This is where we define parameters for our tasks
+// =============================================================================
+
 var gulputil = require('gulp-util');
+var path     = require('path');
 
-var cfg = {};
 
-cfg.paths = {
-  libs: "../libs",
-  app: "../app",
-  build: "../build"
+var cfg = {
+  paths: {},
+  settings: {}
 };
 
+cfg.paths.project = path.join(__dirname, '..');
+cfg.paths.libs = cfg.paths.project + "/libs";
+cfg.paths.build = cfg.paths.project + "/build";
+
 cfg.paths.svg = {
-  src: "../img/svg/*.svg",
+  src: cfg.paths.project + "/img/svg/*.svg",
   dest: cfg.paths.build + "/img"
 };
 
+cfg.paths.css = {
+  src: cfg.paths.project + "/sass/**/*.scss",
+  dest: cfg.paths.build + "/css"
+};
 
+cfg.settings.compass = {
+  project: cfg.paths.project,
+  sass: 'sass',
+  css: 'build/css',
+  image: 'img',
+  generated_images_path: 'build/img',
+  import_path: ['libs'],
+  // logging: false // Hide 'deprecated' warnings
+};
+
+cfg.settings.svgstore = {
+  fileName: 'images.svg',
+  prefix: 'svg-',
+  inlineSvg: true
+}
 
 module.exports = cfg;

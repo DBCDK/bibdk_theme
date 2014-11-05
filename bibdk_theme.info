@@ -7,10 +7,11 @@ screenshot = screenshot.png
 core = 7.x
 version = 7.x-0.66
 
+
 ;==================================
 ;          CSS
 ;==================================
-stylesheets[all][] = css/screen.css
+stylesheets[all][] = build/css/screen.css
 
 
 ;==================================

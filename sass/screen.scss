@@ -15,7 +15,7 @@ $sprites-layout: smart;
 // =============================================================================
 // Initial stuff
 // =============================================================================
-@import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
+@import "foundation/scss/foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
 @import "settings";
 
 
@@ -24,8 +24,8 @@ $sprites-layout: smart;
 // =============================================================================
 //  @import "foundation/settings"; -- FOR REFERENCE ONLY -- should never be included as we're defining our own settings above
 
-@import "normalize";
-@import "foundation/components/grid";
+@import "foundation/scss/normalize";
+@import "foundation/scss/foundation/components/grid";
 //  @import "foundation/components/accordion";
 //  @import "foundation/components/alert-boxes";
 //  @import "foundation/components/block-grid";
@@ -60,7 +60,7 @@ $sprites-layout: smart;
 //  @import "foundation/components/tooltips";
 //  @import "foundation/components/top-bar";
 //  @import "foundation/components/type";
-  @import "foundation/components/offcanvas";
+  @import "foundation/scss/foundation/components/offcanvas";
 //  @import "foundation/components/visibility";
 
 
