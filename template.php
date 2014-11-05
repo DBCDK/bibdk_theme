@@ -256,6 +256,11 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
     if (strpos($link['href'], 'overlay') !== FALSE) {
       $link['attributes']['class'][] = 'bibdk-popup-link';
     }
+
+    if (strpos($link['href'], 'login') !== FALSE) { //TODO mmj this should be cleaned up: Provide better classes on links in offcanvas menu (US #1516)
+      $link['attributes']['class'][] = 'offcanvas-login';
+    }
+
     $item['link'] = l($link['title'], $link['href'], array('attributes' => $link['attributes']));
     $item['li_attributes'] = _bibdk_theme_offcanvas_set_li_attributes($link);
     $items[] = $item;
