@@ -17,3 +17,4 @@ Thumbs.db
 .npm/npm-debug.log
 .npm/node_modules
 build
+npm-debug.log
