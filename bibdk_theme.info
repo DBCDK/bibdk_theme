@@ -17,7 +17,6 @@ stylesheets[all][] = css/screen.css
 ;        JS LIBS
 ;==================================
 scripts[] = js/lib/modernizr-2.8.3.min.js
-scripts[] = js/lib/selectivizr-min.js
 scripts[] = js/lib/jquery.popupwindow.js
 scripts[] = js/lib/onload.js
 
