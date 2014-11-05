@@ -58,21 +58,8 @@ html.js input.throbbing {
 // Collapsible fieldsets.
 // @see collapse.js
 // =============================================================================
-
-html.js fieldset.collapsed {
-  // border-bottom-width: 0;
-  // border-left-width: 0;
-  // border-right-width: 0;
-  // height: 1em;
-}
 html.js fieldset.collapsed .fieldset-wrapper {
   display: none;
-}
-fieldset.collapsible {
-  // position: relative;
-}
-fieldset.collapsible .fieldset-legend {
-  // display: block;
 }
 
 
@@ -81,14 +68,6 @@ fieldset.collapsible .fieldset-legend {
 // Resizable textareas.
 // @see textarea.js
 // =============================================================================
-.form-textarea-wrapper textarea {
-  // display: block;
-  // margin: 0;
-  // width: 100%;
-  // -moz-box-sizing: border-box;
-  // -webkit-box-sizing: border-box;
-  // box-sizing: border-box;
-}
 .resizable-textarea .grippie {
   background: #eee url(../img/drupal/grippie.png) no-repeat center 2px;
   border: 1px solid #ddd;
@@ -277,26 +256,5 @@ html.js .js-hide {
 .element-invisible.element-focusable:focus {
   position: static !important;
   clip: auto;
-}
-
-
-
-// =============================================================================
-// Markup free clearing.
-//
-// @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
-// =============================================================================
-.clearfix:after {
-  // content: ".";
-  // display: block;
-  // height: 0;
-  // clear: both;
-  // visibility: hidden;
-}
-* html .clearfix {
-  // height: 1%; // IE6
-}
-*:first-child + html .clearfix {
-  // min-height: 1%; // IE7
 }
 
