@@ -375,24 +375,25 @@
         }
       });
 
+      function password_input_switch(that, type) {
+        that.setAttribute('type', type);
+      }
+
       // Password fields
       $(".bibdk-password-field").each(function() {
-        // IE 8 compatibility
-        $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-        $(this).remove();
+        // initially hide fields marked as password
+        password_input_switch(this, 'password');
       });
 
       $('.bibdk-unmask-password-field').click(function() {
         $('.bibdk-password-field').each(function() {
           if($(this).attr('type') == 'password') {
             //set type to text
-            $("<input type='text' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();
+            password_input_switch(this, 'text');
           }
           else {
             //set type to password
-            $("<input type='password' />").attr({ name: this.name, value: this.value }).addClass('bibdk-password-field').insertBefore(this);
-            $(this).remove();
+            password_input_switch(this, 'password');
           }
         });
       });
