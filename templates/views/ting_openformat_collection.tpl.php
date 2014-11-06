@@ -8,7 +8,7 @@
         <div>
           <h2><?php print ( !empty($title_full)) ? $title_full : $title; ?> <?php print ( !empty($language)) ? "($language)" : ''; ?></h2>
           <h3><?php print $author; ?></h3>
-          <?php if (isset($partOf)) : ?>
+          <?php if (!empty($partOf)) : ?>
             <span>I: <?php print $partOf; ?></span>
           <?php endif; ?>
         </div>
@@ -18,11 +18,11 @@
         <div class="element-types">
           <?php print $types; ?>
         </div>
-      
+
         <div class="element-actions">
           <?php print drupal_render($actions); ?>
         </div>
-      </div>  
+      </div>
 
 
       <div class="msg-<?php print $uid; ?> collection-msg clearfix"></div>

@@ -5,12 +5,15 @@ core = 7.x
 version = 7.x-0.66
 
 stylesheets[all][] = css/screen.css
-scripts[] = js/modernizr-2.6.2.min.js
-scripts[] = js/selectivizr-min.js
-scripts[] = js/jquery.popupwindow.js
-scripts[] = js/script.js
-scripts[] = js/visuallyhidden_hack.js
-scripts[] = js/onload.js
+scripts[] = js/lib/modernizr-2.8.3.min.js
+scripts[] = js/lib/selectivizr-min.js
+scripts[] = js/lib/jquery.popupwindow.js
+scripts[] = js/lib/script.js
+scripts[] = js/lib/onload.js
+
+scripts[] = js/bibdk/visuallyhidden_hack.js
+
+scripts[] = foundation/js/foundation.min.js
 
 regions[topbar] = Top bar
 regions[header_actions] = Header actions
