@@ -1,11 +1,10 @@
-// =============================================================================
-// Gulpconfig
-// This is where we define parameters for our tasks
-// =============================================================================
+/**
+ * @file
+ * This is where we define parameters for our tasks
+ */
 
 var gulputil = require('gulp-util');
-var path     = require('path');
-
+var path = require('path');
 
 var cfg = {
   paths: {},
@@ -26,20 +25,24 @@ cfg.paths.css = {
   dest: cfg.paths.build + "/css"
 };
 
+cfg.paths.js = {
+  footer_src: cfg.paths.project + "/js/bibdk/footer/*.js",
+  dest: cfg.paths.build + "/js"
+};
+
 cfg.settings.compass = {
   project: cfg.paths.project,
   sass: 'sass',
   css: 'build/css',
   image: 'img',
   generated_images_path: 'build/img',
-  import_path: ['libs'],
-  // logging: false // Hide 'deprecated' warnings
+  import_path: ['libs/foundation/scss']
 };
 
 cfg.settings.svgstore = {
   fileName: 'images.svg',
   prefix: 'svg-',
   inlineSvg: true
-}
+};
 
 module.exports = cfg;
