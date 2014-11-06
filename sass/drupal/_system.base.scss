@@ -44,7 +44,7 @@
 // Animated throbber
 //
 html.js input.form-autocomplete {
-  background-image: url(../img/drupal/throbber.gif);
+  background-image: url(../img/in_use/drupal/throbber.gif);
   background-position: 100% 15px; // LTR
   background-repeat: no-repeat;
 }
@@ -69,7 +69,7 @@ html.js fieldset.collapsed .fieldset-wrapper {
 // @see textarea.js
 // =============================================================================
 .resizable-textarea .grippie {
-  background: #eee url(../img/drupal/grippie.png) no-repeat center 2px;
+  background: #eee url(../img/in_use/drupal/grippie.png) no-repeat center 2px;
   border: 1px solid #ddd;
   border-top-width: 0;
   cursor: s-resize;
@@ -98,7 +98,7 @@ a.tabledrag-handle:hover {
   text-decoration: none;
 }
 a.tabledrag-handle .handle {
-  background: url(../img/drupal/draggable.png) no-repeat 6px 9px;
+  background: url(../img/in_use/drupal/draggable.png) no-repeat 6px 9px;
   height: 13px;
   margin: -0.4em 0.5em; // LTR
   padding: 0.42em 0.5em; // LTR
@@ -115,13 +115,13 @@ div.indentation {
   width: 20px;
 }
 div.tree-child {
-  background: url(../img/drupal/tree.png) no-repeat 11px center; // LTR
+  background: url(../img/in_use/drupal/tree.png) no-repeat 11px center; // LTR
 }
 div.tree-child-last {
-  background: url(../img/drupal/tree-bottom.png) no-repeat 11px center; // LTR
+  background: url(../img/in_use/drupal/tree-bottom.png) no-repeat 11px center; // LTR
 }
 div.tree-child-horizontal {
-  background: url(../img/drupal/tree.png) no-repeat -11px center;
+  background: url(../img/in_use/drupal/tree.png) no-repeat -11px center;
 }
 .tabledrag-toggle-weight-wrapper {
   text-align: right; // LTR
@@ -166,7 +166,7 @@ table.sticky-header {
   display: inline-block;
 }
 .ajax-progress .throbber {
-  background: transparent url(../img/drupal/throbber.gif) no-repeat 0px -18px;
+  background: transparent url(../img/in_use/drupal/throbber.gif) no-repeat 0px -18px;
   float: left; // LTR
   height: 15px;
   margin: 2px;

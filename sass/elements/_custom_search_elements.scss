@@ -12,10 +12,10 @@ div#search-advanced-toggle {
     min-height: 30px;
   }
   .icon-blue-minus {
-    background-image: url("../img/icons/blue-minus.png");
+    background-image: url("../img/in_use/icons/blue-minus.png");
   }
   &.toggled .icon-blue-minus {
-    background-image: url("../img/icons/blue-plus.png");
+    background-image: url("../img/in_use/icons/blue-plus.png");
   }
 }
 
@@ -102,7 +102,7 @@ div#search-advanced-panel {
       margin-bottom: -16px;
       margin-top: -16px;
       a {
-        background-image: url("../img/icons/blue-minus.png");
+        background-image: url("../img/in_use/icons/blue-minus.png");
         padding-left: 20px;
         background-repeat: no-repeat;
         background-position: left center;
@@ -138,7 +138,7 @@ div#search-advanced-panel {
       width: auto;
       a {
         padding-left: 20px;
-        background-image: url("../img/icons/blue-plus.png");
+        background-image: url("../img/in_use/icons/blue-plus.png");
         background-repeat: no-repeat;
         background-position: left center;
       }
@@ -196,7 +196,7 @@ div#search-advanced-panel {
           background-position: 50% 50%;
           background-repeat: no-repeat;
           color: transparent;
-          background-image: url(../img/icons/blue-plus.png);
+          background-image: url(../img/in_use/icons/blue-plus.png);
           border: none;
           display: block;
           float: left;
@@ -204,7 +204,7 @@ div#search-advanced-panel {
           margin-right: 5px;
         }
         .toggle-subgroup.toggled {
-          background-image: url(../img/icons/blue-minus.png);
+          background-image: url(../img/in_use/icons/blue-minus.png);
         }
       }
       div.form-type-checkbox, div.form-type-radio {

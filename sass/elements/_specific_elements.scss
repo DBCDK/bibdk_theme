@@ -209,7 +209,7 @@ h3.library-list-header{
 }
 
 .edit-personal-info {
-  background: url(../img/icons/blue-edit.png) no-repeat 0%;
+  background: url(../img/in_use/icons/blue-edit.png) no-repeat 0%;
   @include inline-block();
   padding-left: 20px;
   margin-bottom: 3px;
@@ -217,7 +217,7 @@ h3.library-list-header{
 }
 
 .delete-favourite {
-  background: url(../img/icons/red-x.png) no-repeat 0%;
+  background: url(../img/in_use/icons/red-x.png) no-repeat 0%;
   @include inline-block();
   padding-left: 20px;
   color: $grey-4;
@@ -251,23 +251,23 @@ h3.library-list-header{
 }
 
 #block-news .block-title h2 {
-  background: url(../img/mediatype_icons/news.png) no-repeat;
+  background: url(../img/in_use/mediatype_icons/news.png) no-repeat;
 }
 
 #block-books .block-title h2 {
-  background: url(../img/mediatype_icons/books.png) no-repeat;
+  background: url(../img/in_use/mediatype_icons/books.png) no-repeat;
 }
 
 #block-movies .block-title h2 {
-  background: url(../img/mediatype_icons/movies.png) no-repeat;
+  background: url(../img/in_use/mediatype_icons/movies.png) no-repeat;
 }
 
 #block-music .block-title h2 {
-  background: url(../img/mediatype_icons/music.png) no-repeat;
+  background: url(../img/in_use/mediatype_icons/music.png) no-repeat;
 }
 
 #block-games .block-title h2 {
-  background: url(../img/mediatype_icons/games.png) no-repeat;
+  background: url(../img/in_use/mediatype_icons/games.png) no-repeat;
 }
 
 //
@@ -732,7 +732,7 @@ p.note-localisations {
 // =============================================================================
 
 .kravlenisse {
-  background-image: url('../img/kravlenisse.png');
+  background-image: url('../img/in_use/kravlenisse.png');
   z-index: 200;
   position: absolute;
   height: 100px;
@@ -936,7 +936,7 @@ body.page-ting-moreinfo {
 //
 
 .alert {
-  background: url(../img/icons/alert-sprites.png) no-repeat top left;
+  background: url(../img/in_use/icons/alert-sprites.png) no-repeat top left;
   padding: 3px 12px;
   width: 12px;
   height: 22px;
@@ -992,7 +992,7 @@ body.page-ting-moreinfo {
 
 span.star {
   display: inline-block;
-  background: url('../img/rating-stars.png');
+  background: url('../img/in_use/rating-stars.png');
   width: 17px;
   height: 17px;
 }

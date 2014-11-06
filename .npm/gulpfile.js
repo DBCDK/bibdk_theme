@@ -36,11 +36,17 @@ gulp.task('svg', function () {
     .pipe(gulp.dest(cfg.paths.svg.dest));
 });
 
+// Copy images
+gulp.task('imgcopy', function() {
+  return gulp.src("../img/in_use/**/*")
+    .pipe(gulp.dest("../build/img/in_use"));
+});
+
 // Clean up the build directory
-gulp.task('clean', function () {
+gulp.task('clean', function (cb) {
   del([cfg.paths.build], {
     force: true
-  });
+  }, cb);
 })
 
 // Watch
@@ -50,8 +56,10 @@ gulp.task('watch', ['build'], function () {
 });
 
 // Build
-gulp.task('build', function () {
-  runSequence('clean', ['svg', 'css']);
+gulp.task('build', ['clean'], function () {
+  gulp.start('svg');
+  gulp.start('css');
+  gulp.start('imgcopy');
 });
 
 // Default
