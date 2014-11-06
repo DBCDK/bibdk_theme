@@ -25,6 +25,11 @@ cfg.paths.css = {
   dest: cfg.paths.build + "/css"
 };
 
+cfg.paths.imgcopy = {
+  src: cfg.paths.project + "/img/in_use/**/*",
+  dest: cfg.paths.build + "/img/in_use"
+};
+
 cfg.paths.js = {
   footer_src: cfg.paths.project + "/js/bibdk/footer/*.js",
   dest: cfg.paths.build + "/js"

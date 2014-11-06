@@ -21,14 +21,14 @@ var path = require('path');
 var runSequence = require('run-sequence');
 
 // Build CSS with compass
-gulp.task('css', function() {
+gulp.task('css', function () {
   return gulp.src(cfg.paths.css.src)
     .pipe(plumber())
     .pipe(compass(cfg.settings.compass));
 });
 
 // Compile SVG files
-gulp.task('svg', function() {
+gulp.task('svg', function () {
   return gulp.src(cfg.paths.svg.src)
     .pipe(plumber())
     .pipe(svgmin())
@@ -37,9 +37,9 @@ gulp.task('svg', function() {
 });
 
 // Copy images
-gulp.task('imgcopy', function() {
-  return gulp.src("../img/in_use/**/*")
-    .pipe(gulp.dest("../build/img/in_use"));
+gulp.task('imgcopy', function () {
+  return gulp.src(cfg.paths.imgcopy.src)
+    .pipe(gulp.dest(cfg.paths.imgcopy.dest));
 });
 
 // Clean up the build directory
@@ -49,7 +49,7 @@ gulp.task('clean', function () {
   });
 })
 // Concatenate JavaScript files
-gulp.task('concat-js', function(){
+gulp.task('concat-js', function (){
   //concatenating footer
   gulp.src(cfg.paths.js.footer_src)
   .pipe(concat('footer.js'))
@@ -57,14 +57,14 @@ gulp.task('concat-js', function(){
 });
 
 // Clean up the build directory
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   del([cfg.paths.build], {
     force: true
   });
 });
 
 // Watch
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['build'], function () {
   gulp.watch(cfg.paths.css.src, ['css']);
   gulp.watch(cfg.paths.svg.src, ['svg']);
 });
@@ -78,7 +78,7 @@ gulp.task('build', ['clean'], function () {
 });
 
 // Default
-gulp.task('default', function() {
+gulp.task('default', function () {
   console.log("#########################################");
   console.log(" ");
   console.log("  To start developing:");
