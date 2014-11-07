@@ -62,33 +62,6 @@
   <!-- user alerts end -->
 <?php endif; ?>
 
-
-<?php if (!empty($page['carousel']) && $is_front): ?>
-  <!-- carousel start -->
-  <section id="carousel">
-    <div class="row">
-      <div class="small-24 columns">
-        <?php print render($page['carousel']); ?>
-      </div>
-    </div>
-  </section>
-  <!-- carousel end -->
-<?php endif; ?>
-
-
-<?php if ($language->language == 'da' && $is_front): ?>
-  <!-- subjects start -->
-  <section id="subjectshierarchy">
-    <div class="row">
-      <div class="small-24 columns">
-        <?php print render($page['subjects']); ?>
-      </div>
-    </div>
-  </section>
-  <!-- subjects end -->
-<?php endif; ?>
-
-
 <!-- columns start -->
 <section id="columns">
 
@@ -118,7 +91,6 @@
   </div>
 </section>
 <!-- columns end -->
-
 
 <?php if (!empty($page['banner'])): ?>
   <!-- banner start -->
