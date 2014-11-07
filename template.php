@@ -120,6 +120,16 @@ function bibdk_theme_preprocess_html(&$vars) {
 }
 
 /**
+ * Implements template_ie6nomore_browser().
+ */
+function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
+  
+  // reset version for browser
+  $vars['version'] = '';
+
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function bibdk_theme_preprocess_page(&$vars) {
