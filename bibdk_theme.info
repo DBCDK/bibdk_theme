@@ -2,7 +2,7 @@ name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
 screenshot = screenshot.png
 core = 7.x
-version = 7.x-0.66
+version = 7.x-0.67
 
 stylesheets[all][] = css/screen.css
 scripts[] = js/lib/modernizr-2.8.3.min.js

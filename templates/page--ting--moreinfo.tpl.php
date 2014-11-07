@@ -1,3 +1,4 @@
+<?php unset($logo_header  )?>
 <?php if (!empty($logo_header)): ?>
 <header id="header">
   <div class="logo"><?php print render($logo_header); ?></div>
