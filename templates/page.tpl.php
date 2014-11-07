@@ -14,6 +14,7 @@
   <div class="row">
     <div class="small-24 columns">
       <div class="logo"><?php print render($logo_header_link); ?></div>
+      <span id="seasonal"><!-- For different seasonal widgets --></span>
       <?php print render($page['header_actions']); ?>
     </div>
   </div>
