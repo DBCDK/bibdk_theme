@@ -24,6 +24,7 @@
 
   <section class="right-small">
     <a class="right-off-canvas-toggle menu-icon">
+      <span> </span>
       <span class="menu-text">Menu</span>
     </a>
   </section>
