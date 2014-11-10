@@ -1,6 +1,9 @@
 /**
  * @file
  * This is where we define parameters for our tasks
+ * Tasks is found in gulpfile.js
+ *
+ * @see gulpfile.js
  */
 
 var gulputil = require('gulp-util');

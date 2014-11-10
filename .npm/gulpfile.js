@@ -1,6 +1,9 @@
 /**
  * @file
  * This is where we define our gulp tasks
+ * Configuration os found in gulpconfig.js
+ *
+ * @see gulpconfig.js
  */
 
 var cfg = require('./gulpconfig.js');
