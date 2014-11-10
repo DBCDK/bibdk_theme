@@ -17,7 +17,7 @@
  *   data including the contexts and all of the other panes being displayed.
  */
 
-if ( $title && $pane->configuration['override_title'] && $pane->configuration['override_title_text']) {
+if ( $title && !empty($pane->configuration['override_title']) && $pane->configuration['override_title_text']) {
   $title = t($title, array(), array('context' => 'panels_pane_title'));
 }
 
