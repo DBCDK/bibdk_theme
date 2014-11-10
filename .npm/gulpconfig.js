@@ -7,7 +7,6 @@
  */
 
 var argv = require('yargs').argv;
-//var gulputil = require('gulp-util');
 var path = require('path');
 
 var cfg = {
