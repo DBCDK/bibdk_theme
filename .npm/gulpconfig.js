@@ -6,7 +6,8 @@
  * @see gulpfile.js
  */
 
-var gulputil = require('gulp-util');
+var argv = require('yargs').argv;
+//var gulputil = require('gulp-util');
 var path = require('path');
 
 var cfg = {
@@ -55,7 +56,9 @@ cfg.settings.compass = {
   sass: 'sass',
   css: 'build/css',
   image: 'img',
-  sourcemap: true,
+  sourcemap: (argv.production) ? false : true,
+  comments: (argv.production) ? false : true,
+  style: (argv.production) ? 'compressed' : 'expanded',
   generated_images_path: 'build/img',
   import_path: ['libs/foundation/scss']
 };
