@@ -32,24 +32,9 @@ function bibdk_theme_theme() {
       'template' => 'bibdk_theme_work_info_tabs',
       'render element' => 'elements',
     ),
-    'bibdk_search_controls-select' => array(
-      'path' => $path . 'blocks',
-      'template' => 'bibdk_search_controls-select',
-      'render element' => 'form',
-    ),
     'bibdk_user_pass_reset' => array(
       'path' => $path . 'blocks',
       'template' => 'bibdk_user_pass_reset',
-      'render element' => 'form',
-    ),
-    'bibdk_search_element' => array(
-      'path' => $path . 'blocks',
-      'template' => 'bibdk_custom_search-search-element-form',
-      'render element' => 'form',
-    ),
-    'bibdk_openuserstatus_help_icon' => array(
-      'path' => $path . 'blocks',
-      'template' => 'bibdk_openuserstatus_help_icon',
       'render element' => 'form',
     ),
     'user_alert' => array(
@@ -185,6 +170,12 @@ function _bibdk_theme_get_bibdk_topbar() {
   return $rendered;
 }
 
+/**
+ * Returns static topbar menu links. Depending on if the user is logged or not
+ * a log in link or 'my page' link will be shown.
+ *
+ * @return array
+ */
 function _bibdk_theme_get_topbar_links() {
   global $user;
   $links = array();
@@ -256,6 +247,7 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * @see bibdk-links-list.tpl.php
  */
 function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
+  global $base_url;
   $items = array();
 
   foreach ($links as $key => $link) {
@@ -267,6 +259,11 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
       $link['attributes']['class'][] = 'offcanvas-login';
     }
 
+    if(strpos($link['href'], 'http', 0) !== FALSE && strpos($link['href'], $base_url, 0) === FALSE ){
+      $link['attributes']['target'][] = '_blank';
+    }
+
+    $link['attributes']['title'] = $link['title'];
     $item['link'] = l($link['title'], $link['href'], array('attributes' => $link['attributes']));
     $item['li_attributes'] = _bibdk_theme_offcanvas_set_li_attributes($link);
     $items[] = $item;
