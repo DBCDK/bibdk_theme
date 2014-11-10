@@ -112,6 +112,8 @@ function bibdk_theme_preprocess_block(&$vars) {
 
 /**
  * Implements hook_page_alter().
+ * - Removing the default search form
+ * - Adds static JS to the footer
  */
 function bibdk_theme_page_alter(&$page) {
   global $base_url;
@@ -125,17 +127,8 @@ function bibdk_theme_page_alter(&$page) {
     unset($page['content']['system_main']['search_form']);
   }
 
-  $foundation_init = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/js/bibdk/footer/foundation-init.js';
-  drupal_add_js($foundation_init, array('scope' => 'footer', 'weight' => 0, 'cache' => TRUE, 'every_page' => TRUE));
-
-  $once_hack = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/js/bibdk/footer/once-hack.js';
-  drupal_add_js($once_hack, array('scope' => 'footer', 'weight' => 5, 'cache' => TRUE, 'every_page' => TRUE));
-
-  $svg_icons = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/js/bibdk/footer/svg-icons.js';
-  drupal_add_js($svg_icons, array('scope' => 'footer', 'weight' => 10, 'cache' => TRUE, 'every_page' => TRUE));
-
-  $google_dosis_font = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/js/bibdk/footer/google-dosis-font.js';
-  drupal_add_js($google_dosis_font, array('scope' => 'footer', 'weight' => 15, 'cache' => TRUE, 'every_page' => TRUE));
+  $footer = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/build/js/footer.js';
+  drupal_add_js($footer, array('scope' => 'footer', 'weight' => 0, 'cache' => TRUE, 'every_page' => TRUE));
 }
 
 /**

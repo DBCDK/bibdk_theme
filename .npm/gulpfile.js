@@ -53,10 +53,29 @@ gulp.task('clean', function() {
 });
 
 // Concatenate JavaScript files
-gulp.task('concat-js', function (){
+gulp.task('js', function (){
+  //concatenating header
+  gulp.src(cfg.paths.js.header_src)
+    .pipe(concat('header.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(cfg.paths.js.dest));
+
   //concatenating footer
   gulp.src(cfg.paths.js.footer_src)
     .pipe(concat('footer.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(cfg.paths.js.dest));
+
+  //concatenating libs
+  gulp.src(cfg.paths.js.lib_src)
+    .pipe(concat('libs.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(cfg.paths.js.dest));
+
+  //concatenating foundation
+  gulp.src(cfg.paths.foundation.js)
+    .pipe(concat('foundation-concatenated.js'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(cfg.paths.js.dest));
 });
 
@@ -71,11 +90,12 @@ gulp.task('clean', function () {
 gulp.task('watch', ['build'], function () {
   gulp.watch(cfg.paths.css.src, ['css']);
   gulp.watch(cfg.paths.svg.src, ['svg']);
+  gulp.watch(cfg.paths.js.js_root, ['js']);
 });
 
 // Build
 gulp.task('build', ['clean'], function() {
-  runSequence('clean', 'svg', 'css', 'imgcopy');
+  runSequence('clean', 'svg', 'css', 'imgcopy', 'js');
 });
 
 // Default

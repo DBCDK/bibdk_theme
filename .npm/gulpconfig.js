@@ -17,6 +17,7 @@ var cfg = {
 cfg.paths.project = path.join(__dirname, '..');
 cfg.paths.libs = cfg.paths.project + "/libs";
 cfg.paths.build = cfg.paths.project + "/build";
+cfg.paths.foundation_js = cfg.paths.project + "/libs/foundation/js";
 
 cfg.paths.svg = {
   src: cfg.paths.project + "/img/svg/*.svg",
@@ -35,7 +36,18 @@ cfg.paths.imgcopy = {
 
 cfg.paths.js = {
   footer_src: cfg.paths.project + "/js/bibdk/footer/*.js",
+  header_src: cfg.paths.project + "/js/bibdk/header/*.js",
+  lib_src: cfg.paths.project + "/js/lib/*.js",
+  js_root: cfg.paths.project + "/js/**/*.js",
   dest: cfg.paths.build + "/js"
+};
+
+//Foundation JS libraries should be included below
+cfg.paths.foundation = {
+  js: [
+    cfg.paths.foundation_js + "/foundation.js",
+    cfg.paths.foundation_js + "/foundation/foundation.offcanvas.js"
+  ]
 };
 
 cfg.settings.compass = {
