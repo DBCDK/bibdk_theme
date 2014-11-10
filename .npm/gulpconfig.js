@@ -40,6 +40,7 @@ cfg.settings.compass = {
   sass: 'sass',
   css: 'build/css',
   image: 'img',
+  sourcemap: true,
   generated_images_path: 'build/img',
   import_path: ['libs/foundation/scss']
 };
