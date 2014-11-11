@@ -60,6 +60,7 @@ function bibdk_theme_theme() {
       'variables' => array(
         'attributes' => array(),
         'items' => array(),
+        'label' => 'string',
       ),
     ),
   );
@@ -144,13 +145,13 @@ function bibdk_theme_preprocess_html(&$vars) {
  */
 function _bibdk_theme_get_bibdk_topbar() {
   global $user, $language, $base_url;
-
+  $menu_links = array();
   if ($user->uid) {
-    //TODO mmj genereate 'min side' menu (US #1516)
+    $menu_links += _bibdk_theme_get_my_page_menu_links();
   }
 
   $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
-  $menu_links = menu_navigation_links($menu_name);
+  $menu_links += menu_navigation_links($menu_name);
   $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
 
   $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
@@ -167,7 +168,28 @@ function _bibdk_theme_get_bibdk_topbar() {
     'logo_path' => $logo_path,
     'links' => $links
   ));
+
   return $rendered;
+}
+
+/**
+ * @return mixed
+ */
+function _bibdk_theme_get_my_page_menu_links(){
+  global $user;
+  $common = array(
+    'class' => array('offcanvas-my-page-link')
+  );
+
+  $links['my_page'] = array('title' => t('My page', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid", 'attributes' => $common);
+  $links['userstatus'] = array('title' => t('Userstatus'), 'href' => "user/$user->uid/bibdk_openuserstatus", 'attributes' => $common);
+  $links['searchhistory'] = array('title' => t('searchhistory', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/searchhistory", 'attributes' => $common);
+  $links['favoritbiblioteker'] = array('title' => t('Favoritbiblioteker', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/bibdk_favourite_list", 'attributes' => $common);
+  $links['cart'] = array('title' => t('cart', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/cart", 'attributes' => $common);
+  $links['settings'] = array('title' => t('Settings', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/settings", 'attributes' => $common);
+  $links['edit'] = array('title' => t('Mine indstillinger', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/edit", 'attributes' => $common);
+
+  return $links;
 }
 
 /**
@@ -240,15 +262,20 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * Render an unordered list with menu items. The list will be based on the
  * bibdk-links-list.tpl.
  *
- * @param $links
+ * @param array $links array with the links that should be printed in the
+ * offcanvas menu.
  * @param array $ul_attributes attributes for the containing <ul> element.
  *
- * @return string
+ * @return string rendered output
  * @see bibdk-links-list.tpl.php
  */
 function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
-  global $base_url;
+  global $base_url, $user;
   $items = array();
+  $label = NULL;
+  if($user->uid){
+    $label = t('My page', array(), array('context' => 'bibdk_frontend'));
+  }
 
   foreach ($links as $key => $link) {
     if (strpos($link['href'], 'overlay') !== FALSE) {
@@ -271,7 +298,8 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) 
 
   return theme('bibdk_links_list', array(
     'attributes' => $ul_attributes,
-    'items' => $items
+    'items' => $items,
+    'label' => $label,
   ));
 }
 
