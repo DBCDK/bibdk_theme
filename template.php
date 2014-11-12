@@ -197,10 +197,10 @@ function _bibdk_theme_get_my_page_menu_links() {
   uasort($mypage_links, 'drupal_sort_weight');
 
   foreach ($mypage_links as $path => $item) {
+    $path = str_replace('%user', $user->uid, $path);
     $links[$path] = array('title' => $item['title'], 'href' => $path, 'attributes' => $common);
   }
 
-  $links['edit'] = array('title' => t('Mine indstillinger', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/edit", 'attributes' => $common);
   $links['logout'] = array('title' => t('Logout'), 'href' => "user/logout", 'attributes' => $common);
 
   return $links;
