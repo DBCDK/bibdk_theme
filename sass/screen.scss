@@ -61,7 +61,10 @@ $sprites-layout: smart;
 //  @import "foundation/components/top-bar";
 //  @import "foundation/components/type";
   @import "foundation/components/offcanvas";
-//  @import "foundation/components/visibility";
+  @import "foundation/components/visibility";
+
+//Settings is imported again in order to override certain foundation vars defined in Foundation's _global.scss imported by _visibility.scss
+@import "settings";
 
 
 // =============================================================================

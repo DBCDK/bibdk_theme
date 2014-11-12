@@ -16,7 +16,7 @@
 <nav class="tab-bar">
   <section class="topbar-logo left"><a href="<?php print $home_path; ?>"><img src="<?php print $logo_path; ?>" /> </a></section>
 
-  <section class="topbar-links right devicesize_small_hidden">
+  <section class="topbar-links right">
     <?php foreach($links as $link): ?>
       <?php print $link; ?>
     <?php endforeach; ?>

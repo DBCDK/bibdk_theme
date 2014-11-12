@@ -15,6 +15,7 @@ $topbar_height: rem-calc(45px);
 }
 
 .topbar-links {
+  display:none;
   @media #{$large-up} {
     display: inline;
     margin-right: rem-calc(85px);
