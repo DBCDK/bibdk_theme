@@ -69,23 +69,23 @@
   // Text colors
   @switch $color {
     @when "black" {
-      color: #222;
+      color: $black--natural;
     }
     @when "white" {
-      color: #fff;
+      color: $white;
     }
-    @when "grey" {
-      color: #777;
+    @when "grey-dark" {
+      color: $grey-text--dark;
     }
-    @when "light-grey" {
-      color: #ddd;
+    @when "grey-light" {
+      color: $grey-text--light;
     }
     @when "blue" {
-      color: #088eb4;
-      &:hover { color: #1ca3ca; }
+      color: $blue;
+      &:hover { color: $blue--hover; }
     }
     @when "red" {
-      color: #da5050;
+      color: $red;
     }
   }
 }
