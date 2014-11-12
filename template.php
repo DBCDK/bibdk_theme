@@ -114,7 +114,12 @@ function bibdk_theme_page_alter(&$page) {
   }
 
   $footer = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/build/js/footer.js';
-  drupal_add_js($footer, array('scope' => 'footer', 'weight' => 0, 'cache' => TRUE, 'every_page' => TRUE));
+  drupal_add_js($footer, array(
+      'scope' => 'footer',
+      'weight' => 0,
+      'cache' => TRUE,
+      'every_page' => TRUE
+    ));
 }
 
 /**
@@ -153,7 +158,7 @@ function _bibdk_theme_get_bibdk_topbar() {
   $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $menu_links += menu_navigation_links($menu_name);
   $label = NULL;
-  if($user->uid){
+  if ($user->uid) {
     $label = t('My page', array(), array('context' => 'bibdk_frontend'));
   }
   $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')), $label);
@@ -179,19 +184,23 @@ function _bibdk_theme_get_bibdk_topbar() {
 /**
  * @return mixed
  */
-function _bibdk_theme_get_my_page_menu_links(){
+function _bibdk_theme_get_my_page_menu_links() {
   global $user;
   $common = array(
     'class' => array('offcanvas-my-page-link')
   );
 
+  $links = array();
   $links['my_page'] = array('title' => t('My page', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid", 'attributes' => $common);
-  $links['userstatus'] = array('title' => t('Userstatus'), 'href' => "user/$user->uid/bibdk_openuserstatus", 'attributes' => $common);
-  $links['searchhistory'] = array('title' => t('searchhistory', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/searchhistory", 'attributes' => $common);
-  $links['favoritbiblioteker'] = array('title' => t('Favoritbiblioteker', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/bibdk_favourite_list", 'attributes' => $common);
-  $links['cart'] = array('title' => t('cart', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/cart", 'attributes' => $common);
-  $links['settings'] = array('title' => t('Settings', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/settings", 'attributes' => $common);
-  $links['edit'] = array('title' => t('Mine indstillinger', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/edit", 'attributes' => $common);
+
+  $mypage_links = module_invoke_all('mypage_link');
+  uasort($mypage_links, 'drupal_sort_weight');
+
+  foreach ($mypage_links as $path => $item) {
+    $path = str_replace('%user', $user->uid, $path);
+    $links[$path] = array('title' => $item['title'], 'href' => $path, 'attributes' => $common);
+  }
+
   $links['logout'] = array('title' => t('Logout'), 'href' => "user/logout", 'attributes' => $common);
 
   return $links;
@@ -287,7 +296,7 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), 
       $link['attributes']['class'][] = 'offcanvas-login';
     }
 
-    if(strpos($link['href'], 'http', 0) !== FALSE && strpos($link['href'], $base_url, 0) === FALSE ){
+    if (strpos($link['href'], 'http', 0) !== FALSE && strpos($link['href'], $base_url, 0) === FALSE) {
       $link['attributes']['target'][] = '_blank';
     }
 
@@ -707,7 +716,7 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
   if (isset($form['advanced'][$region][$group]) && is_array($form['advanced'][$region][$group])) {
     $parent_id = key($form['advanced'][$region][$group]);
     if (!empty($form['advanced'][$region][$group][$parent_id][$type])) {
-      $elements = & $form['advanced'][$region][$group][$parent_id][$type];
+      $elements = &$form['advanced'][$region][$group][$parent_id][$type];
     }
     else {
       return false;
