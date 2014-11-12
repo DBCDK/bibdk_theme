@@ -1,6 +1,10 @@
 // ****************************  CURSOR POSITIONS **************************** //
-(function($){
+(function($) {
   $(document).ready(function() {
+    //Do not go any further if we're on a touch device
+    if(Modernizr.touch) {
+      return;
+    }
     // Default in search block form - unless it's a search result.
     $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
     // Helpdesk popup
