@@ -85,7 +85,9 @@ ul.off-canvas-list {
       }
 
       &:hover{
-        background-color: $grey-6;
+        @media #{$large-up}{
+          background-color: $grey-6;
+        }
       }
 
       &.offcanvas-my-page-link {
@@ -101,8 +103,10 @@ ul.off-canvas-list {
         }
 
         &:hover{
-          color: $black;
-          background-color: $blue-light;
+          @media #{$large-up}{
+            color: $black;
+            background-color: $blue-light;
+          }
         }
       }
     }
