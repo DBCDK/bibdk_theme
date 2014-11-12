@@ -447,9 +447,11 @@
       });
 
       // ************************** SELECT SEARCH INPUT ON CLICK  ************************* //
-      $('form#search-block-form input[name="search_block_form"]').focus(function() {
-        this.select();
-      });
+      if(!Modernizr.touch){
+        $('form#search-block-form input[name="search_block_form"]').focus(function() {
+          this.select();
+        });
+      }
 
       // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
       $('article.manifestation', context).filter(':visible').each(function() {
