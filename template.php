@@ -188,6 +188,7 @@ function _bibdk_theme_get_my_page_menu_links(){
   $links['cart'] = array('title' => t('cart', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/cart", 'attributes' => $common);
   $links['settings'] = array('title' => t('Settings', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/settings", 'attributes' => $common);
   $links['edit'] = array('title' => t('Mine indstillinger', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/edit", 'attributes' => $common);
+  $links['logout'] = array('title' => t('Logout'), 'href' => "user/logout", 'attributes' => $common);
 
   return $links;
 }
@@ -413,7 +414,6 @@ function bibdk_theme_preprocess_page(&$vars) {
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
-
 }
 
 /**
