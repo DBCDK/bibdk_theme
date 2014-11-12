@@ -1,0 +1,78 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+@mixin typo-style($type, $style, $color) {
+
+  // Titles
+  @if ($type == "title") {
+    font-weight: bold;
+    line-height: 1.2;
+
+    @switch $style {
+      @when "normal" {
+        font-size: (14/16) * 1rem;
+      }
+      @when "small" {
+        font-size: (12/16) * 1rem;
+      }
+      @when "large" {
+        font-size: (18/16) * 1rem;
+      }
+      @when "section" {
+        font-size: (24/16) * 1rem;
+        font-family: 'Dosis', Arial, sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Body texts
+  @if ($type == "body") {
+
+    @switch $style {
+      @when "large" {
+        font-size: (14/16) * 1rem;
+      }
+    }
+  }
+
+  // Labels and oneliners
+  @if ($type == "label") {
+
+    @switch $style {
+      @when "bold" {
+        font-weight: bold;
+      }
+      @when "uppercase" {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Text colors
+  @switch $color {
+    @when "black" {
+      color: #222;
+    }
+    @when "white" {
+      color: #fff;
+    }
+    @when "grey" {
+      color: #777;
+    }
+    @when "light-grey" {
+      color: #ddd;
+    }
+    @when "blue" {
+      color: #088eb4;
+      &:hover {
+        color: #1ca3ca;
+      }
+    }
+    @when "red" {
+      color: #da5050;
+    }
+  }
+}
