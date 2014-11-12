@@ -152,7 +152,11 @@ function _bibdk_theme_get_bibdk_topbar() {
 
   $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $menu_links += menu_navigation_links($menu_name);
-  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
+  $label = NULL;
+  if($user->uid){
+    $label = t('My page', array(), array('context' => 'bibdk_frontend'));
+  }
+  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')), $label);
 
   $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
 
@@ -188,6 +192,7 @@ function _bibdk_theme_get_my_page_menu_links(){
   $links['cart'] = array('title' => t('cart', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/cart", 'attributes' => $common);
   $links['settings'] = array('title' => t('Settings', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/settings", 'attributes' => $common);
   $links['edit'] = array('title' => t('Mine indstillinger', array(), array('context' => 'bibdk_frontend')), 'href' => "user/$user->uid/edit", 'attributes' => $common);
+  $links['logout'] = array('title' => t('Logout'), 'href' => "user/logout", 'attributes' => $common);
 
   return $links;
 }
@@ -265,24 +270,20 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * @param array $links array with the links that should be printed in the
  * offcanvas menu.
  * @param array $ul_attributes attributes for the containing <ul> element.
+ * @param string|null $label
  *
- * @return string rendered output
- * @see bibdk-links-list.tpl.php
+ * @return string rendered output@see bibdk-links-list.tpl.php
  */
-function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
-  global $base_url, $user;
+function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = NULL) {
+  global $base_url;
   $items = array();
-  $label = NULL;
-  if($user->uid){
-    $label = t('My page', array(), array('context' => 'bibdk_frontend'));
-  }
 
   foreach ($links as $key => $link) {
     if (strpos($link['href'], 'overlay') !== FALSE) {
       $link['attributes']['class'][] = 'bibdk-popup-link';
     }
 
-    if (strpos($link['href'], 'login') !== FALSE) { //TODO mmj this should be cleaned up: Provide better classes on links in offcanvas menu (US #1516)
+    if (strpos($link['href'], 'login') !== FALSE) {
       $link['attributes']['class'][] = 'offcanvas-login';
     }
 
@@ -413,7 +414,6 @@ function bibdk_theme_preprocess_page(&$vars) {
       drupal_alter('vejviser_page_content', $vars['page']['content']);
       break;
   }
-
 }
 
 /**

@@ -44,9 +44,14 @@ $topbar_height: rem-calc(45px);
   }
 }
 
-.right-off-canvas-menu {
+aside.right-off-canvas-menu {
+  width: 100%;
   margin-top: $topbar_height;
   background-color: $grey-7;
+
+  @media #{$medium-up} {
+    width: $off-canvas-width;
+  }
 }
 
 .right-off-canvas-toggle {
@@ -60,6 +65,14 @@ $topbar_height: rem-calc(45px);
 
 ul.off-canvas-list {
   li {
+    label {
+      background-color: $blue;
+      color: $white;
+      padding: rem-calc(10px 0 2px 15px);
+      border-bottom: 1px solid $grey-5;
+      font-weight: normal;
+    }
+
     a {
       color: $black;
       font-weight: bold;
