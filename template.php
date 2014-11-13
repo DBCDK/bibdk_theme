@@ -326,7 +326,8 @@ function _bibdk_theme_offcanvas_set_li_attributes($link) {
   if (!empty($devicetypes)) {
     foreach ($devicetypes as $type => $value) {
       if ($value === 0) {
-        $attributes['class'][] = $type . '_hidden';
+        $type = str_replace('devicesize_', '', $type);
+        $attributes['class'][] = "hide-for-$type-only";
       }
     }
   }
