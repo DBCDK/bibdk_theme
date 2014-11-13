@@ -61,7 +61,7 @@ function bibdk_theme_theme() {
       'variables' => array(
         'attributes' => array(),
         'items' => array(),
-        'label' => 'string',
+        'label' => NULL,
       ),
     ),
   );
@@ -306,7 +306,7 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  *
  * @return string rendered output@see bibdk-links-list.tpl.php
  */
-function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = NULL) {
+function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = FALSE) {
   global $base_url;
   $items = array();
 
@@ -328,14 +328,6 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), 
     $item['li_attributes'] = _bibdk_theme_offcanvas_set_li_attributes($link);
     $items[] = $item;
   }
-
-  /*
-  return theme('bibdk_links_list', array(
-    'attributes' => $ul_attributes,
-    'items' => $items,
-    'label' => $label,
-  ));
-  */
 
   return array(
     '#theme' => 'bibdk_links_list',
