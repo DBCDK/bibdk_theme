@@ -35,8 +35,8 @@
   <?php print $footer_menu; ?>
 
   <div class="social-links">
-    <span>Twitter</span>
-    <span>Fjæsen</span>
-    <span>Youtbue</span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </aside>
