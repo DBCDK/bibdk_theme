@@ -540,7 +540,10 @@ form#search-block-form fieldset#edit-advanced {
 
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/musik'],
 .page-bibdk-frontpage-musik div#search-advanced-panel {
-  .alle_titler {
+  > :nth-child(2) {
+    margin-right: 30%;
+  }
+  > :nth-child(3) {
     margin-left: 0;
   }
   .musikgenre {
