@@ -302,9 +302,10 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * @param array $links array with the links that should be printed in the
  * offcanvas menu.
  * @param array $ul_attributes attributes for the containing <ul> element.
- * @param string|null $label
+ * @param bool|string $label
  *
- * @return string rendered output@see bibdk-links-list.tpl.php
+ * @return string rendered output
+ * @see bibdk-links-list.tpl.php
  */
 function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = FALSE) {
   global $base_url;
