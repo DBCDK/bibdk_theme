@@ -1,15 +1,3 @@
-<?php if (!empty($logo_header)): ?>
-  <!-- header end -->
-  <header id="header" class="popup">
-    <div class="row">
-      <div class="small-24 columns">
-        <div class="logo"><?php print render($logo_header); ?></div>
-      </div>
-    </div>
-  </header>
-  <!-- header end -->
-<?php endif; ?>
-
 <div id="popup">
 
   <div class="element-wrapper">
