@@ -6,8 +6,6 @@
 // Generic theme-independent base styles.
 // =============================================================================
 
-
-
 // =============================================================================
 // Autocomplete.
 // @see autocomplete.js
@@ -23,6 +21,7 @@
   z-index: 100;
   background-color: $white;
 }
+
 #autocomplete ul {
   background: $white;
   list-style: none;
@@ -30,6 +29,7 @@
   margin: 0;
   padding: 0px;
 }
+
 #autocomplete li {
   padding: 0 5px;
   background: $white;
@@ -48,11 +48,10 @@ html.js input.form-autocomplete {
   background-position: 100% 15px; // LTR
   background-repeat: no-repeat;
 }
+
 html.js input.throbbing {
   background-position: 100% -12px; // LTR
 }
-
-
 
 // =============================================================================
 // Collapsible fieldsets.
@@ -61,8 +60,6 @@ html.js input.throbbing {
 html.js fieldset.collapsed .fieldset-wrapper {
   display: none;
 }
-
-
 
 // =============================================================================
 // Resizable textareas.
@@ -77,8 +74,6 @@ html.js fieldset.collapsed .fieldset-wrapper {
   overflow: hidden;
 }
 
-
-
 // =============================================================================
 // TableDrag behavior.
 // @see tabledrag.js
@@ -86,6 +81,7 @@ html.js fieldset.collapsed .fieldset-wrapper {
 body.drag {
   cursor: move;
 }
+
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left; // LTR
@@ -94,9 +90,11 @@ body.drag {
   overflow: hidden;
   text-decoration: none;
 }
+
 a.tabledrag-handle:hover {
   text-decoration: none;
 }
+
 a.tabledrag-handle .handle {
   background: url(../img/in_use/drupal/draggable.png) no-repeat 6px 9px;
   height: 13px;
@@ -104,9 +102,11 @@ a.tabledrag-handle .handle {
   padding: 0.42em 0.5em; // LTR
   width: 13px;
 }
+
 a.tabledrag-handle-hover .handle {
   background-position: 6px -11px;
 }
+
 div.indentation {
   float: left; // LTR
   height: 1.7em;
@@ -114,20 +114,22 @@ div.indentation {
   padding: 0.42em 0 0.42em 0.6em; // LTR
   width: 20px;
 }
+
 div.tree-child {
   background: url(../img/in_use/drupal/tree.png) no-repeat 11px center; // LTR
 }
+
 div.tree-child-last {
   background: url(../img/in_use/drupal/tree-bottom.png) no-repeat 11px center; // LTR
 }
+
 div.tree-child-horizontal {
   background: url(../img/in_use/drupal/tree.png) no-repeat -11px center;
 }
+
 .tabledrag-toggle-weight-wrapper {
   text-align: right; // LTR
 }
-
-
 
 // =============================================================================
 // TableHeader behavior.
@@ -150,11 +152,13 @@ table.sticky-header {
   background-color: $white;
   border: 1px solid;
 }
+
 .progress .filled {
   background-color: $black;
   height: 1.5em;
   width: 5px;
 }
+
 .progress .percentage {
   float: right; // LTR
 }
@@ -165,6 +169,7 @@ table.sticky-header {
 .ajax-progress {
   display: inline-block;
 }
+
 .ajax-progress .throbber {
   background: transparent url(../img/in_use/drupal/throbber.gif) no-repeat 0px -18px;
   float: left; // LTR
@@ -172,17 +177,18 @@ table.sticky-header {
   margin: 2px;
   width: 15px;
 }
+
 .ajax-progress .message {
   padding-left: 20px;
 }
+
 tr .ajax-progress .throbber {
   margin: 0 2px;
 }
+
 .ajax-progress-bar {
   width: 16em;
 }
-
-
 
 // =============================================================================
 // Inline items.
@@ -199,16 +205,12 @@ tr .ajax-progress .throbber {
   display: block;
 }
 
-
-
 // =============================================================================
 // Prevent text wrapping.
 // =============================================================================
 .nowrap {
   white-space: nowrap;
 }
-
-
 
 // =============================================================================
 // For anything you want to hide on page load when JS is enabled, so
@@ -217,8 +219,6 @@ tr .ajax-progress .throbber {
 html.js .js-hide {
   display: none;
 }
-
-
 
 // =============================================================================
 // Hide elements from all users.
@@ -231,8 +231,6 @@ html.js .js-hide {
 .element-hidden {
   display: none;
 }
-
-
 
 // =============================================================================
 // Hide elements visually, but keep them available for screen-readers.
