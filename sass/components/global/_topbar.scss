@@ -87,23 +87,23 @@ ul.off-canvas-list {
       &:hover {
         background-color: $grey-6;
       }
+    }
 
-      &.offcanvas-my-page-link {
-        background-color: $blue;
-        color: $grey-7;
-        font-size: rem-calc(12px);
-        font-weight: normal;
-        padding: rem-calc(13px 0 13px 25px);
+    .offcanvas-my-page-link {
+      background-color: $blue;
+      color: $grey-7;
+      font-size: rem-calc(12px);
+      font-weight: normal;
+      padding: rem-calc(13px 0 13px 25px);
 
-        &.active {
-          color: $black;
-          background-color: $blue-lighter;
-        }
+      &.active {
+        color: $black;
+        background-color: $blue-lighter;
+      }
 
-        &:hover {
-          color: $black;
-          background-color: $blue-light;
-        }
+      &:hover {
+        color: $black;
+        background-color: $blue-light;
       }
     }
   }
