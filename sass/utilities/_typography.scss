@@ -82,7 +82,9 @@
     }
     @when "blue" {
       color: $blue;
-      &:hover { color: $blue--hover; }
+      &:hover {
+        color: $blue--hover;
+      }
     }
     @when "red" {
       color: $red;
