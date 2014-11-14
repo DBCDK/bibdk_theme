@@ -7,8 +7,17 @@
 ehthumbs.db
 Thumbs.db
 
-
-# Sass
+# Sass cache
 .sass-cache/
-*.map
-*.css
+
+# Build
+build
+
+# NPM stuff
+.npm/npm-debug.log
+.npm/node_modules
+npm-debug.log
+css/print.css
+css/print.css.map
+css/screen.css
+css/screen.css.map

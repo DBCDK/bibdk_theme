@@ -17,6 +17,7 @@ $sprites-layout: smart;
 // =============================================================================
 @import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
 @import "settings";
+@import "utilities/media-queries";
 
 
 // =============================================================================
@@ -60,8 +61,8 @@ $sprites-layout: smart;
 //  @import "foundation/components/tooltips";
 //  @import "foundation/components/top-bar";
 //  @import "foundation/components/type";
-//  @import "foundation/components/offcanvas";
-//  @import "foundation/components/visibility";
+  @import "foundation/components/offcanvas";
+  @import "foundation/components/visibility";
 
 
 // =============================================================================
@@ -74,6 +75,7 @@ $sprites-layout: smart;
 @import "utilities/rem";
 @import "utilities/triangle";
 @import "utilities/align";
+//@import "utilities/visibility";
 
 
 // =============================================================================
@@ -106,20 +108,21 @@ $sprites-layout: smart;
 // =============================================================================
 @import "components/base/helpers";
 @import "components/base/modal";
-@import "components/global/page-sections";
+
 @import "components/global/messages";
+@import "components/global/page-sections";
+@import "components/global/topbar";
 @import "components/global/user-alerts";
-@import "components/global/global-login-menu";
-@import "components/global/topbar-menu";
-@import "components/global/header-actions";
+
+@import "components/ctools-modal";
 @import "components/dropdown";
-@import "components/rs-carousel";
+@import "components/facet-browser";
 @import "components/page-title";
+@import "components/popup";
+@import "components/rs-carousel";
 @import "components/search-block-form";
 @import "components/tabs";
-@import "components/facet-browser";
 @import "components/works-controls";
-@import "components/ctools-modal";
 
 
 // =============================================================================

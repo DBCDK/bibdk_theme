@@ -95,10 +95,10 @@
     margin-right: 5px;
 
     &.work-cover-front {
-      background: url(../img/cover-front.png);
+      background: url(../img/in_use/cover-front.png);
     }
     &.work-cover-back {
-      background: url(../img/cover-back.png);
+      background: url(../img/in_use/cover-back.png);
     }
   }
 }
@@ -320,7 +320,7 @@
       padding-right: 5px;
 
       .materialtype {
-        background: url(../img/icons/material-sprites.png) no-repeat top left;
+        background: url(../img/in_use/material-sprites.png) no-repeat top left;
         display: block;
       }
 

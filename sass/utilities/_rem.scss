@@ -11,16 +11,14 @@
   // If there is only one (numeric) value, return the property/value line for it.
   @if type-of($px-values) == "number" {
     #{$property}: $px-values / $baseline-rem;
-  }
-  @else {
+  } @else {
     // Create an empty list that we can dump values into
     $rem-values: unquote("");
     @each $value in $px-values {
       // If the value is zero, return 0
       @if $value == 0 {
         $rem-values: append($rem-values, $value);
-      }
-      @else {
+      } @else {
         $rem-values: append($rem-values, $value / $baseline-rem);
       }
     }

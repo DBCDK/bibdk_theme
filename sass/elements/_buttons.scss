@@ -65,13 +65,13 @@ input[type="submit"].button-as-link {
   padding: 6px 20px 6px 40px;
 
   background: $white;
-  background-image: url(../img/library-favorite.png); /* fallback */
-  background-image: url(../img/library-favorite.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
-  background-image: url(../img/library-favorite.png), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
-  background-image: url(../img/library-favorite.png), -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
-  background-image: url(../img/library-favorite.png), -ms-linear-gradient(top, #fff, #eee); /* IE10 */
-  background-image: url(../img/library-favorite.png), -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
-  background-image: url(../img/library-favorite.png), linear-gradient(top, #fff, #eee);
+  background-image: url(../img/in_use/library-favorite.png); /* fallback */
+  background-image: url(../img/in_use/library-favorite.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
+  background-image: url(../img/in_use/library-favorite.png), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
+  background-image: url(../img/in_use/library-favorite.png), -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
+  background-image: url(../img/in_use/library-favorite.png), -ms-linear-gradient(top, #fff, #eee); /* IE10 */
+  background-image: url(../img/in_use/library-favorite.png), -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
+  background-image: url(../img/in_use/library-favorite.png), linear-gradient(top, #fff, #eee);
   background-repeat: no-repeat;
   background-position: 0%;
   &:hover {

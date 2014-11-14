@@ -1,22 +1,40 @@
+;==================================
+;         FORMALLY
+;==================================
 name = Bibliotek.dk
 description = Custom theme for bibliotek.dk
 screenshot = screenshot.png
 core = 7.x
 version = 7.x-0.67
 
-stylesheets[all][] = css/screen.css
-scripts[] = js/lib/modernizr-2.8.3.min.js
-scripts[] = js/lib/selectivizr-min.js
-scripts[] = js/lib/jquery.popupwindow.js
-scripts[] = js/lib/script.js
-scripts[] = js/lib/onload.js
 
-scripts[] = js/bibdk/visuallyhidden_hack.js
+;==================================
+;          CSS
+;==================================
+stylesheets[all][] = build/css/screen.css
 
-scripts[] = foundation/js/foundation.min.js
+;==================================
+;        JS BIBDK
+;==================================
+scripts[] = build/js/header.js
 
-regions[topbar] = Top bar
-regions[header_actions] = Header actions
+
+;==================================
+;        JS LIBS
+;==================================
+scripts[] = build/js/libs.js
+
+
+;==================================
+;      JS FOUNDATION
+;==================================
+scripts[] = libs/foundation/js/vendor/jquery.js
+scripts[] = build/js/foundation-concatenated.js
+
+
+;==================================
+;        REGIONS
+;==================================
 regions[search_panel] = Search panel
 regions[content] = Content
 regions[carousel] = Carousel
@@ -25,4 +43,8 @@ regions[sidebar] = Sidebar
 regions[banner] = Banner
 regions[footer] = Footer
 
+
+;==================================
+;         PANELS
+;==================================
 plugins[panels][layouts] = templates/layouts
