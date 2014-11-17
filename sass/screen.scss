@@ -75,7 +75,6 @@ $sprites-layout: smart;
 @import "utilities/rem";
 @import "utilities/triangle";
 @import "utilities/align";
-//@import "utilities/visibility";
 
 
 // =============================================================================
@@ -114,39 +113,33 @@ $sprites-layout: smart;
 @import "components/global/topbar";
 @import "components/global/user-alerts";
 
+@import "components/banner";
+@import "components/basic_elements";
+@import "components/buttons";
+@import "components/cart";
 @import "components/ctools-modal";
+@import "components/custom_search_elements";
 @import "components/dropdown";
 @import "components/facet-browser";
+@import "components/global_elements";
+@import "components/icons";
+@import "components/ie6nomore";
+@import "components/infomedia";
 @import "components/page-title";
 @import "components/popup";
 @import "components/rs-carousel";
 @import "components/search-block-form";
+@import "components/search_work_manifestations";
+@import "components/searchhistory";
+@import "components/specific_elements";
+@import "components/subject_hierarchy";
 @import "components/tabs";
+@import "components/toggle_more";
+@import "components/toplist";
+@import "components/userhelp";
+@import "components/usersettings";
+@import "components/voxb";
 @import "components/works-controls";
-
-
-// =============================================================================
-// Import styling for custom elements
-// =============================================================================
-@import "elements/icons";
-@import "elements/buttons";
-@import "elements/basic_elements";
-@import "elements/global_elements";
-@import "elements/specific_elements";
-@import "elements/custom_search_elements";
-@import "elements/search_work_manifestations";
-@import "elements/subject_hierarchy";
-@import "elements/banner";
-@import "elements/infomedia";
-@import "elements/cart";
-@import "elements/toplist";
-@import "elements/userhelp";
-@import "elements/usersettings";
-@import "elements/searchhistory";
-@import "elements/ie6nomore";
-@import "elements/toggle_more";
-@import "elements/voxb";
-
 
 
 // =============================================================================
