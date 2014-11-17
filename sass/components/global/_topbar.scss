@@ -2,7 +2,7 @@ $topbar_height: rem-calc(45px);
 
 .tab-bar {
   height: $topbar_height;
-  background-color: $black;
+  background-color: inherit;
 }
 
 .topbar-logo {
@@ -48,7 +48,7 @@ $topbar_height: rem-calc(45px);
 aside.right-off-canvas-menu {
   width: 100%;
   margin-top: $topbar_height;
-  background-color: $grey-7;
+  background-color: $grey-bg--section;
 
   @media #{$medium-up} {
     width: $off-canvas-width;
@@ -69,7 +69,7 @@ ul.off-canvas-list {
       background-color: $blue;
       color: $white;
       padding: rem-calc(10px 0 2px 15px);
-      border-bottom: 1px solid $grey-5;
+      border-bottom: 1px solid $grey-border;
       font-weight: normal;
     }
 
@@ -77,46 +77,44 @@ ul.off-canvas-list {
       color: $black;
       font-weight: bold;
       font-size: rem-calc(14px);
-      border-bottom: 1px solid $grey-5;
+      border-bottom: 1px solid $grey-border;
       padding: rem-calc(13px 0 13px 20px);
 
       &.active {
-        background-color: $white;
+        background-color: $grey-bg--page;
       }
 
       &:hover {
-        background-color: $grey-6;
+        background-color: $grey-bg--page;
       }
     }
 
     .offcanvas-my-page-link {
       background-color: $blue;
-      color: $grey-7;
+      color: $white;
       font-size: rem-calc(12px);
       font-weight: normal;
       padding: rem-calc(13px 0 13px 25px);
 
       &.active {
-        color: $black;
-        background-color: $blue-lighter;
+        background-color: $blue--hover;
       }
 
       &:hover {
-        color: $black;
-        background-color: $blue-light;
+        background-color: $blue--hover;
       }
     }
   }
 }
 
 ul.off-canvas-footer-menu {
-  border-bottom: 1px solid $grey-5;
+  border-bottom: 1px solid $grey-border;
   padding: rem-calc(20px) 0 rem-calc(10px) 0;
 
   li {
     padding: 0 0 rem-calc(8px) rem-calc(20px);
     a {
-      color: $grey-1;
+      color: $grey-bg--background;
       font-size: rem-calc(12px);
     }
   }
