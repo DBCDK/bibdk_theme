@@ -94,7 +94,6 @@ function bibdk_theme_preprocess_pager_first(&$vars) {
 function bibdk_theme_preprocess_block(&$vars) {
   // Save module and delta as $block_id (unique identifier)
   $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
-
 }
 
 /**
@@ -157,15 +156,19 @@ function bibdk_theme_preprocess_html(&$vars) {
  */
 function _bibdk_theme_get_bibdk_topbar($overlay) {
   global $user, $language, $base_url;
-  $menu_links = array();
+
+  $main_links = array();
+  $mypage_links = array();
   if ($user->uid) {
-    $menu_links += _bibdk_theme_get_my_page_menu_links();
+    $mypage_links += _bibdk_theme_get_my_page_menu_links();
   }
 
   $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
-  $menu_links += menu_navigation_links($menu_name);
-  $label = NULL;
+  $main_links += menu_navigation_links($menu_name);
 
+  $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
+
+  $label = NULL;
   if ($user->uid) {
     $label = t('My page', array(), array('context' => 'bibdk_frontend'));
   }
@@ -190,6 +193,29 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
   );
 
   return $topbar;
+}
+
+/**
+ * Merges the two links arrays into one array.
+ * Certain manipulation of the links will happen in this method as well.
+ *
+ * @param array $mypage_links
+ * @param array $main_links
+ * @return array
+ */
+function _bibdk_theme_merge_menulinks($mypage_links, $main_links) {
+  if (!empty($mypage_links)) {
+    foreach ($main_links as $key => $link) {
+      //remove the cart link as it is defined in the $mypage_menu
+      if(array_search('user/cart', $link, TRUE)){
+        unset($main_links[$key]);
+      }
+    }
+  }
+
+  $menu_links = $mypage_links + $main_links;
+
+  return $menu_links;
 }
 
 /**
@@ -364,7 +390,7 @@ function _bibdk_theme_offcanvas_set_li_attributes($link) {
  * Implements template_ie6nomore_browser().
  */
 function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
-  
+
   // reset version for browser
   $vars['version'] = '';
 
