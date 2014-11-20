@@ -5,6 +5,7 @@
   <!-- blind user tag slut -->
   <div class="row">
     <div class="small-24 columns">
+      <span id="seasonal"></span>
       <?php print render($page['search_panel']); ?>
     </div>
   </div>
