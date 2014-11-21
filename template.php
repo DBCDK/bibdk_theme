@@ -224,17 +224,17 @@ function _bibdk_theme_merge_menulinks($mypage_links, $main_links) {
 function _bibdk_theme_get_my_page_menu_links() {
   global $user;
   $common = array(
-    'class' => array('offcanvas-my-page-link')
+    'class' => array('offcanvas-my-page-link'),
   );
 
   $links = array();
-  $links['my_page'] = array(
-    'title' => t('My page', array(), array('context' => 'bibdk_frontend')),
-    'href' => "user/$user->uid",
-    'attributes' => $common
-  );
 
   $mypage_links = module_invoke_all('mypage_link');
+  $mypage_links['user/%user/edit'] = array(
+    'title' => t('Account'),
+    'href' => "user/$user->uid",
+    'weight' => 33,
+  );
   uasort($mypage_links, 'drupal_sort_weight');
 
   foreach ($mypage_links as $path => $item) {
