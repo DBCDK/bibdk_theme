@@ -1,13 +1,6 @@
 // =============================================================================
 // Page sections
 // =============================================================================
-
-// Topbar
-#topbar {
-  @extend .padded--horizontal;
-  background-color: $black;
-}
-
 // Header
 #header {
   @extend .padded--horizontal;
@@ -95,12 +88,4 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $white;
-}
-
-// Footer
-#footer {
-  @extend .padded--horizontal;
-  @include rem('padding', 40px 0 100px);
-  text-align: center;
-  background-color: $grey-2;
 }

@@ -1,0 +1,59 @@
+// =============================================================================
+// Bibdk Cart
+// =============================================================================
+
+.page-user-cart {
+  table.table {
+    width: 100%;
+    th, td {
+      padding: 5px;
+      vertical-align: top;
+    }
+    th:first-child,
+    td:first-child {
+      min-width: 1.5em;
+      max-width: 2em;
+    }
+    th:nth-child(2),
+    td:nth-child(2) {
+      min-width: 20em;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+      min-width: 10em;
+      max-width: 14em;
+    }
+    th:last-child,
+    td:last-child {
+      min-width: 10em;
+      max-width: 14em;
+    }
+    .form-item {
+      padding: 3px 10px;
+    }
+  }
+}
+
+#edit-cartactions {
+  padding: 0 0 0 20px;
+
+  .item-list ul li {
+    margin: 0px 4px;
+  }
+
+}
+
+.bibdk-cart-helptext {
+  padding: 0 0 10px 20px;
+}
+
+#bibdk-cart-pager {
+  text-align: center;
+  a {
+    padding: 0 5px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}
