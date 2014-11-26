@@ -310,17 +310,19 @@ left:-10px;
 //
 .widget, .article-widget {
   margin-bottom: 10px;
-  @include transition(background-color 0.3s);
+  background-color: $white;
 
   .inner {
     padding: 15px;
     box-sizing: border-box;
   }
   footer {
+    background-color: $grey-bg--section;
     position: absolute;
     bottom: 15px;
     right: 15px;
     left: 15px;
+    padding: 10px;
   }
   a {
     font-weight:bold;
@@ -330,73 +332,7 @@ left:-10px;
   }
 }
 
-//
-// Dark grey widget
-//
-.widget-dark-grey .inner {
-  background: $grey-2;
-  color: $white;
-  font-size: 0.91666em;
-  // 11px
 
-  &:hover {
-    background: lighten($grey-2, 3%);
-  }
-
-  .field-title {
-    margin-bottom: 3px;
-
-    h3 {
-      font-size: 1.1666em;
-      // 14px
-      font-weight: bold;
-      line-height: 120%;
-      color: $white;
-
-      a {
-        color: $white;
-      }
-    }
-  }
-
-  a {
-    color: $blue-lighter;
-  }
-
-  .field-taxonomy,
-  .field-artist {
-    a {
-      color: $grey-4;
-    }
-  }
-}
-
-//
-// Light grey widget
-//
-.widget-light-grey .inner{
-  background: $grey-6;
-  color: $black;
-
-  &:hover {
-    background: lighten($grey-6, 2%);
-  }
-
-  .field-title {
-    margin-bottom: 10px;
-
-    h3 {
-      font-family: $font-secondary;
-      font-size: 2em; // 24px
-      font-weight: 300;
-      line-height: 1.2;
-
-      a {
-        color: $grey-1;
-      }
-    }
-  }
-}
 
 //
 // Custom Biblioteksvagt widget
