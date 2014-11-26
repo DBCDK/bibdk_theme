@@ -140,7 +140,8 @@ function bibdk_theme_preprocess_html(&$vars) {
   }
 
   //add the topbar
-  $vars['page_topbar'] = drupal_render(_bibdk_theme_get_bibdk_topbar($overlay));
+  $topbar = _bibdk_theme_get_bibdk_topbar($overlay);
+  $vars['page_topbar'] = drupal_render($topbar);
 
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
