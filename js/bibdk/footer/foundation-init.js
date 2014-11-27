@@ -7,6 +7,16 @@
       // Should the menu close when a menu link is clicked?
       // [ true | false ]
       close_on_click: true
+    },
+    reveal: {
+      // Configures the reveal (modal)
+      animation: 'fade',
+      animation_speed: 150
     }
+  });
+
+  $(document).one('opened.fndtn.reveal', '[data-reveal]', function () {
+    //TOOD mmj at least a context should be provided - selector: '#bibdk-modal' or something similar
+    Drupal.attachBehaviors();
   });
 })();
