@@ -22,6 +22,9 @@
       </div>
     </div>
     <!-- FOUNDATION OFFCANVAS MENU WRAPPER -->
+
+    <div id="bibdk-modal" class="reveal-modal" data-reveal>
+    </div>
     <?php print $page_bottom; ?>
   </body>
 </html>
