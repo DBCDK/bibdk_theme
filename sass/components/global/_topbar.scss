@@ -2,7 +2,7 @@ $topbar_height: rem-calc(45px);
 
 .tab-bar {
   height: $topbar_height;
-  background-color: inherit;
+  background-color: $black;
 }
 
 .topbar-logo {
