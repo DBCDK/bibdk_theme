@@ -58,6 +58,13 @@
   label {
     @include rem('font-size', 12px);
   }
+  
+  #deselected-terms {
+    label {
+      text-decoration: line-through;
+      text-decoration-color: $warning;
+    }
+  }
 
   .form-item {
     margin: 0;
