@@ -16,8 +16,8 @@
   });
 
   // attaching behaviors when the modal have finished opening
-  $(document).one('opened.fndtn.reveal', '[data-reveal]', function() {
-    Drupal.detachBehaviors($('#bibdk-modal'));
-    Drupal.attachBehaviors($('#bibdk-modal'));
+  $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
+    var modal = document.getElementById('bibdk-modal');
+    Drupal.attachBehaviors(modal, null);
   });
 })();
