@@ -40,15 +40,3 @@
   margin-top: 4px;
   margin-right: 6px;
 }
-
-// =============================================================================
-// Modal window -- Favourite User Data
-// =============================================================================
-
-.page-vejviser .modal-content {
-  @extend .favourite-user-data-form;
-}
-
-.page-user .modal-content {
-  @extend .favourite-user-data-form;
-}
