@@ -12,6 +12,8 @@
 //
 // =============================================================================
 
+$font-weight-bold: bold;
+
 @mixin typo($type: "", $style: "", $color: "") {
 
   // Titles
@@ -52,15 +54,15 @@
 
     @switch $style {
       @when "bold" {
-        font-weight: bold;
+        font-weight: $font-weight-bold;
       }
       @when "uppercase" {
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         text-transform: uppercase;
       }
       @when "uppercase-small" {
         font-size: (10/16) * 1rem;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         text-transform: uppercase;
       }
     }
