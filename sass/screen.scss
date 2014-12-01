@@ -20,6 +20,7 @@ $sprites-layout: smart;
 @import "settings/colors";
 @import "settings/media-queries";
 @import "settings/typography";
+@import "settings/modal";
 
 
 // =============================================================================
@@ -109,17 +110,18 @@ $sprites-layout: smart;
 @import "components/base/helpers";
 @import "components/base/modal";
 
+@import "components/global/bibdk-modal";
+@import "components/global/footer";
 @import "components/global/messages";
 @import "components/global/page-sections";
 @import "components/global/topbar";
 @import "components/global/user-alerts";
-@import "components/global/footer";
 
 @import "components/banner";
 @import "components/basic_elements";
 @import "components/buttons";
 @import "components/cart";
-@import "components/ctools-modal";
+//@import "components/ctools-modal";
 @import "components/custom_search_elements";
 @import "components/dropdown";
 @import "components/facet-browser";
