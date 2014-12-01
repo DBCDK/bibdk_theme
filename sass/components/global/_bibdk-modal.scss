@@ -104,6 +104,9 @@
         font-size: 14px;
         background-color: $white;
         border: 1px solid $grey-5;
+        &.error {
+          border: 2px solid #ff0000;
+        }
       }
 
       input[type="text"]:focus,
