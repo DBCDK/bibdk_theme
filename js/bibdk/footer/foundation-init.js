@@ -19,5 +19,11 @@
   $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
     var modal = document.getElementById('bibdk-modal');
     Drupal.attachBehaviors(modal, null);
+    Drupal.bibdkModal.addAccessibilityInfo(window.document);
+  });
+
+  $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+    var modal = document.getElementById('bibdk-modal');
+    Drupal.detachBehaviors(modal, null, null);
   });
 })();
