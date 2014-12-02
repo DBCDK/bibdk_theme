@@ -16,7 +16,7 @@
 
   <nav class="tab-bar">
     <section class="topbar-logo left">
-      <a href="<?php print $home_path; ?>"><img src="<?php print $logo_path; ?>"/>
+      <a href="<?php print $home_path; ?>" title="<?php print $logo_title?>"><img src="<?php print $logo_path; ?>"/>
       </a></section>
     <?php if (!$overlay): ?>
       <section class="topbar-links right">
