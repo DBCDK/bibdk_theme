@@ -113,6 +113,8 @@ function bibdk_theme_page_alter(&$page) {
     unset($page['content']['system_main']['search_form']);
   }
 
+  drupal_add_library('system', 'jquery.form', TRUE);
+
   $footer = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/build/js/footer.js';
   drupal_add_js($footer, array(
     'scope' => 'footer',
