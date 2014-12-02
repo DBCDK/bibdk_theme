@@ -51,6 +51,7 @@ function bibdk_theme_theme() {
         'footer_menu' => 'string',
         'home_path' => 'string',
         'logo_path' => 'string',
+        'logo_title' => 'string',
         'links' => array(),
         'overlay' => 'bool',
       ),
@@ -190,6 +191,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
     '#footer_menu' => drupal_render($footer_menu),
     '#home_path' => $home_path,
     '#logo_path' => $logo_path,
+    '#logo_title' => t('Go to frontpage'),
     '#links' => $links,
     '#overlay' => $overlay,
   );
