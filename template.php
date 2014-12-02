@@ -167,7 +167,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
     $mypage_links += _bibdk_theme_get_my_page_menu_links();
   }
 
-  $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
+  $menu_name = ($language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $main_links += menu_navigation_links($menu_name);
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
@@ -181,7 +181,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
 
   $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
 
-  $home_path = url('<front>');
+  $home_path = rtrim(url(''), 'da');
   $logo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-header-nopayoff.png';
 
   $links = _bibdk_theme_get_topbar_links();
