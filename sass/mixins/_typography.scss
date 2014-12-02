@@ -1,0 +1,77 @@
+// =============================================================================
+// TYPOGRAPHY
+// -----------------------------------------------------------------------------
+//
+// All text alterations should be done using the typography (typo) mixin
+//
+// @include typo(); takes 3 optional arguments: $type, $style, $color
+//
+// Examples:
+// .selector { @include typo( "title", "section", "black" ); }
+// .selector { @include type( $color: "grey" ); }
+//
+// =============================================================================
+
+$font-weight-bold: bold;
+
+@mixin typo($type: "", $style: "", $color: "") {
+
+  // Titles
+  @if ($type == "title") {
+    font-weight: bold;
+    line-height: 1.2;
+
+    @if $style == "normal" {
+      font-size: (14/16) * 1rem;
+    } @else if $style == "small" {
+      font-size: (12/16) * 1rem;
+    } @else if $style == "large" {
+      font-size: (18/16) * 1rem;
+    } @else if $style == "section" {
+      font-size: (24/16) * 1rem;
+      font-family: 'Dosis', Arial, sans-serif;
+      text-transform: uppercase;
+    }
+  }
+
+  // Body texts
+  @if ($type == "body") {
+
+    @if $style == "large" {
+      font-size: (14/16) * 1rem;
+    }
+  }
+
+  // Labels and oneliners
+  @if ($type == "label") {
+
+    @if $style == "bold" {
+      font-weight: $font-weight-bold;
+    } @else if $style == "uppercase" {
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    } @else if $style == "uppercase-small" {
+      font-size: (10/16) * 1rem;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+  }
+
+  // Text colors
+  @if $color == "black" {
+    color: $black--natural;
+  } @else if $color == "white" {
+    color: $white;
+  } @else if $color == "grey-dark" {
+    color: $grey-text--dark;
+  } @else if $color == "grey-light" {
+    color: $grey-text--light;
+  } @else if $color == "blue" {
+    color: $blue;
+    &:hover {
+      color: $blue--hover;
+    }
+  } @else if $color == "red" {
+    color: $red;
+  }
+}
