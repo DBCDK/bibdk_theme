@@ -6,11 +6,18 @@
 // http://foundation.zurb.com/docs/components/reveal.html
 // =============================================================================
 
-#bibdk-modal .reveal-modal {
-  @media #{$small-only} {
-    top: 0;
-  }
+.bibdk-modal-header {
+  height: rem-calc(40);
+  display: table;
 }
+
+.bibdk-modal-title {
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: rem-calc(20px);
+  @include typo( "title", "section", "black" );
+}
+
 
 #bibdk-modal-form{
   .element-wrapper {
