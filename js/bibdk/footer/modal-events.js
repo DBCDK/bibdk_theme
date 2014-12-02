@@ -9,6 +9,7 @@
     var modal = document.getElementById('bibdk-modal');
     Drupal.attachBehaviors(modal, null);
     Drupal.bibdkModal.addAccessibilityInfo(window.document);
+    onLoad.setFocus();
   });
 
   $(document).on('close.fndtn.reveal', '[data-reveal]', function() {
