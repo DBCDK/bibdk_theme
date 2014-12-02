@@ -19,7 +19,7 @@ $sprites-layout: smart;
 @import "settings/settings";
 @import "settings/colors";
 @import "settings/media-queries";
-@import "settings/typography";
+@import "mixins/typography";
 @import "settings/modal";
 
 
@@ -121,7 +121,6 @@ $sprites-layout: smart;
 @import "components/basic_elements";
 @import "components/buttons";
 @import "components/cart";
-//@import "components/ctools-modal";
 @import "components/custom_search_elements";
 @import "components/dropdown";
 @import "components/facet-browser";
