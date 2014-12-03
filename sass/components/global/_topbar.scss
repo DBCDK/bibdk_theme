@@ -3,6 +3,14 @@ $topbar_height: rem-calc(45px);
 .tab-bar {
   height: $topbar_height;
   background-color: $black;
+
+  .svg-chat {
+    @include svg("svg-chat", "white");
+  }
+
+  .svg-user{
+    @include svg("svg-user", "white");
+  }
 }
 
 .topbar-logo {
@@ -15,15 +23,14 @@ $topbar_height: rem-calc(45px);
 }
 
 .topbar-links {
-  display:none;
+  display: none;
   @media #{$large-up} {
     display: inline;
     margin-right: rem-calc(85px);
 
     a {
       margin: 0 10px;
-      color: $white;
-      font-size: rem-calc(12px);
+      @include typo( "link", "topbar-links", "white" );
     }
   }
 }
@@ -37,6 +44,7 @@ $topbar_height: rem-calc(45px);
 
   .menu-text {
     display: none;
+    @include typo( "link", "topbar-links", "white" );
 
     @media #{$medium-up} {
       display: inline;
