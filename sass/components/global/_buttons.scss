@@ -34,6 +34,7 @@ input[type="submit"].button-as-link {
   font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: rem-calc(14);
+  border-radius: 0;
 
   &:hover {
     @include box-shadow(0 2px 2px rgba(black, 0.2));

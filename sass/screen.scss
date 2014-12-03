@@ -102,7 +102,7 @@ $sprites-layout: smart;
 // =============================================================================
 // Import default styling
 // =============================================================================
-@import "forms";
+@import "components/global/forms";
 
 
 // =============================================================================
@@ -120,7 +120,7 @@ $sprites-layout: smart;
 
 @import "components/banner";
 @import "components/basic_elements";
-@import "components/buttons";
+@import "components/global/buttons";
 @import "components/cart";
 @import "components/custom_search_elements";
 @import "components/dropdown";
