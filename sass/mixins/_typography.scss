@@ -36,7 +36,6 @@ $font-weight-bold: bold;
 
   // Body texts
   @if ($type == "body") {
-
     @if $style == "large" {
       font-size: (14/16) * 1rem;
     }
@@ -44,7 +43,6 @@ $font-weight-bold: bold;
 
   // Labels and oneliners
   @if ($type == "label") {
-
     @if $style == "bold" {
       font-weight: $font-weight-bold;
     } @else if $style == "uppercase" {
@@ -54,6 +52,15 @@ $font-weight-bold: bold;
       font-size: (10/16) * 1rem;
       font-weight: $font-weight-bold;
       text-transform: uppercase;
+    }
+  }
+
+  // links
+  @if ($type == "link"){
+    @if $style == "topbar-links" {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: (12/16) * 1rem;
     }
   }
 
