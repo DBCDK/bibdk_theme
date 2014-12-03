@@ -7,7 +7,7 @@
 // =============================================================================
 
 .bibdk-modal-header {
-  height: rem-calc(40);
+  height: rem-calc(60);
   display: table;
 }
 
@@ -20,12 +20,41 @@
 
 
 #bibdk-modal-form{
+
   .element-wrapper {
     margin-bottom: 0;
+    border: none;
+    background-color: $grey-bg--page;
   }
+
+  .element {
+    border: none;
+  }
+
+  #block-ding-wayf-login {
+    display: none;
+
+    @media #{$medium-up} {
+      display: block;
+    }
+  }
+
+  .form-item {
+    padding: 0 rem-calc(20);
+    border-radius: 0;
+
+    input[type="text"],
+    input[type="password"] {
+      border-radius: 0;
+      padding: 0;
+    }
+
+  }
+
   .bibdk-provider-form-inputs {
     margin-bottom: 55px;
   }
+
   #bibdkcaptcha-controls {
     float: left;
     margin-top: 20px;
@@ -57,14 +86,15 @@
   .form-item-captcha-response {
     float: right;
   }
-  .form-item {
+
+  /*.form-item {
     padding-bottom: 10px;
 
     label {
       font-size: 1em;
       width: 100%;
     }
-  }
+  }*/
 
   .message {
     border:none;
@@ -98,11 +128,11 @@
 
       input[type="text"],
       input[type="password"] {
+        border-radius: 0;
         @include inline-block();
         @include box-sizing(border-box);
         @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
         @include transition(border .2s, box-shadow .2s);
-        @include border-radius(3px);
 
         width: 100%;
         height: 30px;

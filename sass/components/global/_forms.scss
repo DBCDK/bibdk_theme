@@ -159,7 +159,6 @@ input[type="text"],
 input[type="password"] {
   @include inline-block();
   @include box-sizing(border-box);
-  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
   @include transition(border .2s, box-shadow .2s);
 
   max-width:100%;
@@ -167,7 +166,7 @@ input[type="password"] {
   color: $grey-3;
   font-size: 14px;
   background-color: $white;
-  border: 1px solid $grey-5;
+  border: 1px solid $white;
 }
 
 textarea {
@@ -180,7 +179,6 @@ textarea {
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
-  @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
   border-color: rgba(82, 168, 236, 0.8);
 }
 
@@ -212,7 +210,7 @@ div.password-confirm,
   padding: 10px;
   margin: 10px 0;
   width: 100%;
-  border: 1px solid $grey-5;
+  border: 1px solid $white;
 }
 
 
@@ -512,7 +510,7 @@ margin-right:0.5em;
 .page-reservation #bibdk-reservation-create-wizard-form {
   input[type="text"],
   input[type="password"],
-  #edi t-subdivision {
+  #edit-subdivision {
     float: left;
     margin-right: 20px;
     width: 260px;
@@ -624,7 +622,7 @@ select#edit-favouriteselector {
 .page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
   background: $grey-7;
-  border: solid 1px $grey-5;
+  border: 1px solid $white;
   a {
     display: block;
   }
