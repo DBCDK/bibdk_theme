@@ -65,6 +65,17 @@ function bibdk_theme_theme() {
         'label' => NULL,
       ),
     ),
+    'link_with_svg' => array(
+      'path' => $path . 'global',
+      'template' => 'link-with-svg',
+      'variables' => array(
+        'title' => '',
+        'path' => '',
+        'attributes' => '',
+        'svg' => '',
+        'href' => ''
+      ),
+    ),
   );
 }
 
@@ -268,24 +279,41 @@ function _bibdk_theme_get_my_page_menu_links() {
 function _bibdk_theme_get_topbar_links() {
   global $user;
   $links = array();
-  $links[] = l(t('Spørg Biblioteksvagten'), 'overlay/helpdesk', array(
-    'attributes' => array(
+  $chat = array(
+    '#theme' => 'link_with_svg',
+    '#title' => t('Spørg Biblioteksvagten'),
+    '#href' => url('overlay/helpdesk'),
+    '#attributes' => drupal_attributes(array(
       'class' => array('bibdk-popup-link'),
       'data-rel' => array('helpdesk'),
-    )
-  ));
+    )),
+    '#svg' => 'svg-chat',
+  );
+  $links[] = drupal_render($chat);
 
   if ($user->uid) {
-    $links[] = l(t('My page'), 'user', array(
-      'attributes' => array(
+    $my_page = array(
+      '#theme' => 'link_with_svg',
+      '#title' => t('My page', array(), array('context' => 'bibdk_frontend')),
+      '#href' => url('user'),
+      '#attributes' => drupal_attributes(array(
         'id' => array('topbar-my-page-link'),
-      ),
-    ), array(
-      'context' => 'bibdk_frontend'
-    ));
+      )),
+      '#svg' => 'svg-user',
+    );
+
+    $links[] = drupal_render($my_page);
   }
   else {
-    $links[] = l(t('Log ind'), 'user/login');
+    $login = array(
+      '#theme' => 'link_with_svg',
+      '#title' => t('Log ind'),
+      '#href' => url('user/login'),
+      '#attributes' => drupal_attributes(array()),
+      '#svg' => 'svg-user',
+    );
+
+    $links[] = drupal_render($login);
   }
 
   return $links;
