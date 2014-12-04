@@ -974,6 +974,11 @@ function bibdk_theme_preprocess_link(&$link) {
   if ($link['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
     $link['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
   }
+
+  if (!empty($link['options']['svg'])) {
+    $link['text'] = '<svg class="icon ' . $link['options']['svg'] . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' . $link['options']['svg'] . '"></use></svg>' . $link['text'];
+    $link['options']['html'] = TRUE;
+  }
 }
 
 /**
