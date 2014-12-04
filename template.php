@@ -71,7 +71,7 @@ function bibdk_theme_theme() {
       'variables' => array(
         'title' => '',
         'path' => '',
-        'attributes' => '',
+        'attributes' => array(),
         'svg' => '',
         'href' => ''
       ),
@@ -223,7 +223,7 @@ function _bibdk_theme_merge_menulinks($mypage_links, $main_links) {
   if (!empty($mypage_links)) {
     foreach ($main_links as $key => $link) {
       //remove the cart link as it is defined in the $mypage_menu
-      if(array_search('user/cart', $link, TRUE)){
+      if (array_search('user/cart', $link, TRUE)) {
         unset($main_links[$key]);
       }
     }
@@ -284,10 +284,10 @@ function _bibdk_theme_get_topbar_links() {
     '#theme' => 'link_with_svg',
     '#title' => t('Spørg Biblioteksvagten'),
     '#href' => url('overlay/helpdesk'),
-    '#attributes' => drupal_attributes(array(
+    '#attributes' => array(
       'class' => array('bibdk-popup-link'),
       'data-rel' => array('helpdesk'),
-    )),
+    ),
     '#svg' => 'svg-chat',
   );
   $links[] = drupal_render($chat);
@@ -297,9 +297,9 @@ function _bibdk_theme_get_topbar_links() {
       '#theme' => 'link_with_svg',
       '#title' => t('My page', array(), array('context' => 'bibdk_frontend')),
       '#href' => url('user'),
-      '#attributes' => drupal_attributes(array(
+      '#attributes' => array(
         'id' => array('topbar-my-page-link'),
-      )),
+      ),
       '#svg' => 'svg-user',
     );
 
@@ -310,7 +310,6 @@ function _bibdk_theme_get_topbar_links() {
       '#theme' => 'link_with_svg',
       '#title' => t('Log ind'),
       '#href' => url('user/login'),
-      '#attributes' => drupal_attributes(array()),
       '#svg' => 'svg-user',
     );
 
@@ -970,11 +969,11 @@ function bibdk_theme_preprocess_links(&$links) {
 /**
  * Implements hook_preprocess_HOOK().
  *
- * @param $links
+ * @param $link
  */
-function bibdk_theme_preprocess_link(&$links) {
-  if ($links['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
-    $links['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
+function bibdk_theme_preprocess_link(&$link) {
+  if ($link['text'] == t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'))) {
+    $link['text'] = '<span class="icon icon-left icon-darkgrey-infomedia">&nbsp;</span>' . t('litteratursiden_link', array(), array('context' => 'bibdk_reviews'));
   }
 }
 
