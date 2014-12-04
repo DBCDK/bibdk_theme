@@ -976,7 +976,7 @@ function bibdk_theme_preprocess_link(&$link) {
   }
 
   if (!empty($link['options']['svg'])) {
-    $link['text'] = '<svg class="icon ' . $link['options']['svg'] . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' . $link['options']['svg'] . '"></use></svg>' . $link['text'];
+    $link['text'] = '<svg class="' . $link['options']['svg'] . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' . $link['options']['svg'] . '"></use></svg>' . $link['text'];
     $link['options']['html'] = TRUE;
   }
 }
