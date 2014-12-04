@@ -1,8 +1,51 @@
 // =============================================================================
-// Footer
+// Footer bars
 // =============================================================================
-#footer {
-  @extend .padded--horizontal;
-  @include rem('padding', 40px 0 100px);
-  text-align: center;
+
+#footer-bars {
+
+  $footbar_height: rem-calc(45px);
+
+  .footer-tab-bars {
+    width: 100%;
+  }
+
+  .footer-tab-color { 
+    background-color: $black--natural; //defined in _colors.scss
+  }
+
+  .footer-tab-bar1 {
+    height: $footbar_height;
+
+    .footer-bar-links {
+      li {
+        display: inline-block;
+        width: 24.7%;
+        padding-left: 10px;
+        padding-top: 13px; 
+      }
+    }
+
+    .footer-bar-links a {
+      color: $white;
+      font-size: rem-calc(12px);
+    }  
+
+  }
+
+  .footer-tab-bar2 {
+    height: $footbar_height;
+
+    .footer-logo {
+      margin-top: rem-calc(10px);
+    }
+
+    .footer-social-links a {
+      display: inline-block;
+      margin-top: rem-calc(10px);
+    }
+
+  }
+
 }
+

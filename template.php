@@ -64,6 +64,22 @@ function bibdk_theme_theme() {
         'label' => NULL,
       ),
     ),
+    'bibdk_footbar' => array(
+    'path' => $path . 'footer',
+    'template' => 'bibdk-footer',
+    'variables' => array(
+      'menu' => 'string',
+      'footer_menu_links' => 'string',
+      'home_path' => 'string',
+      'footerlogo_path' => 'string',
+      'footerlogo_twitter_path2' => 'string',
+      'footerlogo_facebook_path2' => 'string',
+      'footerlogo_play_path2' => 'string',
+      'logo_path' => 'string',
+      'links' => array(),
+      'overlay' => 'bool',
+      ),
+    ),
   );
 }
 
@@ -140,11 +156,50 @@ function bibdk_theme_preprocess_html(&$vars) {
   }
 
   //add the topbar
+
   $topbar = _bibdk_theme_get_bibdk_topbar($overlay);
   $vars['page_topbar'] = drupal_render($topbar);
 
+
+  
+  //add the page footer
+  $vars['page_footer'] = drupal_render(_bibdk_theme_get_bibdk_footbar($overlay));
+
+
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
+}
+
+/**
+ * Rendering of the bibdk footer 
+ *
+ * @param bool $overlay Flag that indicated whether we're on a overlay page.
+ *
+ * @return string rendered HTML based on the bibdk-footer.tpl.php
+ * @see bibdk-footer.tpl.php
+ */
+function _bibdk_theme_get_bibdk_footbar($overlay) {
+ global $base_url;
+
+  $home_path = url('<front>');
+  $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png';  
+  $footer_menu = _bibdk_theme_get_footer_bar_menu();
+  $footerlogo_twitter_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+  $footerlogo_facebook_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+  $footerlogo_play_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+      
+  $footbar = array(
+    '#theme' => 'bibdk_footbar',
+    '#footer_menu_links' => drupal_render($footer_menu),
+    '#home_path' => $home_path,
+    '#footerlogo_path' => $footerlogo_path,
+    '#footerlogo_twitter_path2' => $footerlogo_twitter_path2,
+    '#footerlogo_facebook_path2' => $footerlogo_facebook_path2,
+    '#footerlogo_play_path2' => $footerlogo_play_path2,
+    '#overlay' => $overlay,
+  );
+  
+  return $footbar;
 }
 
 /**
@@ -301,6 +356,22 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('off-canvas-footer-menu')));
+
+}
+
+/**
+ * Returns the footer bar menu styled in a list ready for display within the footer bar
+ *
+ * @return string
+ */
+function _bibdk_theme_get_footer_bar_menu() {
+  global $language;
+
+  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_links = menu_navigation_links($footer_menu_name);
+  $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
+  return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
+  
 }
 
 /**
@@ -424,6 +495,7 @@ function bibdk_theme_preprocess_page(&$vars) {
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
+ 
   $vars['logo_footer'] = array(
     '#theme' => 'image',
     '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-footer.png',

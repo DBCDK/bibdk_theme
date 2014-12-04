@@ -17,6 +17,7 @@
         <div class="inner-wrap">
           <?php print $page_topbar; ?>
           <?php print $page; ?>
+          <?php print $page_footer; ?>
         </div>
         <a class="exit-off-canvas"></a>
       </div>
