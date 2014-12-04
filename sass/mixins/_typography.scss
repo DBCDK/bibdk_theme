@@ -56,12 +56,16 @@ $font-weight-bold: bold;
   }
 
   // links
-  @if ($type == "link"){
+  @if ($type == "link") {
     @if $style == "topbar-links" {
       font-family: Arial, sans-serif;
       font-weight: bold;
       font-size: (12/16) * 1rem;
       letter-spacing: 0.2px;
+    } @else if $style == "item-links" {
+      font-family: Arial, sans-serif;
+      font-weight: normal;
+      font-size: (14/16) * 1rem;
     }
   }
 
