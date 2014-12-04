@@ -12,7 +12,12 @@
 // =============================================================================
 
 @mixin svg($name: "", $color: "") {
-  @if ($name == "svg-chat") {
+  @if ($name == "svg-arrow-right") {
+  width: 14px;
+  height: 12px;
+  vertical-align: middle;
+  margin: 0 5px;
+} @else if ($name == "svg-chat") {
     width: 15px;
     height: 15px;
     vertical-align: middle;
@@ -37,4 +42,8 @@
   } @else if $color == "red" {
     fill: $red;
   }
+}
+
+.svg-arrow-right {
+  @include svg("svg-arrow-right", "black");
 }
