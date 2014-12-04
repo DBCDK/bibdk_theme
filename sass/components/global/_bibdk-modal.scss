@@ -19,7 +19,11 @@
 }
 
 
-#bibdk-modal-form{
+#bibdk-modal-form {
+
+  form {
+    padding-top: rem-calc(20);
+  }
 
   .element-wrapper {
     margin-bottom: 0;
@@ -40,15 +44,44 @@
   }
 
   .form-item {
-    padding: 0 rem-calc(20);
     border-radius: 0;
+    margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
 
     input[type="text"],
     input[type="password"] {
+      height: rem-calc(20);
+      max-width: 75%;
       border-radius: 0;
       padding: 0;
+      float: right;
     }
 
+    label {
+      color: $black;
+      font-weight: bold;
+      max-width: 25%;
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  #edit-actions {
+    padding: 0;
+
+    .form-item{
+      padding: 0;
+    }
+  }
+
+  .form-type-textfield,
+  .form-type-password{
+    background-color: $white;
+  }
+
+  .form-actions {
+    .form-item {
+      margin: 0;
+    }
   }
 
   .bibdk-provider-form-inputs {
