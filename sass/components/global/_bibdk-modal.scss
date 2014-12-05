@@ -54,16 +54,14 @@ input:-webkit-autofill {
     input[type="password"] {
       border: none;
       height: rem-calc(20);
-      max-width: 70%;
       padding: 0;
       float: right;
       color: $grey-text--dark;
     }
 
     label {
-      color: $black;
+      @include typo("title", "small", "grey-dark");
       font-weight: bold;
-      max-width: 30%;
       float: left;
       margin-bottom: 0;
     }

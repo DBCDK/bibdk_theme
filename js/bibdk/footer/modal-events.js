@@ -1,3 +1,9 @@
+/**
+ * @file
+ *
+ * This files handles events invoked by the Foundation Reveal system
+ */
+
 (function() {
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
