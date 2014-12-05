@@ -424,22 +424,6 @@ textarea::-webkit-input-placeholder {
   text-align: right;
 }
 
-// ===========
-// another specific form ? user-login (remember-me checkbox)
-//===========
-
-#user-login {
-  .form-item.form-item-remember-me {
-    float: right;
-    margin: 0 0 0 10px;
-    padding: 0;
-  }
-
-  #edit-actions {
-    padding-bottom: 1.5em;
-  }
-}
-
 // =============================================================================
 // Reservation
 // =============================================================================
