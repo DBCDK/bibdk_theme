@@ -220,12 +220,6 @@ h3.library-list-header{
 }
 
 
-
-
-
-
-
-
 // =============================================================================
 // Frontpage Teaser blocks
 // =============================================================================
@@ -265,146 +259,6 @@ h3.library-list-header{
 #block-games .block-title h2 {
   background: url(../img/in_use/mediatype_icons/games.png) no-repeat;
 }
-
-//
-// Settings box heights
-//
-.widget-height-top {
-  height: 44px;
-}
-
-.widget-height-1 .inner {
-  height: 100px;
-}
-
-.widget-height-2 .inner {
-  height: 210px;
-}
-
-.widget-height-3 .inner {
-  height: 320px;
-}
-
-.widget-height-4 .inner {
-  height: 430px;
-}
-
-article.article-widget{
-  .field-label{
-    display:none;
-  }
-}
-
-article.widget-biblioteksvagt{
-  float:right;
-}
-
-.bibdk_article_ajax_replace {
-position:relative;
-left:-10px;
-}
-
-
-//
-// Common widget styling
-//
-.view-article-view.columns{
-  padding: 0;
-}
-
-.view-article-view.right{
-  padding-left: 5px;
-}
-
-.widget, .article-widget {
-  margin-bottom: 10px;
-  background-color: $white;
-
-  .inner {
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  footer {
-    background-color: $grey-bg--section;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    left: 15px;
-    padding: 10px;
-  }
-  a {
-    font-weight:bold;
-  }
-  &:hover a {
-    text-decoration: underline;
-  }
-}
-
-
-
-//
-// Custom Biblioteksvagt widget
-//
-.widget-biblioteksvagt .inner {
-  background: $blue;
-  background-repeat:no-repeat;
-  background-position: center center;
-  color: $white;
-  .inner {
-    padding: 0px;
-  }
-  .field-title {
-    margin: 0 5px;
-    padding: 0px 7px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    background: $blue;
-    h3 {
-      font-size: 1.1666em; // 14px
-      font-weight: bold;
-      line-height: 2;
-      color: $white;
-      a {
-        color: $white;
-      }
-    }
-  }
-  .field-body {
-    display: none;
-  }
-  .field-vagt-image {
-    position: absolute;
-    text-align: center;
-    top: 18px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 100%;
-    display: none;
-  }
-  footer {
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 3;
-  }
-  .field-link {
-    z-index: 2;
-    background: $blue;
-    padding: 8px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 5px;
-  }
-}
-
-
 
 
 // =============================================================================
@@ -938,7 +792,7 @@ div#moreinfo img {
 
 span.star {
   display: inline-block;
-  background: url('../img/in_use/rating-stars.png');
+  background: url('../../img/in_use/rating-stars.png');
   width: 17px;
   height: 17px;
 }
