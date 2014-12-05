@@ -21,12 +21,12 @@
     width: 15px;
     height: 15px;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 3px;
   } @else if ($name == "svg-user") {
     width: 15px;
     height: 15px;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 3px;
   }
 
   @if $color == "black" {
