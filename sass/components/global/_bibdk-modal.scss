@@ -37,7 +37,7 @@ input:-webkit-autofill {
     border: none;
   }
 
-  #block-ding-wayf-login {
+  .block-ding-wayf {
     display: none;
 
     @media #{$medium-up} {
@@ -48,7 +48,7 @@ input:-webkit-autofill {
   .form-item {
     border-radius: 0;
     margin: 0 rem-calc(20) rem-calc(4) rem-calc(20);
-    padding: rem-calc(15);
+    padding: rem-calc(10);
 
     input[type="text"],
     input[type="password"] {
@@ -56,7 +56,7 @@ input:-webkit-autofill {
       height: rem-calc(20);
       padding: 0;
       float: right;
-      color: $grey-text--dark;
+      color: $black;
     }
 
     label {
@@ -64,14 +64,7 @@ input:-webkit-autofill {
       font-weight: bold;
       float: left;
       margin-bottom: 0;
-    }
-  }
-
-  #edit-actions {
-    padding: 0;
-
-    .form-item {
-      padding: 0;
+      padding-bottom: 5px;
     }
   }
 
@@ -82,6 +75,17 @@ input:-webkit-autofill {
 
   .form-actions {
     margin: 0 rem-calc(20);
+    padding: 0;
+
+    .form-item {
+      padding: 0;
+    }
+
+    .ajax-progress {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
 
     .form-type-checkbox {
       position: absolute;
