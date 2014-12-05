@@ -92,7 +92,8 @@ input:-webkit-autofill {
       right: 130px;
 
       .form-checkbox {
-        margin: 4px 0 0 0;
+        height: 20px;
+        vertical-align: middle;
         float: left;
       }
 
@@ -106,11 +107,11 @@ input:-webkit-autofill {
 
     input[type="submit"] {
       margin-top: rem-calc(20);
+      margin-bottom: rem-calc(20);
     }
 
     .item-list {
       text-align: left;
-      margin-top: rem-calc(20);
 
       li {
         margin: 0;
