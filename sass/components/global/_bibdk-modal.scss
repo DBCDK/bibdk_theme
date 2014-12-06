@@ -11,10 +11,11 @@
 }
 
 .bibdk-modal-title {
+  @include typo("title", "section", "black");
   vertical-align: middle;
   display: table-cell;
-  padding-left: rem-calc(20px);
-  @include typo("title", "section", "black");
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(30);
 }
 
 input:-webkit-autofill {
@@ -22,6 +23,12 @@ input:-webkit-autofill {
 }
 
 #bibdk-modal-form {
+
+  input[type="submit"] {
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(20);
+    margin-right: rem-calc(20);
+  }
 
   p {
     margin: 0 20px;
@@ -54,7 +61,24 @@ input:-webkit-autofill {
     display: none;
 
     @media #{$medium-up} {
+      background-color: $grey-bg--section;
       display: block;
+      padding: rem-calc(20) 0;
+    }
+  }
+
+  .ding-wayf-logon-block {
+    @include typo("title", "normal", "black");
+    text-align: left;
+    margin: 0 rem-calc(20);
+
+    a {
+      margin-left: 0;
+      margin-top: rem-calc(20);
+
+      :first-child {
+        margin-right: rem-calc(20);
+      }
     }
   }
 
@@ -107,7 +131,7 @@ input:-webkit-autofill {
   }
 
   .form-actions {
-    margin: 0 rem-calc(20);
+    //margin: 0 rem-calc(20);
     padding: 0;
 
     .form-item {
@@ -140,13 +164,9 @@ input:-webkit-autofill {
       }
     }
 
-    input[type="submit"] {
-      margin-top: rem-calc(20);
-      margin-bottom: rem-calc(20);
-    }
-
     .item-list {
       text-align: left;
+      margin-left: rem-calc(20);
 
       li {
         margin: 0;
@@ -176,6 +196,13 @@ input:-webkit-autofill {
       img {
         padding: 0;
       }
+    }
+  }
+
+  // doing some very specifc styling to override stuff in _buttons.scss
+  #bibdk-favourite-user-form {
+    input[type="submit"] {
+      float: right;
     }
   }
 
