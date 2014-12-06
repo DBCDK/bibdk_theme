@@ -549,7 +549,10 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
     case 'ding_wayf_accept_form':
+      _wrap_in_element($form);
+      break;
     case 'user_register_form':
+      _alter_user_register_form($form, $form_state);
       _wrap_in_element($form);
       break;
     case 'bibdk_cart_get_form':
@@ -561,6 +564,7 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
     case 'bibdk_favourite_user_form_fields':
       _alter_bibdk_favourite_user_form_fields($form);
+      _wrap_in_element($form);
       break;
     case 'bibdk_usersettings_user_settings_form':
       drupal_set_title(t('Settings'));
@@ -830,6 +834,15 @@ function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
   $form['#attributes']['class'] = array('search-form-horizontal');
+}
+
+/**
+ * ALter the user register form.
+ *
+ * @param $form
+ */
+function _alter_user_register_form(&$form){
+  $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
 }
 
 /**
