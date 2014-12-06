@@ -8,6 +8,9 @@
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
+    var $mainwrapper = $("#mainwrapper");
+    $mainwrapper.css("filter", "blur(15px)");
+    $mainwrapper.css("-webkit-filter", "blur(15px)");
   });
 
 // attaching behaviors when the modal have finished opening
@@ -21,5 +24,11 @@
   $(document).on('close.fndtn.reveal', '[data-reveal]', function() {
     var modal = document.getElementById('bibdk-modal');
     Drupal.detachBehaviors(modal, null, null);
+  });
+
+  $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
+    var $mainwrapper = $("#mainwrapper");
+    $mainwrapper.css("filter", "");
+    $mainwrapper.css("-webkit-filter", "");
   });
 })();
