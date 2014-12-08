@@ -9,8 +9,11 @@
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
     var $mainwrapper = $("#mainwrapper");
-    $mainwrapper.css("filter", "blur(15px)");
-    $mainwrapper.css("-webkit-filter", "blur(15px)");
+    $mainwrapper.css("filter", "blur(20px)");
+    $mainwrapper.css("-webkit-filter", "blur(20px)");
+    $mainwrapper.css("-moz-filter", "blur(20px)");
+    $mainwrapper.css("-o-filter", "blur(20px)");
+    $mainwrapper.css("-ms-filter", "blur(20px)");
   });
 
 // attaching behaviors when the modal have finished opening
@@ -30,5 +33,8 @@
     var $mainwrapper = $("#mainwrapper");
     $mainwrapper.css("filter", "");
     $mainwrapper.css("-webkit-filter", "");
+    $mainwrapper.css("-moz-filter", "");
+    $mainwrapper.css("-o-filter", "");
+    $mainwrapper.css("-ms-filter", "");
   });
 })();
