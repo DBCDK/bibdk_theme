@@ -126,7 +126,8 @@ input:-webkit-autofill {
   }
 
   .form-type-textfield,
-  .form-type-password {
+  .form-type-password,
+  .form-type-textarea {
     background-color: $white;
   }
 
@@ -204,6 +205,10 @@ input:-webkit-autofill {
     input[type="submit"] {
       float: right;
     }
+  }
+
+  .filter-guidelines {
+    padding: rem-calc(20) 0 0 rem-calc(20);
   }
 
   .bibdk-provider-form-inputs {
