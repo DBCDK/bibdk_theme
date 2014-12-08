@@ -3,8 +3,8 @@
 // =============================================================================
 
 .form-wrapper {
-  padding: 0 20px;
-  border-bottom: solid 1px $grey-5;
+  //padding: 0 20px;
+  //border-bottom: solid 1px $grey-5;
 }
 
 .form-wrapper .form-wrapper {
@@ -18,11 +18,9 @@
 
 .form-item {
   @extend .clearfix;
-  padding: 20px;
-}
-
-.form-wrapper .form-item {
-  padding: 20px 0;
+  border-radius: 0;
+  margin-bottom: rem-calc(4);
+  padding: rem-calc(10);
 }
 
 .form-item .form-item {
@@ -45,6 +43,13 @@
 
 .form-item .description {
   margin-top: 5px;
+}
+
+.form-type-textfield,
+.form-type-password,
+.form-type-textarea,
+.form-type-select {
+  background-color: $white;
 }
 
 // =============================================================================
@@ -87,15 +92,24 @@ fieldset.bibdk-reservation-title .bibdk_clear {
 // =============================================================================
 
 label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: $grey-3;
+  @include typo("title", "small", "grey-dark");
+  float: left;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 2px;
+  width: auto;
 }
 
 label.option {
   display: inline;
-  color: $grey-1;
+  color: $grey-text--dark;
+  width: auto;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.form-type-radios > label {
+  @include typo("title", "small", "black");
 }
 
 .form-type-password-confirm > label {
@@ -110,6 +124,9 @@ input[type="checkbox"],
 input[type="radio"] {
   margin-right: 5px;
   cursor: pointer;
+  float: left;
+  display: inline;
+  margin-right: 10px;
 }
 
 input[type="radio"]:focus,
@@ -128,6 +145,10 @@ input[type="checkbox"]:focus {
 .form-radios .form-type-radio {
   float: left;
   margin-right: 20px;
+}
+
+.form-type-radio {
+  width: 100%;
 }
 
 // =============================================================================
@@ -166,13 +187,17 @@ input[type="text"],
 input[type="password"] {
   @include inline-block();
   @include box-sizing(border-box);
-
+  height: rem-calc(20);
   max-width: 100%;
   padding: 0 5px;
-  color: $grey-3;
+  color: $black;
   font-size: 14px;
   background-color: $white;
-  border: 1px solid $white;
+  border: none;
+
+  @media #{$small-only} {
+    font-size: 16px;
+  }
 }
 
 textarea {
@@ -308,7 +333,7 @@ input[type="text"][readonly] {
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
-  border: 2px solid $red-pure;
+  border: 1px solid $red;
 }
 
 .form-required {

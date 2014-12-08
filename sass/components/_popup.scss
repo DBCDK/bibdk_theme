@@ -1,0 +1,43 @@
+#bibdk-helpdesk-form #edit-logo{
+  width: 100%;
+  background-color: white;
+  display: block;
+  padding: rem-calc(10);
+  margin-bottom: rem-calc(20);
+}
+
+#edit-questionusage {
+  background-color: $white;
+  margin-bottom: rem-calc(4);
+}
+
+// =============================================================================
+// Popup window pages
+// =============================================================================
+#popup {
+  margin: rem-calc(20px);
+
+  .element {
+    border: none;
+  }
+
+  .region-content {
+    margin: 0 20px 15px 20px;
+  }
+
+  .element-wrapper {
+    margin-bottom: 0;
+    border: none;
+    background-color: #e7e8ea;
+  }
+
+  .form-wrapper:last-child {
+//    border-bottom-width: 0px;
+//    margin-bottom: 0px;
+  }
+}
+
+#popup-button-close {
+  float: right;
+  margin-right: 10px;
+}

@@ -10,7 +10,7 @@
 
 .element-wrapper {
   background-color: $white;
-  border: solid 10px $grey-6;
+  border: solid 10px $grey-bg--page;
   margin-bottom: 10px;
   input[type="checkbox"] {
     border: none;
@@ -27,10 +27,6 @@
     width: 50%;
     margin-bottom: 1em;
   }
-}
-
-#popup .element {
-  border-bottom: solid 1px $grey-5;
 }
 
 .element-section {

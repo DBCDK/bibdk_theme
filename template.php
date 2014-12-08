@@ -479,6 +479,7 @@ function bibdk_theme_preprocess_page(&$vars) {
     case 'email':
     case 'adhl':
       $vars['theme_hook_suggestions'][] = 'page__overlay';
+      break;
     case 'vejviser':
       $vars['page']['content']['#prefix'] = '<div class="vejviser-search-result">';
       $vars['page']['content']['#suffix'] = '</div>';
