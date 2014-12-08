@@ -72,9 +72,9 @@ function bibdk_theme_theme() {
       'footer_menu_links' => 'string',
       'home_path' => 'string',
       'footerlogo_path' => 'string',
-      'footerlogo_twitter_path2' => 'string',
-      'footerlogo_facebook_path2' => 'string',
-      'footerlogo_play_path2' => 'string',
+      'footerlogo_twitter_path' => 'string',
+      'footerlogo_facebook_path' => 'string',
+      'footerlogo_play_path' => 'string',
       'logo_path' => 'string',
       'links' => array(),
       'overlay' => 'bool',
@@ -182,23 +182,23 @@ function _bibdk_theme_get_bibdk_footbar($overlay) {
  global $base_url;
 
   $home_path = url('<front>');
-  $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer.png';  
+  $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';  
   $footer_menu = _bibdk_theme_get_footer_bar_menu();
-  $footerlogo_twitter_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
-  $footerlogo_facebook_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
-  $footerlogo_play_path2 = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+  //TODO change images for twitter, facebook and youtube 
+  $footerlogo_twitter_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+  $footerlogo_facebook_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
+  $footerlogo_play_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
       
   $footbar = array(
     '#theme' => 'bibdk_footbar',
     '#footer_menu_links' => drupal_render($footer_menu),
     '#home_path' => $home_path,
     '#footerlogo_path' => $footerlogo_path,
-    '#footerlogo_twitter_path2' => $footerlogo_twitter_path2,
-    '#footerlogo_facebook_path2' => $footerlogo_facebook_path2,
-    '#footerlogo_play_path2' => $footerlogo_play_path2,
+    '#footerlogo_twitter_path' => $footerlogo_twitter_path,
+    '#footerlogo_facebook_path' => $footerlogo_facebook_path,
+    '#footerlogo_play_path' => $footerlogo_play_path,
     '#overlay' => $overlay,
   );
-  
   return $footbar;
 }
 

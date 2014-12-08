@@ -10,41 +10,57 @@
     width: 100%;
   }
 
-  .footer-tab-color { 
-    background-color: $black--natural; //defined in _colors.scss
-  }
-
-  .footer-tab-bar1 {
-    height: $footbar_height;
-
-    .footer-bar-links {
-      li {
-        display: inline-block;
-        width: 24.7%;
-        padding-left: 10px;
-        padding-top: 13px; 
-      }
+  @media #{$large-up} {
+    .footer-tab-wrapper { 
+      background-color: $black--natural; //defined in _colors.scss
     }
-
-    .footer-bar-links a {
-      color: $white;
-      font-size: rem-calc(12px);
-    }  
-
   }
 
-  .footer-tab-bar2 {
+  // styling for footer bar-1
+  .footer-tab-bar-1 {
+    height: $footbar_height;
+    display: none;
+
+    @media #{$large-up} {
+      display: block;
+      .footer-bar-links {
+        li {
+          display: inline-block;
+          width: 24.6%;
+          padding-left: rem-calc(10px);
+          padding-top: rem-calc(13px); 
+        }
+      }
+
+      .footer-bar-links a {
+        color: $white;
+        font-size: rem-calc(12px);
+      }  
+    }
+  }
+
+  // styling for footer bar-2
+  .footer-tab-bar-2 {
     height: $footbar_height;
 
     .footer-logo {
       margin-top: rem-calc(10px);
+      margin-left: rem-calc(2px);
     }
 
-    .footer-social-links a {
-      display: inline-block;
-      margin-top: rem-calc(10px);
+    .footer-social-links {
+      text-align: right;
+      @media #{$medium-only} {
+        text-align: center;
+      }
+      @media #{$small-only} {
+        text-align: center;
+      }
+      a {
+        padding: rem-calc(10px);
+        display: inline-block;
+      }
     }
-
   }
 
 }
