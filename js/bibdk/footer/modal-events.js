@@ -8,8 +8,8 @@
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
-    if(!Modernizr.touch){
-      var $mainwrapper = $("#mainwrapper");
+    var $mainwrapper = $("#mainwrapper");
+    if(!Modernizr.touch) {
       $mainwrapper.css("filter", "blur(20px)");
       $mainwrapper.css("-webkit-filter", "blur(20px)");
       $mainwrapper.css("-moz-filter", "blur(20px)");
@@ -24,11 +24,21 @@
     Drupal.attachBehaviors(modal, null);
     Drupal.bibdkModal.addAccessibilityInfo(window.document);
     onLoad.setFocus();
+
+    if(window.matchMedia(window.Foundation.media_queries.small)) {
+      var $mainwrapper = $("#mainwrapper");
+      $mainwrapper.addClass('hide');
+    }
   });
 
   $(document).on('close.fndtn.reveal', '[data-reveal]', function() {
     var modal = document.getElementById('bibdk-modal');
     Drupal.detachBehaviors(modal, null, null);
+
+    if(window.matchMedia(window.Foundation.media_queries.small)) {
+      var $mainwrapper = $("#mainwrapper");
+      $mainwrapper.removeClass('hide');
+    }
   });
 
   $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
