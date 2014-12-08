@@ -25,20 +25,16 @@
     Drupal.bibdkModal.addAccessibilityInfo(window.document);
     onLoad.setFocus();
 
-    if(window.matchMedia(window.Foundation.media_queries.small)) {
-      var $mainwrapper = $("#mainwrapper");
-      $mainwrapper.addClass('hide');
-    }
+    var $mainwrapper = $("#mainwrapper");
+    $mainwrapper.addClass('hide-for-small-only');
   });
 
   $(document).on('close.fndtn.reveal', '[data-reveal]', function() {
     var modal = document.getElementById('bibdk-modal');
     Drupal.detachBehaviors(modal, null, null);
 
-    if(window.matchMedia(window.Foundation.media_queries.small)) {
-      var $mainwrapper = $("#mainwrapper");
-      $mainwrapper.removeClass('hide');
-    }
+    var $mainwrapper = $("#mainwrapper");
+    $mainwrapper.removeClass('hide-for-small-only');
   });
 
   $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
