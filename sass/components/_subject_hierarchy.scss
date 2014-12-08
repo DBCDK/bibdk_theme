@@ -2,8 +2,15 @@
 // Bibliotek.dk Subject hierarchy
 // =============================================================================
 
-#bibdk-subject-hierarchy {
+.bibdk-subject-hierarchy-panel-header {
+  background-color: $grey-bg--section;;
+  padding-top: 0.75em;
+  padding-right:0.75em;
+  padding-bottom: 0;
+  padding-left: 0.75em;
+}
 
+#bibdk-subject-hierarchy, .bibdk-subject-hierarchy-panel-header {
   .themes__item {
     float: left;
     width: 25%;

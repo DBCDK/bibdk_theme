@@ -55,15 +55,16 @@
 }
 
 // Subjects
-#subjectshierarchy {
+#bibdk-subject-hierarchy {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  
+}
+
+#subjectshierarchy {
   display: none;
-  
   @media #{$medium-up} {
     display: block;
-    background-color: $grey-7;
+    background-color: $white;
   }
 }
 
@@ -74,7 +75,7 @@
   
   @media #{$medium-up} {
     display: block;
-    background-color: $grey-6; 
+    background-color: $grey-6;
     
     .lift-columns & {
       padding-top: 10px;
