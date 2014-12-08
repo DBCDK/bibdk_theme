@@ -1,4 +1,7 @@
 #mainwrapper {
   transition: .25s -webkit-filter linear;
+  transition: .25s -moz-filter linear;
+  transition: .25s -o-filter linear;
+  transition: .25s -ms-filter linear;
   transition: .25s filter linear;
 }
