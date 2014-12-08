@@ -1,7 +1,8 @@
 .bibdk-custom-header-block{
+  @extend .hide-for-medium-down;
   padding: 10px 5px 10px 5px;
   background-color: $grey-bg--section;;
-  margin-top: 5px;
+  margin-top: $spacing;
 
   h1 {
     float:left;
