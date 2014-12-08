@@ -8,12 +8,14 @@
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
-    var $mainwrapper = $("#mainwrapper");
-    $mainwrapper.css("filter", "blur(20px)");
-    $mainwrapper.css("-webkit-filter", "blur(20px)");
-    $mainwrapper.css("-moz-filter", "blur(20px)");
-    $mainwrapper.css("-o-filter", "blur(20px)");
-    $mainwrapper.css("-ms-filter", "blur(20px)");
+    if(!Modernizr.touch){
+      var $mainwrapper = $("#mainwrapper");
+      $mainwrapper.css("filter", "blur(20px)");
+      $mainwrapper.css("-webkit-filter", "blur(20px)");
+      $mainwrapper.css("-moz-filter", "blur(20px)");
+      $mainwrapper.css("-o-filter", "blur(20px)");
+      $mainwrapper.css("-ms-filter", "blur(20px)");
+    }
   });
 
 // attaching behaviors when the modal have finished opening
