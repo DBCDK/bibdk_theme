@@ -27,6 +27,21 @@
     height: 15px;
     vertical-align: middle;
     margin: 0 3px;
+  } @else if ($name == "svg-social-twitter") {
+    width: 20px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-social-facebook") {
+    width: 10px;
+    height: 21px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-social-youtube") {
+    width: 23px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 0 3px;
   }
 
   @if $color == "black" {
