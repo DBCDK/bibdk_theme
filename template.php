@@ -76,6 +76,15 @@ function bibdk_theme_theme() {
         'href' => ''
       ),
     ),
+    'span_with_svg' => array(
+      'path' => $path . 'global',
+      'template' => 'span-with-svg',
+      'variables' => array(
+        'content' => '',
+        'attributes' => array(),
+        'svg' => '',
+      ),
+    ),
   );
 }
 

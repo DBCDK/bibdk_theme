@@ -248,6 +248,7 @@
 .order-any-btn-list {
   right: 0;
   width: 300px;
+  background-color: $grey-bg--page; 
 
   h3 {
     color: $blue;
@@ -271,10 +272,49 @@
     }
   }
 
-    a.infotext-order-any-edition-link {
-      padding: 0px;
-      color: $blue;
+  a.infotext-order-any-edition-link {
+    padding: 0px;
+    color: $blue;
+  }
+
+  span.mat-type {
+    color: $black--natural;
+    .icon {
+      height: 16px;
     }
+  }
+
+  .svg-media-article {
+    @include svg("svg-media-article", $black--natural);
+  }
+
+  .svg-media-audiobook {
+    @include svg("svg-media-audiobook", $black--natural);
+  }
+
+  .svg-media-book {
+    @include svg("svg-media-book", $black--natural);
+  }
+
+  .svg-media-emat {
+    @include svg("svg-media-emat", $black--natural);
+  }
+
+  .svg-media-game {
+    @include svg("svg-media-game", $black--natural);
+  }
+
+  .svg-media-movie {
+    @include svg("svg-media-movie", $black--natural);
+  }
+
+  .svg-media-music {
+    @include svg("svg-media-music", $black--natural);
+  }
+
+  .svg-media-note {
+    @include svg("svg-media-note", $black--natural);
+  }
 
   table {
     border-collapse:separate;
@@ -291,15 +331,16 @@
       td {
         vertical-align: middle;
         &:first-child {
+          vertical-align: left;
           font-weight: bold;
         }
       }
 
       &.odd{
-        background-color: $zebra-odd;
+        // background-color: $zebra-odd;
       }
       &.even{
-        background-color: $zebra-even;
+        // background-color: $zebra-even;
       }
     }
   }
