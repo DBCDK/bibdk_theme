@@ -19,15 +19,16 @@
 
   .form-type-textfield {
     width: 80%;
-    padding-right: 20px;
+    margin-left: 0;
     @include box-sizing("border-box");
   }
 
   .form-actions {
     width: 20%;
+    margin-left: 0;
   }
 
-  input[type=text] {
+  input[type="text"] {
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
@@ -35,13 +36,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     height: 40px;
     line-height: 40px;
     font-size: 1.333333em; // 16px
     font-weight: bold;
   }
-
 }
 
 

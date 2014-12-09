@@ -45,16 +45,17 @@
 
 #bibdk-vejviser-header {
   float: right;
-  margin-top: -40px;
+  margin-top: -50px;
   width: 100%;
   color: $grey-2;
+
   #bibdk-vejviser-count {
     color: $grey-3;
     white-space: nowrap;
     font-size: large;
     line-height: 1.5;
     float: left;
-    padding: 0px 20%;
+    margin: rem-calc(10 0 0 180);
   }
 
   .vejviser-raw {
@@ -75,11 +76,9 @@
   }
 
   .form-type-textfield {
-    width: 300px;
-    margin-right: 5px;
-  }
-  .form-actions {
-    width: 85px;
+    padding: rem-calc(10);
+    width: auto;
+    min-width: 280px;
   }
 
   form {

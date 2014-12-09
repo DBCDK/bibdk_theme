@@ -295,9 +295,6 @@ input[type="submit"].btn-add-library {
   a {
     font-size: 14px;
     margin-left: 5px;
-    &:first-child {
-      margin-left: 0;
-    }
   }
   a {
     @include box-sizing(border-box);
