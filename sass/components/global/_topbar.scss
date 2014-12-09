@@ -8,7 +8,7 @@ $topbar_height: rem-calc(45px);
     @include svg("svg-chat", "white");
   }
 
-  .svg-user{
+  .svg-user {
     @include svg("svg-user", "white");
   }
 }
@@ -30,7 +30,7 @@ $topbar_height: rem-calc(45px);
 
     a {
       margin: 0 10px;
-      @include typo( "link", "topbar-links", "white" );
+      @include typo("link", "topbar-links", "white");
     }
   }
 }
@@ -44,7 +44,7 @@ $topbar_height: rem-calc(45px);
 
   .menu-text {
     display: none;
-    @include typo( "link", "topbar-links", "white" );
+    @include typo("link", "topbar-links", "white");
 
     @media #{$medium-up} {
       display: inline;
@@ -117,13 +117,32 @@ ul.off-canvas-list {
 
 ul.off-canvas-footer-menu {
   border-bottom: 1px solid $grey-border;
-  padding: rem-calc(20px) 0 rem-calc(10px) 0;
+  padding: rem-calc(20 0 10 0);
 
   li {
-    padding: 0 0 rem-calc(8px) rem-calc(20px);
+    padding: rem-calc(0 0 8 20);
     a {
       color: $grey-bg--background;
       font-size: rem-calc(12px);
     }
+  }
+}
+
+.social-links {
+  margin: rem-calc(20 0 0 20);
+
+  a {
+    padding-right: rem-calc(10);
+  }
+
+  .svg-social-twitter {
+    @include svg("svg-social-twitter", "blue");
+  }
+  .svg-social-facebook {
+    @include svg("svg-social-facebook", "blue");
+  }
+
+  .svg-social-youtube {
+    @include svg("svg-social-youtube", "blue");
   }
 }
