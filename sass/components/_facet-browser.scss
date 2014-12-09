@@ -55,6 +55,10 @@
     cursor: pointer;
   }
 
+  .select {
+    cursor: pointer;
+  }
+
   label {
     @include rem('font-size', 12px);
   }
