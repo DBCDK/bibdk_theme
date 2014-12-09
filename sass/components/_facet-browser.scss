@@ -56,7 +56,7 @@
   }
 
   label {
-    @include rem('font-size', 12px);
+    @include typo("label", "facets", "grey-dark");
   }
 
   .form-item {

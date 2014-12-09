@@ -10,8 +10,11 @@
   text-decoration: none;
   color: $color;
   background: transparent;
-  text-shadow: none;
-  font: inherit; /* Inherit font settings (doesn't work in IE7-) */
+
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: rem-calc(14);
+
   line-height: normal; /* Override line-height to avoid spacing issues */
   cursor: pointer; /* Buttons don't make the cursor change in all browsers */
   -moz-user-select: text; /* Make button text selectable in Gecko */

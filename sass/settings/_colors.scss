@@ -21,4 +21,10 @@ $grey-text--light: #ccc;
 $grey-bg--page: #e7e8ea; // Light
 $grey-bg--section: #f6f7f8; // Lightest
 $grey-bg--tabs: #4d5052; // Dark
-$grey-bg--background: #262a2c // Darkest
+$grey-bg--background: #262a2c; // Darkest
+
+// Drupal messages (drupal_set_message())
+$notice:            #5cd6f2; // Blue
+$status:            #93ffde; // Green
+$warning:           #f5fcbe; // Yellow
+$error:             #efcccc; // Red

@@ -1,0 +1,214 @@
+// =============================================================================
+// Bibdk Modal
+// -----------------------------------------------------------------------------
+// For settings related to the modal see settings/_modal.scss or
+// http://foundation.zurb.com/docs/components/reveal.html
+// =============================================================================
+
+.bibdk-modal-header {
+  height: rem-calc(60);
+  display: table;
+}
+
+.bibdk-modal-title {
+  @include typo("title", "section", "black");
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(30);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#bibdk-modal-form {
+
+  input[type="submit"] {
+    margin: rem-calc(20) rem-calc(20) rem-calc(20) 0;
+  }
+
+  p {
+    margin: 0 20px;
+  }
+
+  form {
+    padding-top: rem-calc(20);
+  }
+
+  .message {
+    border: none;
+  }
+
+  .form-wrapper {
+    border: none;
+    padding: 0;
+  }
+
+  .element-wrapper {
+    margin-bottom: 0;
+    border: none;
+    background-color: $grey-bg--page;
+  }
+
+  .element {
+    border: none;
+  }
+
+  .block-ding-wayf {
+    display: none;
+
+    @media #{$medium-up} {
+      background-color: $grey-bg--section;
+      display: block;
+      padding: rem-calc(20) 0;
+    }
+  }
+
+  .ding-wayf-logon-block {
+    @include typo("title", "normal", "black");
+    text-align: left;
+    margin: 0 rem-calc(20);
+
+    a {
+      margin-left: 0;
+      margin-top: rem-calc(20);
+
+      :first-child {
+        margin-right: rem-calc(20);
+      }
+    }
+  }
+
+  .form-item {
+    border-radius: 0;
+    margin: 0 rem-calc(20) rem-calc(4) rem-calc(20);
+    padding: rem-calc(10);
+
+    &.form-type-checkbox {
+      padding-left: 0;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      border: none;
+      height: rem-calc(20);
+      padding: 0;
+      float: right;
+      color: $black;
+      width: 100%;
+      font-size: 16px;
+
+      &.error {
+        border: 1px solid $red;
+      }
+    }
+
+    input[type="checkbox"]{
+      margin-left: 5px;
+      margin-right: 0;
+    }
+
+    label {
+      @include typo("title", "small", "grey-dark");
+      font-weight: bold;
+      float: left;
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      padding-top: 2px;
+    }
+  }
+
+  .form-item-fake-password {
+    display: none;
+  }
+
+  .form-type-textfield,
+  .form-type-password,
+  .form-type-textarea {
+    background-color: $white;
+  }
+
+  .form-actions {
+    padding: 0;
+
+    .form-item {
+      padding: 0;
+    }
+
+    .ajax-progress {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+
+    .form-type-checkbox {
+      position: absolute;
+      width: 80px;
+      margin: rem-calc(27) 0 0;
+      right: 130px;
+
+      .form-checkbox {
+        height: 20px;
+        vertical-align: middle;
+        float: left;
+      }
+
+      label {
+        @include typo("link", "item-links", "grey-dark");
+        min-width: 60%;
+        max-width: none;
+        float: right;
+      }
+    }
+
+    .item-list {
+      text-align: left;
+      margin-left: rem-calc(20);
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        line-height: normal;
+        @include typo("link", "item-links", "black");
+      }
+    }
+  }
+
+  .fieldset-description{
+    padding: 0 rem-calc(20);
+  }
+
+  #bibdkcaptcha-controls {
+    background-color: $white;
+    margin: 0 rem-calc(20) 2px rem-calc(20);
+
+    padding: rem-calc(10) 0 rem-calc(10) rem-calc(10);
+
+
+    button {
+      border: none;
+      padding: 0;
+      img {
+        padding: 0;
+      }
+    }
+  }
+
+  // doing some very specifc styling to override stuff in _buttons.scss
+  #bibdk-favourite-user-form {
+    input[type="submit"] {
+      float: right;
+    }
+  }
+
+  .filter-guidelines {
+    padding: rem-calc(20) 0 0 rem-calc(20);
+  }
+
+  .bibdk-provider-form-inputs {
+    margin-bottom: 55px;
+  }
+}

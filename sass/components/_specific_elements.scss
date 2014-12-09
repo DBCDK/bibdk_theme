@@ -45,7 +45,7 @@
 
 #bibdk-vejviser-header {
   float: right;
-  margin-top: -60px;
+  margin-top: -40px;
   width: 100%;
   color: $grey-2;
   #bibdk-vejviser-count {
@@ -1004,21 +1004,6 @@ span.star.positive {
 span.star.negative {
   color: transparent;
   background-position: 0 0;
-}
-
-// =============================================================================
-// WAYF NemId login page
-// =============================================================================
-.ding-wayf-logon-block {
-  margin-top: 20px;
-
-  .ding-wayf-logoninfo {
-   vertical-align: sub;
-  }
-}
-
-#user-login .form-actions {
-   margin-top: -0.5em;
 }
 
 // =============================================================================

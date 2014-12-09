@@ -2,15 +2,9 @@
 // Import: Basic elements
 // =============================================================================
 
-// fake element wrapper(no border)
-.element-wrapper-fake {
-  padding: 12px;
-  margin-bottom: 10px;
-}
-
 .element-wrapper {
   background-color: $white;
-  border: solid 10px $grey-6;
+  border: solid 10px $grey-bg--page;
   margin-bottom: 10px;
   input[type="checkbox"] {
     border: none;
@@ -27,10 +21,6 @@
     width: 50%;
     margin-bottom: 1em;
   }
-}
-
-#popup .element {
-  border-bottom: solid 1px $grey-5;
 }
 
 .element-section {
@@ -333,37 +323,8 @@
 }
 
 // =============================================================================
-// Horizontal search form
-// =============================================================================
-
-.search-form-horizontal {
-  @include clearfix();
-  padding: 0;
-
-  .form-wrapper {
-    border: none;
-  }
-
-  .form-type-textfield,
-  .form-actions {
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: block;
-  }
-  input[type=text] {
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 100%;
-  }
-}
-
-
 // Helptexts
+// =============================================================================
 
 p.helptext {
   background-color: $blue;
@@ -384,9 +345,9 @@ p.helptext {
   }
 }
 
-//
+// =============================================================================
 // Paging, other
-//
+// =============================================================================
 .page-overlay .pager-first,
 .page-overlay .pager-previous,
 .page-overlay .pager-item,
