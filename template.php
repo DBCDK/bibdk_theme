@@ -279,7 +279,7 @@ function _bibdk_theme_get_my_page_menu_links() {
 function _bibdk_theme_get_topbar_links() {
   global $user;
   $links = array();
-  $chat = array(
+  $links[] = array(
     '#theme' => 'link_with_svg',
     '#title' => t('Spørg Biblioteksvagten'),
     '#href' => url('overlay/helpdesk'),
@@ -289,10 +289,9 @@ function _bibdk_theme_get_topbar_links() {
     ),
     '#svg' => 'svg-chat',
   );
-  $links[] = drupal_render($chat);
 
   if ($user->uid) {
-    $my_page = array(
+    $links[] = array(
       '#theme' => 'link_with_svg',
       '#title' => t('My page', array(), array('context' => 'bibdk_frontend')),
       '#href' => url('user'),
@@ -301,21 +300,17 @@ function _bibdk_theme_get_topbar_links() {
       ),
       '#svg' => 'svg-user',
     );
-
-    $links[] = drupal_render($my_page);
   }
   else {
-    $login = array(
+    $links[] = array(
       '#theme' => 'link_with_svg',
       '#title' => t('Log ind'),
       '#href' => url('user/login'),
       '#svg' => 'svg-user',
     );
-
-    $links[] = drupal_render($login);
   }
 
-  return $links;
+  return drupal_render($links);
 }
 
 /**
