@@ -25,9 +25,7 @@ input:-webkit-autofill {
 #bibdk-modal-form {
 
   input[type="submit"] {
-    margin-top: rem-calc(20);
-    margin-bottom: rem-calc(20);
-    margin-right: rem-calc(20);
+    marign: rem-calc(20) rem-calc(20) rem-calc(20) 0;
   }
 
   p {
