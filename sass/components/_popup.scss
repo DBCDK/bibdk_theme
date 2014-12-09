@@ -15,29 +15,26 @@
 // Popup window pages
 // =============================================================================
 #popup {
-  margin: rem-calc(20px);
+
+  #messages {
+    padding: rem-calc(20) 0 0 0;
+  }
+
+  .message {
+    border: none;
+  }
 
   .element {
     border: none;
   }
 
-  .region-content {
-    margin: 0 20px 15px 20px;
-  }
-
   .element-wrapper {
     margin-bottom: 0;
     border: none;
-    background-color: #e7e8ea;
-  }
-
-  .form-wrapper:last-child {
-//    border-bottom-width: 0px;
-//    margin-bottom: 0px;
+    background-color: $grey-bg--page;
   }
 }
 
 #popup-button-close {
-  float: right;
-  margin-right: 10px;
+  margin-left: rem-calc(20);
 }
