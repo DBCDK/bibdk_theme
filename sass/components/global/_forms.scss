@@ -52,6 +52,10 @@
   background-color: $white;
 }
 
+.form-item-fake-password {
+  display: none;
+}
+
 // =============================================================================
 // Fieldsets
 // =============================================================================
@@ -97,7 +101,7 @@ label {
   margin-bottom: 0;
   padding-bottom: 5px;
   padding-top: 2px;
-  width: auto;
+  width: 100%;
 }
 
 label.option {
@@ -450,7 +454,7 @@ textarea::-webkit-input-placeholder {
 }
 
 // =============================================================================
-// Reservation
+// Reservation -- //TODO mmj move to popup i bottom of file
 // =============================================================================
 
 .page-reservation .element {
@@ -507,31 +511,6 @@ textarea::-webkit-input-placeholder {
   line-height: 1.3em;
 }
 
-.page-reservation #modalContent form {
-  margin: 0 10px;
-
-  .bibdk-provider-form-inputs {
-    margin-bottom: 75px;
-  }
-}
-
-.page-overlay-favourite-userdata,
-.page-reservation #bibdk-reservation-create-wizard-form {
-  input[type="text"],
-  input[type="password"],
-  #edit-subdivision {
-    float: left;
-    margin-right: 20px;
-    width: 260px;
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  #edit-anyfield {
-    width: 100%;
-  }
-}
-
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
@@ -558,39 +537,6 @@ select#edit-favouriteselector {
   padding: 10px 0 0 0;
 }
 
-.page-reservation #popup .form-wrapper .form-submit {
-  margin-bottom: 0px;
-  margin-left: 0px;
-}
-
-.page-reservation .fieldset-legend {
-  padding: 20px 0 10px;
-}
-
-.page-reservation #edit-manifestation .fieldset-legend {
-  padding: 10px 0;
-}
-
-.page-reservation .container-inline-date .date-padding {
-  float: left;
-  padding: 5px 10px;
-}
-
-.page-reservation #edit-branchdata {
-  .branch-data {
-    float: left;
-    margin-right: 20px;
-  }
-  input {
-    float: right;
-    margin-right: 20px;
-  }
-}
-
-.page-overlay-favourite-userdata label, .page-reservation label {
-  text-align: left;
-}
-
 .page-reservation {
   #edit-infotext-wrapper {
     clear: both;
@@ -598,7 +544,8 @@ select#edit-favouriteselector {
 
   .form-actions {
     input[type="submit"]:first-child {
-      margin-left: 20px;
+      height: rem-calc(40);
+      margin-left: rem-calc(10);
     }
   }
 
@@ -623,78 +570,93 @@ select#edit-favouriteselector {
       margin: 5px 10px 5px 45px;
     }
   }
-}
 
-// TODO: Needs to be refaktored
-.page-reservation .reservation-online-links.form-wrapper {
-  padding: 1em 2em;
-  background: $grey-7;
-  border: 1px solid $white;
-  a {
-    display: block;
+  #edit-manifestation .fieldset-legend {
+    padding: 10px 0;
   }
-  p {
-    margin: 1em 0;
+
+  #edit-branchdata {
+    .branch-data {
+      float: left;
+      margin-right: 20px;
+    }
+    input {
+      float: right;
+      margin-right: 20px;
+    }
   }
-  .icon {
-    display: none;
+
+  label {
+    text-align: left;
   }
-  //@extend .message--status;
 }
 
 // =============================================================================
 // Popup
 // =============================================================================
 
-#popup .region-content {
-  margin: 10px 20px;
-}
+#popup {
+  .fieldset-legend {
+    padding: 20px 0 10px;
+    @include typo("title", "section", "black");
+  }
 
-#popup .form-wrapper .form-submit {
-  //margin-bottom: 20px;
-}
+  .region-content {
+    margin: 10px 20px;
+  }
 
-#popup #edit-navigation .form-submit {
-  margin-left: 20px;
-}
+  #edit-navigation .form-submit {
+    margin-left: 20px;
+  }
 
-#popup article.manifestation {
-  padding: 0 20px;
-}
+  article.manifestation {
+    padding: 0 20px;
+  }
 
-#popup #edit-needbeforedate div.form-item-needBeforeDate-month,
-#popup #edit-needbeforedate div.form-item-needBeforeDate-day {
-  float: left;
-  margin-right: 20px;
-}
+  #edit-needbeforedate div.form-item-needBeforeDate-month,
+  #edit-needbeforedate div.form-item-needBeforeDate-day {
+    float: left;
+    margin-right: 20px;
+  }
 
-#popup article.selected_branch .element-section {
-  border-bottom-width: 0;
-  padding: 0 0 20px 20px;
-}
+  article.selected_branch .element-section {
+    border-bottom-width: 0;
+    padding: 0 0 20px 20px;
+  }
 
-#popup article.selected_branch h3 {
-  font-size: 1.2em;
-}
+  article.selected_branch h3 {
+    font-size: 1.2em;
+  }
 
-#popup article.manifestation {
-  padding-top: 20px;
-}
+  article.manifestation {
+    padding-top: 20px;
+  }
 
-#popup #edit-userparameters {
-  padding-top: 0;
-  padding-bottom: 20px;
-}
+  #edit-userparameters {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 
-#popup #edit-userparameters .form-item {
-  padding: 20px 0 0 0;
-}
+  #edit-userparameters .form-item {
+    padding: 20px 0 0 0;
+  }
 
-#popup .close-link-wrapper {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  text-align: center;
+  .close-link-wrapper {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .infomedia-search-group {
+    @extend .inline-search-group;
+    .search-input-field {
+      padding: 8px;
+      input {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .inline-search-group {
@@ -709,16 +671,112 @@ select#edit-favouriteselector {
   }
 }
 
-#popup .infomedia-search-group {
-  @extend .inline-search-group;
-  .search-input-field {
-    padding: 8px;
-    input {
-      margin-bottom: 20px;
+.infomedia-article input {
+  padding: 8px;
+}
+
+// =============================================================================
+// Popup -- Reservation
+// =============================================================================
+
+.page-reservation {
+  #popup {
+    #edit-step-info {
+      padding: 0;
+      margin: 0;
+    }
+
+    .form-item {
+      border-radius: 0;
+      margin: 0 0 rem-calc(4) 0;
+      padding: rem-calc(10);
+
+      input[type="text"],
+      input[type="password"] {
+        border: none;
+        height: rem-calc(20);
+        padding: 0;
+        float: right;
+        color: $black;
+        width: 100%;
+        font-size: 16px;
+
+        &.error {
+          border: 1px solid $red;
+        }
+      }
+    }
+
+    // ==========================
+    // Need before date -- Start
+    // ==========================
+    .form-item-needBeforeDate {
+      margin: rem-calc(20) 0;
+      background-color: $white;
+      width: 100%;
+    }
+
+    #edit-needbeforedate {
+      padding: 0;
+
+      .form-type-select {
+        padding: 0;
+      }
+    }
+
+    // ==========================
+    // Need before date -- End
+    // ==========================
+
+    #edit-agency-search-fieldset {
+      .form-type-textfield {
+        max-width: 80%;
+      }
     }
   }
 }
 
-.infomedia-article input {
-  padding: 8px;
+.page-reservation .reservation-online-links.form-wrapper {
+  padding: 1em 2em;
+  background: $grey-7;
+  border: 1px solid $white;
+  a {
+    display: block;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+// =============================================================================
+// Horizontal search form
+// =============================================================================
+
+.search-form-horizontal {
+  @include clearfix();
+  padding: 0;
+
+  .form-wrapper {
+    border: none;
+  }
+
+  .form-type-textfield,
+  .form-actions {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    display: block;
+  }
+  input[type=text] {
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 100%;
+  }
 }
