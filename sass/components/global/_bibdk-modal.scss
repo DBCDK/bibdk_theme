@@ -144,14 +144,15 @@ input:-webkit-autofill {
 
     .form-type-checkbox {
       position: absolute;
-      width: 80px;
-      margin: rem-calc(27) 0 0;
-      right: 130px;
+      width: auto;
+      margin: rem-calc(27 0 0);
+      right: rem-calc(120);
 
       .form-checkbox {
         height: 20px;
         vertical-align: middle;
         float: left;
+        margin-right: rem-calc(5);
       }
 
       label {
