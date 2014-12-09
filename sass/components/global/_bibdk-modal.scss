@@ -56,13 +56,8 @@ input:-webkit-autofill {
   }
 
   .block-ding-wayf {
-    display: none;
-
-    @media #{$medium-up} {
-      background-color: $grey-bg--section;
-      display: block;
-      padding: rem-calc(20) 0;
-    }
+    background-color: $grey-bg--section;
+    padding: rem-calc(20 0 30 0);
   }
 
   .ding-wayf-logon-block {
@@ -77,12 +72,16 @@ input:-webkit-autofill {
       :first-child {
         margin-right: rem-calc(20);
       }
+
+      img {
+        max-height: rem-calc(25);
+      }
     }
   }
 
   .form-item {
     border-radius: 0;
-    margin: 0 rem-calc(20) rem-calc(4) rem-calc(20);
+    margin: rem-calc(0 20 4 20);
     padding: rem-calc(10);
 
     &.form-type-checkbox {
