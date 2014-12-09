@@ -453,64 +453,6 @@ textarea::-webkit-input-placeholder {
   text-align: right;
 }
 
-// =============================================================================
-// Reservation -- //TODO mmj move to popup i bottom of file
-// =============================================================================
-
-.page-reservation .element {
-  padding-top: 10px;
-
-  #messages {
-    background-color: inherit;
-  }
-}
-
-.page-reservation .form-step-guide.form-wrapper {
-  padding: 0;
-  border-bottom: none;
-}
-
-.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
-  padding: 10px 0;
-}
-
-.page-reservation .form-step-guide {
-  position: absolute;
-  top: 45px;
-  left: 10px;
-  right: 10px;
-
-  border-top-width: 10px;
-  border-top-style: solid;
-  border-top-color: $grey-6;
-  margin: 0 1px;
-
-  input[type="submit"] {
-    width: 25%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
-  }
-
-  input[type="submit"].inactive {
-    &:hover {
-      @include background-image(none);
-    }
-  }
-
-}
-
-.page-reservation .bottom-space {
-  padding-bottom: 20px;
-}
-
-.page-overlay-favourite-userdata label,
-.page-reservation label {
-  margin-bottom: 2px;
-  float: left;
-  line-height: 1.3em;
-}
-
 .form-item.form-item-favouriteselector {
   clear: both;
   padding: 0 0 20px 0;
@@ -589,6 +531,66 @@ select#edit-favouriteselector {
   label {
     text-align: left;
   }
+}
+
+// =============================================================================
+// Reservation
+// -----------------------------------------------------------------------------
+// The below trheee sections are a bit messy and could be cleaned up - also we
+// have a specific _popups.scss for styling of popups.
+// =============================================================================
+
+.page-reservation .element {
+  padding-top: 10px;
+
+  #messages {
+    background-color: inherit;
+  }
+}
+
+.page-reservation .form-step-guide.form-wrapper {
+  padding: 0;
+  border-bottom: none;
+}
+
+.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+  padding: 10px 0;
+}
+
+.page-reservation .form-step-guide {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  right: 10px;
+
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-top-color: $grey-6;
+  margin: 0 1px;
+
+  input[type="submit"] {
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+
+  input[type="submit"].inactive {
+    &:hover {
+      @include background-image(none);
+    }
+  }
+}
+
+.page-reservation .bottom-space {
+  padding-bottom: 20px;
+}
+
+.page-overlay-favourite-userdata label,
+.page-reservation label {
+  margin-bottom: 2px;
+  float: left;
+  line-height: 1.3em;
 }
 
 // =============================================================================
@@ -723,7 +725,6 @@ select#edit-favouriteselector {
         padding: 0;
       }
     }
-
     // ==========================
     // Need before date -- End
     // ==========================
