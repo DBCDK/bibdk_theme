@@ -1,0 +1,124 @@
+
+// =============================================================================
+// Work
+// =============================================================================
+
+//
+// Order any edition button
+//
+.order-any-btn-list {
+  right: 0;
+  width: 320px;
+  background-color: $grey-bg--page; 
+
+  a {
+    padding: 5px 10px;
+    &.btn-blue {
+      @extend .btn-blue;
+    }
+    &.btn-grey {
+      @extend .btn-grey;
+    }
+    &.btn-grey-light {
+      @extend .btn-grey-light;
+    }
+  }
+
+  a.infotext-order-any-edition-link {
+    padding: 0px;
+    color: $blue;
+  }
+
+  span.mat-type {
+    color: $black--natural;
+  }
+  
+  .svg-media-article {
+    @include svg("svg-media-article", "black");
+  }
+
+  .svg-media-audiobook {
+    @include svg("svg-media-audiobook", $black--natural);
+  }
+
+  .svg-media-book {
+    @include svg("svg-media-book", $black--natural);
+  }
+
+  .svg-media-emat {
+    @include svg("svg-media-emat", $black--natural);
+  }
+
+  .svg-media-game {
+    @include svg("svg-media-game", $black--natural);
+  }
+
+  .svg-media-movie {
+    @include svg("svg-media-movie", $black--natural);
+  }
+
+  .svg-media-music {
+    @include svg("svg-media-music", $black--natural);
+  }
+
+  .svg-media-sheetmusic {
+    @include svg("svg-media-sheetmusic", $black--natural);
+  }
+
+  .svg-star {
+    @include svg("svg-star", 'grey-light');
+  }
+
+  .in-cart {
+    .svg-star {
+      @include svg("svg-star", 'black');
+    }
+  }
+
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0px;
+    width: 100%;
+
+    th {
+      text-align:center;
+      padding-left: 10px;
+    }
+
+    tr  {
+      text-align:center;
+      td {
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        vertical-align: middle;
+        padding: 4px 0;
+        font-weight: bold;
+        &:first-child {
+          text-align: left;
+          padding-left: 10px;
+          padding-right: 5px;
+        }
+        &:last-child {
+          text-align: left;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+
+      &.odd{
+        // background-color: $zebra-odd;
+      }
+      &.even{
+        // background-color: $zebra-even;
+      }
+    }
+  }
+}
+
+.reservation-btn-infotext {
+  font-size: 11px;
+  padding: 2px 15px;
+}
+
