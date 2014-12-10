@@ -18,11 +18,12 @@ $sprites-layout: smart;
 @import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
 @import "settings/settings";
 @import "settings/colors";
+@import "settings/accordion-settings";
 @import "settings/media-queries";
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
-
+@import "mixins/triangle";
 
 // =============================================================================
 // Foundation -- behold, here are all the Foundation components.
@@ -31,7 +32,7 @@ $sprites-layout: smart;
 
 @import "normalize";
 @import "foundation/components/grid";
-//  @import "foundation/components/accordion";
+  @import "foundation/components/accordion";
 //  @import "foundation/components/alert-boxes";
 //  @import "foundation/components/block-grid";
 //  @import "foundation/components/breadcrumbs";
@@ -119,6 +120,7 @@ $sprites-layout: smart;
 @import "components/global/topbar";
 @import "components/global/user-alerts";
 
+@import "components/accordion";
 @import "components/banner";
 @import "components/basic_elements";
 @import "components/global/buttons";

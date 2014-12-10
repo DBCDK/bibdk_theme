@@ -290,13 +290,6 @@
   @extend .strong-link; // defined in _basic_elements.scss
 }
 
-.actions {
-
-  float: right;
-  padding-left: 15px;
-  border-left: dotted 1px $grey-5;
-}
-
 .secondary-actions {
   padding: 10px 0 0 0;
   margin: 10px 0 0 0;
