@@ -7,12 +7,12 @@
 </div>
 
 <div class="row">
-  <div class="small-6 columns">
+  <div class="medium-6 hide-for-small columns">
     <div class="panel panel-left">
       <?php print $content['facets']; ?>
     </div>
   </div>
-  <div class="small-18 columns">
+  <div class="medium-18 columns">
     <div class="panel panel-middle">
       <section class="works">
         <div class="works-controls clearfix">
