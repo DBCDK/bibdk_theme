@@ -76,7 +76,31 @@ function bibdk_theme_theme() {
         'href' => ''
       ),
     ),
+    'bibdk_icon' => array(
+      'path' => $path . 'elements',
+      'template' => 'bibdk-icon',
+      'variables' => array(
+        'text' => '',
+        'icon' => '',
+      ),
+    ),
   );
+}
+
+function bibdk_theme_preprocess_bibdk_icon(&$vars) {
+  $svg_list = array(
+    'book' => 'media-book',
+    'literature' => 'media-book',
+    'online' => 'media-emat',
+    'movie' => 'media-movie',
+    'music' => 'media-music',
+    'article' => 'media-article',
+    'note' => 'media-note',
+    'audiobook' => 'media-audiobook',
+  );
+  $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
+  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-emat';
+  $vars['icon'] = $icon;
 }
 
 /**
@@ -988,6 +1012,23 @@ function bibdk_theme_preprocess_link(&$link) {
   if (!empty($link['options']['svg'])) {
     $link['text'] = '<svg class="' . $link['options']['svg'] . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' . $link['options']['svg'] . '"></use></svg>' . $link['text'];
     $link['options']['html'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_ting_openformat_work().
+ *
+ * Add icons to tabs
+ *
+ * @param $vars
+ */
+function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
+  foreach($vars['types']['#items'] as $type) {
+    $icon = array(
+      '#theme' => 'bibdk_icon',
+      '#icon' => $type,
+    );
+    $vars['types']['#items'][$type] = drupal_render($icon);
   }
 }
 
