@@ -45,9 +45,10 @@ cfg.paths.js = {
 //Foundation JS libraries should be included below
 cfg.paths.foundation = {
   js: [
-    cfg.paths.foundation_js + "/foundation.js",
+    cfg.paths.foundation_js + "/foundation/foundation.js",
     cfg.paths.foundation_js + "/foundation/foundation.offcanvas.js",
     cfg.paths.foundation_js + "/foundation/foundation.reveal.js",
+    cfg.paths.foundation_js + "/foundation/foundation.accordion.js",
     cfg.paths.foundation_js + "/vendor/fastclick.js"
   ]
 };
