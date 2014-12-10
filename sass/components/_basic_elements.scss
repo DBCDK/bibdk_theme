@@ -327,7 +327,6 @@
 
 p.helptext {
   background-color: $blue;
-  @include border-radius(3px);
   width: auto;
   border: none;
   display: inline-block;
@@ -336,11 +335,11 @@ p.helptext {
   padding: 0 5px;
   font-size: 12px;
   color: $white;
-  cursor: pointer;
-  position: relative;
+  cursor: help;
   top: 3px;
   a {
     color: $white;
+    cursor: help;
   }
 }
 

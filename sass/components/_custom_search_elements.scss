@@ -51,7 +51,7 @@ div#search-advanced-panel {
     width: 100%;
   }
 
-  .popover  {
+  .popover {
     left: 0;
     text-align: left;
     .user-msg {
@@ -59,31 +59,15 @@ div#search-advanced-panel {
     }
   }
 
-  input {
-    margin-top: 2px;
-    height: 30px;
-    line-height: 30px;
-  }
-
   input.form-checkbox, input.form-radio {
-    height: 20px;
-    line-height: 20px;
+    line-height: rem-calc(20);
     margin-top: 1px;
   }
 
   select {
-    margin-top: 5px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 3px 3px 3px 3px;
-    padding: 4px;
   }
 
   option {
-    height: 20px;
-    line-height: 20px;
-    padding: 4px 6px;
-    border-radius: 3px 3px 3px 3px;
   }
 
   .element-wrapper {
@@ -162,24 +146,38 @@ div#search-advanced-panel {
       font-size: 16px;
       padding: 0;
     }
+
     div.fieldset-wrapper {
       clear: both;
       text-align: right;
+
       .fieldset-legend {
         float: left;
         max-width: inherit;
+
+        label {
+          color: $black;
+          font-weight: bold;
+        }
       }
+
       .form-type-textfield {
         margin-bottom: 0;
         margin-right: 1%;
         width: 100%;
       }
+
       .fieldset-description {
         white-space: nowrap;
         display: inline-block;
       }
 
+      label {
+        color: $black;
+        font-weight: normal;
+      }
     }
+
     div.bibdk-custom-search-element {
       display: block;
       clear: both;
@@ -190,6 +188,7 @@ div#search-advanced-panel {
         margin: 0;
         padding: 0;
         display: block;
+
         .toggle-subgroup {
           @include inline-block(top);
           width: 15px;
@@ -208,14 +207,17 @@ div#search-advanced-panel {
         }
       }
       div.form-type-checkbox, div.form-type-radio {
-        float: none;
+        height: rem-calc(25px);
+
         label {
           display: block;
           float: left;
+          line-height: 15px;
         }
         input {
           display: block;
           float: left;
+          margin-top: 1px;
         }
       }
     }
@@ -391,7 +393,6 @@ form#search-block-form fieldset#edit-advanced {
   }
 }
 
-
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/film'],
 .page-bibdk-frontpage-film div#search-advanced-panel {
   .element-wrapper.filmens_titel,
@@ -496,7 +497,6 @@ form#search-block-form fieldset#edit-advanced {
   }
 }
 
-
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/spil'],
 .page-bibdk-frontpage-spil div#search-advanced-panel {
   select {
@@ -583,7 +583,6 @@ form#search-block-form fieldset#edit-advanced {
   }
 }
 
-
 .page-search-work form#search-block-form[data-type='bibdk_frontpage/noder'],
 .page-bibdk-frontpage-noder div#search-advanced-panel {
   .materiale {
@@ -615,7 +614,7 @@ div#search-advanced-panel .custom-search-options-list {
   width: 600px;
   height: 460px;
 
-  .panel-select{
+  .panel-select {
     @extend .two-panel-multi-select;
     .form-type-select {
       height: 350px;
