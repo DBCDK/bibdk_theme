@@ -10,12 +10,15 @@
   text-decoration: none;
   color: $color;
   background: transparent;
-  text-shadow: none;
-  font: inherit; /* Inherit font settings (doesn't work in IE7-) */
+
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: rem-calc(14);
+
   line-height: normal; /* Override line-height to avoid spacing issues */
   cursor: pointer; /* Buttons don't make the cursor change in all browsers */
   -moz-user-select: text; /* Make button text selectable in Gecko */
-/* Make sure keyboard users get visual feedback */
+  /* Make sure keyboard users get visual feedback */
   &:hover,
   &:focus,
   &:disabled:hover,
@@ -29,9 +32,9 @@
     @extend a.inactive;
     @include background-image(linear-gradient(transparent, transparent));
   }
-/* Remove mystery padding in Gecko browsers.
- * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
- */
+  /* Remove mystery padding in Gecko browsers.
+   * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+   */
   &::-moz-focus-inner {
     padding: 0;
     border: 0;

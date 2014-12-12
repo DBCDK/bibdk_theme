@@ -1,13 +1,6 @@
 // =============================================================================
 // Page sections
 // =============================================================================
-
-// Topbar
-#topbar {
-  @extend .padded--horizontal;
-  background-color: $black;
-}
-
 // Header
 #header {
   @extend .padded--horizontal;
@@ -27,7 +20,7 @@
 #search-panel {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $grey-6;
+  background-color: $grey-bg--page;
 
   .lift-columns & {
     padding-bottom: 0;
@@ -57,7 +50,7 @@
   
   @media #{$medium-up} {
     display: block;
-    background-color: $white; 
+    background-color: $grey-bg--page;
   }
 }
 
@@ -70,7 +63,7 @@
   
   @media #{$medium-up} {
     display: block;
-    background-color: $grey-7;
+    background-color: $grey-bg--page;
   }
 }
 
@@ -81,11 +74,11 @@
   
   @media #{$medium-up} {
     display: block;
-    background-color: $white; 
+    background-color: $grey-bg--page;
     
     .lift-columns & {
       padding-top: 10px;
-      background-color: $grey-6;
+      background-color: $grey-bg--page;
     }
   }
 }
@@ -94,13 +87,5 @@
 #banner {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $white;
-}
-
-// Footer
-#footer {
-  @extend .padded--horizontal;
-  @include rem('padding', 40px 0 100px);
-  text-align: center;
-  background-color: $grey-2;
+  background-color: $grey-bg--page;
 }

@@ -3,9 +3,9 @@
 // =============================================================================
 
 #search-block-wrapper {
-  background-color: $grey-7;
+  background-color: $grey-bg--section;
   padding: 7px 20px 7px;
-  border: solid 1px darken($grey-5, 5%);
+  border: solid 1px $grey-border;
 
   .form-wrapper {
     padding: 0;
@@ -13,21 +13,21 @@
 
 }
 
-
 #search-block-primary {
   @extend .clearfix;
 
   .form-type-textfield {
     width: 80%;
-    padding-right: 20px;
+    margin-left: 0;
     @include box-sizing("border-box");
   }
 
   .form-actions {
     width: 20%;
+    margin-left: 0;
   }
 
-  input[type=text] {
+  input[type="text"] {
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
@@ -35,15 +35,13 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     height: 40px;
     line-height: 40px;
     font-size: 1.333333em; // 16px
     font-weight: bold;
   }
-
 }
-
 
 #search-advanced-toggle {
   margin-top: 15px;
@@ -52,8 +50,6 @@
 #search-advanced {
   margin-top: 15px;
 }
-
-
 
 // =============================================================================
 // Search tabs
@@ -65,7 +61,7 @@
   li {
     padding-right: 1px;
     &:first-child {
-      padding-right: 0px;
+      padding-right: 1px;
     }
 
     a {
@@ -75,25 +71,18 @@
       background: $grey-3;
       @include transition(background-color .5s);
       margin-right: 1px;
-      border-top: solid 1px darken($grey-2, 5%);
+      border-top: solid 1px $grey-border;
       color: $white;
       height: 34px;
       line-height: 34px;
-      border: solid 0px #d4d4d4;
-      @include border-radius(0px);
-      border-width: 1px 1px 1px 0px;
-      box-shadow: none;
-      text-shadow: $text-shadow;
 
       &.active {
         color: $grey-3;
         background: $grey-7;
-        @include border-radius(3px);
-        text-shadow: $text-shadow;
         height: 34px;
         line-height: 34px;
-        border: none;
-        border-top: solid 1px darken($grey-5, 5%);
+        border: solid 1px $grey-border;
+        border-bottom: none;
         position: relative;
         margin-top: 0px;
         &:hover {
@@ -102,20 +91,12 @@
         }
       }
     }
+
     &:first-child a {
-      border-left: solid 1px darken($grey-5, 5%);
-      @include border-radius(0);
-      &.active {
-        @include border-radius(3px);
-      }
+      border-left: solid 1px $grey-border;
     }
     &:last-child a {
-      border-right: solid 1px darken($grey-5, 5%);
-      @include border-radius(0);
-      &.active {
-        @include border-radius(3px);
-      }
+      border-right: solid 1px $grey-border;
     }
   }
-
 }

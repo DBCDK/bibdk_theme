@@ -16,7 +16,12 @@ $sprites-layout: smart;
 // Initial stuff
 // =============================================================================
 @import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
-@import "settings";
+@import "settings/settings";
+@import "settings/colors";
+@import "settings/media-queries";
+@import "mixins/typography";
+@import "mixins/svg";
+@import "settings/modal";
 
 
 // =============================================================================
@@ -49,7 +54,7 @@ $sprites-layout: smart;
 //  @import "foundation/components/pricing-tables";
 //  @import "foundation/components/progress-bars";
 //  @import "foundation/components/range-slider";
-//  @import "foundation/components/reveal";
+  @import "foundation/components/reveal";
 //  @import "foundation/components/side-nav";
 //  @import "foundation/components/split-buttons";
 //  @import "foundation/components/sub-nav";
@@ -60,8 +65,8 @@ $sprites-layout: smart;
 //  @import "foundation/components/tooltips";
 //  @import "foundation/components/top-bar";
 //  @import "foundation/components/type";
-//  @import "foundation/components/offcanvas";
-//  @import "foundation/components/visibility";
+  @import "foundation/components/offcanvas";
+  @import "foundation/components/visibility";
 
 
 // =============================================================================
@@ -97,8 +102,7 @@ $sprites-layout: smart;
 // =============================================================================
 // Import default styling
 // =============================================================================
-@import "forms";
-@import "typography";
+@import "components/global/forms";
 
 
 // =============================================================================
@@ -106,44 +110,42 @@ $sprites-layout: smart;
 // =============================================================================
 @import "components/base/helpers";
 @import "components/base/modal";
-@import "components/global/page-sections";
+
+@import "components/global/bibdk-modal";
+@import "components/global/footer";
 @import "components/global/messages";
+@import "components/global/mainwrapper";
+@import "components/global/page-sections";
+@import "components/global/topbar";
 @import "components/global/user-alerts";
-@import "components/global/global-login-menu";
-@import "components/global/topbar-menu";
-@import "components/global/header-actions";
+
+@import "components/banner";
+@import "components/basic_elements";
+@import "components/global/buttons";
+@import "components/cart";
+@import "components/custom_search_elements";
 @import "components/dropdown";
-@import "components/rs-carousel";
-@import "components/page-title";
-@import "components/search-block-form";
-@import "components/tabs";
 @import "components/facet-browser";
+@import "components/global_elements";
+@import "components/icons";
+@import "components/ie6nomore";
+@import "components/infomedia";
+@import "components/mypage";
+@import "components/page-title";
+@import "components/popup";
+@import "components/rs-carousel";
+@import "components/search-block-form";
+@import "components/search_work_manifestations";
+@import "components/searchhistory";
+@import "components/specific_elements";
+@import "components/subject_hierarchy";
+@import "components/tabs";
+@import "components/toggle_more";
+@import "components/toplist";
+@import "components/userhelp";
+@import "components/usersettings";
+@import "components/voxb";
 @import "components/works-controls";
-@import "components/ctools-modal";
-
-
-// =============================================================================
-// Import styling for custom elements
-// =============================================================================
-@import "elements/icons";
-@import "elements/buttons";
-@import "elements/basic_elements";
-@import "elements/global_elements";
-@import "elements/specific_elements";
-@import "elements/custom_search_elements";
-@import "elements/search_work_manifestations";
-@import "elements/subject_hierarchy";
-@import "elements/banner";
-@import "elements/infomedia";
-@import "elements/cart";
-@import "elements/toplist";
-@import "elements/userhelp";
-@import "elements/usersettings";
-@import "elements/searchhistory";
-@import "elements/ie6nomore";
-@import "elements/toggle_more";
-@import "elements/voxb";
-
 
 
 // =============================================================================

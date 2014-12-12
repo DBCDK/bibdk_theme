@@ -7,12 +7,12 @@ html {
 }
 
 body {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   font-family: $font-primary;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
-  background: $grey-2;
+  background: $black;
   color: $grey-1;
 }
 
@@ -45,6 +45,10 @@ td {
   text-rendering: optimizeLegibility;
 }
 
+p {
+  font-size: 0.75rem;
+}
+
 // =============================================================================
 // Headers reset
 // =============================================================================
@@ -54,12 +58,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h1 {
+  @include typo('title', 'section', 'black');
+}
+
 // =============================================================================
 // Lists reset
 // =============================================================================
 
 ul, ol {
   list-style: none;
+  font-size: .75rem;
 }
 
 // =============================================================================

@@ -1,0 +1,772 @@
+// =============================================================================
+// Drupal form element
+// =============================================================================
+
+.form-wrapper {
+  //padding: 0 20px;
+  //border-bottom: solid 1px $grey-5;
+}
+
+.form-wrapper .form-wrapper {
+  padding: 0;
+  border-bottom: none;
+}
+
+.form-wrapper.form-actions {
+  padding: 20px;
+}
+
+.form-item {
+  @extend .clearfix;
+  border-radius: 0;
+  margin-bottom: rem-calc(4);
+  padding: rem-calc(10);
+}
+
+.vertical-tabs .form-wrapper {
+  padding: 0 20px;
+}
+
+.vertical-tabs .form-item {
+  padding: 20px 0;
+}
+
+.fieldset-legend {
+  font-size: 16px;
+  display: block;
+  padding: 20px 0;
+}
+
+.form-item .description {
+  margin-top: 5px;
+}
+
+.form-type-textfield,
+.form-type-password,
+.form-type-textarea,
+.form-type-select {
+  background-color: $white;
+}
+
+.form-item-fake-password {
+  display: none;
+}
+
+// =============================================================================
+// Fieldsets
+// =============================================================================
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav .fieldset-wrapper {
+  padding: 0;
+}
+
+// =============================================================================
+// a specific fieldset ? bibdk_reservation_user_parameters
+// =============================================================================
+fieldset.bibdk-reservation-title legend {
+  float: left;
+  margin-top: -12px;
+}
+
+fieldset.bibdk-reservation-title .form-item-checkbox {
+  float: left;
+  margin-left: 5em;
+}
+
+fieldset.collapsible legend {
+  padding: 0 10px;
+}
+
+fieldset.bibdk-reservation-title .bibdk_clear {
+  clear: both;
+}
+
+// =============================================================================
+// Labels
+// =============================================================================
+
+label {
+  @include typo("title", "small", "grey-dark");
+  float: left;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 2px;
+  width: 100%;
+}
+
+label.option {
+  display: inline;
+  color: $grey-text--dark;
+  width: auto;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.form-type-radios > label {
+  @include typo("title", "small", "black");
+}
+
+.form-type-password-confirm > label {
+  margin-bottom: 15px;
+}
+
+// =============================================================================
+// Radios and checkboxes
+// =============================================================================
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted $grey-2;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-checkboxes,
+.form-radios {
+  @extend .clearfix;
+}
+
+.form-checkboxes .form-type-checkbox,
+.form-radios .form-type-radio {
+  float: left;
+  margin-right: 20px;
+}
+
+.form-type-radio {
+  width: 100%;
+}
+
+// =============================================================================
+// Selects
+// =============================================================================
+
+select {
+  @include inline-block();
+  @include box-sizing(border-box);
+
+  border: 1px solid darken($grey-5, 10%);
+  background-color: $white;
+  min-width: 100px;
+  font-size: 14px;
+  font-weight: normal;
+  color: $grey-3;
+
+  &:focus {
+    outline: thin dotted $grey-2;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// =============================================================================
+// Text fields and text areas
+// =============================================================================
+
+textarea,
+input[type="text"],
+input[type="password"] {
+  @include inline-block();
+  @include box-sizing(border-box);
+  height: rem-calc(20);
+  max-width: 100%;
+  padding: 0 5px;
+  color: $black;
+  font-size: 14px;
+  background-color: $white;
+  border: none;
+
+  @media #{$small-only} {
+    font-size: 16px;
+  }
+}
+
+textarea {
+  resize: vertical;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+}
+
+// =============================================================================
+// Password with confirm.
+// =============================================================================
+
+input.password-confirm,
+input.password-field {
+  width: 45%;
+}
+
+.confirm-parent,
+.password-parent {
+  width: 100%;
+}
+
+div.password-confirm,
+.password-strength {
+  width: 50%;
+  margin-top: 25px;
+}
+
+.form-item .password-suggestions {
+  @include box-sizing(border-box);
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid $white;
+}
+
+// =============================================================================
+// File upload
+// =============================================================================
+
+input[type="file"] {
+  height: 30px; // In IE7, the height of the select element cannot be changed by height, only font-size
+  *margin-top: 4px; // For IE7, add top margin to align select with labels
+  line-height: 30px;
+}
+
+input[type="file"]:focus {
+  outline: thin dotted $grey-2;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// =============================================================================
+// Submit buttons
+// =============================================================================
+input[type="submit"] {
+  border: none;
+  @extend .btn;
+  @extend .btn-blue !optional;
+  // WARNING : "input[type="submit"]" failed to @extend ".btn-blue".
+  // No selectors matching ".btn-blue" could be unified with "input[type="submit"]".
+
+}
+
+input[type="submit"].btn-grey {
+  @extend .btn-grey !optional;
+  // WARNING : "input[type="submit"].btn-grey" failed to @extend ".btn-grey".
+  // No selectors matching ".btn-grey" could be unified with "input[type="submit"].btn-grey".
+
+}
+
+input[type="submit"].btn-add-library {
+  @extend .btn-add-library;
+}
+
+.form-actions {
+  text-align: right;
+
+  input[type="submit"],
+  a {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  a {
+    @include box-sizing(border-box);
+    @include inline-block();
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+  }
+}
+
+// =============================================================================
+// Disabled fields
+// =============================================================================
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+}
+
+textarea[disabled],
+textarea[readonly],
+input[type="text"][disabled],
+input[type="text"][readonly] {
+  background-color: $grey-7;
+  border-color: $grey-5;
+  color: $grey-4;
+}
+
+// =============================================================================
+// Misc forms stuff
+// =============================================================================
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid $red;
+}
+
+.form-required {
+  color: $red-pure;
+}
+
+// =============================================================================
+// Placeholders
+// =============================================================================
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $grey-4;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $grey-4;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $grey-4;
+}
+
+// =============================================================================
+// Inline form elements
+// =============================================================================
+
+.form-wrapper-horizontal {
+
+  label {
+    float: left;
+    width: 39%;
+
+    &.option {
+      float: none;
+    }
+  }
+
+  .form-radio {
+    margin-left: 39%;
+  }
+  .form-radios .form-radio {
+    margin-left: 0;
+  }
+
+  .form-checkbox {
+    margin-left: 39%;
+  }
+  .form-checkboxes .form-checkbox {
+    margin-left: 0;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    float: right;
+  }
+
+  .form-item .description {
+    margin-top: 5px;
+    float: right;
+    width: 60%;
+  }
+
+  .form-textarea-wrapper {
+    width: 60%;
+    float: right;
+  }
+}
+
+// =============================================================================
+// Input size
+// =============================================================================
+
+.input-20 {
+  width: 20%;
+}
+
+.input-40 {
+  width: 40%;
+}
+
+.input-60 {
+  width: 60%;
+}
+
+.input-80 {
+  width: 80%;
+}
+
+.input-100 {
+  width: 100%;
+}
+
+// =============================================================================
+// a specific form ? wayf-accept-form
+// =============================================================================
+.wayf-accept-form {
+  padding: 0.5em;
+}
+
+.wayf-accept-form input {
+  margin-right: 0.5em;
+}
+
+// =============================================================================
+// a specific form ? user-profile-form
+// =============================================================================
+
+.form-item-persistent-login {
+  padding-top: 0;
+  text-align: right;
+}
+
+.form-item.form-item-favouriteselector {
+  clear: both;
+  padding: 0 0 20px 0;
+
+  &.ajax-progress {
+    display: inherit;
+  }
+
+  .throbber {
+    position: absolute;
+  }
+}
+
+.form-item-favouriteselector label {
+  width: auto;
+}
+
+select#edit-favouriteselector {
+  max-width: 430px;
+}
+
+.page-overlay-favourite-userdata #popup .form-wrapper .form-item,
+.page-reservation #popup #edit-userparameters .form-item {
+  padding: 10px 0 0 0;
+}
+
+.page-reservation {
+  #edit-infotext-wrapper {
+    clear: both;
+  }
+
+  .form-actions {
+    input[type="submit"]:first-child {
+      height: rem-calc(40);
+      margin-left: rem-calc(10);
+    }
+  }
+
+  #edit-navigation {
+    text-align: right;
+    input {
+      display: inline-block;
+    }
+  }
+
+  #edit-next.form-submit {
+    float: right;
+  }
+
+  .messages {
+    margin: 35px 0 0;
+  }
+
+  .order-condition {
+    border-bottom: 1px solid $grey-4;
+    .fieldset-wrapper {
+      margin: 5px 10px 5px 45px;
+    }
+  }
+
+  #edit-manifestation .fieldset-legend {
+    padding: 10px 0;
+  }
+
+  #edit-branchdata {
+    .branch-data {
+      float: left;
+      margin-right: 20px;
+    }
+    input {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+
+  label {
+    text-align: left;
+  }
+}
+
+// =============================================================================
+// Reservation
+// -----------------------------------------------------------------------------
+// The below trheee sections are a bit messy and could be cleaned up - also we
+// have a specific _popups.scss for styling of popups.
+// =============================================================================
+
+.page-reservation .element {
+  padding-top: 10px;
+
+  #messages {
+    background-color: inherit;
+  }
+}
+
+.page-reservation .form-step-guide.form-wrapper {
+  padding: 0;
+  border-bottom: none;
+}
+
+.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+  padding: 10px 0;
+}
+
+.page-reservation .form-step-guide {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  right: 10px;
+
+  border-top-width: 10px;
+  border-top-style: solid;
+  border-top-color: $grey-6;
+  margin: 0 1px;
+
+  input[type="submit"] {
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+
+  input[type="submit"].inactive {
+    &:hover {
+      @include background-image(none);
+    }
+  }
+}
+
+.page-reservation .bottom-space {
+  padding-bottom: 20px;
+}
+
+.page-overlay-favourite-userdata label,
+.page-reservation label {
+  margin-bottom: 2px;
+  float: left;
+  line-height: 1.3em;
+}
+
+// =============================================================================
+// Popup
+// =============================================================================
+
+#popup {
+  .fieldset-legend {
+    padding: 20px 0 10px;
+    @include typo("title", "section", "black");
+  }
+
+  .region-content {
+    margin: 10px 20px;
+  }
+
+  #edit-navigation .form-submit {
+    margin-left: 20px;
+  }
+
+  article.manifestation {
+    padding: 0 20px;
+  }
+
+  #edit-needbeforedate div.form-item-needBeforeDate-month,
+  #edit-needbeforedate div.form-item-needBeforeDate-day {
+    float: left;
+    margin-right: 20px;
+  }
+
+  article.selected_branch .element-section {
+    border-bottom-width: 0;
+    padding: 0 0 20px 20px;
+  }
+
+  article.selected_branch h3 {
+    font-size: 1.2em;
+  }
+
+  article.manifestation {
+    padding-top: 20px;
+  }
+
+  #edit-userparameters {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  #edit-userparameters .form-item {
+    padding: 20px 0 0 0;
+  }
+
+  .close-link-wrapper {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .infomedia-search-group {
+    @extend .inline-search-group;
+    .search-input-field {
+      padding: 8px;
+      input {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.inline-search-group {
+  .search-input-field {
+    width: 100%;
+  }
+  .search-actions {
+    width: 3em;
+  }
+  .form-item, .form-wrapper {
+    display: table-cell;
+  }
+}
+
+.infomedia-article input {
+  padding: 8px;
+}
+
+// =============================================================================
+// Popup -- Reservation
+// =============================================================================
+
+.page-reservation {
+  #popup {
+    #edit-step-info {
+      padding: 0;
+      margin: 0;
+    }
+
+    .form-item {
+      border-radius: 0;
+      margin: 0 0 rem-calc(4) 0;
+      padding: rem-calc(10);
+
+      input[type="text"],
+      input[type="password"] {
+        border: none;
+        height: rem-calc(20);
+        padding: 0;
+        float: right;
+        color: $black;
+        width: 100%;
+        font-size: 16px;
+
+        &.error {
+          border: 1px solid $red;
+        }
+      }
+    }
+
+    // ==========================
+    // Need before date -- Start
+    // ==========================
+    .form-item-needBeforeDate {
+      margin: rem-calc(20) 0;
+      background-color: $white;
+      width: 100%;
+    }
+
+    #edit-needbeforedate {
+      padding: 0;
+
+      .form-type-select {
+        padding: 0;
+      }
+    }
+    // ==========================
+    // Need before date -- End
+    // ==========================
+
+    #edit-agency-search-fieldset {
+      .form-type-textfield {
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+.page-reservation .reservation-online-links.form-wrapper {
+  padding: 1em 2em;
+  background: $grey-7;
+  border: 1px solid $white;
+  a {
+    display: block;
+  }
+  p {
+    margin: 1em 0;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+// =============================================================================
+// Horizontal search form
+// =============================================================================
+
+.search-form-horizontal {
+  @include clearfix();
+  padding: 0;
+
+  .form-wrapper {
+    border: none;
+  }
+
+  .form-type-textfield,
+  .form-actions {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    display: block;
+  }
+  input[type=text] {
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 100%;
+  }
+}

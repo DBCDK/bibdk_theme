@@ -1,0 +1,51 @@
+// =============================================================================
+// Import: Global elements
+// =============================================================================
+
+.page-overlay,
+.page-reservation {
+
+  background: $grey-bg--page;
+
+  h2, .help-menu-subheader, .newsroom-subheader {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+  }
+
+  .bottom-space {
+    padding-bottom: 10px;
+  }
+/*
+  .form-wrapper, .form-item {
+    padding: 3px 0px 4px 0px;
+  }
+
+  .fieldset-legend {
+    padding: 10px 0 10px;
+  }
+  */
+}
+
+.page-reservation #popup {
+  margin-top: 2em;
+}
+
+
+// =============================================================================
+// Font style helpers
+// =============================================================================
+.normal {
+  font-weight: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+a.inactive {
+  color: $grey-3;
+  cursor: default;
+}
+
+

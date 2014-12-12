@@ -1,0 +1,80 @@
+// =============================================================================
+// Settings -- see _settings.scss
+// =============================================================================
+
+// =============================================================================
+// Base
+// =============================================================================
+$spacing: 12px;
+$carousel-items: 6;
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+$include-print-styles: true;
+$include-html-global-classes: $include-html-classes;
+
+
+// =============================================================================
+// Fonts
+// =============================================================================
+
+$font-primary:    "Arial", sans-serif;
+$font-secondary:  "Dosis", sans-serif;
+
+
+// =============================================================================
+// Borders
+// =============================================================================
+
+$border-color: #cccccc;
+$border-radius: 3px;
+$border-default: solid 1px $border-color;
+
+
+// =============================================================================
+// Shadow
+// =============================================================================
+
+$text-shadow: 0 -1px rgba(0,0,0,.3);
+$box-shadow: 0 5px 10px rgba(black, 0.2);
+
+
+// =============================================================================
+// Grid settings
+// =============================================================================
+
+$row-width: 1000px;
+$column-gutter: $spacing / 2;
+$total-columns: 24;
+
+// =============================================================================
+// Colors
+// -----------------------------------------------------------------------------
+// These colors are deprecated and should be deleted. New colors are defined in
+// settings/_colors.scss
+// =============================================================================
+
+// By name
+$red-pure:        #ff0000;
+$red-link:        #DA5050;
+$white:           #ffffff;
+$black:           #161616;
+$blue:            #178bad;
+$blue-light:      #84C0D2;
+$blue-lighter:    #d2eaf1;
+$green:           #00a271;
+$yellow-light:    #FFFF00;
+
+$grey-1:          #25292c; // Darkest
+$grey-2:          #3c4043; // Darker
+$grey-3:          #51565a; // Dark
+$grey-4:          #6c7379;
+$grey-5:          #dcdcdc; // Light
+$grey-6:          #e8e8e8; // Lighter
+$grey-7:          #f3f3f3; // Lightest
+
+// Zebra stripes
+$zebra-odd:        #c7e1e8;
+$zebra-even:       lighten($zebra-odd, 10%);
+
+
