@@ -25,12 +25,7 @@ div#search-advanced-toggle {
 
 div#search-advanced {
   display: block;
-  background-color: $grey-7;
-  &.toggled {
-    @include border-radius(0px);
-    background-color: $grey-7;
-    padding: 0%;
-  }
+  background-color: $grey-bg--section;
 }
 
 div#search-advanced-panel {
@@ -64,10 +59,10 @@ div#search-advanced-panel {
     margin-top: 1px;
   }
 
-  select {
-  }
-
-  option {
+  label {
+    color: $grey-bg--tabs;
+    font-size: rem-calc(14);
+    font-weight: bold;
   }
 
   .element-wrapper {
@@ -86,10 +81,8 @@ div#search-advanced-panel {
       margin-bottom: -16px;
       margin-top: -16px;
       a {
-        background-image: url("../img/in_use/icons/blue-minus.png");
         padding-left: 20px;
-        background-repeat: no-repeat;
-        background-position: left center;
+        background: url("../img/in_use/icons/blue-minus.png") no-repeat left center;
       }
     }
     .fieldset-wrapper {
@@ -122,9 +115,7 @@ div#search-advanced-panel {
       width: auto;
       a {
         padding-left: 20px;
-        background-image: url("../img/in_use/icons/blue-plus.png");
-        background-repeat: no-repeat;
-        background-position: left center;
+        background: url("../img/in_use/icons/blue-plus.png") no-repeat left center;
       }
     }
   }
@@ -154,11 +145,6 @@ div#search-advanced-panel {
       .fieldset-legend {
         float: left;
         max-width: inherit;
-
-        label {
-          color: $black;
-          font-weight: bold;
-        }
       }
 
       .form-type-textfield {
@@ -173,7 +159,6 @@ div#search-advanced-panel {
       }
 
       label {
-        color: $black;
         font-weight: normal;
       }
     }
@@ -192,10 +177,8 @@ div#search-advanced-panel {
         .toggle-subgroup {
           @include inline-block(top);
           width: 15px;
-          background-position: 50% 50%;
-          background-repeat: no-repeat;
           color: transparent;
-          background-image: url(../img/in_use/icons/blue-plus.png);
+          background: url(../img/in_use/icons/blue-plus.png) no-repeat 50% 50%;
           border: none;
           display: block;
           float: left;
@@ -213,6 +196,7 @@ div#search-advanced-panel {
           display: block;
           float: left;
           line-height: 15px;
+          color: $black;
         }
         input {
           display: block;
