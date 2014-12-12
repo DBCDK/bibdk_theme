@@ -21,6 +21,10 @@
   }
 }
 
+.rs-carousel-mask {
+  margin-left: -0.1px; //Safari 8.x specific hack
+}
+
 .rs-carousel-mask,
 .rs-carousel-runner {
   position: relative;
@@ -35,8 +39,6 @@
   border-top: none;
   padding: rem-calc(10 20);
 }
-
-
 
 // =============================================================================
 // Carousel header (title and dropdown)
@@ -100,7 +102,6 @@
     }
   }
 
-
   .dropdown-menu {
     min-width: 0;
     top: 100%;
@@ -110,8 +111,6 @@
     }
   }
 }
-
-
 
 // =============================================================================
 // Pagination and Prev/Next buttons
@@ -159,8 +158,6 @@
     @include add-sprite("carousel-arrow--right");
   }
 }
-
-
 
 // =============================================================================
 // Single carousel item
