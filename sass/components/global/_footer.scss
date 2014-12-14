@@ -50,10 +50,7 @@
 
     .footer-social-links {
       text-align: right;
-      @media #{$medium-only} {
-        text-align: center;
-      }
-      @media #{$small-only} {
+      @media #{$medium-only, $small-only } {
         text-align: center;
       }
       a {

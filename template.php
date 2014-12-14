@@ -64,20 +64,20 @@ function bibdk_theme_theme() {
         'label' => NULL,
       ),
     ),
-    'bibdk_footbar' => array(
+    'bibdk_foot_bar' => array(
     'path' => $path . 'footer',
     'template' => 'bibdk-footer',
     'variables' => array(
-      'menu' => 'string',
-      'footer_menu_links' => 'string',
-      'home_path' => 'string',
-      'footerlogo_path' => 'string',
-      'footerlogo_twitter_path' => 'string',
-      'footerlogo_facebook_path' => 'string',
-      'footerlogo_play_path' => 'string',
-      'logo_path' => 'string',
+      'menu' => '',
+      'footer_menu_links' => '',
+      'home_path' => '',
+      'footerlogo_path' => '',
+      'footerlogo_twitter_path' => '',
+      'footerlogo_facebook_path' => '',
+      'footerlogo_play_path' => '',
+      'logo_path' => '',
       'links' => array(),
-      'overlay' => 'bool',
+      'overlay' => FALSE,
       ),
     ),
   );
@@ -163,7 +163,7 @@ function bibdk_theme_preprocess_html(&$vars) {
 
   
   //add the page footer
-  $vars['page_footer'] = drupal_render(_bibdk_theme_get_bibdk_footbar($overlay));
+  $vars['page_footer'] = drupal_render(_bibdk_theme_get_bibdk_foot_bar($overlay));
 
 
   // Provide path to theme
@@ -178,7 +178,7 @@ function bibdk_theme_preprocess_html(&$vars) {
  * @return string rendered HTML based on the bibdk-footer.tpl.php
  * @see bibdk-footer.tpl.php
  */
-function _bibdk_theme_get_bibdk_footbar($overlay) {
+function _bibdk_theme_get_bibdk_foot_bar($overlay) {
  global $base_url;
 
   $home_path = url('<front>');
@@ -189,8 +189,8 @@ function _bibdk_theme_get_bibdk_footbar($overlay) {
   $footerlogo_facebook_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
   $footerlogo_play_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
       
-  $footbar = array(
-    '#theme' => 'bibdk_footbar',
+  $foot_bar = array(
+    '#theme' => 'bibdk_foot_bar',
     '#footer_menu_links' => drupal_render($footer_menu),
     '#home_path' => $home_path,
     '#footerlogo_path' => $footerlogo_path,
@@ -199,7 +199,7 @@ function _bibdk_theme_get_bibdk_footbar($overlay) {
     '#footerlogo_play_path' => $footerlogo_play_path,
     '#overlay' => $overlay,
   );
-  return $footbar;
+  return $foot_bar;
 }
 
 /**
