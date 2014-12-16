@@ -78,6 +78,17 @@
   }
 }
 
+.pane-ting-openformat-rank-frequency {
+  clear: both;
+  padding-top: 10px;
+
+  .pane-content {
+    background-color: $white;
+    padding: 5px;
+    border: $border-default;
+  }
+}
+
 
 #ting-openformat-full-view-button-closed,
 #ting-openformat-full-view-button-expanded {
