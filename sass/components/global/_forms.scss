@@ -641,7 +641,7 @@ select#edit-favouriteselector {
 
   .infomedia-search-group {
     @extend .inline-search-group;
-    .search-input-field {
+    .vejviser-search-input-field {
       padding: 8px;
       input {
         margin-bottom: 20px;
@@ -651,7 +651,7 @@ select#edit-favouriteselector {
 }
 
 .inline-search-group {
-  .search-input-field {
+  .vejviser-search-input-field {
     width: 100%;
   }
   .search-actions {
