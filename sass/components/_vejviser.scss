@@ -2,6 +2,22 @@
 // Vejviser -- Everything related to the Vejviser
 // =============================================================================
 
+
+// =============================================================================
+// Vejviser search form
+// -----------------------------------------------------------------------------
+
+.vejviser-search-submit {
+  float: right;
+}
+
+
+// =============================================================================
+// Vejviser search result
+// -----------------------------------------------------------------------------
+
+
+
 .bibdk-favourite-vejviser-link {
   @include rem('padding-bottom', 10px);
   text-align: right;
@@ -17,7 +33,6 @@
 
 #edit-favorites {
   padding: 0;
-
 }
 
 #edit-vejviser-link-wrapper {
@@ -38,41 +53,10 @@
     float: left;
     margin: rem-calc(10 0 0 180);
   }
-
-  .vejviser-raw {
-    float: right;
-  }
 }
 
 .bibdk-vejviser-help-text {
   clear: both;
-}
-
-.vejviser-raw {
-
-  //.search-form-horizontal handles the floating
-  &.toggled {
-    padding: 0;
-    background: transparent;
-  }
-
-  .form-type-textfield {
-    padding: rem-calc(10);
-    width: auto;
-    min-width: 280px;
-  }
-
-  form {
-    width: 320px;
-  }
-  input {
-    line-height: 30px;
-    height: 30px;
-  }
-  input[type=text] {
-    padding: 0 5px;
-    font-size: 12px;
-  }
 }
 
 .ting-agency-library {
@@ -112,15 +96,6 @@
     background-color: $grey-bg--section;
   }
   .actions {
-    border: none;
-  }
-}
-
-.node .ting-agency-library {
-  background-color: none;
-  border: solid 1px $grey-5;
-  .element-section .element-section {
-    padding: 0;
     border: none;
   }
 }
