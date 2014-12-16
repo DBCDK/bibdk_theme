@@ -1,20 +1,6 @@
 // =============================================================================
 // Page sections
 // =============================================================================
-// Header
-#header {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
-  background-color: $grey-1;
-
-  .infomedia-article & {
-    background-color: $white;
-  }
-  
-  .logo {
-    float: left;
-  }
-}
 
 // Search panel
 #search-panel {
@@ -31,7 +17,7 @@
 #messages {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $grey-7;
+  background-color: $grey-bg--page;
 }
 
 // User alerts
