@@ -2,7 +2,6 @@
 // Vejviser -- Everything related to the Vejviser
 // =============================================================================
 
-
 // =============================================================================
 // Vejviser search form
 // -----------------------------------------------------------------------------
@@ -11,12 +10,9 @@
   float: right;
 }
 
-
 // =============================================================================
 // Vejviser search result
 // -----------------------------------------------------------------------------
-
-
 
 .bibdk-favourite-vejviser-link {
   @include rem('padding-bottom', 10px);
@@ -37,22 +33,6 @@
 
 #edit-vejviser-link-wrapper {
   border: none;
-}
-
-#bibdk-vejviser-header {
-  float: right;
-  margin-top: -50px;
-  width: 100%;
-  color: $grey-2;
-
-  #bibdk-vejviser-count {
-    color: $grey-3;
-    white-space: nowrap;
-    font-size: large;
-    line-height: 1.5;
-    float: left;
-    margin: rem-calc(10 0 0 180);
-  }
 }
 
 .bibdk-vejviser-help-text {
@@ -88,7 +68,7 @@
     list-style-type: none;
   }
 
-  .element-section{
+  .element-section {
     background-color: transparent;
   }
 
