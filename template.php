@@ -539,9 +539,6 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
       break;
-    case 'bibdk_vejviser_form':
-      _alter_bibdk_vejviser_form($form, $form_state, $form_id);
-      break;
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
@@ -823,10 +820,6 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
     $elements['column' . $key] = $snippet;
   }
   $form['advanced'][$region][$group][$parent_id][$type] = $elements;
-}
-
-function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
-  $form['#attributes']['class'] = array('hidden', 'search-form-horizontal');
 }
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
