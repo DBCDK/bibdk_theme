@@ -103,18 +103,8 @@ input:-webkit-autofill {
       }
     }
 
-    input[type="checkbox"]{
-      margin-left: 5px;
-      margin-right: 0;
-    }
-
     label {
-      @include typo("title", "small", "grey-dark");
-      font-weight: bold;
       float: left;
-      margin-bottom: 0;
-      padding-bottom: 5px;
-      padding-top: 2px;
     }
   }
 
@@ -143,13 +133,11 @@ input:-webkit-autofill {
 
     .form-type-checkbox {
       position: absolute;
-      width: auto;
       margin: rem-calc(27 0 0);
       right: rem-calc(120);
 
       .form-checkbox {
-        height: 20px;
-        vertical-align: middle;
+        margin-top: rem-calc(2);
         float: left;
         margin-right: rem-calc(5);
       }
@@ -157,7 +145,6 @@ input:-webkit-autofill {
       label {
         @include typo("link", "item-links", "grey-dark");
         min-width: 60%;
-        max-width: none;
         float: right;
       }
     }
@@ -177,7 +164,7 @@ input:-webkit-autofill {
     }
   }
 
-  .fieldset-description{
+  .fieldset-description {
     padding: 0 rem-calc(20);
   }
 
@@ -186,7 +173,6 @@ input:-webkit-autofill {
     margin: 0 rem-calc(20) 2px rem-calc(20);
 
     padding: rem-calc(10) 0 rem-calc(10) rem-calc(10);
-
 
     button {
       border: none;
