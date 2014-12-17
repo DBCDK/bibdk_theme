@@ -61,7 +61,7 @@
   
   display: none;
   
-  @media #{$medium-up} {
+  @media #{$small-up} {
     display: block;
     background-color: $grey-bg--page;
   }
