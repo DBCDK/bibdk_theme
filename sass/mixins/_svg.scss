@@ -42,6 +42,11 @@
     height: 18px;
     vertical-align: middle;
     margin: 0 3px;
+  } @else if ($name == "svg-star") {
+    width: 14px;
+    height: 13px;
+    vertical-align: middle;
+    margin: 0 3px;
   }
 
   @if $color == "black" {
