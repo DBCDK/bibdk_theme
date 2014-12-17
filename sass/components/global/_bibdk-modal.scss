@@ -160,6 +160,10 @@ input:-webkit-autofill {
         line-height: normal;
         @include typo("link", "item-links", "black");
       }
+
+      .first a {
+        color: $blue--hover;
+      }
     }
   }
 
