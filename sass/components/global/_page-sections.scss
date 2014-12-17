@@ -58,14 +58,6 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-bg--page;
-  
-  @media #{$medium-up} {
-    display: block;
-    
-    .lift-columns & {
-      padding-top: 10px;
-    }
-  }
 }
 
 // Banner
