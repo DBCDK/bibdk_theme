@@ -55,58 +55,6 @@ a.btn {
   }
 }
 
-.btn-add-library {
-  @include transition(none);
-  border: solid 1px $grey-5;
-  color: $blue;
-  padding: 6px 20px 6px 40px;
-
-  background: $white;
-  background-image: url(../img/in_use/library-favorite.png); /* fallback */
-  background-image: url(../img/in_use/library-favorite.png), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
-  background-image: url(../img/in_use/library-favorite.png), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
-  background-image: url(../img/in_use/library-favorite.png), -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
-  background-image: url(../img/in_use/library-favorite.png), -ms-linear-gradient(top, #fff, #eee); /* IE10 */
-  background-image: url(../img/in_use/library-favorite.png), -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
-  background-image: url(../img/in_use/library-favorite.png), linear-gradient(top, #fff, #eee);
-  background-repeat: no-repeat;
-  background-position: 0%;
-  &:hover {
-    @include box-shadow(0 2px 2px rgba($black, 0.1));
-  }
-  &.disabled {
-    background-image: url(../img/in_use/library-favorite.png);
-    cursor: default;
-    &:hover {
-      box-shadow:none;
-    }
-  }
-}
-
-.set-default-order-agency {
-  @extend .btn;
-  border: solid 1px $grey-5;
-  margin-bottom: 10px;
-
-  background: #fff;
-  background-image: url(); /* fallback */
-  background-image: url(), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)); /* Saf4+, Chrome */
-  background-image: url(), -webkit-linear-gradient(top, #fff, #eee); /* Chrome 10+, Saf5.1+ */
-  background-image: url(), -moz-linear-gradient(top, #fff, #eee); /* FF3.6+ */
-  background-image: url(), -ms-linear-gradient(top, #fff, #eee); /* IE10 */
-  background-image: url(), -o-linear-gradient(top, #fff, #eee); /* Opera 11.10+ */
-  background-image: url(), linear-gradient(top, #fff, #eee);
-  background-repeat: no-repeat;
-  background-position: 0%;
-  &:hover {
-    @include box-shadow(0 2px 2px rgba(black, 0.1));
-  }
-}
-
-.selected-agency {
-  font-weight: bold;
-}
-
 .further-search-btn {
   float: right;
 }
