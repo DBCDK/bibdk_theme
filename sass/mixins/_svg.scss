@@ -45,7 +45,7 @@
   } @else if ($name == "svg-star") {
     width: 14px;
     height: 13px;
-    vertical-align: middle;
+    vertical-align: text-top;
     margin: 0 3px;
   }
 
@@ -61,6 +61,8 @@
     fill: $blue;
   } @else if $color == "red" {
     fill: $red;
+  } @else if $color == "yellow" {
+    fill: $yellow;
   }
 }
 
