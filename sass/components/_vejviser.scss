@@ -39,6 +39,7 @@
 
   .svg-star {
     @include svg("svg-star", "yellow");
+    margin-right: 5px;
   }
 
   &.bibdk-favourite-is-favourited {
