@@ -25,9 +25,26 @@
   a {
     @include rem('padding', 10px 15px);
     @include inline-block();
-    @include border-radius($border-radius);
     color: $white;
     background-color: $grey-2;
+  }
+}
+
+.btn-add-library {
+  color: $grey-text--dark;
+  &:hover {
+    color: $grey-text--dark;
+    text-decoration: underline;
+  }
+
+  .svg-star {
+    @include svg("svg-star", "yellow");
+  }
+
+  &.bibdk-favourite-is-favourited {
+    .svg-star {
+      fill: $grey-text--dark;
+    }
   }
 }
 
@@ -43,29 +60,30 @@
   clear: both;
 }
 
+.ting-agency-branch-name {
+  @include typo("title", "large", "black");
+  display: block;
+}
+
+.ting-agency-agency-name {
+  @include typo("link", "item-links", "blue");
+  display: block;
+}
+
 .ting-agency-library {
   @extend .clearfix;
   background-color: $white;
 
-  .hgroup {
-    margin-bottom: 10px;
-    float: left;
-  }
-  .hgroup.has-action {
-    max-width: 500px;
-  }
   h3 {
-    font-weight: normal;
-    font-size: 1.6em;
+    @include typo("title", "large", "black");
   }
+
   h4 {
-    font-weight: normal;
-    font-size: 1.4em;
-    color: $grey-4;
+    @include typo("link", "item-links", "blue");
   }
 
   .item-list ul li {
-    margin: 0px 0px 0px 0px
+    margin: 0;
   }
 
   ul {
@@ -76,9 +94,6 @@
     background-color: transparent;
   }
 
-  &:nth-child(2n) {
-    background-color: $grey-bg--section;
-  }
   .actions {
     border: none;
   }
