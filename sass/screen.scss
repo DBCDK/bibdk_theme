@@ -19,7 +19,9 @@ $sprites-layout: smart;
 @import "settings/settings";
 @import "settings/colors";
 @import "settings/media-queries";
-@import "settings/typography";
+@import "mixins/typography";
+@import "mixins/svg";
+@import "settings/modal";
 
 
 // =============================================================================
@@ -52,7 +54,7 @@ $sprites-layout: smart;
 //  @import "foundation/components/pricing-tables";
 //  @import "foundation/components/progress-bars";
 //  @import "foundation/components/range-slider";
-//  @import "foundation/components/reveal";
+  @import "foundation/components/reveal";
 //  @import "foundation/components/side-nav";
 //  @import "foundation/components/split-buttons";
 //  @import "foundation/components/sub-nav";
@@ -100,7 +102,7 @@ $sprites-layout: smart;
 // =============================================================================
 // Import default styling
 // =============================================================================
-@import "forms";
+@import "components/global/forms";
 
 
 // =============================================================================
@@ -109,17 +111,18 @@ $sprites-layout: smart;
 @import "components/base/helpers";
 @import "components/base/modal";
 
+@import "components/global/bibdk-modal";
+@import "components/global/footer";
 @import "components/global/messages";
+@import "components/global/mainwrapper";
 @import "components/global/page-sections";
 @import "components/global/topbar";
 @import "components/global/user-alerts";
-@import "components/global/footer";
 
 @import "components/banner";
 @import "components/basic_elements";
-@import "components/buttons";
+@import "components/global/buttons";
 @import "components/cart";
-@import "components/ctools-modal";
 @import "components/custom_search_elements";
 @import "components/dropdown";
 @import "components/facet-browser";
@@ -127,6 +130,7 @@ $sprites-layout: smart;
 @import "components/icons";
 @import "components/ie6nomore";
 @import "components/infomedia";
+@import "components/mypage";
 @import "components/page-title";
 @import "components/popup";
 @import "components/rs-carousel";

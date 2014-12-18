@@ -2,15 +2,8 @@
 // Import: Basic elements
 // =============================================================================
 
-// fake element wrapper(no border)
-.element-wrapper-fake {
-  padding: 12px;
-  margin-bottom: 10px;
-}
-
 .element-wrapper {
-  background-color: $white;
-  border: solid 10px $grey-6;
+  background-color: $grey-bg--page;
   margin-bottom: 10px;
   input[type="checkbox"] {
     border: none;
@@ -29,12 +22,13 @@
   }
 }
 
-#popup .element {
-  border-bottom: solid 1px $grey-5;
+.page-user-edit .element{
+  border: none;
 }
 
 .element-section {
   border-bottom: solid 1px $grey-5;
+  background-color: $white;
   position: relative;
   padding: 20px;
 }
@@ -333,41 +327,11 @@
 }
 
 // =============================================================================
-// Horizontal search form
-// =============================================================================
-
-.search-form-horizontal {
-  @include clearfix();
-  padding: 0;
-
-  .form-wrapper {
-    border: none;
-  }
-
-  .form-type-textfield,
-  .form-actions {
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: block;
-  }
-  input[type=text] {
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 100%;
-  }
-}
-
-
 // Helptexts
+// =============================================================================
 
 p.helptext {
   background-color: $blue;
-  @include border-radius(3px);
   width: auto;
   border: none;
   display: inline-block;
@@ -376,17 +340,17 @@ p.helptext {
   padding: 0 5px;
   font-size: 12px;
   color: $white;
-  cursor: pointer;
-  position: relative;
+  cursor: help;
   top: 3px;
   a {
     color: $white;
+    cursor: help;
   }
 }
 
-//
+// =============================================================================
 // Paging, other
-//
+// =============================================================================
 .page-overlay .pager-first,
 .page-overlay .pager-previous,
 .page-overlay .pager-item,

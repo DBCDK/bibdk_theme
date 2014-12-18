@@ -7,6 +7,11 @@
       // Should the menu close when a menu link is clicked?
       // [ true | false ]
       close_on_click: true
+    },
+    reveal: {
+      // Configures the reveal (modal)
+      animation: 'fade',
+      animation_speed: 150
     }
   });
 })();

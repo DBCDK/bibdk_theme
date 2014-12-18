@@ -1,0 +1,25 @@
+// We use these to control the style of the reveal overlay.
+$reveal-overlay-bg: rgba($black, .45);
+$reveal-overlay-bg-old: $black;
+
+// We use these to control the style of the modal itself.
+$reveal-modal-bg: $grey-bg--section;
+$reveal-position-top: rem-calc(100);
+$reveal-default-width: 80%;
+$reveal-max-width: rem-calc(600);
+$reveal-modal-padding: rem-calc(0);
+$reveal-box-shadow: 0 0 10px rgba($black,.4);
+
+// We use these to style the reveal close button
+$reveal-close-font-size: rem-calc(30);
+$reveal-close-top: rem-calc(12);
+$reveal-close-side: rem-calc(14);
+$reveal-close-color: $grey-text--dark;
+$reveal-close-weight: $font-weight-bold;
+
+// We use these to control the modal border
+$reveal-border-style: solid;
+$reveal-border-width: 1px;
+
+$reveal-modal-class: "reveal-modal";
+$close-reveal-modal-class: "close-reveal-modal";

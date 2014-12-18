@@ -3,6 +3,12 @@
 // =============================================================================
 
 .rs-carousel {
+  display: none;
+
+  @media #{$large-up} {
+    display: block;
+  }
+
   position: relative;
 
   .ajax-loader {
@@ -15,6 +21,10 @@
   }
 }
 
+.rs-carousel-mask {
+  margin-left: -0.1px; //Safari 8.x specific hack
+}
+
 .rs-carousel-mask,
 .rs-carousel-runner {
   position: relative;
@@ -24,9 +34,11 @@
 .rs-carousel-inner {
   position: relative;
   min-height: (($row-width - $column-gutter) / $carousel-items) * 1.8;
+  background-color: $white;
+  border: 1px solid $grey-border;
+  border-top: none;
+  padding: rem-calc(10 20);
 }
-
-
 
 // =============================================================================
 // Carousel header (title and dropdown)
@@ -34,26 +46,31 @@
 
 .rs-carousel-header {
   @extend .clearfix;
-  @include rem('margin-bottom', 10px);
+  height: rem-calc(70);
+  background-color: $grey-bg--section;
+  border: 1px solid $grey-border;
 }
 
 .rs-carousel-header-title {
   float: left;
-  margin-left: 5px; // To secure margin with carousel items
+  padding: rem-calc(20);
+  @include typo("title", "section", "black");
 
-  h2 {
-    float: left;
-    color: $grey-2;
-    @include rem('font-size', 15px);
-    @include rem('height', 30px);
-    @include rem('line-height', 30px);
+  width: 400px;
+  overflow: hidden;
+  height: 50px;
+
+  @media #{$xlarge-up} {
+    width: auto;
+    overflow: auto;
+    height: auto;
   }
 }
 
 .rs-carousel-header-select {
   float: right;
   position: relative;
-  margin-right: 5px; // To secure margin with carousel items
+  margin: rem-calc(20 20 0 0);
 
   .dropdown-toggle {
     background-color: $white;
@@ -62,8 +79,7 @@
     @include box-sizing(border-box);
     @include rem('height', 32px);
     @include rem('line-height', 30px);
-    border: solid 1px $grey-5;
-    @include border-radius(6px);
+    border: solid 1px $grey-border;
     @include rem('padding', 0 35px 0 10px);
     font-weight: bold;
 
@@ -86,18 +102,15 @@
     }
   }
 
-
   .dropdown-menu {
     min-width: 0;
     top: 100%;
 
     li {
-      white-space: nowrap;
+      white-space: nowap;
     }
   }
 }
-
-
 
 // =============================================================================
 // Pagination and Prev/Next buttons
@@ -145,8 +158,6 @@
     @include add-sprite("carousel-arrow--right");
   }
 }
-
-
 
 // =============================================================================
 // Single carousel item

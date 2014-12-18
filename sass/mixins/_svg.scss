@@ -1,0 +1,64 @@
+// =============================================================================
+// SVG ICONS
+// -----------------------------------------------------------------------------
+//
+// All svg icon alterations should be done using the typography (typo) mixin
+//
+// @include typo(); takes 2 optional arguments: $name, $color
+//
+// Examples:
+// .selector { @include svg( "svg-chat", "white" ); }
+//
+// =============================================================================
+
+@mixin svg($name: "", $color: "") {
+  @if ($name == "svg-arrow-right") {
+  width: 14px;
+  height: 12px;
+  vertical-align: middle;
+  margin: 0 5px;
+} @else if ($name == "svg-chat") {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-user") {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-social-twitter") {
+    width: 20px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-social-facebook") {
+    width: 10px;
+    height: 21px;
+    vertical-align: middle;
+    margin: 0 3px;
+  } @else if ($name == "svg-social-youtube") {
+    width: 23px;
+    height: 18px;
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+
+  @if $color == "black" {
+    fill: $black--natural;
+  } @else if $color == "white" {
+    fill: $white;
+  } @else if $color == "grey-dark" {
+    fill: $grey-text--dark;
+  } @else if $color == "grey-light" {
+    fill: $grey-text--light;
+  } @else if $color == "blue" {
+    fill: $blue;
+  } @else if $color == "red" {
+    fill: $red;
+  }
+}
+
+.svg-arrow-right {
+  @include svg("svg-arrow-right", "black");
+}
