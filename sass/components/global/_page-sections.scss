@@ -55,9 +55,14 @@
 
 // Columns
 #columns {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
   background-color: $grey-bg--page;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media #{$medium-up} {
+    @include rem('padding-left', $spacing);
+    @include rem('padding-right', $spacing);
+  }
 }
 
 // Banner
