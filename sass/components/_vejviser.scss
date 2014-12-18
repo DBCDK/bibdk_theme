@@ -99,6 +99,7 @@
   .element-section {
     padding-left: rem-calc(10);
     padding-right: rem-calc(10);
+    min-height: 110px;
 
     &:hover {
       background-color: $grey-bg--section
