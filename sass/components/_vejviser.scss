@@ -45,7 +45,7 @@
   }
 }
 
-.bibdk-favourtie--add-library {
+.bibdk-favourite--add-remove-library {
   color: $grey-text--dark;
   &:hover {
     color: $grey-text--dark;
@@ -61,6 +61,13 @@
     .svg-star {
       fill: $yellow;
     }
+  }
+}
+
+.ting-agency-library {
+  .ajax-progress {
+    position: absolute;
+    margin-left: rem-calc(5);
   }
 }
 
@@ -92,10 +99,12 @@
   .element-section {
     padding-left: rem-calc(10);
     padding-right: rem-calc(10);
+
+    &:hover {
+      background-color: $grey-bg--section
+    }
   }
 }
-
-
 
 #edit-favorites {
   padding: 0;
