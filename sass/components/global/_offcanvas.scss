@@ -1,0 +1,90 @@
+// =============================================================================
+// Offcanvas navigation
+// =============================================================================
+
+aside.right-off-canvas-menu {
+  width: 100%;
+  margin-top: $topbar_height;
+  background-color: $grey-bg--section;
+
+  @media #{$medium-up} {
+    width: $off-canvas-width;
+  }
+}
+
+
+ul.off-canvas-list {
+  li {
+    label {
+      background-color: $blue;
+      color: $white;
+      padding: rem-calc(10px 0 2px 15px);
+      border-bottom: 1px solid $grey-border;
+      font-weight: normal;
+    }
+
+    a {
+      color: $black;
+      font-weight: bold;
+      font-size: rem-calc(14px);
+      border-bottom: 1px solid $grey-border;
+      padding: rem-calc(13px 0 13px 20px);
+
+      &.active {
+        background-color: $grey-bg--page;
+      }
+
+      &:hover {
+        background-color: $grey-bg--page;
+      }
+    }
+
+    .offcanvas-my-page-link {
+      background-color: $blue;
+      color: $white;
+      font-size: rem-calc(12px);
+      font-weight: normal;
+      padding: rem-calc(13px 0 13px 25px);
+
+      &.active {
+        background-color: $blue--hover;
+      }
+
+      &:hover {
+        background-color: $blue--hover;
+      }
+    }
+  }
+}
+
+ul.off-canvas-footer-menu {
+  border-bottom: 1px solid $grey-border;
+  padding: rem-calc(20 0 10 0);
+
+  li {
+    padding: rem-calc(0 0 8 20);
+    a {
+      color: $grey-bg--background;
+      font-size: rem-calc(12px);
+    }
+  }
+}
+
+.social-links {
+  margin: rem-calc(20 0 0 20);
+
+  a {
+    padding-right: rem-calc(10);
+  }
+
+  .svg-social-twitter {
+    @include svg("svg-social-twitter", "blue");
+  }
+  .svg-social-facebook {
+    @include svg("svg-social-facebook", "blue");
+  }
+
+  .svg-social-youtube {
+    @include svg("svg-social-youtube", "blue");
+  }
+}
