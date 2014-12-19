@@ -4,27 +4,50 @@
 
 #bibdk-subject-hierarchy {
 
+  display: none;
   outline: 1px solid red;
+
   .subject-item {
+    width: 50%;
+    p {
+      height: 98px;
+    }
+  }
+  .subjects-sublist li {
     width: 100%;
   }
 
-  @media #{$small-up} {
-  outline: 1px solid blue;
-  }
-
   @media #{$medium-up} {
+    display: block;
     outline: 1px solid green;
-    .subject-item {
-      width: 50%;
-    }
   }
 
   @media #{$large-up} {
     outline: 1px solid purple;
+
+    .bibdk-subject-hierarchy-header-title {
+      width: 50%;
+      float: left;
+    }
+
+    .subject-hierarchy-searchfield {
+      padding: rem-calc(24);
+      width: 50%;
+      float: right;
+      text-align: right;
+    }
+
     .subject-item {
       width: 25%;
+      p {
+        height: 87px;
+      }
     }
+
+    .subjects-sublist li {
+      width: 25%;
+    }
+
   }
 
 }
@@ -35,16 +58,14 @@
 
 .bibdk-subject-hierarchy-header {
   @extend .clearfix;
-  height: rem-calc(70);
+  // height: rem-calc(70);
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
 }
 
 .bibdk-subject-hierarchy-header-title {
-  float: left;
   padding: rem-calc(20);
   @include typo("title", "section", "black");
-  width: 400px;
   overflow: hidden;
   height: 50px;
 
@@ -57,27 +78,57 @@
 
 .bibdk-subject-hierarchy-header-helptext {
   display: none;
-
   .bibdk-subject-hierarchy-helptext {
     float: left;
   }
-
   .icon-blue-x {
     background-image: url("../img/in_use/icons/blue-x.png");
   }
-  
+ 
 }
 
 .subject-hierarchy-searchfield {
-  display: none;
+  padding: rem-calc(20);
+ .svg-magnifier {
+    @include svg("svg-magnifier", $black--natural);
+  }
+ .icon {
+    width: 20px;
+    height: 20px;
+  }
+  a {
+    color: $black--natural;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+}
+
+#bibdk-subject-hierarchy-searchfield-form {
+  .form-item-search-hierarchy-input {
+    width: 75%;
+    float: left;
+    padding: 0 1em 0 0;
+  }
+  .searchfield-input {
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid $grey-border;
+  }
+  .searchfield-submit {
+    width: 25%;
+  }
+  .ajax-progress {
+    display: none;
+  }
 }
 
 
 // =============================================================================
-// Bibliotek.dk Subject inner
+// Bibliotek.dk Subject content
 // =============================================================================
 
-.bibdk-subject-hierarchy-inner {
+#bibdk-subject-hierarchy-content,
+#bibdk-subject-hierarchy-searchresult {
   position: relative;
   background-color: $white;
   border: 1px solid $grey-border;
@@ -99,11 +150,10 @@ subjects-row {
 
 .subject-item {
   float: left;
-  width: 25%;
   overflow: hidden;
   p {
     margin: 0;
-    height: 85px;
+    height: 87px;
     position: relative;
   }
   .header {
@@ -173,6 +223,7 @@ subjects-row {
 // Breadcrumb
 .subjects-breadcrumb {
   margin-bottom: 10px;
+  margin-right: 26px;
 
   a, div.container-last {
     @include inline-block();
@@ -198,6 +249,9 @@ subjects-row {
 
 // Each sublist
 .subjects-sublist {
+  ul {
+    font-size: 0.85rem;
+  }
   li {
     @include inline-block(top);
     width: 25%;
@@ -224,17 +278,23 @@ subjects-row {
 // Subject search
 // =============================================================================
 
-.bibdk-subject-hierarchy-searchresult {
+#bibdk-subject-hierarchy-searchresult {
+  
+  display: none;
+  
   .header {
     padding-bottom: 20px;
   }
+
   h1 {
     font-size: 1.5em;
   }
+
   h2 {
     font-weight: bold;
     margin-bottom: 5px;
   }
+
   .themes__breadcrumb {
     margin-bottom: 0;
     a {
@@ -244,8 +304,15 @@ subjects-row {
       font-weight: normal;
     }
   }
+
   .item-list {
     margin-bottom: 20px;
+  }
+
+  // Close button
+  .subjects-close-button {
+    top: 21px;
+    right: 21px;
   }
 
   .subject-hierarchy-suggestion-form {
@@ -277,32 +344,29 @@ subjects-row {
     .ajax-progress .message {
       display: none;
     }
+    .search-hierarchy-suggestion-input {
+      line-height: 30px;
+      height: 30px;
+      border: 1px solid $grey-border;
+    }
 
   }
 
   .subject-hierarchy-suggestion-form.send-suggestion {
-    border-top: 1px solid $blue-lighter;
+    border-top: 1px solid $grey-border;
   }
+  
+  // Foundation drop-down
+  
+  // Used for right position
+  $f-dropdown-margin-left: 20px;
+  
+  // Used for left position
+  $f-dropdown-margin-right: $f-dropdown-margin-top;
+  
+  // Foundation background color
+  $f-dropdown-bg: $grey-bg--section;
 
 }
 
-#bibdk-subject-hierarchy-searchfield-form {
-
-  float: right;
-
-  .form-item {
-    float: left;
-    padding: 0;
-  }
-
-  .searchfield-input {
-    line-height: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  .ajax-progress .message {
-    display: none;
-  }
-
-}
 
