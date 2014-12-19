@@ -968,18 +968,22 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
   if ($actions = $vars['actions']) {
     foreach ($actions as $key => $action) {
       switch ($key) {
-        case 'reservation' :
-          $actions[$key]['#prefix'] = '<div class="btn-wrapper">';
-          $actions[$key]['#suffix'] = '</div>';
-          break;
         case 'linkme' :
           $vars['secondary_actions'][$key] = $action;
           unset($actions[$key]);
           break;
       }
     }
-
     $vars['actions'] = $actions;
+  }
+
+  // unset #theme for volume and section, so drupal does not render the field
+  // but still renders the subfield
+  if(isset($vars['fields']['bibdk_mani_volume'])) {
+    unset($vars['fields']['bibdk_mani_volume']['#theme']);
+  }
+  if(isset($vars['fields']['bibdk_mani_section'])) {
+    unset($vars['fields']['bibdk_mani_section']['#theme']);
   }
 }
 
