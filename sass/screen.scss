@@ -22,6 +22,7 @@ $sprites-layout: smart;
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
+@import "settings/misc";
 
 
 // =============================================================================
@@ -117,6 +118,7 @@ $sprites-layout: smart;
 @import "components/global/mainwrapper";
 @import "components/global/page-sections";
 @import "components/global/topbar";
+@import "components/global/offcanvas";
 @import "components/global/user-alerts";
 
 @import "components/banner";

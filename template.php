@@ -279,13 +279,14 @@ function _bibdk_theme_get_my_page_menu_links() {
  */
 function _bibdk_theme_get_topbar_links() {
   global $user;
+
   $links = array();
   $links[] = array(
     '#theme' => 'link_with_svg',
     '#title' => t('Spørg Biblioteksvagten'),
     '#href' => url('overlay/helpdesk'),
     '#attributes' => array(
-      'class' => array('bibdk-popup-link'),
+      'class' => array('bibdk-popup-link', 'visible-for-large-up'),
       'data-rel' => array('helpdesk'),
     ),
     '#svg' => 'svg-chat',
@@ -298,6 +299,7 @@ function _bibdk_theme_get_topbar_links() {
       '#href' => url('user'),
       '#attributes' => array(
         'id' => array('topbar-my-page-link'),
+        'class' => array('visible-for-large-up'),
       ),
       '#svg' => 'svg-user',
     );
@@ -308,8 +310,20 @@ function _bibdk_theme_get_topbar_links() {
       '#title' => t('Log ind'),
       '#href' => url('user/login'),
       '#svg' => 'svg-user',
+      '#attributes' => array(
+        'class' => array('visible-for-large-up'),
+      ),
     );
   }
+  $links[] = array(
+    '#theme' => 'link_with_svg',
+    '#title' => t('Menu'),
+    '#href' => '#',
+    '#svg' => 'svg-menu',
+    '#attributes' => array(
+      'class' => array('right-off-canvas-toggle'),
+    ),
+  );
 
   return drupal_render($links);
 }

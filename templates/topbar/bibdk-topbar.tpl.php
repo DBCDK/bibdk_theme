@@ -15,22 +15,22 @@
  */
 ?>
 
-  <nav class="tab-bar">
-    <section class="topbar-logo left">
-      <a href="<?php print $home_path; ?>" title="<?php print $logo_title ?>"><img src="<?php print $logo_path; ?>"/>
-      </a></section>
-    <?php if (!$overlay): ?>
-      <section class="topbar-links right">
-        <?php print $links; ?>
-      </section>
+  <nav class="topbar">
 
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon">
-          <span> </span>
-          <span class="menu-text">Menu</span>
-        </a>
-      </section>
+    <div class="topbar-logo">
+      <a href="<?php print $home_path; ?>" title="<?php print $logo_title ?>">
+        <svg class="svg-logo-header">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use>
+        </svg>
+      </a>
+    </div>
+
+    <?php if (!$overlay): ?>
+      <div class="topbar-links">
+        <?php print $links; ?>
+      </div>
     <?php endif; ?>
+
   </nav>
 
 <?php if (!$overlay): ?>
