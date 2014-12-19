@@ -5,7 +5,6 @@
 #bibdk-subject-hierarchy {
 
   display: none;
-  outline: 1px solid red;
 
   .subject-item {
     width: 50%;
@@ -19,12 +18,9 @@
 
   @media #{$medium-up} {
     display: block;
-    outline: 1px solid green;
   }
 
   @media #{$large-up} {
-    outline: 1px solid purple;
-
     .bibdk-subject-hierarchy-header-title {
       width: 50%;
       float: left;
