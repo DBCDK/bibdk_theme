@@ -10,7 +10,7 @@ jQuery.fn.popupwindow = function(p, spawn) {
     // for overrideing the default settings
     mysettings = (jQuery(this).attr("rel") || "").split(",");
     var mysettings_html5 = (jQuery(this).attr("data-rel") || "").split(",");
-    mysettings = ( mysettings_html5.length > 0 ) ? mysettings_html5 : mysettings;
+    mysettings = ( mysettings_html5[0].length > 0 ) ? mysettings_html5 : mysettings;
 
     settings = {
       height: 600, // sets the height in pixels of the window.
@@ -65,7 +65,7 @@ jQuery.fn.popupwindow = function(p, spawn) {
           return false;
         }
       }
-      var name = settings.createnew ? "PopUpWindow" + index : "PopUpWindow";
+      var name = settings.createnew ? "PopUpWindow" + mysettings[0] : "PopUpWindow";
       if(myWindow && settings.createnew) { // close other popups, if it opens in a new window
         myWindow.close();
       }
