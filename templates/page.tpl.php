@@ -110,14 +110,3 @@
   <!-- banner end -->
 <?php endif; ?>
 
-
-<!-- footer start -->
-<footer id="footer">
-  <div class="row">
-    <div class="small-24 columns">
-      <div class="logo"><?php print render($logo_footer_link); ?></div>
-      <?php print render($page['footer']); ?>
-    </div>
-  </div>
-</footer>
-<!-- footer end -->
