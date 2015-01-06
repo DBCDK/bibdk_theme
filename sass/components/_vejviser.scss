@@ -93,6 +93,18 @@
   display: block;
 }
 
+.ting-agency--more-info-toggle-indicator {
+  @include css-triangle(5px, $black, top);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  &.is-toggled {
+    @include css-triangle(5px, $black, bottom);
+    top: 25px;
+  }
+}
+
 .ting-agency--actions {
   margin: rem-calc(10 0 0 0);
 }
