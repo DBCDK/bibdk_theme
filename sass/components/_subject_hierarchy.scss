@@ -13,7 +13,7 @@
     }
   }
   .subjects-sublist li {
-    width: 100%;
+    width: 50%;
   }
 
   @media #{$medium-up} {
@@ -54,7 +54,6 @@
 
 .bibdk-subject-hierarchy-header {
   @extend .clearfix;
-  // height: rem-calc(70);
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
 }
