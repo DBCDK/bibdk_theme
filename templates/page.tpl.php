@@ -84,14 +84,14 @@
 
   <div class="row">
     <?php if (!empty($page['sidebar'])): ?>
-      <div class="small-6 columns">
+      <div class="large-6 columns content-sidebar">
         <?php print render($page['sidebar']); ?>
       </div>
-      <div class="small-18 columns">
+      <div class="large-18 columns">
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
-      <div class="small-24 columns">
+      <div class="large-24 columns">
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
