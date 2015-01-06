@@ -7,8 +7,11 @@
 // -----------------------------------------------------------------------------
 
 .page-vejviser #title {
+  padding-top: rem-calc($spacing);
+
   @media #{$small-only} {
-    padding: rem-calc(10 $spacing 0 $spacing);
+    padding-left: rem-calc($spacing);
+    padding-right: rem-calc($spacing);
   }
 }
 
