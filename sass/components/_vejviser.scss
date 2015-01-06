@@ -7,8 +7,6 @@
 // -----------------------------------------------------------------------------
 
 .page-vejviser #title {
-  padding-top: rem-calc($spacing);
-
   @media #{$small-only} {
     padding-left: rem-calc($spacing);
     padding-right: rem-calc($spacing);
@@ -81,6 +79,25 @@
     position: absolute;
     margin-left: rem-calc(5);
   }
+
+  .element-section {
+    padding-bottom: 10px;
+  }
+
+  .element-section {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+    min-height: 110px;
+
+    @media #{$medium-up} {
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+
+    &:hover {
+      background-color: $grey-bg--section
+    }
+  }
 }
 
 .ting-agency--branch-name {
@@ -107,6 +124,11 @@
 
 .ting-agency--actions {
   margin: rem-calc(10 0 0 0);
+
+  .item-list li {
+    margin-left: 0;
+    height: 20px;
+  }
 }
 
 .ting-agency--more-info {
@@ -116,23 +138,6 @@
 
   &.is-toggled {
     display: block;
-  }
-}
-
-.page-vejviser {
-  .element-section {
-    padding-left: rem-calc(10);
-    padding-right: rem-calc(10);
-    min-height: 110px;
-
-    @media #{$medium-up} {
-      padding-left: rem-calc(20);
-      padding-right: rem-calc(20);
-    }
-
-    &:hover {
-      background-color: $grey-bg--section
-    }
   }
 }
 
