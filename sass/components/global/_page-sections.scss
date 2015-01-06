@@ -16,7 +16,7 @@
 // Messages
 #messages {
   @extend .padded--horizontal;
-  @extend .padded--vertical;
+  padding: rem-calc($spacing $spacing 0 $spacing);
   background-color: $grey-bg--page;
 }
 
