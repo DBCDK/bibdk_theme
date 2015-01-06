@@ -118,17 +118,17 @@ input:-webkit-autofill {
     background-color: $white;
   }
 
+  .ajax-progress {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+
   .form-actions {
     padding: 0;
 
     .form-item {
       padding: 0;
-    }
-
-    .ajax-progress {
-      position: absolute;
-      top: 20px;
-      right: 40px;
     }
 
     .form-type-checkbox {
