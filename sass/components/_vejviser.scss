@@ -8,7 +8,7 @@
 
 .page-vejviser #title {
   @media #{$small-only} {
-    padding: rem-calc(0 $spacing);
+    padding: rem-calc(10 $spacing 0 $spacing);
   }
 }
 
