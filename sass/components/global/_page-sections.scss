@@ -60,8 +60,17 @@
   min-height: 300px;
 
   @media #{$medium-up} {
+    min-height: 550px;
     @include rem('padding-left', $spacing);
     @include rem('padding-right', $spacing);
+  }
+
+  .content-sidebar {
+    display: none;
+
+    @media #{$large-up} {
+      display: block;
+    }
   }
 }
 
