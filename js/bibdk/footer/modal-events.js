@@ -31,6 +31,10 @@
 
   $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
     removeFilterOnMainwrapper();
+
+    if(window.Foundation.reloadPageOnModalClose === 1){
+      window.location.href = document.URL;
+    }
   });
 
   function toggleMainwrapperOnSmallDevices(toggle){
