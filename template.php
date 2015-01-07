@@ -179,7 +179,8 @@ function bibdk_theme_preprocess_html(&$vars) {
 
   
   //add the page footer
-  $vars['page_footer'] = drupal_render(_bibdk_theme_get_bibdk_foot_bar($overlay));
+  $foot = _bibdk_theme_get_bibdk_foot_bar($overlay);
+  $vars['page_footer'] = drupal_render($foot);
 
 
   // Provide path to theme
