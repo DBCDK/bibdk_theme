@@ -96,9 +96,9 @@
 
 // Breadcrumb
 .themes__breadcrumb {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
-  a {
+  a, div.container-last {
     @include inline-block();
     font-size: 14px;
     margin-right: 3px;
@@ -108,15 +108,24 @@
     }
   }
 
-  a:last-child {
-    font-weight: bold;
-
+  a:last-child, div.container-last {
     &:after {
       content: "";
     }
   }
-
+  
+  div.container-last {
+    line-height: inherit;
+  }
+  
 }
+
+// Header
+.themes__sublists-heading {
+  font-size: 18px;
+  margin-bottom:10px;
+}
+
 
 // Each sublist
 .themes__sublist {

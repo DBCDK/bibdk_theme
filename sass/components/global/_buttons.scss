@@ -11,24 +11,26 @@ input[type="submit"].button-as-link {
 // =============================================================================
 .btn-blue {
   background-color: $blue; // IE9 fix: background-image mixin fails in IE9
-  @include btn-skin($blue);
   color: $white;
-  text-shadow: $text-shadow;
 }
 
 .btn-grey {
   background-color: $grey-3; // IE9 fix: background-image mixin fails in IE9
-  @include btn-skin($grey-3);
   color: $white;
-  text-shadow: $text-shadow;
 }
 
 // =============================================================================
 // Classes
 // =============================================================================
+a.btn {
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
 .btn {
   @include box-sizing(border-box);
-  @include border-radius(3px);
   @include transition(all .1s);
   @include inline-block();
   padding: 0 20px;
@@ -36,14 +38,10 @@ input[type="submit"].button-as-link {
   line-height: 30px;
   white-space: nowrap;
 
-  &:hover {
-    @include box-shadow(0 2px 2px rgba(black, 0.2));
-  }
-
-  &.toggled,
-  &:active {
-    @include box-shadow(inset 0 2px 2px rgba(black, 0.2));
-  }
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: rem-calc(14);
+  border-radius: 0;
 
   &:disabled,
   &.disabled {
@@ -61,7 +59,6 @@ input[type="submit"].button-as-link {
   @include transition(none);
   border: solid 1px $grey-5;
   color: $blue;
-  text-shadow: none;
   padding: 6px 20px 6px 40px;
 
   background: $white;
@@ -76,6 +73,13 @@ input[type="submit"].button-as-link {
   background-position: 0%;
   &:hover {
     @include box-shadow(0 2px 2px rgba($black, 0.1));
+  }
+  &.disabled {
+    background-image: url(../img/in_use/library-favorite.png);
+    cursor: default;
+    &:hover {
+      box-shadow:none;
+    }
   }
 }
 
@@ -100,7 +104,7 @@ input[type="submit"].button-as-link {
 }
 
 .order-agency .set-default-order-agency {
-  @include box-shadow(inset 0 1px 1px rgba(black, 0.4));
+//  @include box-shadow(inset 0 1px 1px rgba(black, 0.4));
 }
 
 .selected-agency {

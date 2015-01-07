@@ -17,11 +17,14 @@
         <div class="inner-wrap">
           <?php print $page_topbar; ?>
           <?php print $page; ?>
+          <?php print $page_footer; ?>
         </div>
         <a class="exit-off-canvas"></a>
       </div>
     </div>
     <!-- FOUNDATION OFFCANVAS MENU WRAPPER -->
+
+    <div id="bibdk-modal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog"></div>
     <?php print $page_bottom; ?>
   </body>
 </html>

@@ -1,7 +1,6 @@
 // =============================================================================
-// Page title
+// MISC SETTINGS
+// Move settings to seperate files, when it makes sense
 // =============================================================================
 
-#title {
-  margin-bottom: $spacing;
-}
+$topbar_height: rem-calc(50px);

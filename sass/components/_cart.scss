@@ -4,6 +4,7 @@
 
 .page-user-cart {
   table.table {
+    background-color: $white;
     width: 100%;
     th, td {
       padding: 5px;
@@ -32,6 +33,10 @@
       padding: 3px 10px;
     }
   }
+}
+
+#bibdk-cart-view-form {
+  background-color: $grey-bg--section;
 }
 
 #edit-cartactions {
