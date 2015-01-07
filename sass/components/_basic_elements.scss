@@ -168,7 +168,7 @@
 
   .tab-item {
     padding: 10px 10px 10px 0;
-    border-bottom: solid 1px $blue-lighter;
+    border-bottom: solid 1px $grey-border;
 
     &:last-child {
       border-bottom: none;
@@ -201,7 +201,7 @@
   }
   .tabs-sections-wrapper {
     .tabs-sections {
-      border: solid 8px $blue-lighter;
+      border: solid 1px $grey-border;
       line-height: 1.5em;
     }
     a {

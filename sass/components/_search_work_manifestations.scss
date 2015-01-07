@@ -95,15 +95,25 @@
 // Work Toggle function
 // =============================================================================
 // Control visibility for toggle elements on work (collection)
+
 .work-hidden {
   display: none;
 }
 
-.work.is-toggled {
-  .work-toggle-text {
-    display: none;
+@media #{$medium-up} {
+  .work.is-toggled {
+    margin-bottom: 1rem;
+    .work-toggle-text {
+      display: none;
+    }
+    .work-hidden {
+      display: inline-block;
+    }
   }
-  .work-hidden {
+}
+
+@media #{$small-only} {
+  .mobile-page-wrapper .work-hidden {
     display: inline-block;
   }
 }
@@ -119,6 +129,7 @@
     display: inline-block;
   }
 }
+
 
 // =============================================================================
 // Subwork
@@ -143,10 +154,13 @@
 // Manifestation data (Field information)
 // =============================================================================
 .manifestation-data {
-  padding-bottom : 1rem;
-  display: table;
+  //padding-bottom : 1rem;
+  //display: table;
   .field {
     display: table-row;
+  }
+  .field.field-label-hidden {
+    display: block;
   }
   .field-label, .field-items {
     display: table-cell;
@@ -167,7 +181,22 @@
 }
 
 .manifestation-toggle {
-  padding-bottom: 1rem;
+  padding: 1rem;
+  border-top: 1px solid $grey-border;
+}
+
+  .manifestation-toggle-link {
+  .toggle-link-icon {
+    margin-right: 5px;
+    @include css-triangle(5px, $blue, top);
+    vertical-align: text-bottom;
+    display: inline-block;
+  }
+  &.is-toggled .toggle-link-icon {
+    @include css-triangle(5px, $blue, bottom);
+    vertical-align: text-top;
+    display: inline-block;
+  }
 }
 
 .manifestation {
@@ -184,9 +213,13 @@
 
 }
 
-// manifestation in cart
-.cart-item-checkbox .manifestation-data .field-label-hidden .field-items {
-  margin-left: 0;
+.primary-actions, .secondary-actions {
+  .icon {
+    display: none;
+  }
+  a {
+    display: block;
+  }
 }
 
 //
