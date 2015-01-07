@@ -84,7 +84,7 @@
 
   <div class="row">
     <?php if (!empty($page['sidebar'])): ?>
-      <div class="large-6 columns content-sidebar">
+      <div class="large-6 columns show-for-large-up">
         <?php print render($page['sidebar']); ?>
       </div>
       <div class="large-18 columns">

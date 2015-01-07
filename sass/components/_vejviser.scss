@@ -138,6 +138,7 @@
 
   &.is-toggled {
     display: block;
+    border-bottom: solid 10px $grey-bg--page;
   }
 }
 

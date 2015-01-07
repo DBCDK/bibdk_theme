@@ -64,14 +64,6 @@
     @include rem('padding-left', $spacing);
     @include rem('padding-right', $spacing);
   }
-
-  .content-sidebar {
-    display: none;
-
-    @media #{$large-up} {
-      display: block;
-    }
-  }
 }
 
 // Banner
