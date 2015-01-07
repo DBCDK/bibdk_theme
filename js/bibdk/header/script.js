@@ -115,7 +115,7 @@
         e.preventDefault();
         $(this).closest('.work').find('.work-toggle-element').trigger('click');
       });
-      
+
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).bind('show-work', function(e) {
         var id = $(this).attr('href');
@@ -453,16 +453,6 @@
           this.select();
         });
       }
-
-      // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
-      $('article.manifestation', context).filter(':visible').each(function() {
-        var wAction = $(this).find('.actions').width();
-        $(this).find('.manifestation-data').css('margin-right', wAction);
-        var hAction = $(this).find('.actions').height();
-        var hData = $(this).find('.manifestation-data').height();
-        var highestCol = Math.max(hAction, hData);
-        $(this).find('.actions').css('min-height', highestCol);
-      });
 
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
