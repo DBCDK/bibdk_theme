@@ -151,8 +151,7 @@ input:-webkit-autofill {
 
     .item-list {
       text-align: left;
-      margin-left: rem-calc(20);
-
+      margin: rem-calc(0 20);
       li {
         margin: 0;
       }
@@ -160,6 +159,10 @@ input:-webkit-autofill {
       a {
         line-height: normal;
         @include typo("link", "item-links", "black");
+      }
+
+      .first a {
+        color: $blue--hover;
       }
     }
   }
