@@ -33,8 +33,7 @@
       }
 
       .footer-bar-links a {
-        color: $white;
-        font-size: rem-calc(12px);
+        @include typo("label", "facets", "grey-light");
       }  
     }
   }
