@@ -25,10 +25,29 @@
         <a href="<?php print $home_path; ?>"><img src="<?php print $footerlogo_path; ?>"/></a>
       </section>
       <section class="footer-social-links">
-        <!-- TODO change images for twitter, facebook and youtube and http... -->
-        <a href="<?php print "http://www.twitter.com"; ?>"><img src="<?php print $footerlogo_facebook_path; ?>"width="20" height="20"/></a>
-        <a href="<?php print "http://www.facebook.com"; ?>"><img src="<?php print $footerlogo_twitter_path; ?>"width="20" height="20" /></a>
-        <a href="<?php print "http://www.youtube.com"; ?>"><img src="<?php print $footerlogo_play_path; ?>"width="20" height="20"/></a>
+        <div class="social-links">
+          <span>
+            <a href="https://twitter.com/bibliotekdk" title="<?php t('Bibliotek.dk på Twitter'); ?>" target="_blank">
+              <svg class="svg-social-twitter">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-social-twitter"></use>
+              </svg>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.facebook.com/bibliotek.dk" title="<?php t('Bibliotek.dk på Facebook'); ?>" target="_blank">
+              <svg class="svg-social-facebook">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-social-facebook"></use>
+              </svg>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.youtube.com/user/bibliotekdk" title="<?php t('Bibliotek.dk på YouTube'); ?>" target="_blank">
+              <svg class="svg-social-youtube">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-social-youtube"></use>
+              </svg>
+            </a>
+          </span>
+        </div>
       </section>
     </div>
   </div>  
