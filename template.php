@@ -86,9 +86,6 @@ function bibdk_theme_theme() {
       'footer_menu_links' => '',
       'home_path' => '',
       'footerlogo_path' => '',
-      'footerlogo_twitter_path' => '',
-      'footerlogo_facebook_path' => '',
-      'footerlogo_play_path' => '',
       'logo_path' => '',
       'links' => array(),
       'overlay' => FALSE,
@@ -200,19 +197,12 @@ function _bibdk_theme_get_bibdk_foot_bar($overlay) {
   $home_path = url('<front>');
   $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';  
   $footer_menu = _bibdk_theme_get_footer_bar_menu();
-  //TODO change images for twitter, facebook and youtube 
-  $footerlogo_twitter_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
-  $footerlogo_facebook_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
-  $footerlogo_play_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/min-side-smiley.png';
       
   $foot_bar = array(
     '#theme' => 'bibdk_foot_bar',
     '#footer_menu_links' => drupal_render($footer_menu),
     '#home_path' => $home_path,
     '#footerlogo_path' => $footerlogo_path,
-    '#footerlogo_twitter_path' => $footerlogo_twitter_path,
-    '#footerlogo_facebook_path' => $footerlogo_facebook_path,
-    '#footerlogo_play_path' => $footerlogo_play_path,
     '#overlay' => $overlay,
   );
   return $foot_bar;
