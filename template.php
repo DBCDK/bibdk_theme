@@ -990,22 +990,6 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
 /**
  * Implements hook_preprocess_HOOK().
  *
- * @param array $links
- */
-function bibdk_theme_preprocess_links(&$links) {
-  if ($links['heading'] == t('export links')) {
-    $links['heading'] = '';
-    foreach ($links['links'] as $key => $link) {
-      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
-      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
-      $links['links'][$key] = $link;
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- *
  * @param $link
  */
 function bibdk_theme_preprocess_link(&$link) {
