@@ -12,24 +12,25 @@ article.article-widget{
   }
 }
 
-.bibdk-article-top.bibdk-article-right{
-  padding-right: $spacing/2;
+.views-row-first article.article-widget.bibdk-article-top{
+  border-right:solid $spacing $grey-bg--page;
 }
 
-.bibdk-article-top.bibdk-article-left{
-  padding-left: $spacing/2;
+.views-row-last article.article-widget.bibdk-article-top{
+  border-left:solid $spacing $grey-bg--page;
 }
+
 
 article.article-widget.bibdk-article-top {
   @extend .hide-for-medium-down;
   margin-bottom: $spacing;
-  width:50%;
+  width:33.333333%;
   float:left;
   .inner {
+    background-color: $white;
     .footer {
-      background-color: $grey-bg--section;
+      background-color: $white;
       margin-top: 0px;
-      padding: 0.75em;
       .icon{
         float:right;
       }

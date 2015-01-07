@@ -257,39 +257,6 @@ h3.library-list-header {
   background: url(../img/in_use/mediatype_icons/games.png) no-repeat;
 }
 
-//
-// Settings box heights
-//
-.widget-height-1 .inner {
-  height: 100px;
-}
-
-.widget-height-2 .inner {
-  height: 210px;
-}
-
-.widget-height-3 .inner {
-  height: 320px;
-}
-
-.widget-height-4 .inner {
-  height: 430px;
-}
-
-article.article-widget {
-  .field-label {
-    display: none;
-  }
-}
-
-article.widget-biblioteksvagt {
-  float: right;
-}
-
-.bibdk_article_ajax_replace {
-  position: relative;
-  left: -10px;
-}
 
 //
 // Common widget styling
