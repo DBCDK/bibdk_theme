@@ -251,15 +251,26 @@ function _bibdk_theme_get_my_page_menu_links() {
     'href' => "user/$user->uid",
     'weight' => 33,
   );
+
   uasort($mypage_links, 'drupal_sort_weight');
 
+  $hide_on_small = array(
+    'user/%user/searchhistory',
+    'user/%user/edit',
+    'user/%user/settings'
+  );
+
   foreach ($mypage_links as $path => $item) {
-    $path = str_replace('%user', $user->uid, $path);
-    $links[$path] = array(
+    $mypath = str_replace('%user', $user->uid, $path);
+    $links[$mypath] = array(
       'title' => $item['title'],
-      'href' => $path,
+      'href' => $mypath,
       'attributes' => $common
     );
+
+    if(in_array($path, $hide_on_small)){
+      $links[$mypath]['attributes']['class'][] = 'show-for-medium-up';
+    }
   }
 
   $links['logout'] = array(
