@@ -77,6 +77,15 @@ function bibdk_theme_theme() {
         'href' => '',
         ),
       ),
+    'span_with_svg' => array(
+      'path' => $path . 'global',
+      'template' => 'span-with-svg',
+      'variables' => array(
+        'content' => '',
+        'attributes' => array(),
+        'svg' => '',
+      ),
+    ),
 
     'bibdk_foot_bar' => array(
     'path' => $path . 'footer',
@@ -174,7 +183,7 @@ function bibdk_theme_preprocess_html(&$vars) {
   $vars['page_topbar'] = drupal_render($topbar);
 
 
-  
+
   //add the page footer
   $foot = _bibdk_theme_get_bibdk_foot_bar($overlay);
   $vars['page_footer'] = drupal_render($foot);
@@ -185,7 +194,7 @@ function bibdk_theme_preprocess_html(&$vars) {
 }
 
 /**
- * Rendering of the bibdk footer 
+ * Rendering of the bibdk footer
  *
  * @param bool $overlay Flag that indicated whether we're on a overlay page.
  *
@@ -196,9 +205,9 @@ function _bibdk_theme_get_bibdk_foot_bar($overlay) {
  global $base_url;
 
   $home_path = url('<front>');
-  $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';  
+  $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';
   $footer_menu = _bibdk_theme_get_footer_bar_menu();
-      
+
   $foot_bar = array(
     '#theme' => 'bibdk_foot_bar',
     '#footer_menu_links' => drupal_render($footer_menu),
@@ -404,7 +413,7 @@ function _bibdk_theme_get_footer_bar_menu() {
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
-  
+
 }
 
 /**
@@ -528,7 +537,7 @@ function bibdk_theme_preprocess_page(&$vars) {
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
 
- 
+
   $vars['logo_footer'] = array(
     '#theme' => 'image',
     '#path' => $vars['bibdk_theme_path'] . '/img/dbc-logo-footer.png',

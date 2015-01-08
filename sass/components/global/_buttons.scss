@@ -19,6 +19,11 @@ input[type="submit"].button-as-link {
   color: $white;
 }
 
+.btn-grey-light {
+  background-color: $grey-6; // IE9 fix: background-image mixin fails in IE9
+  color: $grey-text--dark;
+}
+
 // =============================================================================
 // Classes
 // =============================================================================
@@ -42,6 +47,15 @@ a.btn {
   font-weight: bold;
   font-size: rem-calc(14);
   border-radius: 0;
+
+  &:hover {
+    @include box-shadow(0 2px 2px rgba(black, 0.2));
+  }
+
+  &.toggled,
+  &:active {
+    @include box-shadow(inset 0 2px 2px rgba(black, 0.2));
+  }
 
   &:disabled,
   &.disabled {

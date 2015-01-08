@@ -116,6 +116,7 @@ label.option {
   margin-bottom: 15px;
 }
 
+
 // =============================================================================
 // Radios and checkboxes
 // =============================================================================
@@ -150,6 +151,7 @@ input[type="checkbox"]:focus {
 .form-type-radio {
   width: 100%;
 }
+
 
 // =============================================================================
 // Selects
@@ -287,6 +289,9 @@ input[type="submit"].btn-add-library {
   a {
     font-size: 14px;
     margin-left: 5px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
   a {
     @include box-sizing(border-box);
@@ -522,6 +527,7 @@ select#edit-favouriteselector {
   }
 }
 
+
 // =============================================================================
 // Reservation
 // -----------------------------------------------------------------------------
@@ -579,6 +585,7 @@ select#edit-favouriteselector {
 .page-reservation label {
   margin-bottom: 2px;
   float: left;
+  width: 170px;
   line-height: 1.3em;
 }
 
@@ -630,13 +637,6 @@ select#edit-favouriteselector {
 
   #edit-userparameters .form-item {
     padding: 20px 0 0 0;
-  }
-
-  .close-link-wrapper {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    text-align: center;
   }
 
   .infomedia-search-group {
@@ -696,7 +696,9 @@ select#edit-favouriteselector {
           border: 1px solid $red;
         }
       }
+
     }
+  }
 
     // ==========================
     // Need before date -- Start
@@ -705,7 +707,9 @@ select#edit-favouriteselector {
       margin: rem-calc(20) 0;
       background-color: $white;
       width: 100%;
+
     }
+  }
 
     #edit-needbeforedate {
       padding: 0;
@@ -723,8 +727,6 @@ select#edit-favouriteselector {
         max-width: 80%;
       }
     }
-  }
-}
 
 .page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
@@ -771,17 +773,3 @@ select#edit-favouriteselector {
   }
 }
 
-
-/*#popup .infomedia-search-group {
-  @extend .inline-search-group;
-  .search-input-field {
-    padding: 8px;
-    input {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.infomedia-article input {
-  padding: 8px;
-}*/

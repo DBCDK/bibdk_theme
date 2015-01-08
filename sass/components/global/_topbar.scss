@@ -12,6 +12,14 @@
   position: relative;
   height: $topbar_height;
   background-color: $black;
+
+  .svg-chat {
+    @include svg("svg-chat", "white");
+  }
+
+  .svg-user{
+    @include svg("svg-user", "white");
+  }
 }
 
 
