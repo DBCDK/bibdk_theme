@@ -23,10 +23,6 @@
   padding: rem-calc(10);
 }
 
-.form-item .form-item {
-  padding: 0;
-}
-
 .vertical-tabs .form-wrapper {
   padding: 0 20px;
 }
@@ -226,10 +222,6 @@ input.password-field {
   width: 45%;
 }
 
-input.password-field {
-  margin-bottom: 15px;
-}
-
 .confirm-parent,
 .password-parent {
   width: 100%;
@@ -295,9 +287,6 @@ input[type="submit"].btn-add-library {
   a {
     font-size: 14px;
     margin-left: 5px;
-    &:first-child {
-      margin-left: 0;
-    }
   }
   a {
     @include box-sizing(border-box);
@@ -781,3 +770,18 @@ select#edit-favouriteselector {
     width: 100%;
   }
 }
+
+
+/*#popup .infomedia-search-group {
+  @extend .inline-search-group;
+  .search-input-field {
+    padding: 8px;
+    input {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.infomedia-article input {
+  padding: 8px;
+}*/

@@ -56,13 +56,8 @@ input:-webkit-autofill {
   }
 
   .block-ding-wayf {
-    display: none;
-
-    @media #{$medium-up} {
-      background-color: $grey-bg--section;
-      display: block;
-      padding: rem-calc(20) 0;
-    }
+    background-color: $grey-bg--section;
+    padding: rem-calc(20 0 30 0);
   }
 
   .ding-wayf-logon-block {
@@ -77,12 +72,16 @@ input:-webkit-autofill {
       :first-child {
         margin-right: rem-calc(20);
       }
+
+      img {
+        max-height: rem-calc(25);
+      }
     }
   }
 
   .form-item {
     border-radius: 0;
-    margin: 0 rem-calc(20) rem-calc(4) rem-calc(20);
+    margin: rem-calc(0 20 4 20);
     padding: rem-calc(10);
 
     &.form-type-checkbox {
@@ -104,18 +103,8 @@ input:-webkit-autofill {
       }
     }
 
-    input[type="checkbox"]{
-      margin-left: 5px;
-      margin-right: 0;
-    }
-
     label {
-      @include typo("title", "small", "grey-dark");
-      font-weight: bold;
       float: left;
-      margin-bottom: 0;
-      padding-bottom: 5px;
-      padding-top: 2px;
     }
   }
 
@@ -144,28 +133,25 @@ input:-webkit-autofill {
 
     .form-type-checkbox {
       position: absolute;
-      width: 80px;
-      margin: rem-calc(27) 0 0;
-      right: 130px;
+      margin: rem-calc(27 0 0);
+      right: rem-calc(120);
 
       .form-checkbox {
-        height: 20px;
-        vertical-align: middle;
+        margin-top: rem-calc(2);
         float: left;
+        margin-right: rem-calc(5);
       }
 
       label {
         @include typo("link", "item-links", "grey-dark");
         min-width: 60%;
-        max-width: none;
         float: right;
       }
     }
 
     .item-list {
       text-align: left;
-      margin-left: rem-calc(20);
-
+      margin: rem-calc(0 20);
       li {
         margin: 0;
       }
@@ -174,10 +160,14 @@ input:-webkit-autofill {
         line-height: normal;
         @include typo("link", "item-links", "black");
       }
+
+      .first a {
+        color: $blue--hover;
+      }
     }
   }
 
-  .fieldset-description{
+  .fieldset-description {
     padding: 0 rem-calc(20);
   }
 
@@ -186,7 +176,6 @@ input:-webkit-autofill {
     margin: 0 rem-calc(20) 2px rem-calc(20);
 
     padding: rem-calc(10) 0 rem-calc(10) rem-calc(10);
-
 
     button {
       border: none;

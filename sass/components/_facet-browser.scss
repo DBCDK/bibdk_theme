@@ -23,7 +23,7 @@
   @include rem('margin-bottom', 10px);
 }
 
-.pane-ding-facetbrowser {
+.pane-bibdk-facetbrowser {
 
   .pane-title {
     @include rem('font-size', 20px);
@@ -55,8 +55,19 @@
     cursor: pointer;
   }
 
+  .select {
+    cursor: pointer;
+  }
+
   label {
     @include typo("label", "facets", "grey-dark");
+  }
+  
+  #deselected-terms {
+    label {
+      text-decoration: line-through;
+      text-decoration-color: $warning;
+    }
   }
 
   .form-item {

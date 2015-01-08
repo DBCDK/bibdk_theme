@@ -24,7 +24,7 @@ $sprites-layout: smart;
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
-@import "mixins/triangle";
+@import "settings/misc";
 
 // =============================================================================
 // Foundation -- behold, here are all the Foundation components.
@@ -119,6 +119,7 @@ $sprites-layout: smart;
 @import "components/global/mainwrapper";
 @import "components/global/page-sections";
 @import "components/global/topbar";
+@import "components/global/offcanvas";
 @import "components/global/user-alerts";
 
 @import "components/actions";
@@ -135,6 +136,7 @@ $sprites-layout: smart;
 @import "components/ie6nomore";
 @import "components/infomedia";
 @import "components/mobile_page";
+@import "components/mypage";
 @import "components/page-title";
 @import "components/popup";
 @import "components/rs-carousel";

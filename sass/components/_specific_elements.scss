@@ -34,16 +34,17 @@
 
 #bibdk-vejviser-header {
   float: right;
-  margin-top: -40px;
+  margin-top: -50px;
   width: 100%;
   color: $grey-2;
+
   #bibdk-vejviser-count {
     color: $grey-3;
     white-space: nowrap;
     font-size: large;
     line-height: 1.5;
     float: left;
-    padding: 0px 20%;
+    margin: rem-calc(10 0 0 180);
   }
 
   .vejviser-raw {
@@ -51,7 +52,7 @@
   }
 }
 
-.bibdk-vejviser-help-text{
+.bibdk-vejviser-help-text {
   clear: both;
 }
 
@@ -64,11 +65,9 @@
   }
 
   .form-type-textfield {
-    width: 300px;
-    margin-right: 5px;
-  }
-  .form-actions {
-    width: 85px;
+    padding: rem-calc(10);
+    width: auto;
+    min-width: 280px;
   }
 
   form {
@@ -84,9 +83,9 @@
   }
 }
 
-
 .ting-agency-library {
   @extend .clearfix;
+  background-color: $white;
 
   .hgroup {
     margin-bottom: 10px;
@@ -105,7 +104,7 @@
     color: $grey-4;
   }
 
-  .item-list ul li{
+  .item-list ul li {
     margin: 0px 0px 0px 0px
   }
 
@@ -113,19 +112,15 @@
     list-style-type: none;
   }
 
+  .element-section{
+    background-color: transparent;
+  }
+
   &:nth-child(2n) {
-    background-color: $grey-7;
+    background-color: $grey-bg--section;
   }
   .actions {
     border: none;
-  }
-
-  &.favourite {
-
-  }
-
-  &.order-agency {
-
   }
 }
 
@@ -141,14 +136,14 @@
 // =============================================================================
 // INFOMEDIA AGENCY LIST
 // =============================================================================
-h3.library-list-header{
-  margin-bottom:10px;
+h3.library-list-header {
+  margin-bottom: 10px;
 }
 
-.ting-infomedia-agency-list{
-  background-color:$grey-7;
-  .element-section{
-    padding:2px 5px 2px 10px;
+.ting-infomedia-agency-list {
+  background-color: $grey-7;
+  .element-section {
+    padding: 2px 5px 2px 10px;
   }
   .hgroup {
     margin-bottom: 0px;
@@ -161,7 +156,7 @@ h3.library-list-header{
   }
   h3 {
     font-weight: normal;
-    font-size:1.2em;
+    font-size: 1.2em;
   }
   h4 {
     font-weight: normal;
@@ -172,6 +167,7 @@ h3.library-list-header{
     background-color: $grey-7;
   }
 }
+
 //========== END INFOMEDIA AGENCY LIST =======//
 
 .library-details-column-1,
@@ -208,13 +204,6 @@ h3.library-list-header{
   padding-left: 20px;
   color: $grey-4;
 }
-
-
-
-
-
-
-
 
 // =============================================================================
 // Frontpage Teaser blocks
@@ -275,21 +264,20 @@ h3.library-list-header{
   height: 430px;
 }
 
-article.article-widget{
-  .field-label{
-    display:none;
+article.article-widget {
+  .field-label {
+    display: none;
   }
 }
 
-article.widget-biblioteksvagt{
-  float:right;
+article.widget-biblioteksvagt {
+  float: right;
 }
 
 .bibdk_article_ajax_replace {
-position:relative;
-left:-10px;
+  position: relative;
+  left: -10px;
 }
-
 
 //
 // Common widget styling
@@ -309,7 +297,7 @@ left:-10px;
     left: 15px;
   }
   a {
-    font-weight:bold;
+    font-weight: bold;
   }
   &:hover a {
     text-decoration: underline;
@@ -360,7 +348,7 @@ left:-10px;
 //
 // Light grey widget
 //
-.widget-light-grey .inner{
+.widget-light-grey .inner {
   background: $grey-6;
   color: $black;
 
@@ -389,7 +377,7 @@ left:-10px;
 //
 .widget-biblioteksvagt .inner {
   background: $blue;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   color: $white;
   .inner {
@@ -446,9 +434,6 @@ left:-10px;
   }
 }
 
-
-
-
 // =============================================================================
 // Linkme, Infomedia
 // =============================================================================
@@ -485,7 +470,7 @@ left:-10px;
   }
   .user-msg {
     min-height: 3.5em;
-    width:  250px;
+    width: 250px;
     line-height: 2em;
     margin: 10px;
     float: left;
@@ -501,7 +486,6 @@ left:-10px;
 div#search-advanced-panel .popover.element-wrapper {
   background-color: $white;
 }
-
 
 // =============================================================================
 // Localisations popup
@@ -608,10 +592,10 @@ p.note-localisations {
   width: 46%;
   float: left;
   div.fieldset-wrapper {
-    border-color: #DCDCDC #DCDCDC;
+    background-color: $white;
     border-image: none;
-    border-style: solid solid none;
-    border-width: 1px 1px medium;
+    border: 1px solid $grey-border;
+    border-bottom: medium none;
     padding: 0;
     min-height: 218px;
     max-height: 218px;
@@ -675,7 +659,7 @@ p.note-localisations {
 }
 
 .popover.element-wrapper.linkme-wrapper.form-wrapper {
-    border: 10px solid $grey-6;
+  border: 10px solid $grey-6;
 }
 
 // =============================================================================
@@ -752,6 +736,7 @@ p.note-localisations {
 // =============================================================================
 
 .search-history-table {
+  background-color: $white;
   width: 100%;
   input {
     border: none;
@@ -826,7 +811,7 @@ p.note-localisations {
 // Overlay
 // =============================================================================
 
-body.page-ting-moreinfo  {
+body.page-ting-moreinfo {
   background: none repeat scroll 0 0 #ffffff;
   .element-wrapper {
     border: 0px solid #ffffff;
@@ -845,7 +830,6 @@ div#moreinfo img {
   left: 0;
   right: 0;
 }
-
 
 #lightboxFrame {
   border-width: 0;
@@ -872,7 +856,7 @@ div#moreinfo img {
 .pane-ting-openformat-load-more {
   text-align: center;
   padding: 8px;
-  background-color:$grey-6;
+  background-color: $grey-6;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -905,7 +889,6 @@ div#moreinfo img {
   padding: 0 1em 0;
 }
 
-
 //
 // alerts
 //
@@ -929,7 +912,7 @@ div#moreinfo img {
   background-position: -36px 0;
 }
 
-.red-alert{
+.red-alert {
   background-position: -54px 0;
 }
 
@@ -946,7 +929,6 @@ div#moreinfo img {
   border-bottom: 1px solid #dcdcdc;
 }
 
-
 // =============================================================================
 // Bibdk reviews
 // =============================================================================
@@ -955,7 +937,7 @@ div#moreinfo img {
   border-top: 1px solid #dcdcdc;
   padding: 10px 0;
 
-  .openformat-info{
+  .openformat-info {
     float: left;
     width: 63%;
   }

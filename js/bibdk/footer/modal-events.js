@@ -8,8 +8,9 @@
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
+
     var $mainwrapper = $("#mainwrapper");
-    if(!Modernizr.touch) {
+    if(!Modernizr.touch) { // blur the background but only if we're aren't on a touch device as the blur effect is performance heavy
       $mainwrapper.css("filter", "blur(20px)");
       $mainwrapper.css("-webkit-filter", "blur(20px)");
       $mainwrapper.css("-moz-filter", "blur(20px)");
