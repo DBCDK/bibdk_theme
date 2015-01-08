@@ -25,11 +25,21 @@ article.article-widget{
   border-left:solid $spacing $grey-bg--page;
 }
 
+.bibdk-article-top a{
+  display: block;
+  width:100%;
+}
+
+.article-top-link.icon-blue-right{
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+}
+
 
 article.article-widget.bibdk-article-top {
   @extend .hide-for-medium-down;
   margin-bottom: $spacing;
-  width:33.333333%;
+  width:percentage(1px/3px);
   float:left;
   .inner {
     background-color: $white;
