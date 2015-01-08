@@ -66,3 +66,7 @@
 .svg-arrow-right {
   @include svg("svg-arrow-right", "black");
 }
+
+.svg-magnifier {
+  @include svg("svg-magnifier", "black");
+}
