@@ -103,11 +103,13 @@
 .ting-agency--branch-name {
   @include typo("title", "large", "black");
   display: block;
+  margin-right: 40px;
 }
 
 .ting-agency--agency-name {
   @include typo("link", "item-links", "blue");
   display: block;
+  margin-right: 50px;
 }
 
 .ting-agency--more-info-toggle-indicator {
