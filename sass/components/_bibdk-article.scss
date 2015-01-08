@@ -12,6 +12,11 @@ article.article-widget{
   }
 }
 
+.view-article-view .views-field-title{
+  font-weight: bold;
+  line-height: rem-calc(20);
+}
+
 .views-row-first article.article-widget.bibdk-article-top{
   border-right:solid $spacing $grey-bg--page;
 }
