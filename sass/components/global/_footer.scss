@@ -47,6 +47,10 @@
       margin-left: rem-calc(2px);
     }
 
+    .social-links {
+      margin-top: 5px;
+    }
+
     .footer-social-links {
       text-align: right;
       @media #{$medium-only, $small-only } {
