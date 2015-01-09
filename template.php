@@ -984,15 +984,14 @@ function bibdk_theme_ting_agency_tools($vars) {
  * @param array $vars
  * @return string
  */
-function bibdk_theme_menu_link(array$vars) {
+function bibdk_theme_menu_link($vars) {
+
   $element = $vars['element'];
   $sub_menu = '';
+  $linkText = $element['#title'];
 
-  if ($element['#below']) {
+  if ( !empty($element['#below']) ) {
     $sub_menu = drupal_render($element['#below']);
-  }
-  else {
-    $linkText = $element['#title'];
   }
 
   $output = l($linkText, $element['#href'], $options = $element['#localized_options']);
