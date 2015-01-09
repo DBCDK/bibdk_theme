@@ -15,9 +15,10 @@
 
   &:after {
     position: absolute;
-    top: 4px;
+    margin: auto;
+    top: 0;
     left: 12px;
-    content: '';
+    bottom: 0;
   }
 
   a {

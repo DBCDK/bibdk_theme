@@ -308,15 +308,26 @@ function _bibdk_theme_get_my_page_menu_links() {
     'href' => "user/$user->uid",
     'weight' => 33,
   );
+
   uasort($mypage_links, 'drupal_sort_weight');
 
+  $hide_on_small = array(
+    'user/%user/searchhistory',
+    'user/%user/edit',
+    'user/%user/settings'
+  );
+
   foreach ($mypage_links as $path => $item) {
-    $path = str_replace('%user', $user->uid, $path);
-    $links[$path] = array(
+    $mypath = str_replace('%user', $user->uid, $path);
+    $links[$mypath] = array(
       'title' => $item['title'],
-      'href' => $path,
+      'href' => $mypath,
       'attributes' => $common
     );
+
+    if(in_array($path, $hide_on_small)){
+      $links[$mypath]['attributes']['class'][] = 'show-for-medium-up';
+    }
   }
 
   $links['logout'] = array(
@@ -627,9 +638,6 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'search_block_form':
       _alter_search_block_form($form, $form_state, $form_id);
       break;
-    case 'bibdk_vejviser_form':
-      _alter_bibdk_vejviser_form($form, $form_state, $form_id);
-      break;
     case 'bibdk_help_search_form':
       _alter_bibdk_help_search_form($form, $form_state, $form_id);
       break;
@@ -911,10 +919,6 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
     $elements['column' . $key] = $snippet;
   }
   $form['advanced'][$region][$group][$parent_id][$type] = $elements;
-}
-
-function _alter_bibdk_vejviser_form(&$form, &$form_state, $form_id) {
-  $form['#attributes']['class'] = array('hidden', 'search-form-horizontal');
 }
 
 function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {

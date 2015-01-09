@@ -116,7 +116,6 @@ label.option {
   margin-bottom: 15px;
 }
 
-
 // =============================================================================
 // Radios and checkboxes
 // =============================================================================
@@ -151,7 +150,6 @@ input[type="checkbox"]:focus {
 .form-type-radio {
   width: 100%;
 }
-
 
 // =============================================================================
 // Selects
@@ -276,10 +274,6 @@ input[type="submit"].btn-grey {
   // WARNING : "input[type="submit"].btn-grey" failed to @extend ".btn-grey".
   // No selectors matching ".btn-grey" could be unified with "input[type="submit"].btn-grey".
 
-}
-
-input[type="submit"].btn-add-library {
-  @extend .btn-add-library;
 }
 
 .form-actions {
@@ -527,11 +521,10 @@ select#edit-favouriteselector {
   }
 }
 
-
 // =============================================================================
 // Reservation
 // -----------------------------------------------------------------------------
-// The below trheee sections are a bit messy and could be cleaned up - also we
+// The below three sections are a bit messy and could be cleaned up - also we
 // have a specific _popups.scss for styling of popups.
 // =============================================================================
 
@@ -641,7 +634,7 @@ select#edit-favouriteselector {
 
   .infomedia-search-group {
     @extend .inline-search-group;
-    .search-input-field {
+    .vejviser-search-input {
       padding: 8px;
       input {
         margin-bottom: 20px;
@@ -651,7 +644,7 @@ select#edit-favouriteselector {
 }
 
 .inline-search-group {
-  .search-input-field {
+  .vejviser-search-input {
     width: 100%;
   }
   .search-actions {
@@ -700,33 +693,34 @@ select#edit-favouriteselector {
     }
   }
 
-    // ==========================
-    // Need before date -- Start
-    // ==========================
-    .form-item-needBeforeDate {
-      margin: rem-calc(20) 0;
-      background-color: $white;
-      width: 100%;
+  // ==========================
+  // Need before date -- Start
+  // ==========================
+  .form-item-needBeforeDate {
+    margin: rem-calc(20) 0;
+    background-color: $white;
+    width: 100%;
 
-    }
   }
+}
 
-    #edit-needbeforedate {
-      padding: 0;
+#edit-needbeforedate {
+  padding: 0;
 
-      .form-type-select {
-        padding: 0;
-      }
-    }
-    // ==========================
-    // Need before date -- End
-    // ==========================
+  .form-type-select {
+    padding: 0;
+  }
+}
 
-    #edit-agency-search-fieldset {
-      .form-type-textfield {
-        max-width: 80%;
-      }
-    }
+// ==========================
+// Need before date -- End
+// ==========================
+
+#edit-agency-search-fieldset {
+  .form-type-textfield {
+    max-width: 80%;
+  }
+}
 
 .page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
@@ -772,4 +766,3 @@ select#edit-favouriteselector {
     width: 100%;
   }
 }
-
