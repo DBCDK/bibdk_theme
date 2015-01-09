@@ -18,7 +18,7 @@ ul.off-canvas-list {
     label {
       background-color: $blue;
       color: $white;
-      padding: rem-calc(10px 0 2px 15px);
+      padding: 10px 0 2px 15px;
       border-bottom: 1px solid $grey-border;
       font-weight: normal;
     }
@@ -28,7 +28,7 @@ ul.off-canvas-list {
       font-weight: bold;
       font-size: rem-calc(14px);
       border-bottom: 1px solid $grey-border;
-      padding: rem-calc(13px 0 13px 20px);
+      padding: 13px 0 13px 20px;
 
       &.active {
         background-color: $grey-bg--page;
@@ -44,7 +44,7 @@ ul.off-canvas-list {
       color: $white;
       font-size: rem-calc(12px);
       font-weight: normal;
-      padding: rem-calc(13px 0 13px 25px);
+      padding: 13px 0 13px 25px;
 
       &.active {
         background-color: $blue--hover;
@@ -59,10 +59,10 @@ ul.off-canvas-list {
 
 ul.off-canvas-footer-menu {
   border-bottom: 1px solid $grey-border;
-  padding: rem-calc(20 0 10 0);
+  padding: 20px 0 10px 0;
 
   li {
-    padding: rem-calc(0 0 8 20);
+    padding: 0 0 8px 20px;
     a {
       color: $grey-bg--background;
       font-size: rem-calc(12px);
@@ -71,10 +71,10 @@ ul.off-canvas-footer-menu {
 }
 
 .social-links {
-  margin: rem-calc(20 0 0 20);
+  margin: 20px 0 0 20px;
 
   a {
-    padding-right: rem-calc(10);
+    padding-right: 10px;
   }
 
   .svg-social-twitter {

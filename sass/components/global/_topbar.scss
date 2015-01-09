@@ -3,10 +3,13 @@
 // =============================================================================
 
 #svg-logo {
-  #logo-bibliotek { fill: $white; }
-  #logo-dk { fill: $blue; }
+  #logo-bibliotek {
+    fill: $white;
+  }
+  #logo-dk {
+    fill: $blue;
+  }
 }
-
 
 .topbar {
   position: relative;
@@ -14,12 +17,11 @@
   background-color: $black;
 }
 
-
 .topbar-logo {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: rem-calc(20px);
+  margin-left: 20px;
 
   a {
     display: table-cell;
@@ -34,12 +36,11 @@
   }
 }
 
-
 .topbar-links {
   position: absolute;
   right: 0;
   top: 0;
-  margin-right: rem-calc(20px);
+  margin-right: 20px;
 
   a {
     @include typo("link", "topbar-links", "white");
@@ -47,11 +48,11 @@
     height: $topbar_height;
     line-height: 0;
     vertical-align: middle;
-    padding-left: rem-calc(36px);
+    padding-left: 36px;
   }
 
   span {
-    margin-left: rem-calc(5px);
+    margin-left: 5px;
     vertical-align: middle;
   }
 
