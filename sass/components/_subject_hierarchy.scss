@@ -1,224 +1,102 @@
 // =============================================================================
-// Responsive Subject hierarchy
+// Bibliotek.dk Subject hierarchy
 // =============================================================================
 
-#bibdk-subject-hierarchy {
-
-  display: none;
-
-  .subject-item {
-    width: 50%;
-    p {
-      height: 98px;
-    }
-  }
-  .subjects-sublist li {
-    width: 50%;
-  }
-
-  @media #{$medium-up} {
-    display: block;
-  }
-
-  @media #{$large-up} {
-    .bibdk-subject-hierarchy-header-title {
-      width: 50%;
-      float: left;
-    }
-
-    .subject-hierarchy-searchfield {
-      padding: rem-calc(24);
-      width: 50%;
-      float: right;
-      text-align: right;
-    }
-
-    .subject-item {
-      width: 25%;
-      p {
-        height: 87px;
-      }
-    }
-
-    .subjects-sublist li {
-      width: 25%;
-    }
-
-  }
-
-}
-
-// =============================================================================
-// Bibliotek.dk Subject hierarchy header
-// =============================================================================
-
-.bibdk-subject-hierarchy-header {
-  @extend .clearfix;
+.bibdk-subject-hierarchy-panel-header {
   background-color: $grey-bg--section;
-  border: 1px solid $grey-border;
+  padding-top: 0.75em;
+  padding-right:0.75em;
+  padding-bottom: 0;
+  padding-left: 0.75em;
 }
 
-.bibdk-subject-hierarchy-header-title {
-  padding: rem-calc(20);
-  @include typo("title", "section", "black");
-  overflow: hidden;
-  height: 50px;
-
-  @media #{$xlarge-up} {
-    width: auto;
-    overflow: auto;
-    height: auto;
+#bibdk-subject-hierarchy, .bibdk-subject-hierarchy-panel-header {
+  .themes__item {
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    p {
+      margin: 0;
+      height: 85px;
+      position: relative;
+    }
+    .header {
+      display: block;
+      padding-right: 20px;
+      padding-bottom: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .note {
+      display: block;
+      padding-bottom: 20px;
+      padding-right: 20px;
+    }
   }
-}
 
-.bibdk-subject-hierarchy-header-helptext {
-  display: none;
+  .themes__item--active > p:after {
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    @include css-triangle(8px, $blue-lighter, bottom);
+  }
+
+  .bibdk-subject-hierarchy-header {
+    color: $grey-2;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    float: left;
+  }
+
   .bibdk-subject-hierarchy-helptext {
     float: left;
   }
+
   .icon-blue-x {
     background-image: url("../img/in_use/icons/blue-x.png");
   }
- 
 }
-
-.subject-hierarchy-searchfield {
-  padding: rem-calc(20);
- .svg-magnifier {
-    @include svg("svg-magnifier", $black--natural);
-  }
- .icon {
-    width: 20px;
-    height: 20px;
-  }
-  a {
-    color: $black--natural;
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-}
-
-#bibdk-subject-hierarchy-searchfield-form {
-  .form-item-search-hierarchy-input {
-    width: 75%;
-    float: left;
-    padding: 0 1em 0 0;
-  }
-  .searchfield-input {
-    line-height: 30px;
-    height: 30px;
-    border: 1px solid $grey-border;
-  }
-  .searchfield-submit {
-    width: 25%;
-  }
-  .ajax-progress {
-    display: none;
-  }
-}
-
 
 // =============================================================================
-// Bibliotek.dk Subject content
+// Temaindgange
 // =============================================================================
 
-#bibdk-subject-hierarchy-content,
-#bibdk-subject-hierarchy-searchresult {
-  position: relative;
-  background-color: $white;
-  border: 1px solid $grey-border;
-  border-top: none;
-  padding: rem-calc(20 20 10 20);
+.themes {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-
-
-// =============================================================================
-// Subjects
-// =============================================================================
-
-subjects-row {
-}
-
-.subject-item:nth-child(3) {
-  // clear: left;
-}
-
-.subject-item {
-  float: left;
-  overflow: hidden;
-  p {
-    margin: 0;
-    height: 87px;
-    position: relative;
-  }
-  .header {
-    display: block;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .note {
-    display: block;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    a {
-      color: $black--natural;
-      font-size: 0.9em;
-    }
-  }
-}
-
-.subject-item--active > p:after {
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  left: 50%;
-  margin-left: -8px;
-  @include css-triangle(8px, $blue-lighter, bottom);
-}
-
-
-// =============================================================================
-// Subject sublists
-// =============================================================================
 
 // Container of the sublists
-.subjects-sublist-wrapper {
+.themes__sublists__wrapper {
   float: left;
   width: 100%;
   display: none;
 }
 
-.subjects-sublists {
-  position: relative; // for close button to be positioned absolute
+.themes__sublists {
+  position: relative;
   padding: 15px;
   border: solid 5px $blue-lighter;
   background-color: $white;
   margin-bottom: 30px;
 }
 
-// Header
-.subjects-sublists-heading {
-  font-size: 18px;
-  margin-bottom:10px;
-}
-
 // Close button
-.subjects-close-button {
+.themes__close-button {
   position: absolute;
   top: 8px;
   right: 10px;
   cursor: pointer;
- .svg-close {
-    @include svg("svg-close", $black--natural);
-  }
 }
 
 // Breadcrumb
-.subjects-breadcrumb {
+.themes__breadcrumb {
   margin-bottom: 10px;
-  margin-right: 26px;
 
   a, div.container-last {
     @include inline-block();
@@ -242,11 +120,15 @@ subjects-row {
   
 }
 
+// Header
+.themes__sublists-heading {
+  font-size: 18px;
+  margin-bottom:10px;
+}
+
+
 // Each sublist
-.subjects-sublist {
-  ul {
-    font-size: 0.85rem;
-  }
+.themes__sublist {
   li {
     @include inline-block(top);
     width: 25%;
@@ -268,28 +150,17 @@ subjects-row {
   }
 }
 
-
-// =============================================================================
-// Subject search
-// =============================================================================
-
-#bibdk-subject-hierarchy-searchresult {
-  
-  display: none;
-  
+.bibdk-subject-hierarchy-searchresult {
   .header {
     padding-bottom: 20px;
   }
-
   h1 {
     font-size: 1.5em;
   }
-
   h2 {
     font-weight: bold;
     margin-bottom: 5px;
   }
-
   .themes__breadcrumb {
     margin-bottom: 0;
     a {
@@ -299,15 +170,8 @@ subjects-row {
       font-weight: normal;
     }
   }
-
   .item-list {
     margin-bottom: 20px;
-  }
-
-  // Close button
-  .subjects-close-button {
-    top: 21px;
-    right: 21px;
   }
 
   .subject-hierarchy-suggestion-form {
@@ -339,29 +203,31 @@ subjects-row {
     .ajax-progress .message {
       display: none;
     }
-    .search-hierarchy-suggestion-input {
-      line-height: 30px;
-      height: 30px;
-      border: 1px solid $grey-border;
-    }
 
   }
 
   .subject-hierarchy-suggestion-form.send-suggestion {
-    border-top: 1px solid $grey-border;
+    border-top: 1px solid $blue-lighter;
   }
-  
-  // Foundation drop-down
-  
-  // Used for right position
-  $f-dropdown-margin-left: 20px;
-  
-  // Used for left position
-  $f-dropdown-margin-right: $f-dropdown-margin-top;
-  
-  // Foundation background color
-  $f-dropdown-bg: $grey-bg--section;
 
 }
 
+#bibdk-subject-hierarchy-searchfield-form {
+  float: right;
+
+  .form-item {
+    float: left;
+    padding: 0;
+  }
+
+  .searchfield-input {
+    line-height: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .ajax-progress .message {
+    display: none;
+  }
+
+}
 
