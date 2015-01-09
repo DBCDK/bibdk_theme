@@ -6,6 +6,7 @@
 
 // Import Compass (http://compass-style.org/)
 @import "compass";
+@import "compass/css3/transform";
 
 // Generate sprite (http://compass-style.org/help/tutorials/spriting/)
 $sprites-layout: smart;
@@ -21,6 +22,7 @@ $sprites-layout: smart;
 @import "settings/accordion-settings";
 @import "settings/buttons-settings";
 @import "settings/media-queries";
+@import "mixins/triangle";
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
