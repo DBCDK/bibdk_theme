@@ -4,6 +4,7 @@
 
 #bibdk-help-search-form, #bibdk-newsroom-search-form {
 
+
   padding: 0px;
   width: 100%;
 
@@ -114,6 +115,12 @@
   .pane-block:nth-child(1) {
     padding: 0;
     border-top-width: 0px;
+  }
+
+  #bibdk-help-search-form {
+    .fieldset-legend {
+        padding-top: 5px;
+    }
   }
 
 }
