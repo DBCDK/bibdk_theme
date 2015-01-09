@@ -5,7 +5,13 @@
     @include bibdk-triangle(top);
   }
   &.active > a {
-    @include bibdk-triangle(bottom);
+    &::after {
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
+    }
+    //@include bibdk-triangle(bottom);
+    //@include -webkit-transform: ;-moz-transform: ;-ms-transform: ;-o-transform: ;transform: ;
+
   }
   border: 1px solid $grey-border;
   border-bottom: none;
@@ -13,4 +19,8 @@
     border-bottom: 1px solid $grey-border;
   }
 
+}
+
+.triangle {
+  @include bibdk-triangle(top);
 }

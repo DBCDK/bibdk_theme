@@ -27,6 +27,13 @@
       float: left;
       max-width: 60%;
     }
+    @media #{$small-only} {
+      @include bibdk-triangle(left, 0.5rem, 0);
+      padding-right: 2em;
+      .mobile-page-wrapper &:after {
+        border: none;
+      }
+    }
     h2:hover {
       cursor: pointer;
       text-decoration: underline;

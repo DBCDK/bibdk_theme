@@ -1,11 +1,12 @@
-@mixin bibdk-triangle($triangle-direction) {
+@mixin bibdk-triangle($triangle-direction, $top: 50%, $right:2em) {
   $size: rem-calc(5px);
   position: relative;
   &::after {
+    @include single-transition();
     @include css-triangle($size, $black--natural, $triangle-direction);
     position: absolute;
-    top: 50%;
-    right: 2em;
+    top: $top;
+    right: $right;
     @if ($triangle-direction == bottom) {
       margin-top: -$size;
     }
