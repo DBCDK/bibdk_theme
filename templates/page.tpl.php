@@ -1,16 +1,18 @@
-<!-- search-panel start -->
-<nav id="search-panel" data-role="search">
-  <!-- blind user tag start -->
-  <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
-  <!-- blind user tag slut -->
-  <div class="row">
-    <div class="small-24 columns">
-      <span id="seasonal"></span>
-      <?php print render($page['search_panel']); ?>
+<?php if (!empty($page['search_panel'])): ?>
+  <!-- search-panel start -->
+  <nav id="search-panel" data-role="search">
+    <!-- blind user tag start -->
+    <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
+    <!-- blind user tag slut -->
+    <div class="row">
+      <div class="small-24 columns">
+        <span id="seasonal"></span>
+        <?php print render($page['search_panel']); ?>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- search-panel end -->
+  </nav>
+  <!-- search-panel end -->
+<?php endif; ?>
 
 
 <?php if (!empty($messages)): ?>
@@ -82,14 +84,14 @@
 
   <div class="row">
     <?php if (!empty($page['sidebar'])): ?>
-      <div class="small-6 columns">
+      <div class="large-6 columns show-for-large-up">
         <?php print render($page['sidebar']); ?>
       </div>
-      <div class="small-18 columns">
+      <div class="large-18 columns">
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
-      <div class="small-24 columns">
+      <div class="large-24 columns">
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>

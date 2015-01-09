@@ -1,0 +1,197 @@
+// =============================================================================
+// Vejviser -- Everything related to the Vejviser
+// =============================================================================
+
+// =============================================================================
+// Page-vejviser title
+// -----------------------------------------------------------------------------
+
+.page-vejviser #title {
+  @media #{$small-only} {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+}
+
+// =============================================================================
+// Vejviser search form
+// -----------------------------------------------------------------------------
+
+#bibdk-vejviser--search-form {
+  padding: 0 10px 50px 10px;
+
+  @media #{$medium-up} {
+    padding: 0 0 50px 0;
+  }
+}
+
+.vejviser-search-result {
+  .message {
+    border: none;
+  }
+}
+
+input[type="submit"].vejviser-search-submit {
+  float: right;
+  height: 40px;
+
+  @media #{$medium-up} {
+    top: 5px;
+    position: absolute;
+    right: 10px;
+    width: 15%;
+  }
+}
+
+input[type="text"].vejviser-search-input {
+  width: 100%;
+  height: 30px;
+
+  @media #{$medium-up} {
+    width: 83%;
+  }
+}
+
+// =============================================================================
+// Vejviser search result
+// -----------------------------------------------------------------------------
+
+.bibdk-favourite-vejviser-link {
+  padding-bottom: 10px;
+  text-align: right;
+
+  a {
+    padding: rem-calc(10 15);
+    @include inline-block();
+    color: $white;
+    background-color: $grey-2;
+  }
+}
+
+.bibdk-favourite--add-remove-library {
+  color: $grey-text--dark;
+  &:hover {
+    color: $grey-text--dark;
+    text-decoration: underline;
+  }
+
+  .svg-star {
+    @include svg("svg-star", "grey-dark");
+    margin-right: 5px;
+  }
+
+  &.bibdk-favourite--library-is-favourited {
+    .svg-star {
+      fill: $yellow;
+    }
+  }
+}
+
+.ting-agency-library {
+  .ajax-progress {
+    position: absolute;
+    margin-left: rem-calc(5);
+  }
+
+  .element-section {
+    padding-bottom: 10px;
+  }
+
+  .element-section {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 110px;
+
+    @media #{$medium-up} {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &:hover {
+      background-color: $grey-bg--section
+    }
+  }
+}
+
+.ting-agency--branch-name {
+  @include typo("title", "large", "black");
+  display: block;
+  margin-right: 40px;
+}
+
+.ting-agency--agency-name {
+  @include typo("link", "item-links", "blue");
+  display: block;
+  margin-right: 50px;
+}
+
+.ting-agency--more-info-toggle-indicator {
+  @include css-triangle(5px, $black, top);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  &.is-toggled {
+    @include css-triangle(5px, $black, bottom);
+    top: 25px;
+  }
+}
+
+.ting-agency--actions {
+  margin: 10px 0 0 0;
+
+  .item-list li {
+    margin-left: 0;
+    height: 20px;
+  }
+}
+
+.ting-agency--more-info {
+  display: none;
+  background-color: $grey-bg--section;
+  border-bottom: solid 1px $grey-bg--page;
+
+  &.is-toggled {
+    display: block;
+    border-bottom: solid 10px $grey-bg--page;
+  }
+}
+
+#edit-favorites {
+  padding: 0;
+}
+
+#edit-vejviser-link-wrapper {
+  border: none;
+}
+
+.bibdk-vejviser-help-text {
+  clear: both;
+}
+
+.library-details-column-1,
+.library-details-column-2 {
+  float: left;
+  width: 50%;
+  .item-list ul li {
+    margin: 0;
+  }
+}
+
+.library-details-column-1 .subheader,
+.library-details-column-2 .subheader {
+  margin-bottom: 0;
+  color: $black;
+}
+
+.select-default-library {
+  margin-bottom: 5px;
+}
+
+.edit-personal-info {
+  background: url(../img/in_use/icons/blue-edit.png) no-repeat 0%;
+  @include inline-block();
+  padding-left: 20px;
+  margin-bottom: 3px;
+  color: $grey-4;
+}

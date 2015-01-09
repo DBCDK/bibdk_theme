@@ -1,20 +1,6 @@
 // =============================================================================
 // Page sections
 // =============================================================================
-// Header
-#header {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
-  background-color: $grey-1;
-
-  .infomedia-article & {
-    background-color: $white;
-  }
-  
-  .logo {
-    float: left;
-  }
-}
 
 // Search panel
 #search-panel {
@@ -30,8 +16,8 @@
 // Messages
 #messages {
   @extend .padded--horizontal;
-  @extend .padded--vertical;
-  background-color: $grey-7;
+  padding: rem-calc($spacing $spacing 0 $spacing);
+  background-color: $grey-bg--page;
 }
 
 // User alerts
@@ -61,7 +47,7 @@
   
   display: none;
   
-  @media #{$medium-up} {
+  @media #{$small-up} {
     display: block;
     background-color: $grey-bg--page;
   }
@@ -69,17 +55,14 @@
 
 // Columns
 #columns {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
-  
+  background-color: $grey-bg--page;
+  padding: 0 0 $spacing 0;
+  min-height: 300px;
+
   @media #{$medium-up} {
-    display: block;
-    background-color: $grey-bg--page;
-    
-    .lift-columns & {
-      padding-top: 10px;
-      background-color: $grey-bg--page;
-    }
+    min-height: 550px;
+    @include rem('padding-left', $spacing);
+    @include rem('padding-right', $spacing);
   }
 }
 

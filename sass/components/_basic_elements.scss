@@ -11,7 +11,7 @@
 }
 
 .element {
-  border: solid 1px $grey-5;
+  border: solid 1px $grey-border;
   border-bottom: none;
 
   .collection-msg {
@@ -27,7 +27,7 @@
 }
 
 .element-section {
-  border-bottom: solid 1px $grey-5;
+  border-bottom: solid 1px $grey-border;
   background-color: $white;
   position: relative;
   padding: 20px;
@@ -74,7 +74,7 @@
     font-size: 12px;
   }
   tr {
-    border-bottom: solid 1px $grey-5;
+    border-bottom: solid 1px $grey-border;
   }
   th,
   td {
@@ -108,7 +108,7 @@
 .table-actions button {
   @include background-image(linear-gradient($white, $grey-7));
   @include border-radius(3px);
-  border: solid 1px $grey-5;
+  border: solid 1px $grey-border;
   padding: 6px 10px;
 }
 
@@ -119,7 +119,7 @@
 .addi-tabs {
   padding: 0 20px;
   .tabs-sections {
-    border: solid 1px $grey-6;
+    border: solid 1px $grey-border;
   }
 }
 
@@ -130,7 +130,7 @@
       display: block;
       border-left: solid 1px $white;
       background-color: $grey-6;
-      border-bottom: 1px solid $grey-6;
+      border-bottom: 1px solid $grey-border;
       color: $grey-1;
       position: relative;
       top: 1px;
@@ -161,12 +161,11 @@
       @include border-radius(10px);
       padding: 5px 10px;
       background-color: $white;
-      border: solid 1px $grey-5;
+      border: solid 1px $grey-border;
 
       &.active {
         font-weight: bold;
-        border-color: $grey-3;
-        border-width: 1.5px;
+        border: 1.5px $grey-border;
       }
     }
   }
@@ -273,7 +272,7 @@
 .zebra {
   padding: 20px 20px 20px 10px;
   border-left: solid 10px $zebra-odd;
-  border-bottom: solid 1px $grey-5;
+  border-bottom: solid 1px $grey-border;
   background-color: $grey-7;
 
   &:nth-child(even) {
@@ -294,11 +293,18 @@
 .link-infomedia {
   @extend .strong-link; // defined in _basic_elements.scss
 }
+// @todo delete?
+.actions {
+
+  float: right;
+  padding-left: 15px;
+  border-left: dotted 1px $grey-border;
+}
 
 .secondary-actions {
   padding: 10px 0 0 0;
   margin: 10px 0 0 0;
-  border-top: dotted 1px $grey-5;
+  border-top: dotted 1px $grey-border;
 }
 
 
@@ -382,12 +388,12 @@ p.helptext {
 .page-overlay .pager-current {
   padding: 0 7px;
   margin: 0 7px;
-  border-left: solid 1px $grey-5;
-  border-right: solid 1px $grey-5;
+  border-left: solid 1px $grey-border;
+  border-right: solid 1px $grey-border;
 }
 
 .page-overlay .works-pager-select {
   padding: 0 10px;
-  border-left: solid 0px $grey-5;
-  border-right: solid 0px $grey-5;
+  border-left: solid 0px $grey-border;
+  border-right: solid 0px $grey-border;
 }

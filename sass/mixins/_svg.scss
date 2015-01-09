@@ -12,12 +12,16 @@
 // =============================================================================
 
 @mixin svg($name: "", $color: "") {
-  @if ($name == "svg-arrow-right") {
-  width: 14px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   vertical-align: middle;
   margin: 0 5px;
-} @else if ($name == "svg-chat") {
+  @if ($name == "svg-arrow-right") {
+    width: 14px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0 5px;
+  } @else if ($name == "svg-chat") {
     width: 15px;
     height: 15px;
     vertical-align: middle;
@@ -42,6 +46,11 @@
     height: 18px;
     vertical-align: middle;
     margin: 0 3px;
+  } @else if ($name == "svg-star") {
+    width: 14px;
+    height: 13px;
+    vertical-align: text-top;
+    margin: 0;
   }
 
   @if $color == "black" {
@@ -56,9 +65,15 @@
     fill: $blue;
   } @else if $color == "red" {
     fill: $red;
+  } @else if $color == "yellow" {
+    fill: $yellow;
   }
 }
 
 .svg-arrow-right {
   @include svg("svg-arrow-right", "black");
+}
+
+.svg-magnifier {
+  @include svg("svg-magnifier", "black");
 }
