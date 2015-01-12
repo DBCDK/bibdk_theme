@@ -9,30 +9,16 @@
 .order-any-btn-list {
   right: 0;
   width: 320px;
-  background-color: $grey-bg--page; 
+  background-color: $grey-bg--page;
 
-  a {
-    padding: 5px 10px;
-    &.btn-blue {
-      @extend .btn-blue;
-    }
-    &.btn-grey {
-      @extend .btn-grey;
-    }
-    &.btn-grey-light {
-      @extend .btn-grey-light;
-    }
-    &.btn-grey-light:hover {
-      color: $black;
-      background-color: $grey-bg--section;
-    }
+  .add-item-to-cart {
   }
 
   a.infotext-order-any-edition-link {
     padding: 0px;
     color: $blue;
   }
-  
+
   a.bibdk-popup-order-work:hover {
     color: $black;
     background-color: $grey-bg--section;
@@ -41,7 +27,7 @@
   span.mat-type {
     color: $black--natural;
   }
-  
+
   .svg-media-article {
     @include svg("svg-media-article", "black");
   }
@@ -73,17 +59,6 @@
   .svg-media-sheetmusic {
     @include svg("svg-media-sheetmusic", $black--natural);
   }
-
-  .svg-star {
-    @include svg("svg-star", 'grey-light');
-  }
-
-  .in-cart {
-    .svg-star {
-      @include svg("svg-star", 'black');
-    }
-  }
-
 
   table {
     border-collapse: separate;
