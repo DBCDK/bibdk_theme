@@ -293,13 +293,6 @@
 .link-infomedia {
   @extend .strong-link; // defined in _basic_elements.scss
 }
-// @todo delete?
-.actions {
-
-  float: right;
-  padding-left: 15px;
-  border-left: dotted 1px $grey-border;
-}
 
 .secondary-actions {
   padding: 10px 0 0 0;
