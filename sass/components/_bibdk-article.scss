@@ -1,6 +1,11 @@
-/*.view-article-view.columns{
-  padding: 0;
-}*/
+
+article svg.svg-arrow-right {
+  width: rem-calc(12px);
+  height: rem-calc(12px);
+  fill: $black;
+  float: right;
+}
+
 
 .view-article-view.right {
   padding-left: $spacing;
