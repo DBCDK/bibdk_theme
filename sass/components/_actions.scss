@@ -11,6 +11,9 @@
 .refexport-toggle-link::after {
   @include css-triangle(5px, $blue, top);
   display: inline-block;
-  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  position: absolute;
+  right: 0;
   vertical-align: text-bottom;
 }
