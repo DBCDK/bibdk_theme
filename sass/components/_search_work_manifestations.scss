@@ -14,7 +14,7 @@
 
 // Work header
 .work-header {
-  padding: 10px;
+  padding: 20px;
   &:hover {
     @include single-transition();
     background-color: $grey-bg--section;
@@ -39,10 +39,11 @@
       text-decoration: underline;
     }
     h2 {
-      @include typo('title', 'normal', 'black');
+      @include typo('title', 'large', 'black');
+      margin-bottom: 5px;
     }
     h3, .title-meta {
-      @include typo('title', 'small', 'grey-dark');
+      @include typo('title', 'normal', 'grey-dark');
       font-weight : normal;
     }
   }
@@ -74,27 +75,27 @@
 }
 
 .work-body {
-  padding: rem-calc(10px);
+  padding: 1rem;
   width: 100%;
 }
 
 .work-cover {
-  margin-left: rem-calc(10px);
-  margin-bottom: rem-calc(10px);
+  margin-left: 1rem;
+  margin-bottom: 1rem;
   img {
     width: 100%;
   }
 }
 
 .work-fields {
-  margin-bottom: rem-calc(10px);
+  margin-bottom: 1rem;
 }
 
 // List of types in work view
 .material-types-list {
   li {
     float: left;
-    line-height: rem-calc(40px);
+    line-height: rem-calc(26px);
   }
 }
 
@@ -226,5 +227,25 @@
   }
   a {
     display: block;
+  }
+}
+
+.add-item-to-cart {
+  svg {
+    float: right;
+    height: 12px;
+    display: inline;
+    width: 12px;
+    margin-right: 1px;
+    margin-top: 3px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+    fill: $grey-text--dark;
+  }
+  &.in-cart svg {
+    fill: $yellow;
+  }
+  &.ajax-progress .throbber {
+    float:  right;;
   }
 }
