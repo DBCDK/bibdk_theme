@@ -1,6 +1,6 @@
-.view-article-view.columns{
+/*.view-article-view.columns{
   padding: 0;
-}
+}*/
 
 .view-article-view.right {
   padding-left: $spacing;
@@ -19,11 +19,11 @@ article.article-widget{
 }
 
 .views-row-first article.article-widget.bibdk-article-top{
-  border-right:solid $spacing $grey-bg--page;
+  border-right:solid 2*$spacing $grey-bg--page;
 }
 
 .views-row-last article.article-widget.bibdk-article-top{
-  border-left:solid $spacing $grey-bg--page;
+  border-left:solid 2*$spacing $grey-bg--page;
 }
 
 .bibdk-article-top a{
@@ -39,14 +39,12 @@ article.article-widget{
 
 article.article-widget.bibdk-article-top {
   @extend .hide-for-medium-down;
-  margin-bottom: $spacing;
   width:percentage(1px/3px);
   float:left;
   .inner {
     background-color: $white;
     .footer {
       background-color: $white;
-      margin-top: 0px;
       .icon{
         float:right;
       }
@@ -57,11 +55,11 @@ article.article-widget.bibdk-article-top {
 
 article.article-widget.bibdk-article-bottom, .widget   {
   @extend .hide-for-medium-down;
-  margin-bottom: 10px;
+  margin-bottom: 2*$spacing;
   background-color: $white;
 
   .inner {
-    padding: 15px;
+    //padding: 15px;
     box-sizing: border-box;
 
     .footer {
