@@ -1,0 +1,28 @@
+// =============================================================================
+// Icons
+// =============================================================================
+
+.custom-search--expand-toggle-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+
+// =============================================================================
+// Search panel
+// =============================================================================
+
+#edit-advanced {
+  float: right;
+}
+
+#search-advanced-toggle {
+  text-align: right;
+}
+
+#search-advanced {
+  display: block;
+  background-color: $grey-bg--section;
+}
+
