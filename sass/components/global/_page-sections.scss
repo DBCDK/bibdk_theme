@@ -16,7 +16,7 @@
   }
 }
 
-// Search panel
+// search panel
 #search-panel {
   @extend .padded--horizontal;
   @extend .padded--vertical;
@@ -32,6 +32,12 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-7;
+}
+
+//articles
+.view-article-view{
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
 }
 
 // User alerts
@@ -53,6 +59,7 @@
     background-color: $grey-bg--page;
   }
 }
+
 
 // Subjects
 #bibdk-subject-hierarchy {
