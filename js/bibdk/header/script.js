@@ -414,11 +414,9 @@
         $(this).siblings().removeClass('hide-text').find('input').select();
         $(this).siblings().find('.close').focus();
       });
-      $('.popover .close').click(function(e) {
-        e.preventDefault();
-        $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
-        $(this).closest('.linkme-wrapper').addClass('hide-text');
-        $(this).parent().prev('.popover-button').find('a').focus();
+
+      $('[data-dropdown-content] input[type=text]', context).focus(function(e) {
+        $(this).select();
       });
 
       // ****************************  Seasonal images **************************** //
