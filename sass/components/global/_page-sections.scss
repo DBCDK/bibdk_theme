@@ -18,8 +18,6 @@
 
 // search panel
 #search-panel {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
   background-color: $grey-bg--page;
 
   .lift-columns & {
