@@ -1,8 +1,17 @@
 // =============================================================================
-// Primary-actions
+// Manifestation actions
 // =============================================================================
 .primary-actions {
   margin-top: 1rem;
+}
+
+.primary-actions, .secondary-actions {
+  .icon {
+    display: none;
+  }
+  a {
+    display: block;
+  }
 }
 
 // =============================================================================
@@ -16,4 +25,27 @@
   position: absolute;
   right: 0;
   vertical-align: text-bottom;
+}
+
+// =============================================================================
+// Cart action
+// =============================================================================
+.add-item-to-cart {
+  svg {
+    float: right;
+    height: 12px;
+    display: inline;
+    width: 12px;
+    margin-right: 1px;
+    margin-top: 3px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+    fill: $grey-text--dark;
+  }
+  &.in-cart svg {
+    fill: $yellow;
+  }
+  &.ajax-progress .throbber {
+    float:  right;;
+  }
 }

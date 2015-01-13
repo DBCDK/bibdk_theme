@@ -9,7 +9,6 @@
 .work {
   background-color: white;
   margin: 2px 0;
-
 }
 
 // Work header
@@ -187,6 +186,9 @@
   }
 }
 
+// =============================================================================
+// Manifestation toggle
+// =============================================================================
 .manifestation-toggle {
   padding: 1rem;
   border-top: 1px solid $grey-border;
@@ -217,46 +219,4 @@
   .manifestation {
     display: block;
   }
-
-}
-
-.primary-actions, .secondary-actions {
-  .icon {
-    display: none;
-  }
-  a {
-    display: block;
-  }
-}
-
-.add-item-to-cart {
-  svg {
-    float: right;
-    height: 12px;
-    display: inline;
-    width: 12px;
-    margin-right: 1px;
-    margin-top: 3px;
-    line-height: 20px;
-    vertical-align: text-bottom;
-    fill: $grey-text--dark;
-  }
-  &.in-cart svg {
-    fill: $yellow;
-  }
-  &.ajax-progress .throbber {
-    float:  right;;
-  }
-}
-
-
-.bibdk-dropdown {
-  @include dropdown-container(
-    // Sets list-style. Default: list. Options: [list, content]
-    $content: list,
-      // Sets if dropdown has triangle. Default:true.
-    $triangle: false,
-      // Sets max-width. Default: $f-dropdown-max-width
-      $max-width: 300px
-  );
 }
