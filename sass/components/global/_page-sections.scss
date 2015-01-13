@@ -16,7 +16,7 @@
   }
 }
 
-// Search panel
+// search panel
 #search-panel {
   @extend .padded--horizontal;
   @extend .padded--vertical;
@@ -32,6 +32,12 @@
   @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-7;
+}
+
+//articles
+.view-article-view{
+  @extend .padded--horizontal;
+  @extend .padded--vertical;
 }
 
 // User alerts
@@ -54,13 +60,15 @@
   }
 }
 
+
 // Subjects
-#subjectshierarchy {
+#bibdk-subject-hierarchy {
   @extend .padded--horizontal;
   @extend .padded--vertical;
-  
+}
+
+#subjectshierarchy {
   display: none;
-  
   @media #{$medium-up} {
     display: block;
     background-color: $grey-bg--page;
@@ -75,7 +83,6 @@
   @media #{$medium-up} {
     display: block;
     background-color: $grey-bg--page;
-    
     .lift-columns & {
       padding-top: 10px;
       background-color: $grey-bg--page;

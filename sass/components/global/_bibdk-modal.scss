@@ -118,17 +118,17 @@ input:-webkit-autofill {
     background-color: $white;
   }
 
+  .ajax-progress {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+
   .form-actions {
     padding: 0;
 
     .form-item {
       padding: 0;
-    }
-
-    .ajax-progress {
-      position: absolute;
-      top: 20px;
-      right: 40px;
     }
 
     .form-type-checkbox {
@@ -145,13 +145,14 @@ input:-webkit-autofill {
       label {
         @include typo("link", "item-links", "grey-dark");
         min-width: 60%;
+        max-width: none;
         float: right;
       }
     }
 
     .item-list {
       text-align: left;
-      margin-left: rem-calc(20);
+      margin: rem-calc(0 20);
 
       li {
         margin: 0;
@@ -160,6 +161,10 @@ input:-webkit-autofill {
       a {
         line-height: normal;
         @include typo("link", "item-links", "black");
+      }
+
+      .first a {
+        color: $blue--hover;
       }
     }
   }

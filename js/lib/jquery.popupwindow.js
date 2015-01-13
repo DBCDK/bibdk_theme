@@ -10,13 +10,13 @@ jQuery.fn.popupwindow = function(p, spawn) {
     // for overrideing the default settings
     mysettings = (jQuery(this).attr("rel") || "").split(",");
     var mysettings_html5 = (jQuery(this).attr("data-rel") || "").split(",");
-    mysettings = ( mysettings_html5.length > 0 ) ? mysettings_html5 : mysettings;
+    mysettings = ( mysettings_html5[0].length > 0 ) ? mysettings_html5 : mysettings;
 
     settings = {
       height: 600, // sets the height in pixels of the window.
       width: 600, // sets the width in pixels of the window.
       toolbar: 0, // determines whether a toolbar (includes the forward and back buttons) is displayed {1 (YES) or 0 (NO)}.
-      scrollbars: 0, // determines whether scrollbars appear on the window {1 (YES) or 0 (NO)}.
+      scrollbars: 1, // determines whether scrollbars appear on the window {1 (YES) or 0 (NO)}.
       status: 0, // whether a status line appears at the bottom of the window {1 (YES) or 0 (NO)}.
       resizable: 1, // whether the window can be resized {1 (YES) or 0 (NO)}. Can also be overloaded using resizable.
       left: 0, // left position when the window appears.
@@ -65,7 +65,7 @@ jQuery.fn.popupwindow = function(p, spawn) {
           return false;
         }
       }
-      var name = settings.createnew ? "PopUpWindow" + index : "PopUpWindow";
+      var name = settings.createnew ? "PopUpWindow" + mysettings[0] : "PopUpWindow";
       if(myWindow && settings.createnew) { // close other popups, if it opens in a new window
         myWindow.close();
       }

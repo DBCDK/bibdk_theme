@@ -381,7 +381,7 @@
         password_input_switch(this, 'password');
       });
 
-      $('.bibdk-unmask-password-field').click(function() {
+      $('.bibdk-unmask-password-field').once().click(function() {
         $('.bibdk-password-field').each(function() {
           if($(this).attr('type') == 'password') {
             //set type to text

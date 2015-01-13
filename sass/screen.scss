@@ -22,6 +22,7 @@ $sprites-layout: smart;
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
+@import "settings/misc";
 
 
 // =============================================================================
@@ -38,7 +39,7 @@ $sprites-layout: smart;
 //  @import "foundation/components/button-groups";
 //  @import "foundation/components/buttons";
 //  @import "foundation/components/clearing";
-//  @import "foundation/components/dropdown";
+@import "foundation/components/dropdown";
 //  @import "foundation/components/dropdown-buttons";
 //  @import "foundation/components/flex-video";
 //  @import "foundation/components/forms";
@@ -77,7 +78,7 @@ $sprites-layout: smart;
 @import "utilities/add-sprite";
 @import "utilities/btn-skin";
 @import "utilities/rem";
-@import "utilities/triangle";
+//@import "utilities/triangle";
 @import "utilities/align";
 
 
@@ -117,6 +118,7 @@ $sprites-layout: smart;
 @import "components/global/mainwrapper";
 @import "components/global/page-sections";
 @import "components/global/topbar";
+@import "components/global/offcanvas";
 @import "components/global/user-alerts";
 
 @import "components/banner";
@@ -134,6 +136,7 @@ $sprites-layout: smart;
 @import "components/page-title";
 @import "components/popup";
 @import "components/rs-carousel";
+@import "components/reservation";
 @import "components/search-block-form";
 @import "components/search_work_manifestations";
 @import "components/searchhistory";
@@ -144,8 +147,11 @@ $sprites-layout: smart;
 @import "components/toplist";
 @import "components/userhelp";
 @import "components/usersettings";
+@import "components/vejviser";
 @import "components/voxb";
 @import "components/works-controls";
+@import "components/custom_header_block";
+@import "components/bibdk-article";
 
 
 // =============================================================================

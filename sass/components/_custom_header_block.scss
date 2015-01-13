@@ -1,0 +1,16 @@
+.bibdk-custom-header-block{
+  @extend .hide-for-medium-down;
+  padding: 10px 5px 10px 5px;
+  background-color: $grey-bg--section;;
+  margin-top: $spacing;
+
+  h1 {
+    float:left;
+    width:30%;
+  }
+  .bibdk-custom-header-link{
+    float:right;
+    padding:0;
+  }
+}
+

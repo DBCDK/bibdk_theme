@@ -276,10 +276,6 @@ input[type="submit"].btn-grey {
 
 }
 
-input[type="submit"].btn-add-library {
-  @extend .btn-add-library;
-}
-
 .form-actions {
   text-align: right;
 
@@ -287,6 +283,9 @@ input[type="submit"].btn-add-library {
   a {
     font-size: 14px;
     margin-left: 5px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
   a {
     @include box-sizing(border-box);
@@ -525,7 +524,7 @@ select#edit-favouriteselector {
 // =============================================================================
 // Reservation
 // -----------------------------------------------------------------------------
-// The below trheee sections are a bit messy and could be cleaned up - also we
+// The below three sections are a bit messy and could be cleaned up - also we
 // have a specific _popups.scss for styling of popups.
 // =============================================================================
 
@@ -579,6 +578,7 @@ select#edit-favouriteselector {
 .page-reservation label {
   margin-bottom: 2px;
   float: left;
+  width: 170px;
   line-height: 1.3em;
 }
 
@@ -632,16 +632,9 @@ select#edit-favouriteselector {
     padding: 20px 0 0 0;
   }
 
-  .close-link-wrapper {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    text-align: center;
-  }
-
   .infomedia-search-group {
     @extend .inline-search-group;
-    .search-input-field {
+    .vejviser-search-input {
       padding: 8px;
       input {
         margin-bottom: 20px;
@@ -651,7 +644,7 @@ select#edit-favouriteselector {
 }
 
 .inline-search-group {
-  .search-input-field {
+  .vejviser-search-input {
     width: 100%;
   }
   .search-actions {
@@ -696,33 +689,36 @@ select#edit-favouriteselector {
           border: 1px solid $red;
         }
       }
-    }
 
-    // ==========================
-    // Need before date -- Start
-    // ==========================
-    .form-item-needBeforeDate {
-      margin: rem-calc(20) 0;
-      background-color: $white;
-      width: 100%;
     }
+  }
 
-    #edit-needbeforedate {
-      padding: 0;
+  // ==========================
+  // Need before date -- Start
+  // ==========================
+  .form-item-needBeforeDate {
+    margin: rem-calc(20) 0;
+    background-color: $white;
+    width: 100%;
 
-      .form-type-select {
-        padding: 0;
-      }
-    }
-    // ==========================
-    // Need before date -- End
-    // ==========================
+  }
+}
 
-    #edit-agency-search-fieldset {
-      .form-type-textfield {
-        max-width: 80%;
-      }
-    }
+#edit-needbeforedate {
+  padding: 0;
+
+  .form-type-select {
+    padding: 0;
+  }
+}
+
+// ==========================
+// Need before date -- End
+// ==========================
+
+#edit-agency-search-fieldset {
+  .form-type-textfield {
+    max-width: 80%;
   }
 }
 
@@ -770,18 +766,3 @@ select#edit-favouriteselector {
     width: 100%;
   }
 }
-
-
-/*#popup .infomedia-search-group {
-  @extend .inline-search-group;
-  .search-input-field {
-    padding: 8px;
-    input {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.infomedia-article input {
-  padding: 8px;
-}*/

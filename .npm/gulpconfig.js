@@ -70,4 +70,10 @@ cfg.settings.svgstore = {
   inlineSvg: true
 };
 
+cfg.settings.svgmin = {
+  plugins: [
+    { cleanupIDs: false }
+  ]
+};
+
 module.exports = cfg;

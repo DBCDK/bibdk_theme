@@ -16,10 +16,9 @@
  */
 ?>
 
-
 <a href="<?php print $href; ?>" <?php print drupal_attributes($attributes); ?> >
-  <svg class="icon <?php print $svg; ?>">
+  <svg class="svg-icon <?php print $svg; ?>">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
   </svg>
-  <?php print $title; ?>
+  <span><?php print $title; ?></span>
 </a>
