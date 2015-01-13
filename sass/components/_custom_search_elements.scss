@@ -12,10 +12,10 @@ div#search-advanced-toggle {
     min-height: 30px;
   }
   .icon-blue-minus {
-    background-image: url("../img/in_use/icons/blue-plus.png");
+    background-image: url("../img/in_use/icons/blue-minus.png");
   }
   &.toggled .icon-blue-minus {
-    background-image: url("../img/in_use/icons/blue-minus.png");
+    background-image: url("../img/in_use/icons/blue-plus.png");
   }
 }
 
