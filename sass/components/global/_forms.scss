@@ -736,33 +736,3 @@ select#edit-favouriteselector {
     display: none;
   }
 }
-
-// =============================================================================
-// Horizontal search form
-// =============================================================================
-
-.search-form-horizontal {
-  @include clearfix();
-  padding: 0;
-
-  .form-wrapper {
-    border: none;
-  }
-
-  .form-type-textfield,
-  .form-actions {
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: block;
-  }
-  input[type=text] {
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 100%;
-  }
-}
