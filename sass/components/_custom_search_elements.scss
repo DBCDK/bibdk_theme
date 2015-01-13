@@ -2,30 +2,8 @@
 // Bib.dk search pages
 // =============================================================================
 
-#edit-advanced {
-  float: right;
-}
-
-div#search-advanced-toggle {
-  text-align: right;
-  a {
-    min-height: 30px;
-  }
-  .icon-blue-minus {
-    background-image: url("../img/in_use/icons/blue-plus.png");
-  }
-  &.toggled .icon-blue-minus {
-    background-image: url("../img/in_use/icons/blue-minus.png");
-  }
-}
-
 .container-inline div.bibdk-subgroup {
   display: block;
-}
-
-div#search-advanced {
-  display: block;
-  background-color: $grey-bg--section;
 }
 
 div#search-advanced-panel {
@@ -224,14 +202,6 @@ div#search-advanced-panel fieldset.element-wrapper > div.fieldset-wrapper {
 
 .container-inline div#search-advanced-panel {
   display: block;
-}
-
-form#search-block-form fieldset#edit-advanced {
-  clear: right;
-}
-
-.page-bibdk-frontpage form#search-block-form fieldset#edit-advanced.is-visible {
-  width: 100%;
 }
 
 .allematerialer div#search-advanced-panel {

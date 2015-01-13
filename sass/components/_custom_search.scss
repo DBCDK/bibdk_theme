@@ -10,19 +10,19 @@
 
 
 // =============================================================================
+// Custom seach pages
+// =============================================================================
+
+#custom-search--navigation {
+  height: 70px;
+  background-color: #262a2c;
+}
+
+// =============================================================================
 // Search panel
 // =============================================================================
 
 #edit-advanced {
-  float: right;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-#search-advanced-toggle {
-  text-align: right;
-}
-
-#search-advanced {
-  display: block;
-  background-color: $grey-bg--section;
-}
-

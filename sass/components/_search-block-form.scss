@@ -2,51 +2,40 @@
 // Search block form
 // =============================================================================
 
-#search-block-wrapper {
-  padding: 7px 20px 7px;
+#search-block-primary {
+  margin-top: 15px;
 
-  .form-wrapper {
+  .form-actions {
     padding: 0;
   }
 
+  input[type="submit"] {
+    position: absolute;
+    top: 25px;
+    left: 620px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: rem-calc(18px);
+  }
 }
 
-#search-block-primary {
-  @extend .clearfix;
-
-  .form-type-textfield {
-    width: 80%;
-    margin-left: 0;
-    @include box-sizing("border-box");
-  }
-
-  .form-actions {
-    width: 20%;
-    margin-left: 0;
-  }
+.form-item-search-block-form {
+  border: solid 1px #dfe0e3;
+  width: 700px;
 
   input[type="text"] {
+    width: 88%;
     height: 40px;
-    line-height: 40px;
-    padding: 0 10px;
-    font-size: 1.166667em; // 14px
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075) inset;
+    padding: 0 0 0 10px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-size: rem-calc(20px);
+    color: #a8aaab;
+    &:focus {
+      color: $black;
+    }
   }
-
-  input[type="submit"] {
-    height: 40px;
-    line-height: 40px;
-    font-size: 1.333333em; // 16px
-    font-weight: bold;
-  }
-}
-
-#search-advanced-toggle {
-  margin-top: 15px;
-}
-
-#search-advanced {
-  margin-top: 15px;
 }
 
 // =============================================================================
@@ -54,47 +43,28 @@
 // =============================================================================
 
 #search-tabs {
-  margin-bottom: -1px;
+  margin-top: 30px;
 
-  li {
-    padding-right: 1px;
-    &:first-child {
-      padding-right: 1px;
-    }
+  a {
+    border-right: solid 1px #262a2c;
+    @extend .link-as-box;
+    font-weight: normal;
+    font-size: 12px;
+    background: $grey-bg--tabs;
+    color: $white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
 
-    a {
-      @extend .link-as-box;
+    &.active {
+      border-right: none;
       font-weight: bold;
-      font-size: 12px;
-      background: $grey-3;
-      @include transition(background-color .5s);
-      margin-right: 1px;
-      border-top: solid 1px $grey-border;
-      color: $white;
-      height: 34px;
-      line-height: 34px;
-
-      &.active {
-        color: $grey-3;
-        background: $grey-7;
-        height: 34px;
-        line-height: 34px;
-        border: solid 1px $grey-border;
-        border-bottom: none;
-        position: relative;
-        margin-top: 0px;
-        &:hover {
-          color: $grey-3;
-          background: $grey-7;
-        }
-      }
+      color: $black;
+      background: $grey-bg--page;
     }
-
-    &:first-child a {
-      border-left: solid 1px $grey-border;
-    }
-    &:last-child a {
-      border-right: solid 1px $grey-border;
+    &:hover {
+      color: $black;
+      background: $grey-bg--section;
     }
   }
 }
