@@ -1,8 +1,23 @@
 // =============================================================================
+// Actions
+// =============================================================================
+
+.link-sbkopi,
+.link-infomedia {
+  @extend .strong-link;
+}
+
+.strong-link{
+  color: $red-link;
+}
+
+
+// =============================================================================
 // Manifestation actions
 // =============================================================================
 .primary-actions {
-  margin-top: 1rem;
+  margin-top: 12px;
+  line-height: 20px;
 }
 
 .primary-actions, .secondary-actions {
@@ -17,7 +32,7 @@
 // =============================================================================
 // Exportlinks
 // =============================================================================
-[data-dropdown]::after {
+.actions [data-dropdown]::after {
   @include css-triangle(5px, $blue, top);
   display: inline-block;
   margin-top: 5px;
@@ -31,15 +46,15 @@
 // Cart action
 // =============================================================================
 .add-item-to-cart {
+  color: $grey-text--dark;
+  margin-bottom: 8px;
   svg {
-    float: right;
+    //float: right;
+    display: inline-block;
     height: 12px;
-    display: inline;
     width: 12px;
-    margin-right: 1px;
-    margin-top: 3px;
-    line-height: 20px;
-    vertical-align: text-bottom;
+    vertical-align: text-top;
+    margin-right: 5px;
     fill: $grey-text--dark;
   }
   &.in-cart svg {

@@ -43,7 +43,7 @@
     }
     h3, .title-meta {
       @include typo('title', 'normal', 'grey-dark');
-      font-weight : normal;
+      font-weight: normal;
     }
   }
   svg {
@@ -85,7 +85,7 @@
   }
 }
 
-.work-abstract, .work-fields{
+.work-abstract, .work-fields {
   margin-bottom: 1rem;
 }
 
@@ -127,7 +127,8 @@
 .toggle-hide {
   display: none;
 }
-.ting-openformat-toggle-link.is-toggled{
+
+.ting-openformat-toggle-link.is-toggled {
   .toggle-text {
     display: none;
   }
@@ -136,11 +137,26 @@
   }
 }
 
+// =============================================================================
+// Custom styling for a single work page
+// =============================================================================
+.single {
+  .work-hidden {
+    display: inline-block;
+  }
+  .work-title::after {
+    display: none;
+  }
+  .work-header:hover {
+    background-color: transparent;
+    cursor: inherit;
+  }
+}
 
 // =============================================================================
 // Subwork
 // =============================================================================
-.subwork{
+.subwork {
   padding: 0.5rem 1rem;
 }
 
@@ -194,7 +210,7 @@
   border-top: 1px solid $grey-border;
 }
 
-  .manifestation-toggle-link {
+.manifestation-toggle-link {
   .toggle-link-icon {
     margin-right: 5px;
     @include css-triangle(5px, $blue, top);
