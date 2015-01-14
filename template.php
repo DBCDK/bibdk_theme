@@ -1103,12 +1103,14 @@ function bibdk_theme_preprocess_link(&$link) {
  * @param $vars
  */
 function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
-  foreach($vars['types']['#items'] as $type) {
-    $icon = array(
-      '#theme' => 'bibdk_icon',
-      '#icon' => $type,
-    );
-    $vars['types']['#items'][$type] = drupal_render($icon);
+  if (!empty($vars['types'])) {
+    foreach($vars['types']['#items'] as $type) {
+      $icon = array(
+        '#theme' => 'bibdk_icon',
+        '#icon' => $type,
+      );
+      $vars['types']['#items'][$type] = drupal_render($icon);
+    }
   }
 }
 
