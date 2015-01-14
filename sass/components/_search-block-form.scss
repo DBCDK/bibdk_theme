@@ -64,7 +64,7 @@
     }
     &:hover {
       color: $black;
-      background: lighten($grey-bg--tabs, 50);
+      background: $grey-bg--section;
     }
   }
 }
