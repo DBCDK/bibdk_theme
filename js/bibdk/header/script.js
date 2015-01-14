@@ -487,13 +487,13 @@
       // **************************** CUSTOM SEARCH ********************************************** //
       // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
       // Toggle advanced search options
-      $('#search-advanced-toggle', context).click(function(e) {
+      $('#custom-search--advanced-toggle', context).click(function(e) {
         e.preventDefault();
         $(this).toggleClass('toggled');
         $('.toggle-text', this).toggleClass('hidden');
         $('#search-advanced').toggleClass('hidden');
         // Move to first input field in expanded search, if activated.
-        if($('#search-advanced-toggle').hasClass('toggled') === true) {
+        if($('#custom-search--advanced-toggle').hasClass('toggled') === true) {
           $('#edit-advanced').removeClass('is-visible');
           $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
         }
