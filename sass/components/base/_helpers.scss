@@ -8,8 +8,8 @@
 }
 
 .padded--vertical {
-  @include rem('padding-top', $spacing);
-  @include rem('padding-bottom', $spacing);
+  @include rem('padding-top', $spacing/2);
+  @include rem('padding-bottom', $spacing/2);
 }
 
 .padded {
