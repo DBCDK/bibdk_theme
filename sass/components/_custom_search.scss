@@ -2,7 +2,7 @@
 // Icons
 // =============================================================================
 
-.custom-search--expand-toggle-icon {
+.custom-search--advanced-toggle-icon {
   width: 20px;
   height: 20px;
   vertical-align: middle;
@@ -25,4 +25,10 @@
 #edit-advanced {
   margin-left: auto;
   margin-right: auto;
+}
+
+#custom-search--advanced-toggle {
+  position: absolute;
+  top: 35px;
+  left: 810px;
 }
