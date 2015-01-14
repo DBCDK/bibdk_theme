@@ -481,9 +481,6 @@
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
       });
 
-      // **************************** EMNEHIERARKI ********************************************** //
-      // $('.themes').themes();
-
       // **************************** CUSTOM SEARCH ********************************************** //
       // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
       // Toggle advanced search options
