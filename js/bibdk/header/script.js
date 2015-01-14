@@ -483,6 +483,8 @@
 
       // **************************** CUSTOM SEARCH ********************************************** //
       // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
+
+      //TODO mmj all this custom search stuff should be moved from this file to a js file under custom_search module
       // Toggle advanced search options
       $('#custom-search--advanced-toggle', context).click(function(e) {
         e.preventDefault();
