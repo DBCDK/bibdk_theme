@@ -12,11 +12,16 @@
     float: right;
     content: '×';
     font-size: $reveal-close-font-size;
-    top: 0.2rem;
-    right: $reveal-close-top;
+    top: 0px;
+    right: 0px;
+    padding: 10px 20px 20px 20px;
+    z-index: 10;
     color: $grey-text--dark;
     font-weight: $font-weight-bold;
     cursor: pointer;
+    &:active {
+      fill: $blue;
+    }
   }
   .work-title {
     margin-right: 1rem;

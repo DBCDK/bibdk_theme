@@ -30,7 +30,7 @@ function MobilePage(){
   var api = {};
   api.init = function init(){
     if ($(pageSelector).length == 0){
-      $('body').prepend('<div id="modal-page-wrapper" class="mobile-page-wrapper"><div class="close">×</div><div id="modal-page-content"></div></div>');
+      $('body').prepend('<div id="modal-page-wrapper" class="mobile-page-wrapper hide"><div class="close">×</div><div id="modal-page-content"></div></div>');
       $('#modal-page-wrapper .close').click(function(){
         api.close()
       });
@@ -42,6 +42,7 @@ function MobilePage(){
     if (isUsingMobilePage(selector)){
       addPlaceholder(selector);
       $(pageSelector).html($(selector));
+      $('#modal-page-wrapper').removeClass('hide');
       return true;
     }
   }
@@ -49,6 +50,7 @@ function MobilePage(){
   api.close = function(){
     $(placeholderSelector).replaceWith($(pageSelector).children());
     $('#mainwrapper').removeClass('hide');
+    $('#modal-page-wrapper').addClass('hide');
   }
 
   return api;
