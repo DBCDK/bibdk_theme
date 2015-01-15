@@ -542,16 +542,31 @@
   }
 }
 
-div#search-advanced-panel .custom-search-options-list {
-  @extend .modal--center-horizontally;
-  @extend .modal--center-vertically;
-  width: 600px;
-  height: 460px;
+.custom-search-options-list {
+  background-color: $grey-bg--page;
+  height: 440px;
 
   .panel-select {
     @extend .two-panel-multi-select;
+    padding-top: 10px;
+
     .form-type-select {
       height: 350px;
+      background: transparent;
+      margin: 0;
+
+      &:last-of-type {
+        float: right;
+      }
+    }
+
+    .list-actions {
+      margin: 50px auto 0 auto;
+      width: 15%;
+
+      .custom-search-list-action {
+        margin: 0 auto;
+      }
     }
   }
   .custom-search-list-save, .custom-search-list-close {
@@ -559,7 +574,10 @@ div#search-advanced-panel .custom-search-options-list {
     width: auto;
     float: right;
   }
-  h3 {
-    @extend .modal__title;
+}
+
+#bibdk-modal-form input[type="submit"] {
+  &.custom-search-list-close {
+    margin-right: 30px;
   }
 }
