@@ -50,7 +50,7 @@
     max-width: 60%;
   }
   @media #{$small-only} {
-    @include bibdk-triangle(left, 0.5rem, 0);
+    @include bibdk-triangle(left, $black--natural, 0.5rem, 0);
     padding-right: 2em;
     .mobile-page-wrapper &:after {
       border: none;

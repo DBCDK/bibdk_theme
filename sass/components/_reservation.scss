@@ -6,11 +6,20 @@
 //
 // Order any edition button
 //
+.order-any-btn {
+  @include bibdk-triangle(top, $white, 50%, 1rem);
+  padding-right: 40px;
+  &.toggled:after {
+    @include apply-origin(50% 25%, false);
+    @include rotate(180deg);
+  }
+}
+
+
 .order-any-btn-list {
   width: 315px;
   right: -17px;
   background-color: $grey-bg--page;
-
   .add-item-to-cart {
   }
 
