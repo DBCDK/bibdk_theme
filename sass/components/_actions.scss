@@ -32,15 +32,14 @@
 // =============================================================================
 // Exportlinks
 // =============================================================================
-.actions [data-dropdown]::after {
-  @include css-triangle(5px, $blue, top);
-  display: inline-block;
-  margin-top: 5px;
-  margin-right: 5px;
-  position: absolute;
-  right: 0;
-  vertical-align: text-bottom;
+.actions .bibdk-dropdown-link {
+  @include bibdk-triangle(top, $blue, 5px , 5px);
+  &.open:after {
+    @include apply-origin(50% 25%, false);
+    @include rotate(180deg);
+  }
 }
+
 
 // =============================================================================
 // Cart action
