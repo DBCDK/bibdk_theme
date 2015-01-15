@@ -2,6 +2,7 @@
   & > a {
     font-weight: bold;
     line-height: 15px;
+
     @include bibdk-triangle(top);
   }
   &.active > a {

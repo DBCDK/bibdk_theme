@@ -10,6 +10,15 @@
   background-color: white;
   margin: 2px 0;
 }
+@media #{$small-only} {
+  p, dl, .work {
+    font-size: rem-calc(14px);
+  }
+  .field-tags {
+    line-height: rem-calc(26px);
+  }
+
+}
 
 // Work header
 .work-header {

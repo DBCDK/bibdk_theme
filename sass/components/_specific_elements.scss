@@ -756,33 +756,6 @@ div#moreinfo img {
   background-image: none;
 }
 
-// =============================================================================
-// Reviews
-// =============================================================================
-
-.bibdk-review {
-  padding: 10px 0;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-// =============================================================================
-// Bibdk reviews
-// =============================================================================
-.bibdk-article-review {
-
-  border-top: 1px solid #dcdcdc;
-  padding: 10px 0;
-
-  .openformat-info {
-    float: left;
-    width: 63%;
-  }
-}
-
-.bibdk-review-link {
-  float: right;
-}
-
 span.star {
   display: inline-block;
   background: url('../img/in_use/rating-stars.png');
