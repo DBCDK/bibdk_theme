@@ -40,7 +40,6 @@ function MobilePage(){
 
   api.open = function open(selector){
     if (isUsingMobilePage(selector)){
-      console.log(selector, pageSelector);
       addPlaceholder(selector);
       $(pageSelector).html($(selector));
       return true;
