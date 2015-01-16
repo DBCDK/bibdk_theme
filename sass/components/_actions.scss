@@ -33,7 +33,7 @@
 // Exportlinks
 // =============================================================================
 .actions .bibdk-dropdown-link {
-  @include bibdk-triangle(top, $blue, 5px , 5px);
+  @include bibdk-triangle(top, $blue, 10px , 5px);
   &.open:after {
     @include apply-origin(50% 25%, false);
     @include rotate(180deg);
