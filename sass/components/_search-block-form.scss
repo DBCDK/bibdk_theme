@@ -39,8 +39,39 @@
 }
 
 // =============================================================================
+// Search panel
+// =============================================================================
+#edit-advanced {
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#custom-search--advanced-toggle {
+  position: absolute;
+  top: 35px;
+  left: 810px;
+}
+
+.custom-search--advanced-toggle-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.custom-search--advanced-toggle-text {
+  vertical-align: middle;
+}
+
+
+// =============================================================================
 // Search tabs
 // =============================================================================
+#custom-search--navigation {
+  height: 60px;
+  background-color: #262a2c;
+}
 
 #search-tabs {
   margin-top: 20px;
@@ -54,7 +85,11 @@
     color: $white;
     height: 40px;
     line-height: 40px;
-    padding: 0 40px;
+    padding: 0 23px;
+
+    @media #{$xlarge-up} {
+      padding: 0 35px;
+    }
 
     &.active {
       border-right: none;
