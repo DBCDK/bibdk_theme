@@ -4,7 +4,7 @@
 // Header
 #header {
   @extend .padded--vertical;
-  background-color: $grey-1;
+  background-color: $grey-bg--page;
 
   .infomedia-article & {
     background-color: $white;
@@ -27,7 +27,7 @@
 // Messages
 #messages {
   @extend .padded--vertical;
-  background-color: $grey-7;
+  background-color: $grey-bg--page;
 }
 
 //articles
@@ -37,7 +37,7 @@
 
 // User alerts
 #user-alerts {
-  background-color: $grey-7;
+  background-color: $grey-bg--page;
   @extend .padded--horizontal;
   // we only want padding if there's an alert.
 }
