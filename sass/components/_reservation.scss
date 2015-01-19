@@ -69,6 +69,10 @@
     @include svg("svg-media-sheetmusic", $black--natural);
   }
 
+  .svg-star {
+    fill: $grey-text--dark;
+  }
+
   table {
     border-collapse: separate;
     border-spacing: 0px;

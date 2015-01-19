@@ -18,6 +18,12 @@
       line-height: rem-calc(26px);
     }
   }
+  .svg-icon {
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .work:not(.has-cover) {
@@ -38,7 +44,7 @@
     cursor: pointer;
   }
   svg {
-    fill: $grey-text--dark;
+    fill: $black--natural;
   }
 }
 
@@ -113,7 +119,7 @@
 .material-types-list {
   li {
     float: left;
-    line-height: rem-calc(26px);
+    margin-top: 5px;
   }
 }
 
