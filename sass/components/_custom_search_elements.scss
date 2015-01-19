@@ -226,19 +226,22 @@
 //========================================
 // SEARCHPAGES: SPIL
 //----------------------------------------
-.spil #search-advanced-panel {
-  .platform,
-  .spilgenre_type {
-    width: 33%;
-    .column {
-      width: 50%;
-    }
-  }
+.spil {
+  width: 100%;
 
-  .spilgenre_type {
-    width: 66%;
-    .column {
-      width: 33%;
+  #search-advanced-panel {
+    .platform,
+    .spilgenre_type {
+      .column {
+        width: 50%;
+      }
+    }
+
+    .spilgenre_type {
+      width: 66%;
+      .column {
+        width: 33%;
+      }
     }
   }
 }
