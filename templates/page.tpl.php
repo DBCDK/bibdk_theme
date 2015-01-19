@@ -1,24 +1,24 @@
+<?php
+/**
+ * @file
+ * Main page template file
+ *
+ * @parameters:
+ * - $page: Array with content to be rendered. See below description of array
+ *          keys for further info.
+ *    - search_panel: Provides the search panel -- @see
+ *   search_block_form.tpl.php
+ *
+ */
+?>
+
 <?php if (!empty($page['search_panel'])): ?>
   <!-- search-panel start -->
   <div id="search-panel" data-role="search">
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->
-
-    <nav id="custom-search--navigation">
-      <div class="row">
-        <div class="medium-24 columns">
-          <?php print render($page['search_panel']['search_form']['searchpages']); ?>
-        </div>
-      </div>
-    </nav>
-
-    <div class="row">
-      <div class="medium-24 columns">
-        <span id="seasonal"></span>
-        <?php print render($page['search_panel']); ?>
-      </div>
-    </div>
+    <?php print render($page['search_panel']); ?>
   </div>
   <!-- search-panel end -->
 <?php endif; ?>
