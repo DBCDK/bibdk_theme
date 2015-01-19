@@ -7,7 +7,7 @@
  * - $page: Array with content to be rendered. See below description of array
  *          keys for further info.
  *    - search_panel: Provides the search panel -- @see
- *   search_block_form.tpl.php
+ *                    search_block_form.tpl.php
  *
  */
 ?>
