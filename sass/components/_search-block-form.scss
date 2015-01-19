@@ -5,19 +5,36 @@
 #search-block-primary {
   margin-top: 15px;
 
+  padding: 0 20px;
+  @media #{$large-up} {
+    padding: 0;
+  }
+
   .form-actions {
     padding: 0;
   }
 
   input[type="submit"] {
     position: absolute;
-    top: 26px;
-    height: 40px;
-    line-height: 40px;
-    font-weight: bold;
-    font-size: rem-calc(18px);
-    padding: 0 25px;
-    right: 26.5%;
+    right: 0;
+    top: 81px;
+    margin: 0 20px 0 0;
+    height: 55px;
+    font-size: 20px;
+    font-weight: normal;
+    width: 37%;
+
+    @media #{$large-up} {
+      right: 26.5%;
+      top: 26px;
+      margin: 0;
+      height: 40px;
+      line-height: 40px;
+      font-weight: bold;
+      font-size: rem-calc(18px);
+      padding: 0 30px;
+      width: auto;
+    }
 
     @media #{$xlarge-up}{
       right: 21.5%;
@@ -29,23 +46,50 @@
 .form-item-search-block-form {
   border: solid 1px $grey-border;
   float: left;
-  width: 75%;
+  width: 100%;
+
+  @media #{$large-up}{
+    width: 75%;
+  }
 
   @media #{$xlarge-up}{
     width: 80%;
   }
 
   input[type="text"] {
-    width: 78%;
     height: 40px;
     padding: 0 0 0 10px;
     font-family: Arial, sans-serif;
     font-weight: normal;
     font-size: rem-calc(20px);
     color: #a8aaab;
+    width: 100%;
     &:focus {
       color: $black;
     }
+
+    @media #{$large-up}{
+      width: 78%;
+    }
+  }
+}
+
+.form-item-select-material-type {
+  @extend .hide-for-large-up;
+  width: 60%;
+  background: $grey-bg--page;
+  padding-left: 0;
+
+  select {
+    padding: 15px 20px;
+    font-size: rem-calc(16);
+    color: $black--natural;
+    border: 1px solid $grey-border;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat;
   }
 }
 
@@ -77,9 +121,9 @@
 }
 
 .custom-search--advanced-toggle-text {
+  font-weight: bold;
   vertical-align: middle;
 }
-
 
 // =============================================================================
 // Search tabs
