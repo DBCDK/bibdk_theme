@@ -6,7 +6,7 @@
     width: 33%;
     min-width: 10px;
     margin-bottom: 1em;
-    display: inline;
+    display: inline-block;
     vertical-align: top;
 
     &#edit-expand {
@@ -21,6 +21,11 @@
 
   .form-type-textfield {
     border: solid 1px $grey-border;
+  }
+
+  .form-type-select{
+    background-color: transparent;
+    padding: 0;
   }
 
   .sprog {
@@ -183,31 +188,34 @@
 //========================================
 // SEARCHPAGES: FILM
 //----------------------------------------
-.film #search-advanced-panel {
-  fieldset {
-    width: 49%;
-  }
-  .genre_type {
-    width: 100%;
-    .column {
+.film {
+  width: 100%;
+  #search-advanced-panel {
+    fieldset {
+      width: 49%;
+    }
+    .genre_type {
+      width: 100%;
+      .column {
+        width: 20%;
+      }
+    }
+    .nationalitet {
+      width: 100%;
+      .column {
+        width: 24%;
+      }
+      .column3 {
+        width: 28%;
+      }
+    }
+    .materialetype {
       width: 20%;
     }
-  }
-  .nationalitet {
-    width: 100%;
-    .column {
-      width: 24%;
+    .aldersanbefaling,
+    .tilladt_for {
+      width: 33%;
     }
-    .column3 {
-      width: 28%;
-    }
-  }
-  .materialetype {
-    width: 20%;
-  }
-  .aldersanbefaling,
-  .tilladt_for {
-    width: 33%;
   }
 }
 
