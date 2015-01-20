@@ -541,7 +541,7 @@ select#edit-favouriteselector {
   border-bottom: none;
 }
 
-.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+.form-type-date-select {
   padding: 10px 0;
 }
 
@@ -604,8 +604,7 @@ select#edit-favouriteselector {
     padding: 0 20px;
   }
 
-  #edit-needbeforedate div.form-item-needBeforeDate-month,
-  #edit-needbeforedate div.form-item-needBeforeDate-day {
+  .form-type-date-select .form-type-select {
     float: left;
     margin-right: 20px;
   }
@@ -696,7 +695,7 @@ select#edit-favouriteselector {
   // ==========================
   // Need before date -- Start
   // ==========================
-  .form-item-needBeforeDate {
+  .form-type-date-select {
     margin: rem-calc(20) 0;
     background-color: $white;
     width: 100%;
