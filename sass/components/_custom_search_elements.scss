@@ -23,7 +23,7 @@
     border: solid 1px $grey-border;
   }
 
-  .form-type-select{
+  .form-type-select {
     background-color: transparent;
     padding: 0;
   }
@@ -136,10 +136,13 @@
 //========================================
 // SEARCHPAGES: ALLE MATERIALER
 //----------------------------------------
-.allematerialer #search-advanced-panel {
-  .sprog {
-    .column {
-      width: 33%;
+.allematerialer {
+  width: 100%;
+  #search-advanced-panel {
+    .sprog {
+      .column {
+        width: 33%;
+      }
     }
   }
 }
@@ -147,40 +150,47 @@
 //========================================
 // SEARCHPAGES: BOOKS
 //----------------------------------------
-.boeger #search-advanced-panel {
-  .materialetype {
-    width: 16%;
-  }
-  .litterar_form {
-    width: 18%;
-  }
-  .malgruppe {
-    width: 14%;
-  }
-  .sprog {
-    width: 26%;
-    .column {
-      width: 50%;
+.boeger {
+  width: 100%;
+  #search-advanced-panel {
+    .materialetype {
+      width: 16%;
     }
-  }
-  .udgivelsesar {
-    width: 22%;
+    .litterar_form {
+      width: 18%;
+    }
+    .malgruppe {
+      width: 14%;
+    }
+    .sprog {
+      width: 26%;
+      .column {
+        width: 50%;
+      }
+    }
+    .udgivelsesar {
+      width: 22%;
+    }
   }
 }
 
 //========================================
 // SEARCHPAGES: ARTIKLER
 //----------------------------------------
-.artikler #search-advanced-panel {
-  fieldset {
-    width: 49%;
-  }
-  .sprog,
-  .materialetype,
-  .udgivelsesar {
-    width: 33%;
-    .column {
-      width: 40%;
+.artikler {
+  width: 100%;
+
+  #search-advanced-panel {
+    fieldset {
+      width: 49%;
+    }
+    .sprog,
+    .materialetype,
+    .udgivelsesar {
+      width: 33%;
+      .column {
+        width: 40%;
+      }
     }
   }
 }
@@ -222,12 +232,15 @@
 //========================================
 // SEARCHPAGES: EMATERIALER
 //----------------------------------------
-.ematerialer #search-advanced-panel {
-  .materialetype {
-    width: 25%;
-  }
-  .sprog {
-    width: 15%;
+.ematerialer {
+  width: 100%;
+  #search-advanced-panel {
+    .materialetype {
+      width: 25%;
+    }
+    .sprog {
+      width: 15%;
+    }
   }
 }
 
@@ -236,7 +249,6 @@
 //----------------------------------------
 .spil {
   width: 100%;
-
   #search-advanced-panel {
     .platform,
     .spilgenre_type {
@@ -257,11 +269,14 @@
 //========================================
 // SEARCHPAGES: MUSIK
 //----------------------------------------
-.musik #search-advanced-panel {
-  .musikgenre {
-    width: 100%;
-    .column {
-      width: 25%;
+.musik {
+  width: 100%;
+  #search-advanced-panel {
+    .musikgenre {
+      width: 100%;
+      .column {
+        width: 25%;
+      }
     }
   }
 }
@@ -269,22 +284,25 @@
 //========================================
 // SEARCHPAGES: NODER
 //----------------------------------------
-.noder #search-advanced-panel {
-  .materiale {
-    width: 100%;
-  }
-  .column {
-    width: 20%;
-    float: left;
-    min-width: 195px;
-  }
-  .column1 {
-    width: 22%;
-    min-width: 220px;
-  }
-  .column2 {
-    width: 30%;
-    min-width: 290px;
+.noder {
+  width: 100%;
+  #search-advanced-panel {
+    .materiale {
+      width: 100%;
+    }
+    .column {
+      width: 20%;
+      float: left;
+      min-width: 195px;
+    }
+    .column1 {
+      width: 22%;
+      min-width: 220px;
+    }
+    .column2 {
+      width: 30%;
+      min-width: 290px;
+    }
   }
 }
 
