@@ -72,11 +72,11 @@
 #columns {
   @extend .padded--vertical;
   min-height: 300px;
+  display: block;
+  background-color: $grey-bg--page;
   
   @media #{$medium-up} {
     min-height: 500px;
-    display: block;
-    background-color: $grey-bg--page;
     .lift-columns & {
       padding-top: 10px;
       background-color: $grey-bg--page;
