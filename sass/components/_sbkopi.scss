@@ -1,0 +1,22 @@
+// =============================================================================
+// sbkopi
+// =============================================================================
+.sbkopi-description-container {
+  width: 50%;
+  background-color: $grey-7;
+}
+
+.sbkopi-description-container.form-wrapper {
+  padding: 0 1em 0;
+}
+
+.sbkopi-manifestation-container .fieldset-wrapper {
+
+  width: 100%;
+  background-color: $white;
+  padding: 0.5rem;
+}
+
+.sbkopi-fields-container .fieldset-description {
+  padding-bottom: 1rem;
+}
