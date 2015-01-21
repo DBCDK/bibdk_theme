@@ -48,9 +48,13 @@
     }
 
     .footer-social-links {
-      text-align: right;
-      @media #{$medium-only, $small-only } {
-        text-align: center;
+      .social-links {
+        margin: 0;
+      }
+
+      text-align: center;
+      @media #{$large-up} {
+        text-align: right;
       }
       a {
         padding: rem-calc(10px);
