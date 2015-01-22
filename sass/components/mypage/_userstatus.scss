@@ -36,17 +36,13 @@
     }
   }
 
-  table {
-    empty-cells: hide;
-  }
-
   th {
     color: $black--natural;
   }
 
   th,
   td {
-    padding: 0;
+    padding: 2px;
 
     @media #{$large-up} {
       padding: 5px 10px 5px 0;
