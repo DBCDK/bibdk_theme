@@ -1,0 +1,271 @@
+// @todo remove on merge
+#columns {
+  background-color: #e8e8e8;
+}
+
+// =============================================================================
+// Work
+// =============================================================================
+.work {
+  background-color: white;
+  margin: 2px 0;
+
+  @media #{$small-only} {
+    p, dl, .work {
+      font-size: rem-calc(14px);
+    }
+    .field-tags {
+      line-height: rem-calc(26px);
+    }
+  }
+  .svg-icon {
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.work:not(.has-cover) {
+  .work-cover-wrapper {
+    display: none;
+  }
+  .work-description-wrapper {
+    width: 100%;
+  }
+}
+
+// Work header
+.work-header {
+  padding: 20px;
+  &:hover {
+    @include single-transition();
+    background-color: $grey-bg--section;
+    cursor: pointer;
+  }
+  svg {
+    fill: $black--natural;
+  }
+}
+
+.work-title {
+  margin-bottom: rem-calc(10px);
+  @media #{$large-up} {
+    margin-bottom: 0px;
+    float: left;
+    max-width: 60%;
+  }
+  @media #{$small-only} {
+    @include bibdk-triangle(left, $black--natural, 0.5rem, 0);
+    padding-right: 2em;
+    .mobile-page-wrapper &:after {
+      border: none;
+    }
+  }
+  h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  h2 {
+    @include typo('title', 'large', 'black');
+    margin-bottom: 5px;
+  }
+  h3, .title-meta {
+    @include typo('title', 'normal', 'grey-dark');
+    font-weight: normal;
+  }
+}
+
+.work-types-actions {
+  @media #{$large-up} {
+    float: right;
+  }
+}
+
+.work-types {
+  float: left;
+  margin-right: rem-calc(10px);
+}
+
+.work-actions {
+  float: right;
+}
+
+.work-section {
+  .page-work & {
+    // parent element selector
+    padding-bottom: rem-calc(10px);
+    margin-bottom: rem-calc(10px);
+  }
+}
+
+.work-body {
+  padding: 1rem;
+  width: 100%;
+}
+
+.work-cover {
+  margin-left: 1rem;
+  img {
+    width: 100%;
+  }
+}
+
+.work-abstract, .work-fields {
+  margin-bottom: 1rem;
+}
+
+// List of types in work view
+.material-types-list {
+  li {
+    float: left;
+    margin-top: 5px;
+  }
+}
+
+// =============================================================================
+// Work Toggle function
+// =============================================================================
+// Control visibility for toggle elements on work (collection)
+
+.work-hidden {
+  display: none;
+}
+
+@media #{$medium-up} {
+  .work.is-toggled {
+    margin-bottom: 1rem;
+    .work-toggle-text {
+      display: none;
+    }
+    .work-hidden {
+      display: inline-block;
+    }
+  }
+}
+
+@media #{$small-only} {
+  .mobile-page-wrapper .work-hidden {
+    display: inline-block;
+  }
+}
+
+.toggle-hide {
+  display: none;
+}
+
+.ting-openformat-toggle-link.is-toggled {
+  .toggle-text {
+    display: none;
+  }
+  .toggle-hide {
+    display: inline-block;
+  }
+}
+
+// =============================================================================
+// Custom styling for a single work page
+// =============================================================================
+.single {
+  .work-hidden {
+    display: inline-block;
+  }
+  .work-title::after {
+    display: none;
+  }
+  .work-header:hover {
+    background-color: transparent;
+    cursor: inherit;
+  }
+}
+
+// =============================================================================
+// Subwork
+// =============================================================================
+.subwork {
+  padding: 0.5rem 1rem;
+}
+
+// =============================================================================
+// Manifestation
+// =============================================================================
+.manifestation {
+  padding: 1rem;
+  border-top: 1px solid $grey-border;
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// =============================================================================
+// Manifestation data (Field information)
+// =============================================================================
+.manifestation-data {
+  //padding-bottom : 1rem;
+  //display: table;
+  .field {
+    display: table-row;
+  }
+  .field.field-label-hidden {
+    display: block;
+  }
+  .field-label, .field-items {
+    display: table-cell;
+  }
+  .field-label {
+    padding-right: 2em;
+    max-width: 120px;
+  }
+
+  // Add a distinction color to specific fields
+  .field-name-bibdk-mani-distinction .field-item,
+  .field-name-bibdk-mani-access-information .field-item,
+  .field-name-bibdk-mani-marked-audience .field-item,
+  .field-name-bibdk-mani-recommended-audience .field-item {
+    display: inline;
+    background-color: $yellow-light;
+  }
+}
+
+// =============================================================================
+// Manifestation toggle
+// =============================================================================
+.manifestation-toggle {
+  padding: 1rem;
+  border-top: 1px solid $grey-border;
+}
+
+.manifestation-toggle-link {
+  .toggle-link-icon {
+    margin-right: 5px;
+    @include css-triangle(5px, $blue, top);
+    vertical-align: text-bottom;
+    display: inline-block;
+  }
+  &.is-toggled .toggle-link-icon {
+    @include css-triangle(5px, $blue, bottom);
+    vertical-align: text-top;
+    display: inline-block;
+  }
+}
+
+.manifestation {
+  display: none;
+  &:first-child {
+    display: block;
+  }
+}
+
+.manifestations.is-toggled {
+  .manifestation {
+    display: block;
+  }
+}
+
+// When the manifestation toggle is loading ajax a throbber is added, but there
+// is no obvious class to style it on, therefore high specificity
+.work .content > .throbber {
+  margin: 0 1rem;
+}
+

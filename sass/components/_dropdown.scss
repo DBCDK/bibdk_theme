@@ -41,10 +41,6 @@
     padding: 5px 20px;
     line-height: 20px;
 
-    &:hover {
-      background: $blue;
-    }
-
     &.current {
       background: $grey-6;
     }
@@ -58,4 +54,19 @@
   li a span {
     display: none;
   }
+}
+
+
+// =============================================================================
+// Custom foundation dropdown container
+// =============================================================================
+.bibdk-dropdown {
+  @include dropdown-container(
+    // Sets list-style. Default: list. Options: [list, content]
+    $content: list,
+      // Sets if dropdown has triangle. Default:true.
+    $triangle: false,
+      // Sets max-width. Default: $f-dropdown-max-width
+    $max-width: 300px
+  );
 }

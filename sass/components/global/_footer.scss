@@ -11,7 +11,7 @@
   }
 
   @media #{$large-up} {
-    .footer-tab-wrapper { 
+    .footer-tab-wrapper {
       background-color: $black--natural; //defined in _colors.scss
     }
   }
@@ -28,13 +28,13 @@
           display: inline-block;
           width: 24.6%;
           padding-left: rem-calc(10px);
-          padding-top: rem-calc(13px); 
+          padding-top: rem-calc(13px);
         }
       }
 
       .footer-bar-links a {
         @include typo("label", "facets", "grey-light");
-      }  
+      }
     }
   }
 
@@ -47,10 +47,17 @@
       margin-left: rem-calc(2px);
     }
 
+    .social-links {
+      margin-top: 5px;
+    }
+
     .footer-social-links {
-      text-align: right;
-      @media #{$medium-only, $small-only } {
-        text-align: center;
+      .social-links {
+        margin: 0;
+      }
+      text-align: center;
+      @media #{$large-up} {
+        text-align: right;
       }
       a {
         padding: rem-calc(10px);

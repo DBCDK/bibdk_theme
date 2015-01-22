@@ -189,6 +189,7 @@ input[type="password"] {
   @include box-sizing(border-box);
   height: rem-calc(20);
   max-width: 100%;
+  width: 100%;
   padding: 0 5px;
   color: $black;
   font-size: 14px;
@@ -734,35 +735,5 @@ select#edit-favouriteselector {
   }
   .icon {
     display: none;
-  }
-}
-
-// =============================================================================
-// Horizontal search form
-// =============================================================================
-
-.search-form-horizontal {
-  @include clearfix();
-  padding: 0;
-
-  .form-wrapper {
-    border: none;
-  }
-
-  .form-type-textfield,
-  .form-actions {
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: block;
-  }
-  input[type=text] {
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 100%;
   }
 }

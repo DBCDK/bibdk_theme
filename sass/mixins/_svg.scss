@@ -12,10 +12,6 @@
 // =============================================================================
 
 @mixin svg($name: "", $color: "") {
-  width: 15px;
-  height: 15px;
-  vertical-align: middle;
-  margin: 0 5px;
   @if ($name == "svg-arrow-right") {
     width: 14px;
     height: 12px;
@@ -31,6 +27,11 @@
     height: 15px;
     vertical-align: middle;
     margin: 0 3px;
+  } @else if ($name == "svg-magnifier") {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin: 0 5px;
   } @else if ($name == "svg-social-twitter") {
     width: 20px;
     height: 16px;
@@ -68,12 +69,4 @@
   } @else if $color == "yellow" {
     fill: $yellow;
   }
-}
-
-.svg-arrow-right {
-  @include svg("svg-arrow-right", "black");
-}
-
-.svg-magnifier {
-  @include svg("svg-magnifier", "black");
 }

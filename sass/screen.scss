@@ -6,6 +6,7 @@
 
 // Import Compass (http://compass-style.org/)
 @import "compass";
+@import "compass/css3/transform";
 
 // Generate sprite (http://compass-style.org/help/tutorials/spriting/)
 $sprites-layout: smart;
@@ -18,12 +19,15 @@ $sprites-layout: smart;
 @import "foundation/functions"; //although Foundation is imported below functions needs to be imported before our settings
 @import "settings/settings";
 @import "settings/colors";
+@import "settings/accordion-settings";
+@import "settings/buttons-settings";
+@import "settings/dropdown-settings";
 @import "settings/media-queries";
+@import "mixins/triangle";
 @import "mixins/typography";
 @import "mixins/svg";
 @import "settings/modal";
 @import "settings/misc";
-
 
 // =============================================================================
 // Foundation -- behold, here are all the Foundation components.
@@ -32,14 +36,14 @@ $sprites-layout: smart;
 
 @import "normalize";
 @import "foundation/components/grid";
-//  @import "foundation/components/accordion";
+  @import "foundation/components/accordion";
 //  @import "foundation/components/alert-boxes";
 //  @import "foundation/components/block-grid";
 //  @import "foundation/components/breadcrumbs";
 //  @import "foundation/components/button-groups";
-//  @import "foundation/components/buttons";
+  @import "foundation/components/buttons";
 //  @import "foundation/components/clearing";
-@import "foundation/components/dropdown";
+  @import "foundation/components/dropdown";
 //  @import "foundation/components/dropdown-buttons";
 //  @import "foundation/components/flex-video";
 //  @import "foundation/components/forms";
@@ -78,7 +82,6 @@ $sprites-layout: smart;
 @import "utilities/add-sprite";
 @import "utilities/btn-skin";
 @import "utilities/rem";
-//@import "utilities/triangle";
 @import "utilities/align";
 
 
@@ -121,6 +124,8 @@ $sprites-layout: smart;
 @import "components/global/offcanvas";
 @import "components/global/user-alerts";
 
+@import "components/actions";
+@import "components/accordion";
 @import "components/banner";
 @import "components/basic_elements";
 @import "components/global/buttons";
@@ -132,13 +137,14 @@ $sprites-layout: smart;
 @import "components/icons";
 @import "components/ie6nomore";
 @import "components/infomedia";
+@import "components/mobile_page";
 @import "components/mypage";
 @import "components/page-title";
 @import "components/popup";
 @import "components/rs-carousel";
 @import "components/reservation";
 @import "components/search-block-form";
-@import "components/search_work_manifestations";
+@import "components/search-result";
 @import "components/searchhistory";
 @import "components/specific_elements";
 @import "components/subject_hierarchy";
@@ -149,6 +155,7 @@ $sprites-layout: smart;
 @import "components/usersettings";
 @import "components/vejviser";
 @import "components/voxb";
+@import "components/worktabs";
 @import "components/works-controls";
 @import "components/custom_header_block";
 @import "components/bibdk-article";

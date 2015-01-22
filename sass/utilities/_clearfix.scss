@@ -17,3 +17,7 @@
 .clearfix {
   @include clearfix();
 }
+
+.clear {
+  clear: both;
+}

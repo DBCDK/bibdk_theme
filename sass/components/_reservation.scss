@@ -6,33 +6,28 @@
 //
 // Order any edition button
 //
-.order-any-btn-list {
-  right: 0;
-  width: 320px;
-  background-color: $grey-bg--page; 
+.order-any-btn {
+  @include bibdk-triangle(top, $white, 50%, 1rem);
+  padding-right: 40px;
+  &.toggled:after {
+    @include apply-origin(50% 25%, false);
+    @include rotate(180deg);
+  }
+}
 
-  a {
-    padding: 5px 10px;
-    &.btn-blue {
-      @extend .btn-blue;
-    }
-    &.btn-grey {
-      @extend .btn-grey;
-    }
-    &.btn-grey-light {
-      @extend .btn-grey-light;
-    }
-    &.btn-grey-light:hover {
-      color: $black;
-      background-color: $grey-bg--section;
-    }
+
+.order-any-btn-list {
+  width: 315px;
+  right: -17px;
+  background-color: $grey-bg--page;
+  .add-item-to-cart {
   }
 
   a.infotext-order-any-edition-link {
     padding: 0px;
     color: $blue;
   }
-  
+
   a.bibdk-popup-order-work:hover {
     color: $black;
     background-color: $grey-bg--section;
@@ -41,7 +36,13 @@
   span.mat-type {
     color: $black--natural;
   }
-  
+
+  .icon {
+    max-height: 20px;
+    width: 15px;
+    margin: 0 10px;
+  }
+
   .svg-media-article {
     @include svg("svg-media-article", "black");
   }
@@ -75,15 +76,8 @@
   }
 
   .svg-star {
-    @include svg("svg-star", 'grey-light');
+    fill: $grey-text--dark;
   }
-
-  .in-cart {
-    .svg-star {
-      @include svg("svg-star", 'black');
-    }
-  }
-
 
   table {
     border-collapse: separate;
@@ -102,17 +96,16 @@
         border-bottom-width: 1px;
         border-bottom-style: solid;
         vertical-align: middle;
+        white-space: nowrap;
         padding: 4px 0;
         font-weight: bold;
         &:first-child {
           text-align: left;
-          padding-left: 10px;
           padding-right: 5px;
         }
         &:last-child {
           text-align: left;
           padding-left: 5px;
-          padding-right: 5px;
         }
       }
     }
