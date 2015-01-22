@@ -36,13 +36,22 @@
     }
   }
 
-  th {
-    color: $black--natural;
-    padding-left: 0;
+  table {
+    empty-cells: hide;
   }
 
+  th {
+    color: $black--natural;
+  }
+
+  th,
   td {
-    padding-left: 0;
+    padding: 0;
+
+    @media #{$large-up} {
+      padding: 5px 10px 5px 0;
+    }
+
     &:last-child {
       padding-right: 0;
     }
@@ -51,7 +60,12 @@
   .message {
     border: none;
   }
+
+  .red-alert {
+    color: $red--hover;
+  }
 }
+
 /*
 table.fiscal-account th:last-child,
 table.fiscal-account td:last-child {
