@@ -65,7 +65,6 @@ function bibdk_theme_theme() {
         'label' => NULL,
       ),
     ),
-
     'link_with_svg' => array(
       'path' => $path . 'global',
       'template' => 'link-with-svg',
@@ -75,8 +74,8 @@ function bibdk_theme_theme() {
         'attributes' => array(),
         'svg' => '',
         'href' => '',
-        ),
       ),
+    ),
     'span_with_svg' => array(
       'path' => $path . 'global',
       'template' => 'span-with-svg',
@@ -86,18 +85,17 @@ function bibdk_theme_theme() {
         'svg' => '',
       ),
     ),
-
     'bibdk_foot_bar' => array(
-    'path' => $path . 'footer',
-    'template' => 'bibdk-footer',
-    'variables' => array(
-      'menu' => '',
-      'footer_menu_links' => '',
-      'home_path' => '',
-      'footerlogo_path' => '',
-      'logo_path' => '',
-      'links' => array(),
-      'overlay' => FALSE,
+      'path' => $path . 'footer',
+      'template' => 'bibdk-footer',
+      'variables' => array(
+        'menu' => '',
+        'footer_menu_links' => '',
+        'home_path' => '',
+        'footerlogo_path' => '',
+        'logo_path' => '',
+        'links' => array(),
+        'overlay' => FALSE,
       ),
     ),
   );
@@ -182,12 +180,9 @@ function bibdk_theme_preprocess_html(&$vars) {
   $topbar = _bibdk_theme_get_bibdk_topbar($overlay);
   $vars['page_topbar'] = drupal_render($topbar);
 
-
-
   //add the page footer
   $foot = _bibdk_theme_get_bibdk_foot_bar($overlay);
   $vars['page_footer'] = drupal_render($foot);
-
 
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
@@ -202,7 +197,7 @@ function bibdk_theme_preprocess_html(&$vars) {
  * @see bibdk-footer.tpl.php
  */
 function _bibdk_theme_get_bibdk_foot_bar($overlay) {
- global $base_url;
+  global $base_url;
 
   $home_path = url('<front>');
   $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';
@@ -325,7 +320,7 @@ function _bibdk_theme_get_my_page_menu_links() {
       'attributes' => $common
     );
 
-    if(in_array($path, $hide_on_small)){
+    if (in_array($path, $hide_on_small)) {
       $links[$mypath]['attributes']['class'][] = 'show-for-medium-up';
     }
   }
@@ -413,7 +408,8 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
 }
 
 /**
- * Returns the footer bar menu styled in a list ready for display within the footer bar
+ * Returns the footer bar menu styled in a list ready for display within the
+ * footer bar
  *
  * @return string
  */
@@ -515,10 +511,8 @@ function _bibdk_theme_offcanvas_set_li_attributes($link) {
  * Implements template_ie6nomore_browser().
  */
 function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
-
   // reset version for browser
   $vars['version'] = '';
-
 }
 
 /**
@@ -526,7 +520,7 @@ function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', null);
+  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
 
   if (!$front) {
     $front = '<front>';
@@ -547,7 +541,6 @@ function bibdk_theme_preprocess_page(&$vars) {
   }
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
-
 
   $vars['logo_footer'] = array(
     '#theme' => 'image',
@@ -828,7 +821,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
  */
 function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   if (!$cnum) {
-    return false;
+    return FALSE;
   }
   if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
@@ -836,7 +829,7 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
 
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
     if (!$len) {
-      return false;
+      return FALSE;
     }
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
@@ -869,7 +862,7 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
 function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
 
   if (!$cnum) {
-    return false;
+    return FALSE;
   }
 
   if (isset($form['advanced'][$region][$group]) && is_array($form['advanced'][$region][$group])) {
@@ -878,11 +871,11 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
       $elements = &$form['advanced'][$region][$group][$parent_id][$type];
     }
     else {
-      return false;
+      return FALSE;
     }
   }
   else {
-    return false;
+    return FALSE;
   }
   $container = array();
   foreach ($elements as $key => $val) {
@@ -896,7 +889,7 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
   }
   $len = round((sizeof($elements)) / $cnum); // $slice includes a #tree key
   if (!$len) {
-    return false;
+    return FALSE;
   }
   $n = $colkey = 0;
 
@@ -930,7 +923,7 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
  *
  * @param $form
  */
-function _alter_user_register_form(&$form){
+function _alter_user_register_form(&$form) {
   $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
 }
 
@@ -990,7 +983,7 @@ function bibdk_theme_menu_link($vars) {
   $sub_menu = '';
   $linkText = $element['#title'];
 
-  if ( !empty($element['#below']) ) {
+  if (!empty($element['#below'])) {
     $sub_menu = drupal_render($element['#below']);
   }
 
