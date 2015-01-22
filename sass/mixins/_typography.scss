@@ -18,7 +18,7 @@ $font-weight-bold: bold;
 
   // Titles
   @if ($type == "title") {
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.2;
 
     @if $style == "normal" {

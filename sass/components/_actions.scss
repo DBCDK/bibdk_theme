@@ -1,0 +1,65 @@
+// =============================================================================
+// Actions
+// =============================================================================
+
+.link-sbkopi,
+.link-infomedia {
+  @extend .strong-link;
+}
+
+.strong-link{
+  color: $red-link;
+}
+
+
+// =============================================================================
+// Manifestation actions
+// =============================================================================
+.primary-actions {
+  margin-top: 12px;
+  line-height: 20px;
+}
+
+.primary-actions, .secondary-actions {
+  .icon {
+    display: none;
+  }
+  a {
+    display: block;
+  }
+}
+
+// =============================================================================
+// Exportlinks
+// =============================================================================
+.actions .bibdk-dropdown-link {
+  @include bibdk-triangle(top, $blue, 10px , 5px);
+  &.open:after {
+    @include apply-origin(50% 25%, false);
+    @include rotate(180deg);
+  }
+}
+
+
+// =============================================================================
+// Cart action
+// =============================================================================
+.add-item-to-cart {
+  color: $grey-text--dark;
+  margin-bottom: 8px;
+  svg {
+    //float: right;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    vertical-align: text-top;
+    margin-right: 5px;
+    fill: $grey-text--dark;
+  }
+  &.in-cart svg {
+    fill: $yellow;
+  }
+  &.ajax-progress .throbber {
+    float:  right;;
+  }
+}

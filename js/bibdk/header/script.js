@@ -115,7 +115,7 @@
         e.preventDefault();
         $(this).closest('.work').find('.work-toggle-element').trigger('click');
       });
-      
+
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).bind('show-work', function(e) {
         var id = $(this).attr('href');
@@ -414,11 +414,9 @@
         $(this).siblings().removeClass('hide-text').find('input').select();
         $(this).siblings().find('.close').focus();
       });
-      $('.popover .close').click(function(e) {
-        e.preventDefault();
-        $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
-        $(this).closest('.linkme-wrapper').addClass('hide-text');
-        $(this).parent().prev('.popover-button').find('a').focus();
+
+      $('[data-dropdown-content] input[type=text]', context).focus(function(e) {
+        $(this).select();
       });
 
       // ****************************  Seasonal images **************************** //
@@ -453,16 +451,6 @@
           this.select();
         });
       }
-
-      // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
-      $('article.manifestation', context).filter(':visible').each(function() {
-        var wAction = $(this).find('.actions').width();
-        $(this).find('.manifestation-data').css('margin-right', wAction);
-        var hAction = $(this).find('.actions').height();
-        var hData = $(this).find('.manifestation-data').height();
-        var highestCol = Math.max(hAction, hData);
-        $(this).find('.actions').css('min-height', highestCol);
-      });
 
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
