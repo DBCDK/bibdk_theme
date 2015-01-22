@@ -37,6 +37,12 @@
     color: $black--natural;
   }
 
+  .icon {
+    max-height: 20px;
+    width: 15px;
+    margin: 0 10px;
+  }
+
   .svg-media-article {
     @include svg("svg-media-article", "black");
   }
