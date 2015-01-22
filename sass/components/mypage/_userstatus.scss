@@ -1,0 +1,74 @@
+.userstatus-menu {
+  margin: 0 0 10px 10px;
+  @media #{$large-up} {
+    margin: 0 0 10px 2px;
+  }
+}
+
+.userstatus-menu-label {
+  display: inline-block;
+}
+
+.userstatus-menu-item {
+  display: inline-block;
+
+  a {
+    @include typo("link", "item-links", "black");
+    vertical-align: middle;
+  }
+
+  margin-right: 10px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .svg-icon {
+    @include svg("svg-arrow-right", "black");
+    margin: 0 2px 0 0;
+  }
+}
+
+.openuserstatus {
+  .element-section {
+    padding: 10px;
+    @media #{$large-up} {
+      padding: 20px;
+    }
+  }
+
+  th {
+    color: $black--natural;
+    padding-left: 0;
+  }
+
+  td {
+    padding-left: 0;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .message {
+    border: none;
+  }
+}
+/*
+table.fiscal-account th:last-child,
+table.fiscal-account td:last-child {
+  text-align: right;
+}
+
+.openuserstatus .element-title h3 {
+  margin: .2em 0;
+  font-weight: bold;
+}
+
+.payment-url-link {
+  margin: 10px 5px 10px 0;
+}
+
+.bibdk-openuserstatus-mypage-info .bibdk-mypage-row .item-row .throbber {
+  margin: .9em .5em;
+  float:right;
+}
+*/
