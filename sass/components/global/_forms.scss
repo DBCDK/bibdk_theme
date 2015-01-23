@@ -463,11 +463,6 @@ select#edit-favouriteselector {
   max-width: 430px;
 }
 
-#bibdk-reservation-create-wizard-form .form-wrapper .form-item,
-#bibdk-reservation-create-wizard-form #edit-userparameters .form-item {
-  padding: 10px 0 0 0;
-}
-
 #bibdk-reservation-create-wizard-form {
   #edit-infotext-wrapper {
     clear: both;
@@ -671,9 +666,6 @@ select#edit-favouriteselector {
     }
 
     .form-item {
-      border-radius: 0;
-      margin: 0 0 rem-calc(4) 0;
-      padding: rem-calc(10);
 
       input[type="text"],
       input[type="password"] {
@@ -700,7 +692,7 @@ select#edit-favouriteselector {
     margin: rem-calc(20) 0;
     background-color: $white;
     width: 100%;
-
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -716,12 +708,6 @@ select#edit-favouriteselector {
 // Need before date -- End
 // ==========================
 
-#edit-agency-search-fieldset {
-  .form-type-textfield {
-    max-width: 80%;
-  }
-}
-
 .page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;
   background: $grey-7;
@@ -734,35 +720,5 @@ select#edit-favouriteselector {
   }
   .icon {
     display: none;
-  }
-}
-
-// =============================================================================
-// Horizontal search form
-// =============================================================================
-
-.search-form-horizontal {
-  @include clearfix();
-  padding: 0;
-
-  .form-wrapper {
-    border: none;
-  }
-
-  .form-type-textfield,
-  .form-actions {
-    float: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  input {
-    display: block;
-  }
-  input[type=text] {
-    width: 100%;
-  }
-  input[type=submit] {
-    width: 100%;
   }
 }
