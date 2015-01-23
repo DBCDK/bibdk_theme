@@ -463,12 +463,12 @@ select#edit-favouriteselector {
   max-width: 430px;
 }
 
-.page-overlay-favourite-userdata #popup .form-wrapper .form-item,
-.page-reservation #popup #edit-userparameters .form-item {
+#bibdk-reservation-create-wizard-form .form-wrapper .form-item,
+#bibdk-reservation-create-wizard-form #edit-userparameters .form-item {
   padding: 10px 0 0 0;
 }
 
-.page-reservation {
+#bibdk-reservation-create-wizard-form {
   #edit-infotext-wrapper {
     clear: both;
   }
@@ -542,7 +542,7 @@ select#edit-favouriteselector {
   border-bottom: none;
 }
 
-.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+.form-type-date-select {
   padding: 10px 0;
 }
 
@@ -579,7 +579,7 @@ select#edit-favouriteselector {
 .page-reservation label {
   margin-bottom: 2px;
   float: left;
-  width: 170px;
+  width: 180px;
   line-height: 1.3em;
 }
 
@@ -605,8 +605,7 @@ select#edit-favouriteselector {
     padding: 0 20px;
   }
 
-  #edit-needbeforedate div.form-item-needBeforeDate-month,
-  #edit-needbeforedate div.form-item-needBeforeDate-day {
+  .form-type-date-select .form-type-select {
     float: left;
     margin-right: 20px;
   }
@@ -697,7 +696,7 @@ select#edit-favouriteselector {
   // ==========================
   // Need before date -- Start
   // ==========================
-  .form-item-needBeforeDate {
+  .form-type-date-select {
     margin: rem-calc(20) 0;
     background-color: $white;
     width: 100%;
@@ -735,5 +734,35 @@ select#edit-favouriteselector {
   }
   .icon {
     display: none;
+  }
+}
+
+// =============================================================================
+// Horizontal search form
+// =============================================================================
+
+.search-form-horizontal {
+  @include clearfix();
+  padding: 0;
+
+  .form-wrapper {
+    border: none;
+  }
+
+  .form-type-textfield,
+  .form-actions {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    display: block;
+  }
+  input[type=text] {
+    width: 100%;
+  }
+  input[type=submit] {
+    width: 100%;
   }
 }
