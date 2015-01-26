@@ -27,9 +27,9 @@
 }
 
 .work:not(.has-cover) {
-  .work-cover-wrapper {
-    display: none;
-  }
+  // .work-cover-wrapper {
+  //   display: none;
+  // }
   .work-description-wrapper {
     width: 100%;
   }
@@ -104,13 +104,6 @@
   width: 100%;
 }
 
-.work-cover {
-  margin-left: 1rem;
-  img {
-    width: 100%;
-  }
-}
-
 .work-abstract, .work-fields {
   margin-bottom: 1rem;
 }
@@ -122,6 +115,44 @@
     margin-top: 5px;
   }
 }
+
+// =============================================================================
+// Work covers and back-covers
+// =============================================================================
+
+.work-cover {
+  margin-left: 1rem;
+  img {
+    width: 100%;
+  }
+}
+
+.work-cover-selector {
+  display: none;
+  margin-top: 6px;
+  @media #{$large-up} {
+    display: block;
+  }
+  a {
+    float: left;
+    display: block;
+    width: 14px;
+    height: 17px;
+    margin-right: 6px;
+    &.work-cover-front {
+      background: url(../img/in_use/cover-front.png);
+    }
+    &.work-cover-back {
+      background: url(../img/in_use/cover-back.png);
+    }
+  }
+}
+
+.reveal-cover-large-image, .reveal-cover-back-image {
+  text-align: center;
+  padding: 4px;
+}
+
 
 // =============================================================================
 // Work Toggle function
