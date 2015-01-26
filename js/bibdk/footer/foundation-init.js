@@ -1,5 +1,5 @@
-(function () {
-  $(window.document).foundation({
+(function ($) {
+  $(document).foundation({
     offcanvas: {
       // Sets method in which offcanvas opens.
       // [ move | overlap_single | overlap ]
@@ -30,4 +30,4 @@
   function reflow(context) {
     $(window.document, context).foundation('reflow');
   }
-})();
+})(jQuery);

@@ -4,7 +4,7 @@
  * This files handles events invoked by the Foundation Reveal system
  */
 
-(function() {
+(function($) {
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
@@ -72,4 +72,4 @@
     $mainwrapper.css("-o-filter", "");
     $mainwrapper.css("-ms-filter", "");
   }
-})();
+})(jQuery);
