@@ -18,7 +18,7 @@ $font-weight-bold: bold;
 
   // Titles
   @if ($type == "title") {
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.2;
 
     @if $style == "normal" {
@@ -28,6 +28,7 @@ $font-weight-bold: bold;
     } @else if $style == "large" {
       font-size: (18/16) * 1rem;
     } @else if $style == "section" {
+      font-weight: bold;
       font-size: (24/16) * 1rem;
       font-family: 'Dosis', Arial, sans-serif;
       text-transform: uppercase;

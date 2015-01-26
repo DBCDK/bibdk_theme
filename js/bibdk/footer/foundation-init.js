@@ -1,4 +1,4 @@
-(function() {
+(function () {
   $(window.document).foundation({
     offcanvas: {
       // Sets method in which offcanvas opens.
@@ -14,4 +14,20 @@
       animation_speed: 150
     }
   });
+
+  /**
+   * Add foundation specific behavior to drupal ajax loaded content
+   */
+  Drupal.behaviors.foundation = {
+    attach: function (context) {
+      reflow(context);
+    }
+  }
+
+  /**
+   * Add foundation functionality to a given context
+   */
+  function reflow(context) {
+    $(window.document, context).foundation('reflow');
+  }
 })();

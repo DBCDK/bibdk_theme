@@ -3,9 +3,8 @@
 // =============================================================================
 // Header
 #header {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $grey-1;
+  background-color: $grey-bg--page;
 
   .infomedia-article & {
     background-color: $white;
@@ -18,8 +17,6 @@
 
 // search panel
 #search-panel {
-  @extend .padded--horizontal;
-  @extend .padded--vertical;
   background-color: $grey-bg--page;
 
   .lift-columns & {
@@ -29,27 +26,24 @@
 
 // Messages
 #messages {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
-  background-color: $grey-7;
+  background-color: $grey-bg--page;
 }
 
 //articles
 .view-article-view{
-  @extend .padded--horizontal;
   @extend .padded--vertical;
 }
 
 // User alerts
 #user-alerts {
-  background-color: $grey-7;
+  background-color: $grey-bg--page;
   @extend .padded--horizontal;
   // we only want padding if there's an alert.
 }
 
 // Carousel
 #carousel {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
   
   display: none;
@@ -63,7 +57,6 @@
 
 // Subjects
 #bibdk-subject-hierarchy {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
 }
 
@@ -77,12 +70,13 @@
 
 // Columns
 #columns {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
+  min-height: 300px;
+  display: block;
+  background-color: $grey-bg--page;
   
   @media #{$medium-up} {
-    display: block;
-    background-color: $grey-bg--page;
+    min-height: 500px;
     .lift-columns & {
       padding-top: 10px;
       background-color: $grey-bg--page;
@@ -92,7 +86,6 @@
 
 // Banner
 #banner {
-  @extend .padded--horizontal;
   @extend .padded--vertical;
   background-color: $grey-bg--page;
 }

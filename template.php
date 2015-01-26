@@ -65,7 +65,6 @@ function bibdk_theme_theme() {
         'label' => NULL,
       ),
     ),
-
     'link_with_svg' => array(
       'path' => $path . 'global',
       'template' => 'link-with-svg',
@@ -75,8 +74,8 @@ function bibdk_theme_theme() {
         'attributes' => array(),
         'svg' => '',
         'href' => '',
-        ),
       ),
+    ),
     'span_with_svg' => array(
       'path' => $path . 'global',
       'template' => 'span-with-svg',
@@ -86,21 +85,44 @@ function bibdk_theme_theme() {
         'svg' => '',
       ),
     ),
-
     'bibdk_foot_bar' => array(
-    'path' => $path . 'footer',
-    'template' => 'bibdk-footer',
-    'variables' => array(
-      'menu' => '',
-      'footer_menu_links' => '',
-      'home_path' => '',
-      'footerlogo_path' => '',
-      'logo_path' => '',
-      'links' => array(),
-      'overlay' => FALSE,
+      'path' => $path . 'footer',
+      'template' => 'bibdk-footer',
+      'variables' => array(
+        'menu' => '',
+        'footer_menu_links' => '',
+        'home_path' => '',
+        'footerlogo_path' => '',
+        'logo_path' => '',
+        'links' => array(),
+        'overlay' => FALSE,
+      ),
+    ),
+    'bibdk_icon' => array(
+      'path' => $path . 'elements',
+      'template' => 'bibdk-icon',
+      'variables' => array(
+        'text' => '',
+        'icon' => '',
       ),
     ),
   );
+}
+
+function bibdk_theme_preprocess_bibdk_icon(&$vars) {
+  $svg_list = array(
+    'book' => 'media-book',
+    'literature' => 'media-book',
+    'online' => 'media-emat',
+    'movie' => 'media-movie',
+    'music' => 'media-music',
+    'article' => 'media-article',
+    'note' => 'media-note',
+    'audiobook' => 'media-audiobook',
+  );
+  $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
+  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-emat';
+  $vars['icon'] = $icon;
 }
 
 /**
@@ -182,12 +204,9 @@ function bibdk_theme_preprocess_html(&$vars) {
   $topbar = _bibdk_theme_get_bibdk_topbar($overlay);
   $vars['page_topbar'] = drupal_render($topbar);
 
-
-
   //add the page footer
   $foot = _bibdk_theme_get_bibdk_foot_bar($overlay);
   $vars['page_footer'] = drupal_render($foot);
-
 
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
@@ -202,7 +221,7 @@ function bibdk_theme_preprocess_html(&$vars) {
  * @see bibdk-footer.tpl.php
  */
 function _bibdk_theme_get_bibdk_foot_bar($overlay) {
- global $base_url;
+  global $base_url;
 
   $home_path = url('<front>');
   $footerlogo_path = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/dbc-logo-footer-nopayoff.png';
@@ -325,7 +344,7 @@ function _bibdk_theme_get_my_page_menu_links() {
       'attributes' => $common
     );
 
-    if(in_array($path, $hide_on_small)){
+    if (in_array($path, $hide_on_small)) {
       $links[$mypath]['attributes']['class'][] = 'show-for-medium-up';
     }
   }
@@ -413,7 +432,8 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
 }
 
 /**
- * Returns the footer bar menu styled in a list ready for display within the footer bar
+ * Returns the footer bar menu styled in a list ready for display within the
+ * footer bar
  *
  * @return string
  */
@@ -515,10 +535,8 @@ function _bibdk_theme_offcanvas_set_li_attributes($link) {
  * Implements template_ie6nomore_browser().
  */
 function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
-
   // reset version for browser
   $vars['version'] = '';
-
 }
 
 /**
@@ -526,7 +544,7 @@ function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', null);
+  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
 
   if (!$front) {
     $front = '<front>';
@@ -547,7 +565,6 @@ function bibdk_theme_preprocess_page(&$vars) {
   }
 
   $vars['bibdk_theme_path'] = drupal_get_path('theme', 'bibdk_theme');
-
 
   $vars['logo_footer'] = array(
     '#theme' => 'image',
@@ -828,7 +845,7 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
  */
 function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
   if (!$cnum) {
-    return false;
+    return FALSE;
   }
   if (!empty($form['advanced']['bibdk_custom_search_element_' . $parent_id][$id])) {
     $slice = $form['advanced']['bibdk_custom_search_element_' . $parent_id][$id];
@@ -836,7 +853,7 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
 
     $len = round((sizeof($slice)) / $cnum); // $slice includes a #tree key
     if (!$len) {
-      return false;
+      return FALSE;
     }
     $n = $colkey = 0;
     foreach ($slice as $key => $val) {
@@ -869,7 +886,7 @@ function _break_into_columns($group, $parent_id, $id, $cnum, &$form) {
 function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
 
   if (!$cnum) {
-    return false;
+    return FALSE;
   }
 
   if (isset($form['advanced'][$region][$group]) && is_array($form['advanced'][$region][$group])) {
@@ -878,11 +895,11 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
       $elements = &$form['advanced'][$region][$group][$parent_id][$type];
     }
     else {
-      return false;
+      return FALSE;
     }
   }
   else {
-    return false;
+    return FALSE;
   }
   $container = array();
   foreach ($elements as $key => $val) {
@@ -896,7 +913,7 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
   }
   $len = round((sizeof($elements)) / $cnum); // $slice includes a #tree key
   if (!$len) {
-    return false;
+    return FALSE;
   }
   $n = $colkey = 0;
 
@@ -930,7 +947,7 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
  *
  * @param $form
  */
-function _alter_user_register_form(&$form){
+function _alter_user_register_form(&$form) {
   $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
 }
 
@@ -990,7 +1007,7 @@ function bibdk_theme_menu_link($vars) {
   $sub_menu = '';
   $linkText = $element['#title'];
 
-  if ( !empty($element['#below']) ) {
+  if (!empty($element['#below'])) {
     $sub_menu = drupal_render($element['#below']);
   }
 
@@ -1035,34 +1052,22 @@ function bibdk_theme_preprocess_ting_openformat_manifestation(&$vars) {
   if ($actions = $vars['actions']) {
     foreach ($actions as $key => $action) {
       switch ($key) {
-        case 'reservation' :
-          $actions[$key]['#prefix'] = '<div class="btn-wrapper">';
-          $actions[$key]['#suffix'] = '</div>';
-          break;
         case 'linkme' :
           $vars['secondary_actions'][$key] = $action;
           unset($actions[$key]);
           break;
       }
     }
-
     $vars['actions'] = $actions;
   }
-}
 
-/**
- * Implements hook_preprocess_HOOK().
- *
- * @param array $links
- */
-function bibdk_theme_preprocess_links(&$links) {
-  if ($links['heading'] == t('export links')) {
-    $links['heading'] = '';
-    foreach ($links['links'] as $key => $link) {
-      $link['title'] = '<span class="icon icon-left icon-lightgrey-rightarrow">▼</span>' . $link['title'];
-      $link['attributes']['class'] = array('text-small', 'text-darkgrey');
-      $links['links'][$key] = $link;
-    }
+  // unset #theme for volume and section, so drupal does not render the field
+  // but still renders the subfield
+  if(isset($vars['fields']['bibdk_mani_volume'])) {
+    unset($vars['fields']['bibdk_mani_volume']['#theme']);
+  }
+  if(isset($vars['fields']['bibdk_mani_section'])) {
+    unset($vars['fields']['bibdk_mani_section']['#theme']);
   }
 }
 
@@ -1079,6 +1084,25 @@ function bibdk_theme_preprocess_link(&$link) {
   if (!empty($link['options']['svg'])) {
     $link['text'] = '<svg class="' . $link['options']['svg'] . '"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' . $link['options']['svg'] . '"></use></svg>' . $link['text'];
     $link['options']['html'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_preprocess_ting_openformat_work().
+ *
+ * Add icons to tabs
+ *
+ * @param $vars
+ */
+function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
+  if (!empty($vars['types'])) {
+    foreach($vars['types']['#items'] as $type) {
+      $icon = array(
+        '#theme' => 'bibdk_icon',
+        '#icon' => $type,
+      );
+      $vars['types']['#items'][$type] = drupal_render($icon);
+    }
   }
 }
 

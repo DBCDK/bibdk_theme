@@ -1,0 +1,30 @@
+.accordion-navigation {
+  & > a {
+    font-weight: bold;
+    line-height: 15px;
+    @include bibdk-triangle(top);
+    line-height: rem-calc(20px);
+    .toggle-text {
+      position: absolute;
+      right: 3rem;
+      font-weight: normal;
+      line-height: 24px;
+    }
+  }
+  &.active > a {
+    &::after {
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
+    }
+  }
+  border: 1px solid $grey-border;
+  border-bottom: none;
+  &:last-child {
+    border-bottom: 1px solid $grey-border;
+  }
+
+}
+
+.triangle {
+  @include bibdk-triangle(top);
+}

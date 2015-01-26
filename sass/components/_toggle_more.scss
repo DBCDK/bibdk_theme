@@ -8,7 +8,7 @@
   .toggle-hide {
     display: none;
   }
-  &.toggled {
+  &.is-toggled {
     .toggle-hide {
       display: inline;
     }

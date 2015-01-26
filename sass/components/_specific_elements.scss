@@ -1,15 +1,4 @@
 // =============================================================================
-// Exportlinks
-// =============================================================================
-
-.action_element_refexportlinks {
-  padding: 0px;
-  .element-section {
-    padding: 0px;
-  }
-}
-
-// =============================================================================
 // Search
 // =============================================================================
 /* Override drupal style for lists in search result*/
@@ -284,10 +273,10 @@ h3.library-list-header {
 }
 
 // =============================================================================
-// Linkme, Infomedia
+// Infomedia
 // =============================================================================
 
-.linkme-wrapper, .infomedia-wrapper {
+.infomedia-wrapper {
   position: absolute;
   width: 30em;
   left: 25em;
@@ -700,19 +689,6 @@ div#moreinfo img {
 }
 
 // =============================================================================
-// Manifestation actions
-// =============================================================================
-.manifestation .primary-actions {
-  a {
-    display: block;
-
-    &.btn {
-      text-align: center;
-    }
-  }
-}
-
-// =============================================================================
 // Load more results
 // =============================================================================
 .pane-ting-openformat-load-more {
@@ -739,17 +715,6 @@ div#moreinfo img {
   margin-bottom: 10px;
 }
 
-// =============================================================================
-// sbkopi
-// =============================================================================
-.sbkopi-description-container {
-  width: 50%;
-  background-color: $grey-7;
-}
-
-.sbkopi-description-container.form-wrapper {
-  padding: 0 1em 0;
-}
 
 //
 // alerts
@@ -780,33 +745,6 @@ div#moreinfo img {
 
 .no-alert {
   background-image: none;
-}
-
-// =============================================================================
-// Reviews
-// =============================================================================
-
-.bibdk-review {
-  padding: 10px 0;
-  border-bottom: 1px solid #dcdcdc;
-}
-
-// =============================================================================
-// Bibdk reviews
-// =============================================================================
-.bibdk-article-review {
-
-  border-top: 1px solid #dcdcdc;
-  padding: 10px 0;
-
-  .openformat-info {
-    float: left;
-    width: 63%;
-  }
-}
-
-.bibdk-review-link {
-  float: right;
 }
 
 span.star {

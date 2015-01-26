@@ -115,7 +115,7 @@
         e.preventDefault();
         $(this).closest('.work').find('.work-toggle-element').trigger('click');
       });
-      
+
       // Toggle visibility of "next section of an element"
       $('.work-toggle-element', context).bind('show-work', function(e) {
         var id = $(this).attr('href');
@@ -414,11 +414,9 @@
         $(this).siblings().removeClass('hide-text').find('input').select();
         $(this).siblings().find('.close').focus();
       });
-      $('.popover .close').click(function(e) {
-        e.preventDefault();
-        $(this).closest('.linkme-wrapper').addClass('visuallyhidden');
-        $(this).closest('.linkme-wrapper').addClass('hide-text');
-        $(this).parent().prev('.popover-button').find('a').focus();
+
+      $('[data-dropdown-content] input[type=text]', context).focus(function(e) {
+        $(this).select();
       });
 
       // ****************************  Seasonal images **************************** //
@@ -454,16 +452,6 @@
         });
       }
 
-      // *************** ACTIONS COLL CAN EXPANDS IF SEARCH HIEGHT IS TO SMALL  *************** //
-      $('article.manifestation', context).filter(':visible').each(function() {
-        var wAction = $(this).find('.actions').width();
-        $(this).find('.manifestation-data').css('margin-right', wAction);
-        var hAction = $(this).find('.actions').height();
-        var hData = $(this).find('.manifestation-data').height();
-        var highestCol = Math.max(hAction, hData);
-        $(this).find('.actions').css('min-height', highestCol);
-      });
-
       // ****************************  POPUP WINDOW CLOSE BUTTON  **************************** //
       // Toggle advanced search options
       $('.button-close-popup').click(function(e) {
@@ -481,69 +469,7 @@
         $(this).closest('.bibdk-search-controls-form').find('.dropdown-toggle').removeClass('toggled');
       });
 
-      // **************************** EMNEHIERARKI ********************************************** //
-      // $('.themes').themes();
-
-      // **************************** CUSTOM SEARCH ********************************************** //
-      // ***************************  TOGGLE 'EXPAND SEARCH'  ************************************ //
-      // Toggle advanced search options
-      $('#search-advanced-toggle', context).click(function(e) {
-        e.preventDefault();
-        $(this).toggleClass('toggled');
-        $('.toggle-text', this).toggleClass('hidden');
-        $('#search-advanced').toggleClass('hidden');
-        // Move to first input field in expanded search, if activated.
-        if($('#search-advanced-toggle').hasClass('toggled') === true) {
-          $('#edit-advanced').removeClass('is-visible');
-          $('form#search-block-form input[name="search_block_form"]').not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]').focus();
-        }
-        else {
-          $('#edit-advanced').addClass('is-visible');
-          $('form#search-block-form').find('.bibdk-custom-search-element input[type=text], .bibdk-custom-search-element textarea').filter(':visible:first').focus();
-        }
-      });
-
-      // *************************** SHEET MUSIC *********************************************** //
-      $('#search-advanced .form-type-checkbox input').change(function() {
-        // clear other checkboxes if top-level default is selected.
-        if($(this).hasClass('default-value') && $(this).is(':checked') && $(this).val() == 'mu') {
-          $(this).closest(".bibdk-custom-search-element").find("input").each(function(i) {
-            if(!$(this).hasClass('default-value')) {
-              $(this).attr('checked', false);
-            }
-          })
-        }
-      });
-
-      // ***** Split radio elements in columns ***** //
-      var count = 0;
-      var column = 0;
-      var columns = [];
-      $('fieldset.noder #search-advanced .form-radios').children().each(function() {
-        if($(this).hasClass('column')) {
-          // means it's called a second time
-          return false;
-        }
-        if($(this).hasClass('form-type-radio')) {
-          count++;
-          column = Math.ceil(count / 5) - 1;
-        }
-        if(!columns[column]) {
-          columns[column] = document.createElement("div");
-          $(columns[column]).addClass('column');
-          $(columns[column]).addClass('column' + column);
-          $(columns[column]).addClass('form-wrapper');
-        }
-        $(columns[column]).append($(this));
-      });
-      columns.forEach(appendColumn);
-
-      function appendColumn(elem) {
-        $('fieldset.noder #search-advanced .form-radios').append(elem);
-      }
-
       // *********************** ADHL TOP LIST ********************************************* //
-
       $('.adhl-toplist .adhl-link').click(function(event) {
         event.preventDefault();
         window.opener.location.href = $(event.currentTarget).attr('href');

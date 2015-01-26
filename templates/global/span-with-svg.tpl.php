@@ -23,4 +23,4 @@
   </svg>
 <?php endif; ?>
   <?php print drupal_render($content); ?>
-</a>
+</span>
