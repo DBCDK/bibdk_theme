@@ -28,6 +28,20 @@
   }
 }
 
+.userstatus-row-item--title {
+  @include typo("title", "normal", "black");
+  font-weight: bold;
+}
+
+.userstatus-row-item--additional {
+  @include typo("label", "facets", "grey-dark");
+}
+
+.userstatus--returndate {
+  @include typo("link", "topbar-links", "black");
+  font-weight: bold;
+}
+
 .openuserstatus {
   .element-section {
     padding: 10px;
@@ -37,7 +51,8 @@
   }
 
   th {
-    color: $black--natural;
+    color: $grey-text--dark;
+    font-weight: normal;
   }
 
   th,
@@ -53,6 +68,35 @@
     }
   }
 
+  table.reservations {
+    th, td {
+      &:nth-child(6) {
+        text-align: right;
+        min-width: 40px;
+      }
+    }
+  }
+
+  select {
+    font-size: rem-calc(12px);
+  }
+
+  .form-type-select {
+    display: inline;
+    padding: 0;
+  }
+
+  input[type="checkbox"] {
+    float: none;
+    margin: 0;
+  }
+
+  .form-type-checkbox {
+    padding: 0;
+    text-align: center;
+    margin: 0 10px 0 0;
+  }
+
   .message {
     border: none;
   }
@@ -60,25 +104,10 @@
   .red-alert {
     color: $red--hover;
   }
-}
 
-/*
-table.fiscal-account th:last-child,
-table.fiscal-account td:last-child {
-  text-align: right;
+  .helptext {
+    top: 0;
+    margin: 0;
+    position: inherit;
+  }
 }
-
-.openuserstatus .element-title h3 {
-  margin: .2em 0;
-  font-weight: bold;
-}
-
-.payment-url-link {
-  margin: 10px 5px 10px 0;
-}
-
-.bibdk-openuserstatus-mypage-info .bibdk-mypage-row .item-row .throbber {
-  margin: .9em .5em;
-  float:right;
-}
-*/

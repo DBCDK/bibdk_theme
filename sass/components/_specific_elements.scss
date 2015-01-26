@@ -614,10 +614,6 @@ p.note-localisations {
 // =============================================================================
 
 .openuserstatus {
-  .form-item {
-    padding: 5px;
-  }
-
   div.form-item.form-type-select {
     display: inline;
     padding: 0;
@@ -625,10 +621,6 @@ p.note-localisations {
 
   div.form-item:after {
     display: none;
-  }
-
-  select {
-    font-size: 12px;
   }
 
   input[type="submit"] {
