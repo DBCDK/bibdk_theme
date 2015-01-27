@@ -1,5 +1,12 @@
 (function($){
-
+  /**
+   * Scroll input field to top to make room for autocomplete suggestions
+   */
+  if(Modernizr.touch) {
+    $(document).on('focus', 'input[autocomplete]', function() {
+      document.body.scrollTop = $(this).offset().top - 20;
+    });
+  }
   /**
    * overrides Drupal.jsAC.prototype.found
    * @see misc/autocomplete.js
@@ -20,7 +27,6 @@
       $('<li></li>')
         .html($('<div></div>').html(matches[key]))
         .click(function(){
-          console.log(this);
           ac.select(this);
         })
         .mouseover(function(){
