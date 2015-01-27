@@ -53,22 +53,20 @@
         }
       }
     };
-
-    /**
-     * overrides Drupal.autocompleteSubmit
-     * @see misc/autocomplete.js
-     *
-     * We want to submit on enter
-     */
-    Drupal.autocompleteSubmit = function(){
-      $('#autocomplete').each(function(){
-        this.owner.hidePopup();
-      });
-
-      return true;
-    };
   });
 
+  /**
+   * overrides Drupal.autocompleteSubmit
+   * @see misc/autocomplete.js
+   *
+   * We want to submit on enter
+   */
+  Drupal.autocompleteSubmit = function(){
+    $('#autocomplete').each(function(){
+      this.owner.hidePopup();
+    });
+    return true;
+  };
 
 })(jQuery);
 
