@@ -95,6 +95,12 @@
 
   select {
     font-size: rem-calc(12px);
+    padding-left: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../../img/svg/arrow-down.svg') 95% 40% no-repeat;
+    background-size: 10px;
   }
 
   .form-type-select {
