@@ -31,10 +31,18 @@
 .userstatus-row-item--title {
   @include typo("title", "normal", "black");
   font-weight: bold;
+  display: block;
 }
 
 .userstatus-row-item--additional {
   @include typo("label", "facets", "grey-dark");
+  display: block;
+}
+
+.userstatus-row-item--library-name {
+  @include typo("label", "facets", "grey-dark");
+  display: block;
+  padding-top: 7px;
 }
 
 .userstatus--date {
@@ -65,12 +73,17 @@
     &:last-child {
       padding-right: 0;
     }
+
+    &.userstatus--row-item--material-title {
+      padding-top: 12px;
+      padding-right: 10px;
+    }
   }
 
   table.reservations {
     th, td {
       &:nth-child(6) {
-        text-align: right;
+        text-align: center;
         min-width: 40px;
       }
     }
