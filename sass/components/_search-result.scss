@@ -120,10 +120,14 @@
 // Work covers and back-covers
 // =============================================================================
 
+.field-name-bibdk-cover-work {
+  width: auto;
+}
+
 .work-cover {
   margin-left: 1rem;
   img {
-    width: 100%;
+    width: auto;
   }
 }
 
