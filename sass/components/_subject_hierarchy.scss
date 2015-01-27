@@ -87,7 +87,7 @@
  .svg-magnifier {
     @include svg("svg-magnifier", $black--natural);
   }
- .icon {
+ .svg-icon {
     width: 20px;
     height: 20px;
   }
@@ -212,6 +212,10 @@ subjects-row {
   cursor: pointer;
  .svg-close {
     @include svg("svg-close", $black--natural);
+  }
+ .svg-icon {
+    width: 16px;
+    height: 16px;
   }
 }
 
