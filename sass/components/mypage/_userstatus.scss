@@ -48,6 +48,12 @@
 .userstatus--date {
   @include typo("link", "topbar-links", "black");
   font-weight: bold;
+  display: block;
+  line-height: 1.2;
+}
+
+.userstatus--pickupid {
+  color: $grey-text--dark;
 }
 
 .payment-url-link {
