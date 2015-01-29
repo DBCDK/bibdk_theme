@@ -444,7 +444,7 @@ textarea::-webkit-input-placeholder {
 
 .form-item.form-item-favouriteselector {
   clear: both;
-  padding: 0 0 20px 0;
+  padding: 1rem 0.5rem;
 
   &.ajax-progress {
     display: inherit;
@@ -463,12 +463,7 @@ select#edit-favouriteselector {
   max-width: 430px;
 }
 
-.page-overlay-favourite-userdata #popup .form-wrapper .form-item,
-.page-reservation #popup #edit-userparameters .form-item {
-  padding: 10px 0 0 0;
-}
-
-.page-reservation {
+#bibdk-reservation-create-wizard-form {
   #edit-infotext-wrapper {
     clear: both;
   }
@@ -542,7 +537,7 @@ select#edit-favouriteselector {
   border-bottom: none;
 }
 
-.page-reservation .form-wrapper .form-item.form-item-needBeforeDate {
+.form-type-date-select {
   padding: 10px 0;
 }
 
@@ -579,7 +574,7 @@ select#edit-favouriteselector {
 .page-reservation label {
   margin-bottom: 2px;
   float: left;
-  width: 170px;
+  width: 180px;
   line-height: 1.3em;
 }
 
@@ -605,8 +600,7 @@ select#edit-favouriteselector {
     padding: 0 20px;
   }
 
-  #edit-needbeforedate div.form-item-needBeforeDate-month,
-  #edit-needbeforedate div.form-item-needBeforeDate-day {
+  .form-type-date-select .form-type-select {
     float: left;
     margin-right: 20px;
   }
@@ -672,9 +666,6 @@ select#edit-favouriteselector {
     }
 
     .form-item {
-      border-radius: 0;
-      margin: 0 0 rem-calc(4) 0;
-      padding: rem-calc(10);
 
       input[type="text"],
       input[type="password"] {
@@ -697,11 +688,11 @@ select#edit-favouriteselector {
   // ==========================
   // Need before date -- Start
   // ==========================
-  .form-item-needBeforeDate {
+  .form-type-date-select {
     margin: rem-calc(20) 0;
     background-color: $white;
     width: 100%;
-
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -716,12 +707,6 @@ select#edit-favouriteselector {
 // ==========================
 // Need before date -- End
 // ==========================
-
-#edit-agency-search-fieldset {
-  .form-type-textfield {
-    max-width: 80%;
-  }
-}
 
 .page-reservation .reservation-online-links.form-wrapper {
   padding: 1em 2em;

@@ -65,8 +65,9 @@
     // Sets list-style. Default: list. Options: [list, content]
     $content: list,
       // Sets if dropdown has triangle. Default:true.
-    $triangle: false,
+    $triangle: true,
       // Sets max-width. Default: $f-dropdown-max-width
     $max-width: 300px
   );
+  box-shadow: $grey-border 2px 2px 5px;
 }

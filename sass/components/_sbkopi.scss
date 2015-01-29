@@ -1,0 +1,77 @@
+// =============================================================================
+// sbkopi
+// =============================================================================
+.sbkopi-description-container {
+  width: 50%;
+  background-color: $grey-7;
+}
+
+.sbkopi-description-container.form-wrapper {
+  padding: 0 1em 0;
+}
+
+.sbkopi-manifestation-container .fieldset-wrapper {
+
+  width: 100%;
+  background-color: $white;
+  padding: 0.5rem;
+}
+
+.sbkopi-fields-container .fieldset-description {
+  padding-bottom: 1rem;
+}
+
+
+.sbkopi-form {
+  position: relative;
+}
+
+.sbkopi-form .form-item-openagency-query {
+  position: relative;
+  width: 100%;
+  display: block;
+  // ID is used because reservation flow uses extremely high specificity
+  input[type="text"]#edit-openagency-query {
+    height: 30px;
+    width: 83%;
+    float: left;
+  }
+}
+
+.sbkopi-button-wrapper {
+  position: relative;
+  a {
+    display: inline;
+  }
+    .dropdown-link {
+      @extend .question-mark;
+      display: block;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+  }
+  .bibdk-dropdown {
+    padding: 8px;
+    margin-top: 5px;
+  }
+}
+
+
+.question-mark {
+  @include single-transition();
+  background-color: $blue;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  color: $white;
+  line-height: 14px;
+  border: solid $blue 2px;
+  &.open {
+    @include rotate(360deg);
+  }
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}
