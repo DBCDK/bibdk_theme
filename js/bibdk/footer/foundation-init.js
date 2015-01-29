@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   $(window.document).foundation({
     offcanvas: {
       // Sets method in which offcanvas opens.
@@ -30,4 +30,4 @@
   function reflow(context) {
     $(window.document, context).foundation('reflow');
   }
-})();
+})(jQuery);

@@ -24,11 +24,12 @@ scripts[] = build/js/header.js
 ;==================================
 scripts[] = build/js/libs.js
 
+; migrate creates objects deprecated from jquery 1.1.9 e.g. browser object
+scripts[] = libs/jquery-migrate/jquery-migrate-1.2.1.min.js
 
 ;==================================
 ;      JS FOUNDATION
 ;==================================
-scripts[] = libs/foundation/js/vendor/jquery.js
 scripts[] = build/js/foundation-concatenated.js
 
 
