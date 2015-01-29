@@ -67,7 +67,6 @@ function bibdk_theme_theme() {
       'variables' => array(
         'attributes' => array(),
         'items' => array(),
-        'label' => NULL,
       ),
     ),
     'link_with_svg' => array(
@@ -264,12 +263,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
 
-  $label = NULL;
-  if ($user->uid) {
-    $label = t('My page', array(), array('context' => 'bibdk_frontend'));
-  }
-
-  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')), $label);
+  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
 
   $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
 
@@ -478,12 +472,11 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * @param array $links array with the links that should be printed in the
  * offcanvas menu.
  * @param array $ul_attributes attributes for the containing <ul> element.
- * @param bool|string $label
  *
  * @return string rendered output
  * @see bibdk-links-list.tpl.php
  */
-function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = FALSE) {
+function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
   global $base_url;
   $items = array();
 
@@ -510,7 +503,6 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), 
     '#theme' => 'bibdk_links_list',
     '#attributes' => $ul_attributes,
     '#items' => $items,
-    '#label' => $label,
   );
 }
 

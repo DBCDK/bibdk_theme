@@ -614,10 +614,6 @@ p.note-localisations {
 // =============================================================================
 
 .openuserstatus {
-  .form-item {
-    padding: 5px;
-  }
-
   div.form-item.form-type-select {
     display: inline;
     padding: 0;
@@ -625,10 +621,6 @@ p.note-localisations {
 
   div.form-item:after {
     display: none;
-  }
-
-  select {
-    font-size: 12px;
   }
 
   input[type="submit"] {
@@ -715,37 +707,6 @@ div#moreinfo img {
   margin-bottom: 10px;
 }
 
-
-//
-// alerts
-//
-
-.alert {
-  background: url(../img/in_use/alert-sprites.png) no-repeat top left;
-  padding: 3px 12px;
-  width: 12px;
-  height: 22px;
-}
-
-.blue-alert {
-  background-position: 0 0;
-}
-
-.green-alert {
-  background-position: -18px 0;
-}
-
-.yellow-alert {
-  background-position: -36px 0;
-}
-
-.red-alert {
-  background-position: -54px 0;
-}
-
-.no-alert {
-  background-image: none;
-}
 
 span.star {
   display: inline-block;
