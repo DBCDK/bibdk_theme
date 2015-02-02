@@ -78,6 +78,7 @@ function bibdk_theme_theme() {
         'attributes' => array(),
         'svg' => '',
         'href' => '',
+        'image' => '',
       ),
     ),
     'span_with_svg' => array(
@@ -365,6 +366,7 @@ function _bibdk_theme_get_my_page_menu_links() {
  */
 function _bibdk_theme_get_topbar_links() {
   global $user;
+  global $base_url;
 
   $links = array();
   $links[] = array(
@@ -396,8 +398,10 @@ function _bibdk_theme_get_topbar_links() {
       '#title' => t('Log ind'),
       '#href' => url('user/login'),
       '#svg' => 'svg-user',
+      '#image' => theme('image',array('path'=>$base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/user.png')),
       '#attributes' => array(
         'class' => array('visible-for-large-up'),
+        'role' => 'button'
       ),
     );
   }
@@ -406,8 +410,10 @@ function _bibdk_theme_get_topbar_links() {
     '#title' => t('Menu'),
     '#href' => '#',
     '#svg' => 'svg-menu',
+    '#image' => theme('image',array('path'=>$base_url . '/' . drupal_get_path('theme', 'bibdk_theme') . '/img/menu.png')),
     '#attributes' => array(
       'class' => array('right-off-canvas-toggle'),
+      'role' => 'button'
     ),
   );
 
