@@ -17,6 +17,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'user_alert') . '/css/user-alert.css']);
   unset($css[drupal_get_path('module', 'bibdk_help') . '/css/bibdk_help.css']);
   unset($css[drupal_get_path('module', 'ctools') . '/css/modal.css']);
+  unset($css[drupal_get_path('module', 'bibdk_search_carousel') . '/css/slick.css']);
   unset($css['misc/vertical-tabs.css']);
 }
 
