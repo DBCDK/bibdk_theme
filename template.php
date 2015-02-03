@@ -550,7 +550,12 @@ function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  $front = NULL;
+
+  // bibdk_usersettings may not be loaded at this point
+  if (function_exists()) {
+    $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  }
 
   if (!$front) {
     $front = '<front>';
