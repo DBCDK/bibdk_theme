@@ -553,7 +553,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   $front = NULL;
 
   // bibdk_usersettings may not be loaded at this point
-  if (function_exists()) {
+  if (function_exists('bibdk_usersettings_user_settings_get')) {
     $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
   }
 
