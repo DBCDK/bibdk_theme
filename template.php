@@ -365,6 +365,7 @@ function _bibdk_theme_get_my_page_menu_links() {
  */
 function _bibdk_theme_get_topbar_links() {
   global $user;
+  global $base_url;
 
   $links = array();
   $links[] = array(
