@@ -11,7 +11,6 @@
  *   - $svg: id of the svg-icon that should be displayed. This value will also
  *           be used as the class for the svg element so one should enusre that
  *           class is matched in the CSS.
- *   - $image: png file for svg-menu and svg-user (caused by errors with svg icons in IE)
  * @see drupal_attributes()
  */
 ?>
@@ -21,6 +20,11 @@
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
     </svg>
     <?php }  ?>
-    <span><?php print $image; ?></span>
+    <?php if ($svg == 'svg-user') { ?>
+      <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/user.png')); ?>
+    <?php }  ?>
+    <?php if ($svg == 'svg-menu') { ?>
+      <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/menu.png')); ?>
+    <?php }  ?>
     <span><?php print $title; ?></span>
 </a>
