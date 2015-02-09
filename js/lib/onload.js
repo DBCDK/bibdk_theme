@@ -27,7 +27,7 @@
 
   Drupal.behaviors.init_cursors = {
     attach: function (context) {
-      $(document).once('init_cursors', function () {
+      $(document).one('ready', function () {
         onLoad.setFocus();
       });
     }
