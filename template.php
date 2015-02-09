@@ -17,6 +17,7 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'user_alert') . '/css/user-alert.css']);
   unset($css[drupal_get_path('module', 'bibdk_help') . '/css/bibdk_help.css']);
   unset($css[drupal_get_path('module', 'ctools') . '/css/modal.css']);
+  unset($css[drupal_get_path('module', 'bibdk_search_carousel') . '/css/slick.css']);
   unset($css['misc/vertical-tabs.css']);
 }
 
@@ -542,7 +543,12 @@ function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  $front = NULL;
+
+  // bibdk_usersettings may not be loaded at this point
+  if (function_exists('bibdk_usersettings_user_settings_get')) {
+    $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  }
 
   if (!$front) {
     $front = '<front>';

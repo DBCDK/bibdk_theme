@@ -1,6 +1,7 @@
 // ****************************  CURSOR POSITIONS **************************** //
-var onLoad;
-(function($){
+
+(function ($) {
+
   onLoad = {
     setFocus: function() {
       //Do not go any further if we're on a touch device
@@ -23,8 +24,13 @@ var onLoad;
       $('.page-overlay-newsroom').find('input[type=text], textarea').filter(':visible:first').focus();
     }
   };
-    $(document).ready(function() {
-      onLoad.setFocus();
-    });
-}(jQuery))
 
+  Drupal.behaviors.init_cursors = {
+    attach: function (context) {
+      $(document).once('init_cursors', function () {
+        onLoad.setFocus();
+      });
+    }
+  };
+
+}(jQuery));
