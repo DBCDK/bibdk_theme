@@ -27,9 +27,6 @@
 }
 
 .work:not(.has-cover) {
-  // .work-cover-wrapper {
-  //   display: none;
-  // }
   .work-description-wrapper {
     width: 100%;
   }
@@ -237,8 +234,6 @@
 // Manifestation data (Field information)
 // =============================================================================
 .manifestation-data {
-  //padding-bottom : 1rem;
-  //display: table;
   .field {
     display: table-row;
   }
