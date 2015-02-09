@@ -112,58 +112,6 @@
   }
 }
 
-// =============================================================================
-// Pagination and Prev/Next buttons
-// =============================================================================
-
-/*
-
-
-.slick-carousel-pagination {
-  display: none;
-}
-
-.slick-carousel-action-prev,
-.slick-carousel-action-next {
-  @extend .hide-text;
-  position: absolute;
-  top: 0;
-  bottom: 40px;
-  display: block;
-  width: 54px;
-
-  &.slick-carousel-action-disabled {
-    opacity: 0.3;
-    cursor: default;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-
-.slick-carousel-action-prev {
-  left: -34px;
-  &:after {
-    @include add-sprite("carousel-arrow--left");
-  }
-}
-
-.slick-carousel-action-next {
-  right: -34px;
-  &:after {
-    @include add-sprite("carousel-arrow--right");
-  }
-}
-
-*/
-
 
 // =============================================================================
 // Single carousel item
@@ -214,7 +162,6 @@
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
 .slick-list:focus { outline: none; }
-// .slick-loading .slick-list { background: #fff url("./ajax-loader.gif") center center no-repeat; }
 .slick-list.dragging { cursor: pointer; cursor: hand; }
 
 .slick-slider .slick-track { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
@@ -232,9 +179,6 @@
 .slick-initialized .slick-slide { display: block; }
 .slick-loading .slick-slide { visibility: hidden; }
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
-
-/* Icons */
-// @font-face { font-family: "slick"; src: url("./fonts/slick.eot"); src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg"); font-weight: normal; font-style: normal; }
 
 /* Arrows */
 .slick-prev, .slick-next { 
