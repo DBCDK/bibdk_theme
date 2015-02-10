@@ -55,13 +55,13 @@ jQuery.fn.popupwindow = function(p, spawn) {
 
     parameters = "location=" + settings.location + ",menubar=" + settings.menubar + ",height=" + settings.height + ",width=" + settings.width + ",toolbar=" + settings.toolbar + ",scrollbars=" + settings.scrollbars + ",status=" + settings.status + ",resizable=" + settings.resizable + ",left=" + settings.left + ",screenX=" + settings.left + ",top=" + settings.top + ",screenY=" + settings.top;
 
-    var orderedonce = $(this).hasClass('orderedOnceWork');
+    var orderedonce = jQuery(this).hasClass('orderedOnceWork');
 
-    $(this).one('click.orderPopup', function(event) {
+    jQuery(this).one('click.orderPopup', function(event) {
       if(orderedonce) {
         var test = confirm(Drupal.t("You have already ordered this item once. Continue?"));
         if(test == false) {
-          $(this).unbind(event);
+          jQuery(this).unbind(event);
           return false;
         }
       }
@@ -77,12 +77,12 @@ jQuery.fn.popupwindow = function(p, spawn) {
       }
 
       myWindow.focus();
-      $(this).unbind(event);
+      jQuery(this).unbind(event);
       return false;
     });
 
     if(spawn){
-      $(this).triggerHandler('click.orderPopup', profiles);
+      jQuery(this).triggerHandler('click.orderPopup', profiles);
     }
   });
 };

@@ -37,3 +37,41 @@
     float: left;
   }
 }
+
+.sbkopi-button-wrapper {
+  position: relative;
+  a {
+    display: inline;
+  }
+    .dropdown-link {
+      @extend .question-mark;
+      display: block;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+  }
+  .bibdk-dropdown {
+    padding: 8px;
+    margin-top: 5px;
+  }
+}
+
+
+.question-mark {
+  @include single-transition();
+  background-color: $blue;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  color: $white;
+  line-height: 14px;
+  border: solid $blue 2px;
+  &.open {
+    @include rotate(360deg);
+  }
+  &:hover {
+    background-color: $white;
+    color: $blue;
+  }
+}

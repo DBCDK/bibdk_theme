@@ -3,6 +3,10 @@
 // =============================================================================
 
 #title {
-  padding-top: rem-calc($spacing);
+  padding: rem-calc($spacing 0 0 $spacing);
   margin-bottom: $spacing;
+
+  @media #{$large-up}{
+    padding-left: 0;
+  }
 }
