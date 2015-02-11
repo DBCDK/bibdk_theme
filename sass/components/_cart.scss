@@ -64,3 +64,9 @@
     font-weight: bold;
   }
 }
+
+#edit-cartactions .item-list ul li {
+  @media #{$small-only} {
+    margin: 14px 4px;
+  }
+}
