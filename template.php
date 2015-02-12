@@ -134,14 +134,17 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
  * @param array $vars
  */
 function bibdk_theme_preprocess_pager_next(&$vars) {
-  $vars['text'] = t('pager_next >', array(), array('context' => 'bibdk_theme'));
+  $vars['text'] = t('pager_next', array(), array('context' => 'bibdk_theme'));
+  // $vars['parameters']['suffix'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
 }
 
 /**
  * @param array $vars
  */
 function bibdk_theme_preprocess_pager_previous(&$vars) {
-  $vars['text'] = t('< pager_previous ', array(), array('context' => 'bibdk_theme'));
+  $vars['text'] = t('pager_previous', array(), array('context' => 'bibdk_theme'));
+  // SVG icon is missing
+  // $vars['parameters']['prefix'] = ''<svg class="svg-arrow-left"><use xlink:href="#svg-arrow-left" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>'';
 }
 
 /**
@@ -149,6 +152,41 @@ function bibdk_theme_preprocess_pager_previous(&$vars) {
  */
 function bibdk_theme_preprocess_pager_first(&$vars) {
   $vars['text'] = t('pager_first', array(), array('context' => 'bibdk_theme'));
+}
+
+/**
+ * Override theme_pager_link()
+ * @param $variables
+ */
+function bibdk_theme_pager_link($variables) {
+  $text = $variables['text'];
+  $page_new = $variables['page_new'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+  $attributes = $variables['attributes'];
+  $prefix = isset($variables['parameters']['prefix']) ? $variables['parameters']['prefix'] : '';
+  $suffix = isset($variables['parameters']['suffix']) ? $variables['parameters']['suffix'] : '';
+
+  $page = isset($_GET['page']) ? $_GET['page'] : '';
+  if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
+    $parameters['page'] = $new_page;
+  }
+
+  $query = array();
+  if (count($parameters)) {
+    $query = drupal_get_query_parameters($parameters, array());
+  }
+  if ($query_pager = pager_get_query_parameters()) {
+    $query = array_merge($query, $query_pager);
+  }
+
+  // Set each pager link title
+  if (!empty($text)) {
+    $attributes['title'] = strip_tags($text);
+  }
+
+  $attributes['href'] = url($_GET['q'], array('query' => $query));
+  return $prefix . '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>' . $suffix;
 }
 
 /**
@@ -690,8 +728,29 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
     case 'bibdk_mypage_form':
       drupal_set_title(t('My page'));
       break;
+    case 'bibdk_facetbrowser_form':
+      _alter_bibdk_facetbrowser_form($form);
+      break;
 
   }
+}
+
+/**
+ * hook_form_alter() callback
+ *
+ * @param array $form
+ * @see bibdk_theme_form_alter()
+ */
+function _alter_bibdk_facetbrowser_form(&$form) {
+  $prefix['prefix']['#type'] = 'container';
+  $prefix['prefix']['#attributes']['id'] = array('facetbrowser-icon-container');
+  $prefix['prefix']['#attributes']['class'] = array('dropdown-icon-container');
+  $prefix['prefix']['arrow_down']['#markup'] = '
+    <svg class="svg-icon svg-arrow-down">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-down"></use>
+    </svg>
+  ';
+  $form = array_merge($prefix, $form);
 }
 
 /**

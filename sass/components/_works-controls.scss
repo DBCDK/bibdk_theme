@@ -2,40 +2,91 @@
 // Works controls (above the list of works)
 // =============================================================================
 
+.panel-top {
+  border: 1px solid $grey-border;
+  // @include rem('padding', 11px 10px 10px 10px);
+  background-color: $grey-bg--section;
+}
+
+.searchresult_count {
+  width: 25%;
+  @include rem('padding', 2px 2px 2px 2px);
+  height: rem-calc(64px);
+  line-height: rem-calc(64px);
+  text-align: center;
+  font-size: rem-calc(16px);
+  font-weight: bold;
+  color: $grey-text--dark;
+  float:left;
+}
+
 .works-controls {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
-.works-controls .pane-ting-openformat-pager{
+.works-controls .pane-ting-openformat-pager {
+  border-left: 1px solid $grey-border;
+  font-weight: bold;
   float:right;
-  margin:0;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 0px;
+  .pane-content a {
+    color: $black--natural;
+   padding: 0 10px 0 10px;
+  }
 }
 
-.works-controls .pane-ting-openformat-feeds{
-  background-color: $grey-6;
+// bottom pager
+.works .works-controls .pane-ting-openformat-pager {
+  border-width-left: 0px;
+  background-color: $grey-bg--section;
+  border: 1px solid $grey-border;
+}
+
+.works-controls .pane-ting-openformat-feeds {
+  margin-right: 20px;
   border: none;
+  .pane-content {
+    width: rem-calc(30px);
+  }
+  .ting-openformat-feeds {
+    text-align: center;
+    position: relative;
+    top: -1px;
+  }
 }
 
 .pane-bibdk-search-controls-search-control-sort,
-#edit-search-controls-sort,
 .pane-ting-openformat-full-view,
 .pane-ting-openformat-pager,
 .pane-ting-openformat-feeds {
-  float: left;
-  position: relative;
-  @include inline-block();
-  border: $border-default;
-  @include border-radius($border-radius);
-
-  background-color: $white;
+  height: rem-calc(64px);
+  line-height: rem-calc(64px);
+  float: right;
   margin-right: 10px;
-
   div > a, span > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
   }
+  .pane-content {
+    @include inline-block();
+    height: rem-calc(30px);
+    line-height: rem-calc(30px);
+  }
 }
+
+.pane-bibdk-search-controls-search-control-sort,
+.pane-ting-openformat-feeds {
+  .pane-content {
+    border: $border-default;
+    @include border-radius($border-radius);
+    background-color: $white;
+  }
+}
+
+
 
 #edit-search-controls-sort {
   margin-top: 5px;
@@ -45,6 +96,11 @@
 
   a {
     padding: 0 35px 0 10px;
+  }
+
+  .dropdown-menu {
+    width: auto;
+    min-width: auto;
   }
 
   .dropdown-menu a {
@@ -62,12 +118,6 @@
 
 }
 
-.pane-ting-openformat-pager {
-  .pane-content a {
-   padding: 0 10px 0 10px;
-  }
-}
-
 .pane-ting-openformat-full-view {
   .pane-content a {
     padding: 0 10px 0 30px;
@@ -80,12 +130,12 @@
 
 .pane-ting-openformat-rank-frequency {
   clear: both;
-  padding-top: 10px;
+  margin-top: 1px;
+  padding-top: 0px;
 
   .pane-content {
     background-color: $white;
-    padding: 5px;
-    border: $border-default;
+    padding: 5px 20px;
   }
 }
 
