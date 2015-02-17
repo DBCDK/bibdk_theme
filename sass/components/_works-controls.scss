@@ -1,15 +1,54 @@
 // =============================================================================
+// Responsive
+// =============================================================================
+
+.pane-ting-openformat-full-view, .pane-ting-openformat-feeds {
+  display: none;
+  @media #{$large-up} {
+    display: block;
+  }
+}
+
+.pane-bibdk-search-controls-search-control-sort {
+  display: none;
+  @media #{$medium-up} {
+    display: block;
+  }
+}
+
+.pane-ting-openformat-pager a[data-pager="icon"] {
+  display: inline;
+  @media #{$xlarge-up} {
+    display: none;
+  }
+}
+
+.pane-ting-openformat-pager a[data-pager="text"] {
+  display: none;
+  @media #{$xlarge-up} {
+    display: inline;
+  }
+}
+
+.searchresult_count {
+  width: 40%;
+  @media #{$medium-up} {
+    width: 25%;
+  }
+}
+
+
+
+// =============================================================================
 // Works controls (above the list of works)
 // =============================================================================
 
 .panel-top {
   border: 1px solid $grey-border;
-  // @include rem('padding', 11px 10px 10px 10px);
   background-color: $grey-bg--section;
 }
 
 .searchresult_count {
-  width: 25%;
   @include rem('padding', 2px 2px 2px 2px);
   height: rem-calc(64px);
   line-height: rem-calc(64px);
@@ -27,13 +66,11 @@
 .works-controls .pane-ting-openformat-pager {
   border-left: 1px solid $grey-border;
   font-weight: bold;
-  float:right;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: 0px;
   .pane-content a {
     color: $black--natural;
-   padding: 0 10px 0 10px;
   }
 }
 
@@ -42,6 +79,16 @@
   border-width-left: 0px;
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
+}
+
+.bibdk-pager-first, .bibdk-pager-previous, .bibdk-pager-next {
+  padding-right: 10px;
+  padding-left: 10px;
+  white-space: nowrap;
+  .svg-arrow-right, .svg-arrow-left, .svg-arrow-first {
+    height: 18px;
+    width: 18px;
+  }
 }
 
 .works-controls .pane-ting-openformat-feeds {
@@ -64,7 +111,7 @@
   height: rem-calc(64px);
   line-height: rem-calc(64px);
   float: right;
-  margin-right: 10px;
+  margin-right: 8px;
   div > a, span > a {
     position: relative;
     @include rem('height', 30px);

@@ -6,10 +6,9 @@
   @include svg("svg-arrow-right", "black");
 }
 
-/* missing!:
 .svg-arrow-left {
   @include svg("svg-arrow-left", "black");
-}*/
+}
 
 .svg-arrow-down {
   @include svg("svg-arrow-down", "black");

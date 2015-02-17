@@ -130,28 +130,35 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
   $vars['icon'] = $icon;
 }
 
-/**
- * @param array $vars
- */
-function bibdk_theme_preprocess_pager_next(&$vars) {
-  $vars['text'] = t('pager_next', array(), array('context' => 'bibdk_theme'));
-  // $vars['parameters']['suffix'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
-}
-
-/**
- * @param array $vars
- */
-function bibdk_theme_preprocess_pager_previous(&$vars) {
-  $vars['text'] = t('pager_previous', array(), array('context' => 'bibdk_theme'));
-  // SVG icon is missing
-  // $vars['parameters']['prefix'] = ''<svg class="svg-arrow-left"><use xlink:href="#svg-arrow-left" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>'';
-}
 
 /**
  * @param array $vars
  */
 function bibdk_theme_preprocess_pager_first(&$vars) {
   $vars['text'] = t('pager_first', array(), array('context' => 'bibdk_theme'));
+  // SVG icon is missing
+  // $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-first"><use xlink:href="#svg-arrow-first" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  // $vars['parameters']['icon']['position'] = 'prefix';
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['position'] = 'suffix';
+}
+
+/**
+ * @param array $vars
+ */
+function bibdk_theme_preprocess_pager_next(&$vars) {
+  $vars['text'] = t('pager_next >', array(), array('context' => 'bibdk_theme'));
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['position'] = 'suffix';
+}
+
+/**
+ * @param array $vars
+ */
+function bibdk_theme_preprocess_pager_previous(&$vars) {
+  $vars['text'] = t('< pager_previous ', array(), array('context' => 'bibdk_theme'));
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-left"><use xlink:href="#svg-arrow-left" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['position'] = 'prefix';
 }
 
 /**
@@ -164,8 +171,10 @@ function bibdk_theme_pager_link($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = $variables['attributes'];
-  $prefix = isset($variables['parameters']['prefix']) ? $variables['parameters']['prefix'] : '';
-  $suffix = isset($variables['parameters']['suffix']) ? $variables['parameters']['suffix'] : '';
+  $icon = isset($parameters['icon']) ? $parameters['icon'] : array();
+  unset($parameters['icon']);
+  $prefix = $suffix = '';
+
 
   $page = isset($_GET['page']) ? $_GET['page'] : '';
   if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
@@ -186,7 +195,19 @@ function bibdk_theme_pager_link($variables) {
   }
 
   $attributes['href'] = url($_GET['q'], array('query' => $query));
-  return $prefix . '<a' . drupal_attributes($attributes) . '>' . check_plain($text) . '</a>' . $suffix;
+
+  if (isset($icon['position']) && isset($icon['markup'])) {
+    switch ($icon['position']) {
+        case 'prefix':
+            $prefix = '<a' . drupal_attributes($attributes) . ' data-pager="icon">' . $icon['markup'] . '</a>';
+            break;
+        case 'suffix':
+            $suffix = '<a' . drupal_attributes($attributes) . ' data-pager="icon">' . $icon['markup'] . '</a>';
+            break;
+    }
+  }
+
+  return $prefix . '<a' . drupal_attributes($attributes) . ' data-pager="text">' . check_plain($text) . '</a>' . $suffix;
 }
 
 /**
