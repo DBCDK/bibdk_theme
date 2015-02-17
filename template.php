@@ -17,7 +17,14 @@ function bibdk_theme_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'user_alert') . '/css/user-alert.css']);
   unset($css[drupal_get_path('module', 'bibdk_help') . '/css/bibdk_help.css']);
   unset($css[drupal_get_path('module', 'ctools') . '/css/modal.css']);
+  unset($css[drupal_get_path('module', 'bibdk_search_carousel') . '/css/slick.css']);
   unset($css['misc/vertical-tabs.css']);
+}
+
+function bibdk_theme_js_alter(&$js) {
+  $js['misc/jquery.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/libs/foundation/js/vendor/jquery.js';
+  $js['misc/jquery.form.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/js/lib/jquery.form.js';
+  $js[drupal_get_path('theme', 'bibdk_theme') .'/libs/jquery-migrate/jquery-migrate-1.2.1.min.js']['group'] = -100;
 }
 
 /**
@@ -62,7 +69,6 @@ function bibdk_theme_theme() {
       'variables' => array(
         'attributes' => array(),
         'items' => array(),
-        'label' => NULL,
       ),
     ),
     'link_with_svg' => array(
@@ -259,12 +265,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
 
-  $label = NULL;
-  if ($user->uid) {
-    $label = t('My page', array(), array('context' => 'bibdk_frontend'));
-  }
-
-  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')), $label);
+  $menu = _bibdk_theme_get_offcanvas_menu_list($menu_links, array('class' => array('off-canvas-list')));
 
   $footer_menu = _bibdk_theme_get_footer_menu_for_offcanvas();
 
@@ -366,6 +367,7 @@ function _bibdk_theme_get_my_page_menu_links() {
  */
 function _bibdk_theme_get_topbar_links() {
   global $user;
+  global $base_url;
 
   $links = array();
   $links[] = array(
@@ -473,12 +475,11 @@ function _bibdk_theme_preprocess_footer_menu_language_links($links) {
  * @param array $links array with the links that should be printed in the
  * offcanvas menu.
  * @param array $ul_attributes attributes for the containing <ul> element.
- * @param bool|string $label
  *
  * @return string rendered output
  * @see bibdk-links-list.tpl.php
  */
-function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), $label = FALSE) {
+function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array()) {
   global $base_url;
   $items = array();
 
@@ -505,7 +506,6 @@ function _bibdk_theme_get_offcanvas_menu_list($links, $ul_attributes = array(), 
     '#theme' => 'bibdk_links_list',
     '#attributes' => $ul_attributes,
     '#items' => $items,
-    '#label' => $label,
   );
 }
 
@@ -544,7 +544,12 @@ function bibdk_theme_preprocess_ie6nomore_browser(&$vars) {
  */
 function bibdk_theme_preprocess_page(&$vars) {
 
-  $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  $front = NULL;
+
+  // bibdk_usersettings may not be loaded at this point
+  if (function_exists('bibdk_usersettings_user_settings_get')) {
+    $front = bibdk_usersettings_user_settings_get('bibdk_custom_search_start_page', NULL);
+  }
 
   if (!$front) {
     $front = '<front>';

@@ -4,14 +4,14 @@
  * This files handles events invoked by the Foundation Reveal system
  */
 
-(function() {
+(function($) {
   // closing the offcanvas menu when popping a modal
   $(document).on('open.fndtn.reveal', '[data-reveal]', function() {
     $('.exit-off-canvas').trigger('click');
 
-    if(!Modernizr.touch) { // blur the background but only if we're aren't on a touch device as the blur effect is performance heavy
+    /*if(!Modernizr.touch) { // blur the background but only if we're aren't on a touch device as the blur effect is performance heavy
       addFilterOnMainwrapper();
-    }
+    }*/
   });
 
 // attaching behaviors when the modal have finished opening
@@ -71,5 +71,6 @@
     $mainwrapper.css("-moz-filter", "");
     $mainwrapper.css("-o-filter", "");
     $mainwrapper.css("-ms-filter", "");
+      ;
   }
-})();
+})(jQuery);

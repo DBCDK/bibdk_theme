@@ -41,9 +41,7 @@ ul.off-canvas-list {
     .offcanvas-my-page-link {
       background-color: $blue;
       color: $white;
-      font-size: rem-calc(12px);
       font-weight: normal;
-      padding: 13px 0 13px 25px;
 
       &.active {
         background-color: $blue--hover;

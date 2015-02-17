@@ -31,8 +31,8 @@
   };
 
   for(var f in functions) {
-    var s = "$.fn._" + f + " = $.prototype." + f + ";" +
-            "$.fn." + f + " = function(a, b) {" +
+    var s = "jQuery.fn._" + f + " = $.prototype." + f + ";" +
+            "jQuery.fn." + f + " = function(a, b) {" +
             "  if (a == 'visuallyhidden') {" +
             "    this.find('*').andSelf().each(" + functions[f] + ");" +
             "  }" +

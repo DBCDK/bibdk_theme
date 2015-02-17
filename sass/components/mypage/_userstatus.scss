@@ -1,0 +1,141 @@
+.userstatus-menu {
+  margin: 0 0 10px 10px;
+  @media #{$large-up} {
+    margin: 0 0 10px 2px;
+  }
+}
+
+.userstatus-menu-label {
+  display: inline-block;
+}
+
+.userstatus-menu-item {
+  display: inline-block;
+
+  a {
+    @include typo("link", "item-links", "black");
+    vertical-align: middle;
+  }
+
+  margin-right: 10px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .svg-icon {
+    @include svg("svg-arrow-right", "black");
+    margin: 0 2px 0 0;
+  }
+}
+
+.userstatus-row-item--title {
+  @include typo("title", "normal", "black");
+  font-weight: bold;
+  display: block;
+}
+
+.userstatus-row-item--additional {
+  @include typo("label", "facets", "grey-dark");
+  display: block;
+}
+
+.userstatus-row-item--library-name {
+  @include typo("label", "facets", "grey-dark");
+  display: block;
+  padding-top: 7px;
+}
+
+.userstatus--date {
+  @include typo("link", "topbar-links", "black");
+  font-weight: bold;
+  display: block;
+  line-height: 1.2;
+}
+
+.userstatus--pickupid {
+  color: $grey-text--dark;
+}
+
+.payment-url-link {
+  margin-top: 10px;
+}
+
+.openuserstatus {
+  .element-section {
+    padding: 10px;
+    @media #{$large-up} {
+      padding: 20px;
+    }
+  }
+
+  th {
+    color: $grey-text--dark;
+    font-weight: normal;
+    padding: 2px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  td {
+    padding: 10px 2px 10px 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &.userstatus--row-item--material-title {
+      padding-top: 12px;
+      padding-right: 10px;
+    }
+  }
+
+  table.reservations {
+    th, td {
+      &:nth-child(6) {
+        text-align: center;
+        min-width: 40px;
+      }
+    }
+  }
+
+  select {
+    font-size: rem-calc(12px);
+    height: 22px;
+    padding-left: 5px;
+    padding-right: 25px;
+    @include appearance(none);
+    background: url('../../img/svg/arrow-down.svg') 95% 45% no-repeat;
+    background-size: 10px;
+  }
+
+  .form-type-select {
+    display: inline;
+    padding: 0;
+  }
+
+  input[type="checkbox"] {
+    float: none;
+    margin: 0;
+  }
+
+  .form-type-checkbox {
+    padding: 0;
+    text-align: center;
+    margin: 0 10px 0 0;
+  }
+
+  .message {
+    border: none;
+  }
+
+  .red-alert {
+    color: $red--hover;
+  }
+
+  .helptext {
+    top: 0;
+    margin: 0;
+    position: inherit;
+  }
+}
