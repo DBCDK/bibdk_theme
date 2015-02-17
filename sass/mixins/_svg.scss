@@ -22,6 +22,11 @@
     height: 12px;
     vertical-align: middle;
     margin: 0 5px;
+  } @else if ($name == "svg-arrow-first") {
+    width: 17px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0 5px;
   } @else if ($name == "svg-chat") {
     width: 15px;
     height: 15px;

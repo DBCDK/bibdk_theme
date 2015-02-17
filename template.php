@@ -137,10 +137,7 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
  */
 function bibdk_theme_preprocess_pager_first(&$vars) {
   $vars['text'] = t('pager_first', array(), array('context' => 'bibdk_theme'));
-  // SVG icon is missing
-  // $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-first"><use xlink:href="#svg-arrow-first" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
-  // $vars['parameters']['icon']['position'] = 'prefix';
-  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-first"><use xlink:href="#svg-arrow-first" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
   $vars['parameters']['icon']['position'] = 'suffix';
 }
 

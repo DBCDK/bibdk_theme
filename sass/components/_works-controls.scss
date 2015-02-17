@@ -59,10 +59,6 @@
   float:left;
 }
 
-.works-controls {
-  margin-bottom: 2px;
-}
-
 .works-controls .pane-ting-openformat-pager {
   border-left: 1px solid $grey-border;
   font-weight: bold;
@@ -82,17 +78,25 @@
 }
 
 .bibdk-pager-first, .bibdk-pager-previous, .bibdk-pager-next {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 6px;
+  padding-left: 6px;
   white-space: nowrap;
-  .svg-arrow-right, .svg-arrow-left, .svg-arrow-first {
+  a {
+    line-height: 18px;
+    display: inline-block;
+  }
+  .svg-arrow-right, .svg-arrow-left{
     height: 18px;
-    width: 18px;
+    width: 21px;
+  }
+  .svg-arrow-first {
+    height: 18px;
+    width: 26px;
   }
 }
 
 .works-controls .pane-ting-openformat-feeds {
-  margin-right: 20px;
+  margin-right: 6px;
   border: none;
   .pane-content {
     width: rem-calc(30px);
