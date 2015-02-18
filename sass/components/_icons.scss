@@ -26,6 +26,25 @@
   @include svg("svg-magnifier", "black");
 }
 
+.svg-rss {
+  @include svg("svg-rss", "black");
+}
+
+.svg-view-details {
+  @include svg("view-details", "blue");
+}
+
+.svg-view-list {
+  @include svg("view-list", "blue");
+}
+
+.inactive .svg-view-details {
+  @include svg("view-details", "black");
+}
+
+.inactive .svg-view-list {
+  @include svg("view-list", "black");
+}
 
 // =============================================================================
 // Import: Icons for links/buttons

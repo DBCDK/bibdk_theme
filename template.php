@@ -75,11 +75,10 @@ function bibdk_theme_theme() {
       'path' => $path . 'global',
       'template' => 'link-with-svg',
       'variables' => array(
-        'title' => '',
+        'text' => '',
         'path' => '',
-        'attributes' => array(),
+        'options' => array(),
         'svg' => '',
-        'href' => '',
       ),
     ),
     'span_with_svg' => array(
@@ -215,6 +214,26 @@ function bibdk_theme_preprocess_block(&$vars) {
   // Save module and delta as $block_id (unique identifier)
   $block_id = $vars['elements']['#block']->module . '-' . $vars['elements']['#block']->delta;
 }
+
+
+/**
+ * Override theme_feed_icon()
+ * @param $variables
+ */
+function bibdk_theme_feed_icon($variables) {
+  $text = t('Subscribe to !feed-title', array('!feed-title' => $variables['title']));
+  $rss_link = array(
+    '#theme' => 'link_with_svg',
+    '#text' => t('Subscribe to !feed-title', array('!feed-title' => $variables['title'])),
+    '#path' => $variables['url'],
+    '#options' => array(
+      'attributes' => array('class' => array('feed-icon'), 'title' => $text),
+    ),
+    '#svg' => 'svg-rss',
+  );
+  return drupal_render($rss_link);
+}
+
 
 /**
  * Implements hook_page_alter().
@@ -428,11 +447,13 @@ function _bibdk_theme_get_topbar_links() {
   $links = array();
   $links[] = array(
     '#theme' => 'link_with_svg',
-    '#title' => t('Spørg Biblioteksvagten'),
-    '#href' => url('overlay/helpdesk'),
-    '#attributes' => array(
-      'class' => array('bibdk-popup-link', 'visible-for-large-up'),
-      'data-rel' => array('helpdesk'),
+    '#text' => t('Spørg Biblioteksvagten'),
+    '#path' => url('overlay/helpdesk'),
+    '#options' => array(
+      'attributes' => array(
+        'class' => array('bibdk-popup-link', 'visible-for-large-up'),
+        'data-rel' => array('helpdesk'),
+      ),
     ),
     '#svg' => 'svg-chat',
   );
@@ -440,11 +461,13 @@ function _bibdk_theme_get_topbar_links() {
   if ($user->uid) {
     $links[] = array(
       '#theme' => 'link_with_svg',
-      '#title' => t('My page', array(), array('context' => 'bibdk_frontend')),
-      '#href' => url('user'),
-      '#attributes' => array(
-        'id' => array('topbar-my-page-link'),
-        'class' => array('visible-for-large-up'),
+      '#text' => t('My page', array(), array('context' => 'bibdk_frontend')),
+      '#path' => url('user'),
+      '#options' => array(
+        'attributes' => array(
+          'id' => array('topbar-my-page-link'),
+          'class' => array('visible-for-large-up'),
+        ),
       ),
       '#svg' => 'svg-user',
     );
@@ -452,11 +475,13 @@ function _bibdk_theme_get_topbar_links() {
   else {
     $links[] = array(
       '#theme' => 'link_with_svg',
-      '#title' => t('Log ind'),
-      '#href' => url('user/login'),
+      '#text' => t('Log ind'),
+      '#path' => url('user/login'),
       '#svg' => 'svg-user',
-      '#attributes' => array(
-        'class' => array('visible-for-large-up'),
+      '#options' => array(
+        'attributes' => array(
+          'class' => array('visible-for-large-up'),
+        ),
       ),
     );
   }
@@ -465,8 +490,10 @@ function _bibdk_theme_get_topbar_links() {
     '#title' => t('Menu'),
     '#href' => '#',
     '#svg' => 'svg-menu',
-    '#attributes' => array(
-      'class' => array('right-off-canvas-toggle'),
+    '#options' => array(
+      'attributes' => array(
+        'class' => array('right-off-canvas-toggle'),
+      ),
     ),
   );
 

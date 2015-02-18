@@ -106,6 +106,9 @@
     position: relative;
     top: -1px;
   }
+  span {
+    display: none;
+  }
 }
 
 .pane-bibdk-search-controls-search-control-sort,
@@ -170,12 +173,33 @@
 }
 
 .pane-ting-openformat-full-view {
-  .pane-content a {
-    padding: 0 10px 0 30px;
-  }
-  .ajax-progress .throbber{
-    float: right;
-    margin: 7px 0 0 5px;
+  .full-view-links {
+    height: inherit;
+    a {
+      display: inline-block;
+      @include rem('height', 30px);
+      @include rem('line-height', 30px);
+      padding: 0 20px 0 0px;
+    }
+    .ajax-progress .throbber{
+      float: right;
+      margin: 7px 0 0 5px;
+    }
+    #ting-openformat-full-view-button-closed,
+    #ting-openformat-full-view-button-expanded {
+      svg {
+        height: 19px;
+        width: 19px;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+      span {
+        /*
+        @include rem('height', 30px);
+        @include rem('line-height', 30px);
+        */
+      }
+    }
   }
 }
 
@@ -187,33 +211,5 @@
   .pane-content {
     background-color: $white;
     padding: 5px 20px;
-  }
-}
-
-
-#ting-openformat-full-view-button-closed,
-#ting-openformat-full-view-button-expanded {
-  &:after {
-    @include align("vcenter");
-    left: 10px;
-  }
-}
-
-
-#ting-openformat-full-view-button-closed {
-  &:after {
-    @include add-sprite("viewmode--list--blue");
-  }
-  &.inactive:after {
-    @include add-sprite("viewmode--list--grey");
-  }
-}
-
-#ting-openformat-full-view-button-expanded {
-  &:after {
-    @include add-sprite("viewmode--details--blue");
-  }
-  &.inactive:after {
-    @include add-sprite("viewmode--details--grey");
   }
 }
