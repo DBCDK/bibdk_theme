@@ -96,7 +96,6 @@
 }
 
 .works-controls .pane-ting-openformat-feeds {
-  margin-right: 6px;
   border: none;
   .pane-content {
     width: rem-calc(30px);
@@ -118,7 +117,7 @@
   height: rem-calc(64px);
   line-height: rem-calc(64px);
   float: right;
-  margin-right: 8px;
+  margin-right: 20px;
   div > a, span > a {
     position: relative;
     @include rem('height', 30px);
@@ -173,6 +172,7 @@
 }
 
 .pane-ting-openformat-full-view {
+  margin-right: 0px;
   .full-view-links {
     height: inherit;
     a {
@@ -192,12 +192,6 @@
         width: 19px;
         vertical-align: middle;
         margin-right: 4px;
-      }
-      span {
-        /*
-        @include rem('height', 30px);
-        @include rem('line-height', 30px);
-        */
       }
     }
   }
