@@ -448,7 +448,7 @@ function _bibdk_theme_get_topbar_links() {
   $links[] = array(
     '#theme' => 'link_with_svg',
     '#text' => t('Spørg Biblioteksvagten'),
-    '#path' => url('overlay/helpdesk'),
+    '#path' => 'overlay/helpdesk',
     '#options' => array(
       'attributes' => array(
         'class' => array('bibdk-popup-link', 'visible-for-large-up'),
@@ -462,7 +462,7 @@ function _bibdk_theme_get_topbar_links() {
     $links[] = array(
       '#theme' => 'link_with_svg',
       '#text' => t('My page', array(), array('context' => 'bibdk_frontend')),
-      '#path' => url('user'),
+      '#path' => 'user',
       '#options' => array(
         'attributes' => array(
           'id' => array('topbar-my-page-link'),
@@ -476,7 +476,7 @@ function _bibdk_theme_get_topbar_links() {
     $links[] = array(
       '#theme' => 'link_with_svg',
       '#text' => t('Log ind'),
-      '#path' => url('user/login'),
+      '#path' => 'user/login',
       '#svg' => 'svg-user',
       '#options' => array(
         'attributes' => array(
