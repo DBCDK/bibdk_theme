@@ -37,6 +37,12 @@
   }
 }
 
+.full-view-links span {
+  display: none;
+  @media #{$xlarge-up} {
+    display: inline;
+  }
+}
 
 
 // =============================================================================
