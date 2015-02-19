@@ -11,8 +11,20 @@
 
 .pane-bibdk-search-controls-search-control-sort {
   display: none;
+  font-size: 1rem;
+  span > a, .dropdown-menu a {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
   @media #{$medium-up} {
     display: block;
+  }
+  @media #{$large-up} {
+    font-size: inherit;
+    span > a, .dropdown-menu a {
+      font-size: inherit; 
+      line-height: inherit;
+    }
   }
 }
 
@@ -166,14 +178,16 @@
     white-space: nowrap;
   }
 
-  .dropdown-toggle:after {
-    @include add-sprite("angle--down--blue");
-    @include align("vcenter");
-    right: 10px;
+  .dropdown-toggle {
+    @include bibdk-triangle(top, $blue, 50%, 1rem);
+    padding-right: 40px;
+    &.toggled:after {
+      right: 10px;
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
+    }
   }
-  .dropdown-toggle.toggled:after {
-    @include add-sprite("angle--up--blue");
-  }
+
 
 }
 
