@@ -202,7 +202,9 @@
       padding: 0 20px 0 0px;
     }
     .ajax-progress .throbber{
-      float: right;
+      position: absolute;
+      top: -1rem;
+      left: 1rem;
       margin: 7px 0 0 5px;
     }
     #ting-openformat-full-view-button-closed,
