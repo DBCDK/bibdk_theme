@@ -3,6 +3,8 @@
  * @file
  *
  * Template for rendereing a link with a svg icon
+ * - takes same variables as 'theme_link'; plus a svg icon name.
+ * - accept a render array as text.
  *
  * Available variables:
  *   - $text: Link text
