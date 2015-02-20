@@ -17,6 +17,16 @@
     height: 12px;
     vertical-align: middle;
     margin: 0 5px;
+  } @else if ($name == "svg-arrow-left") {
+    width: 14px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0 5px;
+  } @else if ($name == "svg-arrow-first") {
+    width: 17px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0 5px;
   } @else if ($name == "svg-chat") {
     width: 15px;
     height: 15px;
@@ -51,6 +61,21 @@
     width: 14px;
     height: 13px;
     vertical-align: text-top;
+    margin: 0;
+  } @else if ($name == "svg-rss") {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0;
+  } @else if ($name == "svg-view-details") {
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    margin: 0;
+  } @else if ($name == "svg-view-list") {
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
     margin: 0;
   }
 

@@ -2,29 +2,46 @@
 // Facet browser
 // =============================================================================
 
-.lift-columns .panel-left {
-  border: 1px solid $grey-border;
-  @include rem('padding', 11px 10px 10px 10px);
-  @include rem('margin-top', -11px);
-  background-color: $grey-bg--section;
+.page-search-work {
+  .large-6.columns {
+    padding-right: 1px;
+  }
+  .large-18.columns {
+    padding-left: 1px;
+  }
 }
 
-.pane-ting-openformat-search-text {
+.lift-columns .panel-left {
   border: 1px solid $grey-border;
-  height: rem-calc(30px);
-  line-height: rem-calc(30px);
-  background-color: $white;
-  text-align: center;
-  font-size: rem-calc(16px);
-  font-weight: bold;
-  color: $black--natural;
-  margin-bottom: 10px;
+  // @include rem('margin-top', -11px);
+  background-color: $grey-bg--section;
+  .pane-content {
+    @include rem('margin', 0px 10px 10px 10px);
+  }
 }
 
 .pane-bibdk-facetbrowser {
+
   .pane-title {
+    text-align: center;  
     font-size: rem-calc(12px);
-    margin-bottom: rem-calc(15px);
+    font-weight: bold;
+    color: $white;
+    background-color: $black--natural;;
+    height: rem-calc(41px);
+    line-height: rem-calc(41px);
+  }
+  
+  #facetbrowser-icon-container {
+    margin: 0;
+    text-align: center;
+    border-bottom-width: 0px;
+    .svg-icon {
+      display: inline-block;
+      height: 12px;
+      vertical-align: top;
+      width: 25px;
+    }
   }
 
   .form-wrapper {
