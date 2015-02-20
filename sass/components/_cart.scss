@@ -17,7 +17,9 @@
     }
     th:nth-child(2),
     td:nth-child(2) {
-      min-width: 20em;
+      @media #{$small-only} {
+        min-width: 10em;
+      }
     }
     th:nth-child(3),
     td:nth-child(3) {
@@ -60,5 +62,11 @@
 
   .bold {
     font-weight: bold;
+  }
+}
+
+#edit-cartactions .item-list ul li {
+  @media #{$small-only} {
+    margin: 14px 4px;
   }
 }
