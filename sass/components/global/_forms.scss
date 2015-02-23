@@ -481,8 +481,9 @@ select#edit-favouriteselector {
     }
   }
 
-  #edit-next.form-submit {
+  #edit-next,#edit-sendmail.form-submit {
     float: right;
+    margin-left: $spacing;
   }
 
   .messages {
@@ -542,11 +543,10 @@ select#edit-favouriteselector {
 
 .page-reservation .form-step-guide {
   position: absolute;
-  top: 45px;
+  top: 60px;
   left: 10px;
   right: 10px;
 
-  border-top-width: 10px;
   border-top-style: solid;
   border-top-color: $grey-6;
   margin: 0 1px;
@@ -591,9 +591,7 @@ select#edit-favouriteselector {
     margin: 10px 20px;
   }
 
-  #edit-navigation .form-submit {
-    margin-left: 20px;
-  }
+
 
   article.manifestation {
     padding: 0 20px;
