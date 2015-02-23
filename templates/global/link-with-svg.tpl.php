@@ -18,7 +18,7 @@
 
 $options['html']       = isset($options['html'])       ? $options['html']       : FALSE;
 $options['attributes'] = isset($options['attributes']) ? $options['attributes'] : array();
-$text                  = is_array($text)               ? drupal_render($text)   : $text;
+$text                  = (is_array($text) && !empty($text))               ? drupal_render($text)   : $text;
 
 ?>
 
