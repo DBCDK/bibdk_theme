@@ -149,6 +149,17 @@
   }
 }
 
+// Foundation reveal
+.reveal-modal.reveal-cover-back, .reveal-modal.reveal-cover-large {
+  padding-bottom: 10px;
+  padding-top: 50px;
+  text-align: center;
+  a {
+    height: 16px;
+    width: 16px;
+  }
+}
+
 .reveal-cover-large-image, .reveal-cover-back-image {
   text-align: center;
   padding: 4px;
