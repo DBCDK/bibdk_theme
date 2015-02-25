@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-24 columns">
-    <div class="panel panel-top">
+    <div class="panel panel-top works-controls clearfix">
       <?php print $content['top']; ?>
     </div>
   </div>
@@ -15,7 +15,7 @@
   <div class="large-18 columns">
     <div class="panel panel-middle">
       <section class="works">
-        <div class="works-controls clearfix">
+        <div class="works-messages clearfix">
           <?php print $content['works_controls_top']; ?>
         </div>
         <div>

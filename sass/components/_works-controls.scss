@@ -1,41 +1,163 @@
 // =============================================================================
+// Responsive
+// =============================================================================
+
+.pane-ting-openformat-full-view, .pane-ting-openformat-feeds {
+  display: none;
+  @media #{$large-up} {
+    display: block;
+  }
+}
+
+.pane-bibdk-search-controls-search-control-sort {
+  display: none;
+  font-size: 1rem;
+  span > a, .dropdown-menu a {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  @media #{$medium-up} {
+    display: block;
+  }
+  @media #{$large-up} {
+    font-size: inherit;
+    span > a, .dropdown-menu a {
+      font-size: inherit; 
+      line-height: inherit;
+    }
+  }
+}
+
+.pane-ting-openformat-pager a[data-pager="icon"] {
+  display: inline;
+  @media #{$xlarge-up} {
+    display: none;
+  }
+}
+
+.pane-ting-openformat-pager a[data-pager="text"] {
+  display: none;
+  @media #{$xlarge-up} {
+    display: inline;
+  }
+}
+
+.searchresult_count {
+  width: 40%;
+  @media #{$medium-up} {
+    width: 25%;
+  }
+}
+
+.full-view-links span {
+  display: none;
+  @media #{$xlarge-up} {
+    display: inline;
+  }
+}
+
+
+// =============================================================================
 // Works controls (above the list of works)
 // =============================================================================
 
-.works-controls {
-  margin-bottom: 10px;
+.panel-top {
+  border: 1px solid $grey-border;
+  background-color: $grey-bg--section;
 }
 
-.works-controls .pane-ting-openformat-pager{
-  float:right;
-  margin:0;
+.searchresult_count {
+  @include rem('padding', 2px 2px 2px 2px);
+  height: rem-calc(64px);
+  line-height: rem-calc(64px);
+  text-align: center;
+  font-size: rem-calc(16px);
+  font-weight: bold;
+  color: $grey-text--dark;
+  float:left;
 }
 
-.works-controls .pane-ting-openformat-feeds{
-  background-color: $grey-6;
+.works-controls .pane-ting-openformat-pager {
+  border-left: 1px solid $grey-border;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 0px;
+  .pane-content a {
+    color: $black--natural;
+  }
+}
+
+// bottom pager
+.works .works-controls .pane-ting-openformat-pager {
+  border-width-left: 0px;
+  background-color: $grey-bg--section;
+  border: 1px solid $grey-border;
+}
+
+.bibdk-pager-first, .bibdk-pager-previous, .bibdk-pager-next {
+  padding-right: 6px;
+  padding-left: 6px;
+  white-space: nowrap;
+  a {
+    line-height: 18px;
+    display: inline-block;
+  }
+  .svg-arrow-right, .svg-arrow-left{
+    height: 18px;
+    width: 21px;
+  }
+  .svg-arrow-first {
+    height: 18px;
+    width: 26px;
+  }
+}
+
+.works-controls .pane-ting-openformat-feeds {
   border: none;
+  .pane-content {
+    width: rem-calc(30px);
+  }
+  .ting-openformat-feeds {
+    text-align: center;
+    position: relative;
+    top: -1px;
+  }
+  span {
+    display: none;
+  }
 }
 
 .pane-bibdk-search-controls-search-control-sort,
-#edit-search-controls-sort,
 .pane-ting-openformat-full-view,
 .pane-ting-openformat-pager,
 .pane-ting-openformat-feeds {
-  float: left;
-  position: relative;
-  @include inline-block();
-  border: $border-default;
-  @include border-radius($border-radius);
-
-  background-color: $white;
-  margin-right: 10px;
-
+  height: rem-calc(64px);
+  line-height: rem-calc(64px);
+  float: right;
+  margin-right: 20px;
   div > a, span > a {
     position: relative;
     @include rem('height', 30px);
     @include rem('line-height', 30px);
   }
+  .pane-content {
+    @include inline-block();
+    height: rem-calc(30px);
+    line-height: rem-calc(30px);
+  }
 }
+
+.pane-bibdk-search-controls-search-control-sort,
+.pane-ting-openformat-feeds {
+  .pane-content {
+    border: $border-default;
+    @include border-radius($border-radius);
+    background-color: $white;
+  }
+}
+
+
 
 #edit-search-controls-sort {
   margin-top: 5px;
@@ -47,72 +169,53 @@
     padding: 0 35px 0 10px;
   }
 
+  .dropdown-menu {
+    width: auto;
+    min-width: auto;
+  }
+
   .dropdown-menu a {
     white-space: nowrap;
   }
 
-  .dropdown-toggle:after {
-    @include add-sprite("angle--down--blue");
-    @include align("vcenter");
-    right: 10px;
-  }
-  .dropdown-toggle.toggled:after {
-    @include add-sprite("angle--up--blue");
+  .dropdown-toggle {
+    @include bibdk-triangle(top, $blue, 50%, 1rem);
+    padding-right: 40px;
+    &.toggled:after {
+      right: 10px;
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
+    }
   }
 
-}
 
-.pane-ting-openformat-pager {
-  .pane-content a {
-   padding: 0 10px 0 10px;
-  }
 }
 
 .pane-ting-openformat-full-view {
-  .pane-content a {
-    padding: 0 10px 0 30px;
-  }
-  .ajax-progress .throbber{
-    float: right;
-    margin: 7px 0 0 5px;
-  }
-}
-
-.pane-ting-openformat-rank-frequency {
-  clear: both;
-  padding-top: 10px;
-
-  .pane-content {
-    background-color: $white;
-    padding: 5px;
-    border: $border-default;
-  }
-}
-
-
-#ting-openformat-full-view-button-closed,
-#ting-openformat-full-view-button-expanded {
-  &:after {
-    @include align("vcenter");
-    left: 10px;
+  margin-right: 0px;
+  .full-view-links {
+    height: inherit;
+    a {
+      display: inline-block;
+      @include rem('height', 30px);
+      @include rem('line-height', 30px);
+      padding: 0 20px 0 0px;
+    }
+    .ajax-progress .throbber{
+      position: absolute;
+      top: -1rem;
+      left: 1rem;
+      margin: 7px 0 0 5px;
+    }
+    #ting-openformat-full-view-button-closed,
+    #ting-openformat-full-view-button-expanded {
+      svg {
+        height: 19px;
+        width: 19px;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+    }
   }
 }
 
-
-#ting-openformat-full-view-button-closed {
-  &:after {
-    @include add-sprite("viewmode--list--blue");
-  }
-  &.inactive:after {
-    @include add-sprite("viewmode--list--grey");
-  }
-}
-
-#ting-openformat-full-view-button-expanded {
-  &:after {
-    @include add-sprite("viewmode--details--blue");
-  }
-  &.inactive:after {
-    @include add-sprite("viewmode--details--grey");
-  }
-}

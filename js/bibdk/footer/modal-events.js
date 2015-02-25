@@ -15,27 +15,24 @@
   });
 
 // attaching behaviors when the modal have finished opening
-  $(document).on('opened.fndtn.reveal', '[data-reveal]', function() {
-    toggleBehaviorsOnModal(true);
+      $(document).on('opened', '#bibdk-modal[data-reveal]', function () {
+        toggleBehaviorsOnModal(true);
+        Drupal.bibdkModal.addAccessibilityInfo(window.document);
+        onLoad.setFocus();
+        toggleMainwrapperOnSmallDevices(false);
+    });
 
-    Drupal.bibdkModal.addAccessibilityInfo(window.document);
-    onLoad.setFocus();
+    $(document).on('closed', '#bibdk-modal[data-reveal]', function () {
+        removeFilterOnMainwrapper();
+        if(window.Foundation.reloadPageOnModalClose === 1){
+            window.location.href = document.URL;
+        }
+    });
 
-    toggleMainwrapperOnSmallDevices(false);
-  });
-
-  $(document).on('close.fndtn.reveal', '[data-reveal]', function() {
-    toggleBehaviorsOnModal(false);
-    toggleMainwrapperOnSmallDevices(true);
-  });
-
-  $(document).on('closed.fndtn.reveal', '[data-reveal]', function() {
-    removeFilterOnMainwrapper();
-
-    if(window.Foundation.reloadPageOnModalClose === 1){
-      window.location.href = document.URL;
-    }
-  });
+    $(document).on('close', '#bibdk-modal[data-reveal]', function () {
+        toggleBehaviorsOnModal(false);
+        toggleMainwrapperOnSmallDevices(true);
+    });
 
   function toggleMainwrapperOnSmallDevices(toggle){
     var $mainwrapper = $("#mainwrapper");

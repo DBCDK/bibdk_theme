@@ -2,12 +2,48 @@
 // =============================================================================
 // SVG icons
 // =============================================================================
+.svg-arrow-first {
+  @include svg("svg-arrow-first", "black");
+}
+
 .svg-arrow-right {
   @include svg("svg-arrow-right", "black");
 }
 
+.svg-arrow-left {
+  @include svg("svg-arrow-left", "black");
+}
+
+.svg-arrow-down {
+  @include svg("svg-arrow-down", "black");
+}
+
+.svg-arrow-up {
+  @include svg("svg-arrow-up", "black");
+}
+
 .svg-magnifier {
   @include svg("svg-magnifier", "black");
+}
+
+.svg-rss {
+  @include svg("svg-rss", "black");
+}
+
+.svg-view-details {
+  @include svg("view-details", "blue");
+}
+
+.svg-view-list {
+  @include svg("view-list", "blue");
+}
+
+.inactive .svg-view-details {
+  @include svg("view-details", "black");
+}
+
+.inactive .svg-view-list {
+  @include svg("view-list", "black");
 }
 
 // =============================================================================
