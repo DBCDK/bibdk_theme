@@ -487,7 +487,7 @@ function _bibdk_theme_get_topbar_links() {
   }
   $links[] = array(
     '#theme' => 'link_with_svg',
-    '#title' => t('Menu'),
+    '#text' => t('Menu'),
     '#href' => '#',
     '#svg' => 'svg-menu',
     '#options' => array(
