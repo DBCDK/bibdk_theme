@@ -31,9 +31,16 @@ article.article-widget{
   border-left:solid 2*$spacing $grey-bg--page;
 }
 
-.bibdk-article-top a{
-  display: block;
-  width:100%;
+.panel-top .view-article-view{
+  padding: 0;
+  margin: 0;
+}
+
+.bibdk-article-top {
+  a {
+    display: block;
+    width: 100%;
+  }
 }
 
 .article-top-link.icon-blue-right{
