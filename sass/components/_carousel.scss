@@ -83,23 +83,14 @@
     @include rem('padding', 0 35px 0 10px);
     font-weight: bold;
 
-    &:after {
-      content: "";
-      display: block;
-      @include add-sprite("angle--down--blue");
-      position: absolute;
+    @include bibdk-triangle(top, $blue, 50%, 1rem);
+    padding-right: 40px;
+    &.toggled:after {
       right: 10px;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
     }
 
-    &.toggled {
-
-      &:after {
-        @include add-sprite("angle--up--blue");
-      }
-    }
   }
 
   .dropdown-menu {
