@@ -96,3 +96,20 @@
   }
 
 }
+
+
+#bibdk-modal {
+  background-color: $grey-bg--section;
+  .form-checkboxes {
+    display: none;
+  }
+  legend {
+    @include rem('margin', 10px 10px 10px 10px);
+  }
+/*
+  .pane-bibdk-facetbrowser .form-wrapper {
+      margin-bottom: 0;
+      padding: 0;
+  }
+*/
+}
