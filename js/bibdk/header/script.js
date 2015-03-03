@@ -371,12 +371,22 @@
         }
       });
 
+
+      // Password fields
       function password_input_switch(that, type) {
         that.setAttribute('type', type);
       }
 
-      // Password fields
+      // array to hold original input types
+      if(typeof bibdk_password_input_types == 'undefined') {
+        bibdk_password_input_types = new Array();
+      }
+
       $(".bibdk-password-field").each(function() {
+        var id = $(this).attr('id');
+        var type = $(this).attr('type');
+        // save original type
+        bibdk_password_input_types[id] = type;
         // initially hide fields marked as password
         password_input_switch(this, 'password');
       });
@@ -384,8 +394,11 @@
       $('.bibdk-unmask-password-field').once().click(function() {
         $('.bibdk-password-field').each(function() {
           if($(this).attr('type') == 'password') {
-            //set type to text
-            password_input_switch(this, 'text');
+            var id = $(this).attr('id');
+            // get original type
+            var type = bibdk_password_input_types[id];
+            //set type to original type
+            password_input_switch(this, type);
           }
           else {
             //set type to password
