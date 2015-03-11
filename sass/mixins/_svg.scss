@@ -77,6 +77,11 @@
     height: 19px;
     vertical-align: middle;
     margin: 0;
+  } @else if ($name == "svg-question") {
+    width: 10px;
+    height: 19px;
+    vertical-align: middle;
+    margin: 0;
   }
 
   @if $color == "black" {
