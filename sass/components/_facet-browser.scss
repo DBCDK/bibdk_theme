@@ -99,17 +99,129 @@
 
 
 #bibdk-modal {
-  background-color: $grey-bg--section;
-  .form-checkboxes {
-    display: none;
-  }
-  legend {
-    @include rem('margin', 10px 10px 10px 10px);
-  }
-/*
-  .pane-bibdk-facetbrowser .form-wrapper {
-      margin-bottom: 0;
+
+  background-color: $grey-bg--page;
+
+  .bibdk-facetbrowser-mobile  {
+
+    padding-top: 0;
+    
+    .facet-wrapper {
+      @include rem('margin', 1px 0px 1px 0px);
+      @include rem('padding', 0px 20px 0px 20px);
+      background-color: $grey-bg--section;
+      margin-bottom: 1px;
+    }
+
+    .facet-wrapper, label {
+      font-size: rem-calc(14px);
+      font-weight: bold;
+      color: $black--natural;
+      line-height: rem-calc(41px);
+    }
+    
+    label {
       padding: 0;
+    }
+
+    .facet-name {
+      width: 35%;
+      @include rem('padding', 0px 10px 0px 20px);
+      .facet-name-label {
+        display: inline-block;
+      }
+    }
+
+    .facet-select {
+      width: 65%;
+      text-align: right;
+      @include rem('padding', 0px 20px 0px 10px);
+      .facet-select-label {
+        float: right;
+        display: inline-block;
+      }
+      .facet-select-actions {
+        float: right;
+      }
+    }
+
+    input[type="submit"] {
+      @include rem('margin', 0px 0px 0px 20px);
+      @include rem('padding', 0px 15px 0px 15px);
+    }
+    
+    .form-wrapper.actions-wrapper {
+      text-align: right;
+      input[type="submit"] {
+        @include rem('margin', 0px 0px 0px 0px);
+      }
+      .action-wrapper {
+        @include rem('padding', 20px 20px 20px 20px);
+      }
+    }
+    
+    .facet-checkmark-wrapper {
+      display: block;
+      float: right;
+      width: rem-calc(28px);
+      height: rem-calc(41px);
+      @include rem('padding', 10px 0px 0px 0px);
+    }
+
+    .facet-checkmark-wrapper > span {
+      display: none;
+    }
+
+    .facet-checkmark-wrapper > span.checked {
+      display: inline-block;
+    }
+
+    .svg-icon {
+      display: inline-block;
+      vertical-align: top;
+      height: 20px;
+      width: 28px;
+    }
+    
+    input#edit-reset-facets { 
+      @include rem('margin', 0px 0px 10px 6px);
+    }
+
   }
-*/
+
+  .bibdk-facetbrowser-mobile.facet-values  {
+   .facet-name {
+      width: 75%;
+    }
+    .facet-select {
+      width: 25%;
+    }
+  }
+
+  // style as table to vertical middle align text 
+  .bibdk-facetbrowser-mobile > div {
+    display: table;
+    width: 100%;
+  }
+  .bibdk-facetbrowser-mobile > div > .facet-wrapper {
+    display: table-row;
+  }
+  .bibdk-facetbrowser-mobile > div .facet-name,
+  .bibdk-facetbrowser-mobile > div .facet-select, {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+  .bibdk-facetbrowser-mobile > div .facet-name {
+    line-height: rem-calc(20px);
+  }
+  .form-wrapper.actions-wrapper {
+    display: table-row;
+    .action-wrapper {
+      display: table-cell;
+    }
+  }
+
+
 }
+
