@@ -20,8 +20,25 @@
   }
 }
 
-.pane-bibdk-facetbrowser {
+.svg-question{
+  @include svg("svg-question", "black");
+}
 
+.checkbox-elements-header{
+  text-align: right;
+  span{
+    margin-left: 5px;
+  }
+  div{
+    text-align: left;
+    padding: 5px;
+    max-width: 40%;
+
+  }
+}
+
+
+.pane-bibdk-facetbrowser {
   .pane-title {
     text-align: center;  
     font-size: rem-calc(12px);
