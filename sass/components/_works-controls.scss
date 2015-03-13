@@ -249,11 +249,13 @@
   font-size: rem-calc(16px);
   font-weight: bold;
   float:right;
-  color: $white;
   background-color: $black--natural;;
   width: 60%;
   @media #{$medium-up} {
     width: 33%;
+  }
+  a {
+    color: $white;
   }
 }
 
