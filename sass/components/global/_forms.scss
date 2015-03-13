@@ -556,6 +556,7 @@ select#edit-favouriteselector {
     height: 30px;
     line-height: 30px;
     font-size: 14px;
+    padding: 0;
   }
 
   input[type="submit"].inactive {
@@ -577,6 +578,13 @@ select#edit-favouriteselector {
   line-height: 1.3em;
 }
 
+.form-item-needBeforeDate select {
+  min-width: initial;
+  @media #{$medium-up} {
+    min-width: 100px;
+  }
+}
+
 // =============================================================================
 // Popup
 // =============================================================================
@@ -587,11 +595,9 @@ select#edit-favouriteselector {
     @include typo("title", "section", "black");
   }
 
-  .region-content {
+  .region-content, #messages {
     margin: 10px 20px;
   }
-
-
 
   article.manifestation {
     padding: 0 20px;
