@@ -118,7 +118,7 @@
       font-size: rem-calc(14px);
       font-weight: bold;
       color: $black--natural;
-      line-height: rem-calc(41px);
+      line-height: rem-calc(50px);
     }
     
     label {
@@ -209,6 +209,7 @@
   }
   .bibdk-facetbrowser-mobile > div .facet-name,
   .bibdk-facetbrowser-mobile > div .facet-select, {
+    border-bottom: 2px solid $grey-bg--page;
     display: table-cell;
     vertical-align: middle;
     float: none;
