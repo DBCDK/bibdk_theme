@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -5,21 +8,24 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
-   width="10"
-   height="19"
+   width="15"
+   height="15"
    id="svg2">
+  <defs
+     id="defs8" />
   <g
-     transform="translate(-320.01397,-430.50502)"
+     transform="matrix(0.57455196,0,0,0.57455196,0.27283903,-589.93059)"
      id="layer1">
     <text
-       x="317.57242"
-       y="450.35022"
-       transform="scale(1.0018803,0.99812325)"
+       x="2.6394925"
+       y="1177.5392"
+       transform="scale(1.1204792,0.89247528)"
        id="text2985"
        xml:space="preserve"
-       style="font-size:25.64813614px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-         x="317.57242"
-         y="450.35022"
-         id="tspan2987">?</tspan></text>
+       style="font-size:33.11900711px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="2.6394925"
+         y="1177.5392"
+         id="tspan2987"
+         style="font-weight:bold;-inkscape-font-specification:Sans Bold">?</tspan></text>
   </g>
 </svg>

@@ -21,7 +21,8 @@
 }
 
 .svg-question{
-  @include svg("svg-question", "black");
+  @include svg("svg-question", "white");
+  background-color: #088eb4;
 }
 
 .checkbox-elements-header{
