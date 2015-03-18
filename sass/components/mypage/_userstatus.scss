@@ -1,3 +1,12 @@
+.red-alert {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin-left: 5px;
+  @include add-sprite(alert--red);
+}
+
+
 .userstatus-menu {
   margin: 0 0 10px 10px;
   @media #{$large-up} {
@@ -48,7 +57,7 @@
 .userstatus--date {
   @include typo("link", "topbar-links", "black");
   font-weight: bold;
-  display: block;
+  display: inline-block;
   line-height: 1.2;
 }
 
@@ -129,13 +138,11 @@
     border: none;
   }
 
-  .red-alert {
-    color: $red--hover;
-  }
-
   .helptext {
     top: 0;
     margin: 0;
     position: inherit;
   }
 }
+
+
