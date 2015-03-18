@@ -126,20 +126,36 @@
     }
 
     .facet-name {
-      width: 35%;
+      width: auto;
       @include rem('padding', 0px 10px 0px 20px);
       .facet-name-label {
-        display: inline-block;
+        display: inline;
+      }
+      .facet-count-label {
+        display: inline;
+        margin-left: 0.5em;
+      }
+      // Note: IE8 and Opera 4-6 only support the old, single-colon CSS2 syntax (:before). 
+      // Newer versions support the standard, double-colon CSS3 syntax (::before).
+      .facet-count-label::before, .facet-count-label:before {
+        content: "(";
+      }
+      .facet-count-label::after, .facet-count-label:after {
+        content: ")";
       }
     }
 
     .facet-select {
-      width: 65%;
+      width: auto;
       text-align: right;
       @include rem('padding', 0px 20px 0px 10px);
       .facet-select-label {
         float: right;
-        display: inline-block;
+        display: inline;
+        color: $grey-text--dark;
+        em {
+          font-style: normal;
+        }
       }
       .facet-select-actions {
         float: right;
@@ -192,10 +208,10 @@
 
   .bibdk-facetbrowser-mobile.facet-values  {
    .facet-name {
-      width: 75%;
+      width: auto;
     }
     .facet-select {
-      width: 25%;
+      width: auto;
     }
   }
 
