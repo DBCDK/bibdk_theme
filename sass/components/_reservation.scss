@@ -48,6 +48,9 @@
 
   span.mat-type {
     color: $black--natural;
+    display: inline-block;
+    white-space: normal;
+    width: 150px;
   }
 
   .icon {
