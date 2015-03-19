@@ -2,6 +2,7 @@
 // =============================================================================
 // SVG icons
 // =============================================================================
+
 .svg-arrow-first {
   @include svg("svg-arrow-first", "black");
 }
@@ -45,6 +46,11 @@
 .inactive .svg-view-list {
   @include svg("view-list", "black");
 }
+
+.svg-checked {
+  @include svg("checked", "black");
+}
+
 
 // =============================================================================
 // Import: Icons for links/buttons

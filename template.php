@@ -90,6 +90,17 @@ function bibdk_theme_theme() {
         'svg' => '',
       ),
     ),
+    'button_with_svg' => array(
+      'path' => $path . 'global',
+      'template' => 'button-with-svg',
+      'variables' => array(
+        'name' => '',
+        'value' => '',
+        'label' => '',
+        'attributes' => array(),
+        'svg' => '',
+      ),
+    ),
     'bibdk_foot_bar' => array(
       'path' => $path . 'footer',
       'template' => 'bibdk-footer',

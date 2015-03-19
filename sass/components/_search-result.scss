@@ -10,7 +10,7 @@
 
 .pane-ting-openformat-rank-frequency {
   display: none;
-  @media #{$medium-up} {
+  @media #{$large-up} {
     display: block;
   }
 }

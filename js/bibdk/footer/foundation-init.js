@@ -12,7 +12,7 @@
             reveal: {
                 // Configures the reveal (modal)
                 animation: 'fade',
-                animation_speed: 150
+                animation_speed: 150,
             }
         });
     }

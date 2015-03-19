@@ -73,6 +73,15 @@
   margin: rem-calc(20 20 0 0);
 
   .dropdown-toggle {
+  
+    @include bibdk-triangle(top, $blue, 50%, 1rem);
+    padding-right: 40px;
+    &.toggled:after {
+      right: 10px;
+      @include apply-origin(50% 25%, false);
+      @include rotate(180deg);
+    }
+
     background-color: $white;
     display: block;
     position: relative;
@@ -82,14 +91,6 @@
     border: solid 1px $grey-border;
     @include rem('padding', 0 35px 0 10px);
     font-weight: bold;
-
-    @include bibdk-triangle(top, $blue, 50%, 1rem);
-    padding-right: 40px;
-    &.toggled:after {
-      right: 10px;
-      @include apply-origin(50% 25%, false);
-      @include rotate(180deg);
-    }
 
   }
 
