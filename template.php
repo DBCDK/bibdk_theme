@@ -90,6 +90,17 @@ function bibdk_theme_theme() {
         'svg' => '',
       ),
     ),
+    'button_with_svg' => array(
+      'path' => $path . 'global',
+      'template' => 'button-with-svg',
+      'variables' => array(
+        'name' => '',
+        'value' => '',
+        'label' => '',
+        'attributes' => array(),
+        'svg' => '',
+      ),
+    ),
     'bibdk_foot_bar' => array(
       'path' => $path . 'footer',
       'template' => 'bibdk-footer',
@@ -448,10 +459,11 @@ function _bibdk_theme_get_topbar_links() {
   $links[] = array(
     '#theme' => 'link_with_svg',
     '#text' => t('Spørg Biblioteksvagten'),
-    '#path' => 'overlay/helpdesk',
+    //'#path' => 'overlay/helpdesk',
+    '#path' => 'http://adm.biblioteksvagten.dk/embed/ask-question?agency_id=&agency_mail=&popup=y&url='.base_path(),
     '#options' => array(
       'attributes' => array(
-        'class' => array('bibdk-popup-link', 'visible-for-large-up'),
+        'class' => array('visible-for-large-up'),
         'data-rel' => array('helpdesk'),
       ),
     ),

@@ -18,7 +18,7 @@
 
 <span <?php print drupal_attributes($attributes); ?> >
 <?php if ($svg): ?>
-  <svg class="icon <?php print $svg; ?>">
+  <svg class="svg-icon <?php print $svg; ?>">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
   </svg>
 <?php endif; ?>

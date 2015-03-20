@@ -20,8 +20,26 @@
   }
 }
 
-.pane-bibdk-facetbrowser {
+.svg-question{
+  @include svg("svg-question", "white");
+  background-color: #088eb4;
+}
 
+.checkbox-elements-header{
+  text-align: right;
+  margin-bottom: 10px;
+  span{
+    margin-left: 5px;
+  }
+  div{
+    text-align: left;
+    padding: 5px;
+    max-width: 40%;
+  }
+}
+
+
+.pane-bibdk-facetbrowser {
   .pane-title {
     text-align: center;  
     font-size: rem-calc(12px);
@@ -96,3 +114,150 @@
   }
 
 }
+
+
+#bibdk-modal {
+
+  background-color: $grey-bg--page;
+
+  .bibdk-facetbrowser-mobile  {
+
+    padding-top: 0;
+    margin-bottom: 10px;
+    
+    .facet-wrapper {
+      @include rem('margin', 1px 0px 1px 0px);
+      @include rem('padding', 0px 20px 0px 20px);
+      background-color: $grey-bg--section;
+      margin-bottom: 1px;
+    }
+
+    .facet-wrapper, label {
+      font-size: rem-calc(14px);
+      font-weight: bold;
+      color: $black--natural;
+      line-height: rem-calc(50px);
+    }
+    
+    label {
+      padding: 0;
+    }
+
+    .facet-name {
+      width: auto;
+      @include rem('padding', 0px 10px 0px 20px);
+      .facet-name-label {
+        display: inline;
+      }
+      .facet-count-label {
+        display: inline;
+        margin-left: 0.5em;
+      }
+      // Note: IE8 and Opera 4-6 only support the old, single-colon CSS2 syntax (:before). 
+      // Newer versions support the standard, double-colon CSS3 syntax (::before).
+      .facet-count-label::before, .facet-count-label:before {
+        content: "(";
+      }
+      .facet-count-label::after, .facet-count-label:after {
+        content: ")";
+      }
+    }
+
+    .facet-select {
+      width: auto;
+      text-align: right;
+      @include rem('padding', 0px 20px 0px 10px);
+      .facet-select-label {
+        float: right;
+        display: inline;
+        color: $grey-text--dark;
+        em {
+          font-style: normal;
+        }
+      }
+      .facet-select-actions {
+        float: right;
+      }
+    }
+
+    input[type="submit"] {
+      @include rem('margin', 0px 0px 0px 20px);
+      @include rem('padding', 0px 15px 0px 15px);
+    }
+    
+    .form-wrapper.actions-wrapper {
+      text-align: right;
+      input[type="submit"] {
+        @include rem('margin', 0px 0px 0px 0px);
+      }
+      .action-wrapper {
+        @include rem('padding', 20px 20px 20px 20px);
+      }
+    }
+    
+    .facet-checkmark-wrapper {
+      display: block;
+      float: right;
+      width: rem-calc(28px);
+      height: rem-calc(41px);
+      @include rem('padding', 10px 0px 0px 0px);
+    }
+
+    .facet-checkmark-wrapper > span {
+      display: none;
+    }
+
+    .facet-checkmark-wrapper > span.checked {
+      display: inline-block;
+    }
+
+    .svg-icon {
+      display: inline-block;
+      vertical-align: top;
+      height: 20px;
+      width: 28px;
+    }
+    
+    input#edit-reset-facets { 
+      @include rem('margin', 0px 0px 10px 6px);
+    }
+
+  }
+
+  .bibdk-facetbrowser-mobile.facet-values  {
+   .facet-name {
+      width: auto;
+    }
+    .facet-select {
+      width: auto;
+    }
+  }
+
+  // style as table to vertical middle align text 
+  .bibdk-facetbrowser-mobile > div {
+    display: table;
+    width: 100%;
+  }
+  .bibdk-facetbrowser-mobile > div > .facet-wrapper {
+    display: table-row;
+  }
+  .bibdk-facetbrowser-mobile > div .facet-name,
+  .bibdk-facetbrowser-mobile > div .facet-select, {
+    border-bottom: 2px solid $grey-bg--page;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+  .bibdk-facetbrowser-mobile > div .facet-name {
+    line-height: rem-calc(20px);
+  }
+  .form-wrapper.actions-wrapper {
+    display: table-row;
+    .action-wrapper {
+      display: table-cell;
+    }
+  }
+
+
+}
+

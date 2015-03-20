@@ -48,9 +48,12 @@
 
   span.mat-type {
     color: $black--natural;
+    display: inline-block;
+    white-space: normal;
+    width: 135px;
   }
 
-  .icon {
+  .svg-icon {
     max-height: 20px;
     width: 15px;
     margin: 0 10px;

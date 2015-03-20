@@ -16,15 +16,33 @@
     font-size: 1rem;
     line-height: 2rem;
   }
-  @media #{$medium-up} {
-    display: block;
-  }
   @media #{$large-up} {
+    display: block;
     font-size: inherit;
     span > a, .dropdown-menu a {
       font-size: inherit; 
       line-height: inherit;
     }
+  }
+}
+
+.pane-bibdk-facetbrowser-bibdk-works-controls-facets-link {
+  display: block;
+  @media #{$large-up} {
+    display: none;
+  }
+}
+
+// Top pager
+.panel-top .pane-ting-openformat-pager {
+  display: none;
+  text-align: center;
+  @media #{$medium-up} {
+    display: inline;
+    width: 33%;
+  }
+  @media #{$large-up} {
+    width: auto;
   }
 }
 
@@ -45,6 +63,9 @@
 .searchresult_count {
   width: 40%;
   @media #{$medium-up} {
+    width: 33%;
+  }
+  @media #{$large-up} {
     width: 25%;
   }
 }
@@ -55,6 +76,7 @@
     display: inline;
   }
 }
+
 
 
 // =============================================================================
@@ -218,4 +240,23 @@
     }
   }
 }
+
+.pane-bibdk-facetbrowser-bibdk-works-controls-facets-link {
+  @include rem('padding', 2px 2px 2px 2px);
+  height: rem-calc(64px);
+  line-height: rem-calc(64px);
+  text-align: center;
+  font-size: rem-calc(16px);
+  font-weight: bold;
+  float:right;
+  background-color: $black--natural;;
+  width: 60%;
+  @media #{$medium-up} {
+    width: 33%;
+  }
+  a {
+    color: $white;
+  }
+}
+
 

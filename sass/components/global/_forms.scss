@@ -44,7 +44,10 @@
 .form-type-textfield,
 .form-type-password,
 .form-type-textarea,
-.form-type-select {
+.form-type-emailfield,
+.form-type-select,
+.form-type-numberfield,
+.form-type-telfield{
   background-color: $white;
 }
 
@@ -183,7 +186,10 @@ select[size] {
 
 textarea,
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"]{
   @include inline-block();
   @include box-sizing(border-box);
   height: rem-calc(20);
@@ -209,7 +215,11 @@ textarea {
 
 textarea:focus,
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus
+{
   border-color: rgba(82, 168, 236, 0.8);
 }
 
@@ -556,6 +566,7 @@ select#edit-favouriteselector {
     height: 30px;
     line-height: 30px;
     font-size: 14px;
+    padding: 0;
   }
 
   input[type="submit"].inactive {
@@ -577,6 +588,13 @@ select#edit-favouriteselector {
   line-height: 1.3em;
 }
 
+.form-item-needBeforeDate select {
+  min-width: initial;
+  @media #{$medium-up} {
+    min-width: 100px;
+  }
+}
+
 // =============================================================================
 // Popup
 // =============================================================================
@@ -587,11 +605,9 @@ select#edit-favouriteselector {
     @include typo("title", "section", "black");
   }
 
-  .region-content {
+  .region-content, #messages {
     margin: 10px 20px;
   }
-
-
 
   article.manifestation {
     padding: 0 20px;
