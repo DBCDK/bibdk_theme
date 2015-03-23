@@ -460,7 +460,7 @@ function _bibdk_theme_get_topbar_links() {
     '#theme' => 'link_with_svg',
     '#text' => t('Spørg Biblioteksvagten'),
     //'#path' => 'overlay/helpdesk',
-    '#path' => 'http://adm.biblioteksvagten.dk/embed/ask-question?agency_id=&agency_mail=&popup=y&url='.base_path(),
+    '#path' => 'https://adm.biblioteksvagten.dk/embed/ask-question?agency_id=&agency_mail=&popup=y&url='.base_path(),
     '#options' => array(
       'attributes' => array(
         'class' => array('visible-for-large-up'),
