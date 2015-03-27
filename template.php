@@ -7,6 +7,7 @@
  * See: sass/drupal
  */
 function bibdk_theme_css_alter(&$css) {
+  unset($css[drupal_get_path('module', 'eu_cookie_compliance') . '/css/eu_cookie_compliance.css']);
   unset($css[drupal_get_path('module', 'system') . '/system.base.css']);
   unset($css[drupal_get_path('module', 'system') . '/system.messages.css']);
   unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
