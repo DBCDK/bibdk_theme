@@ -1,13 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   id="svg3336"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
    version="1.1"
+   width="14"
+   height="12"
    viewBox="0 0 14 12"
-   height="12px"
-   width="14px">
+   id="svg3336">
+  <defs
+     id="defs7" />
   <g
      id="g3338">
     <path
-       id="path3340"
-       d="M 7.7320294,9.419557 5.2787086,11.904293 3.4667673,10.079644 1.6783232,8.314611 0,6.6929895 1.8472385,5.17 5.2899918,8.4696475 9.0648872,4.5189507 12.145924,1.2408931 14.007,2.7750599 10.908868,6.0837074 Z" />
+       d="M 7.7320294,9.419557 5.2787086,11.904293 3.4667673,10.079644 1.6783232,8.314611 0,6.6929895 1.8472385,5.17 5.2899918,8.4696475 9.0648872,4.5189507 12.145924,1.2408931 14.007,2.7750599 10.908868,6.0837074 z"
+       id="path3340" />
   </g>
 </svg>
