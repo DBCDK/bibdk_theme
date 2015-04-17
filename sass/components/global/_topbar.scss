@@ -3,13 +3,14 @@
 // =============================================================================
 
 #svg-logo {
-  #logo-bibliotek {
+  path {
     fill: $white;
   }
-  #logo-dk {
+  path:nth-of-type(1) {
     fill: $blue;
   }
 }
+
 
 .topbar {
   position: relative;
