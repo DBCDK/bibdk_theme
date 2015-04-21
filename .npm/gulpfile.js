@@ -35,8 +35,7 @@ gulp.task('css', function() {
 gulp.task('svg', function() {
   return gulp.src(cfg.paths.svg.src)
     .pipe(plumber())
-    .pipe(svgmin())
-    //.pipe(svgmin(cfg.settings.svgmin))
+    .pipe(svgmin(cfg.settings.svgmin))
     .pipe(svgstore(cfg.settings.svgstore))
     .pipe(gulp.dest(cfg.paths.svg.dest));
 });
