@@ -488,14 +488,6 @@
         window.opener.location.href = $(event.currentTarget).attr('href');
       });
 
-      // *********************** Foundation SVG hack ********************************************* //
-      // (Fontation dropdowns don't trigger if clicking on a SVG icon) 
-      $('.svg-icon').click(function(event) {
-        if ( detectIE() ) {
-          event.preventDefault();
-          $(this).parent('a').click();
-        }
-      });
       // NO CODE AFTER THIS!
     }
 
