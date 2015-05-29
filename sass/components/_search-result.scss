@@ -99,7 +99,22 @@
 
 .work-actions {
   float: right;
+  td {
+    vertical-align: middle;
+  }
+  .dropdown-menu a {
+    padding: 5px 16px;
+  }
+  .mat-type {
+    color: #222;
+    display: inline-block;
+    margin-left: 50px;
+    text-indent: -50px;
+    white-space: normal;
+    width: 150px;
+  }
 }
+
 
 .work-section {
   .page-work & {
