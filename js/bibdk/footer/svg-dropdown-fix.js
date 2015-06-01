@@ -15,7 +15,9 @@
   }
 
   $(document).on('opened.fndtn.reveal', '.reveal-modal', function (document) {
-    Drupal.attachBehaviors(document, '.svg-icon');
+    behaviorsParam = $('.reveal-modal .svg-icon');
+    Drupal.attachBehaviors(behaviorsParam, null);
+    onLoad.setFocus();
   });
 
 }) (jQuery);
