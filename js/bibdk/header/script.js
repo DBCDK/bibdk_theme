@@ -461,7 +461,14 @@
       // ************************** SELECT SEARCH INPUT ON CLICK  ************************* //
       if(!Modernizr.touch){
         $('form#search-block-form input[name="search_block_form"]').focus(function() {
-          this.select();
+          if ($(this).val().length > 0) {
+            if ($(this).prop('selected')) {
+              $(this).prop('selected', '');
+            } else {
+              $(this).prop('selected', 'selected');
+              $(this).select();
+            }
+          }
         });
       }
 
@@ -487,6 +494,7 @@
         event.preventDefault();
         window.opener.location.href = $(event.currentTarget).attr('href');
       });
+
       // NO CODE AFTER THIS!
     }
 

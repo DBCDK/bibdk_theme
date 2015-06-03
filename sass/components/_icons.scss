@@ -51,6 +51,11 @@
   @include svg("checked", "black");
 }
 
+.svg-question{
+  @include svg("svg-question", "white");
+  background-color: #088eb4;
+}
+
 
 // =============================================================================
 // Import: Icons for links/buttons
