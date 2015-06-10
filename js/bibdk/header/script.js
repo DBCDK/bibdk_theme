@@ -379,7 +379,7 @@
 
       // array to hold original input types
       if(typeof bibdk_password_input_types == 'undefined') {
-        bibdk_password_input_types = new Array();
+        var bibdk_password_input_types = new Array();
       }
 
       $(".bibdk-password-field").each(function() {
