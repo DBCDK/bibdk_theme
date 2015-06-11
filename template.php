@@ -134,14 +134,15 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
     'movie' => 'media-movie',
     'music' => 'media-music',
     'article' => 'media-article',
+    'periodical' => 'media-periodical',
     'note' => 'media-note',
     'audiobook' => 'media-audiobook',
+    'none' => 'media-none',
   );
   $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
-  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-emat';
+  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-none';
   $vars['icon'] = $icon;
 }
-
 
 /**
  * @param array $vars

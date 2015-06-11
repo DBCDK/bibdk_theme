@@ -56,8 +56,12 @@
     @include svg("svg-media-article", "black");
   }
 
-  .svg-media-audiobook {
-    @include svg("svg-media-audiobook", $black--natural);
+  .svg-media-article {
+    @include svg("svg-media-article", "black");
+  }
+
+  .svg-media-periodical {
+    @include svg("svg-media-periodical", $black--natural);
   }
 
   .svg-media-book {
