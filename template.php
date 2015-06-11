@@ -348,7 +348,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
     $mypage_links += _bibdk_theme_get_my_page_menu_links();
   }
 
-  $menu_name = ($language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
+  $menu_name = (property_exists('$language', 'prefix') && $language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $main_links += menu_navigation_links($menu_name);
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
@@ -523,7 +523,7 @@ function _bibdk_theme_get_topbar_links() {
 function _bibdk_theme_get_footer_menu_for_offcanvas() {
   global $language;
 
-  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_name = (property_exists('$language', 'prefix') && $language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('off-canvas-footer-menu')));
@@ -539,7 +539,7 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
 function _bibdk_theme_get_footer_bar_menu() {
   global $language;
 
-  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_name = (property_exists('$language', 'prefix') && $language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
