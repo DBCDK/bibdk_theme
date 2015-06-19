@@ -135,8 +135,9 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
     'music' => 'media-music',
     'article' => 'media-article',
     'periodical' => 'media-periodical',
-    'note' => 'media-note',
+    'note' => 'media-note', // jgn: hvad er det? sheetmusic? ("node"?)
     'audiobook' => 'media-audiobook',
+    'sheetmusic' => 'media-sheetmusic',
     'none' => 'media-none',
   );
   $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
