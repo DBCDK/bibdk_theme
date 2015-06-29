@@ -22,12 +22,6 @@ function bibdk_theme_css_alter(&$css) {
   unset($css['misc/vertical-tabs.css']);
 }
 
-function bibdk_theme_js_alter(&$js) {
-  $js['misc/jquery.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/libs/foundation/js/vendor/jquery.js';
-  $js['misc/jquery.form.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/js/lib/jquery.form.js';
-  $js[drupal_get_path('theme', 'bibdk_theme') .'/libs/jquery-migrate/jquery-migrate-1.2.1.min.js']['group'] = -100;
-}
-
 /**
  * Implements hook_theme().
  */
