@@ -22,12 +22,6 @@ function bibdk_theme_css_alter(&$css) {
   unset($css['misc/vertical-tabs.css']);
 }
 
-function bibdk_theme_js_alter(&$js) {
-  $js['misc/jquery.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/libs/foundation/js/vendor/jquery.js';
-  $js['misc/jquery.form.js']['data'] = 'profiles/bibdk/themes/bibdk_theme/js/lib/jquery.form.js';
-  $js[drupal_get_path('theme', 'bibdk_theme') .'/libs/jquery-migrate/jquery-migrate-1.2.1.min.js']['group'] = -100;
-}
-
 /**
  * Implements hook_theme().
  */
@@ -134,14 +128,16 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
     'movie' => 'media-movie',
     'music' => 'media-music',
     'article' => 'media-article',
-    'note' => 'media-note',
+    'periodical' => 'media-periodical',
+    'note' => 'media-note', // jgn: hvad er det? sheetmusic? ("node"?)
     'audiobook' => 'media-audiobook',
+    'sheetmusic' => 'media-sheetmusic',
+    'none' => 'media-none',
   );
   $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
-  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-emat';
+  $icon = isset($svg_list[$icon_type]) ? $svg_list[$icon_type] : 'media-none';
   $vars['icon'] = $icon;
 }
-
 
 /**
  * @param array $vars
@@ -347,7 +343,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
     $mypage_links += _bibdk_theme_get_my_page_menu_links();
   }
 
-  $menu_name = ($language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
+  $menu_name = (property_exists('$language', 'prefix') && $language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $main_links += menu_navigation_links($menu_name);
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
