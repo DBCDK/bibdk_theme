@@ -13,7 +13,6 @@
       width: 33.3%;
       text-align: center;
       border-bottom: 1px solid $grey-border;
-      color: $grey-1;
       @include single-transition();
       &:hover {
         background-color: $grey-bg--section;
