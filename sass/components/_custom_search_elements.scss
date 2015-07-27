@@ -59,6 +59,7 @@
     padding: 0;
     float: left;
     margin-right: 5px;
+    font-size: 0.8em;
   }
 
   .fieldset-description {
@@ -347,4 +348,8 @@
   &.custom-search-list-close {
     margin-right: 30px;
   }
+}
+
+#popup .fieldset-legend {
+   font-size: 0.8rem;
 }
