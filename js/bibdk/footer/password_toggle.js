@@ -8,7 +8,7 @@
 Drupal.behaviors.showPassword = {
   attach: function (context) {
     // Create the checkbox.
-    var showPassword = $('<div class="form-item form-type-checkbox form-password-toggle"><label class="password-toggle"><input type="checkbox" />' + Drupal.t('Show password') + '</label></div>');
+    var showPassword = $('<div class="form-item form-type-checkbox form-password-toggle"><label class="password-toggle"><input type="checkbox" class="input-password-toggle"/>' + Drupal.t('Show password') + '</label></div>');
     // Add click handler to checkboxes.
     $(':checkbox', showPassword).click(function () {
       var orig;
