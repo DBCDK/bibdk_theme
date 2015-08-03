@@ -735,3 +735,17 @@ select#edit-favouriteselector {
     display: none;
   }
 }
+
+// ==========================
+// Add a "Show password" checkbox to each password field.
+// See: https://www.drupal.org/project/password_toggle
+//      (drupal_add_css don't work on modal windows)
+// ==========================
+
+label.password-toggle {
+  font-weight: normal;
+}
+
+label.password-toggle input {
+  margin-right: 4px;
+}
