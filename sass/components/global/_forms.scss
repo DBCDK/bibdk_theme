@@ -491,7 +491,7 @@ select#edit-favouriteselector {
     }
   }
 
-  #edit-next,#edit-sendmail.form-submit {
+  #edit-next, #edit-prev, #edit-sendmail.form-submit {
     float: right;
     margin-left: $spacing;
   }
@@ -734,4 +734,18 @@ select#edit-favouriteselector {
   .icon {
     display: none;
   }
+}
+
+// ==========================
+// Add a "Show password" checkbox to each password field.
+// See: https://www.drupal.org/project/password_toggle
+//      (drupal_add_css don't work on modal windows)
+// ==========================
+
+label.password-toggle {
+  font-weight: normal;
+}
+
+label.password-toggle input {
+  margin-right: 4px;
 }
