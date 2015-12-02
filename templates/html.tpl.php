@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?> xmlns="http://www.w3.org/1999/html">
   <head>
+    <!-- Windows phone hack - IE 11 do not all ways work on click on dropdownbox -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
     <meta name="viewport" content="initial-scale=1">
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>
