@@ -115,6 +115,7 @@ function bibdk_theme_theme() {
       'variables' => array(
         'text' => '',
         'icon' => '',
+        'title' => '',
       ),
     ),
   );
@@ -1218,6 +1219,7 @@ function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
       $icon = array(
         '#theme' => 'bibdk_icon',
         '#icon' => $type,
+        '#title' => t($type, array(), array('context' => 'svg-icons')),
       );
       $vars['types']['#items'][$type] = drupal_render($icon);
     }
