@@ -1,10 +1,13 @@
+#autocomplete{
+  font-size: 0.5em;
+}
+
 #autocomplete ul {
   height: 300px;
 }
 #autocomplete li {
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-bottom: 1px solid #e5e6e7;
-  font-size: 1rem;
   overflow: hidden;
 
 }
