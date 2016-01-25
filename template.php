@@ -236,9 +236,8 @@ function bibdk_theme_feed_icon($variables) {
     '#text' => t('Subscribe to !feed-title', array('!feed-title' => $variables['title'])),
     '#path' => $variables['url'],
     '#options' => array(
-      'attributes' => array('class' => array('feed-icon'), 'title' => $text),
+      'attributes' => array('class' => array('icon', 'feed-icon'), 'title' => $text),
     ),
-    '#svg' => 'svg-rss',
   );
   return drupal_render($rss_link);
 }
