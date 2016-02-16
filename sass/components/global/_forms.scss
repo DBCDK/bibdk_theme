@@ -55,9 +55,14 @@
   display: none;
 }
 
-label {
-  background-color: $grey-7;
+.form-item-pass-pass1 {
+   background-color: $grey-7;
 }
+
+.form-item-pass-pass2 {
+   background-color: $grey-7;
+}
+
 
 // =============================================================================
 // Fieldsets
