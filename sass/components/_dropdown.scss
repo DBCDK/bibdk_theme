@@ -19,7 +19,7 @@
   @include border-radius(1px);
   @include box-shadow(0 3px 6px rgba(black, 0.2));
 
-  position: absolute;
+  position: relative;
   top: 100%;
   z-index: 5;
   min-width: 100%;
