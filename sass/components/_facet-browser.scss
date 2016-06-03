@@ -111,6 +111,24 @@
 }
 
 
+#bibdk-facetbrowser-filter-form {
+
+  .checkbox-element-label {
+    width: 78%;
+    margin: 0;
+  }
+
+  #bibdk-modal-form p {
+    margin: 0;
+  }
+
+  .checkbox-element-select, .checkbox-element-deselect {
+    width: 10%;
+    margin: 0;
+  }
+
+}
+
 #bibdk-modal {
 
   background-color: $grey-bg--page;
