@@ -463,7 +463,7 @@ function _bibdk_theme_get_topbar_links() {
         'data-rel' => array('helpdesk'),
       ),
     ),
-    '#prefix' => '<span xx class="external" >',
+    '#prefix' => '<span class="external" >',
     '#suffix' => '</span>',
     '#svg' => 'svg-chat',
   );
