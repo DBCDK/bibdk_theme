@@ -6,6 +6,12 @@
 
   display: none;
 
+  .form-wrapper.captcha {
+    input[type="text"] {
+      border: -1px;
+    }
+  }
+
   .subject-item {
     width: 50%;
     p {
@@ -330,10 +336,6 @@ subjects-row {
     }
     .form-wrapper {
       border-bottom: 0px;
-    }
-    .form-wrapper.fieldset-hierarchy-suggestion,
-    .form-wrapper.captcha {
-      float: left;
     }
     .form-item {
       padding: 10px 0;
