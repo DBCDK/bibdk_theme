@@ -48,12 +48,11 @@
 .topbar-links {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 10px;
   margin-right: 20px;
 
   a {
     @include typo("link", "topbar-links", "white");
-    display: table-cell;
     height: $topbar_height;
     line-height: 0;
     vertical-align: middle;
