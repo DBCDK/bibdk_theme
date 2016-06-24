@@ -330,6 +330,7 @@ subjects-row {
   .subject-hierarchy-suggestion-form {
     margin-top: 10px;
     padding-top: 10px;
+    clear: both;
 
     .header {
       padding: 0;
@@ -339,7 +340,6 @@ subjects-row {
     }
     .form-item {
       padding: 10px 0;
-      float: left;
     }
     .searchfield-input {
       line-height: 30px;
