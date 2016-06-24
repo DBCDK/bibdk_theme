@@ -6,12 +6,6 @@
 
   display: none;
 
-  .form-wrapper.captcha {
-    input[type="text"] {
-      border: -1px;
-    }
-  }
-
   .subject-item {
     width: 50%;
     p {
@@ -50,6 +44,10 @@
       width: 25%;
     }
 
+  }
+
+  .form-wrapper.captcha input[type="text"] {
+    background-color: $grey-text--light;
   }
 
 }
@@ -337,6 +335,7 @@ subjects-row {
     }
     .form-wrapper {
       border-bottom: 0px;
+      clear: both;
     }
     .form-item {
       padding: 10px 0;
