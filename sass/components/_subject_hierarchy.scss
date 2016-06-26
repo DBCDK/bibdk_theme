@@ -3,7 +3,6 @@
 // =============================================================================
 
 #bibdk-subject-hierarchy {
-
   display: none;
 
   .subject-item {
@@ -48,6 +47,8 @@
 
   .form-wrapper.captcha input[type="text"] {
     background-color: $grey-text--light;
+    border: 1px solid $grey-border;
+    max-width: 120px;
   }
 
 }
