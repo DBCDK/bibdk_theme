@@ -3,7 +3,6 @@
 // =============================================================================
 
 #bibdk-subject-hierarchy {
-
   display: none;
 
   .subject-item {
@@ -44,6 +43,12 @@
       width: 25%;
     }
 
+  }
+
+  .form-wrapper.captcha input[type="text"] {
+    background-color: $grey-text--light;
+    border: 1px solid $grey-border;
+    max-width: 120px;
   }
 
 }
@@ -324,20 +329,17 @@ subjects-row {
   .subject-hierarchy-suggestion-form {
     margin-top: 10px;
     padding-top: 10px;
+    clear: both;
 
     .header {
       padding: 0;
     }
     .form-wrapper {
       border-bottom: 0px;
-    }
-    .form-wrapper.fieldset-hierarchy-suggestion,
-    .form-wrapper.captcha {
-      float: left;
+      clear: both;
     }
     .form-item {
       padding: 10px 0;
-      float: left;
     }
     .searchfield-input {
       line-height: 30px;
