@@ -2,6 +2,52 @@
 // RS Carousel
 // =============================================================================
 
+
+// =============================================================================
+// Carousel Tab list styling
+// =============================================================================
+
+.slick-carousel-tab-select {
+
+  /* Set tab style
+  ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 12px;
+  }
+
+  /* Float the list items side by side */
+  ul.tab li {float: left;}
+
+  /* Style the links inside the list items */
+  ul.tab li a {
+    color: #0078a0;
+    padding: 8px 8px;
+  }
+
+  /* Change background color of links on hover */
+  ul.tab li a:hover {
+    background-color: $grey-bg--section;
+  }
+
+  /* Create an active/current tablink class */
+  ul.tab li a:focus, .active {
+    background-color: lightgray;
+    border-bottom-color: #0078a0;
+    border-bottom-style: double;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+
+}
+
 .slick-carousel {
   display: none;
 
