@@ -7,6 +7,7 @@
 // Carousel Tab list styling
 // =============================================================================
 
+
 .slick-carousel-tab-select {
 
   /* Set tab style
@@ -15,7 +16,6 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 12px;
   }
 
   /* Float the list items side by side */
@@ -24,7 +24,6 @@
   /* Style the links inside the list items */
   ul.tab li a {
     color: #0078a0;
-    padding: 8px 8px;
   }
 
   /* Change background color of links on hover */
@@ -39,16 +38,22 @@
     border-bottom-style: double;
   }
 
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-  }
-
 }
 
 .slick-carousel {
+
+  //@extend .hide-for-large-down;
+
+  .tab {
+    .slick-carousel-tabs {
+      ul, ol, a {
+        list-style: none;
+        font-size: 1.00rem;
+        padding: 0 10px 0 10px;
+      }
+    }
+  }
+
   display: none;
 
   @media #{$large-up} {
@@ -92,14 +97,18 @@
 
 .slick-carousel-header {
   @extend .clearfix;
-  height: rem-calc(70);
+  height: 6rem;
+  line-height: 0.2;
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
 }
 
 .slick-carousel-header-title {
   float: left;
-  padding: rem-calc(20);
+  //padding: rem-calc(20);
+  padding: 0.6rem;
+  padding-left: 1.25rem;
+
   @include typo("title", "section", "black");
 
   width: 400px;
@@ -113,42 +122,6 @@
   }
 }
 
-.slick-carousel-header-select {
-  float: right;
-  position: relative;
-  margin: rem-calc(20 20 0 0);
-
-  .dropdown-toggle {
-  
-    @include bibdk-triangle(top, $blue, 50%, 1rem);
-    padding-right: 40px;
-    &.toggled:after {
-      right: 10px;
-      @include apply-origin(50% 25%, false);
-      @include rotate(180deg);
-    }
-
-    background-color: $white;
-    display: block;
-    position: relative;
-    @include box-sizing(border-box);
-    @include rem('height', 32px);
-    @include rem('line-height', 30px);
-    border: solid 1px $grey-border;
-    @include rem('padding', 0 35px 0 10px);
-    font-weight: bold;
-
-  }
-
-  .dropdown-menu {
-    min-width: 0;
-    top: 100%;
-
-    li {
-      white-space: nowap;
-    }
-  }
-}
 
 
 // =============================================================================
