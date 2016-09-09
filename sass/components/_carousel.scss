@@ -32,7 +32,7 @@
   }
 
   /* Create an active/current tablink class */
-  ul.tab li a:focus, .active {
+  ul.tab li .active {
     background-color: lightgray;
     border-bottom-color: #0078a0;
     border-bottom-style: double;
@@ -42,7 +42,7 @@
 
 .slick-carousel {
 
-  //@extend .hide-for-large-down;
+  @extend .hide-for-large-down;
 
   .tab {
     .slick-carousel-tabs {
