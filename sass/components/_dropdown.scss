@@ -4,7 +4,10 @@
 
 .dropdown-wrapper {
   position: relative;
-  float: left;
+}
+
+.dropdown-wrapper a {
+  display: inline-block;
 }
 
 .dropdown-leftalign {
