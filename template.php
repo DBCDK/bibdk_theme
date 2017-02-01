@@ -342,7 +342,7 @@ function _bibdk_theme_get_bibdk_topbar($overlay) {
     $mypage_links += _bibdk_theme_get_my_page_menu_links();
   }
 
-  $menu_name = (property_exists('$language', 'prefix') && $language->prefix === 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
+  $menu_name = ($language->prefix == 'eng') ? 'menu-offcanvas-menu-eng' : 'menu-offcanvas-menu-da';
   $main_links += menu_navigation_links($menu_name);
 
   $menu_links = _bibdk_theme_merge_menulinks($mypage_links, $main_links);
