@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Main page template file
+ * Page template file used when heimdal login form is displayed - remove search fields
  *
  * @parameters:
  * - $page: Array with content to be rendered. See below description of array
