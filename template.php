@@ -787,6 +787,8 @@ function bibdk_theme_form_alter(&$form, &$form_state, $form_id) {
       break;
 
   }
+
+
 }
 
 /**
@@ -860,6 +862,26 @@ function _wrap_in_element(&$form) {
  * @see bibdk_theme_form_alter()
  */
 function _alter_user_login(&$form, &$form_state, $form_id) {
+  // Make a container around login-methods to make it stylable
+  $form['login_methods']['#type'] = 'container';
+  $form['login_methods']['helptxt'] =
+    array(
+      '#type' => 'html_tag',
+      '#tag' => 'div',
+      '#value' => t('user_login_help_txt', array(), array('options' => array('context' => 'bibdk_provider'))),
+      '#attributes' => array(
+        'class' => array(
+          'bibliotekdk-login-helptxt'
+        )
+      ),
+      '#weight' => -3,
+    );
+
+  $form['login_methods']['#attributes'] = array(
+      'class' => array('bibdk-login-methods')
+  );
+  $form['login_methods']['#weight'] = -2;
+
   // Add placeholders
   $form['name']['#attributes']['placeholder'] = t('Username');
   $form['pass']['#attributes']['placeholder'] = t('Password');
@@ -1064,7 +1086,7 @@ function _alter_bibdk_help_search_form(&$form, &$form_state, $form_id) {
  *
  * @param $form
  */
-function _alter_user_register_form(&$form) {
+function _alter_user_register_form(&$form, $form_state) {
   $form['account']['mail']['#attributes']['placeholder'] = t('E-mail');
 }
 
