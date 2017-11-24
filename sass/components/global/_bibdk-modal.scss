@@ -27,7 +27,6 @@ input:-webkit-autofill {
 }
 
 #bibdk-modal-form {
-
   input[type="submit"] {
     margin: rem-calc(20) rem-calc(20) rem-calc(20) 0;
   }
@@ -61,6 +60,12 @@ input:-webkit-autofill {
 
   .element {
     border: none;
+  }
+
+  #bibdk-heimdal-select-email-form, #bibdk-heimdal-verify-email-form{
+    input[type='submit'] {
+      margin-left: 1rem;
+    }
   }
 
   .bibdk-login-methods, .bibliotekdk-login-leadtxt {
