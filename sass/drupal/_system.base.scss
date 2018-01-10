@@ -49,8 +49,18 @@ html.js input.form-autocomplete {
   background-repeat: no-repeat;
 }
 
+html.js input.form-autocomplete.search-block-form {
+  background-image: url(../img/in_use/drupal/throbber.gif);
+  background-position: 100% 24px; // LTR
+  background-repeat: no-repeat;
+}
+
 html.js input.throbbing {
   background-position: 100% -12px; // LTR
+}
+
+html.js input.throbbing.search-block-form {
+  background-position: 100% -6px; // LTR
 }
 
 // =============================================================================
