@@ -7,13 +7,19 @@ aside.right-off-canvas-menu {
   margin-top: $topbar_height;
   background-color: $grey-bg--section;
 
+
   @media #{$medium-up} {
     width: $off-canvas-width;
   }
 }
 
+.exit-off-canvas{
+  z-index: 100;
+}
+
 ul.off-canvas-list {
   li {
+    z-index: 2000;
     label {
       background-color: $blue;
       color: $white;
@@ -23,11 +29,13 @@ ul.off-canvas-list {
     }
 
     a {
+      z-index: 3000;
       color: $black;
       font-weight: bold;
       font-size: rem-calc(14px);
       border-bottom: 1px solid $grey-border;
       padding: 13px 0 13px 20px;
+      width:100%;
 
       &.active {
         background-color: $grey-bg--page;
