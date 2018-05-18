@@ -1246,6 +1246,31 @@ function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
   }
 }
 
+
+/**
+ * Implements hook_preprocess_ting_openformat_work().
+ *
+ * Add Slick recommender scripts.
+ * @See also: bibdk_recommender
+ * @See also: ting_openformat/theme/ting_openformat_work.tpl.php
+ *
+ * @param $vars
+ */
+function bibdk_theme_preprocess_ting_openformat_work(&$vars) {
+  
+  $path = drupal_get_path('module', 'bibdk_recommender');
+  drupal_add_js($path . '/js/bibdk_recommender.js');
+  drupal_add_js($path . '/js/bibdk_recommender_covers.js');
+  drupal_add_css($path . '/css/bibdk_recommender.css');
+  
+  $path = drupal_get_path('module', 'slick');
+  drupal_add_js($path . '/js/slick.load.min.js');
+  
+  drupal_add_library('slick', 'slick');
+  
+}
+
+
 /**
  * Override theme function for a CAPTCHA element.
  *
