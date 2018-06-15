@@ -12,7 +12,6 @@
       // Default in search block form - unless it's a search result.
       $('form#search-block-form input[name="search_block_form"]')
         .not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]')
-        .once('bibdk-ready-focus')
         .each(function(index, element) {
         $(this).focus();
       });
@@ -20,7 +19,6 @@
       $('.page-overlay-helpdesk')
       .find('input[type=text], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });        
@@ -28,7 +26,6 @@
       $('form#user-login')
       .find('input[type=text],input[type=email], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });
@@ -36,7 +33,6 @@
       $('form#user-register-form')
       .find('input[type=text],input[type=email], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });
@@ -44,7 +40,6 @@
       $('form#user-pass')
       .find('input[type=text],input[type=email], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });
@@ -52,7 +47,6 @@
       $('.page-overlay-help')
       .find('input[type=text], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });        
@@ -60,7 +54,6 @@
       $('.page-overlay-newsroom')
       .find('input[type=text], textarea')
       .filter(':visible:first')
-      .once('bibdk-ready-focus')
       .each(function(index, element) {
         $(this).focus();
       });
