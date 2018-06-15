@@ -5,7 +5,7 @@
   onLoad = {
     setFocus: function() {
       // Do not go any further if we're on a touch device.
-      if (Modernizr && Modernizr.touch) {
+      if (Modernizr.touch) {
         // TO DO: Modernizr.touch resisters as true on PC.
         // return;
       }
@@ -30,7 +30,6 @@
       .filter(':visible:first')
       .once('bibdk-ready-focus')
       .each(function(index, element) {
-        alert($(this).attr('name'));
         $(this).focus();
       });
       // Create new account
