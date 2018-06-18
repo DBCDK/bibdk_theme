@@ -897,6 +897,10 @@ function _alter_user_login(&$form, &$form_state, $form_id) {
     $form['actions']['persistent_login'] = $form['persistent_login'];
     unset($form['persistent_login']);
   }
+
+  // Avoid duplicate element id in dom.
+  $form['actions']['submit']['#attributes'] = array('id' => 'bibdk-login-submit');
+
 }
 
 /**
@@ -1257,17 +1261,17 @@ function bibdk_theme_preprocess_ting_openformat_collection(&$vars) {
  * @param $vars
  */
 function bibdk_theme_preprocess_ting_openformat_work(&$vars) {
-  
+
   $path = drupal_get_path('module', 'bibdk_recommender');
   drupal_add_js($path . '/js/bibdk_recommender.js');
   drupal_add_js($path . '/js/bibdk_recommender_covers.js');
   drupal_add_css($path . '/css/bibdk_recommender.css');
-  
+
   $path = drupal_get_path('module', 'slick');
   drupal_add_js($path . '/js/slick.load.min.js');
-  
+
   drupal_add_library('slick', 'slick');
-  
+
 }
 
 
