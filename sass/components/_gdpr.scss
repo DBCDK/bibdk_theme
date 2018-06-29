@@ -8,6 +8,17 @@
     margin: 10px;
     border: 1px solid black;
     padding: 10px;
+    display: none;
+    h2 {
+      font-size: 140%;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 120%;
+      font-weight: bold;
+      margin: 10px 0;
+    }
   }
 
   .form-type-checkbox {
@@ -22,5 +33,34 @@
     float: right;
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+}
+
+#bibdk-modal-form .user-register-form, .user-register-form {
+  .see-more {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .consent-message {
+    border: 1px solid black;
+    padding: 10px;
+    display: none;
+    h2 {
+      font-size: 140%;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 120%;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  }
+}
+
+.bibdk-modal-content .user-register-form {
+  .consent-message {
+    margin: 0 20px;
   }
 }
