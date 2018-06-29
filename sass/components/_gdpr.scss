@@ -1,0 +1,26 @@
+.bibdk-gdpr-modal-content {
+  .see-more {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .consent-message {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .form-type-checkbox {
+    margin: 0 10px 10px;
+    &.error {
+      border: 1px solid $red;
+    }
+
+  }
+
+  button {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
