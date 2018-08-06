@@ -39,6 +39,11 @@
 
 #bibdk-cart-view-form {
   background-color: $grey-bg--section;
+  .btn {
+    @media print {
+      display: none;
+    }
+  }
 }
 
 #edit-cartactions {
@@ -46,6 +51,10 @@
 
   .item-list ul li {
     margin: 0px 4px;
+  }
+
+  @media print {
+    display: none;
   }
 
 }
