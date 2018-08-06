@@ -4,6 +4,10 @@
 
 #footer-bars {
 
+  @media print {
+    display: none;
+  }
+
   $footbar_height: rem-calc(45px);
 
   .footer-tab-bars {
