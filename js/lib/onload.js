@@ -1,4 +1,5 @@
 // ****************************  CURSOR POSITIONS **************************** //
+// After edit, run gulp build
 
 (function ($) {
 
@@ -9,11 +10,13 @@
         // TO DO: Modernizr.touch resisters as true on PC.
         // return;
       }
-      // Default in search block form - unless it's a search result.
+      // Set focus on page load, not later AJAX calls.
       $('form#search-block-form input[name="search_block_form"]')
         .not('.page-search form#search-block-form input[name="search_block_form"], .page-vejviser form#search-block-form input[name="search_block_form"]')
-        .each(function(index, element) {
-        $(this).focus();
+        .once('search-block-form-focus', function (context) {
+          $(this).each(function(index, element) {
+            element.focus();
+          });
       });
       // Helpdesk popup
       $('.page-overlay-helpdesk')
