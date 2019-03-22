@@ -378,7 +378,7 @@
       }
 
       // array to hold original input types
-      if(typeof bibdk_password_input_types == 'undefined') {
+      if(typeof bibdk_password_input_types === 'undefined') {
         var bibdk_password_input_types = new Array();
       }
 
@@ -393,7 +393,7 @@
 
       $('.bibdk-unmask-password-field').once().click(function() {
         $('.bibdk-password-field').each(function() {
-          if($(this).attr('type') == 'password') {
+          if($(this).attr('type') === 'password') {
             var id = $(this).attr('id');
             // get original type
             var type = bibdk_password_input_types[id];
