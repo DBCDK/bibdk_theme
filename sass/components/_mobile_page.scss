@@ -8,22 +8,28 @@
   width: 100%;
   height: 100%;
   .close {
-    position: absolute;
+    position: fixed;
     float: right;
     content: 'x';
     font-size: $reveal-close-font-size;
-    top: 0px;
-    right: 0px;
-    padding: 10px 20px 20px 20px;
+    top: 0.4rem;
+    right: 0;
+    padding: 0.7rem 1.4rem;
     z-index: 10;
     color: $grey-text--dark;
     font-weight: $font-weight-bold;
     cursor: pointer;
+    line-height: 1.8rem;
+    background-color: $grey-bg--page;
+    border-radius: 1rem 0 0 1rem;
+    border: 0.25rem solid $blue;
+    border-right-width: 0;
     &:active {
       fill: $blue;
     }
   }
   .work-title {
     margin-right: 1rem;
+    min-height: 2.5rem;
   }
 }
