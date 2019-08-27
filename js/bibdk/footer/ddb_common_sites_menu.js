@@ -1,0 +1,9 @@
+/**
+ * @file
+ *
+ * Add "Fælles visuel markør" script.
+ */
+
+(function($) {
+  'use strict';(function(){var a=document.createElement('script');a.src='https://unpkg.com/@charlietango/ddb-widget/dist/ddb-widget.js',document.head.appendChild(a),a.onload=function(){var b=document.createElement('ddb-widget');document.body.appendChild(b)}})();
+})(jQuery);
