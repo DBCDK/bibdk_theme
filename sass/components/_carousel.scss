@@ -195,6 +195,7 @@
 .slick-loading .slick-track { visibility: hidden; }
 
 .slick-slide { float: left; height: 22rem; min-height: 1px; display: none; }
+
 [dir="rtl"] .slick-slide { float: right; }
 .slick-slide img { display: block; }
 .slick-slide.slick-loading img { display: none; }
@@ -207,15 +208,15 @@
 .slick-prev, .slick-next {
   position: absolute;
   display: block;
-  height: 60px;
-  width: 60px;
+  height: 3.75rem;
+  width: 3.75rem;
   line-height: 0;
   font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
   top: 30%;
-  margin-top: -10px;
+  margin-top: -0.625rem;
   padding: 0;
   border: none;
   outline: none;
@@ -227,7 +228,7 @@
 
 .slick-prev:before, .slick-next:before {
   font-family: "slick";
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1;
   color: white;
   opacity: 0.75;
