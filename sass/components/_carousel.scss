@@ -33,9 +33,8 @@
 
   /* Create an active/current tablink class */
   ul.tab li .active {
-    background-color: lightgray;
     border-bottom-color: #0078a0;
-    border-bottom-style: double;
+    border-bottom-style: solid;
   }
 
 }

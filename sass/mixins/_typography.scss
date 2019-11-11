@@ -30,8 +30,6 @@ $font-weight-bold: bold;
     } @else if $style == "section" {
       font-weight: bold;
       font-size: (24/16) * 1rem;
-      font-family: 'Dosis', Arial, sans-serif;
-      text-transform: uppercase;
     }
   }
 
