@@ -33,9 +33,8 @@
 
   /* Create an active/current tablink class */
   ul.tab li .active {
-    background-color: lightgray;
     border-bottom-color: #0078a0;
-    border-bottom-style: double;
+    border-bottom-style: solid;
   }
 
 }
@@ -88,7 +87,7 @@
   background-color: $white;
   border: 1px solid $grey-border;
   border-top: none;
-  padding: rem-calc(10 20);
+  padding: rem-calc(10 30);
 }
 
 // =============================================================================
@@ -245,18 +244,18 @@
 }
 
 .slick-prev {
-  left: -35px;
+  left: -30px;
   @include add-sprite("carousel-arrow--left");
 }
-[dir="rtl"] .slick-prev { left: auto; right: -35px; }
+[dir="rtl"] .slick-prev { left: auto; right: -30px; }
 .slick-prev:before { content: ""; }
 [dir="rtl"] .slick-prev:before { content: ""; }
 
 .slick-next {
-  right: -35px;
+  right: -30px;
   @include add-sprite("carousel-arrow--right");
 }
-[dir="rtl"] .slick-next { left: -35px; right: auto; }
+[dir="rtl"] .slick-next { left: -30px; right: auto; }
 .slick-next:before { content: ""; }
 [dir="rtl"] .slick-next:before { content: ""; }
 
