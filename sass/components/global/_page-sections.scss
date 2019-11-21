@@ -9,7 +9,7 @@
   .infomedia-article & {
     background-color: $white;
   }
-  
+
   .logo {
     float: left;
   }
@@ -17,8 +17,7 @@
 
 // search panel
 #search-panel {
-  background-color: $grey-bg--page;
-
+  background-image: url("/sites/default/files/covers/bibliotek.jpg");
   .lift-columns & {
     padding-bottom: 0;
   }
@@ -45,9 +44,9 @@
 // Carousel
 #carousel {
   @extend .padded--vertical;
-  
+
   display: none;
-  
+
   @media #{$medium-up} {
     display: block;
     background-color: $grey-bg--page;
@@ -74,7 +73,7 @@
   min-height: 300px;
   display: block;
   background-color: $grey-bg--page;
-  
+
   @media #{$medium-up} {
     min-height: 500px;
     .lift-columns & {
