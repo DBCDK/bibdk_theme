@@ -18,9 +18,27 @@
 // search panel
 #search-panel {
   background-image: url("/sites/default/files/covers/bibliotek.jpg");
+  height: 30rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   .lift-columns & {
     padding-bottom: 0;
   }
+
+  #search-block-wrapper {
+    background-color:#FFF;
+    margin-top:3rem;
+
+    h1 {
+      margin-left: 4rem;
+      margin-top:2rem;
+      font-weight: 300;
+      color: $black--natural;
+    }
+  }
+
 }
 
 // Messages

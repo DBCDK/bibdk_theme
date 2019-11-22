@@ -16,7 +16,7 @@
     $rem-values: unquote("");
     @each $value in $px-values {
       // If the value is zero, return 0
-      @if $value == 0 {
+      @if $value == 0px {
         $rem-values: append($rem-values, $value);
       } @else {
         $rem-values: append($rem-values, $value / $baseline-rem);
