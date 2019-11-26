@@ -22,6 +22,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
   position: relative;
   .lift-columns & {
     padding-bottom: 0;
@@ -29,16 +30,15 @@
 
   #search-block-wrapper {
     background-color:#FFF;
-    margin-top:3rem;
+    margin-top: 13%;
 
     h1 {
-      margin-left: 4rem;
-      margin-top:2rem;
+      font-family: Dosis;
+      margin: 2rem 4rem;
       font-weight: 300;
       color: $black--natural;
     }
   }
-
 }
 
 // Messages

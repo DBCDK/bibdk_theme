@@ -1,7 +1,6 @@
 // =============================================================================
 // Search block form
 // =============================================================================
-
 #search-block-primary {
 
   @media #{$large-up} {
@@ -22,7 +21,7 @@
 
     @media #{$large-up} {
       margin: 0;
-      height: 2.6rem;
+      height: 3.35rem;
       font-size: 1.125rem;
       width: auto;
       float: left;
@@ -30,7 +29,7 @@
 
     @media #{$xlarge-up} {
       margin: 0;
-      height: 2.6rem;
+      height: 3.35rem;
       font-size: 1.125rem;
       width: auto;
       float: left;
@@ -47,7 +46,7 @@
   @media #{$large-up} {
     padding: 0;
     margin: 0 0 1rem 4rem;
-    width:78%;
+    width:75%;
   }
 
   @media #{$xlarge-up} {
@@ -56,7 +55,7 @@
   }
 
   input[type="text"] {
-    height: 2.47rem;
+    height: 3.25rem;
     padding: 0 0 0 .8rem;
     font-family: Arial, sans-serif;
     font-weight: normal;
@@ -70,7 +69,7 @@
 
   @-moz-document domain() {
     input[type="text"] {
-      height: 2.45rem;
+      height: 3.25rem;
     }
   }
 }
