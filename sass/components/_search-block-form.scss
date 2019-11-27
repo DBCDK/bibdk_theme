@@ -25,7 +25,7 @@
     input[type="text"] {
       height: 3.25rem;
       padding: 0 0 0 .8rem;
-      font-family: Arial, sans-serif;
+      font-family: ArialMT, sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
       color: $black--natural;
@@ -106,12 +106,13 @@
 
         a {
           @extend .link-as-box;
-          font-weight: normal;
-          font-size: 12px;
+          font-family: Arial-BoldMT, sans-serif;
+          font-weight: bold;
+          font-size: 0.75rem;
           color: $black;
-          height: 40px;
-          line-height: 40px;
-          padding: 0 22px;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          padding: 0 1.375rem;
 
           @media #{$xlarge-up} {
             padding: 0;
@@ -119,7 +120,7 @@
           }
 
           &.active {
-            border-bottom: 3px solid $blue;
+            border-bottom: 0.1875rem solid $blue;
             color: $black;
           }
           &:hover {
@@ -135,7 +136,7 @@
 // Search panel
 // ============================================================================
 #edit-advanced {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -143,18 +144,18 @@
 #custom-search--advanced-toggle {
   position: absolute;
   right: 0;
-  margin-right: 5px;
-  top: 38px;
+  margin-right: 0.3125rem;
+  top: 2.375rem;
 
   @media #{$xlarge-up} {
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
 }
 
 .custom-search--advanced-toggle-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.3125rem;
   vertical-align: middle;
 }
 
