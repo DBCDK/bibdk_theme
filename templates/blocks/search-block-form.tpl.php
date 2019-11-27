@@ -10,7 +10,7 @@
         <?php print $search['actions']; ?>
       </div>
       <!-- SEARCH PAGE NAVIGATION -->
-      <nav id="custom-search--navigation" class="show-for-large-up">
+      <nav id="custom-search--navigation">
         <div class="row">
           <div class="medium-24 columns">
             <?php print $search['searchpages']; ?>

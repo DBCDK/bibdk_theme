@@ -1,23 +1,68 @@
-// =============================================================================
-// Search block form
-// =============================================================================
+// block below h1 on frontpage. Contains search form.
 #search-block-primary {
 
-  @media #{$large-up} {
-    padding: 0;
+  @media #{$small-only} {
+    margin: .5rem;
   }
 
+  @media #{$medium-only} {
+    margin: .5rem;
+  }
+
+  // Search input field.
+  .form-item-search-block-form {
+    border: solid 1px $blue;
+    float: left;
+    width: 96%;
+    margin: 0 .5rem .5rem;
+
+    @media #{$large-up} {
+      padding: 0;
+      margin: 0 0 1rem 4rem;
+      width:75%;
+    }
+
+    input[type="text"] {
+      height: 3.25rem;
+      padding: 0 0 0 .8rem;
+      font-family: Arial, sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+      color: $black--natural;
+      width: 100%;
+      &:focus {
+        color: $black;
+      }
+    }
+  }
+
+  // Material type select.
+  .form-item-select-material-type {
+    width: 96%;
+    border: solid 1px $blue;
+    margin: 0 .5rem .5rem;
+    display: inline-block !important;
+
+    @media #{$large-up} {
+      display: none !important;
+    }
+
+    select {
+      font-size: 1rem;
+      color: $black--natural;
+      border: none;
+      @include appearance(none);
+      background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat;
+      background-size: 0.9375rem;
+    }
+  }
+
+  // Submit button.
   .form-actions {
     padding: 0;
-    margin: 1rem 0 1rem 1rem;
-  }
-
-  input[type="submit"] {
-    margin: 0 1.5rem 0 0;
-    height: 3rem;
-    font-size: 1.2rem;
-    font-weight: normal;
-    width: 37%;
+    margin: 0 .5rem .5rem;
+    float:none;
+    width: 96%;
 
     @media #{$large-up} {
       margin: 0;
@@ -27,68 +72,62 @@
       float: left;
     }
 
-    @media #{$xlarge-up} {
-      margin: 0;
-      height: 3.35rem;
-      font-size: 1.125rem;
-      width: auto;
-      float: left;
-      padding: 0 2.5rem;
+    input[type="submit"] {
+      margin: 0 1.5rem 0 0;
+      height: 3rem;
+      @media #{$large-up} {
+        height: 3.38rem;
+      }
+      font-size: 1.2rem;
+      font-weight: normal;
+      width: 100%;
     }
   }
 }
 
-.form-item-search-block-form {
-  border: solid 1px $blue;
-  float: left;
-  width: 100%;
+// =============================================================================
+// Search tabs
+// =============================================================================
+#custom-search--navigation {
 
-  @media #{$large-up} {
-    padding: 0;
-    margin: 0 0 1rem 4rem;
-    width:75%;
-  }
+  #search-tabs {
+    @extend .hide-for-medium-down;
+    margin: 1.1rem 0;
 
-  @media #{$xlarge-up} {
-    padding: 0;
-    margin: 0 0 1rem 4rem;
-  }
+    .nav--horizontal {
 
-  input[type="text"] {
-    height: 3.25rem;
-    padding: 0 0 0 .8rem;
-    font-family: Arial, sans-serif;
-    font-weight: normal;
-    font-size: 1.2rem;
-    color: $black--natural;
-    width: 100%;
-    &:focus {
-      color: $black;
+      margin-left:4rem;
+
+      li {
+
+        @media #{$xlarge-up} {
+          width: 12%;
+        }
+
+        a {
+          @extend .link-as-box;
+          font-weight: normal;
+          font-size: 12px;
+          color: $black;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 22px;
+
+          @media #{$xlarge-up} {
+            padding: 0;
+            text-align: center;
+          }
+
+          &.active {
+            border-bottom: 3px solid $blue;
+            color: $black;
+          }
+          &:hover {
+            color: $black;
+          }
+        }
+      }
     }
-  }
-
-  @-moz-document domain() {
-    input[type="text"] {
-      height: 3.25rem;
-    }
-  }
-}
-
-.form-item-select-material-type {
-  @extend .hide-for-large-up;
-  width: 60%;
-  background: $grey-bg--page;
-  padding-left: 0;
-
-  select {
-    padding: 15px 20px;
-    font-size: rem-calc(16);
-    color: $black--natural;
-    border: 1px solid $grey-border;
-    border-radius: 0;
-    @include appearance(none);
-    background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat;
-    background-size: 15px;
   }
 }
 
@@ -107,7 +146,7 @@
   margin-right: 5px;
   top: 38px;
 
-  @media #{$xlarge-up}{
+  @media #{$xlarge-up} {
     margin-right: 10px;
   }
 }
@@ -122,50 +161,4 @@
 .custom-search--advanced-toggle-text {
   font-weight: bold;
   vertical-align: middle;
-}
-
-// =============================================================================
-// Search tabs
-// =============================================================================
-#custom-search--navigation {
-
-}
-
-#search-tabs {
-  margin: 1.1rem 0;
-
-  .nav--horizontal {
-
-    margin-left:4rem;
-
-    li {
-
-      @media #{$xlarge-up} {
-        width: 12%;
-      }
-
-      a {
-        @extend .link-as-box;
-        font-weight: normal;
-        font-size: 12px;
-        color: $black;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 22px;
-
-        @media #{$xlarge-up}{
-          padding: 0;
-          text-align: center;
-        }
-
-        &.active {
-          border-bottom: 3px solid $blue;
-          color: $black;
-        }
-        &:hover {
-          color: $black;
-        }
-      }
-    }
-  }
 }
