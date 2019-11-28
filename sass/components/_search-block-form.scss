@@ -1,6 +1,6 @@
 // block below h1 on frontpage. Contains search form.
 #search-block-primary {
-
+/*
   @media #{$small-only} {
     margin: .5rem;
   }
@@ -8,15 +8,15 @@
   @media #{$medium-only} {
     margin: .5rem;
   }
-
+*/
   // Search input field.
   .form-item-search-block-form {
-    border: solid 1px $blue;
     float: left;
-    width: 96%;
-    margin: 0 .5rem .5rem;
+    width: 100%;
+    padding: 0;
 
     @media #{$large-up} {
+      border: solid 1px $blue;
       padding: 0;
       margin: 0 0 1rem 4rem;
       width:75%;
@@ -24,7 +24,7 @@
 
     input[type="text"] {
       height: 3.25rem;
-      padding: 0 0 0 .8rem;
+      padding: 0 0 0 1rem;
       font-family: ArialMT, sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
@@ -38,32 +38,33 @@
 
   // Material type select.
   .form-item-select-material-type {
-    width: 96%;
-    border: solid 1px $blue;
-    margin: 0 .5rem .5rem;
+    width: 77%;
+    height: 3rem;
     display: inline-block !important;
+    padding: 0;
+    float:left;
+    margin-right: 1%;
 
     @media #{$large-up} {
       display: none !important;
     }
 
     select {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: $black--natural;
       border: none;
       @include appearance(none);
       background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat;
       background-size: 0.9375rem;
+      padding: .625rem 0 .625rem 1rem;
     }
   }
 
   // Submit button.
   .form-actions {
     padding: 0;
-    margin: 0 .5rem .5rem;
-    float:none;
-    width: 96%;
-
+    float:left;
+    width: 22%;
     @media #{$large-up} {
       margin: 0;
       height: 3.35rem;
@@ -73,7 +74,7 @@
     }
 
     input[type="submit"] {
-      margin: 0 1.5rem 0 0;
+      margin: 0;
       height: 3rem;
       @media #{$large-up} {
         height: 3.38rem;
@@ -137,18 +138,25 @@
 // ============================================================================
 #edit-advanced {
   padding-top: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 4rem 2rem;
+
+  @media #{$small-only} {
+    display: none;
+  }
+  @media #{$medium-only} {
+    display: none;
+  }
 }
 
 #custom-search--advanced-toggle {
+/*
   position: absolute;
   right: 0;
   margin-right: 0.3125rem;
-  top: 2.375rem;
+  top: 2.375rem;*/
 
   @media #{$xlarge-up} {
-    margin-right: 0.625rem;
+    //margin-right: 0.625rem;
   }
 }
 

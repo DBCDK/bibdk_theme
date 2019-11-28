@@ -18,8 +18,7 @@
 // search panel
 #search-panel {
   background-image: url("/sites/default/files/covers/bibliotek.jpg");
-  height: 30rem;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
@@ -28,15 +27,32 @@
     padding-bottom: 0;
   }
 
+  &.no-background {
+    box-shadow: none;
+    background: $grey-6;
+    #search-block-wrapper {
+      margin: 13% 0 0;
+    }
+  }
+
   #search-block-wrapper {
-    background-color:#FFF;
-    margin-top: 13%;
+    @media #{$large-up} {
+      background-color: #FFF;
+    }
+    margin: 13% 0;
+    @media screen and (max-width: 999px) {
+      margin: 13% 1rem 2rem;
+    }
 
     h1 {
-      font-family: Dosis;
-      margin: 2rem 4rem;
-      font-weight: 300;
-      color: $black--natural;
+      font-family: Dosis, sans-serif;
+      margin: 1.5rem 0;
+      font-weight: bold;
+      color: $white;
+      @media #{$large-up} {
+        color: $black--natural;
+        margin: 1.5rem 0 1.5rem 4rem;
+      }
     }
   }
 }
@@ -91,7 +107,7 @@
   min-height: 300px;
   display: block;
   background-color: $grey-bg--page;
-
+  margin: 1.6875rem 1rem auto;
   @media #{$medium-up} {
     min-height: 500px;
     .lift-columns & {

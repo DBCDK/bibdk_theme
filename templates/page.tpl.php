@@ -13,8 +13,8 @@
 ?>
 
 <?php if (!empty($page['search_panel'])): ?>
-  <!-- search-panel start -->
-  <div id="search-panel" data-role="search">
+  <!-- search-panel start | no-background is used when the user has searched. -->
+  <div id="search-panel"<?php if(!$is_front): ?> class="no-background"<?php endif; ?> data-role="search">
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->

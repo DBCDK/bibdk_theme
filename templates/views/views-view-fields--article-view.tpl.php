@@ -3,14 +3,10 @@
  * @file
  * Overwrite views template view-view-fields.tpl.php
  */
-
-
 ?>
-
 
 <article <?php print $class; ?> >
   <div class="inner">
-
     <?php
     /*************** COPIED FROM contrib/views/theme/view-view-fields.tpl.php *******/
 
