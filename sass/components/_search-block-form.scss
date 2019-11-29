@@ -149,12 +149,8 @@
 }
 
 #custom-search--advanced-toggle {
-/*
-  position: absolute;
-  right: 0;
-  margin-right: 0.3125rem;
-  top: 2.375rem;*/
 
+  margin-bottom: 1rem;
   @media #{$xlarge-up} {
     //margin-right: 0.625rem;
   }
