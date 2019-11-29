@@ -82,12 +82,12 @@
 
   //====================
   // SUBGROUPS
-  //--------------------
+  //-------------------
   .toggle-subgroup {
     @include inline-block(top);
     width: 15px;
     color: transparent;
-    background: url(../../img/svg/plus-circle.svg) no-repeat;
+    background: url(../../img/svg/blue-plus-circle.svg) no-repeat;
     background-size: 15px;
     border: none;
     display: block;
@@ -96,7 +96,7 @@
     margin-right: 5px;
   }
   .toggle-subgroup.toggled {
-    background: url(../../img/svg/minus-circle.svg) no-repeat;
+    background: url(../../img/svg/blue-minus-circle.svg) no-repeat;
     background-size: 15px;
   }
 
