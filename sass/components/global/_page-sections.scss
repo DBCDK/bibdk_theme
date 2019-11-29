@@ -31,7 +31,15 @@
     box-shadow: none;
     background: $grey-6;
     #search-block-wrapper {
+
       margin: 13% 0 0;
+      @media screen and (max-width: 999px) {
+        margin: 13% 1rem 2rem;
+      }
+
+      h1 {
+        color: $black--natural;
+      }
     }
   }
 
