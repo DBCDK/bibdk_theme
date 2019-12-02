@@ -1,7 +1,8 @@
 <div class="row">
   <div class="medium-24 columns">
-    <span id="seasonal"></span>
-
+    <?php if (!isset($_GET['search_block_form'])): ?>
+      <span id="seasonal"></span>
+    <?php endif; ?>
     <div id="search-block-wrapper" class="clearfix">
       <h1><?php print t('Søg,&nbsp;find&nbsp;og&nbsp;lån fra&nbsp;alle&nbsp;Danmarks&nbsp;biblioteker'); ?></h1>
       <div id="search-block-primary">
