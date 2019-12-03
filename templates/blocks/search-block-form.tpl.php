@@ -19,9 +19,11 @@
         </div>
       </nav>
       <!-- SEARCH PAGE NAVIGATION END-->
-      <?php if (isset($search['advanced']) && isset($_GET['search_block_form'])): ?>
-        <?php print $search['advanced']; ?>
-      <?php endif; ?>
+      <div class="<?php if(!isset($_GET['search_block_form'])): ?>hidden<?php endif; ?>">
+        <?php if (isset($search['advanced'])): ?>
+          <?php print $search['advanced']; ?>
+        <?php endif; ?>
+      </div>
     </div>
     <?php print $search['hidden']; ?>
   </div>
