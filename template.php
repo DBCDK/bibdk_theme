@@ -419,7 +419,14 @@ function _bibdk_theme_get_my_page_menu_links() {
     'user/%user/settings'
   );
 
+  // GDPR (and DDB) demands that we hide the user id.
+  if (module_exists('me')) {
+    $alias = me_variable_get('me_alias');
+  }
   foreach ($mypage_links as $path => $item) {
+    if (isset($alias) && $alias !== FALSE) {
+      $user->uid = $alias;
+    }
     $mypath = str_replace('%user', $user->uid, $path);
     $links[$mypath] = array(
       'title' => $item['title'],
