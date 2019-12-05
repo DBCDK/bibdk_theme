@@ -423,11 +423,12 @@ function _bibdk_theme_get_my_page_menu_links() {
   if (module_exists('me')) {
     $alias = me_variable_get('me_alias');
   }
+  $useruid = 0;
   foreach ($mypage_links as $path => $item) {
     if (isset($alias) && $alias !== FALSE) {
-      $user->uid = $alias;
+      $useruid = $alias;
     }
-    $mypath = str_replace('%user', $user->uid, $path);
+    $mypath = str_replace('%user', $useruid, $path);
     $links[$mypath] = array(
       'title' => $item['title'],
       'href' => $mypath,
