@@ -90,9 +90,9 @@
 // Search tabs
 // =============================================================================
 #custom-search--navigation {
+  @extend .hide-for-medium-down;
 
   #search-tabs {
-    @extend .hide-for-medium-down;
     margin: 1.1rem 0;
 
     .nav--horizontal {
@@ -100,7 +100,6 @@
       margin-left:4rem;
 
       li {
-
         @media #{$xlarge-up} {
           width: 12%;
         }
