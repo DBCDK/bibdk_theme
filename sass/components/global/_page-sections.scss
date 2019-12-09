@@ -17,7 +17,7 @@
 
 // search panel
 #search-panel {
-  background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/bibliotek.jpg");
+  background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,6 +41,11 @@
         color: $black--natural;
       }
     }
+
+    .which-library {
+      display: none;
+    }
+
   }
 
   #search-block-wrapper {
@@ -62,6 +67,19 @@
         margin: 1.5rem 0 1.5rem 4rem;
       }
     }
+  }
+
+  .which-library {
+    background-color: $white;
+    position: relative;
+    z-index: 200;
+    right: 1.1rem;
+    width: 7rem;
+    bottom: 2.2rem;
+    float: right;
+    padding: .3rem;
+    text-align: center;
+    margin-top: .3rem;
   }
 }
 

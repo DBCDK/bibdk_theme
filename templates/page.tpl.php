@@ -19,6 +19,9 @@
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->
     <?php print render($page['search_panel']); ?>
+    <!-- For now the bibliotek name is hardcoded.
+     this will be changed when the background is administrated though the backend -->
+    <div class="which-library">Gilleleje bibliotek</div>
   </div>
   <!-- search-panel end -->
 <?php endif; ?>
