@@ -20,7 +20,7 @@
     display: block;
     font-size: inherit;
     span > a, .dropdown-menu a {
-      font-size: inherit; 
+      font-size: inherit;
       line-height: inherit;
     }
   }
@@ -83,8 +83,7 @@
 // Works controls (above the list of works)
 // =============================================================================
 
-.panel-top.works-controls{
-  border: 1px solid $grey-border;
+.panel-top.works-controls {
   background-color: $grey-bg--section;
 }
 

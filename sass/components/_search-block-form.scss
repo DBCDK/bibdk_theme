@@ -18,7 +18,7 @@
     @media #{$large-up} {
       border: solid 1px $blue;
       padding: 0;
-      margin: 0 0 1rem 4rem;
+      margin: 0 0 0 4rem;
       width:75%;
     }
 
@@ -28,10 +28,10 @@
       font-family: ArialMT, sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
-      color: $black--natural;
+      color: $grey-text--dark;
       width: 100%;
       &:focus {
-        color: $black;
+        color: $grey-text--dark;
       }
     }
   }
@@ -78,6 +78,7 @@
       height: 3rem;
       @media #{$large-up} {
         height: 3.38rem;
+        padding: 0 2.5rem;
       }
       font-size: 1.2rem;
       font-weight: normal;
@@ -93,31 +94,28 @@
   @extend .hide-for-medium-down;
 
   #search-tabs {
-    margin: 1.1rem 0;
+    margin: 2rem 0 1rem;
 
     .nav--horizontal {
 
       margin-left:4rem;
-
       li {
-        @media #{$xlarge-up} {
-          width: 12%;
-        }
+        text-align: center;
+
+        width: 12%;
 
         a {
           @extend .link-as-box;
+          width: auto;
+          float: none;
           font-family: Arial-BoldMT, sans-serif;
           font-weight: bold;
           font-size: 0.75rem;
           color: $black;
           height: 2.5rem;
           line-height: 2.5rem;
-          padding: 0 1.375rem;
-
-          @media #{$xlarge-up} {
-            padding: 0;
-            text-align: center;
-          }
+          padding: 0;
+          display: inline;
 
           &.active {
             border-bottom: 0.1875rem solid $blue;
@@ -136,8 +134,7 @@
 // Search panel
 // ============================================================================
 #edit-advanced {
-  padding-top: 1.25rem;
-  margin: 0 4rem 2rem;
+  margin: 0 4rem 0;
 
   @media #{$small-only} {
     display: none;
