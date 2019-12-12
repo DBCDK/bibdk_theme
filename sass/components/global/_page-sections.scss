@@ -30,7 +30,9 @@
   &.no-background {
     box-shadow: none;
     background: $grey-6;
-    margin-bottom: -2.3rem;
+    @media #{$large-up} {
+      margin-bottom: -2.3rem;
+    }
     #search-block-wrapper {
 
       margin: 2rem 0 0;
@@ -69,7 +71,7 @@
       }
     }
   }
-
+  /* Text regarding which library is on the background image. */
   .which-library {
     color: $grey-text--light;
     position: relative;
@@ -81,6 +83,11 @@
     padding: .3rem;
     text-align: center;
     margin-top: .3rem;
+  }
+  @media #{$small-only} {
+    .which-library {
+      display: none;
+    }
   }
 }
 

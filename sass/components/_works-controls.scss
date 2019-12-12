@@ -89,10 +89,10 @@
 
 .searchresult_count {
   @include rem('padding', 2px 2px 2px 2px);
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
-  font-size: rem-calc(16px);
+  font-size: 1rem;
   font-weight: bold;
   color: $grey-text--dark;
   float:left;
@@ -153,8 +153,8 @@
 .pane-ting-openformat-full-view,
 .pane-ting-openformat-pager,
 .pane-ting-openformat-feeds {
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   float: right;
   margin-right: 20px;
   div > a, span > a {
@@ -225,7 +225,7 @@
       display: inline-block;
       @include rem('height', 30px);
       @include rem('line-height', 30px);
-      padding: 0 20px 0 0px;
+      padding: 0 20px 0 0;
     }
     .ajax-progress .throbber{
       position: absolute;
@@ -247,8 +247,8 @@
 
 .pane-bibdk-facetbrowser-bibdk-works-controls-facets-link {
   @include rem('padding', 2px 2px 2px 2px);
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
   font-size: rem-calc(16px);
   font-weight: bold;
