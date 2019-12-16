@@ -21,7 +21,7 @@
     <?php print render($page['search_panel']); ?>
     <!-- For now the bibliotek name is hardcoded.
      this will be changed when the background is administrated though the backend -->
-    <div class="which-library">Gilleleje bibliotek</div>
+    <div class="which-library">Foto: Gilleleje bibliotek</div>
   </div>
   <!-- search-panel end -->
 <?php endif; ?>
@@ -56,8 +56,8 @@
 
 <!-- columns start -->
 <section id="columns">
-
-  <a name="content"></a> <!-- used for scrolling -->
+  <!--
+    <a name="content"></a>  used for scrolling -->
   <?php if (!empty($title)): ?>
 
     <div class="row">

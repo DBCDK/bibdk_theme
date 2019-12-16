@@ -1,5 +1,8 @@
 {
   "name": "bibdk_theme",
+  "description": "bibdk_theme",
+  "license": "MIT",
+  "repository": {},
   "dependencies": {
     "del": "^0.1.3",
     "gulp": "^3.8.9",

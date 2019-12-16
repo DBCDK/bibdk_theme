@@ -28,9 +28,9 @@
       font-family: ArialMT, sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
-      color: $grey-text--dark;
+      color: $black--natural;
       width: 100%;
-      &:focus {
+      &::placeholder {
         color: $grey-text--dark;
       }
     }

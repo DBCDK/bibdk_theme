@@ -103,7 +103,7 @@
   font-weight: bold;
   padding-right: 10px;
   padding-left: 10px;
-  margin-right: 0px;
+  margin-right: 0;
   .pane-content a {
     color: $black--natural;
   }
@@ -111,7 +111,7 @@
 
 // bottom pager
 .works .works-controls .pane-ting-openformat-pager {
-  border-width-left: 0px;
+  border-width-left: 0;
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
 }
@@ -218,7 +218,7 @@
 }
 
 .pane-ting-openformat-full-view {
-  margin-right: 0px;
+  margin-right: 0;
   .full-view-links {
     height: inherit;
     a {
