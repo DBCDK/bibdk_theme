@@ -54,7 +54,7 @@
       color: $black--natural;
       border: none;
       @include appearance(none);
-      background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat;
+      background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat center center;
       background-size: 0.9375rem;
       padding: .625rem 0 .625rem 1rem;
     }
@@ -146,7 +146,7 @@
 
 #custom-search--advanced-toggle {
 
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   @media #{$xlarge-up} {
     //margin-right: 0.625rem;
   }
