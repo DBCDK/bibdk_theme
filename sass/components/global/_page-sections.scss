@@ -22,6 +22,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
+  @media #{$small-only} {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+  }
+
   position: relative;
   .lift-columns & {
     padding-bottom: 0;
