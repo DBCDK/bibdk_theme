@@ -119,6 +119,7 @@
 
           &.active {
             border-bottom: 0.1875rem solid $blue;
+            padding: 0 0.3125rem;
             color: $black;
           }
           &:hover {
@@ -146,7 +147,7 @@
 
 #custom-search--advanced-toggle {
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   @media #{$xlarge-up} {
     //margin-right: 0.625rem;
   }

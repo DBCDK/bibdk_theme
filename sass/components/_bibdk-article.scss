@@ -20,9 +20,10 @@ article.article-widget{
 .view-article-view {
   .views-field-title {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 0.9375rem;
     line-height: 1.25rem;
     @media #{$medium-up} {
+      font-size: 1.25rem;
       line-height: 1.7rem;
     }
     display: inline-block;
