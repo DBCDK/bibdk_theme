@@ -4,8 +4,8 @@
       <span id="seasonal"></span>
     <?php endif; ?>
     <div id="search-block-wrapper" class="clearfix">
-      <h1><?php print t('Søg,&nbsp;find&nbsp;og&nbsp;lån fra&nbsp;alle&nbsp;Danmarks&nbsp;biblioteker'); ?></h1>
-      <div id="search-block-primary">
+      <h1 id="search-block-label"><?php print $search['search_block_label']; ?></h1>
+      <div id="search-block-primary" class="clearfix">
         <?php print $search['search_block_form']; ?>
         <?php print $search['select_material_type']; ?>
         <?php print $search['actions']; ?>
@@ -19,7 +19,7 @@
         </div>
       </nav>
       <!-- SEARCH PAGE NAVIGATION END-->
-      <div class="<?php if(!isset($_GET['search_block_form'])): ?>hidden<?php endif; ?>">
+      <div class="">
         <?php if (isset($search['advanced'])): ?>
           <?php print $search['advanced']; ?>
         <?php endif; ?>

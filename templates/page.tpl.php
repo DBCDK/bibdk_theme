@@ -14,7 +14,7 @@
 
 <?php if (!empty($page['search_panel'])): ?>
   <!-- search-panel start | no-background is used when the user has searched. -->
-  <div id="search-panel"<?php if(isset($_GET['search_block_form'])): ?> class="no-background"<?php endif; ?> data-role="search">
+  <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="no-background"<?php endif; ?> data-role="search">
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->
@@ -72,11 +72,11 @@
       <div class="large-6 columns show-for-large-up">
         <?php print render($page['sidebar']); ?>
       </div>
-      <div class="large-18 columns">
+      <div class="large-18 columns" data-ajax-id="articles-view">
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
-      <div class="large-24 columns">
+      <div class="large-24 columns" data-ajax-id="articles-view">
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
@@ -95,4 +95,3 @@
   </section>
   <!-- banner end -->
 <?php endif; ?>
-

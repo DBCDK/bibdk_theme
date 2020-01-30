@@ -1,14 +1,7 @@
 // block below h1 on frontpage. Contains search form.
 #search-block-primary {
-/*
-  @media #{$small-only} {
-    margin: .5rem;
-  }
+  padding-bottom: .2rem;
 
-  @media #{$medium-only} {
-    margin: .5rem;
-  }
-*/
   // Search input field.
   .form-item-search-block-form {
     float: left;
@@ -19,7 +12,7 @@
       border: solid 1px $blue;
       padding: 0;
       margin: 0 0 0 4rem;
-      width:75%;
+      width:55%;
     }
 
     input[type="text"] {
@@ -39,24 +32,29 @@
   // Material type select.
   .form-item-select-material-type {
     width: 77%;
-    height: 3rem;
     display: inline-block !important;
     padding: 0;
     float:left;
     margin-right: 1%;
 
     @media #{$large-up} {
-      display: none !important;
+      width: 20%;
+      margin: 0 0.25rem;
     }
 
     select {
       font-size: 1.2rem;
+      height: 3rem;
       color: $black--natural;
       border: none;
       @include appearance(none);
       background: $white url('../../img/svg/arrow-down.svg') 95% no-repeat center center;
       background-size: 0.9375rem;
       padding: .625rem 0 .625rem 1rem;
+      @media #{$large-up} {
+        height: 3.4rem;
+        border: solid 1px $blue;
+      }
     }
   }
 
@@ -87,6 +85,16 @@
   }
 }
 
+.no-background {
+  #search-block-primary {
+    padding-bottom: .2rem;
+    // @media screen and (max-width: 999px) {
+    //   padding-bottom: 3rem;
+    // }
+  }
+}
+
+/*
 // =============================================================================
 // Search tabs
 // =============================================================================
@@ -130,12 +138,13 @@
     }
   }
 }
+*/
 
 // =============================================================================
 // Search panel
 // ============================================================================
 #edit-advanced {
-  margin: 0 4rem 0;
+  margin: 0.5rem 4rem 0;
 
   @media #{$small-only} {
     display: none;
@@ -146,8 +155,7 @@
 }
 
 #custom-search--advanced-toggle {
-
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   @media #{$xlarge-up} {
     //margin-right: 0.625rem;
   }
