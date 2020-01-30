@@ -13,12 +13,15 @@
 ?>
 
 <?php if (!empty($page['search_panel'])): ?>
-  <!-- search-panel start -->
-  <div id="search-panel" data-role="search">
+  <!-- search-panel start | no-background is used when the user has searched. -->
+  <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="no-background"<?php endif; ?> data-role="search">
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->
     <?php print render($page['search_panel']); ?>
+    <!-- For now the bibliotek name is hardcoded.
+     this will be changed when the background is administrated though the backend -->
+    <div class="which-library">Foto: Gilleleje bibliotek</div>
   </div>
   <!-- search-panel end -->
 <?php endif; ?>
@@ -53,8 +56,8 @@
 
 <!-- columns start -->
 <section id="columns">
-
-  <a name="content"></a> <!-- used for scrolling -->
+  <!--
+    <a name="content"></a>  used for scrolling -->
   <?php if (!empty($title)): ?>
 
     <div class="row">
@@ -69,11 +72,11 @@
       <div class="large-6 columns show-for-large-up">
         <?php print render($page['sidebar']); ?>
       </div>
-      <div class="large-18 columns">
+      <div class="large-18 columns" data-ajax-id="articles-view">
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
-      <div class="large-24 columns">
+      <div class="large-24 columns" data-ajax-id="articles-view">
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
@@ -92,4 +95,3 @@
   </section>
   <!-- banner end -->
 <?php endif; ?>
-

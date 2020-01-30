@@ -17,17 +17,30 @@ article.article-widget{
   }
 }
 
-.view-article-view .views-field-title{
-  font-weight: bold;
-  font-size: 15px;
-  line-height: rem-calc(20);
+.view-article-view {
+  .views-field-title {
+    font-weight: bold;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    @media #{$medium-up} {
+      font-size: 1.25rem;
+      line-height: 1.7rem;
+    }
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  @media #{$small-only} {
+    .views-field-title, .views-field-body {
+      margin-bottom: .5rem;
+    }
+  }
 }
 
-.views-row-first article.article-widget.bibdk-article-top{
+.views-row-first article.article-widget.bibdk-article-top {
   border-right:solid 2*$spacing $grey-bg--page;
 }
 
-.views-row-last article.article-widget.bibdk-article-top{
+.views-row-last article.article-widget.bibdk-article-top {
   border-left:solid 2*$spacing $grey-bg--page;
 }
 

@@ -20,7 +20,7 @@
     display: block;
     font-size: inherit;
     span > a, .dropdown-menu a {
-      font-size: inherit; 
+      font-size: inherit;
       line-height: inherit;
     }
   }
@@ -83,17 +83,16 @@
 // Works controls (above the list of works)
 // =============================================================================
 
-.panel-top.works-controls{
-  border: 1px solid $grey-border;
+.panel-top.works-controls {
   background-color: $grey-bg--section;
 }
 
 .searchresult_count {
   @include rem('padding', 2px 2px 2px 2px);
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
-  font-size: rem-calc(16px);
+  font-size: 1rem;
   font-weight: bold;
   color: $grey-text--dark;
   float:left;
@@ -104,7 +103,7 @@
   font-weight: bold;
   padding-right: 10px;
   padding-left: 10px;
-  margin-right: 0px;
+  margin-right: 0;
   .pane-content a {
     color: $black--natural;
   }
@@ -112,7 +111,7 @@
 
 // bottom pager
 .works .works-controls .pane-ting-openformat-pager {
-  border-width-left: 0px;
+  border-width-left: 0;
   background-color: $grey-bg--section;
   border: 1px solid $grey-border;
 }
@@ -154,8 +153,8 @@
 .pane-ting-openformat-full-view,
 .pane-ting-openformat-pager,
 .pane-ting-openformat-feeds {
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   float: right;
   margin-right: 20px;
   div > a, span > a {
@@ -219,14 +218,14 @@
 }
 
 .pane-ting-openformat-full-view {
-  margin-right: 0px;
+  margin-right: 0;
   .full-view-links {
     height: inherit;
     a {
       display: inline-block;
       @include rem('height', 30px);
       @include rem('line-height', 30px);
-      padding: 0 20px 0 0px;
+      padding: 0 20px 0 0;
     }
     .ajax-progress .throbber{
       position: absolute;
@@ -248,8 +247,8 @@
 
 .pane-bibdk-facetbrowser-bibdk-works-controls-facets-link {
   @include rem('padding', 2px 2px 2px 2px);
-  height: rem-calc(64px);
-  line-height: rem-calc(64px);
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
   font-size: rem-calc(16px);
   font-weight: bold;
