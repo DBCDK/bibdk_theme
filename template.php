@@ -474,6 +474,22 @@ function _bibdk_theme_get_topbar_links() {
     '#svg' => 'svg-chat',
   );
 
+  $links[] = array(
+    '#theme' => 'link_with_svg',
+    '#text' => t('Videnskabelige artikler'),
+    '#path' => 'http://statsbiblioteket.dk/videnskabeligeartikler/',
+    '#options' => array(
+      'attributes' => array(
+        'class' => array('visible-for-large-up'),
+        'target' => array('_new'),
+        'data-rel' => array('helpdesk'),
+      ),
+    ),
+    '#prefix' => '<span class="external" >',
+    '#suffix' => '</span>',
+    '#svg' => 'svg-media-article',
+  );
+
   if ($user->uid) {
     $links[] = array(
       '#theme' => 'link_with_svg',
