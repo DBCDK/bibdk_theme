@@ -13,38 +13,47 @@
       $('select[data-js-id="js-select-material-type"]', context).each(function(key, item) {
         $(this).on('change', function(e) {
           if (window.matchMedia('screen and (min-width: 768px)').matches) {
-            var query = $('input[name="search_block_form"]').val();
             var path = $(this).val();
-            Drupal.getCustomSearchForm(path);
-            Drupal.getArticlesView(path);
+            var material = path.split("/");
+            material = ( (material[1] !== undefined)) ? material[1] : '';
+            Drupal.getCustomSearchForm(path, material);
+            Drupal.getArticlesView(material);
           }
         })
       });
     }
   };
 
-  Drupal.getCustomSearchForm = function(path) {
+  Drupal.getCustomSearchForm = function(path, material) {
     // Retrieve advanced searchform
     var url = Drupal.settings.basePath + Drupal.settings.pathPrefix + 'bibdk_custom_search/ajax/get_search_panel';
     jQuery.get(url, {page_id: path})
       .done(function (data, response) {
         Drupal.settings.bibdk_custom_search.advancedSearchIsLoaded = true;
         var $new = $('#search-advanced-panel', data);
+        var tabs = {
+          'bog': 'boeger',
+          'artikel': 'artikler',
+          'film': 'film',
+          'net': 'ematerialer',
+          'spil': 'spil',
+          'musik': 'musik',
+          'noder': 'noder'
+        };
+        tab = ( (tabs[material] !== undefined)) ? tabs[material] : '';
         $('#search-advanced-panel').replaceWith($new);
+        $('#edit-advanced').attr("class", "");
+        $('#edit-advanced').addClass(tab);
         Drupal.attachBehaviors($new, Drupal.settings);
         onLoad.setFocus();
       })
       .fail(function () {
         throw new Error('An error happend while loading search pages');
       })
-
   };
 
-  Drupal.getArticlesView = function(path) {
+  Drupal.getArticlesView = function(material) {
     // Retrieve bibdk_articles view.
-    var material = path.split("/");
-    material = ( (material[1] !== undefined)) ? material[1] : '';
-
     request = $.ajax({
       url: Drupal.settings.basePath + 'views/ajax',
       type: 'post',
