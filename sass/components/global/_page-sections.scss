@@ -9,7 +9,7 @@
   .infomedia-article & {
     background-color: $white;
   }
-  
+
   .logo {
     float: left;
   }
@@ -17,10 +17,86 @@
 
 // search panel
 #search-panel {
-  background-color: $grey-bg--page;
+  background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 30.625rem;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+  @media #{$large-up} {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
+  }
 
+  position: relative;
   .lift-columns & {
     padding-bottom: 0;
+  }
+
+  &.no-background {
+    box-shadow: none;
+    background: $grey-6;
+    @media #{$large-up} {
+      margin-bottom: -2.3rem;
+    }
+    #search-block-wrapper {
+
+      margin: 2rem 0 0;
+      @media screen and (max-width: 999px) {
+        margin: 2rem 1rem 0;
+      }
+
+      h1 {
+        color: $black--natural;
+      }
+    }
+
+    .which-library {
+      display: none;
+    }
+
+  }
+
+  #search-block-wrapper {
+    @media #{$large-up} {
+      background-color: #FFF;
+    }
+    margin: 8rem 0;
+    padding-bottom: 3rem;
+    @media screen and (max-width: 999px) {
+      margin: 8rem 1rem 2rem;
+      padding-bottom: 0;
+    }
+
+    h1 {
+      font-family: Dosis, sans-serif;
+      margin: 1.5rem 0;
+      font-weight: bold;
+      color: $white;
+      @media #{$large-up} {
+        color: $black--natural;
+        margin: 2.5rem 0 1rem 4rem;
+      }
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+  /* Text regarding which library is on the background image. */
+  .which-library {
+    color: $grey-text--light;
+    position: relative;
+    z-index: 200;
+    right: 1.1rem;
+    bottom: 2.2rem;
+    float: right;
+    padding: .3rem;
+    text-align: center;
+    margin-top: .3rem;
+  }
+  @media #{$small-only} {
+    .which-library {
+      display: none;
+    }
   }
 }
 
@@ -45,9 +121,9 @@
 // Carousel
 #carousel {
   @extend .padded--vertical;
-  
+
   display: none;
-  
+
   @media #{$medium-up} {
     display: block;
     background-color: $grey-bg--page;
@@ -71,14 +147,14 @@
 // Columns
 #columns {
   @extend .padded--vertical;
-  min-height: 300px;
+  min-height: 18.75rem;
   display: block;
   background-color: $grey-bg--page;
-  
+  margin: 1.6875rem 1rem auto;
   @media #{$medium-up} {
-    min-height: 500px;
+    min-height: 31.25rem;
     .lift-columns & {
-      padding-top: 10px;
+      padding-top: 0.625rem;
       background-color: $grey-bg--page;
     }
   }
