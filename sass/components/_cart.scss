@@ -2,7 +2,17 @@
 // Bibdk Cart
 // =============================================================================
 
-.page-user-cart {
+
+#bibdk-cart-view-form {
+  background-color: $grey-bg--section;
+  .btn {
+    @media print {
+      display: none;
+    }
+  }
+  .manifestation-data{
+    padding-left: 2em;
+  }
   table.table {
     background-color: $white;
     width: 100%;
@@ -33,15 +43,6 @@
     }
     .form-item {
       padding: 3px 10px;
-    }
-  }
-}
-
-#bibdk-cart-view-form {
-  background-color: $grey-bg--section;
-  .btn {
-    @media print {
-      display: none;
     }
   }
 }
@@ -77,5 +78,11 @@
 #edit-cartactions .item-list ul li {
   @media #{$small-only} {
     margin: 14px 4px;
+  }
+}
+
+@media print {
+  a[href]:after {
+    content: none !important;
   }
 }
