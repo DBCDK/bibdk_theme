@@ -21,12 +21,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 30.625rem;
+  max-height: 21.625rem;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
-  @media #{$large-up} {
+  @media #{$xlarge-up} {
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
+    max-height: 30.625rem;
   }
-
   position: relative;
   .lift-columns & {
     padding-bottom: 0;
@@ -39,17 +39,14 @@
       margin-bottom: -2.3rem;
     }
     #search-block-wrapper {
-
       margin: 2rem 0 0;
       @media screen and (max-width: 999px) {
         margin: 2rem 1rem 0;
       }
-
       h1 {
         color: $black--natural;
       }
     }
-
     .which-library {
       display: none;
     }
@@ -81,13 +78,14 @@
       }
     }
   }
+
   /* Text regarding which library is on the background image. */
   .which-library {
     color: $grey-text--light;
-    position: relative;
-    z-index: 200;
+    position: absolute;
+    z-index: 20;
     right: 1.1rem;
-    bottom: 2.2rem;
+    bottom: 0.2rem;
     float: right;
     padding: .3rem;
     text-align: center;
@@ -99,6 +97,21 @@
     }
   }
 }
+
+#search-panel.show-advanced-toggled {
+  #search-block-wrapper {
+    margin: 8rem 0 2rem;
+    @media screen and (max-width: 999px) {
+      margin: 8rem 1rem 2rem;
+    }
+  }
+  .which-library {
+    @media screen and (max-width: 1300px) {
+      z-index: -1;
+    }
+  }
+}
+
 
 // Messages
 #messages {
