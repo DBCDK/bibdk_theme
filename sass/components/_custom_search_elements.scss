@@ -159,7 +159,6 @@
 // SEARCHPAGES: BOOKS
 //----------------------------------------
 #edit-advanced.boeger {
-
   #search-advanced-panel {
     .materialetype {
       width: 16%;
@@ -186,14 +185,16 @@
 // SEARCHPAGES: ARTIKLER
 //----------------------------------------
 #edit-advanced.artikler {
-
   #search-advanced-panel {
     fieldset {
       width: 49%;
     }
-    .sprog,
-    .materialetype,
-    .udgivelsesar {
+    fieldset#edit-expand {
+      width: 100%;
+    }
+    fieldset.sprog,
+    fieldset.materialetype,
+    fieldset.udgivelsesar {
       width: 33%;
       .column {
         width: 40%;
@@ -211,13 +212,16 @@
     fieldset {
       width: 49%;
     }
-    .genre_type {
+    fieldset#edit-expand {
+      width: 100%;
+    }
+    fieldset.genre_type {
       width: 100%;
       .column {
         width: 20%;
       }
     }
-    .nationalitet {
+    fieldset.nationalitet {
       width: 100%;
       .column {
         width: 24%;
@@ -226,11 +230,11 @@
         width: 28%;
       }
     }
-    .materialetype {
+    fieldset.materialetype {
       width: 20%;
     }
-    .aldersanbefaling,
-    .tilladt_for {
+    fieldset.aldersanbefaling,
+    fieldset.tilladt_for {
       width: 33%;
     }
   }
