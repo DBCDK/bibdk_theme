@@ -138,7 +138,7 @@
 //========================================
 // SEARCHPAGES: ALLE MATERIALER
 //----------------------------------------
-.allematerialer {
+#edit-advanced.allematerialer, #edit-advanced[class=""]  {
   #search-advanced-panel {
     .materialetype {
       width: 30%;
@@ -158,7 +158,7 @@
 //========================================
 // SEARCHPAGES: BOOKS
 //----------------------------------------
-.boeger {
+#edit-advanced.boeger {
 
   #search-advanced-panel {
     .materialetype {
@@ -185,7 +185,7 @@
 //========================================
 // SEARCHPAGES: ARTIKLER
 //----------------------------------------
-.artikler {
+#edit-advanced.artikler {
 
   #search-advanced-panel {
     fieldset {
@@ -205,7 +205,7 @@
 //========================================
 // SEARCHPAGES: FILM
 //----------------------------------------
-.film {
+#edit-advanced.film {
 
   #search-advanced-panel {
     fieldset {
@@ -239,7 +239,7 @@
 //========================================
 // SEARCHPAGES: EMATERIALER
 //----------------------------------------
-.ematerialer {
+#edit-advanced.ematerialer {
   #search-advanced-panel {
     .materialetype {
       width: 52%;
@@ -262,7 +262,7 @@
 //========================================
 // SEARCHPAGES: SPIL
 //----------------------------------------
-.spil {
+#edit-advanced.spil {
 
   #search-advanced-panel {
     .platform {
@@ -284,7 +284,7 @@
 //========================================
 // SEARCHPAGES: MUSIK
 //----------------------------------------
-.musik {
+#edit-advanced.musik {
 
   #search-advanced-panel {
     .musikgenre {
@@ -295,7 +295,7 @@
     }
     .materiale {
       width: auto;
-      min-width: 16rem;
+      min-width: 18rem;
       .column {
         width: 50%;
       }
@@ -306,7 +306,7 @@
 //========================================
 // SEARCHPAGES: NODER
 //----------------------------------------
-.noder {
+#edit-advanced.noder {
 
   #search-advanced-panel {
     .materiale {
