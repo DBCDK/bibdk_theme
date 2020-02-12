@@ -982,7 +982,12 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
       _break_into_columns_expand('expand', 'sprog', 'n/asprog', 3, $form);
       break;
     case 'bibdk_frontpage/bog':
+      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 2, $form);
+      break;
     case 'bibdk_frontpage/net':
+      _break_into_columns_expand('expand', 'materialetype', 'term_accessType=online', 2, $form);
+      _break_into_columns_expand('expand', 'sprog', 'n/asprog', 2, $form);
+      break;
     case 'bibdk_frontpage/artikel':
       _break_into_columns_expand('expand', 'sprog', 'n/asprog', 2, $form);
       break;
@@ -991,8 +996,8 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
       _break_into_columns_expand('main', 'genre, type', 'term_genre', 5, $form);
       break;
     case 'bibdk_frontpage/spil':
-      _break_into_columns_expand('main', 'platform', 'term_type', 2, $form);
-      _break_into_columns_expand('main', 'spilgenre, type', 'dkcclterm_em', 3, $form);
+      _break_into_columns_expand('main', 'platform', 'n/aplatform', 2, $form);
+      _break_into_columns_expand('main', 'spilgenre, type', 'term_subject', 3, $form);
       break;
     case 'bibdk_frontpage/musik':
       _break_into_columns_expand('main', 'musikgenre', 'term_genre', 4, $form);
@@ -1055,7 +1060,6 @@ function _break_into_columns_expand($region, $group, $type, $cnum, &$form) {
   if (!$cnum) {
     return FALSE;
   }
-
   if (isset($form['advanced'][$region][$group]) && is_array($form['advanced'][$region][$group])) {
     $parent_id = key($form['advanced'][$region][$group]);
     if (!empty($form['advanced'][$region][$group][$parent_id][$type])) {
