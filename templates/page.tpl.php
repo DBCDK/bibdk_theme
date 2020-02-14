@@ -56,8 +56,7 @@
 
 <!-- columns start -->
 <section id="columns">
-  <!--
-    <a name="content"></a>  used for scrolling -->
+  <a name="content"></a><!-- used for scrolling -->
   <?php if (!empty($title)): ?>
 
     <div class="row">
