@@ -15,13 +15,15 @@
 <?php if (!empty($page['search_panel'])): ?>
   <!-- search-panel start | no-background is used when the user has searched. -->
   <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="no-background"<?php endif; ?> data-role="search">
+    <div id="search-panel-background">
+        <div class="which-library">Foto: Gilleleje bibliotek</div>
+    </div>
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
     <!-- blind user tag slut -->
     <?php print render($page['search_panel']); ?>
     <!-- For now the bibliotek name is hardcoded.
      this will be changed when the background is administrated though the backend -->
-    <div class="which-library">Foto: Gilleleje bibliotek</div>
   </div>
   <!-- search-panel end -->
 <?php endif; ?>

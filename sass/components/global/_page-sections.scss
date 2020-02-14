@@ -17,19 +17,23 @@
 
 // search panel
 #search-panel {
-  background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 21.625rem;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
-  @media #{$xlarge-up} {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
-    max-height: 30.625rem;
-  }
   position: relative;
-  .lift-columns & {
-    padding-bottom: 0;
+  #search-panel-background {
+    width: 100%;
+    background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 21.625rem;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.50);
+    @media #{$xlarge-up} {
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.25);
+      min-height: 30.625rem;
+    }
+    position: absolute;
+    .lift-columns & {
+      padding-bottom: 0;
+    }
   }
 
   &.show-advanced-toggled {
