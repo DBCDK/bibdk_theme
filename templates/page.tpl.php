@@ -58,7 +58,6 @@
 
 <!-- columns start -->
 <section id="columns">
-  <a name="content"></a><!-- used for scrolling -->
   <?php if (!empty($title)): ?>
 
     <div class="row">
@@ -74,10 +73,12 @@
         <?php print render($page['sidebar']); ?>
       </div>
       <div class="large-18 columns" data-ajax-id="articles-view">
+        <a name="content"></a><!-- used for scrolling -->
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
       <div class="large-24 columns" data-ajax-id="articles-view">
+        <a name="content"></a><!-- used for scrolling -->
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
