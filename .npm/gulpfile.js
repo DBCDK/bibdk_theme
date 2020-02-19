@@ -13,16 +13,12 @@ var gulp = require('gulp');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
 var gulpif = require('gulp-if');
-var jshint = require('gulp-jshint');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
-var watch = require('gulp-watch');
-var path = require('path');
-var runSequence = require('run-sequence');
+var rename = require('gulp-rename')
 
 // Build CSS with compass
 gulp.task('css', function() {
@@ -32,11 +28,18 @@ gulp.task('css', function() {
 });
 
 // Compile SVG files
-gulp.task('svg', function() {
+gulp.task('svg', function () {
   return gulp.src(cfg.paths.svg.src)
-    .pipe(plumber())
-    .pipe(svgmin(cfg.settings.svgmin))
-    .pipe(svgstore(cfg.settings.svgstore))
+    .pipe(rename({prefix: 'svg-'}))
+    .pipe(svgmin(function () {
+      return {
+        plugins: [{
+          cleanupIDs: false
+        }]
+      };
+    }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename("images.svg"))
     .pipe(gulp.dest(cfg.paths.svg.dest));
 });
 
@@ -46,15 +49,8 @@ gulp.task('imgcopy', function() {
     .pipe(gulp.dest(cfg.paths.imgcopy.dest));
 });
 
-// Clean up the build directory
-gulp.task('clean', function() {
-  del([cfg.paths.build], {
-    force: true
-  });
-});
-
 // Concatenate JavaScript files
-gulp.task('js', function() {
+gulp.task('js', function(callback) {
   //concatenating header
   gulp.src(cfg.paths.js.header_src)
     .pipe(concat('header.js'))
@@ -86,36 +82,22 @@ gulp.task('js', function() {
     .pipe(gulpif(argv.production, uglify()))
     .pipe(gulpif(!argv.production, sourcemaps.write('./')))
     .pipe(gulp.dest(cfg.paths.js.dest));
+
+  callback();
 });
 
 // Clean up the build directory
 gulp.task('clean', function() {
-  del([cfg.paths.build], {
+  return del([cfg.paths.build], {
     force: true
   });
 });
 
-// Watch
-gulp.task('watch', ['build'], function() {
-  gulp.watch(cfg.paths.css.src, ['css']);
-  gulp.watch(cfg.paths.svg.src, ['svg']);
-  gulp.watch(cfg.paths.js.js_root, ['js']);
-});
-
 // Build
-gulp.task('build', ['clean'], function() {
-  runSequence('clean', 'svg', 'css', 'imgcopy', 'js');
-});
-
-// Default
-gulp.task('default', function() {
-  console.log("#########################################");
-  console.log(" ");
-  console.log("  To start developing:");
-  console.log("  'gulp watch'");
-  console.log(" ");
-  console.log("  To build a package:");
-  console.log("  'grunt build'");
-  console.log(" ");
-  console.log("#########################################");
-});
+gulp.task('build', gulp.series(
+  'clean',
+  'svg',
+  'css',
+  'imgcopy',
+  'js'
+));
