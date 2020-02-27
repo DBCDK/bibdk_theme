@@ -976,6 +976,11 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   if (empty($form['page_id']['#value']) || !$page_id = $form['page_id']['#value']) {
     return;
   }
+  // Set advanced dropdown on work landing pages.
+  $position = strpos($page_id, 'work/');
+  if ($position !== false) {
+    $page_id = 'bibdk_frontpage';
+  }
 
   switch ($page_id) {
     case 'bibdk_frontpage':
