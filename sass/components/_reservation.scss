@@ -33,8 +33,7 @@
   width: auto;
   right: -17px;
   background-color: $grey-bg--page;
-  .add-item-to-cart {
-  }
+  position: absolute;
 
   a.infotext-order-any-edition-link {
     padding: 0px;
@@ -129,4 +128,3 @@
   font-size: 11px;
   padding: 2px 15px;
 }
-
