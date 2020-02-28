@@ -18,7 +18,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var uglify = require('gulp-uglify');
-var rename = require('gulp-rename')
+var rename = require('gulp-rename');
+var svgo = require('svgo');
 
 // Build CSS with compass
 gulp.task('css', function() {
@@ -33,9 +34,15 @@ gulp.task('svg', function () {
     .pipe(rename({prefix: 'svg-'}))
     .pipe(svgmin(function () {
       return {
-        plugins: [{
-          cleanupIDs: false
-        }]
+        plugins: [
+          {cleanupIDs: false},                  // don't remove  ids
+          {removeViewBox: false},               // don't remove the viewbox atribute from the SVG
+          {removeUselessStrokeAndFill: false},  // don't remove Useless Strokes and Fills
+          {removeEmptyAttrs: false}             // don't remove Empty Attributes from the SVG
+        ],
+        js2svg: {
+          pretty: true
+        }
       };
     }))
     .pipe(svgstore({ inlineSvg: true }))
