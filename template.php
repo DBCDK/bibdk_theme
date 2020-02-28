@@ -81,6 +81,7 @@ function bibdk_theme_theme() {
         'content' => '',
         'attributes' => array(),
         'svg' => '',
+        'title' => '',
       ),
     ),
     'button_with_svg' => array(
@@ -131,6 +132,7 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
     'note' => 'media-note', // jgn: hvad er det? sheetmusic? ("node"?)
     'audiobook' => 'media-audiobook',
     'sheetmusic' => 'media-sheetmusic',
+    'star' => 'star',
     'none' => 'media-none',
   );
   $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
