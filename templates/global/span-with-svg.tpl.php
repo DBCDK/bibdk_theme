@@ -18,8 +18,9 @@
 
 <span <?php print drupal_attributes($attributes); ?> >
 <?php if ($svg): ?>
-  <svg class="svg-icon <?php print $svg; ?>">
+  <svg class="svg-icon <?php print $svg; ?>" viewbox="0 0 17 22">
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
+    <title><?php print $title;?></title>
   </svg>
 <?php endif; ?>
   <?php print drupal_render($content); ?>
