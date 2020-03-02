@@ -81,6 +81,7 @@ function bibdk_theme_theme() {
         'content' => '',
         'attributes' => array(),
         'svg' => '',
+        'title' => '',
       ),
     ),
     'button_with_svg' => array(
@@ -131,6 +132,7 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
     'note' => 'media-note', // jgn: hvad er det? sheetmusic? ("node"?)
     'audiobook' => 'media-audiobook',
     'sheetmusic' => 'media-sheetmusic',
+    'star' => 'star',
     'none' => 'media-none',
   );
   $icon_type = is_array($vars['icon']) ? reset($vars['icon']) : $vars['icon'];
@@ -979,6 +981,11 @@ function _alter_search_block_form(&$form, &$form_state, $form_id) {
   // break elements into columns
   if (empty($form['page_id']['#value']) || !$page_id = $form['page_id']['#value']) {
     return;
+  }
+  // Set advanced dropdown on work landing pages.
+  $position = strpos($page_id, 'work/');
+  if ($position !== false) {
+    $page_id = 'bibdk_frontpage';
   }
 
   switch ($page_id) {
