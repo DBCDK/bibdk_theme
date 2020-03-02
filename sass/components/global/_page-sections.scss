@@ -21,6 +21,7 @@
   #search-panel-background {
     width: 100%;
     background-image: url("/profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg");
+    // /profiles/bibdk/themes/bibdk_theme/img/covers/gilleleje.jpg
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,27 +49,6 @@
         z-index: -1;
       }
     }
-  }
-
-  &.no-background {
-    box-shadow: none;
-    background: $grey-6;
-    @media #{$large-up} {
-      margin-bottom: -2.3rem;
-    }
-    #search-block-wrapper {
-      margin: 2rem 0 0;
-      @media screen and (max-width: 999px) {
-        margin: 2rem 1rem 0;
-      }
-      h1 {
-        color: $black--natural;
-      }
-    }
-    .which-library {
-      display: none;
-    }
-
   }
 
   #search-block-wrapper {
@@ -109,14 +89,24 @@
     padding: .3rem;
     text-align: center;
     margin-top: .3rem;
-  }
-  @media #{$small-only} {
-    .which-library {
-      display: none;
+    display: none;
+    @media screen and (min-width: 1300px) {
+      display: block;
     }
   }
 }
 
+.page-work #search-panel {
+  #search-block-wrapper {
+    margin: 2rem 0 0;
+    @media screen and (max-width: 999px) {
+      margin: 2rem 1rem 0;
+    }
+    h1 {
+      color: $black--natural;
+    }
+  }
+}
 
 // Messages
 #messages {
