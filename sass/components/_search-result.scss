@@ -244,7 +244,7 @@
     display: none;
   }
   .work-header:hover {
-    background-color: transparent;
+    background-color: $grey-6;
     cursor: inherit;
   }
 }
@@ -337,7 +337,7 @@
 }
 
 .page-work .content, .page-search .content {
-  background-color: $grey-bg--section;
+  background-color: $grey-bg--page;
 }
 
 // =============================================================================

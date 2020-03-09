@@ -200,7 +200,7 @@ function bibdk_theme_pager_link($variables) {
     $attributes['title'] = strip_tags($text);
   }
 
-  $attributes['href'] = url($_GET['q'], array('query' => $query));
+  $attributes['href'] = url($_GET['q'], array('query' => $query, 'fragment'=>'content'));
 
   if (isset($icon['position']) && isset($icon['markup'])) {
     switch ($icon['position']) {
