@@ -1,3 +1,10 @@
+// Temporarily disable reservation
+.field-name-bibdk-coll-reservation-button,
+.reservation-button,
+[data-rel="reservation"]  {
+  display: none;
+}
+
 // @todo remove on merge
 #columns {
   background-color: $grey-6;
