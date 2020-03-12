@@ -1,7 +1,5 @@
 // Temporarily disable reservation
-.field-name-bibdk-coll-reservation-button,
-.reservation-button,
-[data-rel="reservation"]  {
+.reservation-button {
   display: none;
 }
 

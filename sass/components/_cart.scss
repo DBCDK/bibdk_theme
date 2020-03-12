@@ -2,7 +2,10 @@
 // Bibdk Cart
 // =============================================================================
 
-
+// Temp close reservation
+[data-rel="reservation"] {
+  display: none;
+}
 #bibdk-cart-view-form {
   background-color: $grey-bg--section;
   .btn {
