@@ -11,15 +11,6 @@
  *
  */
 ?>
-<script>
-"use strict";
-(function () {
-  window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
-    console.log(scroll)
-});
-})();
-</script>
 <?php if (!empty($page['search_panel'])): ?>
   <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="<?php print ($page["search_panel"]["search_form"]["advanced"]["#toggled_class"]); ?>"<?php endif; ?> data-role="search">
     <div id="search-panel-background">
