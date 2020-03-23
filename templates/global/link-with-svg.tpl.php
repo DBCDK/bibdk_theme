@@ -26,6 +26,7 @@ $text                  = (is_array($text) && !empty($text))               ? drup
 
   <?php if ($svg != 'svg-menu' && $svg != 'svg-user') { ?>
     <svg class="svg-icon <?php print $svg; ?>">
+      <title><?php print $svg; ?></title>
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
     </svg>
   <?php }  ?>

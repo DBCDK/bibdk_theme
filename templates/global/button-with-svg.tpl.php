@@ -33,6 +33,7 @@ $element['type'] = 'submit';
 
   <?php if ($svg) { ?>
     <svg class="svg-icon <?php print $svg; ?>">
+      <title><?php print $svg;?></title>
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#<?php print $svg; ?>"></use>
     </svg>
   <?php }  ?>
@@ -42,4 +43,3 @@ $element['type'] = 'submit';
   <?php } ?>
 
 </button>
-

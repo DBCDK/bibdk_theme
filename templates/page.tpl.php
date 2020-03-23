@@ -11,6 +11,15 @@
  *
  */
 ?>
+<script>
+"use strict";
+(function () {
+  window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+    console.log(scroll)
+});
+})();
+</script>
 <?php if (!empty($page['search_panel'])): ?>
   <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="<?php print ($page["search_panel"]["search_form"]["advanced"]["#toggled_class"]); ?>"<?php endif; ?> data-role="search">
     <div id="search-panel-background">
@@ -71,12 +80,12 @@
         <?php print render($page['sidebar']); ?>
       </div>
       <div class="large-18 columns" data-ajax-id="articles-view">
-        <a name="content"></a><!-- used for scrolling -->
+        <div id="content"></div><!-- used for scrolling -->
         <?php print render($page['content']); ?>
       </div>
     <?php else: ?>
       <div class="large-24 columns" data-ajax-id="articles-view">
-        <a name="content"></a><!-- used for scrolling -->
+        <div id="content"></div><!-- used for scrolling -->
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
