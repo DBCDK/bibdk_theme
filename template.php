@@ -145,7 +145,7 @@ function bibdk_theme_preprocess_bibdk_icon(&$vars) {
  */
 function bibdk_theme_preprocess_pager_first(&$vars) {
   $vars['text'] = t('pager_first', array(), array('context' => 'bibdk_theme'));
-  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-first"><use xlink:href="#svg-arrow-first" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-first"><use xlink:href="#svg-arrow-first" xmlns:xlink="http://www.w3.org/1999/xlink"/></svg>';
   $vars['parameters']['icon']['position'] = 'suffix';
 }
 
@@ -154,7 +154,7 @@ function bibdk_theme_preprocess_pager_first(&$vars) {
  */
 function bibdk_theme_preprocess_pager_next(&$vars) {
   $vars['text'] = t('pager_next >', array(), array('context' => 'bibdk_theme'));
-  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-right"><use xlink:href="#svg-arrow-right" xmlns:xlink="http://www.w3.org/1999/xlink"/></svg>';
   $vars['parameters']['icon']['position'] = 'suffix';
 }
 
@@ -163,7 +163,7 @@ function bibdk_theme_preprocess_pager_next(&$vars) {
  */
 function bibdk_theme_preprocess_pager_previous(&$vars) {
   $vars['text'] = t('< pager_previous ', array(), array('context' => 'bibdk_theme'));
-  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-left"><use xlink:href="#svg-arrow-left" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>';
+  $vars['parameters']['icon']['markup'] = '<svg class="svg-arrow-left"><use xlink:href="#svg-arrow-left" xmlns:xlink="http://www.w3.org/1999/xlink"/></svg>';
   $vars['parameters']['icon']['position'] = 'prefix';
 }
 
@@ -487,7 +487,7 @@ function _bibdk_theme_get_topbar_links() {
     '#options' => array(
       'attributes' => array(
         'class' => array('visible-for-large-up'),
-        'target' => array('_new'),
+        'target' => array('_blank'),
         'data-rel' => array('helpdesk'),
       ),
     ),
