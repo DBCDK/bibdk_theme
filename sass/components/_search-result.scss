@@ -90,6 +90,11 @@
   }
 }
 
+.work-field-label {
+  float: left;
+  margin-right: .3rem;
+}
+
 .work-types-actions {
   @media #{$large-up} {
     float: right;
