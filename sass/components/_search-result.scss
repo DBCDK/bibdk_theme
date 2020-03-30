@@ -295,6 +295,17 @@
     padding-right: 2em;
     max-width: 120px;
   }
+  // Add divider between series titles
+  .field-name-bibdk-mani-series,
+  .field-name-bibdk-mani-related-series {
+    .openformat-field a:after {
+      content: ',';
+      color: #000000;
+    }
+    .openformat-field:last-of-type a:after {
+      content: '';
+    }
+  }
 
   // Add a distinction color to specific fields
   .field-name-bibdk-mani-distinction .field-item,
