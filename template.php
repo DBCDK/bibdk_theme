@@ -676,6 +676,15 @@ function bibdk_theme_preprocess_page(&$vars) {
     $front = '<front>';
   }
 
+  // Bibliotek.dk background image and image caption
+  $fid = theme_get_setting('background_image');
+  $file = file_load($fid);
+  $uri = $file->uri;
+  $url = file_create_url($uri);
+  $image_caption = theme_get_setting('background_image_title');
+  $vars['page']['image_url'] = $url;
+  $vars['page']['image_title'] = $image_caption;
+
   global $language;
   $language_default = language_default();
   $lang_obj = $language;
