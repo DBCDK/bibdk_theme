@@ -13,8 +13,8 @@
 ?>
 <?php if (!empty($page['search_panel'])): ?>
   <div id="search-panel"<?php if(isset($_GET['form_id']) && $_GET['form_id']='search_block_form'): ?> class="<?php print ($page["search_panel"]["search_form"]["advanced"]["#toggled_class"]); ?>"<?php endif; ?> data-role="search">
-    <div id="search-panel-background">
-        <div class="which-library">Foto: Gilleleje bibliotek</div>
+    <div id="search-panel-background" style="background-image: url(<?php print $page['image_url']; ?>)">
+        <div class="which-library"><?php print $page['image_title']; ?></div>
     </div>
     <!-- blind user tag start -->
     <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
