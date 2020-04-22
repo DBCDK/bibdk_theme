@@ -16,7 +16,7 @@ function bibdk_theme_form_system_theme_settings_alter(&$form, $form_state) {
       'file_validate_extensions' => array('jpg jpeg'),
       'file_validate_size' => array(1*1024*1024)
     ),
-    '#upload_location' => 'public://bibdk_background_images/',
+    '#upload_location' => 'public://',
     '#default_value' => theme_get_setting('background_image'),
   );
   $form['background']['background_image_title'] = array(
