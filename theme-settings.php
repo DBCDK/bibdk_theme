@@ -4,7 +4,7 @@ function bibdk_theme_form_system_theme_settings_alter(&$form, $form_state) {
 
   $bg_image = theme_get_setting('background_image');
   $settings_theme = $form_state['build_info']['args'][0];
-  // BUG: Force file to be permanent.
+  // BUG: Force file to be permanently stored.
   if (!empty($bg_image)) {
     _fix_permanent_image('background_image', $settings_theme);
   }
