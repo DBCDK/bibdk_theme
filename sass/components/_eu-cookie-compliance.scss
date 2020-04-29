@@ -1,0 +1,57 @@
+#sliding-popup {
+  .eu-cookie-compliance-banner {
+    .popup-content {
+      background-color: #088eb4 !important;
+      width: 100%;
+      @media #{$xlarge-up} {
+        max-width: 62rem;
+      }
+      .eu-cookie-compliance-default-button {color: #088eb4 !important;}
+      .eu-cookie-compliance-secondary-button {color: #000 !important;}
+      .agree-button {}
+      .decline-button {}
+      .eu-cookie-compliance-more-button {}
+      #popup-text {
+        width: 66%;
+        margin: 0.5rem 0;
+        padding: 0 1rem;
+      }
+      #popup-buttons {
+        width: 33%;
+        margin: 0.5rem 0;
+        color: #088eb4 !important;
+      }
+      .find-more-button {
+        cursor: pointer;
+        display: inline;
+        margin-right: 5px;
+        vertical-align: middle;
+        overflow: visible;
+        width: auto;
+        -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+        box-shadow: inset 0px 1px 0px 0px #ffffff;
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#ededed),color-stop(1,#dfdfdf));
+        background: -moz-linear-gradient(center top,#ededed 5%,#dfdfdf 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',endColorstr='#dfdfdf');
+        background-color: #ededed;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: 1px solid #dcdcdc;
+        display: inline-block;
+        color: #000 !important;
+        font-family: arial;
+        font-weight: bold;
+        padding: 4px 8px;
+        text-decoration: none;
+        text-shadow: 1px 1px 0px #ffffff;
+        top: 0.5rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+#sliding-popup.sliding-popup-bottom {
+  background: #088eb4 !important;
+}
