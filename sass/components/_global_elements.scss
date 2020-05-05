@@ -6,7 +6,11 @@
 .page-reservation {
 
   background: $grey-bg--page;
-
+  h1 {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 0.4em;
+  }
   h2, .help-menu-subheader h1, .newsroom-subheader {
     font-weight: bold;
     font-size: 1.2em;
