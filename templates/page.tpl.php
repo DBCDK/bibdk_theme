@@ -17,7 +17,7 @@
         <div class="which-library"><?php print $page['image_title']; ?></div>
     </div>
     <!-- blind user tag start -->
-    <h2 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h2>
+    <h1 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h1>
     <!-- blind user tag slut -->
     <?php print render($page['search_panel']); ?>
     <!-- For now the bibliotek name is hardcoded.
