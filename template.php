@@ -677,6 +677,7 @@ function bibdk_theme_preprocess_page(&$vars) {
   }
 
   // Bibliotek.dk background image and image caption
+  $vars['page']['image_url'] = $vars['page']['image_title'] = NULL;
   $fid = theme_get_setting('background_image');
   if (!empty($fid)) {
     $file = file_load($fid);
