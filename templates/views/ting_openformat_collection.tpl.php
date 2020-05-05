@@ -20,8 +20,10 @@
       <div class="searchresult-work-wrapper" id="selid-<?php print $uid; ?>">
         <h3 class="searchresult-work-title"><?php print $title; ?></h3>
         <div class="searchresult-work-meta">
+<?php if (!empty($author)): ?>
           <h4><?php print is_array($author) ? implode(', ', $author) : $author; ?></h4>
           <span><?php print $part_of; ?></span>
+<?php endif; ?>
         </div>
       </div>
       <div class="work-types-actions">
