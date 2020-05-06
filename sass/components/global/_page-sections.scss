@@ -52,7 +52,7 @@
   #search-block-wrapper {
     z-index: 1000;
     @media #{$large-up} {
-      background-color: #FFF;
+      background-color: $white;
     }
     margin: 8rem 0;
     padding-bottom: 3rem;
@@ -102,6 +102,9 @@
     }
     h1 {
       color: $black--natural;
+      @media screen and (max-width: 999px) {
+        color: $white;
+      }
     }
   }
 }
