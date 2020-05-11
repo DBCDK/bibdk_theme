@@ -23,7 +23,7 @@
     <div class="row">
       <div class="footer-tab-bar-columns">
         <section class="footer-logo left hide-for-medium-down">
-          <a href="<?php print $home_path; ?>"><img src="<?php print $footerlogo_path; ?>"/></a>
+          <a href="<?php print $home_path; ?>"><img src="<?php print $footerlogo_path; ?>" alt="footer logo"/></a>
         </section>
         <section class="footer-social-links">
           <div class="social-links">
