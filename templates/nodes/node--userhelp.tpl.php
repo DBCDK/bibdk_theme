@@ -6,6 +6,7 @@
  * Copy this file to the active theme's '/templates' folder
  */
 ?>
+<h1><?php print t('LABEL_HELPPAGE_HEADER', array(), array('context' => 'bibdk_help')); ?></h1>
 <div class="<?php print implode(' ', $classes_array); ?>">
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>>
