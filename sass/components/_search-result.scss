@@ -57,7 +57,7 @@
   }
 }
 
-.work-title {
+.searchresult-work-wrapper {
   margin-bottom: rem-calc(10px);
   @media #{$large-up} {
     margin-bottom: 0px;
@@ -75,11 +75,11 @@
     cursor: pointer;
     text-decoration: underline;
   }
-  h2 {
+  h2.searchresult-work-title {
     @include typo('title', 'large', 'black');
     margin-bottom: 5px;
   }
-  h3, .title-meta {
+  h3, .searchresult-work-meta {
     @include typo('title', 'normal', 'grey-dark');
     font-weight: normal;
   }
