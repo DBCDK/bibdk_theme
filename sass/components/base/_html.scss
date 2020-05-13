@@ -13,7 +13,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   background: $black;
-  color: $grey-1;
+  color: $black--natural;
 }
 
 // =============================================================================
@@ -76,13 +76,12 @@ ul, ol {
 // =============================================================================
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: $blue;
-  &:hover {
-  }
-  &:focus {
-  }
+  &:hover,
+  &:focus,
   &:active {
+    color: $blue--hover;
   }
 }
 
@@ -139,4 +138,3 @@ pre {
 blockquote {
   margin: 1em 40px;
 }
-

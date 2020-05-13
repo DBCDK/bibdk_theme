@@ -21,6 +21,7 @@
   }
   a {
     display: block;
+    text-decoration: none;
   }
 }
 
@@ -40,8 +41,14 @@
 // Cart action
 // =============================================================================
 .add-item-to-cart {
-  color: $grey-text--dark;
+  color: $black--natural;
   margin-bottom: 8px;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+  }
   svg {
     //float: right;
     display: inline-block;

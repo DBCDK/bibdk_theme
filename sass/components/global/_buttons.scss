@@ -12,6 +12,12 @@ input[type="submit"].button-as-link {
 .btn-blue {
   background-color: $blue; // IE9 fix: background-image mixin fails in IE9
   color: $white;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $blue--hover;
+  }
 }
 
 .btn-grey {
@@ -30,6 +36,7 @@ input[type="submit"].button-as-link {
 a.btn {
   &:hover,
   &:focus {
+    background-color: $blue--hover;
     color: $white;
   }
 }
@@ -75,4 +82,3 @@ a.btn {
 button[type="button"] {
   border: medium none;
 }
-

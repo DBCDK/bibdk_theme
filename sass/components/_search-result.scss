@@ -3,11 +3,6 @@
   display: none;
 }
 
-// @todo remove on merge
-#columns {
-  background-color: $grey-6;
-}
-
 // =============================================================================
 // Responsive
 // =============================================================================
@@ -141,6 +136,9 @@
 .work-abstract, .work-fields {
   margin-bottom: 1rem;
 }
+.work-subject a {
+  text-decoration: none;
+}
 
 // List of types in work view
 .material-types-list {
@@ -237,9 +235,11 @@
 .ting-openformat-toggle-link.is-toggled {
   .toggle-text {
     display: none;
+    text-decoration: none;
   }
   .toggle-hide {
     display: inline-block;
+    text-decoration: none;
   }
 }
 
@@ -264,6 +264,9 @@
 // =============================================================================
 .subwork {
   padding: 0.5rem 1rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 // =============================================================================
@@ -294,6 +297,9 @@
   .field-label {
     padding-right: 2em;
     max-width: 120px;
+  }
+  .openformat-field a {
+    text-decoration: none;
   }
   // Add divider between series titles
   .field-name-bibdk-mani-series,
@@ -358,7 +364,7 @@
 }
 
 .page-work .content, .page-search .content {
-  background-color: $grey-bg--page;
+  background-color: $grey-6;
 }
 
 // =============================================================================

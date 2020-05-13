@@ -24,6 +24,12 @@
   a {
     @include typo("link", "item-links", "black");
     vertical-align: middle;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
   }
 
   margin-right: 10px;
@@ -145,5 +151,3 @@
     position: inherit;
   }
 }
-
-

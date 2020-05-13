@@ -8,6 +8,9 @@
 .bibdk-modal-header {
   height: rem-calc(60);
   display: table;
+  a {
+    text-decoration: none;
+  }
 }
 
 .bibdk-modal-title {

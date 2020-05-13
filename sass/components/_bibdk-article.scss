@@ -3,6 +3,7 @@ article svg.svg-arrow-right {
   width: rem-calc(12px);
   height: rem-calc(12px);
   fill: $black;
+  margin: 3px 5px;
   float: right;
 }
 
@@ -37,11 +38,11 @@ article.article-widget{
 }
 
 .views-row-first article.article-widget.bibdk-article-top {
-  border-right:solid 2*$spacing $grey-bg--page;
+  border-right:solid 2*$spacing $grey-6;
 }
 
 .views-row-last article.article-widget.bibdk-article-top {
-  border-left:solid 2*$spacing $grey-bg--page;
+  border-left:solid 2*$spacing $grey-6;
 }
 
 .panel-top .view-article-view{
@@ -50,9 +51,20 @@ article.article-widget{
 }
 
 .bibdk-article-top {
+  .inner {
+    padding: 0;
+  }
   a {
     display: block;
     width: 100%;
+    text-decoration: none;
+    padding: 15px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+      box-shadow: 0 0 0 2px $blue inset;
+    }
   }
 }
 
@@ -82,7 +94,14 @@ article.article-widget.bibdk-article-none-show-mobile,
 article.article-widget.bibdk-article-none-show-large,
 article.article-widget.bibdk-article-show-mobile,
 article.article-widget.bibdk-article-show-large {
-
+  .field-read-more .article-bottom-link {
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
   margin-bottom: 2*$spacing;
   background-color: $white;
   article.article-widget.bibdk-article-bottom, .widget   {

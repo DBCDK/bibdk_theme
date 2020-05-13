@@ -4,17 +4,42 @@
     line-height: 15px;
     @include bibdk-triangle(top);
     line-height: rem-calc(20px);
+    text-decoration: none;
+    &::after {
+      border-color: $black transparent transparent transparent;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $grey-bg--tabs;
+      svg {
+        fill: $white;
+      }
+      &::after {
+        border-color: $white transparent transparent transparent;
+      }
+    }
     .toggle-text {
       position: absolute;
       right: 3rem;
       font-weight: normal;
       line-height: 24px;
+      a {
+        text-decoration: none;
+      }
     }
   }
   &.active > a {
+    background-color: $grey-bg--tabs;
+    color: $white;
     &::after {
       @include apply-origin(50% 25%, false);
       @include rotate(180deg);
+      border-color: $white transparent transparent transparent;
+    }
+    svg {
+      fill: $white;
     }
   }
   border: 1px solid $grey-border;

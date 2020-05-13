@@ -32,17 +32,22 @@
 .order-any-btn-list {
   width: auto;
   right: -17px;
-  background-color: $grey-bg--page;
+  background-color: $white;
   position: absolute;
 
   a.infotext-order-any-edition-link {
     padding: 0px;
     color: $blue;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue--hover;
+    }
   }
 
   a.bibdk-popup-order-work:hover {
-    color: $black;
-    background-color: $grey-bg--section;
+    background-color: $blue--hover;
   }
 
   .svg-icon {

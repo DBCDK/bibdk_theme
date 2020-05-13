@@ -70,10 +70,20 @@
   }
 }
 
-.full-view-links span {
-  display: none;
-  @media #{$xlarge-up} {
-    display: inline;
+.full-view-links {
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $blue--hover;
+    }
+  }
+  span {
+    display: none;
+    @media #{$xlarge-up} {
+      display: inline;
+    }
   }
 }
 
@@ -85,6 +95,12 @@
 
 .panel-top.works-controls {
   background-color: $grey-bg--section;
+  .works-sort {
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 .searchresult_count {
@@ -106,6 +122,11 @@
   margin-right: 0;
   .pane-content a {
     color: $black--natural;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
   }
 }
 
@@ -123,6 +144,7 @@
   a {
     line-height: 18px;
     display: inline-block;
+    text-decoration: none;
   }
   .svg-arrow-right, .svg-arrow-left{
     height: 18px;
@@ -202,6 +224,7 @@
 
   .dropdown-menu a {
     white-space: nowrap;
+    text-decoration: none;
   }
 
   .dropdown-toggle {
@@ -241,6 +264,14 @@
         vertical-align: middle;
         margin-right: 4px;
       }
+      &:hover,
+      &:focus,
+      &:active {
+        color: $blue--hover;
+        svg {
+          fill: $blue--hover;
+        }
+      }
     }
   }
 }
@@ -262,5 +293,3 @@
     color: $white;
   }
 }
-
-

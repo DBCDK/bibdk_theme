@@ -60,6 +60,12 @@
     line-height: 0;
     vertical-align: middle;
     padding-left: 36px;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
   }
 
   span {
