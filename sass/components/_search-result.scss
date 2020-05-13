@@ -136,9 +136,6 @@
 .work-abstract, .work-fields {
   margin-bottom: 1rem;
 }
-.work-subject a {
-  text-decoration: none;
-}
 
 // List of types in work view
 .material-types-list {
@@ -297,9 +294,6 @@
   .field-label {
     padding-right: 2em;
     max-width: 120px;
-  }
-  .openformat-field a {
-    text-decoration: none;
   }
   // Add divider between series titles
   .field-name-bibdk-mani-series,
