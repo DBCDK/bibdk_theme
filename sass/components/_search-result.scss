@@ -80,11 +80,11 @@
     cursor: pointer;
     text-decoration: underline;
   }
-  h3.searchresult-work-title {
+  h2.searchresult-work-title {
     @include typo('title', 'large', 'black');
     margin-bottom: 5px;
   }
-  h4, .searchresult-work-meta {
+  h3, .searchresult-work-meta {
     @include typo('title', 'normal', 'grey-dark');
     font-weight: normal;
   }

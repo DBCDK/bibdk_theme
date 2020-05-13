@@ -16,12 +16,7 @@
     <div id="search-panel-background" style="background-image: url(<?php print $page['image_url']; ?>)">
         <div class="which-library"><?php print $page['image_title']; ?></div>
     </div>
-    <!-- blind user tag start -->
-    <h1 class="element-invisible"><?php print t('search material by types', array(), array('context' => 'ting_openformat')); ?></h1>
-    <!-- blind user tag slut -->
     <?php print render($page['search_panel']); ?>
-    <!-- For now the bibliotek name is hardcoded.
-     this will be changed when the background is administrated though the backend -->
   </div>
   <!-- search-panel end -->
 <?php endif; ?>

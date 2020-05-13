@@ -4,7 +4,7 @@
       <span id="seasonal"></span>
     <?php endif; ?>
     <div id="search-block-wrapper" class="clearfix">
-      <h2 id="search-block-label"><?php print $search['search_block_label']; ?></h2>
+      <h1 id="search-block-label"><?php print $search['search_block_label']; ?></h1>
       <div id="search-block-primary" class="clearfix">
         <?php print $search['search_block_form']; ?>
         <?php print $search['select_material_type']; ?>

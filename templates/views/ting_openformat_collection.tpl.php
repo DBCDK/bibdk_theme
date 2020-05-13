@@ -18,10 +18,10 @@
 <div <?php echo drupal_attributes($theme_attributes); ?>>
     <div role='link' tabindex="0" class="work-header clearfix" data-work-toggle="<?php print $uid; ?>">
       <div class="searchresult-work-wrapper" id="selid-<?php print $uid; ?>">
-        <h3 class="searchresult-work-title"><?php print $title; ?></h3>
+        <h2 class="searchresult-work-title"><?php print $title; ?></h2>
         <div class="searchresult-work-meta">
 <?php if (!empty($author)): ?>
-          <h4><?php print is_array($author) ? implode(', ', $author) : $author; ?></h4>
+          <h3><?php print is_array($author) ? implode(', ', $author) : $author; ?></h3>
           <span><?php print $part_of; ?></span>
 <?php endif; ?>
         </div>
