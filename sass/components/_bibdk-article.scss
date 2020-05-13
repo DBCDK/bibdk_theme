@@ -94,14 +94,6 @@ article.article-widget.bibdk-article-none-show-mobile,
 article.article-widget.bibdk-article-none-show-large,
 article.article-widget.bibdk-article-show-mobile,
 article.article-widget.bibdk-article-show-large {
-  .field-read-more .article-bottom-link {
-    text-decoration: none;
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
-    }
-  }
   margin-bottom: 2*$spacing;
   background-color: $white;
   article.article-widget.bibdk-article-bottom, .widget   {
