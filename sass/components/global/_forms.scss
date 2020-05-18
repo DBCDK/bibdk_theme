@@ -510,6 +510,10 @@ select#edit-favouriteselector {
     margin-left: $spacing;
   }
 
+  .form-submit {
+    text-decoration: none;
+  }
+
   .messages {
     margin: 35px 0 0;
   }
