@@ -32,11 +32,11 @@ $text                  = (is_array($text) && !empty($text))               ? drup
   <?php }  ?>
 
   <?php if ($svg == 'svg-user') { ?>
-    <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/user.png')); ?>
+    <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/user.png', 'alt' => 'log in')); ?>
   <?php }  ?>
 
   <?php if ($svg == 'svg-menu') { ?>
-    <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/menu.png')); ?>
+    <?php print theme('image', array('path' => drupal_get_path('theme', 'bibdk_theme') . '/img/menu.png', 'alt' => 'menu')); ?>
   <?php }  ?>
 
   <?php if ($text) { ?>
