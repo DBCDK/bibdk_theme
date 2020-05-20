@@ -1,8 +1,3 @@
-// @todo remove on merge
-#columns {
-  background-color: $grey-6;
-}
-
 // =============================================================================
 // Responsive
 // =============================================================================
@@ -232,9 +227,11 @@
 .ting-openformat-toggle-link.is-toggled {
   .toggle-text {
     display: none;
+    text-decoration: none;
   }
   .toggle-hide {
     display: inline-block;
+    text-decoration: none;
   }
 }
 
@@ -259,6 +256,9 @@
 // =============================================================================
 .subwork {
   padding: 0.5rem 1rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 // =============================================================================
@@ -353,7 +353,7 @@
 }
 
 .page-work .content, .page-search .content {
-  background-color: $grey-bg--page;
+  background-color: $grey-6;
 }
 
 // =============================================================================

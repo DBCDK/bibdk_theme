@@ -5,20 +5,23 @@
 .tabs {
   a {
     display: block;
-    background: $grey-3;
+    background-color: $blue;
     color: $white;
     @include rem('padding', 8px 15px);
     @include transition(background-color .5s);
+    text-decoration: none;
 
     &:hover {
-      background: lighten($grey-3, 2%);
+      background-color: $blue--hover;
     }
 
     &.active {
-      background: $blue;
-
+      background: $white;
+      border: 1px solid $blue;
+      color: $black--natural;
       &:hover {
-        background: lighten($blue, 2%);
+        background-color: $blue--hover;
+        color: $white;
       }
     }
   }

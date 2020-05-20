@@ -159,6 +159,9 @@
 
 #custom-search--advanced-toggle {
   margin-bottom: 1rem;
+  #selid_custom_search_expand {
+    text-decoration: none;
+  }
   @media #{$xlarge-up} {
     //margin-right: 0.625rem;
   }

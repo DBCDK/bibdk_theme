@@ -160,13 +160,13 @@
   @extend .padded--vertical;
   min-height: 18.75rem;
   display: block;
-  background-color: $grey-bg--page;
+  background-color: $grey-6;
   margin: 1.6875rem 1rem auto;
   @media #{$medium-up} {
     min-height: 31.25rem;
     .lift-columns & {
       padding-top: 0.625rem;
-      background-color: $grey-bg--page;
+      background-color: $grey-6;
     }
   }
 }

@@ -23,17 +23,21 @@
 
   /* Style the links inside the list items */
   ul.tab li a {
-    color: #0078a0;
+    color: $blue;
+    font-weight: 700;
+    text-decoration: none;
   }
 
-  /* Change background color of links on hover */
-  ul.tab li a:hover {
-    background-color: $grey-bg--section;
+  ul.tab li a:hover,
+  ul.tab li a:focus {
+    color: $blue--hover;
+    text-decoration: none;
   }
 
   /* Create an active/current tablink class */
   ul.tab li .active {
-    border-bottom-color: #0078a0;
+    color: $blue--hover;
+    border-bottom-color: $blue--hover;
     border-bottom-style: solid;
   }
 
@@ -159,8 +163,14 @@
   @include rem('margin-bottom', 5px);
 
   a {
-    color: $grey-1;
-    font-weight: bold;
+    color: $black--natural;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
   }
 }
 
@@ -169,7 +179,13 @@
   line-height: 1.2;
 
   a {
-    color: $grey-3;
+    color: $black--natural;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
   }
 }
 

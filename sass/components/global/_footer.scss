@@ -38,6 +38,12 @@
 
       .footer-bar-links a {
         @include typo("label", "facets", "grey-light");
+        text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -54,6 +60,9 @@
 
     .social-links {
       margin-top: 5px;
+      a:hover svg {
+        fill: $white;
+      }
     }
 
     .footer-social-links {
@@ -74,4 +83,3 @@
   }
 
 }
-

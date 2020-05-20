@@ -36,7 +36,7 @@
 
 .pane-bibdk-facetbrowser {
   .pane-title {
-    text-align: center;  
+    text-align: center;
     font-size: rem-calc(12px);
     font-weight: bold;
     color: $white;
@@ -44,7 +44,7 @@
     height: rem-calc(41px);
     line-height: rem-calc(41px);
   }
-  
+
   #facetbrowser-icon-container {
     margin: 0;
     text-align: center;
@@ -80,6 +80,14 @@
   .expand {
     @include rem('margin-top', 5px);
     cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+    }
+  }
+  .facetbrowser-filter-link {
+    text-decoration: none;
   }
 
   .select {
@@ -89,7 +97,7 @@
   label {
     @include typo("label", "facets", "grey-dark");
   }
-  
+
   #deselected-terms {
     label {
       text-decoration: line-through;
@@ -104,6 +112,12 @@
 
     a {
       color: $black--natural;
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $blue;
+      }
     }
 
   }
@@ -116,6 +130,9 @@
   .checkbox-element-label {
     width: 78%;
     margin: 0;
+    a {
+      text-decoration: none;
+    }
   }
 
   #bibdk-modal-form p {
@@ -137,7 +154,7 @@
 
     padding-top: 0;
     margin-bottom: 10px;
-    
+
     .facet-wrapper {
       @include rem('margin', 1px 0px 1px 0px);
       @include rem('padding', 0px 20px 0px 20px);
@@ -151,7 +168,7 @@
       color: $black--natural;
       line-height: rem-calc(50px);
     }
-    
+
     label {
       padding: 0;
     }
@@ -166,7 +183,7 @@
         display: inline;
         margin-left: 0.5em;
       }
-      // Note: IE8 and Opera 4-6 only support the old, single-colon CSS2 syntax (:before). 
+      // Note: IE8 and Opera 4-6 only support the old, single-colon CSS2 syntax (:before).
       // Newer versions support the standard, double-colon CSS3 syntax (::before).
       .facet-count-label::before, .facet-count-label:before {
         content: "(";
@@ -197,7 +214,7 @@
       @include rem('margin', 0px 0px 0px 20px);
       @include rem('padding', 0px 15px 0px 15px);
     }
-    
+
     .form-wrapper.actions-wrapper {
       text-align: right;
       input[type="submit"] {
@@ -207,7 +224,7 @@
         @include rem('padding', 20px 20px 20px 20px);
       }
     }
-    
+
     .facet-checkmark-wrapper {
       display: block;
       float: right;
@@ -230,8 +247,8 @@
       height: 20px;
       width: 28px;
     }
-    
-    input#edit-reset-facets { 
+
+    input#edit-reset-facets {
       @include rem('margin', 0px 0px 10px 6px);
     }
 
@@ -246,7 +263,7 @@
     }
   }
 
-  // style as table to vertical middle align text 
+  // style as table to vertical middle align text
   .bibdk-facetbrowser-mobile > div {
     display: table;
     width: 100%;
@@ -273,4 +290,3 @@
 
 
 }
-

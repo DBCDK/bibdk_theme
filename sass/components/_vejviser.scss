@@ -78,14 +78,21 @@ input[type="text"].vejviser-search-input {
     padding: rem-calc(10 15);
     @include inline-block();
     color: $white;
-    background-color: $grey-2;
+    background-color: $blue;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue--hover;
+    }
   }
 }
 
 .bibdk-favourite--add-remove-library {
   color: $grey-text--dark;
+  text-decoration: none;
   &:hover {
-    color: $grey-text--dark;
+    color: $blue;
     text-decoration: underline;
   }
 

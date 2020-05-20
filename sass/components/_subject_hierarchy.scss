@@ -91,7 +91,7 @@
   .icon-blue-x {
     background-image: url("../img/in_use/icons/blue-x.png");
   }
- 
+
 }
 
 .subject-hierarchy-searchfield {
@@ -107,6 +107,13 @@
     color: $black--natural;
     font-size: 1.1em;
     font-weight: bold;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -169,6 +176,14 @@ subjects-row {
     padding-bottom: 5px;
     font-size: 14px;
     font-weight: bold;
+    a {
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
   }
   .note {
     display: block;
@@ -177,6 +192,13 @@ subjects-row {
     a {
       color: $black--natural;
       font-size: 0.9em;
+      text-decoration: none;
+      cursor: default;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $black--natural;
+      }
     }
   }
 }
@@ -251,11 +273,11 @@ subjects-row {
       content: "";
     }
   }
-  
+
   div.container-last {
     line-height: inherit;
   }
-  
+
 }
 
 // Each sublist
@@ -290,9 +312,9 @@ subjects-row {
 // =============================================================================
 
 #bibdk-subject-hierarchy-searchresult {
-  
+
   display: none;
-  
+
   .header {
     padding-bottom: 20px;
   }
@@ -363,18 +385,16 @@ subjects-row {
   .subject-hierarchy-suggestion-form.send-suggestion {
     border-top: 1px solid $grey-border;
   }
-  
+
   // Foundation drop-down
-  
+
   // Used for right position
   $f-dropdown-margin-left: 20px;
-  
+
   // Used for left position
   $f-dropdown-margin-right: $f-dropdown-margin-top;
-  
+
   // Foundation background color
   $f-dropdown-bg: $grey-bg--section;
 
 }
-
-

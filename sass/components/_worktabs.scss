@@ -12,9 +12,14 @@
       padding: 5px 10px;
       width: 33.3%;
       text-align: center;
-      border-bottom: 1px solid $grey-border;
+      border-bottom: 2px solid $grey-border;
       @include single-transition();
-      &:hover {
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 2px solid $blue;
+        color: $blue;
         background-color: $grey-bg--section;
       }
       &.active {
@@ -85,12 +90,10 @@
     a {
       width: auto;
       border-left: 1px solid $grey-border;
-      border-bottom: none;
+      border-bottom: 2px solid transparent;
     }
     a:first-child {
       border-left: none;
     }
   }
 }
-
-

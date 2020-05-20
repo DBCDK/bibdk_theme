@@ -1,9 +1,19 @@
 .searchhistory-cql {
-  color:  $grey-3;
+  color:  $blue;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue--hover;
+  }
 }
 
 .searchhistory-searchstring {
   table & {
     min-width: 400px;
+  }
+  &:hover span,
+  &:focus span,
+  &:active span {
+    color: $blue--hover;
   }
 }
