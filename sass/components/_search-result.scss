@@ -320,6 +320,7 @@
 }
 
 .manifestation-toggle-link {
+  text-decoration: none;
   .toggle-link-icon {
     margin-right: 5px;
     @include css-triangle(5px, $blue, top);
