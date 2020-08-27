@@ -227,11 +227,9 @@
 .ting-openformat-toggle-link.is-toggled {
   .toggle-text {
     display: none;
-    text-decoration: none;
   }
   .toggle-hide {
     display: inline-block;
-    text-decoration: none;
   }
 }
 
@@ -321,6 +319,9 @@
 
 .manifestation-toggle-link {
   text-decoration: none;
+  .toggle-text {
+    text-decoration: underline;
+  }
   .toggle-link-icon {
     margin-right: 5px;
     @include css-triangle(5px, $blue, top);
