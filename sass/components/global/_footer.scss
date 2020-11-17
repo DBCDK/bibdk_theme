@@ -12,6 +12,9 @@
 
   .footer-tab-bars {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
   }
 
   @media #{$large-up} {
@@ -30,8 +33,7 @@
       .footer-bar-links {
         li {
           display: inline-block;
-          width: 19.6%;
-          padding-left: rem-calc(10px);
+          padding-left: 0;
           padding-top: rem-calc(13px);
         }
       }
