@@ -480,7 +480,8 @@ function _bibdk_theme_get_topbar_links() {
     '#svg' => 'svg-chat',
   );
 
-  $links[] = array(
+  /* Temporarily diable link, as service is not working (KB) */
+  /*$links[] = array(
     '#theme' => 'link_with_svg',
     '#text' => t('Videnskabelige artikler'),
     '#path' => 'http://statsbiblioteket.dk/videnskabeligeartikler/',
@@ -494,7 +495,7 @@ function _bibdk_theme_get_topbar_links() {
     '#prefix' => '<span class="external" >',
     '#suffix' => '</span>',
     '#svg' => 'svg-media-article',
-  );
+  );*/
 
   if ($user->uid) {
     $links[] = array(
