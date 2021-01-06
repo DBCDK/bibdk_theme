@@ -108,7 +108,7 @@ input[type="text"].vejviser-search-input {
   }
 }
 
-.ting-agency-library {
+.bibdk-favourite-library {
   .ajax-progress {
     position: absolute;
     margin-left: rem-calc(5);
@@ -134,19 +134,19 @@ input[type="text"].vejviser-search-input {
   }
 }
 
-.ting-agency--branch-name {
+.bibdk-favourite--branch-name {
   @include typo("title", "large", "black");
   display: block;
   margin-right: 40px;
 }
 
-.ting-agency--agency-name {
+.bibdk-favourite--agency-name {
   @include typo("link", "item-links", "blue");
   display: block;
   margin-right: 50px;
 }
 
-.ting-agency--more-info-toggle-indicator {
+.bibdk-favourite--more-info-toggle-indicator {
   @include css-triangle(5px, $black, top);
   position: absolute;
   top: 30px;
@@ -158,7 +158,7 @@ input[type="text"].vejviser-search-input {
   }
 }
 
-.ting-agency--actions {
+.bibdk-favourite--actions {
   margin: 10px 0 0 0;
 
   .item-list li {
@@ -167,7 +167,7 @@ input[type="text"].vejviser-search-input {
   }
 }
 
-.ting-agency--more-info {
+.bibdk-favourite--more-info {
   display: none;
   background-color: $grey-bg--section;
   border-bottom: solid 1px $grey-bg--page;
