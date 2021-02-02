@@ -1172,7 +1172,7 @@ function _alter_bibdk_cart_form(&$form) {
  * @param array $vars
  * @return string (html unordered list)
  */
-function bibdk_theme_ting_agency_tools($vars) {
+function bibdk_theme_bibdk_favourite_tools($vars) {
   $branch = $vars['branch'];
   if (empty($branch)) {
     return;
