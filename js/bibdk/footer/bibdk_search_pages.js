@@ -30,6 +30,7 @@
     jQuery.get(url, {page_id: path})
       .done(function (data, response) {
         Drupal.settings.bibdk_custom_search.advancedSearchIsLoaded = true;
+        var $new = $("#search-advanced-panel", data);
         var $searchavanced = $("#search-advanced", data);
         var tabs = {
           "bog": "boeger",
@@ -41,15 +42,19 @@
           "noder": "noder"
         };
         tab = ( (tabs[material] !== undefined)) ? tabs[material] : "";
+        $("#search-advanced-panel").replaceWith($new);
         $("#search-advanced").replaceWith($searchavanced);
         $("#edit-advanced").attr("class", "");
         $("#edit-advanced").addClass(tab);
-        Drupal.attachBehaviors($searchavanced, Drupal.settings);
+        if (Drupal.settings.bibdk_custom_search.hideAvancedSearch !== "") {
+          $("#search-advanced").removeClass('hidden');
+        }
+        Drupal.attachBehaviors($new, Drupal.settings);
         onLoad.setFocus();
       })
       .fail(function () {
         throw new Error("An error happend while loading search pages");
-      })
+      });
   };
 
   Drupal.getArticlesView = function(material) {
