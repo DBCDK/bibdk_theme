@@ -26,8 +26,11 @@
 
   Drupal.getCustomSearchForm = function(path, material) {
     // Retrieve advanced searchform
+
+    var is_expanded = !$("#search-advanced").hasClass("hidden");
+
     var url = Drupal.settings.basePath + Drupal.settings.pathPrefix + "bibdk_custom_search/ajax/get_search_panel";
-    jQuery.get(url, {page_id: path})
+    jQuery.get(url, {page_id: path, is_expanded: is_expanded})
       .done(function (data, response) {
         Drupal.settings.bibdk_custom_search.advancedSearchIsLoaded = true;
         var $searchadvancedpanel = $("#search-advanced-panel", data);
