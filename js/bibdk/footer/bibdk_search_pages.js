@@ -30,8 +30,9 @@
     jQuery.get(url, {page_id: path})
       .done(function (data, response) {
         Drupal.settings.bibdk_custom_search.advancedSearchIsLoaded = true;
-        var $new = $("#search-advanced-panel", data);
+        var $searchadvancedpanel = $("#search-advanced-panel", data);
         var $searchavanced = $("#search-advanced", data);
+        var $selidcustomsearchexpand = $("#selid_custom_search_expand", data);
         var tabs = {
           "bog": "boeger",
           "artikel": "artikler",
@@ -41,15 +42,14 @@
           "musik": "musik",
           "noder": "noder"
         };
-        tab = ( (tabs[material] !== undefined)) ? tabs[material] : "";
-        $("#search-advanced-panel").replaceWith($new);
+        var tab = ( (tabs[material] !== undefined)) ? tabs[material] : "";
         $("#search-advanced").replaceWith($searchavanced);
-        $("#edit-advanced").attr("class", "");
-        $("#edit-advanced").addClass(tab);
-        if (Drupal.settings.bibdk_custom_search.hideAvancedSearch !== "") {
-          $("#search-advanced").removeClass('hidden');
-        }
-        Drupal.attachBehaviors($new, Drupal.settings);
+        $("#search-advanced-panel").replaceWith($searchadvancedpanel);
+        $("#selid_custom_search_expand").replaceWith($selidcustomsearchexpand);
+        var editadvanced = $("#edit-advanced");
+        editadvanced.attr("class", "");
+        editadvanced.addClass(tab);
+        Drupal.attachBehaviors($searchadvancedpanel, Drupal.settings);
         onLoad.setFocus();
       })
       .fail(function () {
