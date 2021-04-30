@@ -19,7 +19,7 @@
             Drupal.getCustomSearchForm(path, material);
             Drupal.getArticlesView(material);
           }
-        })
+        });
       });
     }
   };
