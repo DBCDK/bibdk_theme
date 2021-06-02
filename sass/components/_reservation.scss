@@ -129,6 +129,26 @@
   }
 }
 
+// Extra small screens
+@media screen and (max-width: 276px) {
+  .order-any-btn {
+    margin-right: -15px;
+    margin-top: 10px;
+  }
+  .order-any-btn-list {
+    .mat-type {
+      width: 100px !important;
+      text-indent: -45px !important;
+      .svg-icon {
+        display: none;
+      }
+    }
+    .add-item-to-cart {
+      display: none;
+    }
+  }
+}
+
 .reservation-btn-infotext {
   font-size: 11px;
   padding: 2px 15px;
