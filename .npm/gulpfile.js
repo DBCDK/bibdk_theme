@@ -45,7 +45,7 @@ function watchFiles() {
 }
 export { watchFiles as watch };
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts));
+export function build() { gulp.series(clean, gulp.parallel(styles, scripts)); }
 /*
  * Export a default task
  */
