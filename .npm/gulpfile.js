@@ -6,20 +6,20 @@
  * @see gulpconfig.js
  */
 
-var argv = require('yargs').argv;
 var cfg = require('./gulpconfig.js');
-var del = import('del');
-var gulp = require('gulp');
-var compass = require('gulp-compass');
-var concat = require('gulp-concat');
-var gulpif = require('gulp-if');
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var svgo = require('svgo');
+
+import del from "del";
+import argv from "yargs";
+import gulp from "gulp";
+import compass from "gulp-compass";
+import concat from "gulp-concat";
+import gulpif from "gulp-if";
+import plumber from "gulp-plumber";
+import sourcemaps from "gulp-sourcemaps";
+import svgmin from "gulp-svgmin";
+import svgstore from "gulp-svgstore";
+import uglify from "gulp-uglify";
+import rename from "gulp-rename";
 
 // Build CSS with compass
 gulp.task('css', function() {
