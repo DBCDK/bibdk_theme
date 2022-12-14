@@ -6,7 +6,7 @@
  * @see gulpconfig.js
  */
 
-var cfg = require('./gulpconfig.js');
+var cfg = import('./gulpconfig.js');
 
 import {deleteAsync} from 'del';
 import argv from "yargs";
