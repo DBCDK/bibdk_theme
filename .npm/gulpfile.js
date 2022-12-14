@@ -8,7 +8,7 @@
 
 var cfg = require('./gulpconfig.js');
 
-import del from "del";
+import {deleteAsync} from 'del';
 import argv from "yargs";
 import gulp from "gulp";
 import compass from "gulp-compass";
@@ -95,7 +95,7 @@ gulp.task('js', function(callback) {
 
 // Clean up the build directory
 gulp.task('clean', function() {
-  return del([cfg.paths.build], {
+  return deleteAsync([cfg.paths.build], {
     force: true
   });
 });
