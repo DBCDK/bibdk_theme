@@ -6,11 +6,12 @@
  * @see gulpfile.js
  */
 
-var argv = import('yargs').argv;
+import argv from "yargs";
+
 import path, { dirname }  from "path";
 import { fileURLToPath } from "url";
 
-var cfg = {
+const cfg = {
   paths: {},
   settings: {}
 };
@@ -63,9 +64,9 @@ cfg.settings.compass = {
   sass: 'sass',
   css: 'build/css',
   image: 'img',
-  sourcemap: false,
-  comments: false,
-  style: "compressed",
+  sourcemap: (!argv.production),
+  comments: (!argv.production),
+  style: (argv.production) ? "compressed" : "expanded",
   generated_images_path: 'build/img',
   import_path: ['libs/foundation/scss']
 };
@@ -82,4 +83,4 @@ cfg.settings.svgmin = {
   ]
 };
 
-module.exports = cfg;
+export default;
