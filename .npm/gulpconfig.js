@@ -83,4 +83,4 @@ cfg.settings.svgmin = {
   ]
 };
 
-export default;
+export default
