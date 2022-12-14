@@ -59,8 +59,8 @@ cfg.settings.compass = {
   sass: 'sass',
   css: 'build/css',
   image: 'img',
-  sourcemap: (argv.production) ? false : true,
-  comments: (argv.production) ? false : true,
+  sourcemap: (!argv.production),
+  comments: (!argv.production),
   style: (argv.production) ? 'compressed' : 'expanded',
   generated_images_path: 'build/img',
   import_path: ['libs/foundation/scss']
