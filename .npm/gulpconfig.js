@@ -6,8 +6,8 @@
  * @see gulpfile.js
  */
 
-var argv = require('yargs').argv;
-var path = require('path');
+var argv = import('yargs').argv;
+import path from "path";
 
 var cfg = {
   paths: {},
