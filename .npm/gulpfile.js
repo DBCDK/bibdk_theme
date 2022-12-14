@@ -8,7 +8,7 @@
 
 var argv = require('yargs').argv;
 var cfg = require('./gulpconfig.js');
-var del = require('del');
+var del = import('del');
 var gulp = require('gulp');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
