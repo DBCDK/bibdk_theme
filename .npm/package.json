@@ -23,6 +23,7 @@
     "jshint": "^2.13.6",
     "path": "^0.12.7",
     "run-sequence": "^2.2.1",
+    "url": "0.11.0",
     "yargs": "^17.6.2"
   },
   "type": "module"

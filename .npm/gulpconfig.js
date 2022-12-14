@@ -7,12 +7,16 @@
  */
 
 var argv = import('yargs').argv;
-import path from "path";
+import path, { dirname }  from "path";
+import { fileURLToPath } from "url";
 
 var cfg = {
   paths: {},
   settings: {}
 };
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 cfg.paths.project = path.join(__dirname, '..');
 cfg.paths.libs = cfg.paths.project + "/libs";
