@@ -16,7 +16,7 @@ export const clean = () => deleteAsync([ 'assets' ]);
 /*
  * You can also declare named functions and export them as tasks
  */
-export function styles() {
+export async function styles() {
   return gulp.src(cfg.styles.src)
     .pipe(less())
     .pipe(cleanCSS())
@@ -28,7 +28,7 @@ export function styles() {
     .pipe(gulp.dest(cfg.styles.dest));
 }
 
-export function scripts() {
+export async function scripts() {
   return gulp.src(cfg.scripts.src, { sourcemaps: true })
     .pipe(babel())
     .pipe(uglify())
