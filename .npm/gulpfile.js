@@ -45,8 +45,7 @@ function watchFiles() {
 }
 export { watchFiles as watch };
 
-export async function build() { gulp.series(clean); }
-//export function build() { gulp.series(clean, gulp.parallel(styles, scripts)); }
+export async function build() { gulp.series(clean, gulp.parallel(styles, scripts)); }
 /*
  * Export a default task
  */
