@@ -6,6 +6,7 @@
   "dependencies": {
     "del": "^7.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "8.0.0",
     "gulp-compass": "^2.0.1",
     "gulp-concat": "^2.4.1",
     "gulp-if": "^3.0.0",
