@@ -6,18 +6,13 @@
  * @see gulpfile.js
  */
 
-import argv from "yargs";
-
-import path, { dirname }  from "path";
-import { fileURLToPath } from "url";
+const argv = require('yargs').argv;
+const path = require('path');
 
 const cfg = {
   paths: {},
   settings: {}
 };
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 cfg.paths.project = path.join(__dirname, '..');
 cfg.paths.libs = cfg.paths.project + "/libs";
@@ -83,4 +78,4 @@ cfg.settings.svgmin = {
   ]
 };
 
-export default cfg;
+module.exports = cfg;
