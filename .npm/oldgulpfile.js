@@ -1,16 +1,25 @@
-const argv = require('yargs').argv;
-const cfg = require('./gulpconfig.js');
-const gulp = require('gulp');
-const compass = require('gulp-compass');
-const concat = require('gulp-concat');
-const gulpif = require('gulp-if');
-const plumber = require('gulp-plumber');
-const sourcemaps = require('gulp-sourcemaps');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const fs = require('fs');
+/**
+ * @file
+ * This is where we define our gulp tasks
+ * Configuration os found in gulpconfig.js
+ *
+ * @see gulpconfig.js
+ */
+
+var cfg = import('./gulpconfig.js');
+
+import {deleteAsync} from 'del';
+import argv from "yargs";
+import gulp from "gulp";
+import compass from "gulp-compass";
+import concat from "gulp-concat";
+import gulpif from "gulp-if";
+import plumber from "gulp-plumber";
+import sourcemaps from "gulp-sourcemaps";
+import svgmin from "gulp-svgmin";
+import svgstore from "gulp-svgstore";
+import uglify from "gulp-uglify";
+import rename from "gulp-rename";
 
 // Build CSS with compass
 gulp.task('css', function() {
@@ -85,16 +94,17 @@ gulp.task('js', function(callback) {
 });
 
 // Clean up the build directory
-gulp.task('clean', async function() {
-  return fs.rmSync(cfg.paths.build, { recursive: true, force: true });
+gulp.task('clean', function() {
+  return deleteAsync([cfg.paths.build], {
+    force: true
+  });
 });
 
+// Build
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel(
-    'svg',
-    'css',
-    'imgcopy',
-    'js'
-  )
+  'svg',
+  'css',
+  'imgcopy',
+  'js'
 ));
