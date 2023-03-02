@@ -466,7 +466,7 @@ function _bibdk_theme_get_topbar_links() {
     '#text' => t('Spørg en bibliotekar'),
     // Temporarily disable popup, and use external link instead
     //'#path' => 'https://adm.biblioteksvagten.dk/embed/ask-question',
-    '#path' => 'https://adm.biblioteksvagten.dk/embed/ask-question?agency_id=bibliotek.dk&agency_mail=servicedesk%40dbc.dk&require_postal_code=true&popup=n&url=https%3A%2F%2Fbibliotek.dk',
+    '#path' => 'https://adm.biblioteksvagten.dk/embed/ask-question?agency_id=bibliotek.dk&require_postal_code=true&popup=n&url=https%3A%2F%2Fbibliotek.dk',
     '#options' => array(
       'attributes' => array(
         'class' => array('visible-for-large-up'),
