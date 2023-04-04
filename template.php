@@ -567,6 +567,23 @@ function _bibdk_theme_get_footer_bar_menu() {
   $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
+
+  if (isset($_COOKIE['cookie-agreed']) && $_COOKIE['cookie-agreed'] == "2") {
+    $footer_menu_links['menu-99999'] = [
+      'attributes' => [
+        'class' => "eu-cookie-withdraw-button"
+      ],
+      'devicetypes' => [
+        'devicesize_small' => 1,
+        'devicesize_medium' => 1,
+        'devicesize_large' => 1,
+        'devicesize_xlarge' => 1,
+        'devicesize_xxlarge' => 1,
+      ],
+      'href' => '/',
+      'title' => 'Fjern cookie samtykke'
+    ];
+  }
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
 
 }
