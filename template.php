@@ -571,7 +571,7 @@ function _bibdk_theme_get_footer_bar_menu() {
   if (isset($_COOKIE['cookie-agreed']) && $_COOKIE['cookie-agreed'] == "2") {
     $footer_menu_links['menu-99999'] = [
       'attributes' => [
-        'class' => "eu-cookie-withdraw-button"
+        'onclick' => "document.cookie = 'cookie-agreed=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'",
       ],
       'devicetypes' => [
         'devicesize_small' => 1,
