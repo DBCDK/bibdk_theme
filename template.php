@@ -300,6 +300,43 @@ function bibdk_theme_preprocess_html(&$vars) {
 
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
+
+  // Matomo and Cookiebot needs to play well together.
+  // This makes sure that Matomo doesnt set a cookie before the users has consented to it.
+  $matomo_cookiebot = array(
+    '#type' => 'markup',
+    '#markup' => "<script>
+      var waitForTrackerCount = 0;
+      function matomoWaitForTracker() {
+        if (typeof _paq === 'undefined' || typeof Cookiebot === 'undefined') {
+          if (waitForTrackerCount < 40) {
+            setTimeout(matomoWaitForTracker, 250);
+            waitForTrackerCount++;
+            return;
+          }
+        } else {
+          window.addEventListener('CookiebotOnAccept', function (e) {
+              consentSet();
+          });
+          window.addEventListener('CookiebotOnDecline', function (e) {
+              consentSet();
+          })
+        }
+      }
+      function consentSet() {
+        if (Cookiebot.consent.statistics) {
+          _paq.push(['setConsentGiven']);
+          _paq.push(['setConsentGiven']);
+        } else {
+          _paq.push(['setConsentGiven']);
+          _paq.push(['forgetConsentGiven']);
+        }
+      }
+      document.addEventListener('DOMContentLoaded', matomoWaitForTracker());
+      </script>"
+  );
+  drupal_add_html_head($matomo_cookiebot, 'matomo_cookiebot');
+
 }
 
 /**
