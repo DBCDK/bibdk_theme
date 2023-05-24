@@ -601,14 +601,14 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
 function _bibdk_theme_get_footer_bar_menu() {
   global $language;
 
-  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_name = ($language->prefix === 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
 
-  if (isset($_COOKIE['cookie-agreed']) && $_COOKIE['cookie-agreed'] == "2") {
+  if (isset($_COOKIE['cookiebot-consent--marketing'])) {
     $footer_menu_links['menu-99999'] = [
       'attributes' => [
-        'onclick' => "document.cookie = 'cookie-agreed=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'",
+        'onclick' => "Cookiebot.renew(); return false;",
       ],
       'devicetypes' => [
         'devicesize_small' => 1,
