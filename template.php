@@ -618,7 +618,7 @@ function _bibdk_theme_get_footer_bar_menu() {
         'devicesize_xxlarge' => 1,
       ],
       'href' => '/',
-      'title' => 'Fjern cookie samtykke'
+      'title' => 'Rediger cookie-indstillinger'
     ];
   }
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
