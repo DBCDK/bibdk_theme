@@ -300,6 +300,43 @@ function bibdk_theme_preprocess_html(&$vars) {
 
   // Provide path to theme
   $vars['bibdk_theme_path'] = $base_url . '/' . drupal_get_path('theme', 'bibdk_theme');
+
+  // Matomo and Cookiebot needs to play well together.
+  // This makes sure that Matomo doesnt set a cookie before the users has consented to it.
+  $matomo_cookiebot = array(
+    '#type' => 'markup',
+    '#markup' => "<script>
+      var waitForTrackerCount = 0;
+      function matomoWaitForTracker() {
+        if (typeof _paq === 'undefined' || typeof Cookiebot === 'undefined') {
+          if (waitForTrackerCount < 40) {
+            setTimeout(matomoWaitForTracker, 250);
+            waitForTrackerCount++;
+            return;
+          }
+        } else {
+          window.addEventListener('CookiebotOnAccept', function (e) {
+              consentSet();
+          });
+          window.addEventListener('CookiebotOnDecline', function (e) {
+              consentSet();
+          })
+        }
+      }
+      function consentSet() {
+        if (Cookiebot.consent.statistics) {
+          _paq.push(['setConsentGiven']);
+          _paq.push(['setConsentGiven']);
+        } else {
+          _paq.push(['setConsentGiven']);
+          _paq.push(['forgetConsentGiven']);
+        }
+      }
+      document.addEventListener('DOMContentLoaded', matomoWaitForTracker());
+      </script>"
+  );
+  drupal_add_html_head($matomo_cookiebot, 'matomo_cookiebot');
+
 }
 
 /**
@@ -564,14 +601,14 @@ function _bibdk_theme_get_footer_menu_for_offcanvas() {
 function _bibdk_theme_get_footer_bar_menu() {
   global $language;
 
-  $footer_menu_name = ($language->prefix == 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
+  $footer_menu_name = ($language->prefix === 'eng') ? 'menu-footer-menu-eng' : 'menu-footer-menu-da';
   $footer_menu_links = menu_navigation_links($footer_menu_name);
   $footer_menu_links = _bibdk_theme_preprocess_footer_menu_language_links($footer_menu_links);
 
-  if (isset($_COOKIE['cookie-agreed']) && $_COOKIE['cookie-agreed'] == "2") {
+  if (isset($_COOKIE['cookiebot-consent--marketing'])) {
     $footer_menu_links['menu-99999'] = [
       'attributes' => [
-        'onclick' => "document.cookie = 'cookie-agreed=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'",
+        'onclick' => "Cookiebot.renew(); return false;",
       ],
       'devicetypes' => [
         'devicesize_small' => 1,
@@ -581,7 +618,7 @@ function _bibdk_theme_get_footer_bar_menu() {
         'devicesize_xxlarge' => 1,
       ],
       'href' => '/',
-      'title' => 'Fjern cookie samtykke'
+      'title' => 'Rediger cookie-indstillinger'
     ];
   }
   return _bibdk_theme_get_offcanvas_menu_list($footer_menu_links, array('class' => array('footer-tab-bars')));
