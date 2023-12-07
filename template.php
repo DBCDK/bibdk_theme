@@ -326,10 +326,8 @@ function bibdk_theme_preprocess_html(&$vars) {
       function consentSet() {
         if (Cookiebot.consent.statistics) {
           _paq.push(['setCookieConsentGiven']);
-          _paq.push(['setConsentGiven']);
         } else {
           _paq.push(['forgetCookieConsentGiven']);
-          _paq.push(['forgetConsentGiven']);
         }
       }
       document.addEventListener('DOMContentLoaded', matomoWaitForTracker());
